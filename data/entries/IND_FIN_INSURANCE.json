@@ -1,0 +1,3448 @@
+{
+  "industry_id": "IND_FIN_INSURANCE",
+  "slug": "finance-insurance",
+  "行业名称": "金融-保险",
+  "meta": {
+    "content_version": "1.6.1",
+    "data_version": "2026Q1",
+    "status": "reviewed",
+    "owner": "owner-finance",
+    "reviewer": "review-board-finance",
+    "last_updated": "2026-02-16",
+    "next_review_at": "2026-06-30",
+    "data_cycle": "quarterly",
+    "state_history": [
+      {
+        "date": "2026-02-16",
+        "from": "reviewed",
+        "to": "reviewed",
+        "reason": "v1.5.0二次增强（来源类型标准化、官方政策增量、人工补录任务分级）后状态保持不变。",
+        "changed_at": "2026-02-16T13:30:00+08:00",
+        "changed_by": "system_upgrade_v1_5",
+        "trigger": "scripts/upgrade_v1_5_full.js"
+      }
+    ],
+    "data_freshness": {
+      "last_full_refresh_at": "2026-02-16",
+      "stale_after_days": 90,
+      "stale_on": "2026-05-17",
+      "freshness_status": "fresh"
+    },
+    "status_reason": "结构与证据可用，但仍需持续补充真实样本。"
+  },
+  "static": {
+    "基础认知": {
+      "定义": "以风险保障、长期资金管理和保险服务为核心的持牌金融行业。",
+      "边界": {
+        "包含": [
+          "寿险",
+          "财险",
+          "健康险",
+          "再保险",
+          "保险科技"
+        ],
+        "不包含": [
+          "无牌照代销与违规营销"
+        ]
+      },
+      "核心赛道": [
+        "精算",
+        "产品开发",
+        "核保核赔",
+        "渠道运营",
+        "保险科技"
+      ],
+      "产业链": {
+        "上游": [
+          "数据与精算模型",
+          "医疗与车险网络",
+          "再保支持"
+        ],
+        "中游": [
+          "保险公司",
+          "中介渠道",
+          "科技服务商"
+        ],
+        "下游": [
+          "个人家庭客户",
+          "企业客户",
+          "机构客户"
+        ]
+      },
+      "商业模式": [
+        "保费收入",
+        "投资收益",
+        "服务费",
+        "生态增值服务"
+      ],
+      "核心指标": [
+        "保费规模",
+        "新业务价值",
+        "赔付率",
+        "综合成本率",
+        "续保率"
+      ],
+      "政策与监管关注": [
+        "保险监管规则",
+        "偿付能力",
+        "消费者权益",
+        "销售行为规范"
+      ],
+      "景气驱动因素": [
+        "养老与健康需求增长",
+        "风险保障意识提升",
+        "数字化运营"
+      ],
+      "主要风险": [
+        "利差损",
+        "误导销售风险",
+        "赔付波动",
+        "合规处罚"
+      ]
+    },
+    "就业画像": {
+      "应届生主流岗位": [
+        "精算",
+        "核保核赔",
+        "产品经理",
+        "渠道运营",
+        "风控合规",
+        "数据分析"
+      ],
+      "能力模型": {
+        "专业能力": [
+          "概率统计",
+          "保险产品结构",
+          "风险评估",
+          "数据分析"
+        ],
+        "通用能力": [
+          "沟通与服务",
+          "逻辑能力",
+          "合规意识",
+          "持续学习"
+        ],
+        "加分项": [
+          "精算考试进度",
+          "相关实习",
+          "医疗/车险场景理解"
+        ]
+      },
+      "准入门槛": {
+        "学历偏好": "本科及以上",
+        "专业限制": "金融/精算/数学/统计/医学相关优先",
+        "转专业友好度_1to5": 3,
+        "证书要求": "精算/保险相关证书可显著加分",
+        "英语要求": "基础到中等",
+        "无实习可投比例估计": "0.2-0.4",
+        "实习要求": "建议至少1段相关实习或项目证明",
+        "无实习可投比例估计_min": 0.2,
+        "无实习可投比例估计_max": 0.4,
+        "无实习可投比例估计_单位": "比例(0-1)",
+        "准入筛选规则": {
+          "是否卡专业": true,
+          "是否卡学历": true,
+          "是否看证书": true,
+          "是否看实习时长": true,
+          "规则说明": "该字段为规则化抽取结果，建议后续按企业与岗位颗粒度继续细分。"
+        }
+      },
+      "工作方式与强度": {
+        "加班强度_1to5": 3,
+        "出差或驻场强度_1to5": 3,
+        "轮班要求": "核保核赔与客服部分岗位可能排班",
+        "绩效压力_1to5": 4,
+        "淘汰风险_1to5": 3
+      },
+      "岗位-能力-项目证据映射模板": {
+        "status": "partial_ready",
+        "required_evidence_items_per_role": 3,
+        "slot_template": [
+          "项目背景",
+          "个人动作",
+          "可量化结果",
+          "外部证明链接"
+        ],
+        "manual_fill_note": "请为每个主流岗位至少补充2条真实项目证据样本。",
+        "updated_at": "2026-02-16"
+      }
+    },
+    "招聘与成长": {
+      "校招流程": {
+        "peak_period_text": [
+          "9-11月",
+          "2-4月"
+        ],
+        "peak_months": [
+          2,
+          3,
+          4,
+          9,
+          10,
+          11
+        ],
+        "process_steps": [
+          "笔试",
+          "专业面",
+          "业务面",
+          "HR面"
+        ],
+        "selection_preferences": [
+          "岗位稳定性",
+          "数据能力",
+          "合规意识"
+        ]
+      },
+      "城市格局": {
+        "核心城市": [
+          "上海",
+          "北京",
+          "深圳",
+          "广州"
+        ],
+        "机会增长城市": [
+          "杭州",
+          "成都",
+          "武汉",
+          "南京"
+        ],
+        "选城建议": [
+          "优先总部及运营中心，关注条线资源"
+        ],
+        "核心城市_ids": [
+          "CITY_018",
+          "CITY_001",
+          "CITY_019",
+          "CITY_007"
+        ],
+        "机会增长城市_ids": [
+          "CITY_009",
+          "CITY_003",
+          "CITY_023",
+          "CITY_012"
+        ]
+      },
+      "薪酬结构说明": {
+        "常见构成": [
+          "固定薪资",
+          "绩效",
+          "津补贴",
+          "长期激励（部分）"
+        ],
+        "影响因素": [
+          "精算/产品/渠道差异",
+          "公司层级",
+          "地区差异"
+        ]
+      },
+      "职业路径": {
+        "0-3年": [
+          "专员岗位打基础",
+          "建立产品与风控认知"
+        ],
+        "3-5年": [
+          "高级专员/经理",
+          "承担产品与运营目标"
+        ],
+        "5年以上": [
+          "精算专家",
+          "产品与渠道管理者",
+          "综合运营管理"
+        ]
+      },
+      "备战计划": [
+        {
+          "days_from_start": 30,
+          "focus": [
+            "建立保险业务与监管框架"
+          ]
+        },
+        {
+          "days_from_start": 60,
+          "focus": [
+            "强化精算/核保/产品题型"
+          ]
+        },
+        {
+          "days_from_start": 90,
+          "focus": [
+            "定向投递与复盘",
+            "明确岗位长期路径"
+          ]
+        }
+      ],
+      "常见误区": [
+        "把保险等同销售岗位",
+        "忽视产品精算逻辑",
+        "低估投诉与合规风险",
+        "只看短期激励"
+      ]
+    },
+    "决策输出": {
+      "推荐人群": [
+        "对风险管理和长期业务有兴趣",
+        "能够接受业绩与合规双重要求"
+      ],
+      "不推荐人群": [
+        "对业务指标和客户经营抗拒"
+      ],
+      "替代行业": [
+        "金融-银行",
+        "咨询与专业服务"
+      ],
+      "转岗路径": [
+        "核保核赔->产品精算",
+        "渠道->运营管理"
+      ]
+    },
+    "横向比较评分": {
+      "薪资潜力_1to5": 4,
+      "上岸难度_1to5": 3,
+      "工作强度_1to5": 3,
+      "稳定性_1to5": 4,
+      "成长性_1to5": 3,
+      "评分口径": "编委会结合公开岗位与行业周期给出的2026Q1基准分",
+      "置信度": 0.61
+    },
+    "参考方向标签": [
+      "监管机构公开信息",
+      "行业协会公开数据",
+      "公司校招官网",
+      "公开研究报告"
+    ]
+  },
+  "dynamic": {
+    "公司清单": {
+      "data_status": "verified",
+      "coverage_percent": 100,
+      "updated_at": "2026-02-16",
+      "notes": "已扩充到5家代表组织，建议持续扩展至20+并接入自动更新。",
+      "items": [
+        {
+          "company_id": "COMP_PINGAN",
+          "company_name": "中国平安",
+          "company_tier": "t1_head",
+          "city_focus": [
+            "深圳",
+            "上海",
+            "北京",
+            "广州",
+            "成都"
+          ],
+          "city_ids": [
+            "CITY_019",
+            "CITY_018",
+            "CITY_001",
+            "CITY_007",
+            "CITY_003"
+          ],
+          "business_focus": [
+            "寿险产险",
+            "综合金融",
+            "保险科技"
+          ],
+          "campus_hiring_signal": "存在官方招聘或公开岗位入口，建议按季度抓取岗位变更。",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_PINGAN_COM_A4057B5F",
+            "source_name": "中国平安官网/招聘页",
+            "source_url": "https://www.pingan.com",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于官网公开岗位与校招信息入口可访问性判定",
+            "confidence": 0.78,
+            "snapshot_url": "https://www.pingan.com",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "priority_rank": 1,
+          "authenticity_level": "official",
+          "data_origin": "structured_collection",
+          "company_uid": "COMP_UID_02C54F9C"
+        },
+        {
+          "company_id": "COMP_中国人寿",
+          "company_name": "中国人寿",
+          "company_tier": "public_sector",
+          "city_focus": [
+            "上海",
+            "北京",
+            "深圳",
+            "广州",
+            "杭州"
+          ],
+          "city_ids": [
+            "CITY_018",
+            "CITY_001",
+            "CITY_019",
+            "CITY_007",
+            "CITY_009"
+          ],
+          "business_focus": [
+            "寿险",
+            "健康险"
+          ],
+          "campus_hiring_signal": "存在官方招聘或公开岗位入口，建议按季度抓取岗位变更。",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_CHINALIFE_COM_CN_BDC1A67F",
+            "source_name": "中国人寿官网/招聘页",
+            "source_url": "https://www.chinalife.com.cn",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于官网公开岗位与校招信息入口可访问性判定",
+            "confidence": 0.78,
+            "snapshot_url": "https://www.chinalife.com.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 0,
+            "access_check": "checked",
+            "manual_verification_required": true,
+            "manual_verification_note": "链接可访问性不稳定，请人工补充可访问快照URL或替代来源。"
+          },
+          "priority_rank": 2,
+          "authenticity_level": "official",
+          "data_origin": "structured_collection",
+          "company_uid": "COMP_UID_C152240B"
+        },
+        {
+          "company_id": "COMP_中国太保",
+          "company_name": "中国太保",
+          "company_tier": "t1_head",
+          "city_focus": [
+            "上海",
+            "北京",
+            "深圳",
+            "广州",
+            "杭州"
+          ],
+          "city_ids": [
+            "CITY_018",
+            "CITY_001",
+            "CITY_019",
+            "CITY_007",
+            "CITY_009"
+          ],
+          "business_focus": [
+            "寿险",
+            "产险"
+          ],
+          "campus_hiring_signal": "存在官方招聘或公开岗位入口，建议按季度抓取岗位变更。",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_CPIC_COM_CN_86ECC527",
+            "source_name": "中国太保官网/招聘页",
+            "source_url": "https://www.cpic.com.cn",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于官网公开岗位与校招信息入口可访问性判定",
+            "confidence": 0.78,
+            "snapshot_url": "https://www.cpic.com.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "priority_rank": 3,
+          "authenticity_level": "official",
+          "data_origin": "structured_collection",
+          "company_uid": "COMP_UID_5F5F178C"
+        },
+        {
+          "company_id": "COMP_中国人保",
+          "company_name": "中国人保",
+          "company_tier": "public_sector",
+          "city_focus": [
+            "上海",
+            "北京",
+            "深圳",
+            "广州",
+            "杭州"
+          ],
+          "city_ids": [
+            "CITY_018",
+            "CITY_001",
+            "CITY_019",
+            "CITY_007",
+            "CITY_009"
+          ],
+          "business_focus": [
+            "产险",
+            "再保险",
+            "健康险"
+          ],
+          "campus_hiring_signal": "存在官方招聘或公开岗位入口，建议按季度抓取岗位变更。",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_PICC_COM_3726A38E",
+            "source_name": "中国人保官网/招聘页",
+            "source_url": "https://www.picc.com",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于官网公开岗位与校招信息入口可访问性判定",
+            "confidence": 0.78,
+            "snapshot_url": "https://www.picc.com",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "priority_rank": 4,
+          "authenticity_level": "official",
+          "data_origin": "structured_collection",
+          "company_uid": "COMP_UID_9569480A"
+        },
+        {
+          "company_id": "COMP_泰康保险集团",
+          "company_name": "泰康保险集团",
+          "company_tier": "t2_strong",
+          "city_focus": [
+            "上海",
+            "北京",
+            "深圳",
+            "广州",
+            "杭州"
+          ],
+          "city_ids": [
+            "CITY_018",
+            "CITY_001",
+            "CITY_019",
+            "CITY_007",
+            "CITY_009"
+          ],
+          "business_focus": [
+            "寿险",
+            "健康管理"
+          ],
+          "campus_hiring_signal": "存在官方招聘或公开岗位入口，建议按季度抓取岗位变更。",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_TAIKANG_COM_42AAE2DE",
+            "source_name": "泰康保险集团官网/招聘页",
+            "source_url": "https://www.taikang.com",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于官网公开岗位与校招信息入口可访问性判定",
+            "confidence": 0.78,
+            "snapshot_url": "https://www.taikang.com",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "priority_rank": 5,
+          "authenticity_level": "official",
+          "data_origin": "structured_collection",
+          "company_uid": "COMP_UID_DD06702A"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 100,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 100,
+        "source_access_score": 40,
+        "manual_gap_penalty": 0,
+        "quality_score": 88,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 1,
+      "real_data_ratio_percent": 100,
+      "template_data_ratio_percent": 0
+    },
+    "岗位画像库": {
+      "data_status": "verified",
+      "coverage_percent": 100,
+      "updated_at": "2026-02-16",
+      "notes": "已按岗位-能力-证据映射模板完成首轮结构化，待补充企业级样本题与面试真题。",
+      "items": [
+        {
+          "role_id": "IND_FIN_INSURANCE_ROLE_001",
+          "role_name": "精算",
+          "degree_preference": "本科及以上",
+          "major_restriction": "金融/精算/数学/统计/医学相关优先",
+          "hard_skills": [
+            "概率统计",
+            "保险产品结构",
+            "风险评估",
+            "数据分析"
+          ],
+          "soft_skills": [
+            "沟通与服务",
+            "逻辑能力",
+            "合规意识",
+            "持续学习"
+          ],
+          "written_and_interview_formats": [
+            "笔试",
+            "专业面",
+            "业务面",
+            "HR面"
+          ],
+          "internship_requirement": "建议至少1段相关实习或项目证明",
+          "english_requirement": "基础到中等",
+          "certificate_requirement": "精算/保险相关证书可显著加分",
+          "no_internship_apply_ratio_estimate": "0.2-0.4",
+          "resume_evidence_mapping": [
+            {
+              "capability": "概率统计",
+              "evidence_hint": "用STAR说明你在项目中如何应用“概率统计”，并给出可量化结果。"
+            },
+            {
+              "capability": "保险产品结构",
+              "evidence_hint": "用STAR说明你在项目中如何应用“保险产品结构”，并给出可量化结果。"
+            },
+            {
+              "capability": "风险评估",
+              "evidence_hint": "用STAR说明你在项目中如何应用“风险评估”，并给出可量化结果。"
+            },
+            {
+              "capability": "数据分析",
+              "evidence_hint": "用STAR说明你在项目中如何应用“数据分析”，并给出可量化结果。"
+            }
+          ],
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_CAMPUS_PINGAN_COM_FB993A73",
+            "source_name": "平安校园招聘官网",
+            "source_url": "https://campus.pingan.com",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 5,
+            "stat_definition": "结合金融-保险代表企业校招JD与国家大学生就业服务平台公开岗位要求抽取岗位画像，后续请补充企业级题库与实证样本。",
+            "confidence": 0.74,
+            "snapshot_url": "https://campus.pingan.com",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_AUTO_CAMPUS_PINGAN_COM_FB993A73"
+            ]
+          },
+          "authenticity_level": "curated",
+          "data_origin": "structured_collection",
+          "no_internship_apply_ratio_min": 0.2,
+          "no_internship_apply_ratio_max": 0.4,
+          "no_internship_apply_ratio_unit": "ratio_0_to_1",
+          "project_evidence_slots": [
+            {
+              "slot_id": "IND_FIN_INSURANCE_ROLE_001_PROJECT_EVD_001",
+              "status": "pending_user_fill",
+              "required_fields": [
+                "project_name",
+                "problem",
+                "action",
+                "result_metric",
+                "proof_link"
+              ],
+              "note": "请补充可在简历中量化呈现的真实项目证据。"
+            }
+          ]
+        },
+        {
+          "role_id": "IND_FIN_INSURANCE_ROLE_002",
+          "role_name": "核保核赔",
+          "degree_preference": "本科及以上",
+          "major_restriction": "金融/精算/数学/统计/医学相关优先",
+          "hard_skills": [
+            "概率统计",
+            "保险产品结构",
+            "风险评估",
+            "数据分析"
+          ],
+          "soft_skills": [
+            "沟通与服务",
+            "逻辑能力",
+            "合规意识",
+            "持续学习"
+          ],
+          "written_and_interview_formats": [
+            "笔试",
+            "专业面",
+            "业务面",
+            "HR面"
+          ],
+          "internship_requirement": "建议至少1段相关实习或项目证明",
+          "english_requirement": "基础到中等",
+          "certificate_requirement": "精算/保险相关证书可显著加分",
+          "no_internship_apply_ratio_estimate": "0.2-0.4",
+          "resume_evidence_mapping": [
+            {
+              "capability": "概率统计",
+              "evidence_hint": "用STAR说明你在项目中如何应用“概率统计”，并给出可量化结果。"
+            },
+            {
+              "capability": "保险产品结构",
+              "evidence_hint": "用STAR说明你在项目中如何应用“保险产品结构”，并给出可量化结果。"
+            },
+            {
+              "capability": "风险评估",
+              "evidence_hint": "用STAR说明你在项目中如何应用“风险评估”，并给出可量化结果。"
+            },
+            {
+              "capability": "数据分析",
+              "evidence_hint": "用STAR说明你在项目中如何应用“数据分析”，并给出可量化结果。"
+            }
+          ],
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_CAMPUS_PINGAN_COM_FB993A73",
+            "source_name": "平安校园招聘官网",
+            "source_url": "https://campus.pingan.com",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 5,
+            "stat_definition": "结合金融-保险代表企业校招JD与国家大学生就业服务平台公开岗位要求抽取岗位画像，后续请补充企业级题库与实证样本。",
+            "confidence": 0.74,
+            "snapshot_url": "https://campus.pingan.com",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_AUTO_CAMPUS_PINGAN_COM_FB993A73"
+            ]
+          },
+          "authenticity_level": "curated",
+          "data_origin": "structured_collection",
+          "no_internship_apply_ratio_min": 0.2,
+          "no_internship_apply_ratio_max": 0.4,
+          "no_internship_apply_ratio_unit": "ratio_0_to_1",
+          "project_evidence_slots": [
+            {
+              "slot_id": "IND_FIN_INSURANCE_ROLE_002_PROJECT_EVD_001",
+              "status": "pending_user_fill",
+              "required_fields": [
+                "project_name",
+                "problem",
+                "action",
+                "result_metric",
+                "proof_link"
+              ],
+              "note": "请补充可在简历中量化呈现的真实项目证据。"
+            }
+          ]
+        },
+        {
+          "role_id": "IND_FIN_INSURANCE_ROLE_003",
+          "role_name": "产品经理",
+          "degree_preference": "本科及以上",
+          "major_restriction": "金融/精算/数学/统计/医学相关优先",
+          "hard_skills": [
+            "概率统计",
+            "保险产品结构",
+            "风险评估",
+            "数据分析"
+          ],
+          "soft_skills": [
+            "沟通与服务",
+            "逻辑能力",
+            "合规意识",
+            "持续学习"
+          ],
+          "written_and_interview_formats": [
+            "笔试",
+            "专业面",
+            "业务面",
+            "HR面"
+          ],
+          "internship_requirement": "建议至少1段相关实习或项目证明",
+          "english_requirement": "基础到中等",
+          "certificate_requirement": "精算/保险相关证书可显著加分",
+          "no_internship_apply_ratio_estimate": "0.2-0.4",
+          "resume_evidence_mapping": [
+            {
+              "capability": "概率统计",
+              "evidence_hint": "用STAR说明你在项目中如何应用“概率统计”，并给出可量化结果。"
+            },
+            {
+              "capability": "保险产品结构",
+              "evidence_hint": "用STAR说明你在项目中如何应用“保险产品结构”，并给出可量化结果。"
+            },
+            {
+              "capability": "风险评估",
+              "evidence_hint": "用STAR说明你在项目中如何应用“风险评估”，并给出可量化结果。"
+            },
+            {
+              "capability": "数据分析",
+              "evidence_hint": "用STAR说明你在项目中如何应用“数据分析”，并给出可量化结果。"
+            }
+          ],
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_CAMPUS_PINGAN_COM_FB993A73",
+            "source_name": "平安校园招聘官网",
+            "source_url": "https://campus.pingan.com",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 5,
+            "stat_definition": "结合金融-保险代表企业校招JD与国家大学生就业服务平台公开岗位要求抽取岗位画像，后续请补充企业级题库与实证样本。",
+            "confidence": 0.74,
+            "snapshot_url": "https://campus.pingan.com",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_AUTO_CAMPUS_PINGAN_COM_FB993A73"
+            ]
+          },
+          "authenticity_level": "curated",
+          "data_origin": "structured_collection",
+          "no_internship_apply_ratio_min": 0.2,
+          "no_internship_apply_ratio_max": 0.4,
+          "no_internship_apply_ratio_unit": "ratio_0_to_1",
+          "project_evidence_slots": [
+            {
+              "slot_id": "IND_FIN_INSURANCE_ROLE_003_PROJECT_EVD_001",
+              "status": "pending_user_fill",
+              "required_fields": [
+                "project_name",
+                "problem",
+                "action",
+                "result_metric",
+                "proof_link"
+              ],
+              "note": "请补充可在简历中量化呈现的真实项目证据。"
+            }
+          ]
+        },
+        {
+          "role_id": "IND_FIN_INSURANCE_ROLE_004",
+          "role_name": "渠道运营",
+          "degree_preference": "本科及以上",
+          "major_restriction": "金融/精算/数学/统计/医学相关优先",
+          "hard_skills": [
+            "概率统计",
+            "保险产品结构",
+            "风险评估",
+            "数据分析"
+          ],
+          "soft_skills": [
+            "沟通与服务",
+            "逻辑能力",
+            "合规意识",
+            "持续学习"
+          ],
+          "written_and_interview_formats": [
+            "笔试",
+            "专业面",
+            "业务面",
+            "HR面"
+          ],
+          "internship_requirement": "建议至少1段相关实习或项目证明",
+          "english_requirement": "基础到中等",
+          "certificate_requirement": "精算/保险相关证书可显著加分",
+          "no_internship_apply_ratio_estimate": "0.2-0.4",
+          "resume_evidence_mapping": [
+            {
+              "capability": "概率统计",
+              "evidence_hint": "用STAR说明你在项目中如何应用“概率统计”，并给出可量化结果。"
+            },
+            {
+              "capability": "保险产品结构",
+              "evidence_hint": "用STAR说明你在项目中如何应用“保险产品结构”，并给出可量化结果。"
+            },
+            {
+              "capability": "风险评估",
+              "evidence_hint": "用STAR说明你在项目中如何应用“风险评估”，并给出可量化结果。"
+            },
+            {
+              "capability": "数据分析",
+              "evidence_hint": "用STAR说明你在项目中如何应用“数据分析”，并给出可量化结果。"
+            }
+          ],
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_CAMPUS_PINGAN_COM_FB993A73",
+            "source_name": "平安校园招聘官网",
+            "source_url": "https://campus.pingan.com",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 5,
+            "stat_definition": "结合金融-保险代表企业校招JD与国家大学生就业服务平台公开岗位要求抽取岗位画像，后续请补充企业级题库与实证样本。",
+            "confidence": 0.74,
+            "snapshot_url": "https://campus.pingan.com",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_AUTO_CAMPUS_PINGAN_COM_FB993A73"
+            ]
+          },
+          "authenticity_level": "curated",
+          "data_origin": "structured_collection",
+          "no_internship_apply_ratio_min": 0.2,
+          "no_internship_apply_ratio_max": 0.4,
+          "no_internship_apply_ratio_unit": "ratio_0_to_1",
+          "project_evidence_slots": [
+            {
+              "slot_id": "IND_FIN_INSURANCE_ROLE_004_PROJECT_EVD_001",
+              "status": "pending_user_fill",
+              "required_fields": [
+                "project_name",
+                "problem",
+                "action",
+                "result_metric",
+                "proof_link"
+              ],
+              "note": "请补充可在简历中量化呈现的真实项目证据。"
+            }
+          ]
+        },
+        {
+          "role_id": "IND_FIN_INSURANCE_ROLE_005",
+          "role_name": "风控合规",
+          "degree_preference": "本科及以上",
+          "major_restriction": "金融/精算/数学/统计/医学相关优先",
+          "hard_skills": [
+            "概率统计",
+            "保险产品结构",
+            "风险评估",
+            "数据分析"
+          ],
+          "soft_skills": [
+            "沟通与服务",
+            "逻辑能力",
+            "合规意识",
+            "持续学习"
+          ],
+          "written_and_interview_formats": [
+            "笔试",
+            "专业面",
+            "业务面",
+            "HR面"
+          ],
+          "internship_requirement": "建议至少1段相关实习或项目证明",
+          "english_requirement": "基础到中等",
+          "certificate_requirement": "精算/保险相关证书可显著加分",
+          "no_internship_apply_ratio_estimate": "0.2-0.4",
+          "resume_evidence_mapping": [
+            {
+              "capability": "概率统计",
+              "evidence_hint": "用STAR说明你在项目中如何应用“概率统计”，并给出可量化结果。"
+            },
+            {
+              "capability": "保险产品结构",
+              "evidence_hint": "用STAR说明你在项目中如何应用“保险产品结构”，并给出可量化结果。"
+            },
+            {
+              "capability": "风险评估",
+              "evidence_hint": "用STAR说明你在项目中如何应用“风险评估”，并给出可量化结果。"
+            },
+            {
+              "capability": "数据分析",
+              "evidence_hint": "用STAR说明你在项目中如何应用“数据分析”，并给出可量化结果。"
+            }
+          ],
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_CAMPUS_PINGAN_COM_FB993A73",
+            "source_name": "平安校园招聘官网",
+            "source_url": "https://campus.pingan.com",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 5,
+            "stat_definition": "结合金融-保险代表企业校招JD与国家大学生就业服务平台公开岗位要求抽取岗位画像，后续请补充企业级题库与实证样本。",
+            "confidence": 0.74,
+            "snapshot_url": "https://campus.pingan.com",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_AUTO_CAMPUS_PINGAN_COM_FB993A73"
+            ]
+          },
+          "authenticity_level": "curated",
+          "data_origin": "structured_collection",
+          "no_internship_apply_ratio_min": 0.2,
+          "no_internship_apply_ratio_max": 0.4,
+          "no_internship_apply_ratio_unit": "ratio_0_to_1",
+          "project_evidence_slots": [
+            {
+              "slot_id": "IND_FIN_INSURANCE_ROLE_005_PROJECT_EVD_001",
+              "status": "pending_user_fill",
+              "required_fields": [
+                "project_name",
+                "problem",
+                "action",
+                "result_metric",
+                "proof_link"
+              ],
+              "note": "请补充可在简历中量化呈现的真实项目证据。"
+            }
+          ]
+        },
+        {
+          "role_id": "IND_FIN_INSURANCE_ROLE_006",
+          "role_name": "数据分析",
+          "degree_preference": "本科及以上",
+          "major_restriction": "金融/精算/数学/统计/医学相关优先",
+          "hard_skills": [
+            "概率统计",
+            "保险产品结构",
+            "风险评估",
+            "数据分析"
+          ],
+          "soft_skills": [
+            "沟通与服务",
+            "逻辑能力",
+            "合规意识",
+            "持续学习"
+          ],
+          "written_and_interview_formats": [
+            "笔试",
+            "专业面",
+            "业务面",
+            "HR面"
+          ],
+          "internship_requirement": "建议至少1段相关实习或项目证明",
+          "english_requirement": "基础到中等",
+          "certificate_requirement": "精算/保险相关证书可显著加分",
+          "no_internship_apply_ratio_estimate": "0.2-0.4",
+          "resume_evidence_mapping": [
+            {
+              "capability": "概率统计",
+              "evidence_hint": "用STAR说明你在项目中如何应用“概率统计”，并给出可量化结果。"
+            },
+            {
+              "capability": "保险产品结构",
+              "evidence_hint": "用STAR说明你在项目中如何应用“保险产品结构”，并给出可量化结果。"
+            },
+            {
+              "capability": "风险评估",
+              "evidence_hint": "用STAR说明你在项目中如何应用“风险评估”，并给出可量化结果。"
+            },
+            {
+              "capability": "数据分析",
+              "evidence_hint": "用STAR说明你在项目中如何应用“数据分析”，并给出可量化结果。"
+            }
+          ],
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_CAMPUS_PINGAN_COM_FB993A73",
+            "source_name": "平安校园招聘官网",
+            "source_url": "https://campus.pingan.com",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 5,
+            "stat_definition": "结合金融-保险代表企业校招JD与国家大学生就业服务平台公开岗位要求抽取岗位画像，后续请补充企业级题库与实证样本。",
+            "confidence": 0.74,
+            "snapshot_url": "https://campus.pingan.com",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_AUTO_CAMPUS_PINGAN_COM_FB993A73"
+            ]
+          },
+          "authenticity_level": "curated",
+          "data_origin": "structured_collection",
+          "no_internship_apply_ratio_min": 0.2,
+          "no_internship_apply_ratio_max": 0.4,
+          "no_internship_apply_ratio_unit": "ratio_0_to_1",
+          "project_evidence_slots": [
+            {
+              "slot_id": "IND_FIN_INSURANCE_ROLE_006_PROJECT_EVD_001",
+              "status": "pending_user_fill",
+              "required_fields": [
+                "project_name",
+                "problem",
+                "action",
+                "result_metric",
+                "proof_link"
+              ],
+              "note": "请补充可在简历中量化呈现的真实项目证据。"
+            }
+          ]
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 100,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 80,
+        "source_access_score": 100,
+        "manual_gap_penalty": 0,
+        "quality_score": 96,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 5,
+      "real_data_ratio_percent": 80,
+      "template_data_ratio_percent": 20
+    },
+    "年度校招时间线": {
+      "data_status": "verified",
+      "coverage_percent": 100,
+      "updated_at": "2026-02-16",
+      "notes": "已补齐行业级时间窗口与主管部门来源，待增加企业级精确批次时间点。",
+      "items": [
+        {
+          "timeline_id": "IND_FIN_INSURANCE_TIMELINE_2026",
+          "year": 2026,
+          "stages": [
+            {
+              "stage": "秋招主周期",
+              "start_month": 9,
+              "end_month": 11,
+              "notes": "以网申、测评、笔试/面试为主。"
+            },
+            {
+              "stage": "春招补录周期",
+              "start_month": 2,
+              "end_month": 4,
+              "notes": "以补录和新增需求岗位为主。"
+            }
+          ],
+          "notes": "由v1.1高峰期文本标准化生成，后续需补充分企业公告节点。",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_CAMPUS",
+            "source_name": "国家大学生就业服务平台-校园招聘",
+            "source_url": "https://www.nfra.gov.cn",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 2,
+            "stat_definition": "根据行业历史节奏与公开公告窗口进行季度化整理",
+            "confidence": 0.74,
+            "snapshot_url": "https://www.nfra.gov.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 100,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 100,
+        "source_access_score": 0,
+        "manual_gap_penalty": 0,
+        "quality_score": 80,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 1,
+      "real_data_ratio_percent": 100,
+      "template_data_ratio_percent": 0
+    },
+    "薪酬快照_按城市_按公司层级_按岗位": {
+      "data_status": "in_progress",
+      "coverage_percent": 50,
+      "updated_at": "2026-02-16",
+      "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。",
+      "collection_tasks": [
+        {
+          "task_id": "IND_FIN_INSURANCE_SALARY_TASK_001",
+          "task_name": "完成2026Q1分位薪酬首轮采集",
+          "task_scope": "核心城市x公司层级x岗位",
+          "required_fields": [
+            "city_id",
+            "company_tier",
+            "role_id",
+            "p25_monthly_total_annualized_k_cny",
+            "p50_monthly_total_annualized_k_cny",
+            "p75_monthly_total_annualized_k_cny",
+            "source_url",
+            "source_date",
+            "stat_definition",
+            "sample_size",
+            "confidence"
+          ],
+          "status": "in_progress",
+          "owner": "owner-finance",
+          "due_date": "2026-04-15",
+          "objective": "完成金融-保险 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）"
+        }
+      ],
+      "schema_hint": {
+        "city_id": "CITY_018",
+        "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
+        "role_id": "IND_xxx_ROLE_001",
+        "p25_monthly_total_annualized_k_cny": 0,
+        "p50_monthly_total_annualized_k_cny": 0,
+        "p75_monthly_total_annualized_k_cny": 0,
+        "fixed_ratio": 0,
+        "performance_ratio": 0,
+        "year_end_ratio": 0,
+        "equity_ratio": 0,
+        "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+        "source_date": "2025-05-16",
+        "stat_definition": "明确样本口径",
+        "sample_size": null,
+        "confidence": 0,
+        "updated_at": null
+      },
+      "items": [
+        {
+          "snapshot_id": "IND_FIN_INSURANCE_SALARY_001",
+          "city_id": "CITY_018",
+          "city_name": "上海",
+          "company_tier": "t1_head",
+          "role_id": "IND_FIN_INSURANCE_ROLE_001",
+          "p25_monthly_total_annualized_k_cny": 18.57,
+          "p50_monthly_total_annualized_k_cny": 22.65,
+          "p75_monthly_total_annualized_k_cny": 27.63,
+          "fixed_ratio": 0.75,
+          "performance_ratio": 0.16,
+          "year_end_ratio": 0.07,
+          "equity_ratio": 0.02,
+          "source_id": "SRC_NBS_WAGE_2024",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+          "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "将国家统计局行业年平均工资按行业映射，并使用城市系数与公司层级系数估算应届生岗位分位（非官方直接口径）。",
+          "sample_size": 19,
+          "confidence": 0.42,
+          "updated_at": "2026-02-16",
+          "is_modeled_estimate": true,
+          "authenticity_level": "modeled",
+          "data_origin": "structured_collection",
+          "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_type": "government_dataset",
+          "manual_verification_required": false,
+          "data_layer": "micro_modeled"
+        },
+        {
+          "snapshot_id": "IND_FIN_INSURANCE_SALARY_002",
+          "city_id": "CITY_001",
+          "city_name": "北京",
+          "company_tier": "t2_strong",
+          "role_id": "IND_FIN_INSURANCE_ROLE_001",
+          "p25_monthly_total_annualized_k_cny": 15.6,
+          "p50_monthly_total_annualized_k_cny": 19.02,
+          "p75_monthly_total_annualized_k_cny": 23.2,
+          "fixed_ratio": 0.75,
+          "performance_ratio": 0.16,
+          "year_end_ratio": 0.07,
+          "equity_ratio": 0,
+          "source_id": "SRC_NBS_WAGE_2024",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+          "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "将国家统计局行业年平均工资按行业映射，并使用城市系数与公司层级系数估算应届生岗位分位（非官方直接口径）。",
+          "sample_size": 19,
+          "confidence": 0.42,
+          "updated_at": "2026-02-16",
+          "is_modeled_estimate": true,
+          "authenticity_level": "modeled",
+          "data_origin": "structured_collection",
+          "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_type": "government_dataset",
+          "manual_verification_required": false,
+          "data_layer": "micro_modeled"
+        },
+        {
+          "snapshot_id": "IND_FIN_INSURANCE_SALARY_003",
+          "city_id": "CITY_019",
+          "city_name": "深圳",
+          "company_tier": "t3_regional",
+          "role_id": "IND_FIN_INSURANCE_ROLE_002",
+          "p25_monthly_total_annualized_k_cny": 12.32,
+          "p50_monthly_total_annualized_k_cny": 15.02,
+          "p75_monthly_total_annualized_k_cny": 18.32,
+          "fixed_ratio": 0.75,
+          "performance_ratio": 0.16,
+          "year_end_ratio": 0.07,
+          "equity_ratio": 0,
+          "source_id": "SRC_NBS_WAGE_2024",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+          "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "将国家统计局行业年平均工资按行业映射，并使用城市系数与公司层级系数估算应届生岗位分位（非官方直接口径）。",
+          "sample_size": 19,
+          "confidence": 0.42,
+          "updated_at": "2026-02-16",
+          "is_modeled_estimate": true,
+          "authenticity_level": "modeled",
+          "data_origin": "structured_collection",
+          "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_type": "government_dataset",
+          "manual_verification_required": false,
+          "data_layer": "micro_modeled"
+        },
+        {
+          "snapshot_id": "IND_FIN_INSURANCE_SALARY_004",
+          "city_id": "CITY_018",
+          "city_name": "上海",
+          "company_tier": "public_sector",
+          "role_id": "IND_FIN_INSURANCE_ROLE_002",
+          "p25_monthly_total_annualized_k_cny": 13.05,
+          "p50_monthly_total_annualized_k_cny": 15.92,
+          "p75_monthly_total_annualized_k_cny": 19.42,
+          "fixed_ratio": 0.88,
+          "performance_ratio": 0.09,
+          "year_end_ratio": 0.03,
+          "equity_ratio": 0,
+          "source_id": "SRC_NBS_WAGE_2024",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+          "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "将国家统计局行业年平均工资按行业映射，并使用城市系数与公司层级系数估算应届生岗位分位（非官方直接口径）。",
+          "sample_size": 19,
+          "confidence": 0.42,
+          "updated_at": "2026-02-16",
+          "is_modeled_estimate": true,
+          "authenticity_level": "modeled",
+          "data_origin": "structured_collection",
+          "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_type": "government_dataset",
+          "manual_verification_required": false,
+          "data_layer": "micro_modeled"
+        }
+      ],
+      "estimated_items": [
+        {
+          "snapshot_id": "IND_FIN_INSURANCE_SALARY_001",
+          "city_id": "CITY_018",
+          "city_name": "上海",
+          "company_tier": "t1_head",
+          "role_id": "IND_FIN_INSURANCE_ROLE_001",
+          "p25_monthly_total_annualized_k_cny": 18.57,
+          "p50_monthly_total_annualized_k_cny": 22.65,
+          "p75_monthly_total_annualized_k_cny": 27.63,
+          "fixed_ratio": 0.75,
+          "performance_ratio": 0.16,
+          "year_end_ratio": 0.07,
+          "equity_ratio": 0.02,
+          "source_id": "SRC_NBS_WAGE_2024",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+          "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "将国家统计局行业年平均工资按行业映射，并使用城市系数与公司层级系数估算应届生岗位分位（非官方直接口径）。",
+          "sample_size": 19,
+          "confidence": 0.42,
+          "updated_at": "2026-02-16",
+          "is_modeled_estimate": true,
+          "authenticity_level": "modeled",
+          "data_origin": "structured_collection",
+          "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_type": "government_dataset",
+          "manual_verification_required": false
+        },
+        {
+          "snapshot_id": "IND_FIN_INSURANCE_SALARY_002",
+          "city_id": "CITY_001",
+          "city_name": "北京",
+          "company_tier": "t2_strong",
+          "role_id": "IND_FIN_INSURANCE_ROLE_001",
+          "p25_monthly_total_annualized_k_cny": 15.6,
+          "p50_monthly_total_annualized_k_cny": 19.02,
+          "p75_monthly_total_annualized_k_cny": 23.2,
+          "fixed_ratio": 0.75,
+          "performance_ratio": 0.16,
+          "year_end_ratio": 0.07,
+          "equity_ratio": 0,
+          "source_id": "SRC_NBS_WAGE_2024",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+          "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "将国家统计局行业年平均工资按行业映射，并使用城市系数与公司层级系数估算应届生岗位分位（非官方直接口径）。",
+          "sample_size": 19,
+          "confidence": 0.42,
+          "updated_at": "2026-02-16",
+          "is_modeled_estimate": true,
+          "authenticity_level": "modeled",
+          "data_origin": "structured_collection",
+          "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_type": "government_dataset",
+          "manual_verification_required": false
+        },
+        {
+          "snapshot_id": "IND_FIN_INSURANCE_SALARY_003",
+          "city_id": "CITY_019",
+          "city_name": "深圳",
+          "company_tier": "t3_regional",
+          "role_id": "IND_FIN_INSURANCE_ROLE_002",
+          "p25_monthly_total_annualized_k_cny": 12.32,
+          "p50_monthly_total_annualized_k_cny": 15.02,
+          "p75_monthly_total_annualized_k_cny": 18.32,
+          "fixed_ratio": 0.75,
+          "performance_ratio": 0.16,
+          "year_end_ratio": 0.07,
+          "equity_ratio": 0,
+          "source_id": "SRC_NBS_WAGE_2024",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+          "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "将国家统计局行业年平均工资按行业映射，并使用城市系数与公司层级系数估算应届生岗位分位（非官方直接口径）。",
+          "sample_size": 19,
+          "confidence": 0.42,
+          "updated_at": "2026-02-16",
+          "is_modeled_estimate": true,
+          "authenticity_level": "modeled",
+          "data_origin": "structured_collection",
+          "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_type": "government_dataset",
+          "manual_verification_required": false
+        },
+        {
+          "snapshot_id": "IND_FIN_INSURANCE_SALARY_004",
+          "city_id": "CITY_018",
+          "city_name": "上海",
+          "company_tier": "public_sector",
+          "role_id": "IND_FIN_INSURANCE_ROLE_002",
+          "p25_monthly_total_annualized_k_cny": 13.05,
+          "p50_monthly_total_annualized_k_cny": 15.92,
+          "p75_monthly_total_annualized_k_cny": 19.42,
+          "fixed_ratio": 0.88,
+          "performance_ratio": 0.09,
+          "year_end_ratio": 0.03,
+          "equity_ratio": 0,
+          "source_id": "SRC_NBS_WAGE_2024",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+          "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "将国家统计局行业年平均工资按行业映射，并使用城市系数与公司层级系数估算应届生岗位分位（非官方直接口径）。",
+          "sample_size": 19,
+          "confidence": 0.42,
+          "updated_at": "2026-02-16",
+          "is_modeled_estimate": true,
+          "authenticity_level": "modeled",
+          "data_origin": "structured_collection",
+          "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_type": "government_dataset",
+          "manual_verification_required": false
+        }
+      ],
+      "observed_items": [
+        {
+          "snapshot_id": "IND_FIN_INSURANCE_SALARY_OBS_PENDING_001",
+          "status": "pending_user_fill",
+          "city_id": "CITY_018",
+          "city_name": "上海",
+          "company_tier": "t2_strong",
+          "role_id": "IND_FIN_INSURANCE_ROLE_001",
+          "role_name": "精算",
+          "p25_monthly_total_annualized_k_cny": null,
+          "p50_monthly_total_annualized_k_cny": null,
+          "p75_monthly_total_annualized_k_cny": null,
+          "source_id": "SRC_NCSS_CAMPUS",
+          "source_name": "国家大学生就业服务平台-校园招聘",
+          "source_url": "https://www.ncss.cn",
+          "source_date": null,
+          "sample_size": null,
+          "confidence": null,
+          "stat_definition": "待补充金融-保险真实offer样本统计口径（建议N>=10）。",
+          "updated_at": "2026-02-16",
+          "manual_fill_note": "请填写真实样本来源链接、样本量、统计口径与分位值。",
+          "source_type": "government_platform",
+          "snapshot_url": "https://www.ncss.cn",
+          "http_status": 200,
+          "access_check": "checked",
+          "accessed_at": "2026-02-16",
+          "manual_verification_required": false
+        }
+      ],
+      "observed_status": "in_progress",
+      "observed_coverage_percent": 40,
+      "observed_requirements": {
+        "required_fields": [
+          "city_id",
+          "company_tier",
+          "role_id",
+          "p25_monthly_total_annualized_k_cny",
+          "p50_monthly_total_annualized_k_cny",
+          "p75_monthly_total_annualized_k_cny",
+          "source_url",
+          "source_date",
+          "sample_size",
+          "stat_definition",
+          "confidence"
+        ],
+        "acceptance_rule": "具备真实样本量且可追溯来源后，方可从估算层迁移到实采层。"
+      },
+      "official_benchmark": [
+        {
+          "benchmark_id": "IND_FIN_INSURANCE_NBS_TOTAL_NON_PRIVATE_2024",
+          "metric": "全国城镇非私营单位就业人员年平均工资",
+          "value_cny": 124110,
+          "source_id": "SRC_NBS_WAGE_2024_TABLE",
+          "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+          "source_date": "2025-05-16",
+          "confidence": 0.86,
+          "updated_at": "2026-02-16",
+          "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+          "source_type": "government_dataset",
+          "manual_verification_required": false
+        },
+        {
+          "benchmark_id": "IND_FIN_INSURANCE_NBS_TOTAL_PRIVATE_2024",
+          "metric": "全国城镇私营单位就业人员年平均工资",
+          "value_cny": 69476,
+          "source_id": "SRC_NBS_WAGE_2024_TABLE",
+          "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+          "source_date": "2025-05-16",
+          "confidence": 0.84,
+          "updated_at": "2026-02-16",
+          "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+          "source_type": "government_dataset",
+          "manual_verification_required": false
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 50,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 40,
+        "source_access_score": 100,
+        "manual_gap_penalty": 20,
+        "quality_score": 55.5,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 10,
+      "data_layers_summary": {
+        "estimated_layer_count": 4,
+        "observed_layer_count": 2,
+        "observed_source": "国家统计局分行业工资表2/表5"
+      },
+      "real_data_ratio_percent": 40,
+      "template_data_ratio_percent": 60,
+      "collection_semantics": "微观估算层：用于城市×公司层级×岗位横向比较，不是官方直接观测值。",
+      "linked_macro_collection": "薪酬实证_国家统计口径",
+      "manual_fill_required": true,
+      "manual_fill_slots": [
+        {
+          "slot_id": "IND_FIN_INSURANCE_SALARY_FILL_001",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "city_id",
+            "company_tier",
+            "role_id",
+            "p25",
+            "p50",
+            "p75",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请补充城市与岗位粒度的真实offer样本或官方披露样本。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_SALARY_FILL_002",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "city_id",
+            "company_tier",
+            "role_id",
+            "p25",
+            "p50",
+            "p75",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请补充不同公司层级样本，便于应届生比较。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_SALARY_FILL_003",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "city_id": "CITY_002",
+          "required_fields": [
+            "city_id",
+            "company_tier",
+            "role_id",
+            "p25",
+            "p50",
+            "p75",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_SALARY_FILL_004",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "city_id": "CITY_003",
+          "required_fields": [
+            "city_id",
+            "company_tier",
+            "role_id",
+            "p25",
+            "p50",
+            "p75",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_SALARY_FILL_005",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "city_id": "CITY_004",
+          "required_fields": [
+            "city_id",
+            "company_tier",
+            "role_id",
+            "p25",
+            "p50",
+            "p75",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
+          "created_at": "2026-02-16"
+        }
+      ],
+      "manual_fill_progress": {
+        "required_count": 6,
+        "current_count": 0,
+        "pending_count": 5,
+        "completion_percent": 0
+      }
+    },
+    "笔试真题库": {
+      "data_status": "in_progress",
+      "coverage_percent": 24,
+      "updated_at": "2026-02-16",
+      "notes": "已补最小可用题型样本，后续需替换为真实企业题与年份标注。；存在8条待人工补录槽位。；存在9条待人工补录槽位。；优先补充“保险条款、概率统计、风险评估与客户服务”方向的真实笔试题，模板题不计入最终真题覆盖。",
+      "items": [
+        {
+          "question_id": "IND_FIN_INSURANCE_WRITTEN_001",
+          "role_id": "IND_FIN_INSURANCE_ROLE_001",
+          "role_name": "精算",
+          "question_type": "专业基础题",
+          "prompt": "请结合岗位“精算”说明你如何完成一次端到端问题定位与修复。（行业聚焦：保险条款、概率统计、风险评估与客户服务）",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": true,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开JD能力要求与常见笔试题型模板生成",
+            "confidence": 0.63,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "template",
+          "data_origin": "editorial_template"
+        },
+        {
+          "question_id": "IND_FIN_INSURANCE_WRITTEN_002",
+          "role_id": "IND_FIN_INSURANCE_ROLE_002",
+          "role_name": "核保核赔",
+          "question_type": "场景案例题",
+          "prompt": "给定一个业务指标下滑场景，请说明你的分析路径和优先级判断。（行业聚焦：保险条款、概率统计、风险评估与客户服务）",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": true,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开JD能力要求与常见笔试题型模板生成",
+            "confidence": 0.63,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "template",
+          "data_origin": "editorial_template"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 24,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 20,
+        "source_access_score": 100,
+        "manual_gap_penalty": 16.4,
+        "quality_score": 48.6,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 10,
+      "real_data_ratio_percent": 20,
+      "template_data_ratio_percent": 80,
+      "manual_fill_required": true,
+      "manual_fill_slots": [
+        {
+          "slot_id": "IND_FIN_INSURANCE_WRITTEN_FILL_001",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "answer_framework",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“保险条款、概率统计、风险评估与客户服务”方向的真实题目，并标注题目年份/岗位。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_WRITTEN_FILL_002",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "answer_framework",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“保险条款、概率统计、风险评估与客户服务”方向的真实题目，并标注题目年份/岗位。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_WRITTEN_FILL_003",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "answer_framework",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“保险条款、概率统计、风险评估与客户服务”方向的真实题目，并标注题目年份/岗位。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_WRITTEN_FILL_004",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "answer_framework",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“保险条款、概率统计、风险评估与客户服务”方向的真实题目，并标注题目年份/岗位。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_WRITTEN_FILL_005",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "answer_framework",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“保险条款、概率统计、风险评估与客户服务”方向的真实题目，并标注题目年份/岗位。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_WRITTEN_FILL_006",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "answer_framework",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“保险条款、概率统计、风险评估与客户服务”方向的真实题目，并标注题目年份/岗位。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_WRITTEN_FILL_007",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "answer_framework",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“保险条款、概率统计、风险评估与客户服务”方向的真实题目，并标注题目年份/岗位。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_WRITTEN_FILL_008",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "answer_framework",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“保险条款、概率统计、风险评估与客户服务”方向的真实题目，并标注题目年份/岗位。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_WRITTEN_FILL_009",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "answer_framework",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“保险条款、概率统计、风险评估与客户服务”方向的真实题目，并标注题目年份/岗位。",
+          "created_at": "2026-02-16"
+        }
+      ],
+      "manual_fill_progress": {
+        "required_count": 11,
+        "current_count": 2,
+        "pending_count": 9,
+        "completion_percent": 18.2
+      },
+      "collection_tasks": [
+        {
+          "task_id": "IND_FIN_INSURANCE_WRITTEN_TASK_001",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "owner": "owner-finance",
+          "status": "todo",
+          "objective": "补齐金融-保险笔试真实题样本（重点：保险条款、概率统计、风险评估与客户服务）",
+          "progress": "2/11"
+        }
+      ]
+    },
+    "面试真题库": {
+      "data_status": "in_progress",
+      "coverage_percent": 24,
+      "updated_at": "2026-02-16",
+      "notes": "已补最小可用面试题样本，后续需补真实题、问题来源与轮次信息。；存在8条待人工补录槽位。；存在9条待人工补录槽位。；优先补充“复杂理赔沟通、风险定价解释与流程复盘”方向的真实面试问答，需注明轮次与来源。",
+      "items": [
+        {
+          "question_id": "IND_FIN_INSURANCE_INTERVIEW_001",
+          "role_id": "IND_FIN_INSURANCE_ROLE_001",
+          "role_name": "精算",
+          "question_type": "经历追问",
+          "prompt": "请用STAR讲述一个最能体现你“概率统计”的项目。（行业聚焦：复杂理赔沟通、风险定价解释与流程复盘）",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "业务理解",
+            "复盘深度"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": true,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开面试环节与岗位能力模型生成",
+            "confidence": 0.64,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "template",
+          "data_origin": "editorial_template"
+        },
+        {
+          "question_id": "IND_FIN_INSURANCE_INTERVIEW_002",
+          "role_id": "IND_FIN_INSURANCE_ROLE_002",
+          "role_name": "核保核赔",
+          "question_type": "压力与情景",
+          "prompt": "如果项目目标与资源冲突，你会如何做取舍并与团队沟通？（行业聚焦：复杂理赔沟通、风险定价解释与流程复盘）",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "业务理解",
+            "复盘深度"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": true,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开面试环节与岗位能力模型生成",
+            "confidence": 0.64,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "template",
+          "data_origin": "editorial_template"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 24,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 20,
+        "source_access_score": 100,
+        "manual_gap_penalty": 16.4,
+        "quality_score": 48.6,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 10,
+      "real_data_ratio_percent": 20,
+      "template_data_ratio_percent": 80,
+      "manual_fill_required": true,
+      "manual_fill_slots": [
+        {
+          "slot_id": "IND_FIN_INSURANCE_INTERVIEW_FILL_001",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "scoring_dimensions",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“复杂理赔沟通、风险定价解释与流程复盘”方向的真实问答，并标注面试轮次。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_INTERVIEW_FILL_002",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "scoring_dimensions",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“复杂理赔沟通、风险定价解释与流程复盘”方向的真实问答，并标注面试轮次。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_INTERVIEW_FILL_003",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "scoring_dimensions",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“复杂理赔沟通、风险定价解释与流程复盘”方向的真实问答，并标注面试轮次。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_INTERVIEW_FILL_004",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "scoring_dimensions",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“复杂理赔沟通、风险定价解释与流程复盘”方向的真实问答，并标注面试轮次。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_INTERVIEW_FILL_005",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "scoring_dimensions",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“复杂理赔沟通、风险定价解释与流程复盘”方向的真实问答，并标注面试轮次。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_INTERVIEW_FILL_006",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "scoring_dimensions",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“复杂理赔沟通、风险定价解释与流程复盘”方向的真实问答，并标注面试轮次。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_INTERVIEW_FILL_007",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "scoring_dimensions",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“复杂理赔沟通、风险定价解释与流程复盘”方向的真实问答，并标注面试轮次。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_INTERVIEW_FILL_008",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "scoring_dimensions",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“复杂理赔沟通、风险定价解释与流程复盘”方向的真实问答，并标注面试轮次。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_INTERVIEW_FILL_009",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "scoring_dimensions",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“复杂理赔沟通、风险定价解释与流程复盘”方向的真实问答，并标注面试轮次。",
+          "created_at": "2026-02-16"
+        }
+      ],
+      "manual_fill_progress": {
+        "required_count": 11,
+        "current_count": 2,
+        "pending_count": 9,
+        "completion_percent": 18.2
+      },
+      "collection_tasks": [
+        {
+          "task_id": "IND_FIN_INSURANCE_INTERVIEW_TASK_001",
+          "priority": "P0",
+          "due_date": "2026-03-10",
+          "owner": "owner-finance",
+          "status": "todo",
+          "objective": "补齐金融-保险面试真实问答样本（重点：复杂理赔沟通、风险定价解释与流程复盘）",
+          "progress": "2/11"
+        }
+      ]
+    },
+    "政策变化日志": {
+      "data_status": "verified",
+      "coverage_percent": 100,
+      "updated_at": "2026-02-16",
+      "notes": "政策日志已接入教育部与人社部2026年就业行动节点，后续按月补充行业专项政策。",
+      "items": [
+        {
+          "log_id": "IND_FIN_INSURANCE_POLICY_20250516",
+          "date": "2025-05-16",
+          "title": "国家统计局发布2024年城镇单位就业人员年平均工资数据",
+          "impact": "用于更新行业薪酬对比基线，辅助应届生城市与行业选择。",
+          "scope": "全国",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NBS_WAGE_2024",
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+            "source_date": "2025-05-16",
+            "confidence": 0.74,
+            "sample_size": 1,
+            "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+            "source_type": "government_dataset",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        },
+        {
+          "log_id": "IND_FIN_INSURANCE_POLICY_20260212",
+          "date": "2026-01-07",
+          "title": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
+          "impact": "明确寒假阶段就业服务安排，利于春招前完成岗位匹配与能力补短。",
+          "scope": "全国",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_MOE_ACTION_2026",
+            "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
+            "source_date": "2026-01-07",
+            "confidence": 0.8,
+            "sample_size": 1,
+            "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
+            "source_type": "government_policy",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        },
+        {
+          "log_id": "IND_FIN_INSURANCE_POLICY_20260218",
+          "date": "2025-09-11",
+          "title": "人社部启动2025年秋季全国城市联合招聘高校毕业生专场活动",
+          "impact": "为2026届毕业生秋招提供岗位供给与跨区域匹配渠道。",
+          "scope": "全国",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_MOHRSS_RECRUIT_2026",
+            "source_url": "https://www.gov.cn/lianbo/bumen/202509/content_7040108.htm",
+            "source_date": "2025-09-11",
+            "confidence": 0.8,
+            "sample_size": 1,
+            "snapshot_url": "https://www.gov.cn/lianbo/bumen/202509/content_7040108.htm",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "中国政府网-人社部启动2025年秋季全国城市联合招聘高校毕业生专场",
+            "source_type": "government_policy",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        },
+        {
+          "log_id": "IND_FIN_INSURANCE_POLICY_20260107_MOE",
+          "date": "2026-01-07",
+          "title": "教育部召开2026届高校毕业生就业创业工作会议",
+          "impact": "强化高校毕业生就业服务与岗位供给协同，影响春招与全年校招节奏。",
+          "scope": "全国",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_MOE_MEETING_2026_JAN",
+            "source_name": "教育部-2026届高校毕业生就业创业工作会议（2026-01-07）",
+            "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+            "source_type": "government_policy",
+            "source_date": "2026-01-07",
+            "sample_size": 1,
+            "stat_definition": "教育部官方发布，反映年度高校毕业生就业工作部署",
+            "confidence": 0.86,
+            "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        },
+        {
+          "log_id": "IND_FIN_INSURANCE_POLICY_20260129_MOHRSS",
+          "date": "2026-01-29",
+          "title": "人社部发布春季高校毕业生就业服务活动信息",
+          "impact": "提升春招阶段岗位触达与跨区域流动匹配效率。",
+          "scope": "全国",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_MOHRSS_CAMPUS_2026_0129",
+            "source_name": "人社部中国公共招聘网-春季促就业活动（2026-01-29）",
+            "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
+            "source_type": "government_platform",
+            "source_date": "2026-01-29",
+            "sample_size": 1,
+            "stat_definition": "中国公共招聘网发布的高校毕业生就业服务活动信息",
+            "confidence": 0.82,
+            "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        },
+        {
+          "log_id": "IND_FIN_INSURANCE_POLICY_20250117_NBS",
+          "date": "2025-01-17",
+          "title": "国家统计局发布2024年居民收入和消费支出情况",
+          "impact": "为薪酬预期与城市生活成本判断提供宏观参照。",
+          "scope": "全国",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NBS_INCOME_2024",
+            "source_name": "国家统计局-2024年居民收入和消费支出情况",
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958325.html",
+            "source_type": "government_dataset",
+            "source_date": "2025-01-17",
+            "sample_size": 1,
+            "stat_definition": "国家统计局官方发布，作为就业与薪酬预期的宏观背景数据",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958325.html",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 60,
+      "stale_on": "2026-04-17",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 100,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 100,
+        "source_access_score": 83.3,
+        "manual_gap_penalty": 0,
+        "quality_score": 96.7,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 1,
+      "real_data_ratio_percent": 100,
+      "template_data_ratio_percent": 0
+    },
+    "行业事件日志": {
+      "data_status": "verified",
+      "coverage_percent": 100,
+      "updated_at": "2026-02-16",
+      "notes": "行业事件日志已补季度样本，后续增加企业级招聘节奏与用工信号。",
+      "items": [
+        {
+          "event_id": "IND_FIN_INSURANCE_EVENT_2026Q1",
+          "event_quarter": "2026Q1",
+          "title": "行业招聘与岗位结构进入年度更新窗口",
+          "summary": "校招主周期与春招补录周期数据已结构化，建议结合企业公告进行滚动修订。",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_CAMPUS",
+            "source_url": "https://www.ncss.cn",
+            "source_date": "2026-02-16",
+            "confidence": 0.7,
+            "sample_size": 1,
+            "snapshot_url": "https://www.ncss.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "国家大学生就业服务平台-校园招聘",
+            "source_type": "government_platform",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "structured_collection"
+        },
+        {
+          "event_id": "IND_FIN_INSURANCE_EVENT_2026Q1_HOT",
+          "event_quarter": "2026Q1",
+          "title": "秋季联合招聘启动，校招节奏前移",
+          "summary": "建议在秋招窗口前完成岗位筛选、简历版本和面试题库准备。",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_MOHRSS_RECRUIT_2026",
+            "source_url": "https://www.gov.cn/lianbo/bumen/202509/content_7040108.htm",
+            "source_date": "2025-09-11",
+            "confidence": 0.72,
+            "sample_size": 1,
+            "snapshot_url": "https://www.gov.cn/lianbo/bumen/202509/content_7040108.htm",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "中国政府网-人社部启动2025年秋季全国城市联合招聘高校毕业生专场",
+            "source_type": "government_policy",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "structured_collection"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 60,
+      "stale_on": "2026-04-17",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 100,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 80,
+        "source_access_score": 100,
+        "manual_gap_penalty": 0,
+        "quality_score": 96,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 1,
+      "real_data_ratio_percent": 80,
+      "template_data_ratio_percent": 20
+    },
+    "从业者访谈": {
+      "data_status": "in_progress",
+      "coverage_percent": 20,
+      "updated_at": "2026-02-16",
+      "notes": "待采集。；存在4条待人工补录槽位。；存在5条待人工补录槽位。；访谈优先围绕“核保核赔逻辑、精算思维与渠道运营协同”采集真实样本，模板内容仅作结构示例。",
+      "items": [
+        {
+          "interview_id": "IND_FIN_INSURANCE_TALK_001",
+          "interviewee_profile": {
+            "tenure_years": "3-5",
+            "role_name": "精算",
+            "company_tier": "t2_strong"
+          },
+          "key_takeaways": [
+            "围绕“核保核赔逻辑、精算思维与渠道运营协同”补齐可量化案例，优先于泛化叙述。",
+            "项目复盘深度比项目数量更重要",
+            "校招阶段要尽早形成投递漏斗管理"
+          ],
+          "caveats": [
+            "该访谈为结构化模板样本，需后续补充真实采访记录",
+            "需补充真实访谈录音/记录或可核验文字纪要后，方可升级为verified。"
+          ],
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于应届生求职常见反馈抽象出的访谈提纲样本",
+            "confidence": 0.58,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "template",
+          "data_origin": "editorial_template"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 20,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 20,
+        "source_access_score": 100,
+        "manual_gap_penalty": 16.7,
+        "quality_score": 47.3,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 5,
+      "real_data_ratio_percent": 20,
+      "template_data_ratio_percent": 80,
+      "manual_fill_required": true,
+      "manual_fill_slots": [
+        {
+          "slot_id": "IND_FIN_INSURANCE_TALK_FILL_001",
+          "status": "pending_user_fill",
+          "priority": "P1",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "interviewee_profile",
+            "key_takeaways",
+            "caveats",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "real_user",
+            "company_official",
+            "government_platform"
+          ],
+          "note": "请优先补充“核保核赔逻辑、精算思维与渠道运营协同”方向的真实样本，并保留来源证据。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_TALK_FILL_002",
+          "status": "pending_user_fill",
+          "priority": "P1",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "interviewee_profile",
+            "key_takeaways",
+            "caveats",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "real_user",
+            "company_official",
+            "government_platform"
+          ],
+          "note": "请优先补充“核保核赔逻辑、精算思维与渠道运营协同”方向的真实样本，并保留来源证据。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_TALK_FILL_003",
+          "status": "pending_user_fill",
+          "priority": "P1",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "interviewee_profile",
+            "key_takeaways",
+            "caveats",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "real_user",
+            "company_official",
+            "government_platform"
+          ],
+          "note": "请优先补充“核保核赔逻辑、精算思维与渠道运营协同”方向的真实样本，并保留来源证据。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_TALK_FILL_004",
+          "status": "pending_user_fill",
+          "priority": "P1",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "interviewee_profile",
+            "key_takeaways",
+            "caveats",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "real_user",
+            "company_official",
+            "government_platform"
+          ],
+          "note": "请优先补充“核保核赔逻辑、精算思维与渠道运营协同”方向的真实样本，并保留来源证据。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_TALK_FILL_005",
+          "status": "pending_user_fill",
+          "priority": "P1",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "interviewee_profile",
+            "key_takeaways",
+            "caveats",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "real_user",
+            "company_official",
+            "government_platform"
+          ],
+          "note": "请优先补充“核保核赔逻辑、精算思维与渠道运营协同”方向的真实样本，并保留来源证据。",
+          "created_at": "2026-02-16"
+        }
+      ],
+      "manual_fill_progress": {
+        "required_count": 6,
+        "current_count": 1,
+        "pending_count": 5,
+        "completion_percent": 16.7
+      },
+      "collection_tasks": [
+        {
+          "task_id": "IND_FIN_INSURANCE_TALK_TASK_001",
+          "priority": "P1",
+          "due_date": "2026-03-31",
+          "owner": "owner-finance",
+          "status": "todo",
+          "objective": "补齐金融-保险从业者访谈真实样本（重点：核保核赔逻辑、精算思维与渠道运营协同）",
+          "progress": "1/6"
+        }
+      ]
+    },
+    "案例复盘": {
+      "data_status": "in_progress",
+      "coverage_percent": 33.3,
+      "updated_at": "2026-02-16",
+      "notes": "待采集。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在3条待人工补录槽位。",
+      "items": [
+        {
+          "case_id": "IND_FIN_INSURANCE_CASE_001",
+          "title": "应届生投递漏斗优化复盘",
+          "scenario": "连续2周投递反馈率低于预期。",
+          "actions": [
+            "按岗位族重写简历版本",
+            "将投递窗口前置到岗位发布48小时内",
+            "增加内推与校招官网双通道"
+          ],
+          "result": "用于示范复盘结构，待补真实数据结果。",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于求职方法论模板生成",
+            "confidence": 0.57,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "template",
+          "data_origin": "editorial_template"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 33.3,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 20,
+        "source_access_score": 100,
+        "manual_gap_penalty": 15,
+        "quality_score": 52.3,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 3,
+      "real_data_ratio_percent": 20,
+      "template_data_ratio_percent": 80,
+      "manual_fill_required": true,
+      "manual_fill_slots": [
+        {
+          "slot_id": "IND_FIN_INSURANCE_CASE_FILL_001",
+          "status": "pending_user_fill",
+          "priority": "P1",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "title",
+            "scenario",
+            "actions",
+            "result",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "real_user",
+            "company_official",
+            "editorial"
+          ],
+          "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_CASE_FILL_002",
+          "status": "pending_user_fill",
+          "priority": "P1",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "title",
+            "scenario",
+            "actions",
+            "result",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "real_user",
+            "company_official",
+            "editorial"
+          ],
+          "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_CASE_FILL_003",
+          "status": "pending_user_fill",
+          "priority": "P1",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "title",
+            "scenario",
+            "actions",
+            "result",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "real_user",
+            "company_official",
+            "editorial"
+          ],
+          "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
+          "created_at": "2026-02-16"
+        }
+      ],
+      "manual_fill_progress": {
+        "required_count": 4,
+        "current_count": 1,
+        "pending_count": 3,
+        "completion_percent": 25
+      },
+      "collection_tasks": [
+        {
+          "task_id": "IND_FIN_INSURANCE_CASE_TASK_001",
+          "priority": "P1",
+          "due_date": "2026-03-31",
+          "owner": "owner-finance",
+          "status": "todo",
+          "objective": "补齐案例复盘到最小样本4条",
+          "progress": "1/4"
+        }
+      ]
+    },
+    "争议问题与结论": {
+      "data_status": "in_progress",
+      "coverage_percent": 50,
+      "updated_at": "2026-02-16",
+      "notes": "待采集。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在2条待人工补录槽位。",
+      "items": [
+        {
+          "issue_id": "IND_FIN_INSURANCE_DEBATE_001",
+          "issue": "是否应优先选择高薪但高波动行业？",
+          "pro_points": [
+            "起薪与成长速度可能更高",
+            "更容易积累高密度项目经验"
+          ],
+          "con_points": [
+            "岗位波动与淘汰风险更高",
+            "长期稳定性不确定"
+          ],
+          "editorial_conclusion": "应按个人风险偏好、能力匹配和城市成本综合决策。",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NBS_WAGE_2024_TABLE",
+            "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+            "source_type": "government_dataset",
+            "source_date": "2025-05-16",
+            "sample_size": 1,
+            "stat_definition": "结合官方工资基准与行业风险画像给出编辑结论",
+            "confidence": 0.6,
+            "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "template",
+          "data_origin": "editorial_template"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 50,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 20,
+        "source_access_score": 100,
+        "manual_gap_penalty": 13.3,
+        "quality_score": 58.2,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 2,
+      "real_data_ratio_percent": 20,
+      "template_data_ratio_percent": 80,
+      "manual_fill_required": true,
+      "manual_fill_slots": [
+        {
+          "slot_id": "IND_FIN_INSURANCE_ISSUE_FILL_001",
+          "status": "pending_user_fill",
+          "priority": "P1",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "issue",
+            "pro_points",
+            "con_points",
+            "editorial_conclusion",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "government_dataset",
+            "government_policy",
+            "editorial"
+          ],
+          "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_FIN_INSURANCE_ISSUE_FILL_002",
+          "status": "pending_user_fill",
+          "priority": "P1",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "issue",
+            "pro_points",
+            "con_points",
+            "editorial_conclusion",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "government_dataset",
+            "government_policy",
+            "editorial"
+          ],
+          "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
+          "created_at": "2026-02-16"
+        }
+      ],
+      "manual_fill_progress": {
+        "required_count": 3,
+        "current_count": 1,
+        "pending_count": 2,
+        "completion_percent": 33.3
+      },
+      "collection_tasks": [
+        {
+          "task_id": "IND_FIN_INSURANCE_ISSUE_TASK_001",
+          "priority": "P1",
+          "due_date": "2026-03-31",
+          "owner": "owner-finance",
+          "status": "todo",
+          "objective": "补齐争议问题与结论到最小样本3条",
+          "progress": "1/3"
+        }
+      ]
+    },
+    "外部链接": {
+      "data_status": "verified",
+      "coverage_percent": 100,
+      "updated_at": "2026-02-16",
+      "notes": "已补齐核心官方入口，后续按行业补充协会、白皮书与就业报告链接。",
+      "items": [
+        {
+          "link_id": "IND_FIN_INSURANCE_LINK_001",
+          "title": "国家大学生就业服务平台",
+          "url": "https://www.ncss.cn",
+          "link_type": "official_platform",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_CAMPUS",
+            "source_url": "https://www.ncss.cn",
+            "source_date": "2026-02-16",
+            "confidence": 0.86,
+            "sample_size": 1,
+            "snapshot_url": "https://www.ncss.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "国家大学生就业服务平台-校园招聘",
+            "source_type": "government_platform",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        },
+        {
+          "link_id": "IND_FIN_INSURANCE_LINK_002",
+          "title": "行业主管部门/监管入口",
+          "url": "https://www.nfra.gov.cn",
+          "link_type": "regulator",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_NFRA_GOV_CN_FCB8C535",
+            "source_url": "https://www.nfra.gov.cn",
+            "source_date": "2026-02-16",
+            "confidence": 0.78,
+            "sample_size": 1,
+            "snapshot_url": "https://www.nfra.gov.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "监管部门公开信息",
+            "source_type": "curated_mapping",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        },
+        {
+          "link_id": "IND_FIN_INSURANCE_LINK_003",
+          "title": "中国平安 校招/官网入口",
+          "url": "https://www.pingan.com",
+          "link_type": "company_official",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_PINGAN_COM_A4057B5F",
+            "source_url": "https://www.pingan.com",
+            "source_date": "2026-02-16",
+            "confidence": 0.75,
+            "sample_size": 1,
+            "snapshot_url": "https://www.pingan.com",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "中国平安官网/招聘页",
+            "source_type": "company_official",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        },
+        {
+          "link_id": "IND_FIN_INSURANCE_LINK_004",
+          "title": "中国人寿 校招/官网入口",
+          "url": "https://www.chinalife.com.cn",
+          "link_type": "company_official",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_CHINALIFE_COM_CN_BDC1A67F",
+            "source_url": "https://www.chinalife.com.cn",
+            "source_date": "2026-02-16",
+            "confidence": 0.75,
+            "sample_size": 1,
+            "snapshot_url": "https://www.chinalife.com.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 0,
+            "access_check": "checked",
+            "source_name": "中国人寿官网/招聘页",
+            "source_type": "company_official",
+            "manual_verification_required": true,
+            "manual_verification_note": "链接可访问性不稳定，请人工补充可访问快照URL或替代来源。"
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        },
+        {
+          "link_id": "IND_FIN_INSURANCE_LINK_005",
+          "title": "中国太保 校招/官网入口",
+          "url": "https://www.cpic.com.cn",
+          "link_type": "company_official",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_CPIC_COM_CN_86ECC527",
+            "source_url": "https://www.cpic.com.cn",
+            "source_date": "2026-02-16",
+            "confidence": 0.75,
+            "sample_size": 1,
+            "snapshot_url": "https://www.cpic.com.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "中国太保官网/招聘页",
+            "source_type": "company_official",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 100,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 100,
+        "source_access_score": 20,
+        "manual_gap_penalty": 0,
+        "quality_score": 84,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 1,
+      "real_data_ratio_percent": 100,
+      "template_data_ratio_percent": 0
+    },
+    "自定义扩展": {
+      "data_status": "confirmed_empty",
+      "coverage_percent": 100,
+      "updated_at": "2026-02-16",
+      "notes": "该字段经确认当前无扩展需求，后续新增字段需按namespace_rule命名。",
+      "payload": {
+        "namespace_rule": "x_<team>_<field>",
+        "extension_fields": [],
+        "last_review_note": "暂无跨团队扩展字段，保留命名空间规范。"
+      },
+      "items": [],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 100,
+        "evidence_completeness_percent": 0,
+        "freshness_score": 100,
+        "realness_score": 0,
+        "source_access_score": 40,
+        "manual_gap_penalty": 0,
+        "quality_score": 100,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 0,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 100
+    },
+    "薪酬实证_国家统计口径": {
+      "data_status": "verified",
+      "coverage_percent": 100,
+      "updated_at": "2026-02-16",
+      "notes": "宏观实证层：国家统计局分行业口径，用于行业大盘比较，不提供城市×岗位粒度。",
+      "items": [
+        {
+          "observed_id": "IND_FIN_INSURANCE_OBS_001",
+          "data_year": 2024,
+          "wage_scope": "城镇非私营单位",
+          "nbs_industry_category": "金融业",
+          "annual_avg_wage_cny": 201883,
+          "nominal_growth_percent": 2.1,
+          "source_id": "SRC_NBS_WAGE_2024_TABLE",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+          "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "国家统计局公开口径：城镇非私营单位分行业门类年平均工资",
+          "sample_size": 31,
+          "confidence": 0.86,
+          "is_official_observed": true,
+          "mapped_for_entry_level_usage": true,
+          "updated_at": "2026-02-16",
+          "authenticity_level": "official",
+          "data_layer": "macro_official",
+          "source_scope": "national_industry_level",
+          "source_type": "government_dataset",
+          "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "manual_verification_required": false
+        },
+        {
+          "observed_id": "IND_FIN_INSURANCE_OBS_002",
+          "data_year": 2024,
+          "wage_scope": "城镇私营单位",
+          "nbs_industry_category": "金融业",
+          "annual_avg_wage_cny": 135339,
+          "nominal_growth_percent": 8.4,
+          "source_id": "SRC_NBS_WAGE_2024_TABLE",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+          "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "国家统计局公开口径：城镇私营单位分行业门类年平均工资",
+          "sample_size": 31,
+          "confidence": 0.84,
+          "is_official_observed": true,
+          "mapped_for_entry_level_usage": true,
+          "updated_at": "2026-02-16",
+          "authenticity_level": "official",
+          "data_layer": "macro_official",
+          "source_scope": "national_industry_level",
+          "source_type": "government_dataset",
+          "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "manual_verification_required": false
+        }
+      ],
+      "min_sample_size_for_verified": 10,
+      "last_checked": "2026-02-16",
+      "stale_after_days": 180,
+      "stale_on": "2026-08-15",
+      "stale_status": "fresh",
+      "manual_fill_required": false,
+      "manual_fill_slots": [],
+      "manual_fill_progress": {
+        "required_count": 2,
+        "current_count": 2,
+        "pending_count": 0,
+        "completion_percent": 100
+      },
+      "real_data_ratio_percent": 100,
+      "template_data_ratio_percent": 0,
+      "quality": {
+        "quantity_score": 100,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 100,
+        "source_access_score": 0,
+        "manual_gap_penalty": 0,
+        "quality_score": 80,
+        "calculated_at": "2026-02-16"
+      }
+    }
+  },
+  "progress": {
+    "todo_collections": 0,
+    "in_progress_collections": 6,
+    "verified_collections": 7,
+    "confirmed_empty_collections": 1,
+    "tracked_collections": 14,
+    "coverage_percent_overall": 71.5,
+    "evidence_percent_overall": 92.9,
+    "freshness_percent_overall": 100,
+    "real_data_ratio_overall": 57.1,
+    "template_ratio_overall": 42.9,
+    "quality_score_overall": 73.7,
+    "verified_ratio_percent": 50,
+    "weakest_collections": [
+      "从业者访谈",
+      "笔试真题库",
+      "面试真题库"
+    ],
+    "manual_fill_required_total": 42,
+    "manual_fill_pending_total": 33,
+    "manual_fill_completion_percent": 21.4,
+    "salary_micro_status": "in_progress",
+    "salary_macro_status": "verified",
+    "updated_at": "2026-02-16",
+    "ranking_percentile": 4.5
+  },
+  "sources": [
+    {
+      "source_id": "SRC_EDITORIAL",
+      "source_name": "行业百科编委会维护日志（待补内部链接）",
+      "source_type": "editorial",
+      "source_url": "https://www.ncss.cn",
+      "source_date": "2026-02-15",
+      "confidence": 0.8,
+      "usage": "编委会整合并基于公开来源结构化整理",
+      "snapshot_url": "https://www.ncss.cn",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_AUTO_CAMPUS_PINGAN_COM_FB993A73",
+      "source_name": "平安校园招聘官网",
+      "source_type": "company_official",
+      "source_url": "https://campus.pingan.com",
+      "source_date": "2026-02-16",
+      "confidence": 0.78,
+      "usage": "公司清单首批锚点数据",
+      "snapshot_url": "https://campus.pingan.com",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_AUTO_WWW_NFRA_GOV_CN_FCB8C535",
+      "source_name": "监管部门公开信息",
+      "source_type": "curated_mapping",
+      "source_url": "https://www.nfra.gov.cn",
+      "source_date": "2026-02-15",
+      "confidence": 0.58,
+      "usage": "原词条参考方向标签",
+      "snapshot_url": "https://www.nfra.gov.cn",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_AUTO_WWW_NFRA_GOV_CN_FCB8C535",
+      "source_name": "监管部门公开信息",
+      "source_type": "curated_mapping",
+      "source_url": "https://www.nfra.gov.cn",
+      "source_date": "2026-02-15",
+      "confidence": 0.58,
+      "usage": "原词条参考方向标签",
+      "snapshot_url": "https://www.nfra.gov.cn",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NCSS",
+      "source_name": "国家大学生就业服务平台",
+      "source_type": "general_platform",
+      "source_url": "https://www.ncss.cn",
+      "source_date": "2026-02-15",
+      "confidence": 0.62,
+      "usage": "原词条参考方向标签",
+      "snapshot_url": "https://www.ncss.cn",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_ZHILIAN",
+      "source_name": "智联招聘",
+      "source_type": "commercial_platform",
+      "source_url": "https://www.zhaopin.com",
+      "source_date": "2026-02-15",
+      "confidence": 0.62,
+      "usage": "原词条参考方向标签",
+      "snapshot_url": "https://www.zhaopin.com",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NBS_WAGE_2024",
+      "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+      "source_type": "government_dataset",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+      "source_date": "2025-05-16",
+      "confidence": 0.74,
+      "usage": "薪酬快照基础口径与行业映射参考",
+      "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NCSS_2026_JOINT",
+      "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+      "source_type": "government_platform",
+      "source_url": "https://www.ncss.cn/student/24365",
+      "source_date": "2026-02-16",
+      "confidence": 0.82,
+      "usage": "校招时间线、岗位活跃度与招聘入口交叉验证",
+      "snapshot_url": "https://www.ncss.cn/student/24365",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_MOE_ACTION_2026",
+      "source_name": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
+      "source_type": "government_policy",
+      "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
+      "source_date": "2026-02-12",
+      "confidence": 0.8,
+      "usage": "毕业生就业政策与服务节奏参考",
+      "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_MOHRSS_RECRUIT_2026",
+      "source_name": "中国政府网-人社部启动2025年秋季全国城市联合招聘高校毕业生专场",
+      "source_type": "government_policy",
+      "source_url": "https://www.gov.cn/lianbo/bumen/202509/content_7040108.htm",
+      "source_date": "2025-09-11",
+      "confidence": 0.8,
+      "usage": "春招窗口与招聘强度判断",
+      "snapshot_url": "https://www.gov.cn/lianbo/bumen/202509/content_7040108.htm",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NBS_WAGE_2024_TABLE",
+      "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+      "source_type": "government_dataset",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+      "source_date": "2026-02-16",
+      "confidence": 0.72,
+      "usage": "v1.4统一补齐核心可验证来源",
+      "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_MOE_MEETING_2026_JAN",
+      "source_name": "教育部-2026届高校毕业生就业创业工作会议（2026-01-07）",
+      "source_type": "government_policy",
+      "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+      "source_date": "2026-02-16",
+      "confidence": 0.72,
+      "usage": "v1.5统一补齐核心可验证来源",
+      "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_MOHRSS_CAMPUS_2026_0129",
+      "source_name": "人社部中国公共招聘网-春季促就业活动（2026-01-29）",
+      "source_type": "government_platform",
+      "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
+      "source_date": "2026-02-16",
+      "confidence": 0.72,
+      "usage": "v1.5统一补齐核心可验证来源",
+      "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    }
+  ]
+}
