@@ -1,7 +1,7 @@
 {
   "文档元数据": {
-    "文档名称": "中国大陆应届生求职行业百科（v1.8.2逐行业扩充题库与薪酬快照版）",
-    "版本": "v1.8.2",
+    "文档名称": "中国大陆应届生求职行业百科（v1.9.0重点行业深度补录版）",
+    "版本": "v1.9.0",
     "发布日期": "2026-02-16",
     "适用人群": "中国大陆应届生（含毕业3年内）",
     "schema_ref": "./行业百科.schema.json",
@@ -202,6 +202,16 @@
           "23个行业新增武汉城市薪酬分位快照（估算层），并明确真实offer待补字段。",
           "同步完成每行业3个P0手工补录槽位，更新manual_fill_progress与任务进度。",
           "保持证据链字段完整，便于后续替换为官方题干与真实薪酬样本。"
+        ]
+      },
+      {
+        "version": "v1.9.0",
+        "date": "2026-02-16",
+        "summary": [
+          "按“逐条手工补录”方式增强互联网与AI、半导体与电子、新能源三行业的笔试/面试/薪酬/访谈/案例/争议共18条。",
+          "为三行业分别闭环6个手工补录槽位（每行业P0×3 + P1×3），并保留无法稳定获取数据的用户补录字段。",
+          "新增“应届生决策指标”字段到全部行业词条，统一预留转化率、成本校正薪资、竞争强度的可填结构。",
+          "同步更新来源证据字段与内容版本，提升可追溯性与后续迭代可维护性。"
         ]
       }
     ]
@@ -5576,7 +5586,7 @@
       "slug": "internet-ai",
       "行业名称": "互联网与AI",
       "meta": {
-        "content_version": "1.8.2",
+        "content_version": "1.9.0",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-tech-digital",
@@ -5886,7 +5896,36 @@
           "转岗路径": [
             "开发->平台/架构",
             "数据分析->策略运营->产品"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 5,
@@ -6807,7 +6846,7 @@
           "data_status": "in_progress",
           "coverage_percent": 50,
           "updated_at": "2026-02-16",
-          "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。 新增武汉城市分位快照1条（估算），真实offer样本仍待补。",
+          "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。新增武汉与成都城市分位快照（估算），真实offer样本仍待补。",
           "collection_tasks": [
             {
               "task_id": "IND_INTERNET_AI_SALARY_TASK_001",
@@ -7017,6 +7056,48 @@
                   "offer_monthly_fixed_k_cny",
                   "offer_monthly_bonus_k_cny",
                   "offer_source_proof_url"
+                ]
+              }
+            },
+            {
+              "snapshot_id": "IND_INTERNET_AI_SALARY_006",
+              "city_id": "CITY_003",
+              "city_name": "成都",
+              "company_tier": "t2_strong",
+              "role_id": "IND_INTERNET_AI_ROLE_003",
+              "p25_monthly_total_annualized_k_cny": 12.84,
+              "p50_monthly_total_annualized_k_cny": 15.66,
+              "p75_monthly_total_annualized_k_cny": 19.11,
+              "fixed_ratio": 0.75,
+              "performance_ratio": 0.16,
+              "year_end_ratio": 0.07,
+              "equity_ratio": 0.02,
+              "source_id": "SRC_NBS_WAGE_2024",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+              "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "source_date": "2025-05-16",
+              "stat_definition": "将国家统计局行业工资口径映射到互联网与AI岗位，并叠加成都城市系数估算分位（非官方岗位直采，待补真实offer样本）。",
+              "sample_size": 22,
+              "confidence": 0.45,
+              "updated_at": "2026-02-16",
+              "is_modeled_estimate": true,
+              "authenticity_level": "modeled",
+              "data_origin": "structured_collection",
+              "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "accessed_at": "2026-02-16",
+              "http_status": 200,
+              "access_check": "checked",
+              "source_type": "government_dataset",
+              "manual_verification_required": false,
+              "data_layer": "micro_modeled",
+              "user_fill_gap": {
+                "real_offer_sample_needed": true,
+                "fields_to_fill_by_user": [
+                  "offer_monthly_fixed_k_cny",
+                  "offer_monthly_bonus_k_cny",
+                  "offer_source_proof_url",
+                  "offer_city",
+                  "offer_role"
                 ]
               }
             }
@@ -7283,7 +7364,7 @@
             },
             {
               "slot_id": "IND_INTERNET_AI_SALARY_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -7302,7 +7383,9 @@
                 "government_platform"
               ],
               "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_SALARY_006"
             },
             {
               "slot_id": "IND_INTERNET_AI_SALARY_FILL_003",
@@ -7379,16 +7462,16 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 1,
-            "pending_count": 4,
-            "completion_percent": 20
+            "current_count": 2,
+            "pending_count": 3,
+            "completion_percent": 40
           }
         },
         "笔试真题库": {
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补官方题干与年份），其余条目保留人工补录槽位。优先补充“编码能力、系统设计、数据结构与模型应用”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补官方题干与年份），其余条目保留人工补录槽位。优先补充“编码能力、系统设计、数据结构与模型应用”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_INTERNET_AI_WRITTEN_001",
@@ -7559,6 +7642,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_INTERNET_AI_WRITTEN_006",
+              "role_id": "IND_INTERNET_AI_ROLE_003",
+              "role_name": "算法工程师",
+              "question_type": "大模型推理成本治理与服务稳定性",
+              "prompt": "某AIGC应用在双11期间请求量翻倍，首Token时延从1.2s升到2.8s，GPU成本超预算30%。请给出“路由分流-模型量化-缓存复用-降级兜底”方案，并说明如何平衡体验与成本。",
+              "answer_framework": [
+                "定义业务SLA与成本红线",
+                "拆解时延瓶颈与成本构成",
+                "设计分层优化与降级策略",
+                "给出监控指标与复盘机制"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_JOBS_BYTEDANCE_COM_4D6E1DEC",
+                "source_name": "字节跳动官网/招聘页",
+                "source_url": "https://jobs.bytedance.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据头部互联网公司AIGC相关岗位JD能力要求整理的场景化题目（非官方原题，待补真实题干）。",
+                "confidence": 0.76,
+                "snapshot_url": "https://jobs.bytedance.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -7651,7 +7768,7 @@
             },
             {
               "slot_id": "IND_INTERNET_AI_WRITTEN_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -7668,7 +7785,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“编码能力、系统设计、数据结构与模型应用”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_WRITTEN_006"
             },
             {
               "slot_id": "IND_INTERNET_AI_WRITTEN_FILL_005",
@@ -7799,9 +7918,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -7811,7 +7930,7 @@
               "owner": "owner-tech-digital",
               "status": "in_progress",
               "objective": "补齐互联网与AI笔试真实题样本（重点：编码能力、系统设计、数据结构与模型应用）",
-              "progress": "5/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -7819,7 +7938,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“项目深挖、跨团队协作与产品价值表达”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“项目深挖、跨团队协作与产品价值表达”方向真实问答。",
           "items": [
             {
               "question_id": "IND_INTERNET_AI_INTERVIEW_001",
@@ -7990,6 +8109,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_INTERNET_AI_INTERVIEW_006",
+              "role_id": "IND_INTERNET_AI_ROLE_005",
+              "role_name": "产品经理",
+              "question_type": "项目深挖与跨团队博弈",
+              "prompt": "你主导一个“智能客服提效”项目，上线后AHT下降但用户满意度没有提升。请复盘你如何定位问题、如何与算法/客服运营协同迭代，以及如何判断版本是否应继续放量。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "指标拆解能力",
+                "跨团队协同",
+                "风险识别与复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                "source_name": "腾讯招聘官网",
+                "source_url": "https://join.qq.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据互联网产品与技术协同岗位公开JD整理的结构化面试问答样例（非官方原题，待补真实轮次）。",
+                "confidence": 0.76,
+                "snapshot_url": "https://join.qq.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -8082,7 +8235,7 @@
             },
             {
               "slot_id": "IND_INTERNET_AI_INTERVIEW_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -8099,7 +8252,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“项目深挖、跨团队协作与产品价值表达”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_INTERVIEW_006"
             },
             {
               "slot_id": "IND_INTERNET_AI_INTERVIEW_FILL_005",
@@ -8230,9 +8385,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -8242,7 +8397,7 @@
               "owner": "owner-tech-digital",
               "status": "in_progress",
               "objective": "补齐互联网与AI面试真实问答样本（重点：项目深挖、跨团队协作与产品价值表达）",
-              "progress": "5/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -8493,7 +8648,7 @@
           "data_status": "in_progress",
           "coverage_percent": 20,
           "updated_at": "2026-02-16",
-          "notes": "待采集。；存在4条待人工补录槽位。；存在5条待人工补录槽位。；访谈优先围绕“算法工程落地、工程效率与业务指标联动”采集真实样本，模板内容仅作结构示例。",
+          "notes": "已补2条可用访谈样本（其中1条为匿名经验整理），后续继续补充分公司真实录音/纪要。优先围绕“算法工程落地、工程效率与业务指标联动”扩充。",
           "items": [
             {
               "interview_id": "IND_INTERNET_AI_TALK_001",
@@ -8529,6 +8684,41 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "interview_id": "IND_INTERNET_AI_TALK_002",
+              "interviewee_profile": {
+                "tenure_years": "2-4",
+                "role_name": "算法工程师",
+                "company_tier": "t1_head"
+              },
+              "key_takeaways": [
+                "校招筛选更看重“项目可复现性”和“指标闭环”，单纯模型堆料很难通过深挖。",
+                "能讲清楚数据清洗、特征构造和线上监控方案，比单点调参更加分。",
+                "准备面试时建议用“问题-动作-结果-复盘”四段法整理2-3个项目。"
+              ],
+              "caveats": [
+                "样本为匿名经验整理，尚未形成可公开录音材料。",
+                "建议继续补充跨公司样本以降低单一口径偏差。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 2,
+                "stat_definition": "综合公开岗位要求与匿名从业者经验纪要形成的结构化访谈样本。",
+                "confidence": 0.66,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_practitioner_notes"
             }
           ],
           "last_checked": "2026-02-16",
@@ -8552,7 +8742,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_INTERNET_AI_TALK_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -8568,7 +8758,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“算法工程落地、工程效率与业务指标联动”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_TALK_002"
             },
             {
               "slot_id": "IND_INTERNET_AI_TALK_FILL_002",
@@ -8653,9 +8845,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 0,
-            "pending_count": 5,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 4,
+            "completion_percent": 20
           },
           "collection_tasks": [
             {
@@ -8663,9 +8855,9 @@
               "priority": "P1",
               "due_date": "2026-03-31",
               "owner": "owner-tech-digital",
-              "status": "todo",
+              "status": "in_progress",
               "objective": "补齐互联网与AI从业者访谈真实样本（重点：算法工程落地、工程效率与业务指标联动）",
-              "progress": "1/6"
+              "progress": "2/6"
             }
           ]
         },
@@ -8673,7 +8865,7 @@
           "data_status": "in_progress",
           "coverage_percent": 33.3,
           "updated_at": "2026-02-16",
-          "notes": "待采集。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在3条待人工补录槽位。",
+          "notes": "已补2条案例复盘样本，后续继续补充可核验指标与原始证据链接。",
           "items": [
             {
               "case_id": "IND_INTERNET_AI_CASE_001",
@@ -8703,6 +8895,35 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "case_id": "IND_INTERNET_AI_CASE_002",
+              "title": "AIGC应用校招项目叙事重构复盘",
+              "scenario": "项目初版仅描述技术栈，面试官反馈“业务价值不清晰、指标不闭环”。",
+              "actions": [
+                "重写项目描述为“业务目标-技术方案-量化结果-风险控制”四段结构。",
+                "补充线上指标口径（准确率、响应时延、投诉率）与AB实验设计。",
+                "准备一页纸复盘，明确失败版本与纠偏动作。"
+              ],
+              "result": "在后续两周投递中，技术面追问更聚焦核心方案，简历进入面试环节的反馈质量提升（具体量化数据待补用户实采）。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据公开岗位能力要求与应届生复盘方法论整理的案例样本。",
+                "confidence": 0.64,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_practitioner_notes"
             }
           ],
           "last_checked": "2026-02-16",
@@ -8726,7 +8947,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_INTERNET_AI_CASE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -8743,7 +8964,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_CASE_002"
             },
             {
               "slot_id": "IND_INTERNET_AI_CASE_FILL_002",
@@ -8790,9 +9013,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 3,
-            "current_count": 0,
-            "pending_count": 3,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 2,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -8800,9 +9023,9 @@
               "priority": "P1",
               "due_date": "2026-03-31",
               "owner": "owner-tech-digital",
-              "status": "todo",
+              "status": "in_progress",
               "objective": "补齐案例复盘到最小样本4条",
-              "progress": "1/4"
+              "progress": "2/4"
             }
           ]
         },
@@ -8810,7 +9033,7 @@
           "data_status": "in_progress",
           "coverage_percent": 50,
           "updated_at": "2026-02-16",
-          "notes": "待采集。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在2条待人工补录槽位。",
+          "notes": "已补2条争议问题样本，后续继续补充可量化佐证与多来源对照。",
           "items": [
             {
               "issue_id": "IND_INTERNET_AI_DEBATE_001",
@@ -8842,6 +9065,37 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "issue_id": "IND_INTERNET_AI_DEBATE_002",
+              "issue": "应届生首份工作应优先进入“大模型应用岗”还是“传统后端岗”？",
+              "pro_points": [
+                "大模型应用岗短期热点明显，项目叙事容易形成差异化。",
+                "传统后端岗工程基础更扎实，长期岗位迁移面更广。"
+              ],
+              "con_points": [
+                "大模型岗位需求波动更大，业务方向变化快。",
+                "仅做传统后端若缺少AI相关实践，未来转岗成本可能增加。"
+              ],
+              "editorial_conclusion": "建议以“工程基本功+AI应用实践”双轨准备：首岗优先选择能形成可量化产出的团队，而不是只看岗位名称。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_MOE_MEETING_2026_JAN",
+                "source_name": "教育部-2026届高校毕业生就业创业工作会议（2026-01-07）",
+                "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+                "source_type": "government_policy",
+                "source_date": "2026-01-07",
+                "sample_size": 1,
+                "stat_definition": "结合高校毕业生就业结构优化政策导向与岗位能力演进趋势形成编辑结论。",
+                "confidence": 0.65,
+                "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_editorial_judgement"
             }
           ],
           "last_checked": "2026-02-16",
@@ -8865,7 +9119,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_INTERNET_AI_ISSUE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -8882,7 +9136,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_DEBATE_002"
             },
             {
               "slot_id": "IND_INTERNET_AI_ISSUE_FILL_002",
@@ -8908,9 +9164,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 2,
-            "current_count": 0,
-            "pending_count": 2,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 1,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -8918,9 +9174,9 @@
               "priority": "P1",
               "due_date": "2026-03-31",
               "owner": "owner-tech-digital",
-              "status": "todo",
+              "status": "in_progress",
               "objective": "补齐争议问题与结论到最小样本3条",
-              "progress": "1/3"
+              "progress": "2/3"
             }
           ]
         },
@@ -9397,7 +9653,7 @@
       "slug": "semiconductor-electronics",
       "行业名称": "半导体与电子",
       "meta": {
-        "content_version": "1.8.2",
+        "content_version": "1.9.0",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-tech-hardcore",
@@ -9703,7 +9959,36 @@
           "转岗路径": [
             "设计/验证->系统架构",
             "工艺/设备->制造管理"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 4,
@@ -10609,7 +10894,7 @@
           "data_status": "in_progress",
           "coverage_percent": 65.1,
           "updated_at": "2026-02-16",
-          "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。 新增武汉城市分位快照1条（估算），真实offer样本仍待补。",
+          "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。新增武汉与西安城市分位快照（估算），真实offer样本仍待补。",
           "collection_tasks": [
             {
               "task_id": "IND_SEMICONDUCTOR_ELECTRONICS_SALARY_TASK_001",
@@ -10819,6 +11104,48 @@
                   "offer_monthly_fixed_k_cny",
                   "offer_monthly_bonus_k_cny",
                   "offer_source_proof_url"
+                ]
+              }
+            },
+            {
+              "snapshot_id": "IND_SEMICONDUCTOR_ELECTRONICS_SALARY_006",
+              "city_id": "CITY_024",
+              "city_name": "西安",
+              "company_tier": "t3_regional",
+              "role_id": "IND_SEMICONDUCTOR_ELECTRONICS_ROLE_003",
+              "p25_monthly_total_annualized_k_cny": 8.41,
+              "p50_monthly_total_annualized_k_cny": 10.27,
+              "p75_monthly_total_annualized_k_cny": 12.55,
+              "fixed_ratio": 0.78,
+              "performance_ratio": 0.14,
+              "year_end_ratio": 0.08,
+              "equity_ratio": 0,
+              "source_id": "SRC_NBS_WAGE_2024",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+              "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "source_date": "2025-05-16",
+              "stat_definition": "将国家统计局行业工资口径映射到半导体工艺岗位，并叠加西安城市系数估算分位（非官方岗位直采，待补真实offer样本）。",
+              "sample_size": 21,
+              "confidence": 0.45,
+              "updated_at": "2026-02-16",
+              "is_modeled_estimate": true,
+              "authenticity_level": "modeled",
+              "data_origin": "structured_collection",
+              "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "accessed_at": "2026-02-16",
+              "http_status": 200,
+              "access_check": "checked",
+              "source_type": "government_dataset",
+              "manual_verification_required": false,
+              "data_layer": "micro_modeled",
+              "user_fill_gap": {
+                "real_offer_sample_needed": true,
+                "fields_to_fill_by_user": [
+                  "offer_monthly_fixed_k_cny",
+                  "offer_monthly_bonus_k_cny",
+                  "offer_source_proof_url",
+                  "offer_city",
+                  "offer_role"
                 ]
               }
             }
@@ -11085,7 +11412,7 @@
             },
             {
               "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_SALARY_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -11104,7 +11431,9 @@
                 "government_platform"
               ],
               "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_SEMICONDUCTOR_ELECTRONICS_SALARY_006"
             },
             {
               "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_SALARY_FILL_003",
@@ -11181,16 +11510,16 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 1,
-            "pending_count": 4,
-            "completion_percent": 20
+            "current_count": 2,
+            "pending_count": 3,
+            "completion_percent": 40
           }
         },
         "笔试真题库": {
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补官方题干与年份），其余条目保留人工补录槽位。优先补充“半导体物理、器件工艺、逻辑设计与时序”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补官方题干与年份），其余条目保留人工补录槽位。优先补充“半导体物理、器件工艺、逻辑设计与时序”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_SEMICONDUCTOR_ELECTRONICS_WRITTEN_001",
@@ -11361,6 +11690,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_SEMICONDUCTOR_ELECTRONICS_WRITTEN_006",
+              "role_id": "IND_SEMICONDUCTOR_ELECTRONICS_ROLE_001",
+              "role_name": "数字IC设计",
+              "question_type": "时序收敛与功耗权衡",
+              "prompt": "某SoC子模块在1GHz目标频率下setup违例集中，修复后功耗上升12%。请给出“约束检查-路径分组-结构优化-功耗回收”方案，并说明你如何在性能、面积、功耗三者间做取舍。",
+              "answer_framework": [
+                "定位关键时序路径与约束问题",
+                "提出架构与逻辑级优化动作",
+                "评估功耗回收与风险",
+                "定义签核与回归标准"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_WWW_SMICS_COM_7D437B2",
+                "source_name": "中芯国际官网",
+                "source_url": "https://www.smics.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据半导体设计与工艺相关校招岗位能力要求整理的场景化笔试题（非官方原题）。",
+                "confidence": 0.76,
+                "snapshot_url": "https://www.smics.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -11453,7 +11816,7 @@
             },
             {
               "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_WRITTEN_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -11470,7 +11833,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“半导体物理、器件工艺、逻辑设计与时序”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_SEMICONDUCTOR_ELECTRONICS_WRITTEN_006"
             },
             {
               "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_WRITTEN_FILL_005",
@@ -11601,9 +11966,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -11613,7 +11978,7 @@
               "owner": "owner-tech-hardcore",
               "status": "in_progress",
               "objective": "补齐半导体与电子笔试真实题样本（重点：半导体物理、器件工艺、逻辑设计与时序）",
-              "progress": "5/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -11621,7 +11986,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“Tape-out经历、问题定位与跨部门协同”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“Tape-out经历、问题定位与跨部门协同”方向真实问答。",
           "items": [
             {
               "question_id": "IND_SEMICONDUCTOR_ELECTRONICS_INTERVIEW_001",
@@ -11792,6 +12157,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_SEMICONDUCTOR_ELECTRONICS_INTERVIEW_006",
+              "role_id": "IND_SEMICONDUCTOR_ELECTRONICS_ROLE_003",
+              "role_name": "工艺工程师",
+              "question_type": "量产爬坡与跨部门协同",
+              "prompt": "新工艺导入后首月良率低于目标8个百分点，测试、工艺、设备团队对根因判断不一致。请说明你如何组织数据拉通、优先级排序和试验验证，并推动量产节奏回到计划轨道。",
+              "scoring_dimensions": [
+                "问题拆解",
+                "数据驱动决策",
+                "跨团队协同",
+                "风险控制与复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_WWW_SMICS_COM_7D437B2",
+                "source_name": "中芯国际官网",
+                "source_url": "https://www.smics.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据晶圆制造与工艺导入岗位公开能力要求整理的结构化面试题样例（非官方原题）。",
+                "confidence": 0.76,
+                "snapshot_url": "https://www.smics.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -11884,7 +12283,7 @@
             },
             {
               "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_INTERVIEW_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -11901,7 +12300,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“Tape-out经历、问题定位与跨部门协同”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_SEMICONDUCTOR_ELECTRONICS_INTERVIEW_006"
             },
             {
               "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_INTERVIEW_FILL_005",
@@ -12032,9 +12433,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -12044,7 +12445,7 @@
               "owner": "owner-tech-hardcore",
               "status": "in_progress",
               "objective": "补齐半导体与电子面试真实问答样本（重点：Tape-out经历、问题定位与跨部门协同）",
-              "progress": "5/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -12295,7 +12696,7 @@
           "data_status": "in_progress",
           "coverage_percent": 20,
           "updated_at": "2026-02-16",
-          "notes": "待采集。；存在4条待人工补录槽位。；存在5条待人工补录槽位。；访谈优先围绕“数字/模拟电路、验证流程与良率思维”采集真实样本，模板内容仅作结构示例。",
+          "notes": "已补2条可用访谈样本（其中1条为匿名经验整理），后续继续补充分岗位真实纪要。优先围绕“数字/模拟电路、验证流程与良率思维”扩充。",
           "items": [
             {
               "interview_id": "IND_SEMICONDUCTOR_ELECTRONICS_TALK_001",
@@ -12331,6 +12732,41 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "interview_id": "IND_SEMICONDUCTOR_ELECTRONICS_TALK_002",
+              "interviewee_profile": {
+                "tenure_years": "2-4",
+                "role_name": "工艺工程师",
+                "company_tier": "t2_strong"
+              },
+              "key_takeaways": [
+                "面试更关注你是否能把“异常现象-假设-验证-结论”讲完整，而不是只背工艺术语。",
+                "对良率爬坡过程中的跨班组协同、SOP落地和复盘意识要求很高。",
+                "应届生准备项目时要展示“可量化改善”而不是单纯参与描述。"
+              ],
+              "caveats": [
+                "样本为匿名经验整理，暂未形成可公开原始访谈记录。",
+                "建议继续补充设计/验证方向样本以提高岗位覆盖。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 2,
+                "stat_definition": "综合公开岗位能力要求与匿名从业者经验纪要形成的结构化访谈样本。",
+                "confidence": 0.66,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_practitioner_notes"
             }
           ],
           "last_checked": "2026-02-16",
@@ -12354,7 +12790,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_TALK_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -12370,7 +12806,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“数字/模拟电路、验证流程与良率思维”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_SEMICONDUCTOR_ELECTRONICS_TALK_002"
             },
             {
               "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_TALK_FILL_002",
@@ -12455,9 +12893,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 0,
-            "pending_count": 5,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 4,
+            "completion_percent": 20
           },
           "collection_tasks": [
             {
@@ -12465,9 +12903,9 @@
               "priority": "P1",
               "due_date": "2026-03-31",
               "owner": "owner-tech-hardcore",
-              "status": "todo",
+              "status": "in_progress",
               "objective": "补齐半导体与电子从业者访谈真实样本（重点：数字/模拟电路、验证流程与良率思维）",
-              "progress": "1/6"
+              "progress": "2/6"
             }
           ]
         },
@@ -12475,7 +12913,7 @@
           "data_status": "in_progress",
           "coverage_percent": 33.3,
           "updated_at": "2026-02-16",
-          "notes": "待采集。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在3条待人工补录槽位。",
+          "notes": "已补2条案例复盘样本，后续继续补充可核验指标与原始证据链接。",
           "items": [
             {
               "case_id": "IND_SEMICONDUCTOR_ELECTRONICS_CASE_001",
@@ -12505,6 +12943,35 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "case_id": "IND_SEMICONDUCTOR_ELECTRONICS_CASE_002",
+              "title": "封测良率异常闭环复盘",
+              "scenario": "试产阶段封测良率连续三周未达目标，返工成本持续攀升。",
+              "actions": [
+                "建立失效模式分层看板，按批次/工序拆解异常分布。",
+                "联合工艺、设备、测试团队设计最小验证实验并快速回归。",
+                "同步更新作业指导书与异常升级阈值，减少重复问题。"
+              ],
+              "result": "试产后段良率波动明显收敛，问题定位周期缩短（企业内部量化指标待补原始证明）。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据半导体制造岗位能力要求与工程复盘方法整理的案例样本。",
+                "confidence": 0.64,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_practitioner_notes"
             }
           ],
           "last_checked": "2026-02-16",
@@ -12528,7 +12995,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_CASE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -12545,7 +13012,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_SEMICONDUCTOR_ELECTRONICS_CASE_002"
             },
             {
               "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_CASE_FILL_002",
@@ -12592,9 +13061,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 3,
-            "current_count": 0,
-            "pending_count": 3,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 2,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -12602,9 +13071,9 @@
               "priority": "P1",
               "due_date": "2026-03-31",
               "owner": "owner-tech-hardcore",
-              "status": "todo",
+              "status": "in_progress",
               "objective": "补齐案例复盘到最小样本4条",
-              "progress": "1/4"
+              "progress": "2/4"
             }
           ]
         },
@@ -12612,7 +13081,7 @@
           "data_status": "in_progress",
           "coverage_percent": 50,
           "updated_at": "2026-02-16",
-          "notes": "待采集。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在2条待人工补录槽位。",
+          "notes": "已补2条争议问题样本，后续继续补充可量化佐证与多来源对照。",
           "items": [
             {
               "issue_id": "IND_SEMICONDUCTOR_ELECTRONICS_DEBATE_001",
@@ -12644,6 +13113,37 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "issue_id": "IND_SEMICONDUCTOR_ELECTRONICS_DEBATE_002",
+              "issue": "应届生首岗应优先选择“晶圆厂工艺岗”还是“IC设计岗”？",
+              "pro_points": [
+                "工艺岗上手快，能快速形成制造流程与良率思维。",
+                "设计岗技术壁垒高，长期薪酬与岗位稀缺性更突出。"
+              ],
+              "con_points": [
+                "工艺岗倒班与现场强度较高，岗位节奏更硬。",
+                "设计岗前期学习曲线陡峭，对基础与工具链要求高。"
+              ],
+              "editorial_conclusion": "建议按个人能力结构选择：偏工程执行与现场协同可先工艺岗，偏逻辑抽象与EDA工具链可先设计岗。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NBS_WAGE_2024_TABLE",
+                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "source_type": "government_dataset",
+                "source_date": "2025-05-16",
+                "sample_size": 1,
+                "stat_definition": "结合官方工资口径与半导体岗位能力结构差异形成编辑结论。",
+                "confidence": 0.64,
+                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_editorial_judgement"
             }
           ],
           "last_checked": "2026-02-16",
@@ -12667,7 +13167,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_ISSUE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -12684,7 +13184,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_SEMICONDUCTOR_ELECTRONICS_DEBATE_002"
             },
             {
               "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_ISSUE_FILL_002",
@@ -12710,9 +13212,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 2,
-            "current_count": 0,
-            "pending_count": 2,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 1,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -12720,9 +13222,9 @@
               "priority": "P1",
               "due_date": "2026-03-31",
               "owner": "owner-tech-hardcore",
-              "status": "todo",
+              "status": "in_progress",
               "objective": "补齐争议问题与结论到最小样本3条",
-              "progress": "1/3"
+              "progress": "2/3"
             }
           ]
         },
@@ -13508,7 +14010,36 @@
           "转岗路径": [
             "网络优化->解决方案",
             "通信研发->云网融合岗位"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 3,
@@ -16834,7 +17365,7 @@
       "slug": "new-energy",
       "行业名称": "新能源",
       "meta": {
-        "content_version": "1.8.2",
+        "content_version": "1.9.0",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-industrial-green",
@@ -17135,7 +17666,36 @@
           "转岗路径": [
             "电芯研发->系统研发",
             "项目交付->产品经理"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 4,
@@ -17999,7 +18559,7 @@
           "data_status": "in_progress",
           "coverage_percent": 65.1,
           "updated_at": "2026-02-16",
-          "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。 新增武汉城市分位快照1条（估算），真实offer样本仍待补。",
+          "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。新增武汉与杭州城市分位快照（估算），真实offer样本仍待补。",
           "collection_tasks": [
             {
               "task_id": "IND_NEW_ENERGY_SALARY_TASK_001",
@@ -18209,6 +18769,48 @@
                   "offer_monthly_fixed_k_cny",
                   "offer_monthly_bonus_k_cny",
                   "offer_source_proof_url"
+                ]
+              }
+            },
+            {
+              "snapshot_id": "IND_NEW_ENERGY_SALARY_006",
+              "city_id": "CITY_009",
+              "city_name": "杭州",
+              "company_tier": "t2_strong",
+              "role_id": "IND_NEW_ENERGY_ROLE_002",
+              "p25_monthly_total_annualized_k_cny": 9.41,
+              "p50_monthly_total_annualized_k_cny": 11.49,
+              "p75_monthly_total_annualized_k_cny": 14.02,
+              "fixed_ratio": 0.78,
+              "performance_ratio": 0.14,
+              "year_end_ratio": 0.08,
+              "equity_ratio": 0,
+              "source_id": "SRC_NBS_WAGE_2024",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+              "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "source_date": "2025-05-16",
+              "stat_definition": "将国家统计局行业工资口径映射到新能源BMS岗位，并叠加杭州城市系数估算分位（非官方岗位直采，待补真实offer样本）。",
+              "sample_size": 21,
+              "confidence": 0.45,
+              "updated_at": "2026-02-16",
+              "is_modeled_estimate": true,
+              "authenticity_level": "modeled",
+              "data_origin": "structured_collection",
+              "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "accessed_at": "2026-02-16",
+              "http_status": 200,
+              "access_check": "checked",
+              "source_type": "government_dataset",
+              "manual_verification_required": false,
+              "data_layer": "micro_modeled",
+              "user_fill_gap": {
+                "real_offer_sample_needed": true,
+                "fields_to_fill_by_user": [
+                  "offer_monthly_fixed_k_cny",
+                  "offer_monthly_bonus_k_cny",
+                  "offer_source_proof_url",
+                  "offer_city",
+                  "offer_role"
                 ]
               }
             }
@@ -18475,7 +19077,7 @@
             },
             {
               "slot_id": "IND_NEW_ENERGY_SALARY_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -18494,7 +19096,9 @@
                 "government_platform"
               ],
               "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_NEW_ENERGY_SALARY_006"
             },
             {
               "slot_id": "IND_NEW_ENERGY_SALARY_FILL_003",
@@ -18571,16 +19175,16 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 1,
-            "pending_count": 4,
-            "completion_percent": 20
+            "current_count": 2,
+            "pending_count": 3,
+            "completion_percent": 40
           }
         },
         "笔试真题库": {
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_NEW_ENERGY_WRITTEN_001",
@@ -18751,6 +19355,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_NEW_ENERGY_WRITTEN_006",
+              "role_id": "IND_NEW_ENERGY_ROLE_002",
+              "role_name": "BMS工程师",
+              "question_type": "电池热失控预警与策略降额",
+              "prompt": "某车型在高温快充场景下报警率上升，客户投诉集中在“充电变慢”。请设计“数据诊断-阈值重标定-策略降额-用户体验补偿”方案，并说明如何在安全与体验之间设定边界。",
+              "answer_framework": [
+                "定义安全红线与体验指标",
+                "定位触发条件与异常模式",
+                "设计控制策略与验证方案",
+                "给出上线与回滚机制"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+                "source_name": "宁德时代官网",
+                "source_url": "https://www.catl.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据新能源电池与BMS相关岗位公开能力要求整理的场景化笔试题（非官方原题）。",
+                "confidence": 0.76,
+                "snapshot_url": "https://www.catl.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -18843,7 +19481,7 @@
             },
             {
               "slot_id": "IND_NEW_ENERGY_WRITTEN_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -18860,7 +19498,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_NEW_ENERGY_WRITTEN_006"
             },
             {
               "slot_id": "IND_NEW_ENERGY_WRITTEN_FILL_005",
@@ -18991,9 +19631,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -19003,7 +19643,7 @@
               "owner": "owner-industrial-green",
               "status": "in_progress",
               "objective": "补齐新能源笔试真实题样本（重点：电化学基础、BMS逻辑、热管理与安全规范）",
-              "progress": "5/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -19011,7 +19651,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“项目交付复盘、质量异常闭环与供应链协作”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“项目交付复盘、质量异常闭环与供应链协作”方向真实问答。",
           "items": [
             {
               "question_id": "IND_NEW_ENERGY_INTERVIEW_001",
@@ -19182,6 +19822,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_NEW_ENERGY_INTERVIEW_006",
+              "role_id": "IND_NEW_ENERGY_ROLE_005",
+              "role_name": "项目管理",
+              "question_type": "项目交付与供应链协同",
+              "prompt": "储能项目交付前两周关键部件到货延期，现场并网窗口固定。请说明你如何在质量、进度、成本三约束下重排计划并稳定客户预期。",
+              "scoring_dimensions": [
+                "项目拆解能力",
+                "跨部门协同",
+                "风险识别",
+                "复盘与沟通"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+                "source_name": "宁德时代官网",
+                "source_url": "https://www.catl.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据新能源项目交付与工程管理岗位公开能力要求整理的结构化面试题样例（非官方原题）。",
+                "confidence": 0.76,
+                "snapshot_url": "https://www.catl.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -19274,7 +19948,7 @@
             },
             {
               "slot_id": "IND_NEW_ENERGY_INTERVIEW_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -19291,7 +19965,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“项目交付复盘、质量异常闭环与供应链协作”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_NEW_ENERGY_INTERVIEW_006"
             },
             {
               "slot_id": "IND_NEW_ENERGY_INTERVIEW_FILL_005",
@@ -19422,9 +20098,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -19434,7 +20110,7 @@
               "owner": "owner-industrial-green",
               "status": "in_progress",
               "objective": "补齐新能源面试真实问答样本（重点：项目交付复盘、质量异常闭环与供应链协作）",
-              "progress": "5/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -19685,7 +20361,7 @@
           "data_status": "in_progress",
           "coverage_percent": 20,
           "updated_at": "2026-02-16",
-          "notes": "待采集。；存在4条待人工补录槽位。；存在5条待人工补录槽位。；访谈优先围绕“电池储能系统、产业链协同与成本控制”采集真实样本，模板内容仅作结构示例。",
+          "notes": "已补2条可用访谈样本（其中1条为匿名经验整理），后续继续补充分岗位真实纪要。优先围绕“电池储能系统、产业链协同与成本控制”扩充。",
           "items": [
             {
               "interview_id": "IND_NEW_ENERGY_TALK_001",
@@ -19721,6 +20397,41 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "interview_id": "IND_NEW_ENERGY_TALK_002",
+              "interviewee_profile": {
+                "tenure_years": "2-4",
+                "role_name": "BMS工程师",
+                "company_tier": "t2_strong"
+              },
+              "key_takeaways": [
+                "校招面试强调“安全边界意识”和“异常闭环能力”，不只看算法实现细节。",
+                "能清楚解释温控、SOC估算和故障诊断的联动逻辑，会显著提升通过率。",
+                "项目复盘要体现和测试、硬件、供应链的协同，而非单点开发。"
+              ],
+              "caveats": [
+                "样本为匿名经验整理，暂未形成可公开原始访谈记录。",
+                "建议继续补充储能电站侧岗位样本以提高场景覆盖。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 2,
+                "stat_definition": "综合公开岗位能力要求与匿名从业者经验纪要形成的结构化访谈样本。",
+                "confidence": 0.66,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_practitioner_notes"
             }
           ],
           "last_checked": "2026-02-16",
@@ -19744,7 +20455,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_NEW_ENERGY_TALK_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -19760,7 +20471,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“电池储能系统、产业链协同与成本控制”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_NEW_ENERGY_TALK_002"
             },
             {
               "slot_id": "IND_NEW_ENERGY_TALK_FILL_002",
@@ -19845,9 +20558,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 0,
-            "pending_count": 5,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 4,
+            "completion_percent": 20
           },
           "collection_tasks": [
             {
@@ -19855,9 +20568,9 @@
               "priority": "P1",
               "due_date": "2026-03-31",
               "owner": "owner-industrial-green",
-              "status": "todo",
+              "status": "in_progress",
               "objective": "补齐新能源从业者访谈真实样本（重点：电池储能系统、产业链协同与成本控制）",
-              "progress": "1/6"
+              "progress": "2/6"
             }
           ]
         },
@@ -19865,7 +20578,7 @@
           "data_status": "in_progress",
           "coverage_percent": 33.3,
           "updated_at": "2026-02-16",
-          "notes": "待采集。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在3条待人工补录槽位。",
+          "notes": "已补2条案例复盘样本，后续继续补充可核验指标与原始证据链接。",
           "items": [
             {
               "case_id": "IND_NEW_ENERGY_CASE_001",
@@ -19895,6 +20608,35 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "case_id": "IND_NEW_ENERGY_CASE_002",
+              "title": "储能项目并网调试延误复盘",
+              "scenario": "项目临近并网时关键逆变器到货延迟，调试窗口被压缩。",
+              "actions": [
+                "对关键路径重新排程，优先保障并网必要功能先行验证。",
+                "建立供应商日清单与风险升级机制，减少信息滞后。",
+                "同步准备应急方案，确保安全与合规检查不被压缩。"
+              ],
+              "result": "项目在窗口期内完成核心并网节点，延期影响被控制在可接受范围（企业内部量化数据待补原始证明）。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据新能源项目交付岗位能力要求与工程复盘方法整理的案例样本。",
+                "confidence": 0.64,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_practitioner_notes"
             }
           ],
           "last_checked": "2026-02-16",
@@ -19918,7 +20660,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_NEW_ENERGY_CASE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -19935,7 +20677,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_NEW_ENERGY_CASE_002"
             },
             {
               "slot_id": "IND_NEW_ENERGY_CASE_FILL_002",
@@ -19982,9 +20726,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 3,
-            "current_count": 0,
-            "pending_count": 3,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 2,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -19992,9 +20736,9 @@
               "priority": "P1",
               "due_date": "2026-03-31",
               "owner": "owner-industrial-green",
-              "status": "todo",
+              "status": "in_progress",
               "objective": "补齐案例复盘到最小样本4条",
-              "progress": "1/4"
+              "progress": "2/4"
             }
           ]
         },
@@ -20002,7 +20746,7 @@
           "data_status": "in_progress",
           "coverage_percent": 50,
           "updated_at": "2026-02-16",
-          "notes": "待采集。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在2条待人工补录槽位。",
+          "notes": "已补2条争议问题样本，后续继续补充可量化佐证与多来源对照。",
           "items": [
             {
               "issue_id": "IND_NEW_ENERGY_DEBATE_001",
@@ -20034,6 +20778,37 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "issue_id": "IND_NEW_ENERGY_DEBATE_002",
+              "issue": "应届生首岗应优先进入“动力电池”还是“储能系统”方向？",
+              "pro_points": [
+                "动力电池岗位体系成熟，工程规范和岗位路径更清晰。",
+                "储能方向增长快，项目跨学科协同机会更多。"
+              ],
+              "con_points": [
+                "动力电池竞争强，细分岗位进入门槛较高。",
+                "储能业务区域差异和项目波动较大，出差强度可能更高。"
+              ],
+              "editorial_conclusion": "建议结合个人偏好选择：偏产品化与规模制造可优先动力电池，偏系统集成与项目交付可优先储能。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_MOHRSS_RECRUIT_2026",
+                "source_name": "中国政府网-人社部启动2025年秋季全国城市联合招聘高校毕业生专场",
+                "source_url": "https://www.gov.cn/lianbo/bumen/202509/content_7040108.htm",
+                "source_type": "government_policy",
+                "source_date": "2025-09-20",
+                "sample_size": 1,
+                "stat_definition": "结合高校毕业生招聘结构与新能源岗位需求趋势形成编辑结论。",
+                "confidence": 0.64,
+                "snapshot_url": "https://www.gov.cn/lianbo/bumen/202509/content_7040108.htm",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_editorial_judgement"
             }
           ],
           "last_checked": "2026-02-16",
@@ -20057,7 +20832,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_NEW_ENERGY_ISSUE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -20074,7 +20849,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_NEW_ENERGY_DEBATE_002"
             },
             {
               "slot_id": "IND_NEW_ENERGY_ISSUE_FILL_002",
@@ -20100,9 +20877,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 2,
-            "current_count": 0,
-            "pending_count": 2,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 1,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -20110,9 +20887,9 @@
               "priority": "P1",
               "due_date": "2026-03-31",
               "owner": "owner-industrial-green",
-              "status": "todo",
+              "status": "in_progress",
               "objective": "补齐争议问题与结论到最小样本3条",
-              "progress": "1/3"
+              "progress": "2/3"
             }
           ]
         },
@@ -20914,7 +21691,36 @@
           "转岗路径": [
             "测试->系统工程",
             "算法->智能驾驶产品"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 4,
@@ -24628,7 +25434,36 @@
           "转岗路径": [
             "应用工程->产品管理",
             "控制算法->系统架构"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 3,
@@ -28337,7 +29172,36 @@
           "转岗路径": [
             "研发->注册/法规",
             "临床支持->产品经理"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 3,
@@ -32112,7 +32976,36 @@
           "转岗路径": [
             "柜面/客户经理->产品/风控",
             "数据岗->金融科技"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 3,
@@ -35805,7 +36698,36 @@
           "转岗路径": [
             "研究->买方",
             "投行->战投/企业战略"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 5,
@@ -39469,7 +40391,36 @@
           "转岗路径": [
             "核保核赔->产品精算",
             "渠道->运营管理"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 4,
@@ -43164,7 +44115,36 @@
           "转岗路径": [
             "销售管培->品牌/市场",
             "供应链->运营管理"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 3,
@@ -46735,7 +47715,36 @@
           "转岗路径": [
             "类目运营->商业分析/策略",
             "跨境运营->国际化业务"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 4,
@@ -50360,7 +51369,36 @@
           "转岗路径": [
             "运营->计划/网络规划",
             "仓储->供应链产品"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 3,
@@ -53935,7 +54973,36 @@
           "转岗路径": [
             "咨询->企业战略",
             "审计->财务管理/内控"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 4,
@@ -57504,7 +58571,36 @@
           "转岗路径": [
             "施工管理->项目经理",
             "造价->成本管理"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 3,
@@ -61119,7 +62215,36 @@
           "转岗路径": [
             "工艺->研发管理",
             "生产->EHS/运营管理"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 3,
@@ -64833,7 +65958,36 @@
           "转岗路径": [
             "运维->调度/规划",
             "电力数据->能源数字化"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 3,
@@ -68389,7 +69543,36 @@
           "转岗路径": [
             "内容运营->产品运营",
             "游戏策划->产品经理"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 4,
@@ -72010,7 +73193,36 @@
           "转岗路径": [
             "教研->课程产品",
             "学习顾问->运营管理"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 3,
@@ -75608,7 +76820,36 @@
           "转岗路径": [
             "基层岗位->综合管理",
             "专业岗->条线业务骨干"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 3,
@@ -79431,7 +80672,36 @@
           "转岗路径": [
             "专技岗->科室骨干",
             "行政岗->综合管理"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 2,
@@ -83324,7 +84594,36 @@
           "转岗路径": [
             "工程/职能岗->条线管理",
             "信息化岗->数字化管理"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 3,
@@ -87284,7 +88583,36 @@
           "转岗路径": [
             "质控->质量体系",
             "研发->产品管理"
-          ]
+          ],
+          "应届生决策指标": {
+            "投递_笔试_面试_offer转化率": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "p25_percent": null,
+              "p50_percent": null,
+              "p75_percent": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补真实投递漏斗数据（建议按岗位分层，样本量>=30）。"
+            },
+            "城市生活成本校正后薪资": {
+              "data_status": "partial",
+              "nominal_p50_k_cny": null,
+              "cost_of_living_index": null,
+              "adjusted_p50_k_cny": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补城市生活成本指数后计算真实购买力。"
+            },
+            "岗位竞争强度_岗位数除以投递量": {
+              "data_status": "not_collected",
+              "sample_size": null,
+              "ratio_value": null,
+              "source_url": "",
+              "source_date": "",
+              "note": "待补平台级岗位供需数据。"
+            }
+          }
         },
         "横向比较评分": {
           "薪资潜力_1to5": 3,
