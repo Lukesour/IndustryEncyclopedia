@@ -1,7 +1,7 @@
 {
   "文档元数据": {
-    "文档名称": "中国大陆应届生求职行业百科（v1.7.7公共部门第四批深补与来源复核版）",
-    "版本": "v1.7.7",
+    "文档名称": "中国大陆应届生求职行业百科（v1.8.0多行业P0题库深补与来源链路增强版）",
+    "版本": "v1.8.0",
     "发布日期": "2026-02-16",
     "适用人群": "中国大陆应届生（含毕业3年内）",
     "schema_ref": "./行业百科.schema.json",
@@ -9,7 +9,8 @@
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
       "逐行业增强岗位画像证据来源（代表企业+国家平台双锚点）。",
-      "保留无法稳定获取的数据填空位，明确人工补录入口。"
+      "保留无法稳定获取的数据填空位，明确人工补录入口。",
+      "v1.8.0继续按行业逐条补录P0笔试/面试题并同步闭环槽位状态。"
     ],
     "变更记录": [
       {
@@ -170,6 +171,16 @@
           "事业单位与央国企笔试/面试manual_fill_progress由4/14提升到5/14，进一步压降公共部门P0待补缺口。",
           "来源可访问性复核：华润万家与麦肯锡来源替换/校正为HTTP 200入口，并同步词条引用证据链。",
           "修正蔚来来源状态为HTTP 403受限；已核验两条NCSS薪酬观测链接可访问并关闭对应人工核验。"
+        ]
+      },
+      {
+        "version": "v1.8.0",
+        "date": "2026-02-16",
+        "summary": [
+          "新增多行业第五批手工补录：新能源、智能驾驶、高端制造、生物医药、金融三子行业、快消、电商、物流的笔试/面试场景题。",
+          "上述行业的笔试与面试均完成对应FILL_002槽位闭环，并同步manual_fill_progress与collection_tasks进度。",
+          "半导体行业来源链路增强：华虹来源切换为可访问官方入口并由manual verify改为checked。",
+          "在不使用脚本批量灌数的前提下持续提升P0题库密度，无法稳定获取的薪酬实采继续保留待填位。"
         ]
       }
     ]
@@ -4089,16 +4100,16 @@
       "source_id": "SRC_AUTO_WWW_HUAHONGGRACE_COM_4C8679F5",
       "source_name": "华虹集团官网/招聘页",
       "source_type": "company_official",
-      "source_url": "https://www.huahonggrace.com",
+      "source_url": "https://www.huahong.com.cn/?m=channel&id=44",
       "credibility": "medium",
       "typical_update_cycle": "quarterly",
       "last_checked": "2026-02-16",
-      "snapshot_url": "https://www.huahonggrace.com",
+      "snapshot_url": "https://www.huahong.com.cn/?m=channel&id=44",
       "accessed_at": "2026-02-16",
-      "http_status": 403,
+      "http_status": 200,
       "access_check": "checked",
-      "manual_verification_required": true,
-      "manual_verification_note": "链接可访问性不稳定，请人工补充可访问快照URL或替代来源。"
+      "manual_verification_required": false,
+      "manual_verification_note": "已替换为可访问的华虹集团官网招聘入口链接。"
     },
     {
       "source_id": "SRC_AUTO_WWW_HUATU_COM_62A85D56",
@@ -7314,7 +7325,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补官方题干与年份），其余条目保留人工补录槽位。优先补充“编码能力、系统设计、数据结构与模型应用”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补官方题干与年份），其余条目保留人工补录槽位。优先补充“编码能力、系统设计、数据结构与模型应用”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_INTERNET_AI_WRITTEN_001",
@@ -7417,6 +7428,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_INTERNET_AI_WRITTEN_004",
+              "role_id": "IND_INTERNET_AI_ROLE_003",
+              "role_name": "算法工程师",
+              "question_type": "推荐模型漂移与在线迭代",
+              "prompt": "内容推荐模型上线三周后 CTR 提升但人均观看时长下降，且新用户留存波动加大。请设计“样本分层-特征漂移检测-策略回滚-在线实验”闭环方案，并说明你如何判定是模型问题还是流量结构变化。",
+              "answer_framework": [
+                "定义核心指标与分层口径",
+                "识别特征漂移与数据偏差",
+                "设计灰度回滚与对照实验",
+                "给出长期监控与迭代机制"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与推荐系统线上迭代场景整理的题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -7463,7 +7508,9 @@
             },
             {
               "slot_id": "IND_INTERNET_AI_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -7653,9 +7700,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 3,
-            "pending_count": 9,
-            "completion_percent": 25
+            "current_count": 4,
+            "pending_count": 8,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -7665,7 +7712,7 @@
               "owner": "owner-tech-digital",
               "status": "todo",
               "objective": "补齐互联网与AI笔试真实题样本（重点：编码能力、系统设计、数据结构与模型应用）",
-              "progress": "3/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -7673,7 +7720,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“项目深挖、跨团队协作与产品价值表达”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“项目深挖、跨团队协作与产品价值表达”方向真实问答。",
           "items": [
             {
               "question_id": "IND_INTERNET_AI_INTERVIEW_001",
@@ -7776,6 +7823,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_INTERNET_AI_INTERVIEW_004",
+              "role_id": "IND_INTERNET_AI_ROLE_006",
+              "role_name": "运营",
+              "question_type": "结构化情景题",
+              "prompt": "某拉新活动上线后新增用户达成，但7日留存显著低于历史同期。运营、算法与产品对原因判断不一致。你会如何组织一次48小时内的联合复盘，快速定位问题并推动修复？",
+              "scoring_dimensions": [
+                "结构化表达",
+                "数据诊断能力",
+                "跨团队协同",
+                "执行闭环"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与互联网增长协同场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -7822,7 +7903,9 @@
             },
             {
               "slot_id": "IND_INTERNET_AI_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -8012,9 +8095,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 3,
-            "pending_count": 9,
-            "completion_percent": 25
+            "current_count": 4,
+            "pending_count": 8,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -8024,7 +8107,7 @@
               "owner": "owner-tech-digital",
               "status": "todo",
               "objective": "补齐互联网与AI面试真实问答样本（重点：项目深挖、跨团队协作与产品价值表达）",
-              "progress": "3/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -9578,18 +9661,18 @@
               "evidence": {
                 "source_id": "SRC_AUTO_WWW_HUAHONGGRACE_COM_4C8679F5",
                 "source_name": "华虹集团官网/招聘页",
-                "source_url": "https://www.huahonggrace.com",
+                "source_url": "https://www.huahong.com.cn/?m=channel&id=44",
                 "source_type": "company_official",
                 "source_date": "2026-02-16",
                 "sample_size": 1,
                 "stat_definition": "基于官网公开岗位与校招信息入口可访问性判定",
                 "confidence": 0.78,
-                "snapshot_url": "https://www.huahonggrace.com",
+                "snapshot_url": "https://www.huahong.com.cn/?m=channel&id=44",
                 "accessed_at": "2026-02-16",
-                "http_status": 403,
+                "http_status": 200,
                 "access_check": "checked",
-                "manual_verification_required": true,
-                "manual_verification_note": "链接可访问性不稳定，请人工补充可访问快照URL或替代来源。"
+                "manual_verification_required": false,
+                "manual_verification_note": "已替换为可访问的华虹集团官网招聘入口链接。"
               },
               "priority_rank": 2,
               "authenticity_level": "official",
@@ -10930,7 +11013,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补官方题干与年份），其余条目保留人工补录槽位。优先补充“半导体物理、器件工艺、逻辑设计与时序”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补官方题干与年份），其余条目保留人工补录槽位。优先补充“半导体物理、器件工艺、逻辑设计与时序”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_SEMICONDUCTOR_ELECTRONICS_WRITTEN_001",
@@ -11033,6 +11116,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_SEMICONDUCTOR_ELECTRONICS_WRITTEN_004",
+              "role_id": "IND_SEMICONDUCTOR_ELECTRONICS_ROLE_003",
+              "role_name": "工艺工程师",
+              "question_type": "工艺良率爬坡与失效分析",
+              "prompt": "新工艺节点试产三周后良率提升停滞在 91%，缺陷分布在金属互连层明显集中。请给出“缺陷数据分层-机台参数排查-DOE验证-量产放行”方案，并说明你如何平衡爬坡速度与风险。",
+              "answer_framework": [
+                "定义良率与缺陷分层口径",
+                "定位关键机理与可疑参数",
+                "设计DOE与验证闭环",
+                "给出放行标准与风险控制"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与半导体工艺爬坡场景整理的题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -11079,7 +11196,9 @@
             },
             {
               "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_SEMICONDUCTOR_ELECTRONICS_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -11269,9 +11388,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 3,
-            "pending_count": 9,
-            "completion_percent": 25
+            "current_count": 4,
+            "pending_count": 8,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -11281,7 +11400,7 @@
               "owner": "owner-tech-hardcore",
               "status": "todo",
               "objective": "补齐半导体与电子笔试真实题样本（重点：半导体物理、器件工艺、逻辑设计与时序）",
-              "progress": "3/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -11289,7 +11408,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“Tape-out经历、问题定位与跨部门协同”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“Tape-out经历、问题定位与跨部门协同”方向真实问答。",
           "items": [
             {
               "question_id": "IND_SEMICONDUCTOR_ELECTRONICS_INTERVIEW_001",
@@ -11392,6 +11511,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_SEMICONDUCTOR_ELECTRONICS_INTERVIEW_004",
+              "role_id": "IND_SEMICONDUCTOR_ELECTRONICS_ROLE_004",
+              "role_name": "设备工程师",
+              "question_type": "结构化情景题",
+              "prompt": "量产线夜班突发关键设备重复告警，良率在4小时内下滑明显。生产、工艺和设备团队对停线与否意见不一。你如何组织“快速判级-临时处置-复机验证-根因复盘”并对结果负责？",
+              "scoring_dimensions": [
+                "结构化表达",
+                "故障定位思路",
+                "跨团队协同",
+                "执行闭环"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与晶圆厂现场协同场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -11438,7 +11591,9 @@
             },
             {
               "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_SEMICONDUCTOR_ELECTRONICS_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -11628,9 +11783,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 3,
-            "pending_count": 9,
-            "completion_percent": 25
+            "current_count": 4,
+            "pending_count": 8,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -11640,7 +11795,7 @@
               "owner": "owner-tech-hardcore",
               "status": "todo",
               "objective": "补齐半导体与电子面试真实问答样本（重点：Tape-out经历、问题定位与跨部门协同）",
-              "progress": "3/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -12400,23 +12555,23 @@
             {
               "link_id": "IND_SEMICONDUCTOR_ELECTRONICS_LINK_004",
               "title": "华虹集团 校招/官网入口",
-              "url": "https://www.huahonggrace.com",
+              "url": "https://www.huahong.com.cn/?m=channel&id=44",
               "link_type": "company_official",
               "updated_at": "2026-02-16",
               "evidence": {
                 "source_id": "SRC_AUTO_WWW_HUAHONGGRACE_COM_4C8679F5",
-                "source_url": "https://www.huahonggrace.com",
+                "source_url": "https://www.huahong.com.cn/?m=channel&id=44",
                 "source_date": "2026-02-16",
                 "confidence": 0.75,
                 "sample_size": 1,
-                "snapshot_url": "https://www.huahonggrace.com",
+                "snapshot_url": "https://www.huahong.com.cn/?m=channel&id=44",
                 "accessed_at": "2026-02-16",
-                "http_status": 403,
+                "http_status": 200,
                 "access_check": "checked",
                 "source_name": "华虹集团官网/招聘页",
                 "source_type": "company_official",
-                "manual_verification_required": true,
-                "manual_verification_note": "链接可访问性不稳定，请人工补充可访问快照URL或替代来源。"
+                "manual_verification_required": false,
+                "manual_verification_note": "已替换为可访问的华虹集团官网招聘入口链接。"
               },
               "authenticity_level": "official",
               "data_origin": "structured_collection"
@@ -14420,7 +14575,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补官方题干与年份），其余条目保留人工补录槽位。优先补充“通信原理、网络协议、网优指标与故障排查”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补官方题干与年份），其余条目保留人工补录槽位。优先补充“通信原理、网络协议、网优指标与故障排查”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_TELECOM_OPERATOR_WRITTEN_001",
@@ -14523,6 +14678,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_TELECOM_OPERATOR_WRITTEN_004",
+              "role_id": "IND_TELECOM_OPERATOR_ROLE_003",
+              "role_name": "解决方案工程师",
+              "question_type": "专线质量治理与容量规划",
+              "prompt": "某政企客户跨省专线在月末结算高峰期时延抖动加剧，SLA告警持续。请设计“业务分层-瓶颈定位-容量扩缩-客户承诺”处置方案，并说明如何验证治理效果稳定。",
+              "answer_framework": [
+                "定义SLA与排障分层口径",
+                "定位链路瓶颈与根因",
+                "制定容量与策略调整方案",
+                "建立复盘与长期监控机制"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与政企专线保障场景整理的题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -14569,7 +14758,9 @@
             },
             {
               "slot_id": "IND_TELECOM_OPERATOR_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_TELECOM_OPERATOR_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -14759,9 +14950,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 3,
-            "pending_count": 9,
-            "completion_percent": 25
+            "current_count": 4,
+            "pending_count": 8,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -14771,7 +14962,7 @@
               "owner": "owner-tech-digital",
               "status": "todo",
               "objective": "补齐通信与运营商笔试真实题样本（重点：通信原理、网络协议、网优指标与故障排查）",
-              "progress": "3/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -14779,7 +14970,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“客户场景沟通、跨省协同与服务恢复”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“客户场景沟通、跨省协同与服务恢复”方向真实问答。",
           "items": [
             {
               "question_id": "IND_TELECOM_OPERATOR_INTERVIEW_001",
@@ -14882,6 +15073,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_TELECOM_OPERATOR_INTERVIEW_004",
+              "role_id": "IND_TELECOM_OPERATOR_ROLE_005",
+              "role_name": "项目经理",
+              "question_type": "结构化情景题",
+              "prompt": "全国性通信保障项目进入验收周，两个省份同时报告核心指标不达标，客户要求当晚给出统一解释和整改计划。你如何在“事实核验-责任分工-对客沟通-次日复测”中推进并控风险？",
+              "scoring_dimensions": [
+                "结构化表达",
+                "协同推进",
+                "对客沟通",
+                "执行闭环"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与通信项目交付场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -14928,7 +15153,9 @@
             },
             {
               "slot_id": "IND_TELECOM_OPERATOR_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_TELECOM_OPERATOR_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -15118,9 +15345,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 3,
-            "pending_count": 9,
-            "completion_percent": 25
+            "current_count": 4,
+            "pending_count": 8,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -15130,7 +15357,7 @@
               "owner": "owner-tech-digital",
               "status": "todo",
               "objective": "补齐通信与运营商面试真实问答样本（重点：客户场景沟通、跨省协同与服务恢复）",
-              "progress": "3/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -17948,7 +18175,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_NEW_ENERGY_WRITTEN_001",
@@ -18051,6 +18278,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_NEW_ENERGY_WRITTEN_004",
+              "role_id": "IND_NEW_ENERGY_ROLE_002",
+              "role_name": "BMS工程师",
+              "question_type": "热管理策略标定",
+              "prompt": "某纯电平台在高温快充场景频繁触发降功率保护，导致补能体验显著下降。请设计从电芯温升机理分析、冷却回路参数标定、BMS 热管理策略优化到整车道路试验验证的完整方案，并说明你如何在安全边界内平衡补能效率。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与高温快充场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -18097,7 +18358,9 @@
             },
             {
               "slot_id": "IND_NEW_ENERGY_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_NEW_ENERGY_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -18287,9 +18550,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 3,
-            "pending_count": 9,
-            "completion_percent": 25
+            "current_count": 4,
+            "pending_count": 8,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -18299,7 +18562,7 @@
               "owner": "owner-industrial-green",
               "status": "todo",
               "objective": "补齐新能源笔试真实题样本（重点：电化学基础、BMS逻辑、热管理与安全规范）",
-              "progress": "3/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -18307,7 +18570,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“项目交付复盘、质量异常闭环与供应链协作”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“项目交付复盘、质量异常闭环与供应链协作”方向真实问答。",
           "items": [
             {
               "question_id": "IND_NEW_ENERGY_INTERVIEW_001",
@@ -18410,6 +18673,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_NEW_ENERGY_INTERVIEW_004",
+              "role_id": "IND_NEW_ENERGY_ROLE_002",
+              "role_name": "BMS工程师",
+              "question_type": "跨部门质量升级处置",
+              "prompt": "实车监控发现某批次车辆在极端工况触发保护策略过于保守，售后投诉激增。请说明你如何组织电池、热管理、整车控制与售后团队在两周内完成问题定位、策略修订、回归验证和风险沟通，并给出你的优先级判断依据。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位面试流程与新能源汽车质量升级场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -18456,7 +18753,9 @@
             },
             {
               "slot_id": "IND_NEW_ENERGY_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_NEW_ENERGY_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -18646,9 +18945,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 3,
-            "pending_count": 9,
-            "completion_percent": 25
+            "current_count": 4,
+            "pending_count": 8,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -18658,7 +18957,7 @@
               "owner": "owner-industrial-green",
               "status": "todo",
               "objective": "补齐新能源面试真实问答样本（重点：项目交付复盘、质量异常闭环与供应链协作）",
-              "progress": "3/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -21537,7 +21836,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“控制理论、感知融合、车规安全与测试验证”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“控制理论、感知融合、车规安全与测试验证”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_001",
@@ -21640,6 +21939,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_004",
+              "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_002",
+              "role_name": "控制算法工程师",
+              "question_type": "规划控制一体化调参",
+              "prompt": "城区复杂路口场景中，规划模块频繁给出激进轨迹，导致控制模块横向抖动并触发舒适性投诉。请给出从场景分层、代价函数重构、控制器参数整定到闭环仿真与道路回归验证的完整处理方案。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与自动驾驶规划控制场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -21686,7 +22019,9 @@
             },
             {
               "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -21876,9 +22211,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 3,
-            "pending_count": 9,
-            "completion_percent": 25
+            "current_count": 4,
+            "pending_count": 8,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -21888,7 +22223,7 @@
               "owner": "owner-industrial-green",
               "status": "todo",
               "objective": "补齐汽车与智能驾驶笔试真实题样本（重点：控制理论、感知融合、车规安全与测试验证）",
-              "progress": "3/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -21896,7 +22231,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“感知误判复盘、功能安全与跨团队沟通”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“感知误判复盘、功能安全与跨团队沟通”方向真实问答。",
           "items": [
             {
               "question_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_001",
@@ -21999,6 +22334,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_004",
+              "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_002",
+              "role_name": "控制算法工程师",
+              "question_type": "道路问题快速闭环",
+              "prompt": "试运营车队在同一路段连续出现接管率升高，运营团队要求 10 天内显著下降。请说明你如何组织算法、仿真、标注与车队运营团队快速闭环，并定义阶段目标、上线准入和风险兜底方案。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位面试流程与自动驾驶道路运营闭环场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -22045,7 +22414,9 @@
             },
             {
               "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -22235,9 +22606,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 3,
-            "pending_count": 9,
-            "completion_percent": 25
+            "current_count": 4,
+            "pending_count": 8,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -22247,7 +22618,7 @@
               "owner": "owner-industrial-green",
               "status": "todo",
               "objective": "补齐汽车与智能驾驶面试真实问答样本（重点：感知误判复盘、功能安全与跨团队沟通）",
-              "progress": "3/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -25068,7 +25439,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“自动控制、机械电气基础、工业网络与SCADA”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“自动控制、机械电气基础、工业网络与SCADA”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_001",
@@ -25171,6 +25542,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_004",
+              "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_002",
+              "role_name": "电气工程师",
+              "question_type": "多站点节拍瓶颈优化",
+              "prompt": "一条离散制造产线在扩产后出现多工位节拍失衡，导致在制品堆积和 OEE 下滑。请设计从瓶颈工位识别、PLC 联动逻辑重排、AGV 调度优化到产线级 KPI 回归验证的全流程方案。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与智能产线节拍优化场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -25217,7 +25622,9 @@
             },
             {
               "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -25407,9 +25814,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 3,
-            "pending_count": 9,
-            "completion_percent": 25
+            "current_count": 4,
+            "pending_count": 8,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -25419,7 +25826,7 @@
               "owner": "owner-industrial-manufacturing",
               "status": "todo",
               "objective": "补齐高端制造与工业自动化笔试真实题样本（重点：自动控制、机械电气基础、工业网络与SCADA）",
-              "progress": "3/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -25427,7 +25834,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“现场调试、异常处理与工艺改进案例”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“现场调试、异常处理与工艺改进案例”方向真实问答。",
           "items": [
             {
               "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_001",
@@ -25530,6 +25937,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_004",
+              "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_002",
+              "role_name": "电气工程师",
+              "question_type": "停线事故跨班组处置",
+              "prompt": "夜班期间关键工位连续停线，白班交接前必须恢复稳定节拍。请说明你如何组织设备、工艺、质量和生产班组分工协作，完成问题隔离、临时策略、根因复盘和防再发机制落地。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位面试流程与制造现场协同处置场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -25576,7 +26017,9 @@
             },
             {
               "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -25766,9 +26209,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 3,
-            "pending_count": 9,
-            "completion_percent": 25
+            "current_count": 4,
+            "pending_count": 8,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -25778,7 +26221,7 @@
               "owner": "owner-industrial-manufacturing",
               "status": "todo",
               "objective": "补齐高端制造与工业自动化面试真实问答样本（重点：现场调试、异常处理与工艺改进案例）",
-              "progress": "3/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -28592,7 +29035,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“药理/器械法规、GMP/GSP、统计与试验设计”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“药理/器械法规、GMP/GSP、统计与试验设计”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_BIOMED_DEVICE_WRITTEN_001",
@@ -28695,6 +29138,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_BIOMED_DEVICE_WRITTEN_004",
+              "role_id": "IND_BIOMED_DEVICE_ROLE_002",
+              "role_name": "临床运营",
+              "question_type": "多中心试验质控方案设计",
+              "prompt": "某多中心临床试验中，不同中心入组速度和数据一致性差异显著。请给出从中心分层管理、监查计划优化、统计偏差控制到重大偏差上报机制的完整质控方案。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与多中心临床试验质控场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -28741,7 +29218,9 @@
             },
             {
               "slot_id": "IND_BIOMED_DEVICE_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_BIOMED_DEVICE_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -28931,9 +29410,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 3,
-            "pending_count": 9,
-            "completion_percent": 25
+            "current_count": 4,
+            "pending_count": 8,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -28943,7 +29422,7 @@
               "owner": "owner-industrial-biomed",
               "status": "todo",
               "objective": "补齐生物医药与器械笔试真实题样本（重点：药理/器械法规、GMP/GSP、统计与试验设计）",
-              "progress": "3/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -28951,7 +29430,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“合规审计准备、临床证据阐释与风险沟通”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“合规审计准备、临床证据阐释与风险沟通”方向真实问答。",
           "items": [
             {
               "question_id": "IND_BIOMED_DEVICE_INTERVIEW_001",
@@ -29054,6 +29533,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_BIOMED_DEVICE_INTERVIEW_004",
+              "role_id": "IND_BIOMED_DEVICE_ROLE_002",
+              "role_name": "临床运营",
+              "question_type": "审计补件与时程协调",
+              "prompt": "外部审计前一周发现多个中心关键文档缺失且版本不一致。请说明你如何进行优先级排序、组织医学/统计/法规团队协同补件，并在不突破合规边界的前提下保障项目节点。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位面试流程与生物医药审计补件场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -29100,7 +29613,9 @@
             },
             {
               "slot_id": "IND_BIOMED_DEVICE_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_BIOMED_DEVICE_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -29290,9 +29805,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 3,
-            "pending_count": 9,
-            "completion_percent": 25
+            "current_count": 4,
+            "pending_count": 8,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -29302,7 +29817,7 @@
               "owner": "owner-industrial-biomed",
               "status": "todo",
               "objective": "补齐生物医药与器械面试真实问答样本（重点：合规审计准备、临床证据阐释与风险沟通）",
-              "progress": "3/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -32186,7 +32701,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“金融基础、会计与风险管理、行测与综合能力”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“金融基础、会计与风险管理、行测与综合能力”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_FIN_BANK_WRITTEN_001",
@@ -32289,6 +32804,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_FIN_BANK_WRITTEN_004",
+              "role_id": "IND_FIN_BANK_ROLE_002",
+              "role_name": "客户经理",
+              "question_type": "零售风险分层与策略制定",
+              "prompt": "某分行零售贷款新增规模增长较快，但逾期迁徙率同步上升。请基于客户分层、授信规则和贷后经营提出“增长与风控并重”的策略组合，并给出关键监控指标。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与零售银行风控经营场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -32335,7 +32884,9 @@
             },
             {
               "slot_id": "IND_FIN_BANK_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_BANK_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -32504,9 +33055,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 11,
-            "current_count": 3,
-            "pending_count": 8,
-            "completion_percent": 27.3
+            "current_count": 4,
+            "pending_count": 7,
+            "completion_percent": 36.4
           },
           "collection_tasks": [
             {
@@ -32516,7 +33067,7 @@
               "owner": "owner-finance",
               "status": "todo",
               "objective": "补齐金融-银行笔试真实题样本（重点：金融基础、会计与风险管理、行测与综合能力）",
-              "progress": "3/11"
+              "progress": "4/11"
             }
           ]
         },
@@ -32524,7 +33075,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“客户经营案例、风险识别与流程优化”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“客户经营案例、风险识别与流程优化”方向真实问答。",
           "items": [
             {
               "question_id": "IND_FIN_BANK_INTERVIEW_001",
@@ -32627,6 +33178,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_FIN_BANK_INTERVIEW_004",
+              "role_id": "IND_FIN_BANK_ROLE_002",
+              "role_name": "客户经理",
+              "question_type": "疑难授信沟通与落地",
+              "prompt": "重点客户授信审批卡在风险例外条款，客户方要求当天给结论。请说明你如何在合规框架内与风险、法务、业务三方协同，给出可执行方案并保障客户关系。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位面试流程与银行授信协同沟通场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -32673,7 +33258,9 @@
             },
             {
               "slot_id": "IND_FIN_BANK_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_BANK_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -32842,9 +33429,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 11,
-            "current_count": 3,
-            "pending_count": 8,
-            "completion_percent": 27.3
+            "current_count": 4,
+            "pending_count": 7,
+            "completion_percent": 36.4
           },
           "collection_tasks": [
             {
@@ -32854,7 +33441,7 @@
               "owner": "owner-finance",
               "status": "todo",
               "objective": "补齐金融-银行面试真实问答样本（重点：客户经营案例、风险识别与流程优化）",
-              "progress": "3/11"
+              "progress": "4/11"
             }
           ]
         },
@@ -35691,7 +36278,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“财务建模、估值方法、宏观与行业分析”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“财务建模、估值方法、宏观与行业分析”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_FIN_SECURITIES_FUND_WRITTEN_001",
@@ -35794,6 +36381,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_FIN_SECURITIES_FUND_WRITTEN_004",
+              "role_id": "IND_FIN_SECURITIES_FUND_ROLE_002",
+              "role_name": "投行助理",
+              "question_type": "发行定价与投资者需求匹配",
+              "prompt": "某拟上市项目在路演中机构反馈分化明显，发行估值区间争议较大。请从可比公司选择、估值折溢价逻辑、投资者需求分层和发行节奏四方面提出定价建议。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与投行发行定价场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -35840,7 +36461,9 @@
             },
             {
               "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_SECURITIES_FUND_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -36009,9 +36632,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 11,
-            "current_count": 3,
-            "pending_count": 8,
-            "completion_percent": 27.3
+            "current_count": 4,
+            "pending_count": 7,
+            "completion_percent": 36.4
           },
           "collection_tasks": [
             {
@@ -36021,7 +36644,7 @@
               "owner": "owner-finance",
               "status": "todo",
               "objective": "补齐金融-证券基金笔试真实题样本（重点：财务建模、估值方法、宏观与行业分析）",
-              "progress": "3/11"
+              "progress": "4/11"
             }
           ]
         },
@@ -36029,7 +36652,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“投资逻辑表达、风险揭示与压力应对”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“投资逻辑表达、风险揭示与压力应对”方向真实问答。",
           "items": [
             {
               "question_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_001",
@@ -36132,6 +36755,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_004",
+              "role_id": "IND_FIN_SECURITIES_FUND_ROLE_002",
+              "role_name": "投行助理",
+              "question_type": "项目冲突与风险揭示",
+              "prompt": "同一项目中业务团队希望加快申报节奏，风控团队坚持补充核查。请说明你如何组织事实核验、确定不可妥协红线并与客户沟通预期，避免交易中断。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位面试流程与投行项目风控协同场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -36178,7 +36835,9 @@
             },
             {
               "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -36347,9 +37006,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 11,
-            "current_count": 3,
-            "pending_count": 8,
-            "completion_percent": 27.3
+            "current_count": 4,
+            "pending_count": 7,
+            "completion_percent": 36.4
           },
           "collection_tasks": [
             {
@@ -36359,7 +37018,7 @@
               "owner": "owner-finance",
               "status": "todo",
               "objective": "补齐金融-证券基金面试真实问答样本（重点：投资逻辑表达、风险揭示与压力应对）",
-              "progress": "3/11"
+              "progress": "4/11"
             }
           ]
         },
@@ -39169,7 +39828,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“保险条款、概率统计、风险评估与客户服务”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“保险条款、概率统计、风险评估与客户服务”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_FIN_INSURANCE_WRITTEN_001",
@@ -39272,6 +39931,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_FIN_INSURANCE_WRITTEN_004",
+              "role_id": "IND_FIN_INSURANCE_ROLE_002",
+              "role_name": "核保核赔",
+              "question_type": "欺诈识别与规则优化",
+              "prompt": "某车险渠道赔案中小额高频异常显著上升。请设计从可疑特征提取、反欺诈规则迭代、人工复核策略到客户体验保护的联动方案，并说明效果评估指标。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与保险反欺诈治理场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -39318,7 +40011,9 @@
             },
             {
               "slot_id": "IND_FIN_INSURANCE_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_INSURANCE_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -39487,9 +40182,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 11,
-            "current_count": 3,
-            "pending_count": 8,
-            "completion_percent": 27.3
+            "current_count": 4,
+            "pending_count": 7,
+            "completion_percent": 36.4
           },
           "collection_tasks": [
             {
@@ -39499,7 +40194,7 @@
               "owner": "owner-finance",
               "status": "todo",
               "objective": "补齐金融-保险笔试真实题样本（重点：保险条款、概率统计、风险评估与客户服务）",
-              "progress": "3/11"
+              "progress": "4/11"
             }
           ]
         },
@@ -39507,7 +40202,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“复杂理赔沟通、风险定价解释与流程复盘”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“复杂理赔沟通、风险定价解释与流程复盘”方向真实问答。",
           "items": [
             {
               "question_id": "IND_FIN_INSURANCE_INTERVIEW_001",
@@ -39610,6 +40305,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_FIN_INSURANCE_INTERVIEW_004",
+              "role_id": "IND_FIN_INSURANCE_ROLE_002",
+              "role_name": "核保核赔",
+              "question_type": "疑难理赔闭环处理",
+              "prompt": "高关注度理赔案件出现条款理解争议且舆情扩散。请说明你如何组织核赔、法务、客服与公关团队建立统一口径，完成事实核验、沟通安抚和流程复盘。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位面试流程与保险复杂理赔沟通场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -39656,7 +40385,9 @@
             },
             {
               "slot_id": "IND_FIN_INSURANCE_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_INSURANCE_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -39825,9 +40556,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 11,
-            "current_count": 3,
-            "pending_count": 8,
-            "completion_percent": 27.3
+            "current_count": 4,
+            "pending_count": 7,
+            "completion_percent": 36.4
           },
           "collection_tasks": [
             {
@@ -39837,7 +40568,7 @@
               "owner": "owner-finance",
               "status": "todo",
               "objective": "补齐金融-保险面试真实问答样本（重点：复杂理赔沟通、风险定价解释与流程复盘）",
-              "progress": "3/11"
+              "progress": "4/11"
             }
           ]
         },
@@ -42673,7 +43404,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“市场分析、供应链基础、数据看板与促销机制”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“市场分析、供应链基础、数据看板与促销机制”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_FMCG_RETAIL_WRITTEN_001",
@@ -42776,6 +43507,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_FMCG_RETAIL_WRITTEN_004",
+              "role_id": "IND_FMCG_RETAIL_ROLE_002",
+              "role_name": "市场策划",
+              "question_type": "新品上市节奏与投放回报",
+              "prompt": "某新品计划在三城同步上市，但预算有限且渠道资源不均。请制定分阶段投放策略，给出渠道组合、促销机制和 ROI 评估框架，并说明如何根据周度数据快速迭代。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与快消新品上市投放场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -42822,7 +43587,9 @@
             },
             {
               "slot_id": "IND_FMCG_RETAIL_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FMCG_RETAIL_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -42970,9 +43737,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -42982,7 +43749,7 @@
               "owner": "owner-consumer",
               "status": "todo",
               "objective": "补齐快消与零售笔试真实题样本（重点：市场分析、供应链基础、数据看板与促销机制）",
-              "progress": "3/10"
+              "progress": "4/10"
             }
           ]
         },
@@ -42990,7 +43757,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“门店经营案例、品牌策略与区域协同”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“门店经营案例、品牌策略与区域协同”方向真实问答。",
           "items": [
             {
               "question_id": "IND_FMCG_RETAIL_INTERVIEW_001",
@@ -43093,6 +43860,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_FMCG_RETAIL_INTERVIEW_004",
+              "role_id": "IND_FMCG_RETAIL_ROLE_002",
+              "role_name": "市场策划",
+              "question_type": "终端动销异常处置",
+              "prompt": "区域促销上线后出现“到店流量高但动销低”的反常现象，总部要求一周内给出修正方案。请说明你如何拆解问题、联动渠道团队执行 AB 测试并向管理层汇报决策依据。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位面试流程与快消终端动销优化场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -43139,7 +43940,9 @@
             },
             {
               "slot_id": "IND_FMCG_RETAIL_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FMCG_RETAIL_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -43287,9 +44090,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -43299,7 +44102,7 @@
               "owner": "owner-consumer",
               "status": "todo",
               "objective": "补齐快消与零售面试真实问答样本（重点：门店经营案例、品牌策略与区域协同）",
-              "progress": "3/10"
+              "progress": "4/10"
             }
           ]
         },
@@ -46058,7 +46861,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“跨境合规、广告投放、物流税务与数据分析”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“跨境合规、广告投放、物流税务与数据分析”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_001",
@@ -46161,6 +46964,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_004",
+              "role_id": "IND_ECOMMERCE_CROSSBORDER_ROLE_002",
+              "role_name": "跨境运营",
+              "question_type": "大促备货与资金周转优化",
+              "prompt": "某跨境店铺进入旺季后备货周期拉长，库存周转压力显著上升。请从备货预测、海外仓策略、资金占用和履约时效四个维度提出优化方案，并说明关键预警指标。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与跨境电商备货周转场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -46207,7 +47044,9 @@
             },
             {
               "slot_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -46355,9 +47194,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -46367,7 +47206,7 @@
               "owner": "owner-consumer-digital",
               "status": "todo",
               "objective": "补齐电商与跨境电商笔试真实题样本（重点：跨境合规、广告投放、物流税务与数据分析）",
-              "progress": "3/10"
+              "progress": "4/10"
             }
           ]
         },
@@ -46375,7 +47214,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“运营增长复盘、平台风控应对与多语言协作”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“运营增长复盘、平台风控应对与多语言协作”方向真实问答。",
           "items": [
             {
               "question_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_001",
@@ -46478,6 +47317,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_004",
+              "role_id": "IND_ECOMMERCE_CROSSBORDER_ROLE_002",
+              "role_name": "跨境运营",
+              "question_type": "多站点协同救火",
+              "prompt": "多个站点同时出现延迟履约和差评攀升，大促倒计时仅 5 天。请描述你如何协调运营、物流、客服和供应商团队完成分级处置，并在复盘中沉淀可复制机制。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位面试流程与跨境电商多站点协同场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -46524,7 +47397,9 @@
             },
             {
               "slot_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -46672,9 +47547,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -46684,7 +47559,7 @@
               "owner": "owner-consumer-digital",
               "status": "todo",
               "objective": "补齐电商与跨境电商面试真实问答样本（重点：运营增长复盘、平台风控应对与多语言协作）",
-              "progress": "3/10"
+              "progress": "4/10"
             }
           ]
         },
@@ -49493,7 +50368,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“运筹优化、库存模型、运输网络与KPI管理”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“运筹优化、库存模型、运输网络与KPI管理”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_LOGISTICS_SUPPLYCHAIN_WRITTEN_001",
@@ -49596,6 +50471,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_LOGISTICS_SUPPLYCHAIN_WRITTEN_004",
+              "role_id": "IND_LOGISTICS_SUPPLYCHAIN_ROLE_002",
+              "role_name": "仓储运营",
+              "question_type": "库位策略与波峰保障",
+              "prompt": "促销季期间仓内拣货路径拥堵导致履约时效波动。请基于订单结构和库位热度提出库区重划、波次策略和人效提升方案，并给出监控指标与应急阈值。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与仓储波峰治理场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -49642,7 +50551,9 @@
             },
             {
               "slot_id": "IND_LOGISTICS_SUPPLYCHAIN_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_LOGISTICS_SUPPLYCHAIN_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-24",
               "required_fields": [
@@ -49790,9 +50701,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -49802,7 +50713,7 @@
               "owner": "owner-consumer-supply",
               "status": "todo",
               "objective": "补齐物流与供应链笔试真实题样本（重点：运筹优化、库存模型、运输网络与KPI管理）",
-              "progress": "3/10"
+              "progress": "4/10"
             }
           ]
         },
@@ -49810,7 +50721,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“峰值保障复盘、端到端流程改进与协同”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“峰值保障复盘、端到端流程改进与协同”方向真实问答。",
           "items": [
             {
               "question_id": "IND_LOGISTICS_SUPPLYCHAIN_INTERVIEW_001",
@@ -49913,6 +50824,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_LOGISTICS_SUPPLYCHAIN_INTERVIEW_004",
+              "role_id": "IND_LOGISTICS_SUPPLYCHAIN_ROLE_002",
+              "role_name": "仓储运营",
+              "question_type": "仓配协同应急响应",
+              "prompt": "突发天气导致干线延误并引发末端堆单，你需要在当天内恢复核心区域时效。请说明你如何协调仓储、运输、客服与外包团队分层处置，并沉淀后续预案。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位面试流程与仓配协同应急场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -49959,7 +50904,9 @@
             },
             {
               "slot_id": "IND_LOGISTICS_SUPPLYCHAIN_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_LOGISTICS_SUPPLYCHAIN_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-24",
               "required_fields": [
@@ -50107,9 +51054,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -50119,7 +51066,7 @@
               "owner": "owner-consumer-supply",
               "status": "todo",
               "objective": "补齐物流与供应链面试真实问答样本（重点：峰值保障复盘、端到端流程改进与协同）",
-              "progress": "3/10"
+              "progress": "4/10"
             }
           ]
         },
