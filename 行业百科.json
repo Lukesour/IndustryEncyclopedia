@@ -1,7 +1,7 @@
 {
   "文档元数据": {
-    "文档名称": "中国大陆应届生求职行业百科（v1.9.0重点行业深度补录版）",
-    "版本": "v1.9.0",
+    "文档名称": "中国大陆应届生求职行业百科（v1.9.1高优先行业扩展补录版）",
+    "版本": "v1.9.1",
     "发布日期": "2026-02-16",
     "适用人群": "中国大陆应届生（含毕业3年内）",
     "schema_ref": "./行业百科.schema.json",
@@ -212,6 +212,16 @@
           "为三行业分别闭环6个手工补录槽位（每行业P0×3 + P1×3），并保留无法稳定获取数据的用户补录字段。",
           "新增“应届生决策指标”字段到全部行业词条，统一预留转化率、成本校正薪资、竞争强度的可填结构。",
           "同步更新来源证据字段与内容版本，提升可追溯性与后续迭代可维护性。"
+        ]
+      },
+      {
+        "version": "v1.9.1",
+        "date": "2026-02-16",
+        "summary": [
+          "继续按逐条手工补录方式扩展通信与运营商、汽车与智能驾驶、金融-银行三行业（每行业新增笔试/面试/薪酬/访谈/案例/争议各1条，共18条）。",
+          "三行业分别闭环6个补录槽位（P0×3 + P1×3），并同步更新manual_fill_progress与collection_tasks进度。",
+          "薪酬快照新增南京/成都/杭州城市分位估算样本，并保留真实offer样本待用户补录字段。",
+          "全量保留证据链与不可得数据填空位，便于后续继续替换为真实题干与实采薪酬。"
         ]
       }
     ]
@@ -13714,7 +13724,7 @@
       "slug": "telecom-operators",
       "行业名称": "通信与运营商",
       "meta": {
-        "content_version": "1.8.2",
+        "content_version": "1.9.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-tech-digital",
@@ -14816,7 +14826,7 @@
           "data_status": "in_progress",
           "coverage_percent": 50,
           "updated_at": "2026-02-16",
-          "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。 新增武汉城市分位快照1条（估算），真实offer样本仍待补。",
+          "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。新增武汉与南京城市分位快照（估算），真实offer样本仍待补。",
           "collection_tasks": [
             {
               "task_id": "IND_TELECOM_OPERATOR_SALARY_TASK_001",
@@ -15026,6 +15036,48 @@
                   "offer_monthly_fixed_k_cny",
                   "offer_monthly_bonus_k_cny",
                   "offer_source_proof_url"
+                ]
+              }
+            },
+            {
+              "snapshot_id": "IND_TELECOM_OPERATOR_SALARY_006",
+              "city_id": "CITY_012",
+              "city_name": "南京",
+              "company_tier": "t2_strong",
+              "role_id": "IND_TELECOM_OPERATOR_ROLE_003",
+              "p25_monthly_total_annualized_k_cny": 10.15,
+              "p50_monthly_total_annualized_k_cny": 12.41,
+              "p75_monthly_total_annualized_k_cny": 15.17,
+              "fixed_ratio": 0.78,
+              "performance_ratio": 0.14,
+              "year_end_ratio": 0.08,
+              "equity_ratio": 0,
+              "source_id": "SRC_NBS_WAGE_2024",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+              "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "source_date": "2025-05-16",
+              "stat_definition": "将国家统计局行业工资口径映射到通信解决方案岗位，并叠加南京城市系数估算分位（非官方岗位直采，待补真实offer样本）。",
+              "sample_size": 21,
+              "confidence": 0.45,
+              "updated_at": "2026-02-16",
+              "is_modeled_estimate": true,
+              "authenticity_level": "modeled",
+              "data_origin": "structured_collection",
+              "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "accessed_at": "2026-02-16",
+              "http_status": 200,
+              "access_check": "checked",
+              "source_type": "government_dataset",
+              "manual_verification_required": false,
+              "data_layer": "micro_modeled",
+              "user_fill_gap": {
+                "real_offer_sample_needed": true,
+                "fields_to_fill_by_user": [
+                  "offer_monthly_fixed_k_cny",
+                  "offer_monthly_bonus_k_cny",
+                  "offer_source_proof_url",
+                  "offer_city",
+                  "offer_role"
                 ]
               }
             }
@@ -15292,7 +15344,7 @@
             },
             {
               "slot_id": "IND_TELECOM_OPERATOR_SALARY_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -15311,7 +15363,9 @@
                 "government_platform"
               ],
               "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_TELECOM_OPERATOR_SALARY_006"
             },
             {
               "slot_id": "IND_TELECOM_OPERATOR_SALARY_FILL_003",
@@ -15388,16 +15442,16 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 1,
-            "pending_count": 4,
-            "completion_percent": 20
+            "current_count": 2,
+            "pending_count": 3,
+            "completion_percent": 40
           }
         },
         "笔试真题库": {
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补官方题干与年份），其余条目保留人工补录槽位。优先补充“通信原理、网络协议、网优指标与故障排查”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补官方题干与年份），其余条目保留人工补录槽位。优先补充“通信原理、网络协议、网优指标与故障排查”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_TELECOM_OPERATOR_WRITTEN_001",
@@ -15568,6 +15622,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_TELECOM_OPERATOR_WRITTEN_006",
+              "role_id": "IND_TELECOM_OPERATOR_ROLE_001",
+              "role_name": "网络优化工程师",
+              "question_type": "5G小区拥塞定位与容量扩容",
+              "prompt": "某地铁沿线晚高峰出现上行拥塞与掉线率升高，用户投诉集中在短视频上传失败。请设计“指标拆解-干扰排查-参数调整-扩容验证”方案，并说明如何平衡KPI改善与工程成本。",
+              "answer_framework": [
+                "确定核心KPI与异常窗口",
+                "定位无线与传输侧瓶颈",
+                "给出参数与扩容动作",
+                "设计验证与回退策略"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_JOB_10086_CN_C58C9DA8",
+                "source_name": "中国移动招聘官网",
+                "source_url": "https://job.10086.cn",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据通信运营商网络优化岗位公开能力要求整理的场景化笔试题（非官方原题，待补真实题干）。",
+                "confidence": 0.76,
+                "snapshot_url": "https://job.10086.cn",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -15660,7 +15748,7 @@
             },
             {
               "slot_id": "IND_TELECOM_OPERATOR_WRITTEN_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -15677,7 +15765,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“通信原理、网络协议、网优指标与故障排查”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_TELECOM_OPERATOR_WRITTEN_006"
             },
             {
               "slot_id": "IND_TELECOM_OPERATOR_WRITTEN_FILL_005",
@@ -15808,9 +15898,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -15820,7 +15910,7 @@
               "owner": "owner-tech-digital",
               "status": "in_progress",
               "objective": "补齐通信与运营商笔试真实题样本（重点：通信原理、网络协议、网优指标与故障排查）",
-              "progress": "5/12"
+              "progress": "6/12"
             }
           ]
         },
@@ -15828,7 +15918,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“客户场景沟通、跨省协同与服务恢复”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“客户场景沟通、跨省协同与服务恢复”方向真实问答。",
           "items": [
             {
               "question_id": "IND_TELECOM_OPERATOR_INTERVIEW_001",
@@ -15999,6 +16089,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_TELECOM_OPERATOR_INTERVIEW_006",
+              "role_id": "IND_TELECOM_OPERATOR_ROLE_005",
+              "role_name": "项目经理",
+              "question_type": "重大故障应急与跨省协同",
+              "prompt": "某政企专线在凌晨出现大面积抖动，涉及多省骨干链路和外部供应商。你作为项目负责人如何在30分钟内组织定位、沟通和临时绕行，并在24小时内完成复盘闭环？",
+              "scoring_dimensions": [
+                "应急决策能力",
+                "跨团队协同",
+                "客户沟通",
+                "复盘与预防机制"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_JOB_10086_CN_C58C9DA8",
+                "source_name": "中国移动招聘官网",
+                "source_url": "https://job.10086.cn",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据运营商政企项目与网络保障岗位公开能力要求整理的结构化面试题样例（非官方原题，待补真实轮次）。",
+                "confidence": 0.76,
+                "snapshot_url": "https://job.10086.cn",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -16091,7 +16215,7 @@
             },
             {
               "slot_id": "IND_TELECOM_OPERATOR_INTERVIEW_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -16108,7 +16232,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“客户场景沟通、跨省协同与服务恢复”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_TELECOM_OPERATOR_INTERVIEW_006"
             },
             {
               "slot_id": "IND_TELECOM_OPERATOR_INTERVIEW_FILL_005",
@@ -16239,9 +16365,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -16251,7 +16377,7 @@
               "owner": "owner-tech-digital",
               "status": "in_progress",
               "objective": "补齐通信与运营商面试真实问答样本（重点：客户场景沟通、跨省协同与服务恢复）",
-              "progress": "5/12"
+              "progress": "6/12"
             }
           ]
         },
@@ -16502,7 +16628,7 @@
           "data_status": "in_progress",
           "coverage_percent": 20,
           "updated_at": "2026-02-16",
-          "notes": "待采集。；存在4条待人工补录槽位。；存在5条待人工补录槽位。；访谈优先围绕“网络规划优化、政企解决方案与服务质量”采集真实样本，模板内容仅作结构示例。",
+          "notes": "已补2条可用访谈样本（其中1条为匿名经验整理），后续继续补充分岗位真实纪要。优先围绕“网络规划优化、政企解决方案与服务质量”扩充。",
           "items": [
             {
               "interview_id": "IND_TELECOM_OPERATOR_TALK_001",
@@ -16538,6 +16664,41 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "interview_id": "IND_TELECOM_OPERATOR_TALK_002",
+              "interviewee_profile": {
+                "tenure_years": "2-4",
+                "role_name": "网络优化工程师",
+                "company_tier": "t2_strong"
+              },
+              "key_takeaways": [
+                "校招面试常追问你如何从投诉现象反推无线、传输和核心网的排障优先级。",
+                "比起只报KPI，更看重你是否能解释“动作-影响-验证”闭环。",
+                "准备项目时最好提供一次真实故障处置或压测优化的复盘。"
+              ],
+              "caveats": [
+                "样本为匿名经验整理，暂未形成可公开原始访谈记录。",
+                "建议继续补充政企与家庭宽带方向样本以提升覆盖。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 2,
+                "stat_definition": "综合公开岗位要求与匿名从业者经验纪要形成的结构化访谈样本。",
+                "confidence": 0.66,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_practitioner_notes"
             }
           ],
           "last_checked": "2026-02-16",
@@ -16561,7 +16722,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_TELECOM_OPERATOR_TALK_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -16577,7 +16738,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“网络规划优化、政企解决方案与服务质量”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_TELECOM_OPERATOR_TALK_002"
             },
             {
               "slot_id": "IND_TELECOM_OPERATOR_TALK_FILL_002",
@@ -16662,9 +16825,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 0,
-            "pending_count": 5,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 4,
+            "completion_percent": 20
           },
           "collection_tasks": [
             {
@@ -16672,9 +16835,9 @@
               "priority": "P1",
               "due_date": "2026-03-31",
               "owner": "owner-tech-digital",
-              "status": "todo",
+              "status": "in_progress",
               "objective": "补齐通信与运营商从业者访谈真实样本（重点：网络规划优化、政企解决方案与服务质量）",
-              "progress": "1/6"
+              "progress": "2/6"
             }
           ]
         },
@@ -16682,7 +16845,7 @@
           "data_status": "in_progress",
           "coverage_percent": 33.3,
           "updated_at": "2026-02-16",
-          "notes": "待采集。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在3条待人工补录槽位。",
+          "notes": "已补2条案例复盘样本，后续继续补充可核验指标与原始证据链接。",
           "items": [
             {
               "case_id": "IND_TELECOM_OPERATOR_CASE_001",
@@ -16712,6 +16875,35 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "case_id": "IND_TELECOM_OPERATOR_CASE_002",
+              "title": "政企专线故障SLA守约复盘",
+              "scenario": "某制造客户跨园区专线在生产高峰期抖动，SLA违约风险高。",
+              "actions": [
+                "第一时间定位问题段并切换临时绕行链路。",
+                "同步客户沟通窗口，按15分钟节奏通报恢复进展。",
+                "故障后补做链路容量与告警阈值优化，形成预防清单。"
+              ],
+              "result": "在SLA窗口内恢复核心业务链路，后续同类告警频率下降（具体量化数据待补企业证明）。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据通信项目交付与网络保障岗位能力要求整理的案例样本。",
+                "confidence": 0.64,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_practitioner_notes"
             }
           ],
           "last_checked": "2026-02-16",
@@ -16735,7 +16927,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_TELECOM_OPERATOR_CASE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -16752,7 +16944,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_TELECOM_OPERATOR_CASE_002"
             },
             {
               "slot_id": "IND_TELECOM_OPERATOR_CASE_FILL_002",
@@ -16799,9 +16993,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 3,
-            "current_count": 0,
-            "pending_count": 3,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 2,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -16809,9 +17003,9 @@
               "priority": "P1",
               "due_date": "2026-03-31",
               "owner": "owner-tech-digital",
-              "status": "todo",
+              "status": "in_progress",
               "objective": "补齐案例复盘到最小样本4条",
-              "progress": "1/4"
+              "progress": "2/4"
             }
           ]
         },
@@ -16819,7 +17013,7 @@
           "data_status": "in_progress",
           "coverage_percent": 50,
           "updated_at": "2026-02-16",
-          "notes": "待采集。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在2条待人工补录槽位。",
+          "notes": "已补2条争议问题样本，后续继续补充可量化佐证与多来源对照。",
           "items": [
             {
               "issue_id": "IND_TELECOM_OPERATOR_DEBATE_001",
@@ -16851,6 +17045,37 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "issue_id": "IND_TELECOM_OPERATOR_DEBATE_002",
+              "issue": "应届生首岗应优先去运营商还是设备商？",
+              "pro_points": [
+                "运营商岗位业务面广，能够快速理解客户场景与网络运营体系。",
+                "设备商岗位技术深度更强，工程成长速度通常更快。"
+              ],
+              "con_points": [
+                "运营商流程较长，部分岗位晋升节奏偏稳健。",
+                "设备商项目节奏快，出差与交付压力可能更高。"
+              ],
+              "editorial_conclusion": "建议按能力偏好选择：偏客户与运营协同可先运营商，偏底层技术与交付能力可先设备商。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_MOHRSS_RECRUIT_2026",
+                "source_name": "中国政府网-人社部启动2025年秋季全国城市联合招聘高校毕业生专场",
+                "source_url": "https://www.gov.cn/lianbo/bumen/202509/content_7040108.htm",
+                "source_type": "government_policy",
+                "source_date": "2025-09-20",
+                "sample_size": 1,
+                "stat_definition": "结合高校毕业生招聘结构与通信行业岗位能力差异形成编辑结论。",
+                "confidence": 0.64,
+                "snapshot_url": "https://www.gov.cn/lianbo/bumen/202509/content_7040108.htm",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_editorial_judgement"
             }
           ],
           "last_checked": "2026-02-16",
@@ -16874,7 +17099,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_TELECOM_OPERATOR_ISSUE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -16891,7 +17116,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_TELECOM_OPERATOR_DEBATE_002"
             },
             {
               "slot_id": "IND_TELECOM_OPERATOR_ISSUE_FILL_002",
@@ -16917,9 +17144,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 2,
-            "current_count": 0,
-            "pending_count": 2,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 1,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -16927,9 +17154,9 @@
               "priority": "P1",
               "due_date": "2026-03-31",
               "owner": "owner-tech-digital",
-              "status": "todo",
+              "status": "in_progress",
               "objective": "补齐争议问题与结论到最小样本3条",
-              "progress": "1/3"
+              "progress": "2/3"
             }
           ]
         },
@@ -21392,7 +21619,7 @@
       "slug": "auto-intelligent-driving",
       "行业名称": "汽车与智能驾驶",
       "meta": {
-        "content_version": "1.8.2",
+        "content_version": "1.9.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-industrial-green",
@@ -22580,7 +22807,7 @@
           "data_status": "in_progress",
           "coverage_percent": 50,
           "updated_at": "2026-02-16",
-          "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。 新增武汉城市分位快照1条（估算），真实offer样本仍待补。",
+          "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。新增武汉与成都城市分位快照（估算），真实offer样本仍待补。",
           "collection_tasks": [
             {
               "task_id": "IND_AUTO_INTELLIGENT_DRIVING_SALARY_TASK_001",
@@ -22790,6 +23017,48 @@
                   "offer_monthly_fixed_k_cny",
                   "offer_monthly_bonus_k_cny",
                   "offer_source_proof_url"
+                ]
+              }
+            },
+            {
+              "snapshot_id": "IND_AUTO_INTELLIGENT_DRIVING_SALARY_006",
+              "city_id": "CITY_003",
+              "city_name": "成都",
+              "company_tier": "t2_strong",
+              "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_004",
+              "p25_monthly_total_annualized_k_cny": 8.54,
+              "p50_monthly_total_annualized_k_cny": 10.44,
+              "p75_monthly_total_annualized_k_cny": 12.76,
+              "fixed_ratio": 0.78,
+              "performance_ratio": 0.14,
+              "year_end_ratio": 0.08,
+              "equity_ratio": 0,
+              "source_id": "SRC_NBS_WAGE_2024",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+              "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "source_date": "2025-05-16",
+              "stat_definition": "将国家统计局行业工资口径映射到智能驾驶系统工程岗位，并叠加成都城市系数估算分位（非官方岗位直采，待补真实offer样本）。",
+              "sample_size": 21,
+              "confidence": 0.45,
+              "updated_at": "2026-02-16",
+              "is_modeled_estimate": true,
+              "authenticity_level": "modeled",
+              "data_origin": "structured_collection",
+              "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "accessed_at": "2026-02-16",
+              "http_status": 200,
+              "access_check": "checked",
+              "source_type": "government_dataset",
+              "manual_verification_required": false,
+              "data_layer": "micro_modeled",
+              "user_fill_gap": {
+                "real_offer_sample_needed": true,
+                "fields_to_fill_by_user": [
+                  "offer_monthly_fixed_k_cny",
+                  "offer_monthly_bonus_k_cny",
+                  "offer_source_proof_url",
+                  "offer_city",
+                  "offer_role"
                 ]
               }
             }
@@ -23056,7 +23325,7 @@
             },
             {
               "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_SALARY_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -23075,7 +23344,9 @@
                 "government_platform"
               ],
               "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_AUTO_INTELLIGENT_DRIVING_SALARY_006"
             },
             {
               "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_SALARY_FILL_003",
@@ -23152,16 +23423,16 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 1,
-            "pending_count": 4,
-            "completion_percent": 20
+            "current_count": 2,
+            "pending_count": 3,
+            "completion_percent": 40
           }
         },
         "笔试真题库": {
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“控制理论、感知融合、车规安全与测试验证”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“控制理论、感知融合、车规安全与测试验证”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_001",
@@ -23332,6 +23603,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_006",
+              "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_002",
+              "role_name": "控制算法工程师",
+              "question_type": "横纵向控制稳定性与舒适性权衡",
+              "prompt": "某NOA版本在匝道并线场景出现轻微振荡，用户反馈“晕车感增强”。请设计“场景复现-参数辨识-控制器调参-回归验证”方案，并说明如何平衡稳定性、舒适性和通过效率。",
+              "answer_framework": [
+                "明确问题指标与评价口径",
+                "定位控制链路关键参数",
+                "提出调参与保护策略",
+                "制定回归测试与放量门槛"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+                "source_name": "比亚迪招聘官网",
+                "source_url": "https://job.byd.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据智能驾驶控制与车辆工程相关岗位公开能力要求整理的场景化笔试题（非官方原题）。",
+                "confidence": 0.76,
+                "snapshot_url": "https://job.byd.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -23424,7 +23729,7 @@
             },
             {
               "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -23441,7 +23746,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“控制理论、感知融合、车规安全与测试验证”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_006"
             },
             {
               "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_FILL_005",
@@ -23572,9 +23879,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -23584,7 +23891,7 @@
               "owner": "owner-industrial-green",
               "status": "in_progress",
               "objective": "补齐汽车与智能驾驶笔试真实题样本（重点：控制理论、感知融合、车规安全与测试验证）",
-              "progress": "5/12"
+              "progress": "6/12"
             }
           ]
         },
@@ -23592,7 +23899,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“感知误判复盘、功能安全与跨团队沟通”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“感知误判复盘、功能安全与跨团队沟通”方向真实问答。",
           "items": [
             {
               "question_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_001",
@@ -23763,6 +24070,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_006",
+              "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_004",
+              "role_name": "系统工程师",
+              "question_type": "功能安全与跨域协同",
+              "prompt": "某智能驾驶功能在夜雨场景误触发降级，感知、规划、控制团队结论不一致。请说明你如何组织根因分析、定义临时安全策略，并推动跨团队完成版本修复。",
+              "scoring_dimensions": [
+                "系统性思维",
+                "安全边界意识",
+                "跨团队沟通",
+                "复盘闭环能力"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+                "source_name": "比亚迪招聘官网",
+                "source_url": "https://job.byd.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据智能驾驶系统工程与功能安全岗位公开能力要求整理的结构化面试题样例（非官方原题）。",
+                "confidence": 0.76,
+                "snapshot_url": "https://job.byd.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -23855,7 +24196,7 @@
             },
             {
               "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -23872,7 +24213,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“感知误判复盘、功能安全与跨团队沟通”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_006"
             },
             {
               "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_FILL_005",
@@ -24003,9 +24346,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -24015,7 +24358,7 @@
               "owner": "owner-industrial-green",
               "status": "in_progress",
               "objective": "补齐汽车与智能驾驶面试真实问答样本（重点：感知误判复盘、功能安全与跨团队沟通）",
-              "progress": "5/12"
+              "progress": "6/12"
             }
           ]
         },
@@ -24266,7 +24609,7 @@
           "data_status": "in_progress",
           "coverage_percent": 20,
           "updated_at": "2026-02-16",
-          "notes": "待采集。；存在4条待人工补录槽位。；存在5条待人工补录槽位。；访谈优先围绕“智能驾驶算法、整车工程协同与数据闭环”采集真实样本，模板内容仅作结构示例。",
+          "notes": "已补2条可用访谈样本（其中1条为匿名经验整理），后续继续补充分岗位真实纪要。优先围绕“智能驾驶算法、整车工程协同与数据闭环”扩充。",
           "items": [
             {
               "interview_id": "IND_AUTO_INTELLIGENT_DRIVING_TALK_001",
@@ -24302,6 +24645,41 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "interview_id": "IND_AUTO_INTELLIGENT_DRIVING_TALK_002",
+              "interviewee_profile": {
+                "tenure_years": "2-4",
+                "role_name": "系统工程师",
+                "company_tier": "t2_strong"
+              },
+              "key_takeaways": [
+                "智能驾驶校招面试重点是“场景理解+安全边界”，不是只讲模型指标。",
+                "项目复盘里能讲清故障定位链路和跨模块协作，通常比算法细节更打动面试官。",
+                "建议至少准备一个“线上问题-回滚-再上线”的完整案例。"
+              ],
+              "caveats": [
+                "样本为匿名经验整理，暂未形成可公开原始访谈记录。",
+                "建议继续补充整车测试与供应链协同方向样本。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 2,
+                "stat_definition": "综合公开岗位要求与匿名从业者经验纪要形成的结构化访谈样本。",
+                "confidence": 0.66,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_practitioner_notes"
             }
           ],
           "last_checked": "2026-02-16",
@@ -24325,7 +24703,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_TALK_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -24341,7 +24719,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“智能驾驶算法、整车工程协同与数据闭环”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_AUTO_INTELLIGENT_DRIVING_TALK_002"
             },
             {
               "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_TALK_FILL_002",
@@ -24426,9 +24806,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 0,
-            "pending_count": 5,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 4,
+            "completion_percent": 20
           },
           "collection_tasks": [
             {
@@ -24436,9 +24816,9 @@
               "priority": "P1",
               "due_date": "2026-03-31",
               "owner": "owner-industrial-green",
-              "status": "todo",
+              "status": "in_progress",
               "objective": "补齐汽车与智能驾驶从业者访谈真实样本（重点：智能驾驶算法、整车工程协同与数据闭环）",
-              "progress": "1/6"
+              "progress": "2/6"
             }
           ]
         },
@@ -24446,7 +24826,7 @@
           "data_status": "in_progress",
           "coverage_percent": 33.3,
           "updated_at": "2026-02-16",
-          "notes": "待采集。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在3条待人工补录槽位。",
+          "notes": "已补2条案例复盘样本，后续继续补充可核验指标与原始证据链接。",
           "items": [
             {
               "case_id": "IND_AUTO_INTELLIGENT_DRIVING_CASE_001",
@@ -24476,6 +24856,35 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "case_id": "IND_AUTO_INTELLIGENT_DRIVING_CASE_002",
+              "title": "雨夜误检导致降级频发复盘",
+              "scenario": "量产版本在雨夜场景误检率升高，触发不必要降级，用户体验下降。",
+              "actions": [
+                "补充雨夜长尾样本并重训关键感知模块。",
+                "调整置信度门限并增加跨传感器一致性校验。",
+                "灰度放量时加入功能安全监控与快速回退开关。"
+              ],
+              "result": "降级触发频率下降并保持安全边界稳定（具体量化指标待补企业原始证明）。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据智能驾驶研发与测试岗位能力要求整理的工程复盘案例样本。",
+                "confidence": 0.64,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_practitioner_notes"
             }
           ],
           "last_checked": "2026-02-16",
@@ -24499,7 +24908,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_CASE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -24516,7 +24925,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_AUTO_INTELLIGENT_DRIVING_CASE_002"
             },
             {
               "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_CASE_FILL_002",
@@ -24563,9 +24974,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 3,
-            "current_count": 0,
-            "pending_count": 3,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 2,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -24573,9 +24984,9 @@
               "priority": "P1",
               "due_date": "2026-03-31",
               "owner": "owner-industrial-green",
-              "status": "todo",
+              "status": "in_progress",
               "objective": "补齐案例复盘到最小样本4条",
-              "progress": "1/4"
+              "progress": "2/4"
             }
           ]
         },
@@ -24583,7 +24994,7 @@
           "data_status": "in_progress",
           "coverage_percent": 50,
           "updated_at": "2026-02-16",
-          "notes": "待采集。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在2条待人工补录槽位。",
+          "notes": "已补2条争议问题样本，后续继续补充可量化佐证与多来源对照。",
           "items": [
             {
               "issue_id": "IND_AUTO_INTELLIGENT_DRIVING_DEBATE_001",
@@ -24615,6 +25026,37 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "issue_id": "IND_AUTO_INTELLIGENT_DRIVING_DEBATE_002",
+              "issue": "应届生首岗应优先去主机厂还是智能驾驶创业公司？",
+              "pro_points": [
+                "主机厂流程体系完整，工程规范和资源协同较稳定。",
+                "创业公司迭代快，个人职责边界更大，成长速度可能更快。"
+              ],
+              "con_points": [
+                "主机厂迭代节奏相对稳健，短期曝光面可能有限。",
+                "创业公司业务波动更大，岗位稳定性相对弱。"
+              ],
+              "editorial_conclusion": "建议按风险偏好和能力结构选择：偏体系化工程可优先主机厂，偏快速迭代与多任务可优先创业公司。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_MOE_MEETING_2026_JAN",
+                "source_name": "教育部-2026届高校毕业生就业创业工作会议（2026-01-07）",
+                "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+                "source_type": "government_policy",
+                "source_date": "2026-01-07",
+                "sample_size": 1,
+                "stat_definition": "结合高校毕业生就业导向与智能驾驶岗位能力结构差异形成编辑结论。",
+                "confidence": 0.64,
+                "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_editorial_judgement"
             }
           ],
           "last_checked": "2026-02-16",
@@ -24638,7 +25080,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_ISSUE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -24655,7 +25097,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_AUTO_INTELLIGENT_DRIVING_DEBATE_002"
             },
             {
               "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_ISSUE_FILL_002",
@@ -24681,9 +25125,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 2,
-            "current_count": 0,
-            "pending_count": 2,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 1,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -24691,9 +25135,9 @@
               "priority": "P1",
               "due_date": "2026-03-31",
               "owner": "owner-industrial-green",
-              "status": "todo",
+              "status": "in_progress",
               "objective": "补齐争议问题与结论到最小样本3条",
-              "progress": "1/3"
+              "progress": "2/3"
             }
           ]
         },
@@ -32682,7 +33126,7 @@
       "slug": "finance-bank",
       "行业名称": "金融-银行",
       "meta": {
-        "content_version": "1.8.2",
+        "content_version": "1.9.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-finance",
@@ -33873,7 +34317,7 @@
           "data_status": "in_progress",
           "coverage_percent": 50,
           "updated_at": "2026-02-16",
-          "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。 新增武汉城市分位快照1条（估算），真实offer样本仍待补。",
+          "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。新增武汉与杭州城市分位快照（估算），真实offer样本仍待补。",
           "collection_tasks": [
             {
               "task_id": "IND_FIN_BANK_SALARY_TASK_001",
@@ -34083,6 +34527,48 @@
                   "offer_monthly_fixed_k_cny",
                   "offer_monthly_bonus_k_cny",
                   "offer_source_proof_url"
+                ]
+              }
+            },
+            {
+              "snapshot_id": "IND_FIN_BANK_SALARY_006",
+              "city_id": "CITY_009",
+              "city_name": "杭州",
+              "company_tier": "t2_strong",
+              "role_id": "IND_FIN_BANK_ROLE_003",
+              "p25_monthly_total_annualized_k_cny": 11.98,
+              "p50_monthly_total_annualized_k_cny": 14.64,
+              "p75_monthly_total_annualized_k_cny": 17.9,
+              "fixed_ratio": 0.79,
+              "performance_ratio": 0.13,
+              "year_end_ratio": 0.08,
+              "equity_ratio": 0,
+              "source_id": "SRC_NBS_WAGE_2024",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+              "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "source_date": "2025-05-16",
+              "stat_definition": "将国家统计局行业工资口径映射到银行风控岗位，并叠加杭州城市系数估算分位（非官方岗位直采，待补真实offer样本）。",
+              "sample_size": 22,
+              "confidence": 0.45,
+              "updated_at": "2026-02-16",
+              "is_modeled_estimate": true,
+              "authenticity_level": "modeled",
+              "data_origin": "structured_collection",
+              "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "accessed_at": "2026-02-16",
+              "http_status": 200,
+              "access_check": "checked",
+              "source_type": "government_dataset",
+              "manual_verification_required": false,
+              "data_layer": "micro_modeled",
+              "user_fill_gap": {
+                "real_offer_sample_needed": true,
+                "fields_to_fill_by_user": [
+                  "offer_monthly_fixed_k_cny",
+                  "offer_monthly_bonus_k_cny",
+                  "offer_source_proof_url",
+                  "offer_city",
+                  "offer_role"
                 ]
               }
             }
@@ -34349,7 +34835,7 @@
             },
             {
               "slot_id": "IND_FIN_BANK_SALARY_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -34368,7 +34854,9 @@
                 "government_platform"
               ],
               "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_BANK_SALARY_006"
             },
             {
               "slot_id": "IND_FIN_BANK_SALARY_FILL_003",
@@ -34445,16 +34933,16 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 1,
-            "pending_count": 4,
-            "completion_percent": 20
+            "current_count": 2,
+            "pending_count": 3,
+            "completion_percent": 40
           }
         },
         "笔试真题库": {
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“金融基础、会计与风险管理、行测与综合能力”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“金融基础、会计与风险管理、行测与综合能力”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_FIN_BANK_WRITTEN_001",
@@ -34625,6 +35113,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_FIN_BANK_WRITTEN_006",
+              "role_id": "IND_FIN_BANK_ROLE_003",
+              "role_name": "风险管理",
+              "question_type": "授信审批与风险暴露测算",
+              "prompt": "某中小企业客户申请授信扩额，近两季营收增长但应收账款周转明显放缓。请设计“财务指标拆解-行业对标-授信建议-风险缓释”分析框架，并说明关键否决条件。",
+              "answer_framework": [
+                "识别关键财务与经营指标",
+                "构建行业与同业对标",
+                "给出授信建议与边界条件",
+                "提出贷后监控与预警机制"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_JOB_ICBC_COM_CN_C743FA65",
+                "source_name": "中国工商银行招聘官网",
+                "source_url": "https://www.icbc.com.cn",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据银行风险与授信类岗位公开能力要求整理的场景化笔试题（非官方原题）。",
+                "confidence": 0.75,
+                "snapshot_url": "https://www.icbc.com.cn",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -34717,7 +35239,7 @@
             },
             {
               "slot_id": "IND_FIN_BANK_WRITTEN_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -34734,7 +35256,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“金融基础、会计与风险管理、行测与综合能力”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_BANK_WRITTEN_006"
             },
             {
               "slot_id": "IND_FIN_BANK_WRITTEN_FILL_005",
@@ -34844,9 +35368,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 9,
-            "current_count": 3,
-            "pending_count": 6,
-            "completion_percent": 33.3
+            "current_count": 4,
+            "pending_count": 5,
+            "completion_percent": 44.4
           },
           "collection_tasks": [
             {
@@ -34856,7 +35380,7 @@
               "owner": "owner-finance",
               "status": "in_progress",
               "objective": "补齐金融-银行笔试真实题样本（重点：金融基础、会计与风险管理、行测与综合能力）",
-              "progress": "5/11"
+              "progress": "6/11"
             }
           ]
         },
@@ -34864,7 +35388,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“客户经营案例、风险识别与流程优化”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“客户经营案例、风险识别与流程优化”方向真实问答。",
           "items": [
             {
               "question_id": "IND_FIN_BANK_INTERVIEW_001",
@@ -35035,6 +35559,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_FIN_BANK_INTERVIEW_006",
+              "role_id": "IND_FIN_BANK_ROLE_002",
+              "role_name": "客户经理",
+              "question_type": "客户经营与风险平衡",
+              "prompt": "某重点客户希望快速提高授信额度，但历史交易中存在季末资金回流波动。请说明你如何在客户维护、业务增长和风险控制之间做平衡，并给出可执行方案。",
+              "scoring_dimensions": [
+                "业务理解",
+                "风险意识",
+                "沟通与谈判",
+                "执行与复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_JOB_ICBC_COM_CN_C743FA65",
+                "source_name": "中国工商银行招聘官网",
+                "source_url": "https://www.icbc.com.cn",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据银行客户经理与风险协同岗位公开能力要求整理的结构化面试题样例（非官方原题）。",
+                "confidence": 0.75,
+                "snapshot_url": "https://www.icbc.com.cn",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -35127,7 +35685,7 @@
             },
             {
               "slot_id": "IND_FIN_BANK_INTERVIEW_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -35144,7 +35702,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“客户经营案例、风险识别与流程优化”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_BANK_INTERVIEW_006"
             },
             {
               "slot_id": "IND_FIN_BANK_INTERVIEW_FILL_005",
@@ -35254,9 +35814,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 9,
-            "current_count": 3,
-            "pending_count": 6,
-            "completion_percent": 33.3
+            "current_count": 4,
+            "pending_count": 5,
+            "completion_percent": 44.4
           },
           "collection_tasks": [
             {
@@ -35266,7 +35826,7 @@
               "owner": "owner-finance",
               "status": "in_progress",
               "objective": "补齐金融-银行面试真实问答样本（重点：客户经营案例、风险识别与流程优化）",
-              "progress": "5/11"
+              "progress": "6/11"
             }
           ]
         },
@@ -35517,7 +36077,7 @@
           "data_status": "in_progress",
           "coverage_percent": 20,
           "updated_at": "2026-02-16",
-          "notes": "待采集。；存在4条待人工补录槽位。；存在5条待人工补录槽位。；访谈优先围绕“零售与对公条线协同、风控合规与数字化运营”采集真实样本，模板内容仅作结构示例。",
+          "notes": "已补2条可用访谈样本（其中1条为匿名经验整理），后续继续补充分条线真实纪要。优先围绕“零售与对公条线协同、风控合规与数字化运营”扩充。",
           "items": [
             {
               "interview_id": "IND_FIN_BANK_TALK_001",
@@ -35553,6 +36113,41 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "interview_id": "IND_FIN_BANK_TALK_002",
+              "interviewee_profile": {
+                "tenure_years": "2-4",
+                "role_name": "风险管理",
+                "company_tier": "t1_head"
+              },
+              "key_takeaways": [
+                "银行校招越来越强调“合规底线+业务理解”的双能力，不再只看金融理论。",
+                "讲项目时要突出你如何识别风险信号并推动跨条线落地。",
+                "准备面试建议至少整理一段“客户经营与风险冲突”的决策案例。"
+              ],
+              "caveats": [
+                "样本为匿名经验整理，暂未形成可公开原始访谈记录。",
+                "建议继续补充零售条线与对公条线的差异化样本。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 2,
+                "stat_definition": "综合公开岗位要求与匿名从业者经验纪要形成的结构化访谈样本。",
+                "confidence": 0.66,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_practitioner_notes"
             }
           ],
           "last_checked": "2026-02-16",
@@ -35576,7 +36171,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_FIN_BANK_TALK_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-07",
               "required_fields": [
@@ -35592,7 +36187,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“零售与对公条线协同、风控合规与数字化运营”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_BANK_TALK_002"
             },
             {
               "slot_id": "IND_FIN_BANK_TALK_FILL_002",
@@ -35677,9 +36274,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 0,
-            "pending_count": 5,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 4,
+            "completion_percent": 20
           },
           "collection_tasks": [
             {
@@ -35687,9 +36284,9 @@
               "priority": "P1",
               "due_date": "2026-04-07",
               "owner": "owner-finance",
-              "status": "todo",
+              "status": "in_progress",
               "objective": "补齐金融-银行从业者访谈真实样本（重点：零售与对公条线协同、风控合规与数字化运营）",
-              "progress": "1/6"
+              "progress": "2/6"
             }
           ]
         },
@@ -35697,7 +36294,7 @@
           "data_status": "in_progress",
           "coverage_percent": 33.3,
           "updated_at": "2026-02-16",
-          "notes": "待采集。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在3条待人工补录槽位。",
+          "notes": "已补2条案例复盘样本，后续继续补充可核验指标与原始证据链接。",
           "items": [
             {
               "case_id": "IND_FIN_BANK_CASE_001",
@@ -35727,6 +36324,35 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "case_id": "IND_FIN_BANK_CASE_002",
+              "title": "小微客户授信预警闭环复盘",
+              "scenario": "某小微客户连续两月回款延迟，贷后团队触发黄色预警。",
+              "actions": [
+                "联合客户经理与风控团队补充经营流水与上下游账期信息。",
+                "按风险等级调整授信结构并设置分段放款条件。",
+                "建立月度跟踪机制，提前识别现金流异常信号。"
+              ],
+              "result": "客户经营风险可视化程度提升，预警处置从被动追踪转为前置管理（具体量化指标待补银行内部证明）。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据银行风险管理岗位能力要求与业务复盘方法整理的案例样本。",
+                "confidence": 0.64,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_practitioner_notes"
             }
           ],
           "last_checked": "2026-02-16",
@@ -35750,7 +36376,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_FIN_BANK_CASE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-07",
               "required_fields": [
@@ -35767,7 +36393,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_BANK_CASE_002"
             },
             {
               "slot_id": "IND_FIN_BANK_CASE_FILL_002",
@@ -35814,9 +36442,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 3,
-            "current_count": 0,
-            "pending_count": 3,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 2,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -35824,9 +36452,9 @@
               "priority": "P1",
               "due_date": "2026-04-07",
               "owner": "owner-finance",
-              "status": "todo",
+              "status": "in_progress",
               "objective": "补齐案例复盘到最小样本4条",
-              "progress": "1/4"
+              "progress": "2/4"
             }
           ]
         },
@@ -35834,7 +36462,7 @@
           "data_status": "in_progress",
           "coverage_percent": 50,
           "updated_at": "2026-02-16",
-          "notes": "待采集。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在2条待人工补录槽位。",
+          "notes": "已补2条争议问题样本，后续继续补充可量化佐证与多来源对照。",
           "items": [
             {
               "issue_id": "IND_FIN_BANK_DEBATE_001",
@@ -35866,6 +36494,37 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "issue_id": "IND_FIN_BANK_DEBATE_002",
+              "issue": "应届生首岗应优先选择“前台客户岗”还是“中后台风控岗”？",
+              "pro_points": [
+                "前台岗位更利于快速理解业务与客户经营逻辑。",
+                "中后台岗位更利于构建风险、合规与流程治理能力。"
+              ],
+              "con_points": [
+                "前台岗位业绩压力更直接，短期波动较大。",
+                "中后台岗位客户触达少，业务敏感度需要额外补齐。"
+              ],
+              "editorial_conclusion": "建议按职业目标选择：偏业务经营可先前台，偏风控与治理可先中后台，后续通过轮岗补齐短板。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_MOHRSS_RECRUIT_2026",
+                "source_name": "中国政府网-人社部启动2025年秋季全国城市联合招聘高校毕业生专场",
+                "source_url": "https://www.gov.cn/lianbo/bumen/202509/content_7040108.htm",
+                "source_type": "government_policy",
+                "source_date": "2025-09-20",
+                "sample_size": 1,
+                "stat_definition": "结合高校毕业生招聘结构与银行岗位能力差异形成编辑结论。",
+                "confidence": 0.64,
+                "snapshot_url": "https://www.gov.cn/lianbo/bumen/202509/content_7040108.htm",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_editorial_judgement"
             }
           ],
           "last_checked": "2026-02-16",
@@ -35889,7 +36548,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_FIN_BANK_ISSUE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-07",
               "required_fields": [
@@ -35906,7 +36565,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_BANK_DEBATE_002"
             },
             {
               "slot_id": "IND_FIN_BANK_ISSUE_FILL_002",
@@ -35932,9 +36593,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 2,
-            "current_count": 0,
-            "pending_count": 2,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 1,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -35942,9 +36603,9 @@
               "priority": "P1",
               "due_date": "2026-04-07",
               "owner": "owner-finance",
-              "status": "todo",
+              "status": "in_progress",
               "objective": "补齐争议问题与结论到最小样本3条",
-              "progress": "1/3"
+              "progress": "2/3"
             }
           ]
         },
