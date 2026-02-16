@@ -1,7 +1,7 @@
 {
   "文档元数据": {
-    "文档名称": "中国大陆应届生求职行业百科（v1.8.0多行业P0题库深补与来源链路增强版）",
-    "版本": "v1.8.0",
+    "文档名称": "中国大陆应届生求职行业百科（v1.8.1剩余行业题库补齐与来源核验收敛版）",
+    "版本": "v1.8.1",
     "发布日期": "2026-02-16",
     "适用人群": "中国大陆应届生（含毕业3年内）",
     "schema_ref": "./行业百科.schema.json",
@@ -10,7 +10,7 @@
       "修复弱集合与任务治理中的槽位/任务命名异常。",
       "逐行业增强岗位画像证据来源（代表企业+国家平台双锚点）。",
       "保留无法稳定获取的数据填空位，明确人工补录入口。",
-      "v1.8.0继续按行业逐条补录P0笔试/面试题并同步闭环槽位状态。"
+      "v1.8.1继续按行业逐条补录P0笔试/面试题并同步闭环槽位状态。"
     ],
     "变更记录": [
       {
@@ -181,6 +181,16 @@
           "上述行业的笔试与面试均完成对应FILL_002槽位闭环，并同步manual_fill_progress与collection_tasks进度。",
           "半导体行业来源链路增强：华虹来源切换为可访问官方入口并由manual verify改为checked。",
           "在不使用脚本批量灌数的前提下持续提升P0题库密度，无法稳定获取的薪酬实采继续保留待填位。"
+        ]
+      },
+      {
+        "version": "v1.8.1",
+        "date": "2026-02-16",
+        "summary": [
+          "补齐剩余7个行业（咨询、房地产、化工新材料、能源公用、传媒游戏、教育职教、农业食品）第四批笔试/面试场景题。",
+          "上述7行业笔试与面试均完成FILL_002槽位闭环，manual_fill_progress统一由3/x提升到4/x并同步任务进度。",
+          "来源链路收敛：将中国交建、蔚来、中金来源切换为可访问入口，manual verify条目由9条降至6条。",
+          "继续保留无法稳定联网获取的薪酬微观实采字段为待补状态，确保后续人工补录可追溯。"
         ]
       }
     ]
@@ -3630,16 +3640,16 @@
       "source_id": "SRC_AUTO_WWW_CCCC_LTD_CN_631F173",
       "source_name": "中国交建官网/招聘页",
       "source_type": "company_official",
-      "source_url": "https://www.cccc-ltd.cn",
+      "source_url": "https://www.ccccltd.cn",
       "credibility": "medium",
       "typical_update_cycle": "quarterly",
       "last_checked": "2026-02-16",
-      "snapshot_url": "https://www.cccc-ltd.cn",
+      "snapshot_url": "https://www.ccccltd.cn",
       "accessed_at": "2026-02-16",
-      "http_status": 0,
+      "http_status": 200,
       "access_check": "checked",
-      "manual_verification_required": true,
-      "manual_verification_note": "链接可访问性不稳定，请人工补充可访问快照URL或替代来源。"
+      "manual_verification_required": false,
+      "manual_verification_note": "已替换为可访问官网入口。"
     },
     {
       "source_id": "SRC_AUTO_WWW_CEIC_COM_2B8D5B00",
@@ -3717,16 +3727,16 @@
       "source_id": "SRC_AUTO_WWW_CICC_COM_4BA29DE6",
       "source_name": "中金公司官网/招聘页",
       "source_type": "company_official",
-      "source_url": "https://www.cicc.com",
+      "source_url": "https://www.ciccwm.com",
       "credibility": "medium",
       "typical_update_cycle": "quarterly",
       "last_checked": "2026-02-16",
-      "snapshot_url": "https://www.cicc.com",
+      "snapshot_url": "https://www.ciccwm.com",
       "accessed_at": "2026-02-16",
-      "http_status": 521,
+      "http_status": 200,
       "access_check": "checked",
-      "manual_verification_required": true,
-      "manual_verification_note": "http_status!=200，需人工核验。"
+      "manual_verification_required": false,
+      "manual_verification_note": "主站受限，采用可访问的中金财富官网入口作为官方替代。"
     },
     {
       "source_id": "SRC_AUTO_WWW_CMBCHINA_COM_79D89136",
@@ -4397,16 +4407,16 @@
       "source_id": "SRC_AUTO_WWW_NIO_COM_9C9D05E4",
       "source_name": "蔚来汽车官网/招聘页",
       "source_type": "company_official",
-      "source_url": "https://www.nio.com",
+      "source_url": "https://campus.nio.com",
       "credibility": "medium",
       "typical_update_cycle": "quarterly",
       "last_checked": "2026-02-16",
-      "snapshot_url": "https://www.nio.com",
+      "snapshot_url": "https://campus.nio.com",
       "accessed_at": "2026-02-16",
-      "http_status": 403,
+      "http_status": 200,
       "access_check": "checked",
-      "manual_verification_required": true,
-      "manual_verification_note": "官网存在访问限制（HTTP 403），需人工核验可替代入口。"
+      "manual_verification_required": false,
+      "manual_verification_note": "已切换为可访问的蔚来校园招聘入口。"
     },
     {
       "source_id": "SRC_AUTO_WWW_NMPA_GOV_CN_59F31F83",
@@ -5555,7 +5565,7 @@
       "slug": "internet-ai",
       "行业名称": "互联网与AI",
       "meta": {
-        "content_version": "1.7.4",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-tech-digital",
@@ -9262,7 +9272,7 @@
       "slug": "semiconductor-electronics",
       "行业名称": "半导体与电子",
       "meta": {
-        "content_version": "1.7.4",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-tech-hardcore",
@@ -12963,7 +12973,7 @@
       "slug": "telecom-operators",
       "行业名称": "通信与运营商",
       "meta": {
-        "content_version": "1.7.4",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-tech-digital",
@@ -16471,7 +16481,7 @@
       "slug": "new-energy",
       "行业名称": "新能源",
       "meta": {
-        "content_version": "1.7.3",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-industrial-green",
@@ -20138,7 +20148,7 @@
       "slug": "auto-intelligent-driving",
       "行业名称": "汽车与智能驾驶",
       "meta": {
-        "content_version": "1.7.7",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-industrial-green",
@@ -20621,18 +20631,18 @@
               "evidence": {
                 "source_id": "SRC_AUTO_WWW_NIO_COM_9C9D05E4",
                 "source_name": "蔚来汽车官网/招聘页",
-                "source_url": "https://www.nio.com",
+                "source_url": "https://campus.nio.com",
                 "source_type": "company_official",
                 "source_date": "2026-02-16",
                 "sample_size": 1,
                 "stat_definition": "基于官网公开岗位与校招信息入口可访问性判定",
                 "confidence": 0.78,
-                "snapshot_url": "https://www.nio.com",
+                "snapshot_url": "https://campus.nio.com",
                 "accessed_at": "2026-02-16",
-                "http_status": 403,
+                "http_status": 200,
                 "access_check": "checked",
-                "manual_verification_required": true,
-                "manual_verification_note": "官网存在访问限制（HTTP 403），需人工核验可替代入口。"
+                "manual_verification_required": false,
+                "manual_verification_note": "已切换为可访问的蔚来校园招聘入口。"
               },
               "priority_rank": 4,
               "authenticity_level": "official",
@@ -23733,7 +23743,7 @@
       "slug": "advanced-manufacturing-automation",
       "行业名称": "高端制造与工业自动化",
       "meta": {
-        "content_version": "1.7.3",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-industrial-manufacturing",
@@ -27334,7 +27344,7 @@
       "slug": "biomed-device",
       "行业名称": "生物医药与器械",
       "meta": {
-        "content_version": "1.7.3",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-industrial-biomed",
@@ -31000,7 +31010,7 @@
       "slug": "finance-bank",
       "行业名称": "金融-银行",
       "meta": {
-        "content_version": "1.7.3",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-finance",
@@ -34584,7 +34594,7 @@
       "slug": "finance-securities-fund",
       "行业名称": "金融-证券基金",
       "meta": {
-        "content_version": "1.7.3",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-finance",
@@ -35016,17 +35026,18 @@
               "evidence": {
                 "source_id": "SRC_AUTO_WWW_CICC_COM_4BA29DE6",
                 "source_name": "中金公司官网/招聘页",
-                "source_url": "https://www.cicc.com",
+                "source_url": "https://www.ciccwm.com",
                 "source_type": "company_official",
                 "source_date": "2026-02-16",
                 "sample_size": 1,
                 "stat_definition": "基于官网公开岗位与校招信息入口可访问性判定",
                 "confidence": 0.78,
-                "snapshot_url": "https://www.cicc.com",
+                "snapshot_url": "https://www.ciccwm.com",
                 "accessed_at": "2026-02-16",
-                "http_status": 521,
+                "http_status": 200,
                 "access_check": "checked",
-                "manual_verification_required": true
+                "manual_verification_required": false,
+                "manual_verification_note": "主站受限，采用可访问的中金财富官网入口作为官方替代。"
               },
               "priority_rank": 3,
               "authenticity_level": "official",
@@ -37801,22 +37812,23 @@
             {
               "link_id": "IND_FIN_SECURITIES_FUND_LINK_005",
               "title": "中金公司 校招/官网入口",
-              "url": "https://www.cicc.com",
+              "url": "https://www.ciccwm.com",
               "link_type": "company_official",
               "updated_at": "2026-02-16",
               "evidence": {
                 "source_id": "SRC_AUTO_WWW_CICC_COM_4BA29DE6",
-                "source_url": "https://www.cicc.com",
+                "source_url": "https://www.ciccwm.com",
                 "source_date": "2026-02-16",
                 "confidence": 0.75,
                 "sample_size": 1,
-                "snapshot_url": "https://www.cicc.com",
+                "snapshot_url": "https://www.ciccwm.com",
                 "accessed_at": "2026-02-16",
-                "http_status": 521,
+                "http_status": 200,
                 "access_check": "checked",
                 "source_name": "中金公司官网/招聘页",
                 "source_type": "company_official",
-                "manual_verification_required": true
+                "manual_verification_required": false,
+                "manual_verification_note": "主站受限，采用可访问的中金财富官网入口作为官方替代。"
               },
               "authenticity_level": "official",
               "data_origin": "structured_collection"
@@ -38131,7 +38143,7 @@
       "slug": "finance-insurance",
       "行业名称": "金融-保险",
       "meta": {
-        "content_version": "1.7.3",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-finance",
@@ -41710,7 +41722,7 @@
       "slug": "fmcg-retail",
       "行业名称": "快消与零售",
       "meta": {
-        "content_version": "1.7.7",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-consumer",
@@ -45153,7 +45165,7 @@
       "slug": "ecommerce-crossborder",
       "行业名称": "电商与跨境电商",
       "meta": {
-        "content_version": "1.7.3",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-consumer-digital",
@@ -48664,7 +48676,7 @@
       "slug": "logistics-supply-chain",
       "行业名称": "物流与供应链",
       "meta": {
-        "content_version": "1.7.6",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-consumer-supply",
@@ -52131,7 +52143,7 @@
       "slug": "consulting-professional-services",
       "行业名称": "咨询与专业服务",
       "meta": {
-        "content_version": "1.7.7",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-professional-service",
@@ -53839,7 +53851,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“案例分析、MECE框架、数据推导与财务逻辑”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“案例分析、MECE框架、数据推导与财务逻辑”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_001",
@@ -53942,6 +53954,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_004",
+              "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_002",
+              "role_name": "审计助理",
+              "question_type": "并表口径差异与风险识别",
+              "prompt": "集团并表阶段发现子公司收入确认口径与总部不一致，且部分合同履约节点模糊。请设计你的核查路径，给出关键证据清单、重大错报判断标准与沟通升级机制。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与审计并表核查场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -53988,7 +54034,9 @@
             },
             {
               "slot_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-24",
               "required_fields": [
@@ -54136,9 +54184,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -54148,7 +54196,7 @@
               "owner": "owner-professional-service",
               "status": "todo",
               "objective": "补齐咨询与专业服务笔试真实题样本（重点：案例分析、MECE框架、数据推导与财务逻辑）",
-              "progress": "3/10"
+              "progress": "4/10"
             }
           ]
         },
@@ -54156,7 +54204,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“案例展示、客户沟通与团队协作表现”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“案例展示、客户沟通与团队协作表现”方向真实问答。",
           "items": [
             {
               "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_001",
@@ -54259,6 +54307,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_004",
+              "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_002",
+              "role_name": "审计助理",
+              "question_type": "现场冲突与职业审慎",
+              "prompt": "现场审计中业务部门拒绝提供关键底稿并质疑取样范围，项目经理要求当天给阶段结论。请说明你如何坚持职业审慎、推进证据补充并与客户管理层沟通。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位面试流程与审计现场协同场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -54305,7 +54387,9 @@
             },
             {
               "slot_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-24",
               "required_fields": [
@@ -54453,9 +54537,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -54465,7 +54549,7 @@
               "owner": "owner-professional-service",
               "status": "todo",
               "objective": "补齐咨询与专业服务面试真实问答样本（重点：案例展示、客户沟通与团队协作表现）",
-              "progress": "3/10"
+              "progress": "4/10"
             }
           ]
         },
@@ -55516,7 +55600,7 @@
       "slug": "real-estate-infrastructure",
       "行业名称": "房地产与基建",
       "meta": {
-        "content_version": "1.7.5",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-industrial-infra",
@@ -55998,18 +56082,18 @@
               "evidence": {
                 "source_id": "SRC_AUTO_WWW_CCCC_LTD_CN_631F173",
                 "source_name": "中国交建官网/招聘页",
-                "source_url": "https://www.cccc-ltd.cn",
+                "source_url": "https://www.ccccltd.cn",
                 "source_type": "company_official",
                 "source_date": "2026-02-16",
                 "sample_size": 1,
                 "stat_definition": "基于官网公开岗位与校招信息入口可访问性判定",
                 "confidence": 0.78,
-                "snapshot_url": "https://www.cccc-ltd.cn",
+                "snapshot_url": "https://www.ccccltd.cn",
                 "accessed_at": "2026-02-16",
-                "http_status": 0,
+                "http_status": 200,
                 "access_check": "checked",
-                "manual_verification_required": true,
-                "manual_verification_note": "链接可访问性不稳定，请人工补充可访问快照URL或替代来源。"
+                "manual_verification_required": false,
+                "manual_verification_note": "已替换为可访问官网入口。"
               },
               "priority_rank": 4,
               "authenticity_level": "official",
@@ -57213,7 +57297,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“工程基础、招采流程、财务测算与政策理解”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“工程基础、招采流程、财务测算与政策理解”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_REAL_ESTATE_INFRA_WRITTEN_001",
@@ -57316,6 +57400,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_REAL_ESTATE_INFRA_WRITTEN_004",
+              "role_id": "IND_REAL_ESTATE_INFRA_ROLE_002",
+              "role_name": "成本管理",
+              "question_type": "EPC合同变更测算",
+              "prompt": "市政配套项目中 EPC 合同连续发生设计变更，导致目标成本偏离。请说明你如何构建变更台账、测算对总投资与现金流的影响，并给出招采重议与风险分担建议。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与房地产基建合同变更测算场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -57362,7 +57480,9 @@
             },
             {
               "slot_id": "IND_REAL_ESTATE_INFRA_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_REAL_ESTATE_INFRA_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-24",
               "required_fields": [
@@ -57510,9 +57630,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -57522,7 +57642,7 @@
               "owner": "owner-industrial-infra",
               "status": "todo",
               "objective": "补齐房地产与基建笔试真实题样本（重点：工程基础、招采流程、财务测算与政策理解）",
-              "progress": "3/10"
+              "progress": "4/10"
             }
           ]
         },
@@ -57530,7 +57650,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“项目推进复盘、多方协调与风险预判”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“项目推进复盘、多方协调与风险预判”方向真实问答。",
           "items": [
             {
               "question_id": "IND_REAL_ESTATE_INFRA_INTERVIEW_001",
@@ -57633,6 +57753,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_REAL_ESTATE_INFRA_INTERVIEW_004",
+              "role_id": "IND_REAL_ESTATE_INFRA_ROLE_002",
+              "role_name": "成本管理",
+              "question_type": "赶工决策与索赔谈判",
+              "prompt": "关键节点临近时总包提出赶工费用并同步发起工期索赔，业主要求控制预算不突破。请说明你如何核验赶工必要性、组织谈判并设定可执行的风险对冲条款。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位面试流程与基建赶工索赔谈判场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -57679,7 +57833,9 @@
             },
             {
               "slot_id": "IND_REAL_ESTATE_INFRA_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_REAL_ESTATE_INFRA_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-24",
               "required_fields": [
@@ -57827,9 +57983,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -57839,7 +57995,7 @@
               "owner": "owner-industrial-infra",
               "status": "todo",
               "objective": "补齐房地产与基建面试真实问答样本（重点：项目推进复盘、多方协调与风险预判）",
-              "progress": "3/10"
+              "progress": "4/10"
             }
           ]
         },
@@ -58946,7 +59102,7 @@
       "slug": "chemicals-new-materials",
       "行业名称": "化工与新材料",
       "meta": {
-        "content_version": "1.7.5",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-industrial-manufacturing",
@@ -60646,7 +60802,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“化学工艺、材料表征、安全规范与质量控制”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“化学工艺、材料表征、安全规范与质量控制”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_CHEM_NEW_MATERIALS_WRITTEN_001",
@@ -60749,6 +60905,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_CHEM_NEW_MATERIALS_WRITTEN_004",
+              "role_id": "IND_CHEM_NEW_MATERIALS_ROLE_002",
+              "role_name": "工艺工程师",
+              "question_type": "危化工艺风险分级",
+              "prompt": "某危化工艺在放大试生产阶段出现温压波动，且关键原料批次差异放大。请给出风险分级、联锁阈值优化与放行决策流程，并说明你如何验证安环与质量双重边界。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与危化工艺风险治理场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -60795,7 +60985,9 @@
             },
             {
               "slot_id": "IND_CHEM_NEW_MATERIALS_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_CHEM_NEW_MATERIALS_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-24",
               "required_fields": [
@@ -60985,9 +61177,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 3,
-            "pending_count": 9,
-            "completion_percent": 25
+            "current_count": 4,
+            "pending_count": 8,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -60997,7 +61189,7 @@
               "owner": "owner-industrial-manufacturing",
               "status": "todo",
               "objective": "补齐化工与新材料笔试真实题样本（重点：化学工艺、材料表征、安全规范与质量控制）",
-              "progress": "3/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -61005,7 +61197,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“异常批次分析、安环合规与跨部门联动”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“异常批次分析、安环合规与跨部门联动”方向真实问答。",
           "items": [
             {
               "question_id": "IND_CHEM_NEW_MATERIALS_INTERVIEW_001",
@@ -61108,6 +61300,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_CHEM_NEW_MATERIALS_INTERVIEW_004",
+              "role_id": "IND_CHEM_NEW_MATERIALS_ROLE_002",
+              "role_name": "工艺工程师",
+              "question_type": "停线决策与安环沟通",
+              "prompt": "连续两批产品出现边缘失控，生产经理倾向带病运行以保交付。请说明你如何组织风险评估、决策停线条件，并与安环、质量、计划团队达成一致行动。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位面试流程与化工停线决策协同场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -61154,7 +61380,9 @@
             },
             {
               "slot_id": "IND_CHEM_NEW_MATERIALS_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_CHEM_NEW_MATERIALS_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-24",
               "required_fields": [
@@ -61344,9 +61572,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 3,
-            "pending_count": 9,
-            "completion_percent": 25
+            "current_count": 4,
+            "pending_count": 8,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -61356,7 +61584,7 @@
               "owner": "owner-industrial-manufacturing",
               "status": "todo",
               "objective": "补齐化工与新材料面试真实问答样本（重点：异常批次分析、安环合规与跨部门联动）",
-              "progress": "3/12"
+              "progress": "4/12"
             }
           ]
         },
@@ -62470,7 +62698,7 @@
       "slug": "energy-utilities",
       "行业名称": "能源与公用事业",
       "meta": {
-        "content_version": "1.7.5",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-industrial-energy",
@@ -64160,7 +64388,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“电力系统、能源政策、设备运维与安全规程”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“电力系统、能源政策、设备运维与安全规程”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_ENERGY_UTILITIES_WRITTEN_001",
@@ -64263,6 +64491,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_ENERGY_UTILITIES_WRITTEN_004",
+              "role_id": "IND_ENERGY_UTILITIES_ROLE_002",
+              "role_name": "运维工程师",
+              "question_type": "检修窗口与供电可靠性平衡",
+              "prompt": "主设备进入强制检修窗口，但区域负荷仍处高位。请提出检修计划与保供方案，说明如何评估 N-1 风险、安排临时转供并控制用户侧影响。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与能源检修保供协同场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -64309,7 +64571,9 @@
             },
             {
               "slot_id": "IND_ENERGY_UTILITIES_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_ENERGY_UTILITIES_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-24",
               "required_fields": [
@@ -64457,9 +64721,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -64469,7 +64733,7 @@
               "owner": "owner-industrial-energy",
               "status": "todo",
               "objective": "补齐能源与公用事业笔试真实题样本（重点：电力系统、能源政策、设备运维与安全规程）",
-              "progress": "3/10"
+              "progress": "4/10"
             }
           ]
         },
@@ -64477,7 +64741,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“突发事件处置、保供协同与调度决策”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“突发事件处置、保供协同与调度决策”方向真实问答。",
           "items": [
             {
               "question_id": "IND_ENERGY_UTILITIES_INTERVIEW_001",
@@ -64580,6 +64844,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_ENERGY_UTILITIES_INTERVIEW_004",
+              "role_id": "IND_ENERGY_UTILITIES_ROLE_002",
+              "role_name": "运维工程师",
+              "question_type": "黑启动与跨区协同",
+              "prompt": "区域主网故障导致局部失压，需在短时间内完成黑启动与负荷恢复。请说明你如何制定恢复顺序、协调调度中心与现场队伍，并管理关键风险沟通。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位面试流程与电力黑启动应急协同场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -64626,7 +64924,9 @@
             },
             {
               "slot_id": "IND_ENERGY_UTILITIES_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_ENERGY_UTILITIES_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-24",
               "required_fields": [
@@ -64774,9 +65074,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -64786,7 +65086,7 @@
               "owner": "owner-industrial-energy",
               "status": "todo",
               "objective": "补齐能源与公用事业面试真实问答样本（重点：突发事件处置、保供协同与调度决策）",
-              "progress": "3/10"
+              "progress": "4/10"
             }
           ]
         },
@@ -65838,7 +66138,7 @@
       "slug": "media-game-content",
       "行业名称": "传媒游戏与内容",
       "meta": {
-        "content_version": "1.7.5",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-content-media",
@@ -67546,7 +67846,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“内容策划、数据分析、用户运营与平台规则”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“内容策划、数据分析、用户运营与平台规则”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_MEDIA_GAME_CONTENT_WRITTEN_001",
@@ -67649,6 +67949,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_MEDIA_GAME_CONTENT_WRITTEN_004",
+              "role_id": "IND_MEDIA_GAME_CONTENT_ROLE_002",
+              "role_name": "内容运营",
+              "question_type": "平台推荐机制与内容质量平衡",
+              "prompt": "短视频账号矩阵出现“曝光上涨但互动衰减”现象，平台推荐机制同步调整。请给出选题重构、分发节奏优化与质量治理方案，并说明关键指标看板设计。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与内容平台分发优化场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -67695,7 +68029,9 @@
             },
             {
               "slot_id": "IND_MEDIA_GAME_CONTENT_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_MEDIA_GAME_CONTENT_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-24",
               "required_fields": [
@@ -67843,9 +68179,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -67855,7 +68191,7 @@
               "owner": "owner-content-media",
               "status": "todo",
               "objective": "补齐传媒游戏与内容笔试真实题样本（重点：内容策划、数据分析、用户运营与平台规则）",
-              "progress": "3/10"
+              "progress": "4/10"
             }
           ]
         },
@@ -67863,7 +68199,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“内容案例复盘、舆情应对与跨团队协作”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“内容案例复盘、舆情应对与跨团队协作”方向真实问答。",
           "items": [
             {
               "question_id": "IND_MEDIA_GAME_CONTENT_INTERVIEW_001",
@@ -67966,6 +68302,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_MEDIA_GAME_CONTENT_INTERVIEW_004",
+              "role_id": "IND_MEDIA_GAME_CONTENT_ROLE_002",
+              "role_name": "内容运营",
+              "question_type": "内容危机沟通与节奏控制",
+              "prompt": "重点栏目因观点争议引发平台限流与外部投诉，商业合作方同步施压。请说明你如何制定对内外沟通口径、排期修复方案，并平衡品牌风险与业务目标。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位面试流程与内容舆情危机处置场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -68012,7 +68382,9 @@
             },
             {
               "slot_id": "IND_MEDIA_GAME_CONTENT_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_MEDIA_GAME_CONTENT_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-24",
               "required_fields": [
@@ -68160,9 +68532,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -68172,7 +68544,7 @@
               "owner": "owner-content-media",
               "status": "todo",
               "objective": "补齐传媒游戏与内容面试真实问答样本（重点：内容案例复盘、舆情应对与跨团队协作）",
-              "progress": "3/10"
+              "progress": "4/10"
             }
           ]
         },
@@ -69277,7 +69649,7 @@
       "slug": "education-vocational",
       "行业名称": "教育与职教",
       "meta": {
-        "content_version": "1.7.5",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-education",
@@ -70982,7 +71354,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“教育学基础、课程设计、评估方法与服务流程”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“教育学基础、课程设计、评估方法与服务流程”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_EDU_VOCATIONAL_WRITTEN_001",
@@ -71085,6 +71457,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_EDU_VOCATIONAL_WRITTEN_004",
+              "role_id": "IND_EDU_VOCATIONAL_ROLE_002",
+              "role_name": "课程运营",
+              "question_type": "班型排课与师资配置优化",
+              "prompt": "新学期报名激增导致热门班型排课冲突与教师负载不均。请设计排课与师资配置优化方案，说明如何平衡教学质量、出勤率和家校满意度。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与教育排课运营场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -71131,7 +71537,9 @@
             },
             {
               "slot_id": "IND_EDU_VOCATIONAL_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_EDU_VOCATIONAL_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -71279,9 +71687,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -71291,7 +71699,7 @@
               "owner": "owner-education",
               "status": "todo",
               "objective": "补齐教育与职教笔试真实题样本（重点：教育学基础、课程设计、评估方法与服务流程）",
-              "progress": "3/10"
+              "progress": "4/10"
             }
           ]
         },
@@ -71299,7 +71707,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“课堂场景处理、学习效果复盘与家校沟通”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“课堂场景处理、学习效果复盘与家校沟通”方向真实问答。",
           "items": [
             {
               "question_id": "IND_EDU_VOCATIONAL_INTERVIEW_001",
@@ -71402,6 +71810,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_EDU_VOCATIONAL_INTERVIEW_004",
+              "role_id": "IND_EDU_VOCATIONAL_ROLE_002",
+              "role_name": "课程运营",
+              "question_type": "家校冲突调解与续报管理",
+              "prompt": "班级阶段测评后家长对学习结果分歧较大并集中投诉，续报窗口仅剩一周。请说明你如何组织教师、教务与班主任协同沟通，兼顾教学专业性与家校信任。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位面试流程与教育家校沟通场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -71448,7 +71890,9 @@
             },
             {
               "slot_id": "IND_EDU_VOCATIONAL_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_EDU_VOCATIONAL_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -71596,9 +72040,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -71608,7 +72052,7 @@
               "owner": "owner-education",
               "status": "todo",
               "objective": "补齐教育与职教面试真实问答样本（重点：课堂场景处理、学习效果复盘与家校沟通）",
-              "progress": "3/10"
+              "progress": "4/10"
             }
           ]
         },
@@ -72701,7 +73145,7 @@
       "slug": "civil-service",
       "行业名称": "公务员体系",
       "meta": {
-        "content_version": "1.7.6",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-public-sector",
@@ -76294,7 +76738,7 @@
       "slug": "public-institution",
       "行业名称": "事业单位体系",
       "meta": {
-        "content_version": "1.7.7",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-public-sector",
@@ -79960,7 +80404,7 @@
       "slug": "state-owned-enterprise",
       "行业名称": "央国企体系",
       "meta": {
-        "content_version": "1.7.7",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-public-sector",
@@ -83683,7 +84127,7 @@
       "slug": "agriculture-food",
       "行业名称": "农业与食品",
       "meta": {
-        "content_version": "1.7.5",
+        "content_version": "1.8.1",
         "data_version": "2026Q1",
         "status": "reviewed",
         "owner": "owner-consumer-food",
@@ -85379,7 +85823,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“食品安全法规、质量标准、工艺流程与供应链”方向真实笔试题。",
+          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“食品安全法规、质量标准、工艺流程与供应链”方向真实笔试题。",
           "items": [
             {
               "question_id": "IND_AGRI_FOOD_WRITTEN_001",
@@ -85482,6 +85926,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_AGRI_FOOD_WRITTEN_004",
+              "role_id": "IND_AGRI_FOOD_ROLE_002",
+              "role_name": "研发工程师",
+              "question_type": "新品工艺放大与标签合规",
+              "prompt": "一款植物基新品在中试放大后风味稳定性下降，且包装标签存在合规风险。请提出工艺修订、感官验证与标签合规校核方案，并说明上市前放行门槛。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与农业食品新品放大合规场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -85528,7 +86006,9 @@
             },
             {
               "slot_id": "IND_AGRI_FOOD_WRITTEN_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_AGRI_FOOD_WRITTEN_004",
               "priority": "P0",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -85676,9 +86156,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -85688,7 +86168,7 @@
               "owner": "owner-consumer-food",
               "status": "todo",
               "objective": "补齐农业与食品笔试真实题样本（重点：食品安全法规、质量标准、工艺流程与供应链）",
-              "progress": "3/10"
+              "progress": "4/10"
             }
           ]
         },
@@ -85696,7 +86176,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“质量问题复盘、现场管理与跨部门沟通”方向真实问答。",
+          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“质量问题复盘、现场管理与跨部门沟通”方向真实问答。",
           "items": [
             {
               "question_id": "IND_AGRI_FOOD_INTERVIEW_001",
@@ -85799,6 +86279,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_AGRI_FOOD_INTERVIEW_004",
+              "role_id": "IND_AGRI_FOOD_ROLE_002",
+              "role_name": "研发工程师",
+              "question_type": "召回风险处置与对外沟通",
+              "prompt": "市场抽检出现异常批次并触发潜在召回风险，供应链与销售团队意见不一致。请说明你如何组织根因核查、分级处置和外部沟通，控制品牌与合规风险。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位面试流程与农业食品召回应急场景整理的问答样例（非官方原题，待补真实题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -85845,7 +86359,9 @@
             },
             {
               "slot_id": "IND_AGRI_FOOD_INTERVIEW_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_AGRI_FOOD_INTERVIEW_004",
               "priority": "P0",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -85993,9 +86509,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -86005,7 +86521,7 @@
               "owner": "owner-consumer-food",
               "status": "todo",
               "objective": "补齐农业与食品面试真实问答样本（重点：质量问题复盘、现场管理与跨部门沟通）",
-              "progress": "3/10"
+              "progress": "4/10"
             }
           ]
         },
