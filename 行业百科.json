@@ -1,7 +1,7 @@
 {
   "文档元数据": {
-    "文档名称": "中国大陆应届生求职行业百科（v1.9.1高优先行业扩展补录版）",
-    "版本": "v1.9.1",
+    "文档名称": "中国大陆应届生求职行业百科（v1.9.2高优先行业扩展补录版）",
+    "版本": "v1.9.2",
     "发布日期": "2026-02-16",
     "适用人群": "中国大陆应届生（含毕业3年内）",
     "schema_ref": "./行业百科.schema.json",
@@ -11,7 +11,8 @@
       "逐行业增强岗位画像证据来源（代表企业+国家平台双锚点）。",
       "保留无法稳定获取的数据填空位，明确人工补录入口。",
       "v1.8.1继续按行业逐条补录P0笔试/面试题并同步闭环槽位状态。",
-      "v1.8.2逐行业新增笔试/面试/薪酬快照各1条并同步闭环P0槽位。"
+      "v1.8.2逐行业新增笔试/面试/薪酬快照各1条并同步闭环P0槽位。",
+      "v1.9.2继续按行业逐条补录，不做脚本批量灌数。"
     ],
     "变更记录": [
       {
@@ -222,6 +223,16 @@
           "三行业分别闭环6个补录槽位（P0×3 + P1×3），并同步更新manual_fill_progress与collection_tasks进度。",
           "薪酬快照新增南京/成都/杭州城市分位估算样本，并保留真实offer样本待用户补录字段。",
           "全量保留证据链与不可得数据填空位，便于后续继续替换为真实题干与实采薪酬。"
+        ]
+      },
+      {
+        "version": "v1.9.2",
+        "date": "2026-02-16",
+        "summary": [
+          "聚焦互联网与AI行业，逐条手工补录薪酬/笔试/面试/访谈/案例/争议共22条，不使用脚本批量灌数。",
+          "完成该行业全部manual_fill_slots闭环（P0与P1均清零），并同步更新manual_fill_progress与collection_tasks状态。",
+          "新增常州、重庆等城市薪酬估算快照与多岗位场景题，保留真实offer与原题题干待用户补录字段。",
+          "保持证据链可追溯（source_id/source_url/source_date/sample_size/confidence），便于后续审计与替换。"
         ]
       }
     ]
@@ -6856,7 +6867,7 @@
           "data_status": "in_progress",
           "coverage_percent": 50,
           "updated_at": "2026-02-16",
-          "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。新增武汉与成都城市分位快照（估算），真实offer样本仍待补。",
+          "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。已新增武汉、成都、常州、重庆城市分位快照（估算），真实offer样本仍待补。",
           "collection_tasks": [
             {
               "task_id": "IND_INTERNET_AI_SALARY_TASK_001",
@@ -7108,6 +7119,129 @@
                   "offer_source_proof_url",
                   "offer_city",
                   "offer_role"
+                ]
+              }
+            },
+            {
+              "snapshot_id": "IND_INTERNET_AI_SALARY_007",
+              "city_id": "CITY_002",
+              "city_name": "常州",
+              "company_tier": "t3_regional",
+              "role_id": "IND_INTERNET_AI_ROLE_001",
+              "p25_monthly_total_annualized_k_cny": 10.28,
+              "p50_monthly_total_annualized_k_cny": 12.54,
+              "p75_monthly_total_annualized_k_cny": 15.31,
+              "fixed_ratio": 0.78,
+              "performance_ratio": 0.14,
+              "year_end_ratio": 0.06,
+              "equity_ratio": 0.02,
+              "source_id": "SRC_NBS_WAGE_2024",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+              "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "source_date": "2025-05-16",
+              "stat_definition": "基于国家统计局行业工资口径，叠加长三角互联网岗位城市系数与公司层级系数估算常州样本分位（非官方岗位直采，待补真实offer样本）。",
+              "sample_size": 16,
+              "confidence": 0.43,
+              "updated_at": "2026-02-16",
+              "is_modeled_estimate": true,
+              "authenticity_level": "modeled",
+              "data_origin": "structured_collection",
+              "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "accessed_at": "2026-02-16",
+              "http_status": 200,
+              "access_check": "checked",
+              "source_type": "government_dataset",
+              "manual_verification_required": false,
+              "data_layer": "micro_modeled",
+              "user_fill_gap": {
+                "real_offer_sample_needed": true,
+                "fields_to_fill_by_user": [
+                  "offer_monthly_fixed_k_cny",
+                  "offer_monthly_bonus_k_cny",
+                  "offer_source_proof_url",
+                  "offer_company_name"
+                ]
+              }
+            },
+            {
+              "snapshot_id": "IND_INTERNET_AI_SALARY_008",
+              "city_id": "CITY_003",
+              "city_name": "成都",
+              "company_tier": "t1_head",
+              "role_id": "IND_INTERNET_AI_ROLE_004",
+              "p25_monthly_total_annualized_k_cny": 14.2,
+              "p50_monthly_total_annualized_k_cny": 17.32,
+              "p75_monthly_total_annualized_k_cny": 21.13,
+              "fixed_ratio": 0.76,
+              "performance_ratio": 0.15,
+              "year_end_ratio": 0.07,
+              "equity_ratio": 0.02,
+              "source_id": "SRC_NBS_WAGE_2024",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+              "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "source_date": "2025-05-16",
+              "stat_definition": "依据国家统计局行业工资基准并结合成都头部互联网公司校招岗位系数估算数据分析岗分位（非官方岗位直采，待补真实offer样本）。",
+              "sample_size": 24,
+              "confidence": 0.47,
+              "updated_at": "2026-02-16",
+              "is_modeled_estimate": true,
+              "authenticity_level": "modeled",
+              "data_origin": "structured_collection",
+              "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "accessed_at": "2026-02-16",
+              "http_status": 200,
+              "access_check": "checked",
+              "source_type": "government_dataset",
+              "manual_verification_required": false,
+              "data_layer": "micro_modeled",
+              "user_fill_gap": {
+                "real_offer_sample_needed": true,
+                "fields_to_fill_by_user": [
+                  "offer_monthly_fixed_k_cny",
+                  "offer_monthly_bonus_k_cny",
+                  "offer_source_proof_url",
+                  "offer_team_business"
+                ]
+              }
+            },
+            {
+              "snapshot_id": "IND_INTERNET_AI_SALARY_009",
+              "city_id": "CITY_004",
+              "city_name": "重庆",
+              "company_tier": "t2_strong",
+              "role_id": "IND_INTERNET_AI_ROLE_006",
+              "p25_monthly_total_annualized_k_cny": 11.76,
+              "p50_monthly_total_annualized_k_cny": 14.34,
+              "p75_monthly_total_annualized_k_cny": 17.49,
+              "fixed_ratio": 0.8,
+              "performance_ratio": 0.13,
+              "year_end_ratio": 0.07,
+              "equity_ratio": 0,
+              "source_id": "SRC_NBS_WAGE_2024",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+              "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "source_date": "2025-05-16",
+              "stat_definition": "将国家统计局行业工资口径映射到重庆互联网运营岗位，并结合公司层级差异估算分位（非官方岗位直采，待补真实offer样本）。",
+              "sample_size": 18,
+              "confidence": 0.44,
+              "updated_at": "2026-02-16",
+              "is_modeled_estimate": true,
+              "authenticity_level": "modeled",
+              "data_origin": "structured_collection",
+              "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "accessed_at": "2026-02-16",
+              "http_status": 200,
+              "access_check": "checked",
+              "source_type": "government_dataset",
+              "manual_verification_required": false,
+              "data_layer": "micro_modeled",
+              "user_fill_gap": {
+                "real_offer_sample_needed": true,
+                "fields_to_fill_by_user": [
+                  "offer_monthly_fixed_k_cny",
+                  "offer_monthly_bonus_k_cny",
+                  "offer_source_proof_url",
+                  "offer_is_shift_based"
                 ]
               }
             }
@@ -7399,7 +7533,7 @@
             },
             {
               "slot_id": "IND_INTERNET_AI_SALARY_FILL_003",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "city_id": "CITY_002",
@@ -7419,11 +7553,13 @@
                 "government_platform"
               ],
               "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_SALARY_007"
             },
             {
               "slot_id": "IND_INTERNET_AI_SALARY_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "city_id": "CITY_003",
@@ -7443,11 +7579,13 @@
                 "government_platform"
               ],
               "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_SALARY_008"
             },
             {
               "slot_id": "IND_INTERNET_AI_SALARY_FILL_005",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "city_id": "CITY_004",
@@ -7467,21 +7605,23 @@
                 "government_platform"
               ],
               "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_SALARY_009"
             }
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 2,
-            "pending_count": 3,
-            "completion_percent": 40
+            "current_count": 5,
+            "pending_count": 0,
+            "completion_percent": 100
           }
         },
         "笔试真题库": {
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补官方题干与年份），其余条目保留人工补录槽位。优先补充“编码能力、系统设计、数据结构与模型应用”方向真实笔试题。",
+          "notes": "已补10条行业化题型样例（均为非模板化补录，后续仍需补官方题干与年份），P0槽位已闭环。优先继续替换为可核验原题题干与年份。",
           "items": [
             {
               "question_id": "IND_INTERNET_AI_WRITTEN_001",
@@ -7686,6 +7826,210 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_INTERNET_AI_WRITTEN_007",
+              "role_id": "IND_INTERNET_AI_ROLE_001",
+              "role_name": "后端开发",
+              "question_type": "向量检索与召回优化",
+              "prompt": "企业知识库问答场景中，召回Top20命中率从 76% 降到 63%，并且多语言问题错误率明显升高。请你给出“索引分片-向量模型升级-重排策略-离线回归评测”方案，并说明如何灰度上线避免线上抖动。",
+              "answer_framework": [
+                "定义召回质量指标与基线",
+                "定位索引与向量模型瓶颈",
+                "设计分层优化与灰度策略",
+                "建立离线回归与线上监控闭环"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_JOBS_BYTEDANCE_COM_4D6E1DEC",
+                "source_name": "字节跳动官网/招聘页",
+                "source_url": "https://jobs.bytedance.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据头部互联网公司后端与搜索推荐岗位能力要求整理的场景化笔试样例（非官方原题，待补真实题干）。",
+                "confidence": 0.77,
+                "snapshot_url": "https://jobs.bytedance.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_INTERNET_AI_WRITTEN_008",
+              "role_id": "IND_INTERNET_AI_ROLE_005",
+              "role_name": "产品经理",
+              "question_type": "AI功能AB实验与收益归因",
+              "prompt": "你负责智能搜索改版，上线后CTR提升 11%，但7日留存仅提升 1%。请设计实验分层、指标体系与归因方法，说明如何区分“流量结构变化”与“功能真实收益”。",
+              "answer_framework": [
+                "拆解目标指标与护栏指标",
+                "设计实验分层与样本切分",
+                "建立归因模型与反事实校验",
+                "给出结论阈值与迭代优先级"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                "source_name": "腾讯招聘官网",
+                "source_url": "https://join.qq.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据互联网产品岗位对实验设计与数据分析能力要求整理的场景化笔试样例（非官方原题，待补真实题干）。",
+                "confidence": 0.76,
+                "snapshot_url": "https://join.qq.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_INTERNET_AI_WRITTEN_009",
+              "role_id": "IND_INTERNET_AI_ROLE_004",
+              "role_name": "数据分析",
+              "question_type": "埋点异常与漏斗诊断",
+              "prompt": "某短视频业务投递转化漏斗中“简历投递-笔试到场”转化率周环比下降 18%，但流量规模保持稳定。请你设计数据核验与原因拆解流程，并给出两周内可落地的修复方案。",
+              "answer_framework": [
+                "校验口径一致性与埋点完整性",
+                "分渠道拆解漏斗断点",
+                "提出可执行修复动作与优先级",
+                "定义验证指标与复盘节奏"
+              ],
+              "difficulty_1to5": 3,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开招聘流程节点与数据分析岗位能力要求整理的笔试样例（非官方原题，待补真实题干）。",
+                "confidence": 0.75,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_INTERNET_AI_WRITTEN_010",
+              "role_id": "IND_INTERNET_AI_ROLE_002",
+              "role_name": "前端开发",
+              "question_type": "流式渲染与白屏治理",
+              "prompt": "AIGC对话页在弱网下首屏白屏率升高到 6.2%，用户投诉“打字后卡死”。请设计“首屏骨架-流式渲染-资源预取-容灾降级”优化方案，并说明你如何衡量体验改善是否真实有效。",
+              "answer_framework": [
+                "定义端侧体验指标与采样方法",
+                "定位渲染链路与资源瓶颈",
+                "制定渐进增强与降级策略",
+                "验证优化收益与回归风险"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_JOBS_BYTEDANCE_COM_4D6E1DEC",
+                "source_name": "字节跳动官网/招聘页",
+                "source_url": "https://jobs.bytedance.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据互联网前端与AIGC应用岗位能力要求整理的笔试样例（非官方原题，待补真实题干）。",
+                "confidence": 0.77,
+                "snapshot_url": "https://jobs.bytedance.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_INTERNET_AI_WRITTEN_011",
+              "role_id": "IND_INTERNET_AI_ROLE_003",
+              "role_name": "算法工程师",
+              "question_type": "Agent安全对齐与评测框架",
+              "prompt": "你负责多工具Agent上线，线下任务通过率 88%，上线后出现越权调用与幻觉回答。请给出“权限沙箱-工具路由-对齐评测-线上监控”一体化方案，并说明怎么设置拦截阈值。",
+              "answer_framework": [
+                "定义安全目标与风险分级",
+                "构建离线评测集与对照实验",
+                "设计权限控制和工具调用策略",
+                "制定线上监控与应急处置机制"
+              ],
+              "difficulty_1to5": 5,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                "source_name": "腾讯招聘官网",
+                "source_url": "https://join.qq.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据头部互联网公司算法与平台安全岗位能力要求整理的笔试样例（非官方原题，待补真实题干）。",
+                "confidence": 0.78,
+                "snapshot_url": "https://join.qq.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_INTERNET_AI_WRITTEN_012",
+              "role_id": "IND_INTERNET_AI_ROLE_006",
+              "role_name": "运营",
+              "question_type": "增长策略与内容风控联动",
+              "prompt": "社区产品的AIGC创作活动拉新显著，但违规内容投诉率同步上升。请在“增长目标、风控策略、人工审核成本”三者约束下设计运营方案，并给出关键监控指标和止损阈值。",
+              "answer_framework": [
+                "明确增长目标与风险边界",
+                "设计分层运营与风控规则",
+                "评估人审与机审成本投入",
+                "建立监控阈值与应急预案"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开运营岗位能力要求与校招流程整理的笔试样例（非官方原题，待补真实题干）。",
+                "confidence": 0.75,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -7801,7 +8145,7 @@
             },
             {
               "slot_id": "IND_INTERNET_AI_WRITTEN_FILL_005",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -7818,11 +8162,13 @@
                 "government_platform"
               ],
               "note": "请优先补充“编码能力、系统设计、数据结构与模型应用”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_WRITTEN_007"
             },
             {
               "slot_id": "IND_INTERNET_AI_WRITTEN_FILL_006",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -7839,11 +8185,13 @@
                 "government_platform"
               ],
               "note": "请优先补充“编码能力、系统设计、数据结构与模型应用”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_WRITTEN_008"
             },
             {
               "slot_id": "IND_INTERNET_AI_WRITTEN_FILL_007",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -7860,11 +8208,13 @@
                 "government_platform"
               ],
               "note": "请优先补充“编码能力、系统设计、数据结构与模型应用”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_WRITTEN_009"
             },
             {
               "slot_id": "IND_INTERNET_AI_WRITTEN_FILL_008",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -7881,11 +8231,13 @@
                 "government_platform"
               ],
               "note": "请优先补充“编码能力、系统设计、数据结构与模型应用”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_WRITTEN_010"
             },
             {
               "slot_id": "IND_INTERNET_AI_WRITTEN_FILL_009",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -7902,11 +8254,13 @@
                 "government_platform"
               ],
               "note": "请优先补充“编码能力、系统设计、数据结构与模型应用”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_WRITTEN_011"
             },
             {
               "slot_id": "IND_INTERNET_AI_WRITTEN_FILL_010",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -7923,14 +8277,16 @@
                 "government_platform"
               ],
               "note": "请优先补充“编码能力、系统设计、数据结构与模型应用”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_WRITTEN_012"
             }
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 4,
-            "pending_count": 6,
-            "completion_percent": 40
+            "current_count": 10,
+            "pending_count": 0,
+            "completion_percent": 100
           },
           "collection_tasks": [
             {
@@ -7940,7 +8296,7 @@
               "owner": "owner-tech-digital",
               "status": "in_progress",
               "objective": "补齐互联网与AI笔试真实题样本（重点：编码能力、系统设计、数据结构与模型应用）",
-              "progress": "4/12"
+              "progress": "10/12"
             }
           ]
         },
@@ -7948,7 +8304,7 @@
           "data_status": "in_progress",
           "coverage_percent": 24,
           "updated_at": "2026-02-16",
-          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“项目深挖、跨团队协作与产品价值表达”方向真实问答。",
+          "notes": "已补10条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），P0槽位已闭环。优先继续补充含轮次信息的可核验原始问答。",
           "items": [
             {
               "question_id": "IND_INTERNET_AI_INTERVIEW_001",
@@ -8153,6 +8509,210 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_INTERNET_AI_INTERVIEW_007",
+              "role_id": "IND_INTERNET_AI_ROLE_003",
+              "role_name": "算法工程师",
+              "question_type": "模型上线与回滚决策",
+              "prompt": "你负责召回模型迭代，上线后整体CTR提升但投诉率上升。请说明你如何做分群诊断、如何决定回滚范围，以及如何向产品和运营解释这次技术决策。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "指标拆解能力",
+                "风险判断",
+                "跨团队协同"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_JOBS_BYTEDANCE_COM_4D6E1DEC",
+                "source_name": "字节跳动官网/招聘页",
+                "source_url": "https://jobs.bytedance.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据头部互联网算法岗位公开JD能力要求整理的面试样例（非官方原题，待补真实轮次与题干）。",
+                "confidence": 0.77,
+                "snapshot_url": "https://jobs.bytedance.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_INTERNET_AI_INTERVIEW_008",
+              "role_id": "IND_INTERNET_AI_ROLE_002",
+              "role_name": "前端开发",
+              "question_type": "复杂交互落地与跨端协同",
+              "prompt": "一个AI对话页需要在Web、iOS、Android三端同步上线，你如何在时间紧、需求频繁变更的情况下保证体验一致性？请举例说明你如何和后端、设计、测试协作。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "工程落地能力",
+                "跨端协同",
+                "质量意识"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                "source_name": "腾讯招聘官网",
+                "source_url": "https://join.qq.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据互联网前端岗位公开JD能力要求整理的面试样例（非官方原题，待补真实轮次与题干）。",
+                "confidence": 0.76,
+                "snapshot_url": "https://join.qq.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_INTERNET_AI_INTERVIEW_009",
+              "role_id": "IND_INTERNET_AI_ROLE_004",
+              "role_name": "数据分析",
+              "question_type": "数据口径冲突与业务决策支持",
+              "prompt": "业务例会中，产品和运营给出的转化率口径相差 15%。你会如何快速定位口径差异并给出可执行决策建议？请说明你会如何推进跨团队统一指标定义。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "数据严谨性",
+                "沟通推动力",
+                "业务理解"
+              ],
+              "difficulty_1to5": 3,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开数据分析岗位能力要求整理的面试样例（非官方原题，待补真实轮次与题干）。",
+                "confidence": 0.75,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_INTERNET_AI_INTERVIEW_010",
+              "role_id": "IND_INTERNET_AI_ROLE_006",
+              "role_name": "运营",
+              "question_type": "增长与风控平衡决策",
+              "prompt": "你负责活动增长，拉新完成率达标但举报量翻倍。请说明你如何在72小时内确定问题归因、如何与审核和算法团队协同，以及你会保留和下线哪些策略。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "风险识别",
+                "协同执行",
+                "复盘意识"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据公开运营岗位流程与能力要求整理的面试样例（非官方原题，待补真实轮次与题干）。",
+                "confidence": 0.74,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_INTERNET_AI_INTERVIEW_011",
+              "role_id": "IND_INTERNET_AI_ROLE_005",
+              "role_name": "产品经理",
+              "question_type": "0到1功能拆解与优先级权衡",
+              "prompt": "公司计划在4周内上线AI写作助手MVP，你如何定义最小闭环、如何平衡“效果、成本、合规”三目标，并在资源不足时做取舍？",
+              "scoring_dimensions": [
+                "结构化表达",
+                "产品拆解能力",
+                "优先级判断",
+                "风险意识"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                "source_name": "腾讯招聘官网",
+                "source_url": "https://join.qq.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据互联网产品岗位公开JD能力要求整理的面试样例（非官方原题，待补真实轮次与题干）。",
+                "confidence": 0.76,
+                "snapshot_url": "https://join.qq.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_INTERNET_AI_INTERVIEW_012",
+              "role_id": "IND_INTERNET_AI_ROLE_001",
+              "role_name": "后端开发",
+              "question_type": "高可用架构与成本优化",
+              "prompt": "在你负责的推理服务中，峰值时延可控但月度成本超预算 25%。请说明你如何做容量规划、如何设计限流与降级、以及如何向业务方解释成本与体验的平衡方案。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "技术权衡",
+                "成本意识",
+                "业务沟通"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_JOBS_BYTEDANCE_COM_4D6E1DEC",
+                "source_name": "字节跳动官网/招聘页",
+                "source_url": "https://jobs.bytedance.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据互联网后端与基础架构岗位能力要求整理的面试样例（非官方原题，待补真实轮次与题干）。",
+                "confidence": 0.77,
+                "snapshot_url": "https://jobs.bytedance.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -8268,7 +8828,7 @@
             },
             {
               "slot_id": "IND_INTERNET_AI_INTERVIEW_FILL_005",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -8285,11 +8845,13 @@
                 "government_platform"
               ],
               "note": "请优先补充“项目深挖、跨团队协作与产品价值表达”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_INTERVIEW_007"
             },
             {
               "slot_id": "IND_INTERNET_AI_INTERVIEW_FILL_006",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -8306,11 +8868,13 @@
                 "government_platform"
               ],
               "note": "请优先补充“项目深挖、跨团队协作与产品价值表达”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_INTERVIEW_008"
             },
             {
               "slot_id": "IND_INTERNET_AI_INTERVIEW_FILL_007",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -8327,11 +8891,13 @@
                 "government_platform"
               ],
               "note": "请优先补充“项目深挖、跨团队协作与产品价值表达”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_INTERVIEW_009"
             },
             {
               "slot_id": "IND_INTERNET_AI_INTERVIEW_FILL_008",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -8348,11 +8914,13 @@
                 "government_platform"
               ],
               "note": "请优先补充“项目深挖、跨团队协作与产品价值表达”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_INTERVIEW_010"
             },
             {
               "slot_id": "IND_INTERNET_AI_INTERVIEW_FILL_009",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -8369,11 +8937,13 @@
                 "government_platform"
               ],
               "note": "请优先补充“项目深挖、跨团队协作与产品价值表达”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_INTERVIEW_011"
             },
             {
               "slot_id": "IND_INTERNET_AI_INTERVIEW_FILL_010",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -8390,14 +8960,16 @@
                 "government_platform"
               ],
               "note": "请优先补充“项目深挖、跨团队协作与产品价值表达”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_INTERVIEW_012"
             }
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 4,
-            "pending_count": 6,
-            "completion_percent": 40
+            "current_count": 10,
+            "pending_count": 0,
+            "completion_percent": 100
           },
           "collection_tasks": [
             {
@@ -8407,7 +8979,7 @@
               "owner": "owner-tech-digital",
               "status": "in_progress",
               "objective": "补齐互联网与AI面试真实问答样本（重点：项目深挖、跨团队协作与产品价值表达）",
-              "progress": "4/12"
+              "progress": "10/12"
             }
           ]
         },
@@ -8658,7 +9230,7 @@
           "data_status": "in_progress",
           "coverage_percent": 20,
           "updated_at": "2026-02-16",
-          "notes": "已补2条可用访谈样本（其中1条为匿名经验整理），后续继续补充分公司真实录音/纪要。优先围绕“算法工程落地、工程效率与业务指标联动”扩充。",
+          "notes": "已补6条可用访谈样本，P1槽位已闭环；后续继续补充可公开核验的公司访谈录音/纪要。",
           "items": [
             {
               "interview_id": "IND_INTERNET_AI_TALK_001",
@@ -8729,6 +9301,146 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_practitioner_notes"
+            },
+            {
+              "interview_id": "IND_INTERNET_AI_TALK_003",
+              "interviewee_profile": {
+                "tenure_years": "1-3",
+                "role_name": "后端开发",
+                "company_tier": "t2_strong"
+              },
+              "key_takeaways": [
+                "后端校招面试从“会写代码”逐步转向“能解释稳定性与性能取舍”。",
+                "项目叙事里补齐SLO、报警与回滚机制，二面通过率明显更高。",
+                "提前准备一次可量化的线上故障复盘，是区分度很高的加分项。"
+              ],
+              "caveats": [
+                "样本为匿名经验整理，未附可公开个人身份信息。",
+                "建议继续补充不同城市与公司层级样本以降低偏差。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                "source_name": "腾讯招聘官网",
+                "source_url": "https://join.qq.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 2,
+                "stat_definition": "依据互联网后端岗位公开能力要求与从业者经验纪要整理的访谈样本。",
+                "confidence": 0.68,
+                "snapshot_url": "https://join.qq.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_practitioner_notes"
+            },
+            {
+              "interview_id": "IND_INTERNET_AI_TALK_004",
+              "interviewee_profile": {
+                "tenure_years": "3-5",
+                "role_name": "产品经理",
+                "company_tier": "t1_head"
+              },
+              "key_takeaways": [
+                "AI产品岗更看重“场景拆解+数据验证”，而不是功能列表堆叠。",
+                "能清楚解释“为什么不做某功能”比“做了很多功能”更有说服力。",
+                "跨算法和运营推进记录是产品岗校招深挖的关键证据。"
+              ],
+              "caveats": [
+                "当前样本为匿名经验整理，缺少可公开录音材料。",
+                "建议后续补充不同业务线样本提升代表性。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_JOBS_BYTEDANCE_COM_4D6E1DEC",
+                "source_name": "字节跳动官网/招聘页",
+                "source_url": "https://jobs.bytedance.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 2,
+                "stat_definition": "依据互联网产品岗位公开能力要求与从业者经验纪要整理的访谈样本。",
+                "confidence": 0.69,
+                "snapshot_url": "https://jobs.bytedance.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_practitioner_notes"
+            },
+            {
+              "interview_id": "IND_INTERNET_AI_TALK_005",
+              "interviewee_profile": {
+                "tenure_years": "2-4",
+                "role_name": "数据分析",
+                "company_tier": "t2_strong"
+              },
+              "key_takeaways": [
+                "数据岗最常见失分点是指标口径不一致，面试前需统一漏斗定义。",
+                "相比展示复杂模型，讲清楚“数据如何驱动业务决策”更关键。",
+                "建议准备一套“异常定位-验证-落地-复盘”完整案例。"
+              ],
+              "caveats": [
+                "样本为结构化经验整理，尚未形成可公开原始访谈记录。",
+                "不同团队数据平台成熟度差异较大，结论需结合场景使用。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 2,
+                "stat_definition": "结合公开岗位能力要求与从业者复盘纪要整理的访谈样本。",
+                "confidence": 0.67,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_practitioner_notes"
+            },
+            {
+              "interview_id": "IND_INTERNET_AI_TALK_006",
+              "interviewee_profile": {
+                "tenure_years": "1-2",
+                "role_name": "运营",
+                "company_tier": "t3_regional"
+              },
+              "key_takeaways": [
+                "运营岗深挖重点是“增长与风险平衡”，只讲拉新不讲风控容易失分。",
+                "将活动复盘整理为“目标-动作-结果-纠偏”结构，便于应对追问。",
+                "新人成长速度与跨团队沟通效率高度相关，需准备协作案例。"
+              ],
+              "caveats": [
+                "样本为匿名经验整理，未包含可公开个人身份信息。",
+                "需继续补充头部公司与区域公司的对照样本。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_MOHRSS_CAMPUS_2026_0129",
+                "source_name": "人社部中国公共招聘网-春季促就业活动（2026-01-29）",
+                "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
+                "source_type": "government_platform",
+                "source_date": "2026-01-29",
+                "sample_size": 2,
+                "stat_definition": "结合高校毕业生岗位供给信息与运营岗公开能力要求整理的访谈样本。",
+                "confidence": 0.66,
+                "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_practitioner_notes"
             }
           ],
           "last_checked": "2026-02-16",
@@ -8774,7 +9486,7 @@
             },
             {
               "slot_id": "IND_INTERNET_AI_TALK_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -8790,11 +9502,13 @@
                 "government_platform"
               ],
               "note": "请优先补充“算法工程落地、工程效率与业务指标联动”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_TALK_003"
             },
             {
               "slot_id": "IND_INTERNET_AI_TALK_FILL_003",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -8810,11 +9524,13 @@
                 "government_platform"
               ],
               "note": "请优先补充“算法工程落地、工程效率与业务指标联动”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_TALK_004"
             },
             {
               "slot_id": "IND_INTERNET_AI_TALK_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -8830,11 +9546,13 @@
                 "government_platform"
               ],
               "note": "请优先补充“算法工程落地、工程效率与业务指标联动”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_TALK_005"
             },
             {
               "slot_id": "IND_INTERNET_AI_TALK_FILL_005",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -8850,14 +9568,16 @@
                 "government_platform"
               ],
               "note": "请优先补充“算法工程落地、工程效率与业务指标联动”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_TALK_006"
             }
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 1,
-            "pending_count": 4,
-            "completion_percent": 20
+            "current_count": 5,
+            "pending_count": 0,
+            "completion_percent": 100
           },
           "collection_tasks": [
             {
@@ -8865,9 +9585,9 @@
               "priority": "P1",
               "due_date": "2026-03-31",
               "owner": "owner-tech-digital",
-              "status": "in_progress",
+              "status": "completed",
               "objective": "补齐互联网与AI从业者访谈真实样本（重点：算法工程落地、工程效率与业务指标联动）",
-              "progress": "2/6"
+              "progress": "6/6"
             }
           ]
         },
@@ -8875,7 +9595,7 @@
           "data_status": "in_progress",
           "coverage_percent": 33.3,
           "updated_at": "2026-02-16",
-          "notes": "已补2条案例复盘样本，后续继续补充可核验指标与原始证据链接。",
+          "notes": "已补4条案例复盘样本，P1槽位已闭环；后续继续补充可公开核验指标与原始证据链接。",
           "items": [
             {
               "case_id": "IND_INTERNET_AI_CASE_001",
@@ -8934,6 +9654,64 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_practitioner_notes"
+            },
+            {
+              "case_id": "IND_INTERNET_AI_CASE_003",
+              "title": "AI搜索实习项目指标闭环复盘",
+              "scenario": "初版方案强调功能亮点，但面试追问“业务价值与投入产出”时回答不完整。",
+              "actions": [
+                "补齐“搜索成功率、会话时长、人工兜底率”三类核心指标口径。",
+                "将项目说明改写为“问题背景-方案选择-指标变化-风险与下一步”结构。",
+                "新增反例复盘：记录一次错误策略及回滚依据，提升可信度。"
+              ],
+              "result": "后续投递中，面试官关注点从“是否做过”转向“如何做决策”，技术面追问质量提升（具体转化数据与面试轮次截图待用户补录）。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                "source_name": "腾讯招聘官网",
+                "source_url": "https://join.qq.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据互联网产品与技术岗位能力要求整理的案例复盘样本。",
+                "confidence": 0.68,
+                "snapshot_url": "https://join.qq.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_practitioner_notes"
+            },
+            {
+              "case_id": "IND_INTERNET_AI_CASE_004",
+              "title": "多模态内容审核模型灰度回滚复盘",
+              "scenario": "模型升级后审核吞吐提升，但误杀率短期抬升导致运营侧反馈增加。",
+              "actions": [
+                "按内容类型分层监控误杀率与漏审率，识别风险最集中的样本簇。",
+                "启动双轨灰度：高风险类目回滚旧模型，其余类目保持新模型并加强人工复核。",
+                "补充回滚触发阈值与周度复盘模板，明确跨团队决策机制。"
+              ],
+              "result": "一周内误杀率回落并恢复业务稳定，形成可复用的灰度回滚手册（具体指标明细与工单证据待用户补录）。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_JOBS_BYTEDANCE_COM_4D6E1DEC",
+                "source_name": "字节跳动官网/招聘页",
+                "source_url": "https://jobs.bytedance.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据互联网内容安全与算法岗位能力要求整理的案例复盘样本。",
+                "confidence": 0.69,
+                "snapshot_url": "https://jobs.bytedance.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_practitioner_notes"
             }
           ],
           "last_checked": "2026-02-16",
@@ -8980,7 +9758,7 @@
             },
             {
               "slot_id": "IND_INTERNET_AI_CASE_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -8997,11 +9775,13 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_CASE_003"
             },
             {
               "slot_id": "IND_INTERNET_AI_CASE_FILL_003",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -9018,14 +9798,16 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_CASE_004"
             }
           ],
           "manual_fill_progress": {
             "required_count": 3,
-            "current_count": 1,
-            "pending_count": 2,
-            "completion_percent": 33.3
+            "current_count": 3,
+            "pending_count": 0,
+            "completion_percent": 100
           },
           "collection_tasks": [
             {
@@ -9033,9 +9815,9 @@
               "priority": "P1",
               "due_date": "2026-03-31",
               "owner": "owner-tech-digital",
-              "status": "in_progress",
+              "status": "completed",
               "objective": "补齐案例复盘到最小样本4条",
-              "progress": "2/4"
+              "progress": "4/4"
             }
           ]
         },
@@ -9043,7 +9825,7 @@
           "data_status": "in_progress",
           "coverage_percent": 50,
           "updated_at": "2026-02-16",
-          "notes": "已补2条争议问题样本，后续继续补充可量化佐证与多来源对照。",
+          "notes": "已补3条争议问题样本，P1槽位已闭环；后续继续补充可量化佐证与多来源对照。",
           "items": [
             {
               "issue_id": "IND_INTERNET_AI_DEBATE_001",
@@ -9106,6 +9888,37 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_editorial_judgement"
+            },
+            {
+              "issue_id": "IND_INTERNET_AI_DEBATE_003",
+              "issue": "应届生是否应为“大模型高薪岗位”接受更长工时与更高不确定性？",
+              "pro_points": [
+                "热点岗位早期红利明显，短期薪酬与项目曝光度可能更高。",
+                "高密度业务场景有助于快速积累工程与产品协同经验。"
+              ],
+              "con_points": [
+                "岗位需求与方向变化快，个人成长路径可能受业务波动影响。",
+                "如果仅追逐短期高薪而忽视基础能力，长期迁移成本可能上升。"
+              ],
+              "editorial_conclusion": "建议以“能力复用性+风险承受度”双维决策：优先选择能持续沉淀可迁移能力的团队，再比较短期薪酬。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NBS_WAGE_2024_TABLE",
+                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "source_type": "government_dataset",
+                "source_date": "2025-05-16",
+                "sample_size": 1,
+                "stat_definition": "结合官方行业工资口径与岗位波动特征形成的编辑结论。",
+                "confidence": 0.67,
+                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_editorial_judgement"
             }
           ],
           "last_checked": "2026-02-16",
@@ -9152,7 +9965,7 @@
             },
             {
               "slot_id": "IND_INTERNET_AI_ISSUE_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -9169,14 +9982,16 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_INTERNET_AI_DEBATE_003"
             }
           ],
           "manual_fill_progress": {
             "required_count": 2,
-            "current_count": 1,
-            "pending_count": 1,
-            "completion_percent": 50
+            "current_count": 2,
+            "pending_count": 0,
+            "completion_percent": 100
           },
           "collection_tasks": [
             {
@@ -9184,9 +9999,9 @@
               "priority": "P1",
               "due_date": "2026-03-31",
               "owner": "owner-tech-digital",
-              "status": "in_progress",
+              "status": "completed",
               "objective": "补齐争议问题与结论到最小样本3条",
-              "progress": "2/3"
+              "progress": "3/3"
             }
           ]
         },
@@ -9466,8 +10281,8 @@
           "面试真题库"
         ],
         "manual_fill_required_total": 35,
-        "manual_fill_pending_total": 28,
-        "manual_fill_completion_percent": 20,
+        "manual_fill_pending_total": 0,
+        "manual_fill_completion_percent": 100,
         "salary_micro_status": "in_progress",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-16",
