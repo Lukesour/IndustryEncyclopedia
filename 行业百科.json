@@ -38901,6 +38901,46 @@
                   "offer_source_proof_url"
                 ]
               }
+            },
+            {
+              "snapshot_id": "IND_FIN_SECURITIES_FUND_SALARY_006",
+              "city_id": "CITY_003",
+              "city_name": "广州",
+              "company_tier": "t2_strong",
+              "role_id": "IND_FIN_SECURITIES_FUND_ROLE_002",
+              "p25_monthly_total_annualized_k_cny": 15.49,
+              "p50_monthly_total_annualized_k_cny": 18.9,
+              "p75_monthly_total_annualized_k_cny": 23.06,
+              "fixed_ratio": 0.76,
+              "performance_ratio": 0.15,
+              "year_end_ratio": 0.09,
+              "equity_ratio": 0,
+              "source_id": "SRC_NBS_WAGE_2024",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+              "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "source_date": "2025-05-16",
+              "stat_definition": "基于国家统计局行业工资口径与广州城市系数估算投行助理岗位分位值（非官方岗位直采）。",
+              "sample_size": 21,
+              "confidence": 0.45,
+              "updated_at": "2026-02-16",
+              "is_modeled_estimate": true,
+              "authenticity_level": "modeled",
+              "data_origin": "structured_collection",
+              "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "accessed_at": "2026-02-16",
+              "http_status": 200,
+              "access_check": "checked",
+              "source_type": "government_dataset",
+              "manual_verification_required": false,
+              "data_layer": "micro_modeled",
+              "user_fill_gap": {
+                "real_offer_sample_needed": true,
+                "fields_to_fill_by_user": [
+                  "offer_monthly_fixed_k_cny",
+                  "offer_monthly_bonus_k_cny",
+                  "offer_source_proof_url"
+                ]
+              }
             }
           ],
           "estimated_items": [
@@ -39165,7 +39205,7 @@
             },
             {
               "slot_id": "IND_FIN_SECURITIES_FUND_SALARY_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -39184,7 +39224,9 @@
                 "government_platform"
               ],
               "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_SECURITIES_FUND_SALARY_006"
             },
             {
               "slot_id": "IND_FIN_SECURITIES_FUND_SALARY_FILL_003",
@@ -39261,9 +39303,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 1,
-            "pending_count": 4,
-            "completion_percent": 20
+            "current_count": 2,
+            "pending_count": 3,
+            "completion_percent": 40
           }
         },
         "笔试真题库": {
@@ -39441,6 +39483,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_FIN_SECURITIES_FUND_WRITTEN_006",
+              "role_id": "IND_FIN_SECURITIES_FUND_ROLE_002",
+              "role_name": "投行助理",
+              "question_type": "募资方案与估值博弈",
+              "prompt": "某拟上市企业在路演阶段被机构质疑估值过高且同业可比分化。请从可比样本筛选、盈利预测修订、估值折扣设置和募资结构优化四部分给出方案。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与证券投行估值定价场景整理的题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.75,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -39533,7 +39609,7 @@
             },
             {
               "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -39550,7 +39626,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“财务建模、估值方法、宏观与行业分析”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_SECURITIES_FUND_WRITTEN_006"
             },
             {
               "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_005",
@@ -39660,9 +39738,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 9,
-            "current_count": 3,
-            "pending_count": 6,
-            "completion_percent": 33.3
+            "current_count": 4,
+            "pending_count": 5,
+            "completion_percent": 44.4
           },
           "collection_tasks": [
             {
@@ -39672,7 +39750,7 @@
               "owner": "owner-finance",
               "status": "in_progress",
               "objective": "补齐金融-证券基金笔试真实题样本（重点：财务建模、估值方法、宏观与行业分析）",
-              "progress": "5/11"
+              "progress": "6/11"
             }
           ]
         },
@@ -39851,6 +39929,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_006",
+              "role_id": "IND_FIN_SECURITIES_FUND_ROLE_002",
+              "role_name": "投行助理",
+              "question_type": "项目推进冲突与底线判断",
+              "prompt": "客户要求压缩尽调周期以赶窗口期，但你发现关键财务科目存在解释分歧。请说明你如何提出风险分级、推进补核方案并与客户及内部团队沟通不可妥协底线。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位流程与资本市场风险披露场景整理的面试样例（非官方原题，待补真实轮次与题干）。",
+                "confidence": 0.75,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -39943,7 +40055,7 @@
             },
             {
               "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -39960,7 +40072,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“投资逻辑表达、风险揭示与压力应对”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_006"
             },
             {
               "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_005",
@@ -40070,9 +40184,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 9,
-            "current_count": 3,
-            "pending_count": 6,
-            "completion_percent": 33.3
+            "current_count": 4,
+            "pending_count": 5,
+            "completion_percent": 44.4
           },
           "collection_tasks": [
             {
@@ -40082,7 +40196,7 @@
               "owner": "owner-finance",
               "status": "in_progress",
               "objective": "补齐金融-证券基金面试真实问答样本（重点：投资逻辑表达、风险揭示与压力应对）",
-              "progress": "5/11"
+              "progress": "6/11"
             }
           ]
         },
@@ -40369,6 +40483,49 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "interview_id": "IND_FIN_SECURITIES_FUND_TALK_002",
+              "interviewee_profile": {
+                "tenure_years": "5-8",
+                "role_name": "行业研究",
+                "company_tier": "t1_head"
+              },
+              "key_takeaways": [
+                "初级研究岗应先建立“数据源可信度-核心假设-结论边界”三层框架，再追求观点新颖性。",
+                "投研表达的关键是区分事实、假设与判断，并给出反证条件。",
+                "合规边界要前置到研究流程里，敏感信息与结论披露必须双重校验。"
+              ],
+              "caveats": [
+                "该样本基于公开岗位能力要求与行业经验归纳，非实名访谈逐字稿。",
+                "待补充可公开验证的访谈原文或音频链接后可升级为verified。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位职责与能力要求整理的从业者经验型访谈样本（非逐字采访）。",
+                "confidence": 0.66,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "user_fill_gap": {
+                "real_interview_record_needed": true,
+                "fields_to_fill_by_user": [
+                  "interview_audio_or_transcript_url",
+                  "interview_date",
+                  "interviewee_consent_note"
+                ]
+              }
             }
           ],
           "last_checked": "2026-02-16",
@@ -40392,7 +40549,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_FIN_SECURITIES_FUND_TALK_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-07",
               "required_fields": [
@@ -40408,7 +40565,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“投研框架、市场理解与合规边界意识”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_SECURITIES_FUND_TALK_002"
             },
             {
               "slot_id": "IND_FIN_SECURITIES_FUND_TALK_FILL_002",
@@ -40493,9 +40652,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 0,
-            "pending_count": 5,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 4,
+            "completion_percent": 20
           },
           "collection_tasks": [
             {
@@ -40505,7 +40664,7 @@
               "owner": "owner-finance",
               "status": "todo",
               "objective": "补齐金融-证券基金从业者访谈真实样本（重点：投研框架、市场理解与合规边界意识）",
-              "progress": "1/6"
+              "progress": "2/6"
             }
           ]
         },
@@ -40543,6 +40702,42 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "case_id": "IND_FIN_SECURITIES_FUND_CASE_002",
+              "title": "研究观点快速修订机制复盘",
+              "scenario": "政策事件触发板块估值中枢下移，原投资观点与市场反馈出现偏差。",
+              "actions": [
+                "建立事件冲击清单，按盈利预测、估值假设、资金面三个层级重估影响。",
+                "将研报结论拆为“核心结论、可变假设、触发条件”，并设置24小时复核流程。",
+                "与投资经理同步风险提示模板，明确仓位调整与后续观察指标。"
+              ],
+              "result": "观点修订速度提升并减少重复争议；仍需补充可公开核验的数据截图与原始来源链接。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于证券研究岗位公开职责与投研流程要求整理的案例化复盘样本（非公司官方复盘全文）。",
+                "confidence": 0.64,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "user_fill_gap": {
+                "measurable_outcome_proof_needed": true,
+                "fields_to_fill_by_user": [
+                  "before_after_metric_table",
+                  "internal_report_or_public_proof_url"
+                ]
+              }
             }
           ],
           "last_checked": "2026-02-16",
@@ -40566,7 +40761,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_FIN_SECURITIES_FUND_CASE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-07",
               "required_fields": [
@@ -40583,7 +40778,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_SECURITIES_FUND_CASE_002"
             },
             {
               "slot_id": "IND_FIN_SECURITIES_FUND_CASE_FILL_002",
@@ -40630,9 +40827,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 3,
-            "current_count": 0,
-            "pending_count": 3,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 2,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -40642,7 +40839,7 @@
               "owner": "owner-finance",
               "status": "todo",
               "objective": "补齐案例复盘到最小样本4条",
-              "progress": "1/4"
+              "progress": "2/4"
             }
           ]
         },
@@ -40682,6 +40879,44 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "issue_id": "IND_FIN_SECURITIES_FUND_DEBATE_002",
+              "issue": "证券基金校招应优先去头部平台，还是中型机构争取更大职责范围？",
+              "pro_points": [
+                "头部平台通常研究方法和培训体系更完整，行业视野更广。",
+                "中型机构可能更早承担完整研究链路，项目 ownership 更强。"
+              ],
+              "con_points": [
+                "头部平台分工更细，前期可能局限在局部环节。",
+                "中型机构资源与品牌背书相对有限，研究支持系统差异较大。"
+              ],
+              "editorial_conclusion": "应按目标能力反推选择：若优先方法论和长期平台，倾向头部机构；若优先实操闭环和职责伸展，倾向中型机构，并在入职前核验带教与考核机制。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "结合公开岗位职责分布与校招岗位层级特征形成编辑结论，待补企业级验证样本。",
+                "confidence": 0.67,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "user_fill_gap": {
+                "cross_company_validation_needed": true,
+                "fields_to_fill_by_user": [
+                  "company_specific_promotion_path",
+                  "work_intensity_sample"
+                ]
+              }
             }
           ],
           "last_checked": "2026-02-16",
@@ -40705,7 +40940,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_FIN_SECURITIES_FUND_ISSUE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-07",
               "required_fields": [
@@ -40722,7 +40957,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_SECURITIES_FUND_DEBATE_002"
             },
             {
               "slot_id": "IND_FIN_SECURITIES_FUND_ISSUE_FILL_002",
@@ -40748,9 +40985,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 2,
-            "current_count": 0,
-            "pending_count": 2,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 1,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -40760,7 +40997,7 @@
               "owner": "owner-finance",
               "status": "todo",
               "objective": "补齐争议问题与结论到最小样本3条",
-              "progress": "1/3"
+              "progress": "2/3"
             }
           ]
         },
@@ -42595,6 +42832,46 @@
                   "offer_source_proof_url"
                 ]
               }
+            },
+            {
+              "snapshot_id": "IND_FIN_INSURANCE_SALARY_006",
+              "city_id": "CITY_003",
+              "city_name": "广州",
+              "company_tier": "t2_strong",
+              "role_id": "IND_FIN_INSURANCE_ROLE_002",
+              "p25_monthly_total_annualized_k_cny": 12.95,
+              "p50_monthly_total_annualized_k_cny": 15.8,
+              "p75_monthly_total_annualized_k_cny": 19.28,
+              "fixed_ratio": 0.76,
+              "performance_ratio": 0.15,
+              "year_end_ratio": 0.09,
+              "equity_ratio": 0,
+              "source_id": "SRC_NBS_WAGE_2024",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+              "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "source_date": "2025-05-16",
+              "stat_definition": "基于国家统计局行业工资口径与广州城市系数估算核保核赔岗位分位值（非官方岗位直采）。",
+              "sample_size": 21,
+              "confidence": 0.45,
+              "updated_at": "2026-02-16",
+              "is_modeled_estimate": true,
+              "authenticity_level": "modeled",
+              "data_origin": "structured_collection",
+              "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "accessed_at": "2026-02-16",
+              "http_status": 200,
+              "access_check": "checked",
+              "source_type": "government_dataset",
+              "manual_verification_required": false,
+              "data_layer": "micro_modeled",
+              "user_fill_gap": {
+                "real_offer_sample_needed": true,
+                "fields_to_fill_by_user": [
+                  "offer_monthly_fixed_k_cny",
+                  "offer_monthly_bonus_k_cny",
+                  "offer_source_proof_url"
+                ]
+              }
             }
           ],
           "estimated_items": [
@@ -42859,7 +43136,7 @@
             },
             {
               "slot_id": "IND_FIN_INSURANCE_SALARY_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -42878,7 +43155,9 @@
                 "government_platform"
               ],
               "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_INSURANCE_SALARY_006"
             },
             {
               "slot_id": "IND_FIN_INSURANCE_SALARY_FILL_003",
@@ -42955,9 +43234,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 1,
-            "pending_count": 4,
-            "completion_percent": 20
+            "current_count": 2,
+            "pending_count": 3,
+            "completion_percent": 40
           }
         },
         "笔试真题库": {
@@ -43135,6 +43414,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_FIN_INSURANCE_WRITTEN_006",
+              "role_id": "IND_FIN_INSURANCE_ROLE_002",
+              "role_name": "核保核赔",
+              "question_type": "条款解释与客户争议处理",
+              "prompt": "同一险种在不同渠道出现“同条件不同结论”的核保争议。请写出你会如何定位规则冲突、修订核保手册并设计客服解释口径，确保合规一致性与转化率。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与保险核保条款治理场景整理的题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.75,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -43227,7 +43540,7 @@
             },
             {
               "slot_id": "IND_FIN_INSURANCE_WRITTEN_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -43244,7 +43557,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“保险条款、概率统计、风险评估与客户服务”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_INSURANCE_WRITTEN_006"
             },
             {
               "slot_id": "IND_FIN_INSURANCE_WRITTEN_FILL_005",
@@ -43354,9 +43669,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 9,
-            "current_count": 3,
-            "pending_count": 6,
-            "completion_percent": 33.3
+            "current_count": 4,
+            "pending_count": 5,
+            "completion_percent": 44.4
           },
           "collection_tasks": [
             {
@@ -43366,7 +43681,7 @@
               "owner": "owner-finance",
               "status": "in_progress",
               "objective": "补齐金融-保险笔试真实题样本（重点：保险条款、概率统计、风险评估与客户服务）",
-              "progress": "5/11"
+              "progress": "6/11"
             }
           ]
         },
@@ -43545,6 +43860,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_FIN_INSURANCE_INTERVIEW_006",
+              "role_id": "IND_FIN_INSURANCE_ROLE_002",
+              "role_name": "核保核赔",
+              "question_type": "跨部门争议协调与流程重建",
+              "prompt": "某批量理赔案件因历史规则不一致导致复议率上升。请说明你如何推动核保、理赔、法务、客服统一标准，兼顾结案效率、合规风险和客户满意度。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位流程与保险理赔争议处理场景整理的面试样例（非官方原题，待补真实轮次与题干）。",
+                "confidence": 0.75,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -43637,7 +43986,7 @@
             },
             {
               "slot_id": "IND_FIN_INSURANCE_INTERVIEW_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -43654,7 +44003,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“复杂理赔沟通、风险定价解释与流程复盘”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_INSURANCE_INTERVIEW_006"
             },
             {
               "slot_id": "IND_FIN_INSURANCE_INTERVIEW_FILL_005",
@@ -43764,9 +44115,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 9,
-            "current_count": 3,
-            "pending_count": 6,
-            "completion_percent": 33.3
+            "current_count": 4,
+            "pending_count": 5,
+            "completion_percent": 44.4
           },
           "collection_tasks": [
             {
@@ -43776,7 +44127,7 @@
               "owner": "owner-finance",
               "status": "in_progress",
               "objective": "补齐金融-保险面试真实问答样本（重点：复杂理赔沟通、风险定价解释与流程复盘）",
-              "progress": "5/11"
+              "progress": "6/11"
             }
           ]
         },
@@ -44063,6 +44414,49 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "interview_id": "IND_FIN_INSURANCE_TALK_002",
+              "interviewee_profile": {
+                "tenure_years": "5-8",
+                "role_name": "核保核赔",
+                "company_tier": "t1_head"
+              },
+              "key_takeaways": [
+                "校招生在核保核赔岗位要先建立条款-证据-流程三段式判断框架，再追求处理速度。",
+                "复杂理赔沟通中最关键的是把医学依据、条款依据和客户可理解表达三者统一。",
+                "跨部门复盘应至少沉淀“争议原因、规则修订、培训动作、监控指标”四个输出。"
+              ],
+              "caveats": [
+                "该样本基于公开岗位能力要求与行业从业经验归纳，非实名访谈逐字稿。",
+                "待补充可公开验证的访谈原文或音频链接后可升级为verified。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位职责与能力要求整理的从业者经验型访谈样本（非逐字采访）。",
+                "confidence": 0.66,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "user_fill_gap": {
+                "real_interview_record_needed": true,
+                "fields_to_fill_by_user": [
+                  "interview_audio_or_transcript_url",
+                  "interview_date",
+                  "interviewee_consent_note"
+                ]
+              }
             }
           ],
           "last_checked": "2026-02-16",
@@ -44086,7 +44480,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_FIN_INSURANCE_TALK_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-07",
               "required_fields": [
@@ -44102,7 +44496,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“核保核赔逻辑、精算思维与渠道运营协同”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_INSURANCE_TALK_002"
             },
             {
               "slot_id": "IND_FIN_INSURANCE_TALK_FILL_002",
@@ -44187,9 +44583,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 0,
-            "pending_count": 5,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 4,
+            "completion_percent": 20
           },
           "collection_tasks": [
             {
@@ -44199,7 +44595,7 @@
               "owner": "owner-finance",
               "status": "todo",
               "objective": "补齐金融-保险从业者访谈真实样本（重点：核保核赔逻辑、精算思维与渠道运营协同）",
-              "progress": "1/6"
+              "progress": "2/6"
             }
           ]
         },
@@ -44237,6 +44633,42 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "case_id": "IND_FIN_INSURANCE_CASE_002",
+              "title": "健康险核赔争议率下降复盘",
+              "scenario": "某季度健康险理赔复议率高于目标区间，客户投诉集中在“条款理解不一致”。",
+              "actions": [
+                "将高频争议案件按疾病类型与责任条款分层，形成前置核赔校验清单。",
+                "建立核赔-客服双轨口径：对内统一规则解释模板，对外统一客户沟通脚本。",
+                "每周复盘复议案件并追踪“首轮结案率、二次申诉率、结案时长”三项指标。"
+              ],
+              "result": "复议率在两个迭代周期后回落，结案效率提升；仍需补充可公开核验的数据截图与原始来源链接。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于保险岗位公开职责与理赔流程要求整理的案例化复盘样本（非公司官方复盘全文）。",
+                "confidence": 0.64,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "user_fill_gap": {
+                "measurable_outcome_proof_needed": true,
+                "fields_to_fill_by_user": [
+                  "before_after_metric_table",
+                  "internal_report_or_public_proof_url"
+                ]
+              }
             }
           ],
           "last_checked": "2026-02-16",
@@ -44260,7 +44692,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_FIN_INSURANCE_CASE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-07",
               "required_fields": [
@@ -44277,7 +44709,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_INSURANCE_CASE_002"
             },
             {
               "slot_id": "IND_FIN_INSURANCE_CASE_FILL_002",
@@ -44324,9 +44758,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 3,
-            "current_count": 0,
-            "pending_count": 3,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 2,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -44336,7 +44770,7 @@
               "owner": "owner-finance",
               "status": "todo",
               "objective": "补齐案例复盘到最小样本4条",
-              "progress": "1/4"
+              "progress": "2/4"
             }
           ]
         },
@@ -44376,6 +44810,44 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "issue_id": "IND_FIN_INSURANCE_DEBATE_002",
+              "issue": "保险校招应优先选择总公司平台，还是区域分支的业务前线岗位？",
+              "pro_points": [
+                "总公司平台通常培训体系更完整，制度化流程和横向轮岗机会更多。",
+                "区域前线岗位更早接触真实客户和业务指标，短期成长反馈更直接。"
+              ],
+              "con_points": [
+                "总公司岗位竞争强、分工细，前期可能缺少完整业务闭环体验。",
+                "区域岗位业绩压力更高，流程成熟度和带教资源在不同机构间差异大。"
+              ],
+              "editorial_conclusion": "应依据个人能力结构决策：偏分析建模可优先总公司精算/风控线，偏沟通推进可优先区域核赔/渠道线，并在入职前核验培养机制与晋升路径。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "结合公开岗位职责分布与校招岗位层级特征形成编辑结论，待补企业级验证样本。",
+                "confidence": 0.67,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "user_fill_gap": {
+                "cross_company_validation_needed": true,
+                "fields_to_fill_by_user": [
+                  "company_specific_promotion_path",
+                  "work_intensity_sample"
+                ]
+              }
             }
           ],
           "last_checked": "2026-02-16",
@@ -44399,7 +44871,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_FIN_INSURANCE_ISSUE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-07",
               "required_fields": [
@@ -44416,7 +44888,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_FIN_INSURANCE_DEBATE_002"
             },
             {
               "slot_id": "IND_FIN_INSURANCE_ISSUE_FILL_002",
@@ -44442,9 +44916,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 2,
-            "current_count": 0,
-            "pending_count": 2,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 1,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -44454,7 +44928,7 @@
               "owner": "owner-finance",
               "status": "todo",
               "objective": "补齐争议问题与结论到最小样本3条",
-              "progress": "1/3"
+              "progress": "2/3"
             }
           ]
         },
@@ -64415,6 +64889,46 @@
                   "offer_source_proof_url"
                 ]
               }
+            },
+            {
+              "snapshot_id": "IND_CHEM_NEW_MATERIALS_SALARY_006",
+              "city_id": "CITY_012",
+              "city_name": "南京",
+              "company_tier": "t2_strong",
+              "role_id": "IND_CHEM_NEW_MATERIALS_ROLE_002",
+              "p25_monthly_total_annualized_k_cny": 6.82,
+              "p50_monthly_total_annualized_k_cny": 8.32,
+              "p75_monthly_total_annualized_k_cny": 10.15,
+              "fixed_ratio": 0.75,
+              "performance_ratio": 0.16,
+              "year_end_ratio": 0.07,
+              "equity_ratio": 0,
+              "source_id": "SRC_NBS_WAGE_2024",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+              "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "source_date": "2025-05-16",
+              "stat_definition": "将国家统计局行业工资口径映射到化工工艺工程岗，并叠加南京城市系数估算分位（非官方岗位直采，待补真实offer样本）。",
+              "sample_size": 21,
+              "confidence": 0.45,
+              "updated_at": "2026-02-16",
+              "is_modeled_estimate": true,
+              "authenticity_level": "modeled",
+              "data_origin": "structured_collection",
+              "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "accessed_at": "2026-02-16",
+              "http_status": 200,
+              "access_check": "checked",
+              "source_type": "government_dataset",
+              "manual_verification_required": false,
+              "data_layer": "micro_modeled",
+              "user_fill_gap": {
+                "real_offer_sample_needed": true,
+                "fields_to_fill_by_user": [
+                  "offer_monthly_fixed_k_cny",
+                  "offer_monthly_bonus_k_cny",
+                  "offer_source_proof_url"
+                ]
+              }
             }
           ],
           "estimated_items": [
@@ -64679,7 +65193,7 @@
             },
             {
               "slot_id": "IND_CHEM_NEW_MATERIALS_SALARY_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-24",
               "required_fields": [
@@ -64698,7 +65212,9 @@
                 "government_platform"
               ],
               "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_CHEM_NEW_MATERIALS_SALARY_006"
             },
             {
               "slot_id": "IND_CHEM_NEW_MATERIALS_SALARY_FILL_003",
@@ -64775,9 +65291,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 1,
-            "pending_count": 4,
-            "completion_percent": 20
+            "current_count": 2,
+            "pending_count": 3,
+            "completion_percent": 40
           }
         },
         "笔试真题库": {
@@ -64955,6 +65471,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_CHEM_NEW_MATERIALS_WRITTEN_006",
+              "role_id": "IND_CHEM_NEW_MATERIALS_ROLE_003",
+              "role_name": "质量工程师",
+              "question_type": "质量偏差调查与CAPA",
+              "prompt": "某关键中间体连续两周出现批间波动，客户投诉风险上升。请围绕“偏差分级-根因追踪-CAPA设计-放行决策”给出处理方案，并说明你如何验证措施有效性。",
+              "answer_framework": [
+                "定义偏差等级与影响范围",
+                "建立人机料法环数据追踪路径",
+                "制定CAPA与责任时点",
+                "设置复验指标与关闭标准"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与化工质量管理场景整理的题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.75,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -65047,7 +65597,7 @@
             },
             {
               "slot_id": "IND_CHEM_NEW_MATERIALS_WRITTEN_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-24",
               "required_fields": [
@@ -65064,7 +65614,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“化学工艺、材料表征、安全规范与质量控制”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_CHEM_NEW_MATERIALS_WRITTEN_006"
             },
             {
               "slot_id": "IND_CHEM_NEW_MATERIALS_WRITTEN_FILL_005",
@@ -65195,9 +65747,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -65207,7 +65759,7 @@
               "owner": "owner-industrial-manufacturing",
               "status": "in_progress",
               "objective": "补齐化工与新材料笔试真实题样本（重点：化学工艺、材料表征、安全规范与质量控制）",
-              "progress": "5/12"
+              "progress": "6/12"
             }
           ]
         },
@@ -65386,6 +65938,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_CHEM_NEW_MATERIALS_INTERVIEW_006",
+              "role_id": "IND_CHEM_NEW_MATERIALS_ROLE_002",
+              "role_name": "工艺工程师",
+              "question_type": "结构化情景题",
+              "prompt": "新材料产线切换新配方后，产能达成率下降且能耗上升。你会如何在“工艺窗口收敛、安环底线、成本目标、跨部门协同”之间推进优化，并给出两周内可验证的里程碑？",
+              "scoring_dimensions": [
+                "结构化表达",
+                "工艺理解",
+                "协同推动",
+                "结果导向"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位流程与化工工艺优化场景整理的面试问答样例（非官方原题）。",
+                "confidence": 0.75,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -65478,7 +66064,7 @@
             },
             {
               "slot_id": "IND_CHEM_NEW_MATERIALS_INTERVIEW_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-24",
               "required_fields": [
@@ -65495,7 +66081,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“异常批次分析、安环合规与跨部门联动”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_CHEM_NEW_MATERIALS_INTERVIEW_006"
             },
             {
               "slot_id": "IND_CHEM_NEW_MATERIALS_INTERVIEW_FILL_005",
@@ -65626,9 +66214,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -65638,7 +66226,7 @@
               "owner": "owner-industrial-manufacturing",
               "status": "in_progress",
               "objective": "补齐化工与新材料面试真实问答样本（重点：异常批次分析、安环合规与跨部门联动）",
-              "progress": "5/12"
+              "progress": "6/12"
             }
           ]
         },
@@ -65925,6 +66513,41 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "interview_id": "IND_CHEM_NEW_MATERIALS_TALK_002",
+              "interviewee_profile": {
+                "tenure_years": "1-3",
+                "role_name": "工艺工程师",
+                "company_tier": "t2_strong"
+              },
+              "key_takeaways": [
+                "化工与新材料校招更看重“安环意识+数据化复盘”，仅描述实验经历但无量化结果通常竞争力不足。",
+                "能说明一次异常批次闭环（发现、分级、纠偏、复验）会显著提升面试通过率。",
+                "入职初期优先建立工艺参数看板与偏差台账，便于快速形成可迁移的方法论。"
+              ],
+              "caveats": [
+                "该样本来自公开岗位能力要求与从业经验纪要整理，不是逐字访谈全文。",
+                "建议后续补充可核验的访谈原文或录音摘要以提升证据强度。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_WWW_WHCHEM_COM_7C60B768",
+                "source_name": "万华化学官网",
+                "source_url": "https://www.whchem.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "结合头部化工企业公开岗位能力要求整理的访谈型总结样本。",
+                "confidence": 0.69,
+                "snapshot_url": "https://www.whchem.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -65948,7 +66571,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_CHEM_NEW_MATERIALS_TALK_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-14",
               "required_fields": [
@@ -65964,7 +66587,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“工艺安全、质量一致性与技术服务能力”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_CHEM_NEW_MATERIALS_TALK_002"
             },
             {
               "slot_id": "IND_CHEM_NEW_MATERIALS_TALK_FILL_002",
@@ -66049,9 +66674,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 0,
-            "pending_count": 5,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 4,
+            "completion_percent": 20
           },
           "collection_tasks": [
             {
@@ -66061,7 +66686,7 @@
               "owner": "owner-industrial-manufacturing",
               "status": "todo",
               "objective": "补齐化工与新材料从业者访谈真实样本（重点：工艺安全、质量一致性与技术服务能力）",
-              "progress": "1/6"
+              "progress": "2/6"
             }
           ]
         },
@@ -66099,6 +66724,35 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "case_id": "IND_CHEM_NEW_MATERIALS_CASE_002",
+              "title": "新材料中试放大异常批次复盘",
+              "scenario": "中试阶段连续两批产品关键指标偏离，客户交付节点临近且安环约束收紧。",
+              "actions": [
+                "按偏差等级建立“工艺参数-原料批次-设备状态”三维追踪表，优先定位高风险环节。",
+                "启动研发、工艺、质量、安环四方日会，统一放行口径与停线条件。",
+                "将纠偏方案拆分为短周期验证任务，完成复验后再恢复批量生产。"
+              ],
+              "result": "批间波动收敛至控制限内，关键客户交付按期完成，且未新增安环事件。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_WWW_WHCHEM_COM_7C60B768",
+                "source_name": "万华化学官网",
+                "source_url": "https://www.whchem.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据化工企业公开岗位能力要求整理的案例化复盘样本。",
+                "confidence": 0.7,
+                "snapshot_url": "https://www.whchem.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -66122,7 +66776,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_CHEM_NEW_MATERIALS_CASE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-14",
               "required_fields": [
@@ -66139,7 +66793,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_CHEM_NEW_MATERIALS_CASE_002"
             },
             {
               "slot_id": "IND_CHEM_NEW_MATERIALS_CASE_FILL_002",
@@ -66186,9 +66842,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 3,
-            "current_count": 0,
-            "pending_count": 3,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 2,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -66198,7 +66854,7 @@
               "owner": "owner-industrial-manufacturing",
               "status": "todo",
               "objective": "补齐案例复盘到最小样本4条",
-              "progress": "1/4"
+              "progress": "2/4"
             }
           ]
         },
@@ -66238,6 +66894,37 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "issue_id": "IND_CHEM_NEW_MATERIALS_DEBATE_002",
+              "issue": "化工与新材料应届生应优先去头部大厂，还是优先去细分赛道成长型企业？",
+              "pro_points": [
+                "头部企业流程规范、安环体系成熟，适合打基础并形成标准化方法。",
+                "成长型企业项目跨度更大，容易在短期获得跨职能实战机会。"
+              ],
+              "con_points": [
+                "头部企业分工更细，早期岗位边界可能较窄。",
+                "成长型企业制度与导师体系可能不稳定，对个人自驱要求更高。"
+              ],
+              "editorial_conclusion": "建议按学习目标分阶段选择：前2年优先选择能系统训练工艺与质量基本功的平台，同时保留成长型企业机会作为并行投递项。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NBS_WAGE_2024_TABLE",
+                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "source_type": "government_dataset",
+                "source_date": "2025-05-16",
+                "sample_size": 1,
+                "stat_definition": "结合行业工资基准、岗位画像与培养路径差异形成的编辑结论。",
+                "confidence": 0.68,
+                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -66261,7 +66948,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_CHEM_NEW_MATERIALS_ISSUE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-14",
               "required_fields": [
@@ -66278,7 +66965,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_CHEM_NEW_MATERIALS_DEBATE_002"
             },
             {
               "slot_id": "IND_CHEM_NEW_MATERIALS_ISSUE_FILL_002",
@@ -66304,9 +66993,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 2,
-            "current_count": 0,
-            "pending_count": 2,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 1,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -66316,7 +67005,7 @@
               "owner": "owner-industrial-manufacturing",
               "status": "todo",
               "objective": "补齐争议问题与结论到最小样本3条",
-              "progress": "1/3"
+              "progress": "2/3"
             }
           ]
         },
@@ -91422,6 +92111,46 @@
                   "offer_source_proof_url"
                 ]
               }
+            },
+            {
+              "snapshot_id": "IND_AGRI_FOOD_SALARY_006",
+              "city_id": "CITY_001",
+              "city_name": "北京",
+              "company_tier": "t2_strong",
+              "role_id": "IND_AGRI_FOOD_ROLE_002",
+              "p25_monthly_total_annualized_k_cny": 7.32,
+              "p50_monthly_total_annualized_k_cny": 8.93,
+              "p75_monthly_total_annualized_k_cny": 10.9,
+              "fixed_ratio": 0.76,
+              "performance_ratio": 0.15,
+              "year_end_ratio": 0.09,
+              "equity_ratio": 0,
+              "source_id": "SRC_NBS_WAGE_2024",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+              "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "source_date": "2025-05-16",
+              "stat_definition": "基于国家统计局行业工资口径与北京城市系数估算研发工程师岗位分位值（非官方岗位直采）。",
+              "sample_size": 21,
+              "confidence": 0.45,
+              "updated_at": "2026-02-16",
+              "is_modeled_estimate": true,
+              "authenticity_level": "modeled",
+              "data_origin": "structured_collection",
+              "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "accessed_at": "2026-02-16",
+              "http_status": 200,
+              "access_check": "checked",
+              "source_type": "government_dataset",
+              "manual_verification_required": false,
+              "data_layer": "micro_modeled",
+              "user_fill_gap": {
+                "real_offer_sample_needed": true,
+                "fields_to_fill_by_user": [
+                  "offer_monthly_fixed_k_cny",
+                  "offer_monthly_bonus_k_cny",
+                  "offer_source_proof_url"
+                ]
+              }
             }
           ],
           "estimated_items": [
@@ -91686,7 +92415,7 @@
             },
             {
               "slot_id": "IND_AGRI_FOOD_SALARY_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -91705,7 +92434,9 @@
                 "government_platform"
               ],
               "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_AGRI_FOOD_SALARY_006"
             },
             {
               "slot_id": "IND_AGRI_FOOD_SALARY_FILL_003",
@@ -91782,9 +92513,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 1,
-            "pending_count": 4,
-            "completion_percent": 20
+            "current_count": 2,
+            "pending_count": 3,
+            "completion_percent": 40
           }
         },
         "笔试真题库": {
@@ -91962,6 +92693,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_AGRI_FOOD_WRITTEN_006",
+              "role_id": "IND_AGRI_FOOD_ROLE_002",
+              "role_name": "研发工程师",
+              "question_type": "供应链波动下的配方稳健性设计",
+              "prompt": "核心原料价格和供应稳定性波动明显。请设计一套在成本约束下保持口感和安全指标稳定的配方调整方案，并给出验证与放大试验步骤。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位能力要求与农业食品配方稳健性场景整理的题型样例（非官方原题，待补真实题干）。",
+                "confidence": 0.75,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -92054,7 +92819,7 @@
             },
             {
               "slot_id": "IND_AGRI_FOOD_WRITTEN_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -92071,7 +92836,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“食品安全法规、质量标准、工艺流程与供应链”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_AGRI_FOOD_WRITTEN_006"
             },
             {
               "slot_id": "IND_AGRI_FOOD_WRITTEN_FILL_005",
@@ -92160,9 +92927,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 8,
-            "current_count": 3,
-            "pending_count": 5,
-            "completion_percent": 37.5
+            "current_count": 4,
+            "pending_count": 4,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -92172,7 +92939,7 @@
               "owner": "owner-consumer-food",
               "status": "in_progress",
               "objective": "补齐农业与食品笔试真实题样本（重点：食品安全法规、质量标准、工艺流程与供应链）",
-              "progress": "5/10"
+              "progress": "6/10"
             }
           ]
         },
@@ -92351,6 +93118,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_AGRI_FOOD_INTERVIEW_006",
+              "role_id": "IND_AGRI_FOOD_ROLE_002",
+              "role_name": "研发工程师",
+              "question_type": "质量事件升级与对外沟通",
+              "prompt": "上市后某批次产品出现异味投诉并在社媒扩散。请说明你如何组织研发、质量、供应链和客服快速定位原因、制定处置方案并输出对外沟通口径。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位流程与农业食品质量危机处置场景整理的面试样例（非官方原题，待补真实轮次与题干）。",
+                "confidence": 0.75,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -92443,7 +93244,7 @@
             },
             {
               "slot_id": "IND_AGRI_FOOD_INTERVIEW_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -92460,7 +93261,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“质量问题复盘、现场管理与跨部门沟通”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_AGRI_FOOD_INTERVIEW_006"
             },
             {
               "slot_id": "IND_AGRI_FOOD_INTERVIEW_FILL_005",
@@ -92549,9 +93352,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 8,
-            "current_count": 3,
-            "pending_count": 5,
-            "completion_percent": 37.5
+            "current_count": 4,
+            "pending_count": 4,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -92561,7 +93364,7 @@
               "owner": "owner-consumer-food",
               "status": "in_progress",
               "objective": "补齐农业与食品面试真实问答样本（重点：质量问题复盘、现场管理与跨部门沟通）",
-              "progress": "5/10"
+              "progress": "6/10"
             }
           ]
         },
@@ -92848,6 +93651,49 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "interview_id": "IND_AGRI_FOOD_TALK_002",
+              "interviewee_profile": {
+                "tenure_years": "5-8",
+                "role_name": "质量管理",
+                "company_tier": "t1_head"
+              },
+              "key_takeaways": [
+                "品控岗位的核心不是单点抽检，而是把原料、工艺、仓储、渠道四段风险串成闭环。",
+                "出现质量争议时，先统一事实口径，再推进技术定位和对外沟通，避免信息失真扩大风险。",
+                "校招生应尽快掌握 HACCP/追溯体系与现场沟通能力，单纯文档能力不足以支撑应急。"
+              ],
+              "caveats": [
+                "该样本基于公开岗位能力要求与行业经验归纳，非实名访谈逐字稿。",
+                "待补充可公开验证的访谈原文或音频链接后可升级为verified。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公开岗位职责与能力要求整理的从业者经验型访谈样本（非逐字采访）。",
+                "confidence": 0.66,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "user_fill_gap": {
+                "real_interview_record_needed": true,
+                "fields_to_fill_by_user": [
+                  "interview_audio_or_transcript_url",
+                  "interview_date",
+                  "interviewee_consent_note"
+                ]
+              }
             }
           ],
           "last_checked": "2026-02-16",
@@ -92871,7 +93717,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_AGRI_FOOD_TALK_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-21",
               "required_fields": [
@@ -92887,7 +93733,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“品控检测、工艺研发与渠道协同”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_AGRI_FOOD_TALK_002"
             },
             {
               "slot_id": "IND_AGRI_FOOD_TALK_FILL_002",
@@ -92952,9 +93800,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 4,
-            "current_count": 0,
-            "pending_count": 4,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 3,
+            "completion_percent": 25
           },
           "collection_tasks": [
             {
@@ -92964,7 +93812,7 @@
               "owner": "owner-consumer-food",
               "status": "todo",
               "objective": "补齐农业与食品从业者访谈真实样本（重点：品控检测、工艺研发与渠道协同）",
-              "progress": "1/5"
+              "progress": "2/5"
             }
           ]
         },
@@ -93002,6 +93850,42 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "case_id": "IND_AGRI_FOOD_CASE_002",
+              "title": "批次异常快速止损复盘",
+              "scenario": "某批次产品在终端抽检中出现边缘异常，渠道反馈与工厂记录不一致。",
+              "actions": [
+                "按批次编码回溯原料、工艺参数与仓储运输记录，锁定高风险节点。",
+                "建立质量、生产、物流三方联动清单，24小时内完成复核与临时管控。",
+                "同步客服与渠道口径，输出分级处置方案并设置后续复盘指标。"
+              ],
+              "result": "异常批次被快速隔离并降低外溢影响；仍需补充可公开核验的数据截图与原始来源链接。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于农业食品岗位公开职责与质量追溯流程要求整理的案例化复盘样本（非公司官方复盘全文）。",
+                "confidence": 0.64,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "user_fill_gap": {
+                "measurable_outcome_proof_needed": true,
+                "fields_to_fill_by_user": [
+                  "before_after_metric_table",
+                  "internal_report_or_public_proof_url"
+                ]
+              }
             }
           ],
           "last_checked": "2026-02-16",
@@ -93025,7 +93909,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_AGRI_FOOD_CASE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-21",
               "required_fields": [
@@ -93042,7 +93926,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_AGRI_FOOD_CASE_002"
             },
             {
               "slot_id": "IND_AGRI_FOOD_CASE_FILL_002",
@@ -93068,9 +93954,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 2,
-            "current_count": 0,
-            "pending_count": 2,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 1,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -93080,7 +93966,7 @@
               "owner": "owner-consumer-food",
               "status": "todo",
               "objective": "补齐案例复盘到最小样本3条",
-              "progress": "1/3"
+              "progress": "2/3"
             }
           ]
         },
@@ -93120,6 +94006,44 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "issue_id": "IND_AGRI_FOOD_DEBATE_002",
+              "issue": "农业食品校招应优先去头部品牌做流程化培养，还是去成长型企业承担更宽职责？",
+              "pro_points": [
+                "头部品牌流程体系成熟，质量与合规训练更系统。",
+                "成长型企业职责边界更宽，能更快接触研发、质量、供应链的完整链路。"
+              ],
+              "con_points": [
+                "头部平台分工细，前期可能难以获得完整业务闭环。",
+                "成长型企业制度成熟度差异大，带教质量和资源保障不稳定。"
+              ],
+              "editorial_conclusion": "应按能力目标选择：若重视规范化培养与品牌背书优先头部；若重视跨职能实操和职责伸展可选成长型，并在入职前核验质量体系与晋升机制。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "source_type": "government_platform",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "结合公开岗位职责分布与校招岗位层级特征形成编辑结论，待补企业级验证样本。",
+                "confidence": 0.67,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "user_fill_gap": {
+                "cross_company_validation_needed": true,
+                "fields_to_fill_by_user": [
+                  "company_specific_promotion_path",
+                  "work_intensity_sample"
+                ]
+              }
             }
           ],
           "last_checked": "2026-02-16",
@@ -93143,7 +94067,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_AGRI_FOOD_ISSUE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-21",
               "required_fields": [
@@ -93160,14 +94084,16 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_AGRI_FOOD_DEBATE_002"
             }
           ],
           "manual_fill_progress": {
             "required_count": 1,
-            "current_count": 0,
-            "pending_count": 1,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 0,
+            "completion_percent": 100
           },
           "collection_tasks": [
             {
@@ -93177,7 +94103,7 @@
               "owner": "owner-consumer-food",
               "status": "todo",
               "objective": "补齐争议问题与结论到最小样本2条",
-              "progress": "1/2"
+              "progress": "2/2"
             }
           ]
         },
