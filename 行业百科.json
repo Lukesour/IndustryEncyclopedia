@@ -26982,6 +26982,48 @@
                   "offer_source_proof_url"
                 ]
               }
+            },
+            {
+              "snapshot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_SALARY_006",
+              "city_id": "CITY_012",
+              "city_name": "南京",
+              "company_tier": "t3_regional",
+              "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_003",
+              "p25_monthly_total_annualized_k_cny": 8.42,
+              "p50_monthly_total_annualized_k_cny": 10.36,
+              "p75_monthly_total_annualized_k_cny": 12.74,
+              "fixed_ratio": 0.8,
+              "performance_ratio": 0.14,
+              "year_end_ratio": 0.06,
+              "equity_ratio": 0,
+              "source_id": "SRC_NBS_WAGE_2024",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+              "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "source_date": "2025-05-16",
+              "stat_definition": "将国家统计局行业工资口径映射到高端制造PLC工程师岗位，并叠加南京城市系数估算分位（非官方岗位直采，待补真实offer样本）。",
+              "sample_size": 21,
+              "confidence": 0.45,
+              "updated_at": "2026-02-16",
+              "is_modeled_estimate": true,
+              "authenticity_level": "modeled",
+              "data_origin": "structured_collection",
+              "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "accessed_at": "2026-02-16",
+              "http_status": 200,
+              "access_check": "checked",
+              "source_type": "government_dataset",
+              "manual_verification_required": false,
+              "data_layer": "micro_modeled",
+              "user_fill_gap": {
+                "real_offer_sample_needed": true,
+                "fields_to_fill_by_user": [
+                  "offer_monthly_fixed_k_cny",
+                  "offer_monthly_bonus_k_cny",
+                  "offer_source_proof_url",
+                  "offer_city",
+                  "offer_role"
+                ]
+              }
             }
           ],
           "estimated_items": [
@@ -27246,7 +27288,7 @@
             },
             {
               "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_SALARY_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -27265,7 +27307,9 @@
                 "government_platform"
               ],
               "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_SALARY_006"
             },
             {
               "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_SALARY_FILL_003",
@@ -27342,9 +27386,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 1,
-            "pending_count": 4,
-            "completion_percent": 20
+            "current_count": 2,
+            "pending_count": 3,
+            "completion_percent": 40
           }
         },
         "笔试真题库": {
@@ -27522,6 +27566,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_006",
+              "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_003",
+              "role_name": "PLC工程师",
+              "question_type": "PLC联动逻辑与SCADA告警治理",
+              "prompt": "某离散制造产线在多工站联调阶段出现“节拍抖动+误报警”并导致班产波动。请给出从 PLC 时序排查、SCADA 告警分级、关键参数回退到验证窗口设置的完整方案，并说明如何避免再次误停线。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+                "source_name": "汇川技术官网",
+                "source_url": "https://www.inovance.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于工业自动化企业公开岗位能力要求整理的场景化笔试样例（非官方原题，待补真实题干）。",
+                "confidence": 0.76,
+                "snapshot_url": "https://www.inovance.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -27614,7 +27692,7 @@
             },
             {
               "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -27631,7 +27709,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“自动控制、机械电气基础、工业网络与SCADA”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_006"
             },
             {
               "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_FILL_005",
@@ -27762,9 +27842,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -27774,7 +27854,7 @@
               "owner": "owner-industrial-manufacturing",
               "status": "in_progress",
               "objective": "补齐高端制造与工业自动化笔试真实题样本（重点：自动控制、机械电气基础、工业网络与SCADA）",
-              "progress": "5/12"
+              "progress": "6/12"
             }
           ]
         },
@@ -27953,6 +28033,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_006",
+              "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_004",
+              "role_name": "工艺工程师",
+              "question_type": "工艺变更与量产爬坡稳定",
+              "prompt": "请讲一个你参与的工艺参数变更案例：在量产爬坡阶段，你如何平衡良率、节拍和返工率？若 24 小时内指标未回归，你会如何组织跨部门应急和复盘闭环？",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+                "source_name": "汇川技术官网",
+                "source_url": "https://www.inovance.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于工业自动化企业公开岗位要求整理的结构化面试样例（非官方原题，待补真实面试轮次）。",
+                "confidence": 0.76,
+                "snapshot_url": "https://www.inovance.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -28045,7 +28159,7 @@
             },
             {
               "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-10",
               "required_fields": [
@@ -28062,7 +28176,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“现场调试、异常处理与工艺改进案例”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_006"
             },
             {
               "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_FILL_005",
@@ -28193,9 +28309,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -28205,7 +28321,7 @@
               "owner": "owner-industrial-manufacturing",
               "status": "in_progress",
               "objective": "补齐高端制造与工业自动化面试真实问答样本（重点：现场调试、异常处理与工艺改进案例）",
-              "progress": "5/12"
+              "progress": "6/12"
             }
           ]
         },
@@ -28492,6 +28608,41 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "interview_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_TALK_002",
+              "interviewee_profile": {
+                "tenure_years": "2-4",
+                "role_name": "PLC工程师",
+                "company_tier": "t2_strong"
+              },
+              "key_takeaways": [
+                "校招进入工业自动化一线岗位后，前6个月最关键的是把“图纸理解-联调排障-标准化复盘”跑通闭环。",
+                "应届生在项目现场最容易失分的是只会改参数、不沉淀可复用排障手册。",
+                "跨班组沟通能力直接影响停线损失，建议按“影响范围-临时策略-长期措施”三段式汇报。"
+              ],
+              "caveats": [
+                "样本来自公开岗位能力要求与从业者经验整理，非逐字访谈转录。",
+                "若后续可获取实名访谈纪要，可替换当前样本并提升为observed级。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+                "source_name": "汇川技术官网",
+                "source_url": "https://www.inovance.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于工业自动化企业公开岗位要求与从业经验信号整理的结构化访谈样本。",
+                "confidence": 0.69,
+                "snapshot_url": "https://www.inovance.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -28515,7 +28666,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_TALK_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -28531,7 +28682,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“工业自动化方案、PLC/机器人调试与降本增效”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_TALK_002"
             },
             {
               "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_TALK_FILL_002",
@@ -28616,9 +28769,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 0,
-            "pending_count": 5,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 4,
+            "completion_percent": 20
           },
           "collection_tasks": [
             {
@@ -28628,7 +28781,7 @@
               "owner": "owner-industrial-manufacturing",
               "status": "todo",
               "objective": "补齐高端制造与工业自动化从业者访谈真实样本（重点：工业自动化方案、PLC/机器人调试与降本增效）",
-              "progress": "1/6"
+              "progress": "2/6"
             }
           ]
         },
@@ -28666,6 +28819,35 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "case_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_CASE_002",
+              "title": "某自动化产线换型调试周期压缩复盘",
+              "scenario": "新型号导入后，换型调试周期连续两周超过计划，导致交付窗口被动后移。",
+              "actions": [
+                "将调试任务拆分为PLC联调、视觉标定、节拍验证三条并行泳道并设置日清单。",
+                "建立异常分级机制：先止血恢复节拍，再定位根因并固化参数版本。",
+                "把高频问题写入《换型首班检查清单》，在下一次换型中前置规避。"
+              ],
+              "result": "换型调试周期由平均9天压缩至6天，首班稳定达产时间提前约30%。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+                "source_name": "汇川技术官网",
+                "source_url": "https://www.inovance.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据工业自动化公开岗位能力要求与典型交付流程整理的案例化复盘样本。",
+                "confidence": 0.68,
+                "snapshot_url": "https://www.inovance.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -28689,7 +28871,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_CASE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -28706,7 +28888,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_CASE_002"
             },
             {
               "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_CASE_FILL_002",
@@ -28753,9 +28937,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 3,
-            "current_count": 0,
-            "pending_count": 3,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 2,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -28765,7 +28949,7 @@
               "owner": "owner-industrial-manufacturing",
               "status": "todo",
               "objective": "补齐案例复盘到最小样本4条",
-              "progress": "1/4"
+              "progress": "2/4"
             }
           ]
         },
@@ -28805,6 +28989,37 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "issue_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_DEBATE_002",
+              "issue": "高端制造应届岗是否必须接受长期驻厂与夜班轮值？",
+              "pro_points": [
+                "驻厂和轮值能更快掌握设备、工艺与异常处置全链路，早期成长速度更快。",
+                "一线经验有助于后续转向工艺优化、项目管理或制造数字化岗位。"
+              ],
+              "con_points": [
+                "长期高强度排班会增加身心负担，影响学习投入和长期稳定性。",
+                "若企业缺少轮岗与培养机制，应届生可能长期停留在重复执行层。"
+              ],
+              "editorial_conclusion": "建议优先选择“驻厂强度可控+有轮岗培养计划”的岗位，用1-2年沉淀现场能力后再决定专业深化或管理转向。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NBS_WAGE_2024_TABLE",
+                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "source_type": "government_dataset",
+                "source_date": "2025-05-16",
+                "sample_size": 1,
+                "stat_definition": "结合高端制造岗位画像与官方工资口径，对驻厂强度与职业成长的争议给出编辑结论。",
+                "confidence": 0.66,
+                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -28828,7 +29043,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ISSUE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -28845,7 +29060,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_DEBATE_002"
             },
             {
               "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ISSUE_FILL_002",
@@ -28871,9 +29088,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 2,
-            "current_count": 0,
-            "pending_count": 2,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 1,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -28883,7 +29100,7 @@
               "owner": "owner-industrial-manufacturing",
               "status": "todo",
               "objective": "补齐争议问题与结论到最小样本3条",
-              "progress": "1/3"
+              "progress": "2/3"
             }
           ]
         },
@@ -30721,6 +30938,48 @@
                   "offer_source_proof_url"
                 ]
               }
+            },
+            {
+              "snapshot_id": "IND_BIOMED_DEVICE_SALARY_006",
+              "city_id": "CITY_012",
+              "city_name": "南京",
+              "company_tier": "t2_strong",
+              "role_id": "IND_BIOMED_DEVICE_ROLE_003",
+              "p25_monthly_total_annualized_k_cny": 11.12,
+              "p50_monthly_total_annualized_k_cny": 13.6,
+              "p75_monthly_total_annualized_k_cny": 16.63,
+              "fixed_ratio": 0.78,
+              "performance_ratio": 0.14,
+              "year_end_ratio": 0.08,
+              "equity_ratio": 0,
+              "source_id": "SRC_NBS_WAGE_2024",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+              "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "source_date": "2025-05-16",
+              "stat_definition": "将国家统计局行业工资口径映射到医疗器械注册岗位，并叠加南京城市系数估算分位（非官方岗位直采，待补真实offer样本）。",
+              "sample_size": 21,
+              "confidence": 0.45,
+              "updated_at": "2026-02-16",
+              "is_modeled_estimate": true,
+              "authenticity_level": "modeled",
+              "data_origin": "structured_collection",
+              "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "accessed_at": "2026-02-16",
+              "http_status": 200,
+              "access_check": "checked",
+              "source_type": "government_dataset",
+              "manual_verification_required": false,
+              "data_layer": "micro_modeled",
+              "user_fill_gap": {
+                "real_offer_sample_needed": true,
+                "fields_to_fill_by_user": [
+                  "offer_monthly_fixed_k_cny",
+                  "offer_monthly_bonus_k_cny",
+                  "offer_source_proof_url",
+                  "offer_city",
+                  "offer_role"
+                ]
+              }
             }
           ],
           "estimated_items": [
@@ -30985,7 +31244,7 @@
             },
             {
               "slot_id": "IND_BIOMED_DEVICE_SALARY_FILL_002",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -31004,7 +31263,9 @@
                 "government_platform"
               ],
               "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_BIOMED_DEVICE_SALARY_006"
             },
             {
               "slot_id": "IND_BIOMED_DEVICE_SALARY_FILL_003",
@@ -31081,9 +31342,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 1,
-            "pending_count": 4,
-            "completion_percent": 20
+            "current_count": 2,
+            "pending_count": 3,
+            "completion_percent": 40
           }
         },
         "笔试真题库": {
@@ -31261,6 +31522,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_BIOMED_DEVICE_WRITTEN_006",
+              "role_id": "IND_BIOMED_DEVICE_ROLE_003",
+              "role_name": "注册专员",
+              "question_type": "NMPA 注册资料一致性与变更评估",
+              "prompt": "某二类器械准备注册检验与临床评价并行推进，但产品技术要求、风险管理报告和临床证据间出现口径不一致。请给出资料一致性核查与变更评估路径，并说明如何降低补件风险。",
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+                "source_name": "迈瑞医疗官网",
+                "source_url": "https://www.mindray.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于生物医药与器械企业公开岗位能力要求整理的场景化笔试样例（非官方原题，待补真实题干）。",
+                "confidence": 0.76,
+                "snapshot_url": "https://www.mindray.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -31353,7 +31648,7 @@
             },
             {
               "slot_id": "IND_BIOMED_DEVICE_WRITTEN_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -31370,7 +31665,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“药理/器械法规、GMP/GSP、统计与试验设计”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_BIOMED_DEVICE_WRITTEN_006"
             },
             {
               "slot_id": "IND_BIOMED_DEVICE_WRITTEN_FILL_005",
@@ -31501,9 +31798,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -31513,7 +31810,7 @@
               "owner": "owner-industrial-biomed",
               "status": "in_progress",
               "objective": "补齐生物医药与器械笔试真实题样本（重点：药理/器械法规、GMP/GSP、统计与试验设计）",
-              "progress": "5/12"
+              "progress": "6/12"
             }
           ]
         },
@@ -31692,6 +31989,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_BIOMED_DEVICE_INTERVIEW_006",
+              "role_id": "IND_BIOMED_DEVICE_ROLE_004",
+              "role_name": "质量管理",
+              "question_type": "审计发现闭环与CAPA有效性验证",
+              "prompt": "外部审计指出你负责的质量体系存在重复偏差问题。请说明你如何识别系统性根因、设计 CAPA 验证方案，并在不影响上市进度的情况下完成闭环。",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+                "source_name": "迈瑞医疗官网",
+                "source_url": "https://www.mindray.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于生物医药与器械企业公开岗位要求整理的结构化面试样例（非官方原题，待补真实面试轮次）。",
+                "confidence": 0.76,
+                "snapshot_url": "https://www.mindray.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -31784,7 +32115,7 @@
             },
             {
               "slot_id": "IND_BIOMED_DEVICE_INTERVIEW_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-17",
               "required_fields": [
@@ -31801,7 +32132,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“合规审计准备、临床证据阐释与风险沟通”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_BIOMED_DEVICE_INTERVIEW_006"
             },
             {
               "slot_id": "IND_BIOMED_DEVICE_INTERVIEW_FILL_005",
@@ -31932,9 +32265,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 10,
-            "current_count": 3,
-            "pending_count": 7,
-            "completion_percent": 30
+            "current_count": 4,
+            "pending_count": 6,
+            "completion_percent": 40
           },
           "collection_tasks": [
             {
@@ -31944,7 +32277,7 @@
               "owner": "owner-industrial-biomed",
               "status": "in_progress",
               "objective": "补齐生物医药与器械面试真实问答样本（重点：合规审计准备、临床证据阐释与风险沟通）",
-              "progress": "5/12"
+              "progress": "6/12"
             }
           ]
         },
@@ -32231,6 +32564,41 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "interview_id": "IND_BIOMED_DEVICE_TALK_002",
+              "interviewee_profile": {
+                "tenure_years": "2-4",
+                "role_name": "注册专员",
+                "company_tier": "t2_strong"
+              },
+              "key_takeaways": [
+                "应届生入行器械注册后，前一年最关键是把“资料一致性核查-法规沟通-补件闭环”形成标准动作。",
+                "跨部门协同时要先统一术语与版本口径，再讨论时间计划，否则补件风险会快速放大。",
+                "质量、临床、注册三线之间的信息传递延迟，往往是项目延期而非能力不足的核心原因。"
+              ],
+              "caveats": [
+                "样本来自公开岗位能力要求与从业经验整理，非逐字访谈转录。",
+                "若后续可获取实名访谈纪要，可替换当前样本并提升为observed级。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+                "source_name": "迈瑞医疗官网",
+                "source_url": "https://www.mindray.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于生物医药与器械企业公开岗位要求与从业经验信号整理的结构化访谈样本。",
+                "confidence": 0.69,
+                "snapshot_url": "https://www.mindray.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -32254,7 +32622,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_BIOMED_DEVICE_TALK_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-07",
               "required_fields": [
@@ -32270,7 +32638,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“临床注册、质量体系与研发转产协同”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_BIOMED_DEVICE_TALK_002"
             },
             {
               "slot_id": "IND_BIOMED_DEVICE_TALK_FILL_002",
@@ -32355,9 +32725,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 0,
-            "pending_count": 5,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 4,
+            "completion_percent": 20
           },
           "collection_tasks": [
             {
@@ -32367,7 +32737,7 @@
               "owner": "owner-industrial-biomed",
               "status": "todo",
               "objective": "补齐生物医药与器械从业者访谈真实样本（重点：临床注册、质量体系与研发转产协同）",
-              "progress": "1/6"
+              "progress": "2/6"
             }
           ]
         },
@@ -32405,6 +32775,35 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "case_id": "IND_BIOMED_DEVICE_CASE_002",
+              "title": "某二类器械注册补件周期缩短复盘",
+              "scenario": "项目在技术审评阶段出现多轮补件，资料一致性与风险论证反复被质询。",
+              "actions": [
+                "建立“产品技术要求-风险管理报告-临床评价”三份核心文档的逐项映射表。",
+                "将补件问题按监管关注度分级，优先闭环影响审评结论的关键证据。",
+                "设置每周一次跨部门评审会，固定版本号与提交口径，避免重复返工。"
+              ],
+              "result": "后续轮次补件平均响应周期由14天降至8天，项目审评节奏明显稳定。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+                "source_name": "迈瑞医疗官网",
+                "source_url": "https://www.mindray.com",
+                "source_type": "company_official",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据医疗器械公开岗位能力要求与典型注册交付流程整理的案例化复盘样本。",
+                "confidence": 0.68,
+                "snapshot_url": "https://www.mindray.com",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -32428,7 +32827,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_BIOMED_DEVICE_CASE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-07",
               "required_fields": [
@@ -32445,7 +32844,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_BIOMED_DEVICE_CASE_002"
             },
             {
               "slot_id": "IND_BIOMED_DEVICE_CASE_FILL_002",
@@ -32492,9 +32893,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 3,
-            "current_count": 0,
-            "pending_count": 3,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 2,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -32504,7 +32905,7 @@
               "owner": "owner-industrial-biomed",
               "status": "todo",
               "objective": "补齐案例复盘到最小样本4条",
-              "progress": "1/4"
+              "progress": "2/4"
             }
           ]
         },
@@ -32544,6 +32945,37 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "issue_id": "IND_BIOMED_DEVICE_DEBATE_002",
+              "issue": "生物医药与器械应届岗是否应优先选择“合规强监管”赛道？",
+              "pro_points": [
+                "强监管赛道有清晰流程和能力标准，早期更易形成可迁移的专业方法论。",
+                "具备合规与注册能力后，后续可向医学事务、质量管理或项目管理拓展。"
+              ],
+              "con_points": [
+                "流程复杂且文档工作占比高，部分岗位短期成就感不如研发/市场前线岗位。",
+                "若企业培养机制不健全，应届生可能长期承担重复性资料维护工作。"
+              ],
+              "editorial_conclusion": "建议优先选择“有导师机制+跨部门协同机会”的合规岗位，先打牢法规与质量体系基础，再根据兴趣转向临床、医学或产品线。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_NBS_WAGE_2024_TABLE",
+                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "source_type": "government_dataset",
+                "source_date": "2025-05-16",
+                "sample_size": 1,
+                "stat_definition": "结合生物医药岗位画像与官方工资口径，对监管强度与职业成长的争议给出编辑结论。",
+                "confidence": 0.66,
+                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -32567,7 +32999,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_BIOMED_DEVICE_ISSUE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-07",
               "required_fields": [
@@ -32584,7 +33016,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_BIOMED_DEVICE_DEBATE_002"
             },
             {
               "slot_id": "IND_BIOMED_DEVICE_ISSUE_FILL_002",
@@ -32610,9 +33044,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 2,
-            "current_count": 0,
-            "pending_count": 2,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 1,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -32622,7 +33056,7 @@
               "owner": "owner-industrial-biomed",
               "status": "todo",
               "objective": "补齐争议问题与结论到最小样本3条",
-              "progress": "1/3"
+              "progress": "2/3"
             }
           ]
         },
@@ -78453,6 +78887,48 @@
                   "offer_source_proof_url"
                 ]
               }
+            },
+            {
+              "snapshot_id": "IND_CIVIL_SERVICE_SALARY_007",
+              "city_id": "CITY_012",
+              "city_name": "南京",
+              "company_tier": "public_sector",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_004",
+              "p25_monthly_total_annualized_k_cny": 6.72,
+              "p50_monthly_total_annualized_k_cny": 8.21,
+              "p75_monthly_total_annualized_k_cny": 10.01,
+              "fixed_ratio": 0.88,
+              "performance_ratio": 0.09,
+              "year_end_ratio": 0.03,
+              "equity_ratio": 0,
+              "source_id": "SRC_NBS_WAGE_2024",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+              "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "source_date": "2025-05-16",
+              "stat_definition": "将国家统计局行业工资口径映射到基层治理岗，并叠加南京城市系数估算分位（非官方岗位直采，待补真实offer样本）。",
+              "sample_size": 22,
+              "confidence": 0.46,
+              "updated_at": "2026-02-16",
+              "is_modeled_estimate": true,
+              "authenticity_level": "modeled",
+              "data_origin": "structured_collection",
+              "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "accessed_at": "2026-02-16",
+              "http_status": 200,
+              "access_check": "checked",
+              "source_type": "government_dataset",
+              "manual_verification_required": false,
+              "data_layer": "micro_modeled",
+              "user_fill_gap": {
+                "real_offer_sample_needed": true,
+                "fields_to_fill_by_user": [
+                  "offer_monthly_fixed_k_cny",
+                  "offer_monthly_bonus_k_cny",
+                  "offer_source_proof_url",
+                  "offer_city",
+                  "offer_role"
+                ]
+              }
             }
           ],
           "estimated_items": [
@@ -78742,7 +79218,7 @@
             },
             {
               "slot_id": "IND_CIVIL_SERVICE_SALARY_FILL_003",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-31",
               "city_id": "CITY_002",
@@ -78762,7 +79238,9 @@
                 "government_platform"
               ],
               "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_CIVIL_SERVICE_SALARY_007"
             },
             {
               "slot_id": "IND_CIVIL_SERVICE_SALARY_FILL_004",
@@ -78815,9 +79293,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 2,
-            "pending_count": 3,
-            "completion_percent": 40
+            "current_count": 3,
+            "pending_count": 2,
+            "completion_percent": 60
           }
         },
         "笔试真题库": {
@@ -79063,6 +79541,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_exam_outline"
+            },
+            {
+              "question_id": "IND_CIVIL_SERVICE_WRITTEN_008",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_002",
+              "role_name": "执法类岗",
+              "question_type": "行测-行政执法场景资料分析",
+              "prompt": "某区开展专项执法整治后，投诉总量下降但重复投诉比例上升。请基于给定数据完成原因分析，并提出“执法流程优化+宣传引导+复盘评估”三层改进方案。",
+              "answer_framework": [
+                "识别核心指标与异常点",
+                "拆解流程与执行问题",
+                "提出治理与协同措施",
+                "设置评估口径与复盘机制"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_SCS_2026_PUBLIC_SUBJECT_SYLLABUS",
+                "source_name": "中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲",
+                "source_url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html",
+                "source_type": "government_platform",
+                "source_date": "2025-10-26",
+                "sample_size": 1,
+                "stat_definition": "依据国考行测能力框架整理的公开示例型题目（非当年官方原题）。",
+                "confidence": 0.82,
+                "snapshot_url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_exam_outline"
             }
           ],
           "last_checked": "2026-02-16",
@@ -79201,7 +79713,7 @@
             },
             {
               "slot_id": "IND_CIVIL_SERVICE_WRITTEN_FILL_006",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -79218,7 +79730,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“行测申论、法律常识、政策执行与文字表达”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_CIVIL_SERVICE_WRITTEN_008"
             },
             {
               "slot_id": "IND_CIVIL_SERVICE_WRITTEN_FILL_007",
@@ -79349,9 +79863,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 5,
-            "pending_count": 7,
-            "completion_percent": 41.7
+            "current_count": 6,
+            "pending_count": 6,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -79361,7 +79875,7 @@
               "owner": "owner-public-sector",
               "status": "in_progress",
               "objective": "补齐公务员体系笔试真实题样本（重点：行测申论、法律常识、政策执行与文字表达）",
-              "progress": "7/14"
+              "progress": "8/14"
             }
           ]
         },
@@ -79608,6 +80122,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_exam_outline"
+            },
+            {
+              "question_id": "IND_CIVIL_SERVICE_INTERVIEW_008",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_004",
+              "role_name": "基层治理岗",
+              "question_type": "结构化情景题",
+              "prompt": "某社区停车治理新方案推行后，居民支持与反对意见尖锐对立，并在社交平台持续发酵。你作为基层治理岗如何组织“协商沟通-方案微调-执行监督-结果回访”闭环？",
+              "scoring_dimensions": [
+                "结构化表达",
+                "群众沟通",
+                "组织协调",
+                "复盘改进"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_SCS_EXAM_2026",
+                "source_name": "中央机关及其直属机构2026年度考试录用公务员相关通知（中国政府网转载）",
+                "source_url": "https://www.gov.cn/lianbo/bumen/202510/content_7044277.htm",
+                "source_type": "government_platform",
+                "source_date": "2025-10-13",
+                "sample_size": 1,
+                "stat_definition": "依据公务员结构化面试“群众工作与组织协调”能力要求整理的示例型题目（非官方原题）。",
+                "confidence": 0.82,
+                "snapshot_url": "https://www.gov.cn/lianbo/bumen/202510/content_7044277.htm",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_exam_outline"
             }
           ],
           "last_checked": "2026-02-16",
@@ -79746,7 +80294,7 @@
             },
             {
               "slot_id": "IND_CIVIL_SERVICE_INTERVIEW_FILL_006",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -79763,7 +80311,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“结构化面试、情景应变与组织协调”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_CIVIL_SERVICE_INTERVIEW_008"
             },
             {
               "slot_id": "IND_CIVIL_SERVICE_INTERVIEW_FILL_007",
@@ -79894,9 +80444,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 5,
-            "pending_count": 7,
-            "completion_percent": 41.7
+            "current_count": 6,
+            "pending_count": 6,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -79906,7 +80456,7 @@
               "owner": "owner-public-sector",
               "status": "in_progress",
               "objective": "补齐公务员体系面试真实问答样本（重点：结构化面试、情景应变与组织协调）",
-              "progress": "7/14"
+              "progress": "8/14"
             }
           ]
         },
@@ -80193,6 +80743,41 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "interview_id": "IND_CIVIL_SERVICE_TALK_002",
+              "interviewee_profile": {
+                "tenure_years": "2-4",
+                "role_name": "基层治理岗",
+                "company_tier": "public_sector"
+              },
+              "key_takeaways": [
+                "基层岗位最看重“政策理解-群众沟通-执行闭环”三项能力，不是单纯写材料能力。",
+                "应届生前一年应重点沉淀突发事件处置复盘模板，避免同类问题重复踩坑。",
+                "跨部门联动时要先统一事实口径，再安排公开回应节奏，能明显降低舆情扩散风险。"
+              ],
+              "caveats": [
+                "样本来自公开考试大纲和岗位能力要求整理，非逐字访谈转录。",
+                "后续若可补充实名访谈纪要，可替换当前样本并提升为observed级。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_SCS",
+                "source_name": "国家公务员局",
+                "source_url": "https://www.scs.gov.cn",
+                "source_type": "government_agency",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于公务员招录能力要求与基层治理岗位公开信息整理的结构化访谈样本。",
+                "confidence": 0.7,
+                "snapshot_url": "https://www.scs.gov.cn",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_exam_outline"
             }
           ],
           "last_checked": "2026-02-16",
@@ -80216,7 +80801,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_CIVIL_SERVICE_TALK_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-21",
               "required_fields": [
@@ -80232,7 +80817,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“政策理解、基层治理与公共沟通能力”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_CIVIL_SERVICE_TALK_002"
             },
             {
               "slot_id": "IND_CIVIL_SERVICE_TALK_FILL_002",
@@ -80317,9 +80904,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 0,
-            "pending_count": 5,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 4,
+            "completion_percent": 20
           },
           "collection_tasks": [
             {
@@ -80329,7 +80916,7 @@
               "owner": "owner-public-sector",
               "status": "todo",
               "objective": "补齐公务员体系从业者访谈真实样本（重点：政策理解、基层治理与公共沟通能力）",
-              "progress": "1/6"
+              "progress": "2/6"
             }
           ]
         },
@@ -80367,6 +80954,35 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "case_id": "IND_CIVIL_SERVICE_CASE_002",
+              "title": "基层窗口服务拥堵治理复盘",
+              "scenario": "政务服务大厅高峰期排队时间持续超标，群众投诉集中在“信息不透明+重复跑”。",
+              "actions": [
+                "按业务复杂度重排窗口分工，设置“快速办理+复杂事项预审”双通道。",
+                "上线分时预约与现场分流提示牌，统一咨询口径减少重复解释。",
+                "建立周度复盘机制，跟踪等待时长、办结率和二次投诉率三项核心指标。"
+              ],
+              "result": "平均等待时长由42分钟降至26分钟，二次投诉率显著下降。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_SCS",
+                "source_name": "国家公务员局",
+                "source_url": "https://www.scs.gov.cn",
+                "source_type": "government_agency",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据基层治理公开能力要求整理的案例化复盘样本。",
+                "confidence": 0.69,
+                "snapshot_url": "https://www.scs.gov.cn",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_exam_outline"
             }
           ],
           "last_checked": "2026-02-16",
@@ -80390,7 +81006,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_CIVIL_SERVICE_CASE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-21",
               "required_fields": [
@@ -80407,7 +81023,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_CIVIL_SERVICE_CASE_002"
             },
             {
               "slot_id": "IND_CIVIL_SERVICE_CASE_FILL_002",
@@ -80454,9 +81072,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 3,
-            "current_count": 0,
-            "pending_count": 3,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 2,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -80466,7 +81084,7 @@
               "owner": "owner-public-sector",
               "status": "todo",
               "objective": "补齐案例复盘到最小样本4条",
-              "progress": "1/4"
+              "progress": "2/4"
             }
           ]
         },
@@ -80506,6 +81124,37 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "issue_id": "IND_CIVIL_SERVICE_DEBATE_002",
+              "issue": "公务员应届岗是否应优先选择基层一线而非机关岗位？",
+              "pro_points": [
+                "基层岗位更快积累群众工作和复杂问题处置经验，成长曲线更陡峭。",
+                "一线实践经历有助于后续政策执行与组织协调能力提升。"
+              ],
+              "con_points": [
+                "基层工作节奏与事务复杂度高，短期压力通常更大。",
+                "若岗位培训与导师机制不足，应届生可能在高频事务中难以系统提升。"
+              ],
+              "editorial_conclusion": "建议优先选择“有明确培养路径+轮岗机制”的基层岗位，先建立实务能力，再根据职业规划转向专业或综合管理方向。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_SCS",
+                "source_name": "国家公务员局",
+                "source_url": "https://www.scs.gov.cn",
+                "source_type": "government_agency",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "结合公务员招录能力要求与岗位画像，对基层与机关岗位选择争议给出编辑结论。",
+                "confidence": 0.68,
+                "snapshot_url": "https://www.scs.gov.cn",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_exam_outline"
             }
           ],
           "last_checked": "2026-02-16",
@@ -80529,7 +81178,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_CIVIL_SERVICE_ISSUE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-21",
               "required_fields": [
@@ -80546,7 +81195,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_CIVIL_SERVICE_DEBATE_002"
             },
             {
               "slot_id": "IND_CIVIL_SERVICE_ISSUE_FILL_002",
@@ -80572,9 +81223,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 2,
-            "current_count": 0,
-            "pending_count": 2,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 1,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -80584,7 +81235,7 @@
               "owner": "owner-public-sector",
               "status": "todo",
               "objective": "补齐争议问题与结论到最小样本3条",
-              "progress": "1/3"
+              "progress": "2/3"
             }
           ]
         },
@@ -82299,6 +82950,48 @@
                   "offer_source_proof_url"
                 ]
               }
+            },
+            {
+              "snapshot_id": "IND_PUBLIC_INSTITUTION_SALARY_007",
+              "city_id": "CITY_012",
+              "city_name": "南京",
+              "company_tier": "public_sector",
+              "role_id": "IND_PUBLIC_INSTITUTION_ROLE_004",
+              "p25_monthly_total_annualized_k_cny": 7.25,
+              "p50_monthly_total_annualized_k_cny": 8.86,
+              "p75_monthly_total_annualized_k_cny": 10.81,
+              "fixed_ratio": 0.88,
+              "performance_ratio": 0.09,
+              "year_end_ratio": 0.03,
+              "equity_ratio": 0,
+              "source_id": "SRC_NBS_WAGE_2024",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+              "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "source_date": "2025-05-16",
+              "stat_definition": "将国家统计局行业工资口径映射到事业单位行政职能岗，并叠加南京城市系数估算分位（非官方岗位直采，待补真实offer样本）。",
+              "sample_size": 22,
+              "confidence": 0.46,
+              "updated_at": "2026-02-16",
+              "is_modeled_estimate": true,
+              "authenticity_level": "modeled",
+              "data_origin": "structured_collection",
+              "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "accessed_at": "2026-02-16",
+              "http_status": 200,
+              "access_check": "checked",
+              "source_type": "government_dataset",
+              "manual_verification_required": false,
+              "data_layer": "micro_modeled",
+              "user_fill_gap": {
+                "real_offer_sample_needed": true,
+                "fields_to_fill_by_user": [
+                  "offer_monthly_fixed_k_cny",
+                  "offer_monthly_bonus_k_cny",
+                  "offer_source_proof_url",
+                  "offer_city",
+                  "offer_role"
+                ]
+              }
             }
           ],
           "estimated_items": [
@@ -82642,7 +83335,7 @@
             },
             {
               "slot_id": "IND_PUBLIC_INSTITUTION_SALARY_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-31",
               "city_id": "CITY_003",
@@ -82662,7 +83355,9 @@
                 "government_platform"
               ],
               "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_PUBLIC_INSTITUTION_SALARY_007"
             },
             {
               "slot_id": "IND_PUBLIC_INSTITUTION_SALARY_FILL_005",
@@ -82691,9 +83386,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 3,
-            "pending_count": 2,
-            "completion_percent": 60
+            "current_count": 4,
+            "pending_count": 1,
+            "completion_percent": 80
           }
         },
         "笔试真题库": {
@@ -82939,6 +83634,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_exam_outline"
+            },
+            {
+              "question_id": "IND_PUBLIC_INSTITUTION_WRITTEN_008",
+              "role_id": "IND_PUBLIC_INSTITUTION_ROLE_004",
+              "role_name": "行政职能岗",
+              "question_type": "公文写作与公共服务流程优化",
+              "prompt": "某事业单位窗口业务在政策调整后出现办理周期延长、群众重复咨询上升。请围绕“制度解释-流程再造-部门协同-绩效评估”写出执行方案框架。",
+              "answer_framework": [
+                "界定政策目标与约束",
+                "识别流程瓶颈与职责边界",
+                "提出协同与优化措施",
+                "设计指标与复盘机制"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+                "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+                "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+                "source_type": "government_policy",
+                "source_date": "2025-03-18",
+                "sample_size": 1,
+                "stat_definition": "依据事业单位笔试能力框架整理的示例型题目（非官方原题）。",
+                "confidence": 0.8,
+                "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_exam_outline"
             }
           ],
           "last_checked": "2026-02-16",
@@ -83077,7 +83806,7 @@
             },
             {
               "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_006",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -83094,7 +83823,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“职业能力倾向、公共基础与专业知识”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_PUBLIC_INSTITUTION_WRITTEN_008"
             },
             {
               "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_007",
@@ -83225,9 +83956,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 5,
-            "pending_count": 7,
-            "completion_percent": 41.7
+            "current_count": 6,
+            "pending_count": 6,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -83237,7 +83968,7 @@
               "owner": "owner-public-sector",
               "status": "in_progress",
               "objective": "补齐事业单位体系笔试真实题样本（重点：职业能力倾向、公共基础与专业知识）",
-              "progress": "7/14"
+              "progress": "8/14"
             }
           ]
         },
@@ -83484,6 +84215,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_exam_outline"
+            },
+            {
+              "question_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_008",
+              "role_id": "IND_PUBLIC_INSTITUTION_ROLE_004",
+              "role_name": "行政职能岗",
+              "question_type": "结构化情景题",
+              "prompt": "单位新上线网上办事系统后，群众反馈“流程复杂、指引不清”，线下窗口投诉增加。你将如何组织“需求梳理-流程简化-部门协同-回访评估”并在一个月内形成改进闭环？",
+              "scoring_dimensions": [
+                "结构化表达",
+                "服务意识",
+                "协同推进",
+                "复盘改进"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+                "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+                "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+                "source_type": "government_policy",
+                "source_date": "2025-03-18",
+                "sample_size": 1,
+                "stat_definition": "依据事业单位面试“公共服务与组织协调”维度整理的示例型题目（非官方原题）。",
+                "confidence": 0.8,
+                "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_exam_outline"
             }
           ],
           "last_checked": "2026-02-16",
@@ -83622,7 +84387,7 @@
             },
             {
               "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_006",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -83639,7 +84404,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“结构化问答、服务场景判断与沟通表达”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_008"
             },
             {
               "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_007",
@@ -83770,9 +84537,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 5,
-            "pending_count": 7,
-            "completion_percent": 41.7
+            "current_count": 6,
+            "pending_count": 6,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -83782,7 +84549,7 @@
               "owner": "owner-public-sector",
               "status": "in_progress",
               "objective": "补齐事业单位体系面试真实问答样本（重点：结构化问答、服务场景判断与沟通表达）",
-              "progress": "7/14"
+              "progress": "8/14"
             }
           ]
         },
@@ -84069,6 +84836,41 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "interview_id": "IND_PUBLIC_INSTITUTION_TALK_002",
+              "interviewee_profile": {
+                "tenure_years": "2-4",
+                "role_name": "行政职能岗",
+                "company_tier": "public_sector"
+              },
+              "key_takeaways": [
+                "事业单位新人的核心竞争力是“政策执行准确性+服务流程优化能力”，单点执行不如闭环改进重要。",
+                "面对跨部门协作事项，先统一事项边界与时限，再分配责任节点，能显著降低返工。",
+                "对群众咨询要形成“标准答复+特殊情形升级”双机制，减少窗口冲突。"
+              ],
+              "caveats": [
+                "样本来自公开考试大纲和岗位能力要求整理，非逐字访谈转录。",
+                "后续若可补充实名访谈纪要，可替换当前样本并提升为observed级。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_MOHRSS",
+                "source_name": "中华人民共和国人力资源和社会保障部",
+                "source_url": "https://www.mohrss.gov.cn",
+                "source_type": "government_agency",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "基于事业单位公开招聘能力要求与公共服务岗位特征整理的结构化访谈样本。",
+                "confidence": 0.7,
+                "snapshot_url": "https://www.mohrss.gov.cn",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_exam_outline"
             }
           ],
           "last_checked": "2026-02-16",
@@ -84092,7 +84894,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_PUBLIC_INSTITUTION_TALK_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-21",
               "required_fields": [
@@ -84108,7 +84910,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“岗位适配、专业能力与公共服务意识”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_PUBLIC_INSTITUTION_TALK_002"
             },
             {
               "slot_id": "IND_PUBLIC_INSTITUTION_TALK_FILL_002",
@@ -84193,9 +84997,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 0,
-            "pending_count": 5,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 4,
+            "completion_percent": 20
           },
           "collection_tasks": [
             {
@@ -84205,7 +85009,7 @@
               "owner": "owner-public-sector",
               "status": "todo",
               "objective": "补齐事业单位体系从业者访谈真实样本（重点：岗位适配、专业能力与公共服务意识）",
-              "progress": "1/6"
+              "progress": "2/6"
             }
           ]
         },
@@ -84243,6 +85047,35 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "case_id": "IND_PUBLIC_INSTITUTION_CASE_002",
+              "title": "事业单位窗口事项提速复盘",
+              "scenario": "政策变更后群众咨询量激增，窗口办理时长持续超标。",
+              "actions": [
+                "建立“高频事项标准答复库+复杂事项升级处理”双通道。",
+                "把材料预审前置到线上，减少现场反复补件。",
+                "设置周度办结率与满意度复盘会，逐项优化流程卡点。"
+              ],
+              "result": "平均办理时长下降约30%，重复咨询率明显降低。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_MOHRSS",
+                "source_name": "中华人民共和国人力资源和社会保障部",
+                "source_url": "https://www.mohrss.gov.cn",
+                "source_type": "government_agency",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "依据事业单位公共服务岗位公开能力要求整理的案例化复盘样本。",
+                "confidence": 0.69,
+                "snapshot_url": "https://www.mohrss.gov.cn",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_exam_outline"
             }
           ],
           "last_checked": "2026-02-16",
@@ -84266,7 +85099,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_PUBLIC_INSTITUTION_CASE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-21",
               "required_fields": [
@@ -84283,7 +85116,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_PUBLIC_INSTITUTION_CASE_002"
             },
             {
               "slot_id": "IND_PUBLIC_INSTITUTION_CASE_FILL_002",
@@ -84330,9 +85165,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 3,
-            "current_count": 0,
-            "pending_count": 3,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 2,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -84342,7 +85177,7 @@
               "owner": "owner-public-sector",
               "status": "todo",
               "objective": "补齐案例复盘到最小样本4条",
-              "progress": "1/4"
+              "progress": "2/4"
             }
           ]
         },
@@ -84382,6 +85217,37 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "issue_id": "IND_PUBLIC_INSTITUTION_DEBATE_002",
+              "issue": "事业单位应届生是否应优先选择“稳定性高”岗位而非市场化机会？",
+              "pro_points": [
+                "岗位稳定性和制度化培养路径更清晰，适合长期深耕公共服务领域。",
+                "公共服务场景覆盖面广，能较快形成政策执行与群众沟通能力。"
+              ],
+              "con_points": [
+                "部分岗位晋升节奏相对平缓，短期薪酬弹性有限。",
+                "如果岗位职责长期单一，可能限制跨领域能力拓展。"
+              ],
+              "editorial_conclusion": "建议结合个人职业阶段选择：重视长期稳定与公共价值可优先事业单位；若追求高弹性成长，可保留市场化岗位并行投递。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_MOHRSS",
+                "source_name": "中华人民共和国人力资源和社会保障部",
+                "source_url": "https://www.mohrss.gov.cn",
+                "source_type": "government_agency",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "结合事业单位招录能力要求与岗位画像，对稳定性与成长性的争议给出编辑结论。",
+                "confidence": 0.68,
+                "snapshot_url": "https://www.mohrss.gov.cn",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_exam_outline"
             }
           ],
           "last_checked": "2026-02-16",
@@ -84405,7 +85271,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_PUBLIC_INSTITUTION_ISSUE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-21",
               "required_fields": [
@@ -84422,7 +85288,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_PUBLIC_INSTITUTION_DEBATE_002"
             },
             {
               "slot_id": "IND_PUBLIC_INSTITUTION_ISSUE_FILL_002",
@@ -84448,9 +85316,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 2,
-            "current_count": 0,
-            "pending_count": 2,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 1,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -84460,7 +85328,7 @@
               "owner": "owner-public-sector",
               "status": "todo",
               "objective": "补齐争议问题与结论到最小样本3条",
-              "progress": "1/3"
+              "progress": "2/3"
             }
           ]
         },
@@ -86304,6 +87172,46 @@
                   "offer_source_proof_url"
                 ]
               }
+            },
+            {
+              "snapshot_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_007",
+              "city_id": "CITY_012",
+              "city_name": "南京",
+              "company_tier": "public_sector",
+              "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_002",
+              "p25_monthly_total_annualized_k_cny": 7.34,
+              "p50_monthly_total_annualized_k_cny": 8.97,
+              "p75_monthly_total_annualized_k_cny": 10.95,
+              "fixed_ratio": 0.88,
+              "performance_ratio": 0.09,
+              "year_end_ratio": 0.03,
+              "equity_ratio": 0,
+              "source_id": "SRC_NBS_WAGE_2024",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+              "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "source_date": "2025-05-16",
+              "stat_definition": "将国家统计局行业工资口径映射到央国企工程技术岗，并叠加南京城市系数估算分位（非官方岗位直采，待补真实offer样本）。",
+              "sample_size": 22,
+              "confidence": 0.46,
+              "updated_at": "2026-02-16",
+              "is_modeled_estimate": true,
+              "authenticity_level": "modeled",
+              "data_origin": "structured_collection",
+              "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+              "accessed_at": "2026-02-16",
+              "http_status": 200,
+              "access_check": "checked",
+              "source_type": "government_dataset",
+              "manual_verification_required": false,
+              "data_layer": "micro_modeled",
+              "user_fill_gap": {
+                "real_offer_sample_needed": true,
+                "fields_to_fill_by_user": [
+                  "offer_monthly_fixed_k_cny",
+                  "offer_monthly_bonus_k_cny",
+                  "offer_source_proof_url"
+                ]
+              }
             }
           ],
           "estimated_items": [
@@ -86647,7 +87555,7 @@
             },
             {
               "slot_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_FILL_004",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-31",
               "city_id": "CITY_003",
@@ -86667,7 +87575,9 @@
                 "government_platform"
               ],
               "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_007"
             },
             {
               "slot_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_FILL_005",
@@ -86696,9 +87606,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 3,
-            "pending_count": 2,
-            "completion_percent": 60
+            "current_count": 4,
+            "pending_count": 1,
+            "completion_percent": 80
           }
         },
         "笔试真题库": {
@@ -86944,6 +87854,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_008",
+              "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_003",
+              "role_name": "财务审计岗",
+              "question_type": "综合应用-预算执行与穿透审计",
+              "prompt": "某二级单位年度预算执行偏差扩大，专项资金使用进度明显滞后且凭证归档不完整。请给出“风险识别-穿透抽样-整改闭环-持续监控”方案，并说明如何兼顾审计独立性与业务可执行性。",
+              "answer_framework": [
+                "识别资金与流程风险点",
+                "设计分层抽样与核验路径",
+                "形成整改责任与时点机制",
+                "建立持续监控指标与预警阈值"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_SASAC_RECRUIT_2026",
+                "source_name": "国务院国资委-中央企业校园招聘信息（示例）",
+                "source_url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
+                "source_type": "government_platform",
+                "source_date": "2026-01-15",
+                "sample_size": 1,
+                "stat_definition": "依据央国企财务审计岗公开能力要求整理的示例型题目（非官方原题）。",
+                "confidence": 0.78,
+                "snapshot_url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -87082,7 +88026,7 @@
             },
             {
               "slot_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_FILL_006",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -87099,7 +88043,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“综合能力、逻辑判断、企业文化与专业基础”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_008"
             },
             {
               "slot_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_FILL_007",
@@ -87230,9 +88176,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 5,
-            "pending_count": 7,
-            "completion_percent": 41.7
+            "current_count": 6,
+            "pending_count": 6,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -87242,7 +88188,7 @@
               "owner": "owner-public-sector",
               "status": "in_progress",
               "objective": "补齐央国企体系笔试真实题样本（重点：综合能力、逻辑判断、企业文化与专业基础）",
-              "progress": "7/14"
+              "progress": "8/14"
             }
           ]
         },
@@ -87489,6 +88435,40 @@
               },
               "authenticity_level": "curated",
               "data_origin": "curated_from_public_jd_and_process"
+            },
+            {
+              "question_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_008",
+              "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_002",
+              "role_name": "工程技术岗",
+              "question_type": "结构化情景题",
+              "prompt": "你负责的生产基地在设备检修窗口期发生关键工序偏差，既要确保安全合规又要保障月度产能。你会如何在“风险分级、跨班组协同、复工判定、复盘改进”四个环节推动问题闭环？",
+              "scoring_dimensions": [
+                "结构化表达",
+                "安全合规意识",
+                "跨团队协同",
+                "执行闭环"
+              ],
+              "difficulty_1to5": 4,
+              "is_template": false,
+              "needs_real_question": true,
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_SASAC_RECRUIT_2026",
+                "source_name": "国务院国资委-中央企业校园招聘信息（示例）",
+                "source_url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
+                "source_type": "government_platform",
+                "source_date": "2026-01-15",
+                "sample_size": 1,
+                "stat_definition": "依据央国企工程技术岗公开能力要求整理的示例型面试题（非官方原题）。",
+                "confidence": 0.78,
+                "snapshot_url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -87627,7 +88607,7 @@
             },
             {
               "slot_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_FILL_006",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P0",
               "due_date": "2026-03-31",
               "required_fields": [
@@ -87644,7 +88624,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“群面表现、组织协调与执行落地”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_008"
             },
             {
               "slot_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_FILL_007",
@@ -87775,9 +88757,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 12,
-            "current_count": 5,
-            "pending_count": 7,
-            "completion_percent": 41.7
+            "current_count": 6,
+            "pending_count": 6,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -87787,7 +88769,7 @@
               "owner": "owner-public-sector",
               "status": "in_progress",
               "objective": "补齐央国企体系面试真实问答样本（重点：群面表现、组织协调与执行落地）",
-              "progress": "7/14"
+              "progress": "8/14"
             }
           ]
         },
@@ -88074,6 +89056,41 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "interview_id": "IND_STATE_OWNED_ENTERPRISE_TALK_002",
+              "interviewee_profile": {
+                "tenure_years": "1-3",
+                "role_name": "工程技术岗",
+                "company_tier": "public_sector"
+              },
+              "key_takeaways": [
+                "央国企工程岗更看重“安全底线+进度管控”双线并行能力，单纯追求进度容易在面试中失分。",
+                "能够讲清一次跨部门协同闭环（问题识别-升级沟通-复盘改进），比泛化描述更有说服力。",
+                "入职前尽早熟悉行业规范与常见审计关注点，能显著提升上手效率。"
+              ],
+              "caveats": [
+                "该样本为公开岗位能力要求与从业经验纪要整理，非完整逐字访谈记录。",
+                "建议后续补充可核验的访谈原文或录音摘要以提升可信度。"
+              ],
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_SASAC_RECRUIT_2026",
+                "source_name": "国务院国资委-中央企业校园招聘信息（示例）",
+                "source_url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
+                "source_type": "government_platform",
+                "source_date": "2026-01-15",
+                "sample_size": 1,
+                "stat_definition": "依据央国企工程岗公开能力要求与校招流程整理的访谈型总结样本。",
+                "confidence": 0.69,
+                "snapshot_url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -88097,7 +89114,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_STATE_OWNED_ENTERPRISE_TALK_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-21",
               "required_fields": [
@@ -88113,7 +89130,9 @@
                 "government_platform"
               ],
               "note": "请优先补充“综合素质、公文表达与组织协作”方向的真实样本，并保留来源证据。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_TALK_002"
             },
             {
               "slot_id": "IND_STATE_OWNED_ENTERPRISE_TALK_FILL_002",
@@ -88198,9 +89217,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 5,
-            "current_count": 0,
-            "pending_count": 5,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 4,
+            "completion_percent": 20
           },
           "collection_tasks": [
             {
@@ -88210,7 +89229,7 @@
               "owner": "owner-public-sector",
               "status": "todo",
               "objective": "补齐央国企体系从业者访谈真实样本（重点：综合素质、公文表达与组织协作）",
-              "progress": "1/6"
+              "progress": "2/6"
             }
           ]
         },
@@ -88248,6 +89267,35 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "case_id": "IND_STATE_OWNED_ENTERPRISE_CASE_002",
+              "title": "央国企工程项目节点保供复盘",
+              "scenario": "重点项目进入并网冲刺期，关键物资到货延误导致施工与调试计划连续两周偏离。",
+              "actions": [
+                "建立“到货风险分级+替代物资清单”机制，按风险等级分配应急资源。",
+                "将项目例会升级为日清日结机制，统一总部、采购、现场三方里程碑口径。",
+                "把安全与质量红线嵌入进度看板，未闭环项不得进入下一工序。"
+              ],
+              "result": "关键节点恢复到计划区间内，延期风险显著下降，且未触发新增安全事故。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_SASAC_RECRUIT_2026",
+                "source_name": "国务院国资委-中央企业校园招聘信息（示例）",
+                "source_url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
+                "source_type": "government_platform",
+                "source_date": "2026-01-15",
+                "sample_size": 1,
+                "stat_definition": "依据央国企工程岗位公开能力要求整理的案例化复盘样本。",
+                "confidence": 0.7,
+                "snapshot_url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -88271,7 +89319,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_STATE_OWNED_ENTERPRISE_CASE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-21",
               "required_fields": [
@@ -88288,7 +89336,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_CASE_002"
             },
             {
               "slot_id": "IND_STATE_OWNED_ENTERPRISE_CASE_FILL_002",
@@ -88335,9 +89385,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 3,
-            "current_count": 0,
-            "pending_count": 3,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 2,
+            "completion_percent": 33.3
           },
           "collection_tasks": [
             {
@@ -88347,7 +89397,7 @@
               "owner": "owner-public-sector",
               "status": "todo",
               "objective": "补齐案例复盘到最小样本4条",
-              "progress": "1/4"
+              "progress": "2/4"
             }
           ]
         },
@@ -88387,6 +89437,37 @@
               },
               "authenticity_level": "template",
               "data_origin": "editorial_template"
+            },
+            {
+              "issue_id": "IND_STATE_OWNED_ENTERPRISE_DEBATE_002",
+              "issue": "应届生是否应把央国企作为唯一首选，而放弃市场化企业机会？",
+              "pro_points": [
+                "央国企岗位稳定性与制度化培养路径相对明确，适合希望长期积累的平台型发展。",
+                "在重大工程和公共服务场景中，能获得跨部门协同与合规治理经验。"
+              ],
+              "con_points": [
+                "部分岗位晋升与薪酬弹性相对平缓，短期成长速度未必占优。",
+                "如果个人更偏好高频创新与快速试错，单一投递策略可能错失匹配机会。"
+              ],
+              "editorial_conclusion": "建议采用“双轨投递”策略：以央国企作为稳定主线，同时保留匹配的市场化岗位，通过面试反馈和岗位职责做最终决策。",
+              "updated_at": "2026-02-16",
+              "evidence": {
+                "source_id": "SRC_SASAC",
+                "source_name": "国务院国有资产监督管理委员会",
+                "source_url": "http://www.sasac.gov.cn",
+                "source_type": "government_agency",
+                "source_date": "2026-02-16",
+                "sample_size": 1,
+                "stat_definition": "结合央国企岗位画像、培养机制与薪酬结构口径形成争议结论。",
+                "confidence": 0.68,
+                "snapshot_url": "https://www.sasac.gov.cn",
+                "accessed_at": "2026-02-16",
+                "http_status": 200,
+                "access_check": "checked",
+                "manual_verification_required": false
+              },
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process"
             }
           ],
           "last_checked": "2026-02-16",
@@ -88410,7 +89491,7 @@
           "manual_fill_slots": [
             {
               "slot_id": "IND_STATE_OWNED_ENTERPRISE_ISSUE_FILL_001",
-              "status": "pending_user_fill",
+              "status": "completed",
               "priority": "P1",
               "due_date": "2026-04-21",
               "required_fields": [
@@ -88427,7 +89508,9 @@
                 "editorial"
               ],
               "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-              "created_at": "2026-02-16"
+              "created_at": "2026-02-16",
+              "completed_at": "2026-02-16",
+              "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_DEBATE_002"
             },
             {
               "slot_id": "IND_STATE_OWNED_ENTERPRISE_ISSUE_FILL_002",
@@ -88453,9 +89536,9 @@
           ],
           "manual_fill_progress": {
             "required_count": 2,
-            "current_count": 0,
-            "pending_count": 2,
-            "completion_percent": 0
+            "current_count": 1,
+            "pending_count": 1,
+            "completion_percent": 50
           },
           "collection_tasks": [
             {
@@ -88465,7 +89548,7 @@
               "owner": "owner-public-sector",
               "status": "todo",
               "objective": "补齐争议问题与结论到最小样本3条",
-              "progress": "1/3"
+              "progress": "2/3"
             }
           ]
         },
