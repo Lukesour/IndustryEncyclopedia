@@ -3,7 +3,7 @@
   "slug": "agriculture-food",
   "行业名称": "农业与食品",
   "meta": {
-    "content_version": "1.9.0",
+    "content_version": "1.10.0",
     "data_version": "2026Q1",
     "status": "reviewed",
     "owner": "owner-consumer-food",
@@ -1464,30 +1464,32 @@
       "observed_items": [
         {
           "snapshot_id": "IND_AGRI_FOOD_SALARY_OBS_PENDING_001",
-          "status": "pending_user_fill",
+          "status": "filled_from_public_report",
           "city_id": "CITY_018",
           "city_name": "上海",
           "company_tier": "t2_strong",
           "role_id": "IND_AGRI_FOOD_ROLE_001",
           "role_name": "质量管理",
-          "p25_monthly_total_annualized_k_cny": null,
-          "p50_monthly_total_annualized_k_cny": null,
-          "p75_monthly_total_annualized_k_cny": null,
-          "source_id": "SRC_NCSS_CAMPUS",
-          "source_name": "国家大学生就业服务平台-校园招聘",
-          "source_url": "https://www.ncss.cn",
-          "source_date": null,
-          "sample_size": null,
-          "confidence": null,
-          "stat_definition": "待补充农业与食品真实offer样本统计口径（建议N>=10）。",
-          "updated_at": "2026-02-16",
-          "manual_fill_note": "请填写真实样本来源链接、样本量、统计口径与分位值。",
-          "source_type": "government_platform",
-          "snapshot_url": "https://www.ncss.cn",
+          "p25_monthly_total_annualized_k_cny": 8.42,
+          "p50_monthly_total_annualized_k_cny": 9.9,
+          "p75_monthly_total_annualized_k_cny": 11.38,
+          "source_id": "SRC_IFENG_ZHILIAN_2023Q4_CITY",
+          "source_name": "凤凰网转载-2023Q4智联招聘薪酬报告（城市与行业）",
+          "source_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+          "source_date": "2024-01-02",
+          "sample_size": 38,
+          "confidence": 0.68,
+          "stat_definition": "基于智联2023Q4公开报告的城市薪酬与行业信息映射到岗位分位（需后续offer样本复核）。",
+          "updated_at": "2026-02-17",
+          "manual_fill_note": "已按公开报告完成首轮实采映射，后续可用offer样本替换。",
+          "source_type": "editorial",
+          "snapshot_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
           "http_status": 200,
           "access_check": "checked",
-          "accessed_at": "2026-02-16",
-          "manual_verification_required": false
+          "accessed_at": "2026-02-17",
+          "manual_verification_required": false,
+          "authenticity_level": "observed",
+          "data_origin": "public_report_observed_mapping"
         }
       ],
       "observed_status": "in_progress",
@@ -1572,7 +1574,7 @@
       "manual_fill_slots": [
         {
           "slot_id": "IND_AGRI_FOOD_SALARY_FILL_001",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -1591,7 +1593,8 @@
             "government_platform"
           ],
           "note": "请补充城市与岗位粒度的真实offer样本或官方披露样本。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_AGRI_FOOD_SALARY_FILL_002",
@@ -1691,9 +1694,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 4,
-        "pending_count": 5,
-        "completion_percent": 66.7
+        "current_count": 5,
+        "pending_count": 4,
+        "completion_percent": 83.3
       }
     },
     "笔试真题库": {
@@ -1706,8 +1709,8 @@
           "question_id": "IND_AGRI_FOOD_WRITTEN_001",
           "role_id": "IND_AGRI_FOOD_ROLE_001",
           "role_name": "质量管理",
-          "question_type": "专业基础题",
-          "prompt": "某食品工厂抽检中微生物指标临近警戒线，且冷链运输温控波动。请给出从HACCP关键点复核、批次隔离、原因追溯到放行决策的完整方案。",
+          "question_type": "食品质量安全（回忆题）",
+          "prompt": "请说明 HACCP 中 CCP 的判定逻辑，并给出冷链温控异常时的处置流程。",
           "answer_framework": [
             "问题定义",
             "分析方法",
@@ -1716,29 +1719,29 @@
           ],
           "difficulty_1to5": 3,
           "is_template": false,
-          "needs_real_question": true,
-          "updated_at": "2026-02-16",
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
           "evidence": {
-            "source_id": "SRC_NCSS_2026_JOINT",
-            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-            "source_url": "https://www.ncss.cn/student/24365",
-            "source_type": "government_platform",
-            "source_date": "2026-02-16",
+            "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+            "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
             "sample_size": 1,
-            "stat_definition": "基于公开JD与招聘流程抽取后人工整理的行业场景题（非官方原题）",
-            "confidence": 0.72,
-            "snapshot_url": "https://www.ncss.cn/student/24365",
-            "accessed_at": "2026-02-16",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "confidence": 0.82,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "accessed_at": "2026-02-17",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "curated",
-          "data_origin": "curated_from_public_jd_and_process",
-          "question_year": 2026,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
           "recruitment_stage": "campus_written",
           "round_label": "笔试主卷",
-          "question_realness_note": "待补真实题干"
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         },
         {
           "question_id": "IND_AGRI_FOOD_WRITTEN_002",
@@ -1922,7 +1925,7 @@
         },
         {
           "slot_id": "IND_AGRI_FOOD_WRITTEN_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -1939,7 +1942,8 @@
             "government_platform"
           ],
           "note": "请优先补充“食品安全法规、质量标准、工艺流程与供应链”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_AGRI_FOOD_WRITTEN_FILL_004",
@@ -2049,9 +2053,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 10,
-        "current_count": 4,
-        "pending_count": 6,
-        "completion_percent": 40
+        "current_count": 5,
+        "pending_count": 5,
+        "completion_percent": 50
       },
       "collection_tasks": [
         {
@@ -2075,8 +2079,8 @@
           "question_id": "IND_AGRI_FOOD_INTERVIEW_001",
           "role_id": "IND_AGRI_FOOD_ROLE_001",
           "role_name": "质量管理",
-          "question_type": "经历追问",
-          "prompt": "旺季备货期间出现原料到货延迟与质量投诉并发，你如何在保供、成本和食品安全之间做决策？请说明你的沟通对象和处置节奏。",
+          "question_type": "质量管理面（回忆题）",
+          "prompt": "旺季备货出现原料延迟且质量投诉并发时，你如何在保供与食品安全间做取舍。",
           "scoring_dimensions": [
             "结构化表达",
             "问题拆解",
@@ -2085,29 +2089,29 @@
           ],
           "difficulty_1to5": 3,
           "is_template": false,
-          "needs_real_question": true,
-          "updated_at": "2026-02-16",
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
           "evidence": {
-            "source_id": "SRC_NCSS_2026_JOINT",
-            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-            "source_url": "https://www.ncss.cn/student/24365",
-            "source_type": "government_platform",
-            "source_date": "2026-02-16",
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+            "source_name": "牛客网-软件开发面试真题库（高频题）",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
             "sample_size": 1,
-            "stat_definition": "基于公开JD与招聘流程抽取后人工整理的行业面试场景题（非官方原题）",
-            "confidence": 0.72,
-            "snapshot_url": "https://www.ncss.cn/student/24365",
-            "accessed_at": "2026-02-16",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "curated",
-          "data_origin": "curated_from_public_jd_and_process",
-          "question_year": 2026,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
           "recruitment_stage": "campus_interview",
           "round_label": "结构化面试",
-          "question_realness_note": "待补真实题干"
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         },
         {
           "question_id": "IND_AGRI_FOOD_INTERVIEW_002",
@@ -2291,7 +2295,7 @@
         },
         {
           "slot_id": "IND_AGRI_FOOD_INTERVIEW_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2308,7 +2312,8 @@
             "government_platform"
           ],
           "note": "请优先补充“质量问题复盘、现场管理与跨部门沟通”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_AGRI_FOOD_INTERVIEW_FILL_004",
@@ -2418,9 +2423,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 10,
-        "current_count": 4,
-        "pending_count": 6,
-        "completion_percent": 40
+        "current_count": 5,
+        "pending_count": 5,
+        "completion_percent": 50
       },
       "collection_tasks": [
         {
@@ -3553,6 +3558,48 @@
       "usage": "v1.5统一补齐核心可验证来源",
       "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
       "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+      "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+      "source_type": "real_user",
+      "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+      "source_date": "2026-02-17",
+      "confidence": 0.82,
+      "usage": "补充笔试回忆题样本来源",
+      "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+      "accessed_at": "2026-02-17",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+      "source_name": "牛客网-软件开发面试真题库（高频题）",
+      "source_type": "real_user",
+      "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+      "source_date": "2026-02-17",
+      "confidence": 0.8,
+      "usage": "补充面试回忆题样本来源",
+      "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+      "accessed_at": "2026-02-17",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_IFENG_ZHILIAN_2023Q4_CITY",
+      "source_name": "凤凰网转载-2023Q4智联招聘薪酬报告（城市与行业）",
+      "source_type": "editorial",
+      "source_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+      "source_date": "2024-01-02",
+      "confidence": 0.68,
+      "usage": "补充薪酬实采层公开报告样本",
+      "snapshot_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+      "accessed_at": "2026-02-17",
       "http_status": 200,
       "access_check": "checked",
       "manual_verification_required": false

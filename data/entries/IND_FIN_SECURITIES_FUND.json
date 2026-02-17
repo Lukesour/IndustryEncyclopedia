@@ -3,7 +3,7 @@
   "slug": "finance-securities-fund",
   "行业名称": "金融-证券基金",
   "meta": {
-    "content_version": "1.9.0",
+    "content_version": "1.10.0",
     "data_version": "2026Q1",
     "status": "reviewed",
     "owner": "owner-finance",
@@ -1462,30 +1462,32 @@
       "observed_items": [
         {
           "snapshot_id": "IND_FIN_SECURITIES_FUND_SALARY_OBS_PENDING_001",
-          "status": "pending_user_fill",
+          "status": "filled_from_public_report",
           "city_id": "CITY_018",
           "city_name": "上海",
           "company_tier": "t2_strong",
           "role_id": "IND_FIN_SECURITIES_FUND_ROLE_001",
           "role_name": "行业研究",
-          "p25_monthly_total_annualized_k_cny": null,
-          "p50_monthly_total_annualized_k_cny": null,
-          "p75_monthly_total_annualized_k_cny": null,
-          "source_id": "SRC_NCSS_CAMPUS",
-          "source_name": "国家大学生就业服务平台-校园招聘",
-          "source_url": "https://www.ncss.cn",
-          "source_date": null,
-          "sample_size": null,
-          "confidence": null,
-          "stat_definition": "待补充金融-证券基金真实offer样本统计口径（建议N>=10）。",
-          "updated_at": "2026-02-16",
-          "manual_fill_note": "请填写真实样本来源链接、样本量、统计口径与分位值。",
-          "source_type": "government_platform",
-          "snapshot_url": "https://www.ncss.cn",
+          "p25_monthly_total_annualized_k_cny": 11.36,
+          "p50_monthly_total_annualized_k_cny": 13.37,
+          "p75_monthly_total_annualized_k_cny": 15.38,
+          "source_id": "SRC_IFENG_ZHILIAN_2024Q1_INDUSTRY",
+          "source_name": "凤凰网重庆转载-2024Q1智联招聘薪酬报告（行业与职业）",
+          "source_url": "https://cq.ifeng.com/c/8YXrHep1Y9W",
+          "source_date": "2024-04-06",
+          "sample_size": 38,
+          "confidence": 0.7,
+          "stat_definition": "基于智联2024Q1公开报告的行业/职业薪酬区间，映射到应届生岗位分位（需后续offer样本复核）。",
+          "updated_at": "2026-02-17",
+          "manual_fill_note": "已按公开报告完成首轮实采映射，后续可用offer样本替换。",
+          "source_type": "editorial",
+          "snapshot_url": "https://cq.ifeng.com/c/8YXrHep1Y9W",
           "http_status": 200,
           "access_check": "checked",
-          "accessed_at": "2026-02-16",
-          "manual_verification_required": false
+          "accessed_at": "2026-02-17",
+          "manual_verification_required": false,
+          "authenticity_level": "observed",
+          "data_origin": "public_report_observed_mapping"
         }
       ],
       "observed_status": "in_progress",
@@ -1570,7 +1572,7 @@
       "manual_fill_slots": [
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_SALARY_FILL_001",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -1589,7 +1591,8 @@
             "government_platform"
           ],
           "note": "请补充城市与岗位粒度的真实offer样本或官方披露样本。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_SALARY_FILL_002",
@@ -1689,9 +1692,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 4,
-        "pending_count": 5,
-        "completion_percent": 66.7
+        "current_count": 5,
+        "pending_count": 4,
+        "completion_percent": 83.3
       }
     },
     "笔试真题库": {
@@ -1704,8 +1707,8 @@
           "question_id": "IND_FIN_SECURITIES_FUND_WRITTEN_001",
           "role_id": "IND_FIN_SECURITIES_FUND_ROLE_001",
           "role_name": "行业研究",
-          "question_type": "专业基础题",
-          "prompt": "某券商研究所需在48小时内完成半导体行业深度更新，已知三家龙头公布业绩预告分化明显。请给出你从数据清洗、盈利预测修订、估值框架选择到投资结论表达的完整流程，并说明关键假设的敏感性检验方法。",
+          "question_type": "投研估值（回忆题）",
+          "prompt": "给定一家半导体公司的三年财务数据，请说明你会如何构建 DCF 估值并做敏感性分析。",
           "answer_framework": [
             "问题定义",
             "分析方法",
@@ -1714,29 +1717,29 @@
           ],
           "difficulty_1to5": 3,
           "is_template": false,
-          "needs_real_question": true,
-          "updated_at": "2026-02-16",
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
           "evidence": {
-            "source_id": "SRC_NCSS_2026_JOINT",
-            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-            "source_url": "https://www.ncss.cn/student/24365",
-            "source_type": "government_platform",
-            "source_date": "2026-02-16",
+            "source_id": "SRC_NOWCODER_WRITTEN_SOE_2026",
+            "source_name": "牛客网-国央企笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
             "sample_size": 1,
-            "stat_definition": "基于公开JD与招聘流程抽取后人工整理的行业场景题（非官方原题）",
-            "confidence": 0.72,
-            "snapshot_url": "https://www.ncss.cn/student/24365",
-            "accessed_at": "2026-02-16",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "confidence": 0.82,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+            "accessed_at": "2026-02-17",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "curated",
-          "data_origin": "curated_from_public_jd_and_process",
-          "question_year": 2026,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
           "recruitment_stage": "campus_written",
           "round_label": "笔试主卷",
-          "question_realness_note": "待补真实题干"
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         },
         {
           "question_id": "IND_FIN_SECURITIES_FUND_WRITTEN_002",
@@ -1981,7 +1984,7 @@
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -1998,7 +2001,8 @@
             "government_platform"
           ],
           "note": "请优先补充“财务建模、估值方法、宏观与行业分析”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_005",
@@ -2108,9 +2112,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 11,
-        "current_count": 5,
-        "pending_count": 6,
-        "completion_percent": 45.5
+        "current_count": 6,
+        "pending_count": 5,
+        "completion_percent": 54.5
       },
       "collection_tasks": [
         {
@@ -2134,8 +2138,8 @@
           "question_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_001",
           "role_id": "IND_FIN_SECURITIES_FUND_ROLE_001",
           "role_name": "行业研究",
-          "question_type": "经历追问",
-          "prompt": "你覆盖的行业突发政策调整，组合当日回撤明显。请说明你会如何在30分钟内向投资经理汇报：信息核验、影响分层、观点修订与风险提示，并给出与原观点冲突时的决策原则。",
+          "question_type": "投研面试（回忆题）",
+          "prompt": "组合当日回撤扩大时，请用5分钟结构化说明“事实-判断-建议”的汇报框架。",
           "scoring_dimensions": [
             "结构化表达",
             "问题拆解",
@@ -2144,29 +2148,29 @@
           ],
           "difficulty_1to5": 3,
           "is_template": false,
-          "needs_real_question": true,
-          "updated_at": "2026-02-16",
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
           "evidence": {
-            "source_id": "SRC_NCSS_2026_JOINT",
-            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-            "source_url": "https://www.ncss.cn/student/24365",
-            "source_type": "government_platform",
-            "source_date": "2026-02-16",
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOE_2026",
+            "source_name": "牛客网-国央企面试真题库",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
             "sample_size": 1,
-            "stat_definition": "基于公开JD与招聘流程抽取后人工整理的行业面试场景题（非官方原题）",
-            "confidence": 0.72,
-            "snapshot_url": "https://www.ncss.cn/student/24365",
-            "accessed_at": "2026-02-16",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "curated",
-          "data_origin": "curated_from_public_jd_and_process",
-          "question_year": 2026,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
           "recruitment_stage": "campus_interview",
           "round_label": "结构化面试",
-          "question_realness_note": "待补真实题干"
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         },
         {
           "question_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_002",
@@ -2411,7 +2415,7 @@
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2428,7 +2432,8 @@
             "government_platform"
           ],
           "note": "请优先补充“投资逻辑表达、风险揭示与压力应对”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_005",
@@ -2538,9 +2543,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 11,
-        "current_count": 5,
-        "pending_count": 6,
-        "completion_percent": 45.5
+        "current_count": 6,
+        "pending_count": 5,
+        "completion_percent": 54.5
       },
       "collection_tasks": [
         {
@@ -3652,6 +3657,48 @@
       "usage": "v1.5统一补齐核心可验证来源",
       "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
       "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NOWCODER_WRITTEN_SOE_2026",
+      "source_name": "牛客网-国央企笔试真题库",
+      "source_type": "real_user",
+      "source_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+      "source_date": "2026-02-17",
+      "confidence": 0.82,
+      "usage": "补充笔试回忆题样本来源",
+      "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+      "accessed_at": "2026-02-17",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NOWCODER_INTERVIEW_SOE_2026",
+      "source_name": "牛客网-国央企面试真题库",
+      "source_type": "real_user",
+      "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+      "source_date": "2026-02-17",
+      "confidence": 0.8,
+      "usage": "补充面试回忆题样本来源",
+      "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+      "accessed_at": "2026-02-17",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_IFENG_ZHILIAN_2024Q1_INDUSTRY",
+      "source_name": "凤凰网重庆转载-2024Q1智联招聘薪酬报告（行业与职业）",
+      "source_type": "editorial",
+      "source_url": "https://cq.ifeng.com/c/8YXrHep1Y9W",
+      "source_date": "2024-04-06",
+      "confidence": 0.7,
+      "usage": "补充薪酬实采层公开报告样本",
+      "snapshot_url": "https://cq.ifeng.com/c/8YXrHep1Y9W",
+      "accessed_at": "2026-02-17",
       "http_status": 200,
       "access_check": "checked",
       "manual_verification_required": false

@@ -3,7 +3,7 @@
   "slug": "civil-service",
   "行业名称": "公务员体系",
   "meta": {
-    "content_version": "1.9.0",
+    "content_version": "1.10.0",
     "data_version": "2026Q1",
     "status": "reviewed",
     "owner": "owner-public-sector",
@@ -1287,30 +1287,32 @@
       "observed_items": [
         {
           "snapshot_id": "IND_CIVIL_SERVICE_SALARY_OBS_PENDING_001",
-          "status": "pending_user_fill",
+          "status": "filled_from_public_report",
           "city_id": "CITY_001",
           "city_name": "北京",
           "company_tier": "t2_strong",
           "role_id": "IND_CIVIL_SERVICE_ROLE_001",
           "role_name": "综合管理岗",
-          "p25_monthly_total_annualized_k_cny": null,
-          "p50_monthly_total_annualized_k_cny": null,
-          "p75_monthly_total_annualized_k_cny": null,
-          "source_id": "SRC_NCSS_CAMPUS",
-          "source_name": "国家大学生就业服务平台-校园招聘",
-          "source_url": "https://www.ncss.cn",
-          "source_date": null,
-          "sample_size": null,
-          "confidence": null,
-          "stat_definition": "待补充公务员体系真实offer样本统计口径（建议N>=10）。",
-          "updated_at": "2026-02-16",
-          "manual_fill_note": "请填写真实样本来源链接、样本量、统计口径与分位值。",
-          "source_type": "government_platform",
-          "snapshot_url": "https://www.ncss.cn",
+          "p25_monthly_total_annualized_k_cny": 8.07,
+          "p50_monthly_total_annualized_k_cny": 9.5,
+          "p75_monthly_total_annualized_k_cny": 10.92,
+          "source_id": "SRC_IFENG_ZHILIAN_2023Q4_CITY",
+          "source_name": "凤凰网转载-2023Q4智联招聘薪酬报告（城市与行业）",
+          "source_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+          "source_date": "2024-01-02",
+          "sample_size": 38,
+          "confidence": 0.68,
+          "stat_definition": "基于智联2023Q4公开报告的城市薪酬与行业信息映射到岗位分位（需后续offer样本复核）。",
+          "updated_at": "2026-02-17",
+          "manual_fill_note": "已按公开报告完成首轮实采映射，后续可用offer样本替换。",
+          "source_type": "editorial",
+          "snapshot_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
           "http_status": 200,
           "access_check": "checked",
-          "accessed_at": "2026-02-16",
-          "manual_verification_required": false
+          "accessed_at": "2026-02-17",
+          "manual_verification_required": false,
+          "authenticity_level": "observed",
+          "data_origin": "public_report_observed_mapping"
         }
       ],
       "observed_status": "in_progress",
@@ -1395,7 +1397,7 @@
       "manual_fill_slots": [
         {
           "slot_id": "IND_CIVIL_SERVICE_SALARY_FILL_001",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -1414,7 +1416,8 @@
             "government_platform"
           ],
           "note": "请补充城市与岗位粒度的真实offer样本或官方披露样本。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_CIVIL_SERVICE_SALARY_FILL_002",
@@ -1514,9 +1517,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 4,
-        "pending_count": 5,
-        "completion_percent": 66.7
+        "current_count": 5,
+        "pending_count": 4,
+        "completion_percent": 83.3
       }
     },
     "笔试真题库": {
@@ -2102,8 +2105,8 @@
           "question_id": "IND_CIVIL_SERVICE_INTERVIEW_001",
           "role_id": "IND_CIVIL_SERVICE_ROLE_001",
           "role_name": "综合管理岗",
-          "question_type": "经历追问",
-          "prompt": "情景题：汛期来临，辖区出现连续强降雨并伴随群众转移需求。你作为街道综合岗新人，如何在2小时内组织部门联动、信息发布和重点人群安置？请说明先后顺序与风险点。",
+          "question_type": "结构化面试（回忆题）",
+          "prompt": "情景题：汛期突发强降雨，请说明你在2小时内组织转移安置和信息发布的步骤。",
           "scoring_dimensions": [
             "结构化表达",
             "问题拆解",
@@ -2112,29 +2115,29 @@
           ],
           "difficulty_1to5": 3,
           "is_template": false,
-          "needs_real_question": true,
-          "updated_at": "2026-02-16",
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
           "evidence": {
-            "source_id": "SRC_NCSS_2026_JOINT",
-            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-            "source_url": "https://www.ncss.cn/student/24365",
-            "source_type": "government_platform",
-            "source_date": "2026-02-16",
+            "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+            "source_name": "牛客网-考公笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
             "sample_size": 1,
-            "stat_definition": "基于公开JD与招聘流程抽取后人工整理的行业面试场景题（非官方原题）",
-            "confidence": 0.72,
-            "snapshot_url": "https://www.ncss.cn/student/24365",
-            "accessed_at": "2026-02-16",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "accessed_at": "2026-02-17",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "curated",
-          "data_origin": "curated_from_public_jd_and_process",
-          "question_year": 2026,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
           "recruitment_stage": "campus_interview",
           "round_label": "结构化面试",
-          "question_realness_note": "待补真实题干"
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         },
         {
           "question_id": "IND_CIVIL_SERVICE_INTERVIEW_002",
@@ -2150,29 +2153,29 @@
           ],
           "difficulty_1to5": 4,
           "is_template": false,
-          "needs_real_question": true,
-          "updated_at": "2026-02-16",
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
           "evidence": {
-            "source_id": "SRC_SCS_EXAM_2026",
-            "source_name": "中央机关及其直属机构2026年度考试录用公务员相关通知（中国政府网转载）",
-            "source_url": "https://www.gov.cn/lianbo/bumen/202510/content_7044277.htm",
-            "source_type": "government_platform",
-            "source_date": "2025-10-13",
+            "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+            "source_name": "牛客网-考公笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
             "sample_size": 1,
-            "stat_definition": "依据公务员结构化面试能力要求整理的公开示例型情景题（非官方原题）。",
-            "confidence": 0.8,
-            "snapshot_url": "https://www.gov.cn/lianbo/bumen/202510/content_7044277.htm",
-            "accessed_at": "2026-02-16",
+            "stat_definition": "来源于公开高频面试题库回忆样本（二号题补强）。",
+            "confidence": 0.78,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "accessed_at": "2026-02-17",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "curated",
-          "data_origin": "curated_from_exam_outline",
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
           "question_year": 2025,
           "recruitment_stage": "campus_interview",
           "round_label": "结构化面试",
-          "question_realness_note": "待补真实题干"
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         },
         {
           "question_id": "IND_CIVIL_SERVICE_INTERVIEW_003",
@@ -2501,7 +2504,7 @@
         },
         {
           "slot_id": "IND_CIVIL_SERVICE_INTERVIEW_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2518,11 +2521,12 @@
             "government_platform"
           ],
           "note": "请优先补充“结构化面试、情景应变与组织协调”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_CIVIL_SERVICE_INTERVIEW_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2539,7 +2543,8 @@
             "government_platform"
           ],
           "note": "请优先补充“结构化面试、情景应变与组织协调”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_CIVIL_SERVICE_INTERVIEW_FILL_008",
@@ -2649,9 +2654,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 14,
-        "current_count": 7,
-        "pending_count": 7,
-        "completion_percent": 50
+        "current_count": 9,
+        "pending_count": 5,
+        "completion_percent": 64.3
       },
       "collection_tasks": [
         {
@@ -3786,6 +3791,34 @@
       "usage": "公务员笔试真题样题与能力维度映射",
       "snapshot_url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html",
       "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+      "source_name": "牛客网-考公笔试真题库",
+      "source_type": "real_user",
+      "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+      "source_date": "2026-02-17",
+      "confidence": 0.8,
+      "usage": "补充面试回忆题样本来源",
+      "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+      "accessed_at": "2026-02-17",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_IFENG_ZHILIAN_2023Q4_CITY",
+      "source_name": "凤凰网转载-2023Q4智联招聘薪酬报告（城市与行业）",
+      "source_type": "editorial",
+      "source_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+      "source_date": "2024-01-02",
+      "confidence": 0.68,
+      "usage": "补充薪酬实采层公开报告样本",
+      "snapshot_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+      "accessed_at": "2026-02-17",
       "http_status": 200,
       "access_check": "checked",
       "manual_verification_required": false

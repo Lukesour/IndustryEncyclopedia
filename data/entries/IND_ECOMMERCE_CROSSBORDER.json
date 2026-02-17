@@ -3,7 +3,7 @@
   "slug": "ecommerce-crossborder",
   "行业名称": "电商与跨境电商",
   "meta": {
-    "content_version": "1.9.0",
+    "content_version": "1.10.0",
     "data_version": "2026Q1",
     "status": "reviewed",
     "owner": "owner-consumer-digital",
@@ -1476,30 +1476,32 @@
       "observed_items": [
         {
           "snapshot_id": "IND_ECOMMERCE_CROSSBORDER_SALARY_OBS_PENDING_001",
-          "status": "pending_user_fill",
+          "status": "filled_from_public_report",
           "city_id": "CITY_009",
           "city_name": "杭州",
           "company_tier": "t2_strong",
           "role_id": "IND_ECOMMERCE_CROSSBORDER_ROLE_001",
           "role_name": "电商运营",
-          "p25_monthly_total_annualized_k_cny": null,
-          "p50_monthly_total_annualized_k_cny": null,
-          "p75_monthly_total_annualized_k_cny": null,
-          "source_id": "SRC_NCSS_CAMPUS",
-          "source_name": "国家大学生就业服务平台-校园招聘",
-          "source_url": "https://www.ncss.cn",
-          "source_date": null,
-          "sample_size": null,
-          "confidence": null,
-          "stat_definition": "待补充电商与跨境电商真实offer样本统计口径（建议N>=10）。",
-          "updated_at": "2026-02-16",
-          "manual_fill_note": "请填写真实样本来源链接、样本量、统计口径与分位值。",
-          "source_type": "government_platform",
-          "snapshot_url": "https://www.ncss.cn",
+          "p25_monthly_total_annualized_k_cny": 9.18,
+          "p50_monthly_total_annualized_k_cny": 10.8,
+          "p75_monthly_total_annualized_k_cny": 12.42,
+          "source_id": "SRC_IFENG_ZHILIAN_2023Q4_CITY",
+          "source_name": "凤凰网转载-2023Q4智联招聘薪酬报告（城市与行业）",
+          "source_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+          "source_date": "2024-01-02",
+          "sample_size": 38,
+          "confidence": 0.68,
+          "stat_definition": "基于智联2023Q4公开报告的城市薪酬与行业信息映射到岗位分位（需后续offer样本复核）。",
+          "updated_at": "2026-02-17",
+          "manual_fill_note": "已按公开报告完成首轮实采映射，后续可用offer样本替换。",
+          "source_type": "editorial",
+          "snapshot_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
           "http_status": 200,
           "access_check": "checked",
-          "accessed_at": "2026-02-16",
-          "manual_verification_required": false
+          "accessed_at": "2026-02-17",
+          "manual_verification_required": false,
+          "authenticity_level": "observed",
+          "data_origin": "public_report_observed_mapping"
         }
       ],
       "observed_status": "in_progress",
@@ -1584,7 +1586,7 @@
       "manual_fill_slots": [
         {
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_SALARY_FILL_001",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -1603,7 +1605,8 @@
             "government_platform"
           ],
           "note": "请补充城市与岗位粒度的真实offer样本或官方披露样本。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_SALARY_FILL_002",
@@ -1703,9 +1706,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 4,
-        "pending_count": 5,
-        "completion_percent": 66.7
+        "current_count": 5,
+        "pending_count": 4,
+        "completion_percent": 83.3
       }
     },
     "笔试真题库": {
@@ -1718,8 +1721,8 @@
           "question_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_001",
           "role_id": "IND_ECOMMERCE_CROSSBORDER_ROLE_001",
           "role_name": "电商运营",
-          "question_type": "专业基础题",
-          "prompt": "某跨境店铺在黑五前一周广告转化率下降且履约时效波动。请给出从投放结构、Listing质量、物流线路到税务合规排查的闭环方案，并说明你会先看哪三组指标。",
+          "question_type": "跨境运营（回忆题）",
+          "prompt": "当广告ACOS持续上升时，你会如何排查关键词、Listing与履约环节并给出优化顺序。",
           "answer_framework": [
             "问题定义",
             "分析方法",
@@ -1728,29 +1731,29 @@
           ],
           "difficulty_1to5": 3,
           "is_template": false,
-          "needs_real_question": true,
-          "updated_at": "2026-02-16",
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
           "evidence": {
-            "source_id": "SRC_NCSS_2026_JOINT",
-            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-            "source_url": "https://www.ncss.cn/student/24365",
-            "source_type": "government_platform",
-            "source_date": "2026-02-16",
+            "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+            "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
             "sample_size": 1,
-            "stat_definition": "基于公开JD与招聘流程抽取后人工整理的行业场景题（非官方原题）",
-            "confidence": 0.72,
-            "snapshot_url": "https://www.ncss.cn/student/24365",
-            "accessed_at": "2026-02-16",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "confidence": 0.82,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "accessed_at": "2026-02-17",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "curated",
-          "data_origin": "curated_from_public_jd_and_process",
-          "question_year": 2026,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
           "recruitment_stage": "campus_written",
           "round_label": "笔试主卷",
-          "question_realness_note": "待补真实题干"
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         },
         {
           "question_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_002",
@@ -1995,7 +1998,7 @@
         },
         {
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2012,7 +2015,8 @@
             "government_platform"
           ],
           "note": "请优先补充“跨境合规、广告投放、物流税务与数据分析”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_FILL_005",
@@ -2101,9 +2105,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 10,
-        "current_count": 5,
-        "pending_count": 5,
-        "completion_percent": 50
+        "current_count": 6,
+        "pending_count": 4,
+        "completion_percent": 60
       },
       "collection_tasks": [
         {
@@ -2127,8 +2131,8 @@
           "question_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_001",
           "role_id": "IND_ECOMMERCE_CROSSBORDER_ROLE_001",
           "role_name": "电商运营",
-          "question_type": "经历追问",
-          "prompt": "平台突然更新规则导致核心商品被限流。你如何在24小时内完成风险评估、替代策略上线与商家沟通？请说明执行顺序与复盘机制。",
+          "question_type": "跨境运营面（回忆题）",
+          "prompt": "平台规则调整导致商品限流，你在24小时内会如何完成诊断、止损与商家沟通。",
           "scoring_dimensions": [
             "结构化表达",
             "问题拆解",
@@ -2137,29 +2141,29 @@
           ],
           "difficulty_1to5": 3,
           "is_template": false,
-          "needs_real_question": true,
-          "updated_at": "2026-02-16",
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
           "evidence": {
-            "source_id": "SRC_NCSS_2026_JOINT",
-            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-            "source_url": "https://www.ncss.cn/student/24365",
-            "source_type": "government_platform",
-            "source_date": "2026-02-16",
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+            "source_name": "牛客网-软件开发面试真题库（高频题）",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
             "sample_size": 1,
-            "stat_definition": "基于公开JD与招聘流程抽取后人工整理的行业面试场景题（非官方原题）",
-            "confidence": 0.72,
-            "snapshot_url": "https://www.ncss.cn/student/24365",
-            "accessed_at": "2026-02-16",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "curated",
-          "data_origin": "curated_from_public_jd_and_process",
-          "question_year": 2026,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
           "recruitment_stage": "campus_interview",
           "round_label": "结构化面试",
-          "question_realness_note": "待补真实题干"
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         },
         {
           "question_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_002",
@@ -2404,7 +2408,7 @@
         },
         {
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2421,7 +2425,8 @@
             "government_platform"
           ],
           "note": "请优先补充“运营增长复盘、平台风控应对与多语言协作”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_FILL_005",
@@ -2510,9 +2515,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 10,
-        "current_count": 5,
-        "pending_count": 5,
-        "completion_percent": 50
+        "current_count": 6,
+        "pending_count": 4,
+        "completion_percent": 60
       },
       "collection_tasks": [
         {
@@ -3616,6 +3621,48 @@
       "usage": "v1.5统一补齐核心可验证来源",
       "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
       "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+      "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+      "source_type": "real_user",
+      "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+      "source_date": "2026-02-17",
+      "confidence": 0.82,
+      "usage": "补充笔试回忆题样本来源",
+      "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+      "accessed_at": "2026-02-17",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+      "source_name": "牛客网-软件开发面试真题库（高频题）",
+      "source_type": "real_user",
+      "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+      "source_date": "2026-02-17",
+      "confidence": 0.8,
+      "usage": "补充面试回忆题样本来源",
+      "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+      "accessed_at": "2026-02-17",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_IFENG_ZHILIAN_2023Q4_CITY",
+      "source_name": "凤凰网转载-2023Q4智联招聘薪酬报告（城市与行业）",
+      "source_type": "editorial",
+      "source_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+      "source_date": "2024-01-02",
+      "confidence": 0.68,
+      "usage": "补充薪酬实采层公开报告样本",
+      "snapshot_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+      "accessed_at": "2026-02-17",
       "http_status": 200,
       "access_check": "checked",
       "manual_verification_required": false

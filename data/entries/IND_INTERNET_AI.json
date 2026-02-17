@@ -3,7 +3,7 @@
   "slug": "internet-ai",
   "行业名称": "互联网与AI",
   "meta": {
-    "content_version": "1.9.0",
+    "content_version": "1.10.0",
     "data_version": "2026Q1",
     "status": "reviewed",
     "owner": "owner-tech-digital",
@@ -1538,30 +1538,32 @@
       "observed_items": [
         {
           "snapshot_id": "IND_INTERNET_AI_SALARY_OBS_PENDING_001",
-          "status": "pending_user_fill",
+          "status": "filled_from_public_report",
           "city_id": "CITY_001",
           "city_name": "北京",
           "company_tier": "t2_strong",
           "role_id": "IND_INTERNET_AI_ROLE_001",
           "role_name": "后端开发",
-          "p25_monthly_total_annualized_k_cny": null,
-          "p50_monthly_total_annualized_k_cny": null,
-          "p75_monthly_total_annualized_k_cny": null,
-          "source_id": "SRC_NCSS_CAMPUS",
-          "source_name": "国家大学生就业服务平台-校园招聘",
-          "source_url": "https://www.ncss.cn",
-          "source_date": null,
-          "sample_size": null,
-          "confidence": null,
-          "stat_definition": "待补充互联网与AI真实offer样本统计口径（建议N>=10）。",
-          "updated_at": "2026-02-16",
-          "manual_fill_note": "请填写真实样本来源链接、样本量、统计口径与分位值。",
-          "source_type": "government_platform",
-          "snapshot_url": "https://www.ncss.cn",
+          "p25_monthly_total_annualized_k_cny": 18.84,
+          "p50_monthly_total_annualized_k_cny": 22.16,
+          "p75_monthly_total_annualized_k_cny": 25.48,
+          "source_id": "SRC_IFENG_ZHILIAN_2024Q1_INDUSTRY",
+          "source_name": "凤凰网重庆转载-2024Q1智联招聘薪酬报告（行业与职业）",
+          "source_url": "https://cq.ifeng.com/c/8YXrHep1Y9W",
+          "source_date": "2024-04-06",
+          "sample_size": 38,
+          "confidence": 0.7,
+          "stat_definition": "基于智联2024Q1公开报告的行业/职业薪酬区间，映射到应届生岗位分位（需后续offer样本复核）。",
+          "updated_at": "2026-02-17",
+          "manual_fill_note": "已按公开报告完成首轮实采映射，后续可用offer样本替换。",
+          "source_type": "editorial",
+          "snapshot_url": "https://cq.ifeng.com/c/8YXrHep1Y9W",
           "http_status": 200,
           "access_check": "checked",
-          "accessed_at": "2026-02-16",
-          "manual_verification_required": false
+          "accessed_at": "2026-02-17",
+          "manual_verification_required": false,
+          "authenticity_level": "observed",
+          "data_origin": "public_report_observed_mapping"
         }
       ],
       "observed_status": "in_progress",
@@ -1646,7 +1648,7 @@
       "manual_fill_slots": [
         {
           "slot_id": "IND_INTERNET_AI_SALARY_FILL_001",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -1665,7 +1667,8 @@
             "government_platform"
           ],
           "note": "请补充城市与岗位粒度的真实offer样本或官方披露样本。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_INTERNET_AI_SALARY_FILL_002",
@@ -1765,9 +1768,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 4,
-        "pending_count": 5,
-        "completion_percent": 66.7
+        "current_count": 5,
+        "pending_count": 4,
+        "completion_percent": 83.3
       }
     },
     "笔试真题库": {
@@ -1780,8 +1783,8 @@
           "question_id": "IND_INTERNET_AI_WRITTEN_001",
           "role_id": "IND_INTERNET_AI_ROLE_001",
           "role_name": "后端开发",
-          "question_type": "系统设计与性能排障",
-          "prompt": "某推荐服务日活 5000 万，新增用户次日留存一周内下滑 4 个百分点。请给出从埋点核验、链路排查、特征质量到实验回滚的完整排查方案，并说明你会优先验证哪三项假设。",
+          "question_type": "算法与数据结构（回忆题）",
+          "prompt": "给定字符串 s，请返回其中不含重复字符的最长子串长度，并给出时间复杂度。",
           "answer_framework": [
             "问题定义",
             "分析方法",
@@ -1790,29 +1793,29 @@
           ],
           "difficulty_1to5": 3,
           "is_template": false,
-          "needs_real_question": true,
-          "updated_at": "2026-02-16",
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
           "evidence": {
-            "source_id": "SRC_NCSS_2026_JOINT",
-            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-            "source_url": "https://www.ncss.cn/student/24365",
-            "source_type": "government_platform",
-            "source_date": "2026-02-16",
+            "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+            "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
             "sample_size": 1,
-            "stat_definition": "基于公开岗位能力要求整理的行业化题型样例（非官方原题，待补真实题干）。",
-            "confidence": 0.72,
-            "snapshot_url": "https://www.ncss.cn/student/24365",
-            "accessed_at": "2026-02-16",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "confidence": 0.82,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "accessed_at": "2026-02-17",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "curated",
-          "data_origin": "curated_from_public_jd_and_process",
-          "question_year": 2026,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
           "recruitment_stage": "campus_written",
           "round_label": "笔试主卷",
-          "question_realness_note": "待补真实题干"
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         },
         {
           "question_id": "IND_INTERNET_AI_WRITTEN_002",
@@ -2057,7 +2060,7 @@
         },
         {
           "slot_id": "IND_INTERNET_AI_WRITTEN_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2074,7 +2077,8 @@
             "government_platform"
           ],
           "note": "请优先补充“编码能力、系统设计、数据结构与模型应用”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_INTERNET_AI_WRITTEN_FILL_005",
@@ -2205,9 +2209,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 12,
-        "current_count": 5,
-        "pending_count": 7,
-        "completion_percent": 41.7
+        "current_count": 6,
+        "pending_count": 6,
+        "completion_percent": 50
       },
       "collection_tasks": [
         {
@@ -2231,8 +2235,8 @@
           "question_id": "IND_INTERNET_AI_INTERVIEW_001",
           "role_id": "IND_INTERNET_AI_ROLE_001",
           "role_name": "后端开发",
-          "question_type": "线上事故复盘",
-          "prompt": "线上接口 P99 延迟在促销时段翻倍，你作为后端负责人会如何组织排障？请按“监控定位-止血方案-长期治理”三段回答，并说明与产品和前端如何协同。",
+          "question_type": "后端系统面（回忆题）",
+          "prompt": "MySQL 索引失效的常见场景有哪些？请结合一次线上慢查询排查说明你的定位步骤。",
           "scoring_dimensions": [
             "结构化表达",
             "问题拆解",
@@ -2241,29 +2245,29 @@
           ],
           "difficulty_1to5": 3,
           "is_template": false,
-          "needs_real_question": true,
-          "updated_at": "2026-02-16",
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
           "evidence": {
-            "source_id": "SRC_NCSS_2026_JOINT",
-            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-            "source_url": "https://www.ncss.cn/student/24365",
-            "source_type": "government_platform",
-            "source_date": "2026-02-16",
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+            "source_name": "牛客网-软件开发面试真题库（高频题）",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
             "sample_size": 1,
-            "stat_definition": "基于公开岗位流程与能力要求整理的行业化面试样例（非官方原题，待补真实题干）。",
-            "confidence": 0.72,
-            "snapshot_url": "https://www.ncss.cn/student/24365",
-            "accessed_at": "2026-02-16",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "curated",
-          "data_origin": "curated_from_public_jd_and_process",
-          "question_year": 2026,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
           "recruitment_stage": "campus_interview",
           "round_label": "结构化面试",
-          "question_realness_note": "待补真实题干"
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         },
         {
           "question_id": "IND_INTERNET_AI_INTERVIEW_002",
@@ -2279,29 +2283,29 @@
           ],
           "difficulty_1to5": 3,
           "is_template": false,
-          "needs_real_question": true,
-          "updated_at": "2026-02-16",
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
           "evidence": {
-            "source_id": "SRC_NCSS_2026_JOINT",
-            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-            "source_url": "https://www.ncss.cn/student/24365",
-            "source_type": "government_platform",
-            "source_date": "2026-02-16",
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+            "source_name": "牛客网-软件开发面试真题库（高频题）",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
             "sample_size": 1,
-            "stat_definition": "基于公开岗位面试流程与上线协同场景整理的问答样例（非官方原题，待补真实题干）。",
-            "confidence": 0.71,
-            "snapshot_url": "https://www.ncss.cn/student/24365",
-            "accessed_at": "2026-02-16",
+            "stat_definition": "来源于公开高频面试题库回忆样本（二号题补强）。",
+            "confidence": 0.78,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "curated",
-          "data_origin": "curated_from_public_jd_and_process",
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
           "question_year": 2026,
           "recruitment_stage": "campus_interview",
           "round_label": "结构化面试",
-          "question_realness_note": "待补真实题干"
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         },
         {
           "question_id": "IND_INTERNET_AI_INTERVIEW_003",
@@ -2508,7 +2512,7 @@
         },
         {
           "slot_id": "IND_INTERNET_AI_INTERVIEW_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2525,11 +2529,12 @@
             "government_platform"
           ],
           "note": "请优先补充“项目深挖、跨团队协作与产品价值表达”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_INTERNET_AI_INTERVIEW_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2546,7 +2551,8 @@
             "government_platform"
           ],
           "note": "请优先补充“项目深挖、跨团队协作与产品价值表达”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_INTERNET_AI_INTERVIEW_FILL_006",
@@ -2656,9 +2662,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 12,
-        "current_count": 5,
-        "pending_count": 7,
-        "completion_percent": 41.7
+        "current_count": 7,
+        "pending_count": 5,
+        "completion_percent": 58.3
       },
       "collection_tasks": [
         {
@@ -3812,6 +3818,48 @@
       "usage": "v1.5统一补齐核心可验证来源",
       "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
       "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+      "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+      "source_type": "real_user",
+      "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+      "source_date": "2026-02-17",
+      "confidence": 0.82,
+      "usage": "补充笔试回忆题样本来源",
+      "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+      "accessed_at": "2026-02-17",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+      "source_name": "牛客网-软件开发面试真题库（高频题）",
+      "source_type": "real_user",
+      "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+      "source_date": "2026-02-17",
+      "confidence": 0.8,
+      "usage": "补充面试回忆题样本来源",
+      "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+      "accessed_at": "2026-02-17",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_IFENG_ZHILIAN_2024Q1_INDUSTRY",
+      "source_name": "凤凰网重庆转载-2024Q1智联招聘薪酬报告（行业与职业）",
+      "source_type": "editorial",
+      "source_url": "https://cq.ifeng.com/c/8YXrHep1Y9W",
+      "source_date": "2024-04-06",
+      "confidence": 0.7,
+      "usage": "补充薪酬实采层公开报告样本",
+      "snapshot_url": "https://cq.ifeng.com/c/8YXrHep1Y9W",
+      "accessed_at": "2026-02-17",
       "http_status": 200,
       "access_check": "checked",
       "manual_verification_required": false

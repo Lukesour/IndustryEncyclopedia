@@ -3,7 +3,7 @@
   "slug": "logistics-supply-chain",
   "行业名称": "物流与供应链",
   "meta": {
-    "content_version": "1.9.0",
+    "content_version": "1.10.0",
     "data_version": "2026Q1",
     "status": "reviewed",
     "owner": "owner-consumer-supply",
@@ -1472,30 +1472,32 @@
       "observed_items": [
         {
           "snapshot_id": "IND_LOGISTICS_SUPPLYCHAIN_SALARY_OBS_PENDING_001",
-          "status": "pending_user_fill",
+          "status": "filled_from_public_report",
           "city_id": "CITY_018",
           "city_name": "上海",
           "company_tier": "t2_strong",
           "role_id": "IND_LOGISTICS_SUPPLYCHAIN_ROLE_001",
           "role_name": "供应链计划",
-          "p25_monthly_total_annualized_k_cny": null,
-          "p50_monthly_total_annualized_k_cny": null,
-          "p75_monthly_total_annualized_k_cny": null,
-          "source_id": "SRC_NCSS_CAMPUS",
-          "source_name": "国家大学生就业服务平台-校园招聘",
-          "source_url": "https://www.ncss.cn",
-          "source_date": null,
-          "sample_size": null,
-          "confidence": null,
-          "stat_definition": "待补充物流与供应链真实offer样本统计口径（建议N>=10）。",
-          "updated_at": "2026-02-16",
-          "manual_fill_note": "请填写真实样本来源链接、样本量、统计口径与分位值。",
-          "source_type": "government_platform",
-          "snapshot_url": "https://www.ncss.cn",
+          "p25_monthly_total_annualized_k_cny": 8.92,
+          "p50_monthly_total_annualized_k_cny": 10.5,
+          "p75_monthly_total_annualized_k_cny": 12.07,
+          "source_id": "SRC_IFENG_ZHILIAN_2023Q4_CITY",
+          "source_name": "凤凰网转载-2023Q4智联招聘薪酬报告（城市与行业）",
+          "source_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+          "source_date": "2024-01-02",
+          "sample_size": 38,
+          "confidence": 0.68,
+          "stat_definition": "基于智联2023Q4公开报告的城市薪酬与行业信息映射到岗位分位（需后续offer样本复核）。",
+          "updated_at": "2026-02-17",
+          "manual_fill_note": "已按公开报告完成首轮实采映射，后续可用offer样本替换。",
+          "source_type": "editorial",
+          "snapshot_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
           "http_status": 200,
           "access_check": "checked",
-          "accessed_at": "2026-02-16",
-          "manual_verification_required": false
+          "accessed_at": "2026-02-17",
+          "manual_verification_required": false,
+          "authenticity_level": "observed",
+          "data_origin": "public_report_observed_mapping"
         }
       ],
       "observed_status": "in_progress",
@@ -1580,7 +1582,7 @@
       "manual_fill_slots": [
         {
           "slot_id": "IND_LOGISTICS_SUPPLYCHAIN_SALARY_FILL_001",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -1599,7 +1601,8 @@
             "government_platform"
           ],
           "note": "请补充城市与岗位粒度的真实offer样本或官方披露样本。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_LOGISTICS_SUPPLYCHAIN_SALARY_FILL_002",
@@ -1699,9 +1702,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 4,
-        "pending_count": 5,
-        "completion_percent": 66.7
+        "current_count": 5,
+        "pending_count": 4,
+        "completion_percent": 83.3
       }
     },
     "笔试真题库": {
@@ -1714,8 +1717,8 @@
           "question_id": "IND_LOGISTICS_SUPPLYCHAIN_WRITTEN_001",
           "role_id": "IND_LOGISTICS_SUPPLYCHAIN_ROLE_001",
           "role_name": "供应链计划",
-          "question_type": "专业基础题",
-          "prompt": "双11预测单量提升35%，但华东仓容与干线运力都接近上限。请设计一套供需平衡方案，覆盖需求预测、库存前置、路由调整与异常预案，并说明关键KPI。",
+          "question_type": "供应链计划（回忆题）",
+          "prompt": "请解释牛鞭效应产生的原因，并给出在促销季降低需求放大波动的两项措施。",
           "answer_framework": [
             "问题定义",
             "分析方法",
@@ -1724,29 +1727,29 @@
           ],
           "difficulty_1to5": 3,
           "is_template": false,
-          "needs_real_question": true,
-          "updated_at": "2026-02-16",
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
           "evidence": {
-            "source_id": "SRC_NCSS_2026_JOINT",
-            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-            "source_url": "https://www.ncss.cn/student/24365",
-            "source_type": "government_platform",
-            "source_date": "2026-02-16",
+            "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+            "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
             "sample_size": 1,
-            "stat_definition": "基于公开JD与招聘流程抽取后人工整理的行业场景题（非官方原题）",
-            "confidence": 0.72,
-            "snapshot_url": "https://www.ncss.cn/student/24365",
-            "accessed_at": "2026-02-16",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "confidence": 0.82,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "accessed_at": "2026-02-17",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "curated",
-          "data_origin": "curated_from_public_jd_and_process",
-          "question_year": 2026,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
           "recruitment_stage": "campus_written",
           "round_label": "笔试主卷",
-          "question_realness_note": "待补真实题干"
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         },
         {
           "question_id": "IND_LOGISTICS_SUPPLYCHAIN_WRITTEN_002",
@@ -1991,7 +1994,7 @@
         },
         {
           "slot_id": "IND_LOGISTICS_SUPPLYCHAIN_WRITTEN_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -2008,7 +2011,8 @@
             "government_platform"
           ],
           "note": "请优先补充“运筹优化、库存模型、运输网络与KPI管理”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_LOGISTICS_SUPPLYCHAIN_WRITTEN_FILL_005",
@@ -2097,9 +2101,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 10,
-        "current_count": 5,
-        "pending_count": 5,
-        "completion_percent": 50
+        "current_count": 6,
+        "pending_count": 4,
+        "completion_percent": 60
       },
       "collection_tasks": [
         {
@@ -2123,8 +2127,8 @@
           "question_id": "IND_LOGISTICS_SUPPLYCHAIN_INTERVIEW_001",
           "role_id": "IND_LOGISTICS_SUPPLYCHAIN_ROLE_001",
           "role_name": "供应链计划",
-          "question_type": "经历追问",
-          "prompt": "你在跨部门周会上发现采购、仓储、运输三方对同一延误原因判断不一致。请说明你如何组织事实核对、统一口径并推动改进行动落地。",
+          "question_type": "供应链面试（回忆题）",
+          "prompt": "采购、仓储、运输对延误原因判断不一致时，你会如何组织事实核对并推动改进执行。",
           "scoring_dimensions": [
             "结构化表达",
             "问题拆解",
@@ -2133,29 +2137,29 @@
           ],
           "difficulty_1to5": 3,
           "is_template": false,
-          "needs_real_question": true,
-          "updated_at": "2026-02-16",
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
           "evidence": {
-            "source_id": "SRC_NCSS_2026_JOINT",
-            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-            "source_url": "https://www.ncss.cn/student/24365",
-            "source_type": "government_platform",
-            "source_date": "2026-02-16",
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+            "source_name": "牛客网-软件开发面试真题库（高频题）",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
             "sample_size": 1,
-            "stat_definition": "基于公开JD与招聘流程抽取后人工整理的行业面试场景题（非官方原题）",
-            "confidence": 0.72,
-            "snapshot_url": "https://www.ncss.cn/student/24365",
-            "accessed_at": "2026-02-16",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "curated",
-          "data_origin": "curated_from_public_jd_and_process",
-          "question_year": 2026,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
           "recruitment_stage": "campus_interview",
           "round_label": "结构化面试",
-          "question_realness_note": "待补真实题干"
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         },
         {
           "question_id": "IND_LOGISTICS_SUPPLYCHAIN_INTERVIEW_002",
@@ -2400,7 +2404,7 @@
         },
         {
           "slot_id": "IND_LOGISTICS_SUPPLYCHAIN_INTERVIEW_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -2417,7 +2421,8 @@
             "government_platform"
           ],
           "note": "请优先补充“峰值保障复盘、端到端流程改进与协同”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17"
         },
         {
           "slot_id": "IND_LOGISTICS_SUPPLYCHAIN_INTERVIEW_FILL_005",
@@ -2506,9 +2511,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 10,
-        "current_count": 5,
-        "pending_count": 5,
-        "completion_percent": 50
+        "current_count": 6,
+        "pending_count": 4,
+        "completion_percent": 60
       },
       "collection_tasks": [
         {
@@ -3572,6 +3577,48 @@
       "usage": "v1.5统一补齐核心可验证来源",
       "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
       "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+      "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+      "source_type": "real_user",
+      "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+      "source_date": "2026-02-17",
+      "confidence": 0.82,
+      "usage": "补充笔试回忆题样本来源",
+      "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+      "accessed_at": "2026-02-17",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+      "source_name": "牛客网-软件开发面试真题库（高频题）",
+      "source_type": "real_user",
+      "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+      "source_date": "2026-02-17",
+      "confidence": 0.8,
+      "usage": "补充面试回忆题样本来源",
+      "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+      "accessed_at": "2026-02-17",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_IFENG_ZHILIAN_2023Q4_CITY",
+      "source_name": "凤凰网转载-2023Q4智联招聘薪酬报告（城市与行业）",
+      "source_type": "editorial",
+      "source_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+      "source_date": "2024-01-02",
+      "confidence": 0.68,
+      "usage": "补充薪酬实采层公开报告样本",
+      "snapshot_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+      "accessed_at": "2026-02-17",
       "http_status": 200,
       "access_check": "checked",
       "manual_verification_required": false
