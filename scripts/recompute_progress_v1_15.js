@@ -14,6 +14,12 @@ function round1(n) {
   return Math.round(n * 10) / 10;
 }
 
+function ratioScore(actual, target) {
+  if (target <= 0) return 100;
+  const v = Math.min(1, actual / target);
+  return round1(v * 100);
+}
+
 const entries = data['行业词条'] || [];
 
 for (const entry of entries) {
@@ -81,6 +87,43 @@ for (const entry of entries) {
 
   weakest.sort((a, b) => a.score - b.score);
 
+  const baseQualityScore = metricCount ? round1(sumQuality / metricCount) : 0;
+
+  const salaryMicro = dynamic['薪酬快照_按城市_按公司层级_按岗位'] || {};
+  const observedItems = Array.isArray(salaryMicro.observed_items) ? salaryMicro.observed_items : [];
+  const salaryCityCoverage = new Set(observedItems.map((x) => x?.city_id).filter(Boolean)).size;
+  const salaryRoleCoverage = new Set(observedItems.map((x) => x?.role_id).filter(Boolean)).size;
+  const salaryCoverageScore = round1(
+    (ratioScore(Math.min(salaryCityCoverage, 4), 4) + ratioScore(Math.min(salaryRoleCoverage, 4), 4)) / 2,
+  );
+
+  const writtenItems = Array.isArray(dynamic['笔试真题库']?.items) ? dynamic['笔试真题库'].items : [];
+  const interviewItems = Array.isArray(dynamic['面试真题库']?.items) ? dynamic['面试真题库'].items : [];
+  const writtenRoleCoverage = new Set(writtenItems.map((x) => x?.role_id).filter(Boolean)).size;
+  const interviewRoleCoverage = new Set(interviewItems.map((x) => x?.role_id).filter(Boolean)).size;
+  const questionRoleCoverageScore = round1(
+    (ratioScore(Math.min(writtenRoleCoverage, 4), 4) + ratioScore(Math.min(interviewRoleCoverage, 4), 4)) / 2,
+  );
+
+  const decisionItems = Array.isArray(dynamic['自定义扩展']?.items) ? dynamic['自定义扩展'].items : [];
+  const decisionEvidenceScore = decisionItems.length > 0
+    ? round1(
+      (decisionItems.reduce((acc, item) => {
+        const minRequired = Math.max(1, toNum(item?.x_decision_min_sample_required, 8));
+        const actual = toNum(item?.evidence?.sample_size, 0);
+        return acc + ratioScore(Math.min(actual, minRequired), minRequired);
+      }, 0)) / decisionItems.length,
+    )
+    : 0;
+
+  // v1.21: 将可解释性增强指标并入总分，拉开行业差异。
+  const qualityScoreOverall = round1(
+    baseQualityScore * 0.7
+    + salaryCoverageScore * 0.15
+    + questionRoleCoverageScore * 0.1
+    + decisionEvidenceScore * 0.05,
+  );
+
   entry.progress = {
     todo_collections: todo,
     in_progress_collections: inProgress,
@@ -92,7 +135,7 @@ for (const entry of entries) {
     freshness_percent_overall: metricCount ? round1(sumFreshness / metricCount) : 0,
     real_data_ratio_overall: metricCount ? round1(sumReal / metricCount) : 0,
     template_ratio_overall: metricCount ? round1(sumTemplate / metricCount) : 0,
-    quality_score_overall: metricCount ? round1(sumQuality / metricCount) : 0,
+    quality_score_overall: qualityScoreOverall,
     verified_ratio_percent: tracked ? round1((verified * 100) / tracked) : 0,
     weakest_collections: weakest.slice(0, 3).map((x) => x.key),
     manual_fill_required_total: manualRequiredTotal,

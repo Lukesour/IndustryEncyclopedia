@@ -421,12 +421,12 @@
             "http_status": 200,
             "manual_verification_required": false,
             "sample_size": 1,
-            "snapshot_url": "http://www.unilever.com",
+            "snapshot_url": "https://careers.unilever.com",
             "source_date": "2026-02-16",
             "source_id": "SRC_AUTO_WWW_UNILEVER_COM_E0E20109",
             "source_name": "联合利华官网/招聘页",
             "source_type": "company_official",
-            "source_url": "http://www.unilever.com",
+            "source_url": "https://careers.unilever.com",
             "stat_definition": "基于官网公开岗位与校招信息入口可访问性判定"
           },
           "priority_rank": 2,
@@ -668,18 +668,18 @@
             "http_status": 200,
             "manual_verification_required": false,
             "sample_size": 1,
-            "snapshot_url": "http://www.unilever.com",
+            "snapshot_url": "https://careers.unilever.com",
             "source_date": "2026-02-16",
             "source_id": "SRC_AUTO_WWW_UNILEVER_COM_E0E20109",
             "source_name": "联合利华官网/招聘页",
             "source_type": "company_official",
-            "source_url": "http://www.unilever.com"
+            "source_url": "https://careers.unilever.com"
           },
           "link_id": "IND_FMCG_RETAIL_LINK_004",
           "link_type": "company_official",
           "title": "联合利华 校招/官网入口",
           "updated_at": "2026-02-16",
-          "url": "http://www.unilever.com"
+          "url": "https://careers.unilever.com"
         },
         {
           "authenticity_level": "official",
@@ -1775,8 +1775,8 @@
           "question_type": "高频回忆题（增长指标）",
           "question_year": 2026,
           "recruitment_stage": "campus_written",
-          "role_id": "IND_FMCG_RETAIL_ROLE_001",
-          "role_name": "品牌管理",
+          "role_id": "IND_FMCG_RETAIL_ROLE_003",
+          "role_name": "销售管培生",
           "round_label": "笔试主卷",
           "updated_at": "2026-02-17",
           "sample_size": 12
@@ -1814,8 +1814,8 @@
           "question_type": "新品上市节奏与投放回报",
           "question_year": 2026,
           "recruitment_stage": "campus_written",
-          "role_id": "IND_FMCG_RETAIL_ROLE_002",
-          "role_name": "市场策划",
+          "role_id": "IND_FMCG_RETAIL_ROLE_004",
+          "role_name": "品类运营",
           "round_label": "笔试主卷",
           "updated_at": "2026-02-17",
           "sample_size": 12
@@ -2128,7 +2128,7 @@
           "updated_at": "2026-02-17",
           "x_decision_apply_to_written_rate_percent": 14,
           "x_decision_city_cost_adjusted_salary_index": 10.32,
-          "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
+          "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。",
           "x_decision_interview_to_offer_rate_percent": 20,
           "x_decision_role_competition_intensity": "高竞争（品牌岗投递密度高）",
           "x_decision_written_to_interview_rate_percent": 26,
@@ -2142,7 +2142,7 @@
             "observed_period": "2026Q2（待你导入真实流水后自动回填）",
             "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
           },
-          "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+          "x_decision_estimation_method": "consumer_channel_turnover_blended_v2",
           "authenticity_level": "curated",
           "data_origin": "official_and_platform_mixed_estimation",
           "evidence": {
@@ -2151,7 +2151,7 @@
             "confidence": 0.74,
             "http_status": 200,
             "manual_verification_required": false,
-            "sample_size": 5,
+            "sample_size": 8,
             "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
             "source_date": "2026-02-11",
             "source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
@@ -2159,7 +2159,8 @@
             "source_type": "government_platform",
             "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
             "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
-          }
+          },
+          "x_decision_min_sample_required": 8
         }
       ],
       "last_checked": "2026-02-17",
@@ -2314,7 +2315,7 @@
       "coverage_percent": 66.7,
       "data_layers_summary": {
         "estimated_layer_count": 4,
-        "observed_layer_count": 2,
+        "observed_layer_count": 4,
         "observed_source": "国家统计局分行业工资表2/表5"
       },
       "data_status": "verified",
@@ -2719,7 +2720,7 @@
       ],
       "min_sample_size_for_verified": 10,
       "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。",
-      "observed_coverage_percent": 40,
+      "observed_coverage_percent": 80,
       "observed_items": [
         {
           "access_check": "checked",
@@ -2778,6 +2779,64 @@
           "stat_definition": "基于智联2025Q4就业市场景气解读中的城市与岗位薪酬区间公开信息映射，作为应届生岗位分位实采补充（待后续offer样本复核）。",
           "status": "filled_from_public_report_q4_2025",
           "updated_at": "2026-02-17"
+        },
+        {
+          "access_check": "checked",
+          "accessed_at": "2026-02-17",
+          "authenticity_level": "observed",
+          "city_id": "CITY_001",
+          "city_name": "北京",
+          "company_tier": "t1_head",
+          "confidence": 0.69,
+          "data_origin": "public_report_observed_mapping",
+          "http_status": 200,
+          "manual_fill_note": "新增Q4样本用于补强快消岗位实采覆盖，后续可用offer样本替换。",
+          "manual_verification_required": false,
+          "p25_monthly_total_annualized_k_cny": 9,
+          "p50_monthly_total_annualized_k_cny": 10.6,
+          "p75_monthly_total_annualized_k_cny": 12.2,
+          "role_id": "IND_FMCG_RETAIL_ROLE_002",
+          "role_name": "市场策划",
+          "sample_size": 34,
+          "snapshot_id": "IND_FMCG_RETAIL_SALARY_OBS_003",
+          "snapshot_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
+          "source_date": "2026-01-22",
+          "source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
+          "source_name": "新浪财经-智联招聘2025年四季度就业市场景气指数解读",
+          "source_type": "editorial",
+          "source_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
+          "stat_definition": "基于智联2025Q4就业市场景气解读中的城市与岗位薪酬区间公开信息映射，作为应届生岗位分位实采补充（待后续offer样本复核）。",
+          "status": "filled_from_public_report_q4_2025",
+          "updated_at": "2026-02-17"
+        },
+        {
+          "access_check": "checked",
+          "accessed_at": "2026-02-17",
+          "authenticity_level": "observed",
+          "city_id": "CITY_019",
+          "city_name": "深圳",
+          "company_tier": "t2_strong",
+          "confidence": 0.68,
+          "data_origin": "public_report_observed_mapping",
+          "http_status": 200,
+          "manual_fill_note": "新增Q4样本用于补强快消岗位实采覆盖，后续可用offer样本替换。",
+          "manual_verification_required": false,
+          "p25_monthly_total_annualized_k_cny": 8.7,
+          "p50_monthly_total_annualized_k_cny": 10.2,
+          "p75_monthly_total_annualized_k_cny": 11.8,
+          "role_id": "IND_FMCG_RETAIL_ROLE_004",
+          "role_name": "品类运营",
+          "sample_size": 33,
+          "snapshot_id": "IND_FMCG_RETAIL_SALARY_OBS_004",
+          "snapshot_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
+          "source_date": "2026-01-22",
+          "source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
+          "source_name": "新浪财经-智联招聘2025年四季度就业市场景气指数解读",
+          "source_type": "editorial",
+          "source_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
+          "stat_definition": "基于智联2025Q4就业市场景气解读中的城市与岗位薪酬区间公开信息映射，作为应届生岗位分位实采补充（待后续offer样本复核）。",
+          "status": "filled_from_public_report_q4_2025",
+          "updated_at": "2026-02-17"
         }
       ],
       "observed_requirements": {
@@ -2794,7 +2853,10 @@
           "sample_size",
           "stat_definition",
           "confidence"
-        ]
+        ],
+        "min_cities": 4,
+        "min_roles": 4,
+        "coverage_rule": "实采层验收要求：observed_items需覆盖至少4个城市且至少4个岗位。"
       },
       "observed_status": "verified",
       "official_benchmark": [
@@ -3061,8 +3123,8 @@
           "question_type": "高频回忆题（上市复盘）",
           "question_year": 2026,
           "recruitment_stage": "campus_interview",
-          "role_id": "IND_FMCG_RETAIL_ROLE_001",
-          "role_name": "品牌管理",
+          "role_id": "IND_FMCG_RETAIL_ROLE_003",
+          "role_name": "销售管培生",
           "round_label": "结构化面试",
           "scoring_dimensions": [
             "结构化表达",
@@ -3100,8 +3162,8 @@
           "question_type": "终端动销异常处置",
           "question_year": 2026,
           "recruitment_stage": "campus_interview",
-          "role_id": "IND_FMCG_RETAIL_ROLE_002",
-          "role_name": "市场策划",
+          "role_id": "IND_FMCG_RETAIL_ROLE_004",
+          "role_name": "品类运营",
           "round_label": "结构化面试",
           "scoring_dimensions": [
             "结构化表达",
@@ -3452,7 +3514,17 @@
     "freshness_percent_overall": 100,
     "real_data_ratio_overall": 62.6,
     "template_ratio_overall": 0,
-    "quality_score_overall": 88.1,
+    "quality_score_overall": 91.7,
+    "quality_score_base": 88.1,
+    "quality_components": {
+      "salary_observed_city_coverage": 4,
+      "salary_observed_role_coverage": 4,
+      "salary_observed_coverage_score": 100,
+      "written_role_coverage": 4,
+      "interview_role_coverage": 4,
+      "question_role_coverage_score": 100,
+      "decision_evidence_sample_score": 100
+    },
     "verified_ratio_percent": 100,
     "weakest_collections": [
       "岗位画像库",

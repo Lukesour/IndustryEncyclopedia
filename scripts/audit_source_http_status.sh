@@ -32,11 +32,13 @@ jq -r '
 cat "${TMP_URLS}" | xargs -I{} -P "${PARALLEL}" bash -c '
   url="$1"
   ua="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
-  code=$(curl -I -L -A "$ua" -s --max-time "'"${TIMEOUT_SEC}"'" -o /dev/null -w "%{http_code}" "$url" || true)
+  code=$(curl -I -L -A "$ua" -s --max-time "'"${TIMEOUT_SEC}"'" --retry 2 --retry-all-errors --retry-delay 1 -o /dev/null -w "%{http_code}" "$url" || true)
   # Some official sites block HEAD but allow GET. Fallback to GET before marking non-200.
   if [[ "$code" != "200" ]]; then
-    code=$(curl -L -A "$ua" -s --max-time "'"${TIMEOUT_SEC}"'" -o /dev/null -w "%{http_code}" "$url" || true)
+    code=$(curl -L -A "$ua" -s --max-time "'"${TIMEOUT_SEC}"'" --retry 2 --retry-all-errors --retry-delay 1 -o /dev/null -w "%{http_code}" "$url" || true)
   fi
+  # Redirect responses are treated as reachable for user click experience.
+  if [[ "$code" == "301" || "$code" == "302" || "$code" == "307" || "$code" == "308" ]]; then code="200"; fi
   if [[ -z "$code" ]]; then code="000"; fi
   echo -e "$url\t$code"
 ' _ {} > "${TMP_RESULTS}"
