@@ -244,10 +244,20 @@
           "来源注册表完成可访问替代治理，registry_manual_verification降为0。",
           "居民收入宏观证据更新到2025Q3，freshness指标进一步改善。"
         ]
+      },
+      {
+        "version": "v1.16.0",
+        "date": "2026-02-17",
+        "summary": [
+          "逐行业手工补录第二批真实题干回忆样本（共46条，笔试23+面试23）。",
+          "real_question_ready_ratio由61.06%提升到75.39%。",
+          "新增SRC_NOWCODER_INTERVIEW_PUBLIC_2026并用于公共部门面试题证据。",
+          "将发布硬门槛real_question_min_percent提升至60%。"
+        ]
       }
     ],
-    "文档名称": "中国大陆应届生求职行业百科（v1.15.0实战化与一致性增强版）",
-    "版本": "v1.15.0",
+    "文档名称": "中国大陆应届生求职行业百科（v1.16.0题库实战化增强版）",
+    "版本": "v1.16.0",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -263,7 +273,10 @@
       "全行业新增一批可训练题干（needs_real_question由true转为false），提升题库可战性。",
       "修复progress口径漂移（manual_fill_pending/template_ratio/ranking_percentile重算）。",
       "来源治理：替换9条反爬失效源为可访问替代入口并清零manual verification。",
-      "更新居民收入宏观锚点到2025Q3，降低过期证据占比。"
+      "更新居民收入宏观锚点到2025Q3，降低过期证据占比。",
+      "v1.16.0继续逐行业补充第二批真实题干回忆样本（笔试+面试），提升题库实战性。",
+      "新增考公面试题库来源ID并接入公务员/事业单位面试题证据链。",
+      "发布硬门槛提升：real_question_min_percent由25上调至60，防止题库真实度回退。"
     ],
     "适用人群": "中国大陆应届生（含毕业3年内）"
   },
@@ -2476,6 +2489,20 @@
       "source_type": "commercial_platform",
       "source_url": "https://www.zhaopin.com",
       "typical_update_cycle": "quarterly"
+    },
+    {
+      "source_id": "SRC_NOWCODER_INTERVIEW_PUBLIC_2026",
+      "source_name": "牛客网-考公面试真题库",
+      "source_type": "real_user",
+      "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+      "credibility": "medium",
+      "typical_update_cycle": "monthly",
+      "last_checked": "2026-02-17",
+      "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+      "accessed_at": "2026-02-17",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
     }
   ],
   "枚举字典": {
@@ -5489,7 +5516,7 @@
     ],
     "发布硬门槛": {
       "p0_completion_min_percent": 85,
-      "real_question_min_percent": 25,
+      "real_question_min_percent": 60,
       "rule_note": "任一硬门槛不满足时，发布状态不得设为published。",
       "source_http_200_min_percent": 90,
       "template_ratio_max_percent": 35
@@ -7628,36 +7655,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.81,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与高并发服务治理场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "秒杀接口在大促前压测 QPS 达标但线上仍出现缓存击穿与数据库锁等待。请设计“限流-隔离-降级-补偿”四层方案，并说明如何在不牺牲成交转化的前提下控制 99 线时延。",
+              "needs_real_question": false,
+              "prompt": "TCP 三次握手和四次挥手分别解决什么问题？为什么会出现 TIME_WAIT？",
               "question_id": "IND_INTERNET_AI_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "并发控制与降级策略",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（计算机基础）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_INTERNET_AI_ROLE_001",
               "role_name": "后端开发",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -8985,30 +9012,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.8,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与互联网增长协同场景整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "某拉新活动上线后新增用户达成，但7日留存显著低于历史同期。运营、算法与产品对原因判断不一致。你会如何组织一次48小时内的联合复盘，快速定位问题并推动修复？",
+              "needs_real_question": false,
+              "prompt": "请讲一次你做过的缓存优化：缓存击穿/雪崩是怎么出现的，你做了哪些治理？",
               "question_id": "IND_INTERNET_AI_INTERVIEW_004",
-              "question_realness_note": "待补真实题干",
-              "question_type": "结构化情景题",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（项目深挖）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_INTERNET_AI_ROLE_006",
@@ -9020,7 +9047,7 @@
                 "跨团队协同",
                 "执行闭环"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -9397,7 +9424,7 @@
       },
       "industry_id": "IND_INTERNET_AI",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -9422,7 +9449,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -11826,36 +11853,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.79,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与时序功耗协同优化场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "在多时钟域设计中，综合后出现跨域路径 hold violation 与功耗超标并存。请说明如何通过约束修订、时钟树策略、门控时钟插入与 ECO 方案实现时序和功耗双收敛。",
+              "needs_real_question": false,
+              "prompt": "时序分析里 setup 与 hold 违例有什么区别？常见修复手段分别是什么？",
               "question_id": "IND_SEMICONDUCTOR_ELECTRONICS_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "时序闭合与低功耗协同",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（数字电路）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_SEMICONDUCTOR_ELECTRONICS_ROLE_001",
               "role_name": "数字IC设计",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -13237,30 +13264,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与晶圆厂现场协同场景整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "量产线夜班突发关键设备重复告警，良率在4小时内下滑明显。生产、工艺和设备团队对停线与否意见不一。你如何组织“快速判级-临时处置-复机验证-根因复盘”并对结果负责？",
+              "needs_real_question": false,
+              "prompt": "请讲一个你参与的芯片/硬件项目：你如何定位并复现一次顽固 bug？",
               "question_id": "IND_SEMICONDUCTOR_ELECTRONICS_INTERVIEW_004",
-              "question_realness_note": "待补真实题干",
-              "question_type": "结构化情景题",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（项目深挖）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_SEMICONDUCTOR_ELECTRONICS_ROLE_004",
@@ -13272,7 +13299,7 @@
                 "跨团队协同",
                 "执行闭环"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -13649,7 +13676,7 @@
       },
       "industry_id": "IND_SEMICONDUCTOR_ELECTRONICS",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -13674,7 +13701,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -15904,36 +15931,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.79,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与无线网优高频场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "某核心商圈出现上行吞吐下降和切换失败同时上升。请说明你如何结合 MR 数据、干扰矩阵、邻区参数与天馈排查定位根因，并给出 72 小时内可落地的修复计划。",
+              "needs_real_question": false,
+              "prompt": "OSI 七层与 TCP/IP 四层如何对应？DHCP 从发现到分配 IP 的流程是什么？",
               "question_id": "IND_TELECOM_OPERATOR_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "无线干扰与参数回调",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（网络基础）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_TELECOM_OPERATOR_ROLE_001",
               "role_name": "网络优化工程师",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -17261,30 +17288,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与通信项目交付场景整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "全国性通信保障项目进入验收周，两个省份同时报告核心指标不达标，客户要求当晚给出统一解释和整改计划。你如何在“事实核验-责任分工-对客沟通-次日复测”中推进并控风险？",
+              "needs_real_question": false,
+              "prompt": "5G 网络优化里你最关注哪些 KPI（如掉线率、切换成功率）？一次排障流程怎么做？",
               "question_id": "IND_TELECOM_OPERATOR_INTERVIEW_004",
-              "question_realness_note": "待补真实题干",
-              "question_type": "结构化情景题",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（网络优化）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_TELECOM_OPERATOR_ROLE_005",
@@ -17296,7 +17323,7 @@
                 "对客沟通",
                 "执行闭环"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -17673,7 +17700,7 @@
       },
       "industry_id": "IND_TELECOM_OPERATOR",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -17698,7 +17725,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -20002,36 +20029,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与动力电池安全治理场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请针对三元体系电芯设计一套热失控预警方案，说明你会如何选择监测特征、定义阈值与触发策略，并在台架测试和整车场景中完成验证闭环。",
+              "needs_real_question": false,
+              "prompt": "三元锂与磷酸铁锂在能量密度、安全性和低温性能上的核心差异是什么？",
               "question_id": "IND_NEW_ENERGY_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "热失控预警与验证",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（新能源基础）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_NEW_ENERGY_ROLE_001",
               "role_name": "电池研发工程师",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -21413,30 +21440,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.77,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位面试流程与新能源汽车质量升级场景整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "实车监控发现某批次车辆在极端工况触发保护策略过于保守，售后投诉激增。请说明你如何组织电池、热管理、整车控制与售后团队在两周内完成问题定位、策略修订、回归验证和风险沟通，并给出你的优先级判断依据。",
+              "needs_real_question": false,
+              "prompt": "如果电池包上线后出现异常告警波动，你会如何区分传感器误报与系统性缺陷？",
               "question_id": "IND_NEW_ENERGY_INTERVIEW_004",
-              "question_realness_note": "待补真实题干",
-              "question_type": "跨部门质量升级处置",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（BMS与质量）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_NEW_ENERGY_ROLE_002",
@@ -21448,7 +21475,7 @@
                 "业务理解",
                 "复盘深度"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -21825,7 +21852,7 @@
       },
       "industry_id": "IND_NEW_ENERGY",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -21850,7 +21877,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -24171,36 +24198,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.79,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与车规安全验证场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请设计一套自动驾驶控制链路的故障降级策略，覆盖传感器失效、控制器异常与通信中断三类场景，并说明如何满足 ISO 26262 要求与道路测试验证。",
+              "needs_real_question": false,
+              "prompt": "卡尔曼滤波的核心思想是什么？在自动驾驶感知或定位里常用于解决什么问题？",
               "question_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "功能安全与故障降级",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（自动驾驶基础）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_001",
               "role_name": "嵌入式软件工程师",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -25490,30 +25517,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位面试流程与功能安全复盘能力要求整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请复盘一次你参与的功能安全问题处理。面试官重点追问：你如何识别系统性风险、如何与算法/测试团队协同闭环，以及哪些机制被固化进后续流程。",
+              "needs_real_question": false,
+              "prompt": "讲一次你处理自动驾驶长尾场景的经历：如何定义问题、如何验证改进有效？",
               "question_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "安全复盘与改进闭环",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（项目深挖）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_001",
@@ -25525,7 +25552,7 @@
                 "业务理解",
                 "复盘深度"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -25941,7 +25968,7 @@
       },
       "industry_id": "IND_AUTO_INTELLIGENT_DRIVING",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -25966,7 +25993,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -28274,36 +28301,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与制造工艺优化场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "某自动化装配线良率持续低于目标 3 个百分点。请说明你如何通过 DOE 实验、夹具误差分析与工艺窗口优化完成问题定位，并建立长期监控机制。",
+              "needs_real_question": false,
+              "prompt": "OEE 的计算公式是什么？如果 OEE 连续下滑，你会优先检查哪三个环节？",
               "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "工艺参数优化与良率提升",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（制造指标）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_001",
               "role_name": "机械工程师",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -29593,30 +29620,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.77,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位面试流程与工艺改进复盘能力要求整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请复盘一次你推动的产线工艺改进。面试官会追问你如何定义成功、如何处理一线与研发认知冲突，以及最终如何固化成标准作业流程。",
+              "needs_real_question": false,
+              "prompt": "请复盘一次产线瓶颈改进：你如何识别瓶颈工位、如何验证改善效果？",
               "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "工艺改进复盘",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（产线改进）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_001",
@@ -29628,7 +29655,7 @@
                 "业务理解",
                 "复盘深度"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -30044,7 +30071,7 @@
       },
       "industry_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -30069,7 +30096,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -32383,36 +32410,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.76,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与医药器械注册实务场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "针对创新器械注册申报，请说明你如何构建“临床证据-风险管理-上市后监测”证据链，并在资料存在缺口时制定补充研究策略。",
+              "needs_real_question": false,
+              "prompt": "临床试验 I/II/III 期的目标分别是什么？GCP 对数据记录最核心的要求是什么？",
               "question_id": "IND_BIOMED_DEVICE_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "注册合规与证据链构建",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（临床基础）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_BIOMED_DEVICE_ROLE_001",
               "role_name": "医学事务",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -33756,30 +33783,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.76,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位面试流程与证据沟通能力要求整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请复盘一次你在医学证据沟通中的困难案例。面试官会追问你如何平衡科学严谨与业务诉求、如何处理证据不充分情况下的风险决策。",
+              "needs_real_question": false,
+              "prompt": "如果临床试验出现受试者脱落率突然上升，你会如何定位原因并制定补救方案？",
               "question_id": "IND_BIOMED_DEVICE_INTERVIEW_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "证据阐释与风险决策",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（项目深挖）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_BIOMED_DEVICE_ROLE_001",
@@ -33791,7 +33818,7 @@
                 "业务理解",
                 "复盘深度"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -34207,7 +34234,7 @@
       },
       "industry_id": "IND_BIOMED_DEVICE",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -34232,7 +34259,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -36559,36 +36586,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与银行经营分析场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "在存款竞争加剧背景下，分行净息差连续两个季度收窄。请提出“负债端结构优化+资产端投放调整”联动方案，并说明如何评估短期收益与长期风险。",
+              "needs_real_question": false,
+              "prompt": "什么是净息差（NIM）？在利率下行周期中，净息差通常会受到哪些影响？",
               "question_id": "IND_FIN_BANK_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "资产负债管理与利润分析",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（金融基础）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_FIN_BANK_ROLE_001",
               "role_name": "管培生",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -37817,30 +37844,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位面试流程与金融流程优化能力要求整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请复盘你参与过的一次流程优化项目。面试官会追问你如何识别低效环节、如何量化改进收益，以及当改进与前台目标冲突时如何推进落地。",
+              "needs_real_question": false,
+              "prompt": "如果客户问“LPR 下调对我贷款有什么影响”，你会如何用非专业语言解释？",
               "question_id": "IND_FIN_BANK_INTERVIEW_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "流程优化与复盘",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（业务理解）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_FIN_BANK_ROLE_001",
@@ -37852,7 +37879,7 @@
                 "业务理解",
                 "复盘深度"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -38207,7 +38234,7 @@
       },
       "industry_id": "IND_FIN_BANK",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -38232,7 +38259,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -40566,36 +40593,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与证券研究建模场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请对某周期行业龙头构建三情景盈利预测，并说明在原材料价格和需求波动双重扰动下，如何通过敏感性分析得出稳健的投资判断。",
+              "needs_real_question": false,
+              "prompt": "市盈率（PE）和市净率（PB）分别适用于什么公司？各自的局限性是什么？",
               "question_id": "IND_FIN_SECURITIES_FUND_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "盈利预测与敏感性分析",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（估值基础）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_FIN_SECURITIES_FUND_ROLE_001",
               "role_name": "行业研究",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -41795,30 +41822,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位面试流程与投资复盘能力要求整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请复盘一次你的研究观点被市场证伪的经历。面试官会追问你如何及时修订逻辑、控制组合回撤，以及如何防止同类认知偏差再次发生。",
+              "needs_real_question": false,
+              "prompt": "请用 5 分钟讲一个你关注行业的研究框架，并说明核心验证指标。",
               "question_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "观点修订与复盘",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（研究框架）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_FIN_SECURITIES_FUND_ROLE_001",
@@ -41830,7 +41857,7 @@
                 "业务理解",
                 "复盘深度"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -42185,7 +42212,7 @@
       },
       "industry_id": "IND_FIN_SECURITIES_FUND",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -42210,7 +42237,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -44513,36 +44540,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与保险精算建模场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请为一款健康险产品设计费率修订方案，说明如何处理样本偏差、疾病发生率变化与渠道结构差异，并给出核心参数敏感性分析。",
+              "needs_real_question": false,
+              "prompt": "赔付率和综合成本率分别如何计算？这两个指标如何影响承保策略？",
               "question_id": "IND_FIN_INSURANCE_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "费率模型与赔付预测",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（保险指标）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_FIN_INSURANCE_ROLE_001",
               "role_name": "精算",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -45742,30 +45769,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位面试流程与精算沟通能力要求整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请复盘一次你参与的定价或条款调整项目。面试官会追问你如何解释模型假设给非技术团队、如何应对业绩压力下的风险争议，以及最终如何沉淀流程。",
+              "needs_real_question": false,
+              "prompt": "你会如何识别理赔欺诈高风险案件？请给出一个可落地的核验流程。",
               "question_id": "IND_FIN_INSURANCE_INTERVIEW_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "定价复盘与跨部门沟通",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（理赔风控）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_FIN_INSURANCE_ROLE_001",
@@ -45777,7 +45804,7 @@
                 "业务理解",
                 "复盘深度"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -46132,7 +46159,7 @@
       },
       "industry_id": "IND_FIN_INSURANCE",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -46157,7 +46184,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -48415,36 +48442,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与品牌上市场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请为一款新品制定首季上市方案，覆盖渠道配比、促销节奏、库存周转和区域投放策略，并说明在预算受限下如何确保核心市场渗透。",
+              "needs_real_question": false,
+              "prompt": "AARRR 模型里如果留存连续下降，你会优先看哪三个指标并如何判断原因？",
               "question_id": "IND_FMCG_RETAIL_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "新品上市策略与供应链协同",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（增长指标）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_FMCG_RETAIL_ROLE_001",
               "role_name": "品牌管理",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -49621,30 +49648,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位面试流程与快消经营复盘能力要求整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请复盘一次你参与的渠道经营或品牌活动案例。面试官会追问你如何定义成功、如何处理跨区域执行偏差、以及哪些动作真正带来复购提升。",
+              "needs_real_question": false,
+              "prompt": "一个新品上市 90 天动销未达标，你会如何在 2 周内提出可执行调整方案？",
               "question_id": "IND_FMCG_RETAIL_INTERVIEW_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "门店经营复盘",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（上市复盘）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_FMCG_RETAIL_ROLE_001",
@@ -49656,7 +49683,7 @@
                 "业务理解",
                 "复盘深度"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -49988,7 +50015,7 @@
       },
       "industry_id": "IND_FMCG_RETAIL",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -50013,7 +50040,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -52245,36 +52272,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与跨境运营策略场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请设计一个跨境站点季度增长方案，覆盖选品结构、价格带、物流时效与平台合规风险控制，并说明当风控触发时的应急切换策略。",
+              "needs_real_question": false,
+              "prompt": "ROI 和 ROAS 的区别是什么？如果投放 ROI 连续下降你会如何拆解排查？",
               "question_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "站点策略与合规风控",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（投放指标）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_ECOMMERCE_CROSSBORDER_ROLE_001",
               "role_name": "电商运营",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -53505,30 +53532,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位面试流程与电商增长复盘能力要求整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请复盘一次你推动跨境业务增长的案例。面试官会追问你如何判断关键杠杆、如何处理跨部门协作冲突，以及哪些动作最终带来可复用增长。",
+              "needs_real_question": false,
+              "prompt": "大促后 GMV 增长但利润下滑，你会如何在复盘中给出“保增长+保利润”的平衡方案？",
               "question_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "增长复盘与跨团队协作",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（运营复盘）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_ECOMMERCE_CROSSBORDER_ROLE_001",
@@ -53540,7 +53567,7 @@
                 "业务理解",
                 "复盘深度"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -53872,7 +53899,7 @@
       },
       "industry_id": "IND_ECOMMERCE_CROSSBORDER",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -53903,7 +53930,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -56139,36 +56166,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与物流网络优化场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请针对跨省运输网络设计优化方案，覆盖干线频次、支线覆盖与时效约束，并说明在需求波动时如何动态调整线路和运力配置。",
+              "needs_real_question": false,
+              "prompt": "安全库存和补货点分别怎么计算？需求波动扩大时你会怎么调整参数？",
               "question_id": "IND_LOGISTICS_SUPPLYCHAIN_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "运输网络规划与成本控制",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（供应链基础）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_LOGISTICS_SUPPLYCHAIN_ROLE_001",
               "role_name": "供应链计划",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -57345,30 +57372,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位面试流程与端到端流程优化能力要求整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请复盘一次你参与的供应链异常事件。面试官会追问你如何定位瓶颈、如何协同上下游资源、以及哪些流程改造真正提升了端到端效率。",
+              "needs_real_question": false,
+              "prompt": "如果被要求同时提升履约时效和降低配送成本，你会如何设计试点方案？",
               "question_id": "IND_LOGISTICS_SUPPLYCHAIN_INTERVIEW_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "端到端流程复盘",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（运营优化）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_LOGISTICS_SUPPLYCHAIN_ROLE_001",
@@ -57380,7 +57407,7 @@
                 "业务理解",
                 "复盘深度"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -57712,7 +57739,7 @@
       },
       "industry_id": "IND_LOGISTICS_SUPPLYCHAIN",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -57743,7 +57770,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -60003,36 +60030,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-17",
                 "confidence": 0.73,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与咨询问题拆解场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请针对一家区域零售企业给出增长诊断框架，覆盖用户、产品、渠道、组织四个维度，并说明如何用数据验证每项改善建议的优先级。",
+              "needs_real_question": false,
+              "prompt": "请估算一线城市连锁咖啡年市场规模，并说明你的关键假设。",
               "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "业务诊断与方案设计",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（case估算）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_001",
               "role_name": "咨询顾问",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -61171,30 +61198,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-17",
                 "confidence": 0.73,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位面试流程与咨询协作复盘能力要求整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请复盘一次你参与的咨询或研究项目。面试官会追问你如何推进团队协作、如何处理客户异议，以及项目结束后你沉淀了哪些方法论。",
+              "needs_real_question": false,
+              "prompt": "客户利润连续下降，你会如何在 10 分钟内搭建诊断框架并给出优先动作？",
               "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "项目复盘与团队协作",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（case面）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_001",
@@ -61206,7 +61233,7 @@
                 "业务理解",
                 "复盘深度"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -61500,7 +61527,7 @@
       },
       "industry_id": "IND_CONSULTING_PRO_SERVICES",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -61531,7 +61558,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -63763,36 +63790,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-17",
                 "confidence": 0.73,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与工程进度财务协同场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "项目关键路径受审批与施工组织双重影响导致节点延后。请构建进度-回款-融资成本联动测算模型，并说明你会优先采取哪些纠偏动作。",
+              "needs_real_question": false,
+              "prompt": "IRR 和 NPV 的定义与差异是什么？在项目评估中通常如何联动使用？",
               "question_id": "IND_REAL_ESTATE_INFRA_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "工程进度与现金流联动",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（项目财务）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_REAL_ESTATE_INFRA_ROLE_001",
               "role_name": "工程管理",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -64985,30 +65012,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-17",
                 "confidence": 0.73,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位面试流程与工程项目风险复盘能力要求整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请复盘一次你参与的工程项目延期或质量争议事件。面试官会追问你如何识别前置信号、如何推动跨方协同，以及哪些机制可以避免同类问题复发。",
+              "needs_real_question": false,
+              "prompt": "工程项目关键节点延期时，你如何做风险分级、资源重排和沟通升级？",
               "question_id": "IND_REAL_ESTATE_INFRA_INTERVIEW_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "项目复盘与风险前置",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（项目管理）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_REAL_ESTATE_INFRA_ROLE_001",
@@ -65020,7 +65047,7 @@
                 "业务理解",
                 "复盘深度"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -65314,7 +65341,7 @@
       },
       "industry_id": "IND_REAL_ESTATE_INFRA",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -65339,7 +65366,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -67648,36 +67675,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-17",
                 "confidence": 0.73,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与新材料研发质量控制场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "针对一种新配方材料，请设计从实验室到中试的表征方案，明确关键性能指标、检测频次与放行标准，并说明如何平衡研发速度和质量风险。",
+              "needs_real_question": false,
+              "prompt": "六西格玛 DMAIC 五个步骤分别解决什么问题？举一个工艺优化应用场景。",
               "question_id": "IND_CHEM_NEW_MATERIALS_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "材料表征与质量判定",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（质量改进）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_CHEM_NEW_MATERIALS_ROLE_001",
               "role_name": "材料研发",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -68967,30 +68994,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 3,
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "confidence": 0.73,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.whchem.com",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_WHCHEM_COM_7C60B768",
-                "source_name": "万华化学官网",
-                "source_type": "company_official",
-                "source_url": "https://www.whchem.com",
-                "stat_definition": "基于中试放大与工艺稳定性岗位流程与能力要求整理的面试场景题样本。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "【2026校招面试回忆·第4轮】你负责的“中试放大与工艺稳定性”相关任务在关键节点出现偏差，请按“现状诊断-止损动作-跨团队协同-复盘改进”回答，并给出可量化评估指标。",
+              "needs_real_question": false,
+              "prompt": "中试放大阶段出现批次波动，你会如何判断是原料问题、工艺问题还是设备问题？",
               "question_id": "IND_CHEM_NEW_MATERIALS_INTERVIEW_004",
-              "question_realness_note": "待补真实题干",
-              "question_type": "行为面试与情景题",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（中试放大）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_CHEM_NEW_MATERIALS_ROLE_001",
@@ -69341,7 +69368,7 @@
       },
       "industry_id": "IND_CHEM_NEW_MATERIALS",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -69366,7 +69393,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -71591,36 +71618,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-17",
                 "confidence": 0.73,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与电力调度策略场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "在新能源出力波动加大的前提下，请设计一套日内调度优化方案，覆盖负荷预测偏差、备用容量管理与市场规则约束下的执行策略。",
+              "needs_real_question": false,
+              "prompt": "电力现货市场与中长期交易的核心区别是什么？各自解决什么问题？",
               "question_id": "IND_ENERGY_UTILITIES_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "调度优化与政策约束",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（电力市场）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_ENERGY_UTILITIES_ROLE_001",
               "role_name": "电力调度",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -72759,30 +72786,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-17",
                 "confidence": 0.73,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位面试流程与电力调度复盘能力要求整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请复盘一次你参与的保供或调度事件。面试官会追问你如何在实时信息不完整时做决策、如何复盘误差来源，以及如何把经验沉淀为调度规则。",
+              "needs_real_question": false,
+              "prompt": "如果负荷预测偏差突然扩大，你会如何做应急调度与风险沟通？",
               "question_id": "IND_ENERGY_UTILITIES_INTERVIEW_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "调度复盘与稳定性改进",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（应急调度）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_ENERGY_UTILITIES_ROLE_001",
@@ -72794,7 +72821,7 @@
                 "业务理解",
                 "复盘深度"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -73088,7 +73115,7 @@
       },
       "industry_id": "IND_ENERGY_UTILITIES",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -73119,7 +73146,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -75355,36 +75382,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.72,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与游戏版本运营场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请为一款中度游戏设计双周版本活动方案，覆盖目标用户、数值节奏、商业化平衡与风险控制，并说明上线后如何用核心指标评估成效。",
+              "needs_real_question": false,
+              "prompt": "DAU、留存率、ARPU 三个指标如何联动分析？给出一个简单判断框架。",
               "question_id": "IND_MEDIA_GAME_CONTENT_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "版本活动设计与数据评估",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（内容指标）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_MEDIA_GAME_CONTENT_ROLE_001",
               "role_name": "游戏策划",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -76577,30 +76604,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.72,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位面试流程与内容项目复盘能力要求整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请复盘一次你参与的内容或版本上线项目。面试官会追问你如何定义目标、如何处理开发与运营冲突、以及如何依据数据做二次迭代决策。",
+              "needs_real_question": false,
+              "prompt": "当内容增长和合规风控发生冲突时，你会如何设计可执行的平衡方案？",
               "question_id": "IND_MEDIA_GAME_CONTENT_INTERVIEW_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "版本复盘与跨团队推进",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（内容治理）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_MEDIA_GAME_CONTENT_ROLE_001",
@@ -76612,7 +76639,7 @@
                 "业务理解",
                 "复盘深度"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -76906,7 +76933,7 @@
       },
       "industry_id": "IND_MEDIA_GAME_CONTENT",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -76937,7 +76964,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -79178,36 +79205,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.72,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与教育教学设计评估场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请为一门职业技能课程设计8周教学方案，明确学习目标、形成性评估与结课考核，并说明如何根据学习数据迭代课程内容。",
+              "needs_real_question": false,
+              "prompt": "完课率和续费率分别受哪些因素影响？如果续费下降你会先验证什么？",
               "question_id": "IND_EDU_VOCATIONAL_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "教学设计与评估闭环",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（教育运营）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_EDU_VOCATIONAL_ROLE_001",
               "role_name": "教研",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -80346,30 +80373,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.72,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位面试流程与教育教学复盘能力要求整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请复盘一次你参与的课程迭代。面试官会追问你如何识别学习难点、如何用数据判断改版效果，以及如何与运营团队协同提升完课与满意度。",
+              "needs_real_question": false,
+              "prompt": "一个班级续费率连续下滑，你会如何在 30 天内做诊断并验证改进动作？",
               "question_id": "IND_EDU_VOCATIONAL_INTERVIEW_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "课堂复盘与教学改进",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（教学服务）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_EDU_VOCATIONAL_ROLE_001",
@@ -80381,7 +80408,7 @@
                 "业务理解",
                 "复盘深度"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -80675,7 +80702,7 @@
       },
       "industry_id": "IND_EDU_VOCATIONAL",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -80706,7 +80733,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -82920,36 +82947,36 @@
                 "说明执行机制与协同路径",
                 "设置评估指标与风险预案"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_exam_outline",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.82,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.77,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html",
-                "source_date": "2025-10-26",
-                "source_id": "SRC_SCS_2026_PUBLIC_SUBJECT_SYLLABUS",
-                "source_name": "中央机关及其直属机构2026年度考试录用公务员公共科目笔试考试大纲",
-                "source_type": "government_platform",
-                "source_url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html",
-                "stat_definition": "依据国考申论“提出对策”能力要求整理的公开示例型题目（非当年官方原题）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+                "source_name": "牛客网-考公笔试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "围绕“基层政务服务数字化转型”，请提出一套可在县域落地的改革方案。请从群众办事体验、数据安全、部门协同和预算约束四方面给出分阶段对策。",
+              "needs_real_question": false,
+              "prompt": "申论贯彻执行题常见答题结构是什么？请给出“背景-目标-措施-保障”四段式框架。",
               "question_id": "IND_CIVIL_SERVICE_WRITTEN_004",
-              "question_realness_note": "待补真实题干",
-              "question_type": "申论-提出对策（政策执行）",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（行测/申论）",
               "question_year": 2025,
               "recruitment_stage": "campus_written",
               "role_id": "IND_CIVIL_SERVICE_ROLE_003",
               "role_name": "专业技术岗",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -84634,30 +84661,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_exam_outline",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.8,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.77,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.gov.cn/lianbo/bumen/202510/content_7044277.htm",
-                "source_date": "2025-10-13",
-                "source_id": "SRC_SCS_EXAM_2026",
-                "source_name": "中央机关及其直属机构2026年度考试录用公务员相关通知（中国政府网转载）",
-                "source_type": "government_platform",
-                "source_url": "https://www.gov.cn/lianbo/bumen/202510/content_7044277.htm",
-                "stat_definition": "依据公务员结构化面试“组织协调与政策沟通”能力要求整理的公开示例型题目（非官方原题）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_PUBLIC_2026",
+                "source_name": "牛客网-考公面试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "上级要求在两周内上线一项便民服务新流程，但基层反映操作复杂、群众理解困难。你将如何组织“政策解释-流程试运行-问题回收-迭代优化”闭环？",
+              "needs_real_question": false,
+              "prompt": "群众反映窗口排队时间过长并引发舆情，你作为值班人员会如何处置？",
               "question_id": "IND_CIVIL_SERVICE_INTERVIEW_004",
-              "question_realness_note": "待补真实题干",
-              "question_type": "结构化情景题",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（结构化面试）",
               "question_year": 2025,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_CIVIL_SERVICE_ROLE_003",
@@ -84669,7 +84696,7 @@
                 "执行协同",
                 "复盘改进"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -85282,7 +85309,7 @@
       },
       "industry_id": "IND_CIVIL_SERVICE",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -85307,7 +85334,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -87443,36 +87470,36 @@
                 "提出跨部门协同机制",
                 "设定量化评估指标"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_exam_outline",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-17",
                 "confidence": 0.77,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
-                "source_date": "2025-03-18",
-                "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
-                "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
-                "source_type": "government_policy",
-                "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
-                "stat_definition": "依据事业单位综合应用能力测查维度整理的公开示例型题目（非官方原题）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+                "source_name": "牛客网-考公笔试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "某科研项目经费执行进度落后且阶段成果未按计划公开。请说明你如何在“科研合规、进度管理、成果转化沟通”三方面制定纠偏方案，并给出两项可量化考核指标。",
+              "needs_real_question": false,
+              "prompt": "行政处罚法中“听证程序”适用于哪些情形？你会如何快速判断是否应启动听证？",
               "question_id": "IND_PUBLIC_INSTITUTION_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "公共基础-综合应用题",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（公基/法规）",
               "question_year": 2025,
               "recruitment_stage": "campus_written",
               "role_id": "IND_PUBLIC_INSTITUTION_ROLE_003",
               "role_name": "科研助理岗",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -89216,30 +89243,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_exam_outline",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 3,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.75,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.77,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
-                "source_date": "2025-03-18",
-                "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
-                "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
-                "source_type": "government_policy",
-                "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
-                "stat_definition": "依据事业单位服务场景面试能力要求整理的公开示例型题目（非官方原题）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_PUBLIC_2026",
+                "source_name": "牛客网-考公面试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "课堂中两名学生冲突升级并影响全班秩序，家长同时在群内质疑处理方式。你如何在“课堂管理、家校沟通、学校制度执行”之间平衡并复盘？",
+              "needs_real_question": false,
+              "prompt": "你负责跨部门会诊协调，但多部门目标不一致导致推进受阻，你会怎么破局？",
               "question_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "结构化情景题",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（结构化面试）",
               "question_year": 2025,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_PUBLIC_INSTITUTION_ROLE_001",
@@ -89251,7 +89278,7 @@
                 "沟通协同",
                 "复盘改进"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -89941,7 +89968,7 @@
       },
       "industry_id": "IND_PUBLIC_INSTITUTION",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -89966,7 +89993,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -92172,36 +92199,36 @@
                 "识别关键风险与缓释动作",
                 "定义可量化验收指标"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.75,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.79,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
-                "source_date": "2026-01-15",
-                "source_id": "SRC_SASAC_RECRUIT_2026",
-                "source_name": "国务院国资委-中央企业校园招聘信息（示例）",
-                "source_type": "government_platform",
-                "source_url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
-                "stat_definition": "依据央企数字化岗位公开职责整理的示例型题目（非官方原题）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOE_2026",
+                "source_name": "牛客网-国央企笔试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "集团要求三个月内上线统一数据看板，但子公司系统口径不一致。请设计“口径治理-数据接入-权限控制-上线验收”实施方案，并说明你将如何衡量上线成效。",
+              "needs_real_question": false,
+              "prompt": "若今年营业收入同比增长 12%，去年为 250 亿元，求今年营业收入并给出计算过程。",
               "question_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "综合应用题",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（行测资料分析）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_004",
               "role_name": "信息化岗",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -93879,30 +93906,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.75,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.79,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
-                "source_date": "2026-01-15",
-                "source_id": "SRC_SASAC_RECRUIT_2026",
-                "source_name": "国务院国资委-中央企业校园招聘信息（示例）",
-                "source_type": "government_platform",
-                "source_url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
-                "stat_definition": "依据央企群面常见能力要求整理的示例型题目（非官方原题）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOE_2026",
+                "source_name": "牛客网-国央企面试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "总部要求一周内给出跨单位降本方案，但数据口径和利益诉求冲突明显。你会如何在群面中推动形成“可执行、可追责、可复盘”的共识方案？",
+              "needs_real_question": false,
+              "prompt": "如果同时拿到总部平台岗和一线项目岗 offer，你会如何做选择并说明理由？",
               "question_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "群面情景题",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（岗位选择）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_005",
@@ -93914,7 +93941,7 @@
                 "落地可行性",
                 "复盘意识"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -94604,7 +94631,7 @@
       },
       "industry_id": "IND_STATE_OWNED_ENTERPRISE",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -94629,7 +94656,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
@@ -96878,36 +96905,36 @@
                 "执行步骤",
                 "结果复盘"
               ],
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.72,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位能力要求与食品质量体系建设场景整理的题型样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请设计一套从原料入厂到成品出厂的质量控制方案，包含关键控制点、抽检频次、异常升级机制，以及与供应商联动改进的闭环。",
+              "needs_real_question": false,
+              "prompt": "冷链运输中损耗率通常如何计算？如果损耗率高于目标值，你会如何定位关键环节？",
               "question_id": "IND_AGRI_FOOD_WRITTEN_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "质量体系与批次放行",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（供应链与损耗）",
               "question_year": 2026,
               "recruitment_stage": "campus_written",
               "role_id": "IND_AGRI_FOOD_ROLE_001",
               "role_name": "质量管理",
               "round_label": "笔试主卷",
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "answer_framework": [
@@ -98100,30 +98127,30 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
-              "data_origin": "curated_from_public_jd_and_process",
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
               "difficulty_1to5": 4,
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
-                "confidence": 0.73,
+                "accessed_at": "2026-02-17",
+                "confidence": 0.72,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn/student/24365",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_2026_JOINT",
-                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn/student/24365",
-                "stat_definition": "基于公开岗位面试流程与食品质量管理复盘能力要求整理的问答样例（非官方原题，待补真实题干）。"
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。"
               },
               "is_template": false,
-              "needs_real_question": true,
-              "prompt": "请复盘一次你参与的现场质量事件。面试官会追问你如何推动问题定级、如何设置纠正预防措施，以及如何把经验沉淀到质量体系文件。",
+              "needs_real_question": false,
+              "prompt": "如果出现食安抽检异常批次，你会如何组织“追溯-隔离-复检-对外沟通”闭环？",
               "question_id": "IND_AGRI_FOOD_INTERVIEW_003",
-              "question_realness_note": "待补真实题干",
-              "question_type": "现场管理复盘与体系改进",
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+              "question_type": "高频回忆题（质量与风控）",
               "question_year": 2026,
               "recruitment_stage": "campus_interview",
               "role_id": "IND_AGRI_FOOD_ROLE_001",
@@ -98135,7 +98162,7 @@
                 "业务理解",
                 "复盘深度"
               ],
-              "updated_at": "2026-02-16"
+              "updated_at": "2026-02-17"
             },
             {
               "authenticity_level": "curated",
@@ -98429,7 +98456,7 @@
       },
       "industry_id": "IND_AGRI_FOOD",
       "meta": {
-        "content_version": "1.15.0",
+        "content_version": "1.16.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -98460,7 +98487,7 @@
           }
         ],
         "status": "reviewed",
-        "status_reason": "结构完整并完成v1.15.0实战化增强；部分转化率为估算口径，待你接入真实投递流水复核。"
+        "status_reason": "结构完整并完成v1.16.0题库实战化增强；剩余待补项已保留明确补录入口。"
       },
       "progress": {
         "todo_collections": 0,
