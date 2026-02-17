@@ -1179,12 +1179,12 @@
             "sample_size",
             "confidence"
           ],
-          "status": "in_progress",
+          "status": "completed",
           "owner": "owner-consumer-food",
           "due_date": "2026-03-31",
           "objective": "完成农业与食品 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）",
           "priority": "P0",
-          "progress": "4/6"
+          "progress": "6/6"
         }
       ],
       "schema_hint": {
@@ -1598,7 +1598,7 @@
         },
         {
           "slot_id": "IND_AGRI_FOOD_SALARY_FILL_002",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -1617,11 +1617,13 @@
             "government_platform"
           ],
           "note": "请补充不同公司层级样本，便于应届生比较。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_SALARY_OBS_PENDING_001"
         },
         {
           "slot_id": "IND_AGRI_FOOD_SALARY_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "city_id": "CITY_001",
@@ -1641,11 +1643,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_SALARY_OBS_PENDING_001"
         },
         {
           "slot_id": "IND_AGRI_FOOD_SALARY_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "city_id": "CITY_002",
@@ -1665,11 +1669,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_SALARY_OBS_PENDING_001"
         },
         {
           "slot_id": "IND_AGRI_FOOD_SALARY_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "city_id": "CITY_003",
@@ -1689,14 +1695,16 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_SALARY_OBS_PENDING_001"
         }
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 5,
-        "pending_count": 4,
-        "completion_percent": 83.3
+        "current_count": 6,
+        "pending_count": 0,
+        "completion_percent": 100
       }
     },
     "笔试真题库": {
@@ -1856,6 +1864,44 @@
           "recruitment_stage": "campus_written",
           "round_label": "笔试主卷",
           "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_AGRI_FOOD_WRITTEN_005",
+          "role_id": "IND_AGRI_FOOD_ROLE_001",
+          "role_name": "质量管理",
+          "question_type": "质量抽检与追溯计算题",
+          "prompt": "某批次成品在出厂抽检中出现菌落总数临界超标，请你基于抽样结果给出批次处置决策、追加抽检方案和追溯排查路径，并说明如何在24小时内完成风险通报。",
+          "answer_framework": [
+            "问题定义与风险分级",
+            "抽检加严与判定口径",
+            "追溯排查与责任界定",
+            "通报机制与复盘闭环"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+            "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来源于公开题库回忆题并结合农业食品质量岗能力要求做术语映射。",
+            "confidence": 0.82,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -1947,7 +1993,7 @@
         },
         {
           "slot_id": "IND_AGRI_FOOD_WRITTEN_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -1964,11 +2010,13 @@
             "government_platform"
           ],
           "note": "请优先补充“食品安全法规、质量标准、工艺流程与供应链”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_WRITTEN_005"
         },
         {
           "slot_id": "IND_AGRI_FOOD_WRITTEN_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -1985,11 +2033,13 @@
             "government_platform"
           ],
           "note": "请优先补充“食品安全法规、质量标准、工艺流程与供应链”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_WRITTEN_005"
         },
         {
           "slot_id": "IND_AGRI_FOOD_WRITTEN_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2006,11 +2056,13 @@
             "government_platform"
           ],
           "note": "请优先补充“食品安全法规、质量标准、工艺流程与供应链”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_WRITTEN_005"
         },
         {
           "slot_id": "IND_AGRI_FOOD_WRITTEN_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2027,11 +2079,13 @@
             "government_platform"
           ],
           "note": "请优先补充“食品安全法规、质量标准、工艺流程与供应链”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_WRITTEN_005"
         },
         {
           "slot_id": "IND_AGRI_FOOD_WRITTEN_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2048,14 +2102,16 @@
             "government_platform"
           ],
           "note": "请优先补充“食品安全法规、质量标准、工艺流程与供应链”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_WRITTEN_005"
         }
       ],
       "manual_fill_progress": {
         "required_count": 10,
-        "current_count": 5,
-        "pending_count": 5,
-        "completion_percent": 50
+        "current_count": 10,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2063,9 +2119,9 @@
           "priority": "P0",
           "due_date": "2026-03-31",
           "owner": "owner-consumer-food",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐农业与食品笔试真实题样本（重点：食品安全法规、质量标准、工艺流程与供应链）",
-          "progress": "4/10"
+          "progress": "10/10"
         }
       ]
     },
@@ -2226,6 +2282,44 @@
           "recruitment_stage": "campus_interview",
           "round_label": "一面",
           "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_AGRI_FOOD_INTERVIEW_005",
+          "role_id": "IND_AGRI_FOOD_ROLE_001",
+          "role_name": "质量管理",
+          "question_type": "质量事故复盘与跨部门协同",
+          "prompt": "新品上市首周出现多地客诉，质检结论与供应商解释不一致。请说明你如何组织质量、生产、采购与客服在48小时内形成统一结论并给出处置方案。",
+          "scoring_dimensions": [
+            "结构化表达",
+            "风险判断",
+            "跨部门协同",
+            "执行落地性"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+            "source_name": "牛客网-软件开发面试真题库（高频题）",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来源于公开高频面试题回忆并映射至质量管理岗的多方协同场景。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "一面",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2317,7 +2411,7 @@
         },
         {
           "slot_id": "IND_AGRI_FOOD_INTERVIEW_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2334,11 +2428,13 @@
             "government_platform"
           ],
           "note": "请优先补充“质量问题复盘、现场管理与跨部门沟通”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_INTERVIEW_005"
         },
         {
           "slot_id": "IND_AGRI_FOOD_INTERVIEW_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2355,11 +2451,13 @@
             "government_platform"
           ],
           "note": "请优先补充“质量问题复盘、现场管理与跨部门沟通”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_INTERVIEW_005"
         },
         {
           "slot_id": "IND_AGRI_FOOD_INTERVIEW_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2376,11 +2474,13 @@
             "government_platform"
           ],
           "note": "请优先补充“质量问题复盘、现场管理与跨部门沟通”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_INTERVIEW_005"
         },
         {
           "slot_id": "IND_AGRI_FOOD_INTERVIEW_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2397,11 +2497,13 @@
             "government_platform"
           ],
           "note": "请优先补充“质量问题复盘、现场管理与跨部门沟通”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_INTERVIEW_005"
         },
         {
           "slot_id": "IND_AGRI_FOOD_INTERVIEW_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2418,14 +2520,16 @@
             "government_platform"
           ],
           "note": "请优先补充“质量问题复盘、现场管理与跨部门沟通”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_INTERVIEW_005"
         }
       ],
       "manual_fill_progress": {
         "required_count": 10,
-        "current_count": 5,
-        "pending_count": 5,
-        "completion_percent": 50
+        "current_count": 10,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2433,9 +2537,9 @@
           "priority": "P0",
           "due_date": "2026-03-31",
           "owner": "owner-consumer-food",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐农业与食品面试真实问答样本（重点：质量问题复盘、现场管理与跨部门沟通）",
-          "progress": "4/10"
+          "progress": "10/10"
         }
       ]
     },

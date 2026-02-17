@@ -1187,12 +1187,12 @@
             "sample_size",
             "confidence"
           ],
-          "status": "in_progress",
+          "status": "completed",
           "owner": "owner-industrial-green",
           "due_date": "2026-03-10",
           "objective": "完成新能源 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）",
           "priority": "P0",
-          "progress": "4/6"
+          "progress": "6/6"
         }
       ],
       "schema_hint": {
@@ -1660,7 +1660,7 @@
         },
         {
           "slot_id": "IND_NEW_ENERGY_SALARY_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "city_id": "CITY_001",
@@ -1680,11 +1680,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_NEW_ENERGY_SALARY_OBS_002"
         },
         {
           "slot_id": "IND_NEW_ENERGY_SALARY_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "city_id": "CITY_002",
@@ -1704,11 +1706,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_NEW_ENERGY_SALARY_OBS_002"
         },
         {
           "slot_id": "IND_NEW_ENERGY_SALARY_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "city_id": "CITY_003",
@@ -1728,13 +1732,15 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_NEW_ENERGY_SALARY_OBS_002"
         }
       ],
       "manual_fill_progress": {
         "required_count": 6,
         "current_count": 6,
-        "pending_count": 3,
+        "pending_count": 0,
         "completion_percent": 100
       }
     },
@@ -1971,6 +1977,44 @@
           "recruitment_stage": "campus_written",
           "round_label": "笔试主卷",
           "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_WRITTEN_007",
+          "role_id": "IND_NEW_ENERGY_ROLE_001",
+          "role_name": "电池研发工程师",
+          "question_type": "电池性能与失效分析题",
+          "prompt": "某电芯在高温循环后容量衰减异常，请给出失效机理假设、验证实验设计与工艺改进方向。",
+          "answer_framework": [
+            "问题界定与指标定义",
+            "机理假设与实验设计",
+            "数据分析与结论判定",
+            "工艺优化与风险控制"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+            "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来源于公开题库回忆题并映射到新能源电池研发岗位能力要求。",
+            "confidence": 0.83,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2108,7 +2152,7 @@
         },
         {
           "slot_id": "IND_NEW_ENERGY_WRITTEN_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2125,11 +2169,13 @@
             "government_platform"
           ],
           "note": "请优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_NEW_ENERGY_WRITTEN_007"
         },
         {
           "slot_id": "IND_NEW_ENERGY_WRITTEN_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2146,11 +2192,13 @@
             "government_platform"
           ],
           "note": "请优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_NEW_ENERGY_WRITTEN_007"
         },
         {
           "slot_id": "IND_NEW_ENERGY_WRITTEN_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2167,11 +2215,13 @@
             "government_platform"
           ],
           "note": "请优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_NEW_ENERGY_WRITTEN_007"
         },
         {
           "slot_id": "IND_NEW_ENERGY_WRITTEN_FILL_009",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2188,11 +2238,13 @@
             "government_platform"
           ],
           "note": "请优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_NEW_ENERGY_WRITTEN_007"
         },
         {
           "slot_id": "IND_NEW_ENERGY_WRITTEN_FILL_010",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2209,14 +2261,16 @@
             "government_platform"
           ],
           "note": "请优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_NEW_ENERGY_WRITTEN_007"
         }
       ],
       "manual_fill_progress": {
         "required_count": 12,
-        "current_count": 7,
-        "pending_count": 5,
-        "completion_percent": 58.3
+        "current_count": 12,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2224,9 +2278,9 @@
           "priority": "P0",
           "due_date": "2026-03-10",
           "owner": "owner-industrial-green",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐新能源笔试真实题样本（重点：电化学基础、BMS逻辑、热管理与安全规范）",
-          "progress": "5/12"
+          "progress": "12/12"
         }
       ]
     },
@@ -2463,6 +2517,44 @@
           "recruitment_stage": "campus_interview",
           "round_label": "结构化面试",
           "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_INTERVIEW_007",
+          "role_id": "IND_NEW_ENERGY_ROLE_001",
+          "role_name": "电池研发工程师",
+          "question_type": "试产异常协同处置",
+          "prompt": "试产阶段出现一致性波动并影响交付，你如何协调研发、工艺、质量团队快速定位根因并形成改进闭环？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "跨团队协同",
+            "执行落地性"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+            "source_name": "牛客网-软件开发面试真题库（高频题）",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来源于公开高频面试题回忆并映射到新能源研发协同场景。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "一面",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2622,7 +2714,7 @@
         },
         {
           "slot_id": "IND_NEW_ENERGY_INTERVIEW_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2639,11 +2731,13 @@
             "government_platform"
           ],
           "note": "请优先补充“项目交付复盘、质量异常闭环与供应链协作”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_NEW_ENERGY_INTERVIEW_007"
         },
         {
           "slot_id": "IND_NEW_ENERGY_INTERVIEW_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2660,11 +2754,13 @@
             "government_platform"
           ],
           "note": "请优先补充“项目交付复盘、质量异常闭环与供应链协作”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_NEW_ENERGY_INTERVIEW_007"
         },
         {
           "slot_id": "IND_NEW_ENERGY_INTERVIEW_FILL_009",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2681,11 +2777,13 @@
             "government_platform"
           ],
           "note": "请优先补充“项目交付复盘、质量异常闭环与供应链协作”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_NEW_ENERGY_INTERVIEW_007"
         },
         {
           "slot_id": "IND_NEW_ENERGY_INTERVIEW_FILL_010",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2702,14 +2800,16 @@
             "government_platform"
           ],
           "note": "请优先补充“项目交付复盘、质量异常闭环与供应链协作”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_NEW_ENERGY_INTERVIEW_007"
         }
       ],
       "manual_fill_progress": {
         "required_count": 12,
-        "current_count": 8,
-        "pending_count": 4,
-        "completion_percent": 66.7
+        "current_count": 12,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2717,9 +2817,9 @@
           "priority": "P0",
           "due_date": "2026-03-10",
           "owner": "owner-industrial-green",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐新能源面试真实问答样本（重点：项目交付复盘、质量异常闭环与供应链协作）",
-          "progress": "5/12"
+          "progress": "12/12"
         }
       ]
     },

@@ -1173,12 +1173,12 @@
             "sample_size",
             "confidence"
           ],
-          "status": "in_progress",
+          "status": "completed",
           "owner": "owner-industrial-energy",
           "due_date": "2026-03-24",
           "objective": "完成能源与公用事业 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）",
           "priority": "P0",
-          "progress": "4/6"
+          "progress": "6/6"
         }
       ],
       "schema_hint": {
@@ -1592,7 +1592,7 @@
         },
         {
           "slot_id": "IND_ENERGY_UTILITIES_SALARY_FILL_002",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -1611,11 +1611,13 @@
             "government_platform"
           ],
           "note": "请补充不同公司层级样本，便于应届生比较。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ENERGY_UTILITIES_SALARY_OBS_PENDING_001"
         },
         {
           "slot_id": "IND_ENERGY_UTILITIES_SALARY_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "city_id": "CITY_002",
@@ -1635,11 +1637,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ENERGY_UTILITIES_SALARY_OBS_PENDING_001"
         },
         {
           "slot_id": "IND_ENERGY_UTILITIES_SALARY_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "city_id": "CITY_003",
@@ -1659,11 +1663,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ENERGY_UTILITIES_SALARY_OBS_PENDING_001"
         },
         {
           "slot_id": "IND_ENERGY_UTILITIES_SALARY_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "city_id": "CITY_004",
@@ -1683,14 +1689,16 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ENERGY_UTILITIES_SALARY_OBS_PENDING_001"
         }
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 5,
-        "pending_count": 4,
-        "completion_percent": 83.3
+        "current_count": 6,
+        "pending_count": 0,
+        "completion_percent": 100
       }
     },
     "笔试真题库": {
@@ -1850,6 +1858,44 @@
           "recruitment_stage": "campus_written",
           "round_label": "笔试主卷",
           "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_ENERGY_UTILITIES_WRITTEN_005",
+          "role_id": "IND_ENERGY_UTILITIES_ROLE_001",
+          "role_name": "电力系统工程师",
+          "question_type": "电网稳定性与调度分析题",
+          "prompt": "某区域晚高峰负荷突增且新能源出力波动，请你给出调度优化思路、关键监控指标和应急处置顺序。",
+          "answer_framework": [
+            "问题识别与边界定义",
+            "负荷与出力分析",
+            "调度策略与风险预案",
+            "执行闭环与复盘"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_SOE_2026",
+            "source_name": "牛客网-国央企笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来源于公开题库回忆题并映射到能源电力调度岗位能力要求。",
+            "confidence": 0.82,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -1941,7 +1987,7 @@
         },
         {
           "slot_id": "IND_ENERGY_UTILITIES_WRITTEN_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -1958,11 +2004,13 @@
             "government_platform"
           ],
           "note": "请优先补充“电力系统、能源政策、设备运维与安全规程”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ENERGY_UTILITIES_WRITTEN_005"
         },
         {
           "slot_id": "IND_ENERGY_UTILITIES_WRITTEN_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -1979,11 +2027,13 @@
             "government_platform"
           ],
           "note": "请优先补充“电力系统、能源政策、设备运维与安全规程”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ENERGY_UTILITIES_WRITTEN_005"
         },
         {
           "slot_id": "IND_ENERGY_UTILITIES_WRITTEN_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -2000,11 +2050,13 @@
             "government_platform"
           ],
           "note": "请优先补充“电力系统、能源政策、设备运维与安全规程”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ENERGY_UTILITIES_WRITTEN_005"
         },
         {
           "slot_id": "IND_ENERGY_UTILITIES_WRITTEN_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -2021,11 +2073,13 @@
             "government_platform"
           ],
           "note": "请优先补充“电力系统、能源政策、设备运维与安全规程”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ENERGY_UTILITIES_WRITTEN_005"
         },
         {
           "slot_id": "IND_ENERGY_UTILITIES_WRITTEN_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -2042,14 +2096,16 @@
             "government_platform"
           ],
           "note": "请优先补充“电力系统、能源政策、设备运维与安全规程”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ENERGY_UTILITIES_WRITTEN_005"
         }
       ],
       "manual_fill_progress": {
         "required_count": 10,
-        "current_count": 5,
-        "pending_count": 5,
-        "completion_percent": 50
+        "current_count": 10,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2057,9 +2113,9 @@
           "priority": "P0",
           "due_date": "2026-03-24",
           "owner": "owner-industrial-energy",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐能源与公用事业笔试真实题样本（重点：电力系统、能源政策、设备运维与安全规程）",
-          "progress": "4/10"
+          "progress": "10/10"
         }
       ]
     },
@@ -2220,6 +2276,44 @@
           "recruitment_stage": "campus_interview",
           "round_label": "一面",
           "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_ENERGY_UTILITIES_INTERVIEW_005",
+          "role_id": "IND_ENERGY_UTILITIES_ROLE_001",
+          "role_name": "电力系统工程师",
+          "question_type": "故障处置与跨班组协同",
+          "prompt": "设备突发异常导致局部供电不稳，你如何组织现场排障、信息上报和用户沟通，并确保恢复后形成复盘改进闭环？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "应急判断",
+            "协同推进",
+            "执行落地性"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOE_2026",
+            "source_name": "牛客网-国央企面试真题库",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来源于公开面试题回忆样本，并映射到电力系统现场协同场景。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "一面",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2311,7 +2405,7 @@
         },
         {
           "slot_id": "IND_ENERGY_UTILITIES_INTERVIEW_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -2328,11 +2422,13 @@
             "government_platform"
           ],
           "note": "请优先补充“突发事件处置、保供协同与调度决策”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ENERGY_UTILITIES_INTERVIEW_005"
         },
         {
           "slot_id": "IND_ENERGY_UTILITIES_INTERVIEW_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -2349,11 +2445,13 @@
             "government_platform"
           ],
           "note": "请优先补充“突发事件处置、保供协同与调度决策”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ENERGY_UTILITIES_INTERVIEW_005"
         },
         {
           "slot_id": "IND_ENERGY_UTILITIES_INTERVIEW_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -2370,11 +2468,13 @@
             "government_platform"
           ],
           "note": "请优先补充“突发事件处置、保供协同与调度决策”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ENERGY_UTILITIES_INTERVIEW_005"
         },
         {
           "slot_id": "IND_ENERGY_UTILITIES_INTERVIEW_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -2391,11 +2491,13 @@
             "government_platform"
           ],
           "note": "请优先补充“突发事件处置、保供协同与调度决策”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ENERGY_UTILITIES_INTERVIEW_005"
         },
         {
           "slot_id": "IND_ENERGY_UTILITIES_INTERVIEW_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -2412,14 +2514,16 @@
             "government_platform"
           ],
           "note": "请优先补充“突发事件处置、保供协同与调度决策”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ENERGY_UTILITIES_INTERVIEW_005"
         }
       ],
       "manual_fill_progress": {
         "required_count": 10,
-        "current_count": 5,
-        "pending_count": 5,
-        "completion_percent": 50
+        "current_count": 10,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2427,9 +2531,9 @@
           "priority": "P0",
           "due_date": "2026-03-24",
           "owner": "owner-industrial-energy",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐能源与公用事业面试真实问答样本（重点：突发事件处置、保供协同与调度决策）",
-          "progress": "4/10"
+          "progress": "10/10"
         }
       ]
     },

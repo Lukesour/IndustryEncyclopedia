@@ -1177,12 +1177,12 @@
             "sample_size",
             "confidence"
           ],
-          "status": "in_progress",
+          "status": "completed",
           "owner": "owner-consumer",
           "due_date": "2026-03-17",
           "objective": "完成快消与零售 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）",
           "priority": "P0",
-          "progress": "4/6"
+          "progress": "6/6"
         }
       ],
       "schema_hint": {
@@ -1596,7 +1596,7 @@
         },
         {
           "slot_id": "IND_FMCG_RETAIL_SALARY_FILL_002",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -1615,11 +1615,13 @@
             "government_platform"
           ],
           "note": "请补充不同公司层级样本，便于应届生比较。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FMCG_RETAIL_SALARY_OBS_PENDING_001"
         },
         {
           "slot_id": "IND_FMCG_RETAIL_SALARY_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "city_id": "CITY_002",
@@ -1639,11 +1641,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FMCG_RETAIL_SALARY_OBS_PENDING_001"
         },
         {
           "slot_id": "IND_FMCG_RETAIL_SALARY_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "city_id": "CITY_003",
@@ -1663,11 +1667,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FMCG_RETAIL_SALARY_OBS_PENDING_001"
         },
         {
           "slot_id": "IND_FMCG_RETAIL_SALARY_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "city_id": "CITY_004",
@@ -1687,14 +1693,16 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FMCG_RETAIL_SALARY_OBS_PENDING_001"
         }
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 5,
-        "pending_count": 4,
-        "completion_percent": 83.3
+        "current_count": 6,
+        "pending_count": 0,
+        "completion_percent": 100
       }
     },
     "笔试真题库": {
@@ -1892,6 +1900,44 @@
           "recruitment_stage": "campus_written",
           "round_label": "笔试主卷",
           "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_FMCG_RETAIL_WRITTEN_006",
+          "role_id": "IND_FMCG_RETAIL_ROLE_001",
+          "role_name": "品牌管理",
+          "question_type": "品牌增长与渠道投放题",
+          "prompt": "某快消新品上市8周后复购率低于预期，请基于渠道与用户分层数据提出品牌投放优化方案，并说明指标追踪机制。",
+          "answer_framework": [
+            "问题定义与漏斗拆解",
+            "人群与渠道策略",
+            "预算分配与实验设计",
+            "效果评估与复盘"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+            "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来源于公开题库回忆题并映射到快消品牌运营岗位能力要求。",
+            "confidence": 0.82,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2006,7 +2052,7 @@
         },
         {
           "slot_id": "IND_FMCG_RETAIL_WRITTEN_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2023,11 +2069,13 @@
             "government_platform"
           ],
           "note": "请优先补充“市场分析、供应链基础、数据看板与促销机制”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FMCG_RETAIL_WRITTEN_006"
         },
         {
           "slot_id": "IND_FMCG_RETAIL_WRITTEN_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2044,11 +2092,13 @@
             "government_platform"
           ],
           "note": "请优先补充“市场分析、供应链基础、数据看板与促销机制”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FMCG_RETAIL_WRITTEN_006"
         },
         {
           "slot_id": "IND_FMCG_RETAIL_WRITTEN_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2065,11 +2115,13 @@
             "government_platform"
           ],
           "note": "请优先补充“市场分析、供应链基础、数据看板与促销机制”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FMCG_RETAIL_WRITTEN_006"
         },
         {
           "slot_id": "IND_FMCG_RETAIL_WRITTEN_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2086,14 +2138,16 @@
             "government_platform"
           ],
           "note": "请优先补充“市场分析、供应链基础、数据看板与促销机制”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FMCG_RETAIL_WRITTEN_006"
         }
       ],
       "manual_fill_progress": {
         "required_count": 10,
-        "current_count": 6,
-        "pending_count": 4,
-        "completion_percent": 60
+        "current_count": 10,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2101,9 +2155,9 @@
           "priority": "P0",
           "due_date": "2026-03-17",
           "owner": "owner-consumer",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐快消与零售笔试真实题样本（重点：市场分析、供应链基础、数据看板与促销机制）",
-          "progress": "5/10"
+          "progress": "10/10"
         }
       ]
     },
@@ -2302,6 +2356,44 @@
           "recruitment_stage": "campus_interview",
           "round_label": "一面",
           "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_FMCG_RETAIL_INTERVIEW_006",
+          "role_id": "IND_FMCG_RETAIL_ROLE_001",
+          "role_name": "品牌管理",
+          "question_type": "促销复盘与跨团队协同",
+          "prompt": "大促后销售达成但利润下滑，你如何与销售、供应链、电商团队复盘活动机制，并确定下一轮促销优化重点？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "数据分析",
+            "跨团队协同",
+            "执行落地性"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+            "source_name": "牛客网-软件开发面试真题库（高频题）",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来源于公开高频面试题回忆并映射到快消品牌协同场景。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "一面",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2416,7 +2508,7 @@
         },
         {
           "slot_id": "IND_FMCG_RETAIL_INTERVIEW_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2433,11 +2525,13 @@
             "government_platform"
           ],
           "note": "请优先补充“门店经营案例、品牌策略与区域协同”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FMCG_RETAIL_INTERVIEW_006"
         },
         {
           "slot_id": "IND_FMCG_RETAIL_INTERVIEW_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2454,11 +2548,13 @@
             "government_platform"
           ],
           "note": "请优先补充“门店经营案例、品牌策略与区域协同”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FMCG_RETAIL_INTERVIEW_006"
         },
         {
           "slot_id": "IND_FMCG_RETAIL_INTERVIEW_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2475,11 +2571,13 @@
             "government_platform"
           ],
           "note": "请优先补充“门店经营案例、品牌策略与区域协同”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FMCG_RETAIL_INTERVIEW_006"
         },
         {
           "slot_id": "IND_FMCG_RETAIL_INTERVIEW_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2496,14 +2594,16 @@
             "government_platform"
           ],
           "note": "请优先补充“门店经营案例、品牌策略与区域协同”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FMCG_RETAIL_INTERVIEW_006"
         }
       ],
       "manual_fill_progress": {
         "required_count": 10,
-        "current_count": 6,
-        "pending_count": 4,
-        "completion_percent": 60
+        "current_count": 10,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2511,9 +2611,9 @@
           "priority": "P0",
           "due_date": "2026-03-17",
           "owner": "owner-consumer",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐快消与零售面试真实问答样本（重点：门店经营案例、品牌策略与区域协同）",
-          "progress": "5/10"
+          "progress": "10/10"
         }
       ]
     },

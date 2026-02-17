@@ -1189,12 +1189,12 @@
             "sample_size",
             "confidence"
           ],
-          "status": "in_progress",
+          "status": "completed",
           "owner": "owner-industrial-manufacturing",
           "due_date": "2026-03-10",
           "objective": "完成高端制造与工业自动化 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）",
           "priority": "P0",
-          "progress": "4/6"
+          "progress": "6/6"
         }
       ],
       "schema_hint": {
@@ -1662,7 +1662,7 @@
         },
         {
           "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_SALARY_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "city_id": "CITY_001",
@@ -1682,11 +1682,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_SALARY_OBS_002"
         },
         {
           "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_SALARY_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "city_id": "CITY_002",
@@ -1706,11 +1708,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_SALARY_OBS_002"
         },
         {
           "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_SALARY_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "city_id": "CITY_003",
@@ -1730,13 +1734,15 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_SALARY_OBS_002"
         }
       ],
       "manual_fill_progress": {
         "required_count": 6,
         "current_count": 6,
-        "pending_count": 3,
+        "pending_count": 0,
         "completion_percent": 100
       }
     },
@@ -1973,6 +1979,44 @@
           "recruitment_stage": "campus_written",
           "round_label": "笔试主卷",
           "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_007",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_001",
+          "role_name": "机械工程师",
+          "question_type": "产线节拍优化与工艺题",
+          "prompt": "产线瓶颈工位导致整体节拍下降，请提出工艺优化方案，说明关键参数、产能提升测算和质量风险控制。",
+          "answer_framework": [
+            "问题识别与数据口径",
+            "工艺与节拍优化思路",
+            "产能测算与资源配置",
+            "质量风险与闭环复盘"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+            "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来源于公开题库回忆题并映射到高端制造机械工程岗位能力要求。",
+            "confidence": 0.82,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2110,7 +2154,7 @@
         },
         {
           "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2127,11 +2171,13 @@
             "government_platform"
           ],
           "note": "请优先补充“自动控制、机械电气基础、工业网络与SCADA”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_007"
         },
         {
           "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2148,11 +2194,13 @@
             "government_platform"
           ],
           "note": "请优先补充“自动控制、机械电气基础、工业网络与SCADA”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_007"
         },
         {
           "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2169,11 +2217,13 @@
             "government_platform"
           ],
           "note": "请优先补充“自动控制、机械电气基础、工业网络与SCADA”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_007"
         },
         {
           "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_FILL_009",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2190,11 +2240,13 @@
             "government_platform"
           ],
           "note": "请优先补充“自动控制、机械电气基础、工业网络与SCADA”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_007"
         },
         {
           "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_FILL_010",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2211,14 +2263,16 @@
             "government_platform"
           ],
           "note": "请优先补充“自动控制、机械电气基础、工业网络与SCADA”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_007"
         }
       ],
       "manual_fill_progress": {
         "required_count": 12,
-        "current_count": 7,
-        "pending_count": 5,
-        "completion_percent": 58.3
+        "current_count": 12,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2226,9 +2280,9 @@
           "priority": "P0",
           "due_date": "2026-03-10",
           "owner": "owner-industrial-manufacturing",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐高端制造与工业自动化笔试真实题样本（重点：自动控制、机械电气基础、工业网络与SCADA）",
-          "progress": "5/12"
+          "progress": "12/12"
         }
       ]
     },
@@ -2465,6 +2519,44 @@
           "recruitment_stage": "campus_interview",
           "round_label": "结构化面试",
           "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_007",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_001",
+          "role_name": "机械工程师",
+          "question_type": "现场问题处置与协同",
+          "prompt": "试运行阶段设备故障频发影响交付，你如何组织设备、工艺、质量团队定位根因并制定短中期改进计划？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题判断",
+            "跨团队协同",
+            "执行落地性"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+            "source_name": "牛客网-软件开发面试真题库（高频题）",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来源于公开高频面试题回忆并映射到高端制造现场协同场景。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "一面",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2602,7 +2694,7 @@
         },
         {
           "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2619,11 +2711,13 @@
             "government_platform"
           ],
           "note": "请优先补充“现场调试、异常处理与工艺改进案例”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_007"
         },
         {
           "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2640,11 +2734,13 @@
             "government_platform"
           ],
           "note": "请优先补充“现场调试、异常处理与工艺改进案例”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_007"
         },
         {
           "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2661,11 +2757,13 @@
             "government_platform"
           ],
           "note": "请优先补充“现场调试、异常处理与工艺改进案例”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_007"
         },
         {
           "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_FILL_009",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2682,11 +2780,13 @@
             "government_platform"
           ],
           "note": "请优先补充“现场调试、异常处理与工艺改进案例”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_007"
         },
         {
           "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_FILL_010",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2703,14 +2803,16 @@
             "government_platform"
           ],
           "note": "请优先补充“现场调试、异常处理与工艺改进案例”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_007"
         }
       ],
       "manual_fill_progress": {
         "required_count": 12,
-        "current_count": 7,
-        "pending_count": 5,
-        "completion_percent": 58.3
+        "current_count": 12,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2718,9 +2820,9 @@
           "priority": "P0",
           "due_date": "2026-03-10",
           "owner": "owner-industrial-manufacturing",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐高端制造与工业自动化面试真实问答样本（重点：现场调试、异常处理与工艺改进案例）",
-          "progress": "5/12"
+          "progress": "12/12"
         }
       ]
     },

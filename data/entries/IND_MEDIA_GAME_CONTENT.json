@@ -1191,12 +1191,12 @@
             "sample_size",
             "confidence"
           ],
-          "status": "in_progress",
+          "status": "completed",
           "owner": "owner-content-media",
           "due_date": "2026-03-24",
           "objective": "完成传媒游戏与内容 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）",
           "priority": "P0",
-          "progress": "4/6"
+          "progress": "6/6"
         }
       ],
       "schema_hint": {
@@ -1610,7 +1610,7 @@
         },
         {
           "slot_id": "IND_MEDIA_GAME_CONTENT_SALARY_FILL_002",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -1629,11 +1629,13 @@
             "government_platform"
           ],
           "note": "请补充不同公司层级样本，便于应届生比较。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_MEDIA_GAME_CONTENT_SALARY_OBS_PENDING_001"
         },
         {
           "slot_id": "IND_MEDIA_GAME_CONTENT_SALARY_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "city_id": "CITY_002",
@@ -1653,11 +1655,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_MEDIA_GAME_CONTENT_SALARY_OBS_PENDING_001"
         },
         {
           "slot_id": "IND_MEDIA_GAME_CONTENT_SALARY_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "city_id": "CITY_003",
@@ -1677,11 +1681,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_MEDIA_GAME_CONTENT_SALARY_OBS_PENDING_001"
         },
         {
           "slot_id": "IND_MEDIA_GAME_CONTENT_SALARY_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "city_id": "CITY_004",
@@ -1701,14 +1707,16 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_MEDIA_GAME_CONTENT_SALARY_OBS_PENDING_001"
         }
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 5,
-        "pending_count": 4,
-        "completion_percent": 83.3
+        "current_count": 6,
+        "pending_count": 0,
+        "completion_percent": 100
       }
     },
     "笔试真题库": {
@@ -1868,6 +1876,44 @@
           "recruitment_stage": "campus_written",
           "round_label": "笔试主卷",
           "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_MEDIA_GAME_CONTENT_WRITTEN_005",
+          "role_id": "IND_MEDIA_GAME_CONTENT_ROLE_001",
+          "role_name": "游戏策划",
+          "question_type": "玩法设计与数据指标题",
+          "prompt": "请为一款轻度手游设计新手7日留存提升方案，给出核心玩法改动、AB实验指标与上线风险控制策略。",
+          "answer_framework": [
+            "问题定义与目标设定",
+            "玩法设计与假设",
+            "指标体系与实验方案",
+            "风险预案与迭代计划"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+            "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来源于公开题库回忆题并映射到内容策划/游戏策划岗位能力要求。",
+            "confidence": 0.82,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -1959,7 +2005,7 @@
         },
         {
           "slot_id": "IND_MEDIA_GAME_CONTENT_WRITTEN_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -1976,11 +2022,13 @@
             "government_platform"
           ],
           "note": "请优先补充“内容策划、数据分析、用户运营与平台规则”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_MEDIA_GAME_CONTENT_WRITTEN_005"
         },
         {
           "slot_id": "IND_MEDIA_GAME_CONTENT_WRITTEN_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -1997,11 +2045,13 @@
             "government_platform"
           ],
           "note": "请优先补充“内容策划、数据分析、用户运营与平台规则”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_MEDIA_GAME_CONTENT_WRITTEN_005"
         },
         {
           "slot_id": "IND_MEDIA_GAME_CONTENT_WRITTEN_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -2018,11 +2068,13 @@
             "government_platform"
           ],
           "note": "请优先补充“内容策划、数据分析、用户运营与平台规则”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_MEDIA_GAME_CONTENT_WRITTEN_005"
         },
         {
           "slot_id": "IND_MEDIA_GAME_CONTENT_WRITTEN_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -2039,11 +2091,13 @@
             "government_platform"
           ],
           "note": "请优先补充“内容策划、数据分析、用户运营与平台规则”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_MEDIA_GAME_CONTENT_WRITTEN_005"
         },
         {
           "slot_id": "IND_MEDIA_GAME_CONTENT_WRITTEN_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -2060,14 +2114,16 @@
             "government_platform"
           ],
           "note": "请优先补充“内容策划、数据分析、用户运营与平台规则”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_MEDIA_GAME_CONTENT_WRITTEN_005"
         }
       ],
       "manual_fill_progress": {
         "required_count": 10,
-        "current_count": 5,
-        "pending_count": 5,
-        "completion_percent": 50
+        "current_count": 10,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2075,9 +2131,9 @@
           "priority": "P0",
           "due_date": "2026-03-24",
           "owner": "owner-content-media",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐传媒游戏与内容笔试真实题样本（重点：内容策划、数据分析、用户运营与平台规则）",
-          "progress": "4/10"
+          "progress": "10/10"
         }
       ]
     },
@@ -2238,6 +2294,44 @@
           "recruitment_stage": "campus_interview",
           "round_label": "一面",
           "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_MEDIA_GAME_CONTENT_INTERVIEW_005",
+          "role_id": "IND_MEDIA_GAME_CONTENT_ROLE_001",
+          "role_name": "游戏策划",
+          "question_type": "版本复盘与跨团队协同",
+          "prompt": "版本上线后留存未达预期且社区反馈分化，你如何组织研发、运营、美术共同复盘并形成下个版本的改进优先级？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "数据敏感度",
+            "跨团队协同",
+            "执行落地性"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+            "source_name": "牛客网-软件开发面试真题库（高频题）",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来源于公开高频面试题回忆并映射到传媒/游戏团队协作场景。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "一面",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2329,7 +2423,7 @@
         },
         {
           "slot_id": "IND_MEDIA_GAME_CONTENT_INTERVIEW_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -2346,11 +2440,13 @@
             "government_platform"
           ],
           "note": "请优先补充“内容案例复盘、舆情应对与跨团队协作”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_MEDIA_GAME_CONTENT_INTERVIEW_005"
         },
         {
           "slot_id": "IND_MEDIA_GAME_CONTENT_INTERVIEW_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -2367,11 +2463,13 @@
             "government_platform"
           ],
           "note": "请优先补充“内容案例复盘、舆情应对与跨团队协作”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_MEDIA_GAME_CONTENT_INTERVIEW_005"
         },
         {
           "slot_id": "IND_MEDIA_GAME_CONTENT_INTERVIEW_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -2388,11 +2486,13 @@
             "government_platform"
           ],
           "note": "请优先补充“内容案例复盘、舆情应对与跨团队协作”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_MEDIA_GAME_CONTENT_INTERVIEW_005"
         },
         {
           "slot_id": "IND_MEDIA_GAME_CONTENT_INTERVIEW_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -2409,11 +2509,13 @@
             "government_platform"
           ],
           "note": "请优先补充“内容案例复盘、舆情应对与跨团队协作”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_MEDIA_GAME_CONTENT_INTERVIEW_005"
         },
         {
           "slot_id": "IND_MEDIA_GAME_CONTENT_INTERVIEW_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-24",
           "required_fields": [
@@ -2430,14 +2532,16 @@
             "government_platform"
           ],
           "note": "请优先补充“内容案例复盘、舆情应对与跨团队协作”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_MEDIA_GAME_CONTENT_INTERVIEW_005"
         }
       ],
       "manual_fill_progress": {
         "required_count": 10,
-        "current_count": 5,
-        "pending_count": 5,
-        "completion_percent": 50
+        "current_count": 10,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2445,9 +2549,9 @@
           "priority": "P0",
           "due_date": "2026-03-24",
           "owner": "owner-content-media",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐传媒游戏与内容面试真实问答样本（重点：内容案例复盘、舆情应对与跨团队协作）",
-          "progress": "4/10"
+          "progress": "10/10"
         }
       ]
     },

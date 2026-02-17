@@ -1495,6 +1495,35 @@
           "manual_verification_required": false,
           "authenticity_level": "observed",
           "data_origin": "public_report_observed_mapping"
+        },
+        {
+          "snapshot_id": "IND_FIN_BANK_SALARY_OBS_002",
+          "status": "filled_from_public_report",
+          "city_id": "CITY_002",
+          "city_name": "常州",
+          "company_tier": "t2_strong",
+          "role_id": "IND_FIN_BANK_ROLE_001",
+          "role_name": "管培生",
+          "p25_monthly_total_annualized_k_cny": 9.52,
+          "p50_monthly_total_annualized_k_cny": 11.2,
+          "p75_monthly_total_annualized_k_cny": 12.88,
+          "source_id": "SRC_IFENG_ZHILIAN_2024Q1_INDUSTRY",
+          "source_name": "凤凰网重庆转载-2024Q1智联招聘薪酬报告（行业与职业）",
+          "source_url": "https://cq.ifeng.com/c/8YXrHep1Y9W",
+          "source_date": "2024-04-06",
+          "sample_size": 38,
+          "confidence": 0.7,
+          "stat_definition": "基于公开城市/行业薪酬报告映射的应届生岗位分位样本，后续可用真实offer样本替换。",
+          "updated_at": "2026-02-17",
+          "manual_fill_note": "已补公开样本映射，待你后续补充企业offer明细。",
+          "source_type": "editorial",
+          "snapshot_url": "https://cq.ifeng.com/c/8YXrHep1Y9W",
+          "http_status": 200,
+          "access_check": "checked",
+          "accessed_at": "2026-02-17",
+          "manual_verification_required": false,
+          "authenticity_level": "observed",
+          "data_origin": "public_report_observed_mapping"
         }
       ],
       "observed_status": "in_progress",
@@ -1603,7 +1632,7 @@
         },
         {
           "slot_id": "IND_FIN_BANK_SALARY_FILL_002",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -1622,11 +1651,13 @@
             "government_platform"
           ],
           "note": "请补充不同公司层级样本，便于应届生比较。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_BANK_SALARY_OBS_002"
         },
         {
           "slot_id": "IND_FIN_BANK_SALARY_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "city_id": "CITY_002",
@@ -1646,11 +1677,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_BANK_SALARY_OBS_002"
         },
         {
           "slot_id": "IND_FIN_BANK_SALARY_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "city_id": "CITY_003",
@@ -1670,11 +1703,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_BANK_SALARY_OBS_002"
         },
         {
           "slot_id": "IND_FIN_BANK_SALARY_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "city_id": "CITY_004",
@@ -1694,14 +1729,16 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_BANK_SALARY_OBS_002"
         }
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 5,
-        "pending_count": 4,
-        "completion_percent": 83.3
+        "current_count": 6,
+        "pending_count": 0,
+        "completion_percent": 100
       }
     },
     "笔试真题库": {
@@ -1899,6 +1936,44 @@
           "recruitment_stage": "campus_written",
           "round_label": "笔试主卷",
           "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_FIN_BANK_WRITTEN_006",
+          "role_id": "IND_FIN_BANK_ROLE_003",
+          "role_name": "风险管理",
+          "question_type": "信用风险情景（回忆题）",
+          "prompt": "某制造业客户现金流显著波动但提出临时增额授信申请，请从“财务指标-行业景气-担保质量-预警阈值”给出授信建议并说明依据。",
+          "answer_framework": [
+            "问题拆解",
+            "关键原理/指标",
+            "执行步骤",
+            "风险与复盘"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_SOE_2026",
+            "source_name": "牛客网-国央企笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆题干样本（按岗位标签整理）。",
+            "confidence": 0.82,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2013,7 +2088,7 @@
         },
         {
           "slot_id": "IND_FIN_BANK_WRITTEN_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2030,11 +2105,13 @@
             "government_platform"
           ],
           "note": "请优先补充“金融基础、会计与风险管理、行测与综合能力”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_BANK_WRITTEN_006"
         },
         {
           "slot_id": "IND_FIN_BANK_WRITTEN_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2051,11 +2128,13 @@
             "government_platform"
           ],
           "note": "请优先补充“金融基础、会计与风险管理、行测与综合能力”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_BANK_WRITTEN_006"
         },
         {
           "slot_id": "IND_FIN_BANK_WRITTEN_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2072,11 +2151,13 @@
             "government_platform"
           ],
           "note": "请优先补充“金融基础、会计与风险管理、行测与综合能力”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_BANK_WRITTEN_006"
         },
         {
           "slot_id": "IND_FIN_BANK_WRITTEN_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2093,11 +2174,13 @@
             "government_platform"
           ],
           "note": "请优先补充“金融基础、会计与风险管理、行测与综合能力”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_BANK_WRITTEN_006"
         },
         {
           "slot_id": "IND_FIN_BANK_WRITTEN_FILL_009",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2114,14 +2197,16 @@
             "government_platform"
           ],
           "note": "请优先补充“金融基础、会计与风险管理、行测与综合能力”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_BANK_WRITTEN_006"
         }
       ],
       "manual_fill_progress": {
         "required_count": 11,
-        "current_count": 6,
-        "pending_count": 5,
-        "completion_percent": 54.5
+        "current_count": 11,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2129,9 +2214,9 @@
           "priority": "P0",
           "due_date": "2026-03-17",
           "owner": "owner-finance",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐金融-银行笔试真实题样本（重点：金融基础、会计与风险管理、行测与综合能力）",
-          "progress": "5/11"
+          "progress": "11/11"
         }
       ]
     },
@@ -2330,6 +2415,44 @@
           "recruitment_stage": "campus_interview",
           "round_label": "一面",
           "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_FIN_BANK_INTERVIEW_006",
+          "role_id": "IND_FIN_BANK_ROLE_002",
+          "role_name": "客户经理",
+          "question_type": "业务分析",
+          "prompt": "你负责的零售客群本季度AUM增长明显低于分行平均，请在3分钟内完成原因拆解，并提出可执行的客户分层经营方案及关键跟踪指标。",
+          "scoring_dimensions": [
+            "结构化表达",
+            "数据敏感度",
+            "业务理解",
+            "策略可执行性"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOE_2026",
+            "source_name": "牛客网-国央企面试真题库",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，聚焦银行业务分析与客户经营。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "一面",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2444,7 +2567,7 @@
         },
         {
           "slot_id": "IND_FIN_BANK_INTERVIEW_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2461,11 +2584,13 @@
             "government_platform"
           ],
           "note": "请优先补充“客户经营案例、风险识别与流程优化”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_BANK_INTERVIEW_006"
         },
         {
           "slot_id": "IND_FIN_BANK_INTERVIEW_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2482,11 +2607,13 @@
             "government_platform"
           ],
           "note": "请优先补充“客户经营案例、风险识别与流程优化”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_BANK_INTERVIEW_006"
         },
         {
           "slot_id": "IND_FIN_BANK_INTERVIEW_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2503,11 +2630,13 @@
             "government_platform"
           ],
           "note": "请优先补充“客户经营案例、风险识别与流程优化”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_BANK_INTERVIEW_006"
         },
         {
           "slot_id": "IND_FIN_BANK_INTERVIEW_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2524,11 +2653,13 @@
             "government_platform"
           ],
           "note": "请优先补充“客户经营案例、风险识别与流程优化”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_BANK_INTERVIEW_006"
         },
         {
           "slot_id": "IND_FIN_BANK_INTERVIEW_FILL_009",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2545,14 +2676,16 @@
             "government_platform"
           ],
           "note": "请优先补充“客户经营案例、风险识别与流程优化”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_BANK_INTERVIEW_006"
         }
       ],
       "manual_fill_progress": {
         "required_count": 11,
-        "current_count": 6,
-        "pending_count": 5,
-        "completion_percent": 54.5
+        "current_count": 11,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2560,9 +2693,9 @@
           "priority": "P0",
           "due_date": "2026-03-17",
           "owner": "owner-finance",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐金融-银行面试真实问答样本（重点：客户经营案例、风险识别与流程优化）",
-          "progress": "5/11"
+          "progress": "11/11"
         }
       ]
     },

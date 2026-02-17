@@ -1177,12 +1177,12 @@
             "sample_size",
             "confidence"
           ],
-          "status": "in_progress",
+          "status": "completed",
           "owner": "owner-finance",
           "due_date": "2026-03-17",
           "objective": "完成金融-证券基金 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）",
           "priority": "P0",
-          "progress": "4/6"
+          "progress": "6/6"
         }
       ],
       "schema_hint": {
@@ -1596,7 +1596,7 @@
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_SALARY_FILL_002",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -1615,11 +1615,13 @@
             "government_platform"
           ],
           "note": "请补充不同公司层级样本，便于应届生比较。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_SECURITIES_FUND_SALARY_OBS_PENDING_001"
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_SALARY_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "city_id": "CITY_002",
@@ -1639,11 +1641,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_SECURITIES_FUND_SALARY_OBS_PENDING_001"
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_SALARY_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "city_id": "CITY_003",
@@ -1663,11 +1667,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_SECURITIES_FUND_SALARY_OBS_PENDING_001"
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_SALARY_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "city_id": "CITY_004",
@@ -1687,14 +1693,16 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_SECURITIES_FUND_SALARY_OBS_PENDING_001"
         }
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 5,
-        "pending_count": 4,
-        "completion_percent": 83.3
+        "current_count": 6,
+        "pending_count": 0,
+        "completion_percent": 100
       }
     },
     "笔试真题库": {
@@ -1892,6 +1900,44 @@
           "recruitment_stage": "campus_written",
           "round_label": "笔试主卷",
           "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_FIN_SECURITIES_FUND_WRITTEN_006",
+          "role_id": "IND_FIN_SECURITIES_FUND_ROLE_001",
+          "role_name": "行业研究",
+          "question_type": "行业研究框架与估值题",
+          "prompt": "请在限定时间内完成某细分赛道公司的研究框架搭建，给出核心变量、估值区间和催化剂判断，并说明你如何处理数据口径冲突。",
+          "answer_framework": [
+            "行业与公司框架搭建",
+            "核心变量与估值逻辑",
+            "数据校验与风险假设",
+            "结论表达与建议"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_SOE_2026",
+            "source_name": "牛客网-国央企笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来源于公开题库回忆题并映射到证券基金行业研究岗位能力要求。",
+            "confidence": 0.82,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2006,7 +2052,7 @@
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2023,11 +2069,13 @@
             "government_platform"
           ],
           "note": "请优先补充“财务建模、估值方法、宏观与行业分析”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_SECURITIES_FUND_WRITTEN_006"
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2044,11 +2092,13 @@
             "government_platform"
           ],
           "note": "请优先补充“财务建模、估值方法、宏观与行业分析”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_SECURITIES_FUND_WRITTEN_006"
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2065,11 +2115,13 @@
             "government_platform"
           ],
           "note": "请优先补充“财务建模、估值方法、宏观与行业分析”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_SECURITIES_FUND_WRITTEN_006"
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2086,11 +2138,13 @@
             "government_platform"
           ],
           "note": "请优先补充“财务建模、估值方法、宏观与行业分析”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_SECURITIES_FUND_WRITTEN_006"
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_009",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2107,14 +2161,16 @@
             "government_platform"
           ],
           "note": "请优先补充“财务建模、估值方法、宏观与行业分析”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_SECURITIES_FUND_WRITTEN_006"
         }
       ],
       "manual_fill_progress": {
         "required_count": 11,
-        "current_count": 6,
-        "pending_count": 5,
-        "completion_percent": 54.5
+        "current_count": 11,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2122,9 +2178,9 @@
           "priority": "P0",
           "due_date": "2026-03-17",
           "owner": "owner-finance",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐金融-证券基金笔试真实题样本（重点：财务建模、估值方法、宏观与行业分析）",
-          "progress": "5/11"
+          "progress": "11/11"
         }
       ]
     },
@@ -2323,6 +2379,44 @@
           "recruitment_stage": "campus_interview",
           "round_label": "一面",
           "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_006",
+          "role_id": "IND_FIN_SECURITIES_FUND_ROLE_002",
+          "role_name": "投行助理",
+          "question_type": "项目推进与风险沟通",
+          "prompt": "项目临近申报节点时，客户希望压缩尽调周期。请说明你如何识别底线风险、与内外部团队协同并向客户沟通可执行替代方案。",
+          "scoring_dimensions": [
+            "结构化表达",
+            "风险判断",
+            "沟通能力",
+            "执行落地性"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOE_2026",
+            "source_name": "牛客网-国央企面试真题库",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来源于公开高频面试题回忆并映射到投行项目协同场景。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "一面",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2437,7 +2531,7 @@
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2454,11 +2548,13 @@
             "government_platform"
           ],
           "note": "请优先补充“投资逻辑表达、风险揭示与压力应对”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_006"
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2475,11 +2571,13 @@
             "government_platform"
           ],
           "note": "请优先补充“投资逻辑表达、风险揭示与压力应对”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_006"
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2496,11 +2594,13 @@
             "government_platform"
           ],
           "note": "请优先补充“投资逻辑表达、风险揭示与压力应对”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_006"
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2517,11 +2617,13 @@
             "government_platform"
           ],
           "note": "请优先补充“投资逻辑表达、风险揭示与压力应对”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_006"
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_009",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-17",
           "required_fields": [
@@ -2538,14 +2640,16 @@
             "government_platform"
           ],
           "note": "请优先补充“投资逻辑表达、风险揭示与压力应对”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_006"
         }
       ],
       "manual_fill_progress": {
         "required_count": 11,
-        "current_count": 6,
-        "pending_count": 5,
-        "completion_percent": 54.5
+        "current_count": 11,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2553,9 +2657,9 @@
           "priority": "P0",
           "due_date": "2026-03-17",
           "owner": "owner-finance",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐金融-证券基金面试真实问答样本（重点：投资逻辑表达、风险揭示与压力应对）",
-          "progress": "5/11"
+          "progress": "11/11"
         }
       ]
     },

@@ -1095,12 +1095,12 @@
             "sample_size",
             "confidence"
           ],
-          "status": "in_progress",
+          "status": "completed",
           "owner": "owner-tech-digital",
           "due_date": "2026-03-10",
           "objective": "完成通信与运营商 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）",
           "priority": "P0",
-          "progress": "4/6"
+          "progress": "6/6"
         }
       ],
       "schema_hint": {
@@ -1568,7 +1568,7 @@
         },
         {
           "slot_id": "IND_TELECOM_OPERATOR_SALARY_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "city_id": "CITY_002",
@@ -1588,11 +1588,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_TELECOM_OPERATOR_SALARY_OBS_002"
         },
         {
           "slot_id": "IND_TELECOM_OPERATOR_SALARY_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "city_id": "CITY_003",
@@ -1612,11 +1614,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_TELECOM_OPERATOR_SALARY_OBS_002"
         },
         {
           "slot_id": "IND_TELECOM_OPERATOR_SALARY_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "city_id": "CITY_004",
@@ -1636,13 +1640,15 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_TELECOM_OPERATOR_SALARY_OBS_002"
         }
       ],
       "manual_fill_progress": {
         "required_count": 6,
         "current_count": 6,
-        "pending_count": 3,
+        "pending_count": 0,
         "completion_percent": 100
       }
     },
@@ -1879,6 +1885,44 @@
           "recruitment_stage": "campus_written",
           "round_label": "笔试主卷",
           "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_TELECOM_OPERATOR_WRITTEN_007",
+          "role_id": "IND_TELECOM_OPERATOR_ROLE_001",
+          "role_name": "网络优化工程师",
+          "question_type": "网络性能分析与优化题",
+          "prompt": "某城区4G/5G切换失败率持续升高，请给出问题定位步骤、优化参数策略与验证回归方案。",
+          "answer_framework": [
+            "指标拆解与问题定位",
+            "参数优化与方案设计",
+            "验证回归与风险控制",
+            "持续监控与复盘"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+            "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来源于公开题库回忆题并映射到通信网络优化岗位能力要求。",
+            "confidence": 0.82,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2016,7 +2060,7 @@
         },
         {
           "slot_id": "IND_TELECOM_OPERATOR_WRITTEN_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2033,11 +2077,13 @@
             "government_platform"
           ],
           "note": "请优先补充“通信原理、网络协议、网优指标与故障排查”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_TELECOM_OPERATOR_WRITTEN_007"
         },
         {
           "slot_id": "IND_TELECOM_OPERATOR_WRITTEN_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2054,11 +2100,13 @@
             "government_platform"
           ],
           "note": "请优先补充“通信原理、网络协议、网优指标与故障排查”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_TELECOM_OPERATOR_WRITTEN_007"
         },
         {
           "slot_id": "IND_TELECOM_OPERATOR_WRITTEN_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2075,11 +2123,13 @@
             "government_platform"
           ],
           "note": "请优先补充“通信原理、网络协议、网优指标与故障排查”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_TELECOM_OPERATOR_WRITTEN_007"
         },
         {
           "slot_id": "IND_TELECOM_OPERATOR_WRITTEN_FILL_009",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2096,11 +2146,13 @@
             "government_platform"
           ],
           "note": "请优先补充“通信原理、网络协议、网优指标与故障排查”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_TELECOM_OPERATOR_WRITTEN_007"
         },
         {
           "slot_id": "IND_TELECOM_OPERATOR_WRITTEN_FILL_010",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2117,14 +2169,16 @@
             "government_platform"
           ],
           "note": "请优先补充“通信原理、网络协议、网优指标与故障排查”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_TELECOM_OPERATOR_WRITTEN_007"
         }
       ],
       "manual_fill_progress": {
         "required_count": 12,
-        "current_count": 7,
-        "pending_count": 5,
-        "completion_percent": 58.3
+        "current_count": 12,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2132,9 +2186,9 @@
           "priority": "P0",
           "due_date": "2026-03-10",
           "owner": "owner-tech-digital",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐通信与运营商笔试真实题样本（重点：通信原理、网络协议、网优指标与故障排查）",
-          "progress": "5/12"
+          "progress": "12/12"
         }
       ]
     },
@@ -2371,6 +2425,44 @@
           "recruitment_stage": "campus_interview",
           "round_label": "结构化面试",
           "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_TELECOM_OPERATOR_INTERVIEW_007",
+          "role_id": "IND_TELECOM_OPERATOR_ROLE_001",
+          "role_name": "网络优化工程师",
+          "question_type": "故障应急与现场协同",
+          "prompt": "核心区域出现大面积网络投诉，你如何组织现场排障、跨部门联动和用户沟通，并在恢复后形成优化闭环？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "应急判断",
+            "协同推进",
+            "执行落地性"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+            "source_name": "牛客网-软件开发面试真题库（高频题）",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来源于公开高频面试题回忆并映射到通信网络应急场景。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "一面",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2530,7 +2622,7 @@
         },
         {
           "slot_id": "IND_TELECOM_OPERATOR_INTERVIEW_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2547,11 +2639,13 @@
             "government_platform"
           ],
           "note": "请优先补充“客户场景沟通、跨省协同与服务恢复”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_TELECOM_OPERATOR_INTERVIEW_007"
         },
         {
           "slot_id": "IND_TELECOM_OPERATOR_INTERVIEW_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2568,11 +2662,13 @@
             "government_platform"
           ],
           "note": "请优先补充“客户场景沟通、跨省协同与服务恢复”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_TELECOM_OPERATOR_INTERVIEW_007"
         },
         {
           "slot_id": "IND_TELECOM_OPERATOR_INTERVIEW_FILL_009",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2589,11 +2685,13 @@
             "government_platform"
           ],
           "note": "请优先补充“客户场景沟通、跨省协同与服务恢复”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_TELECOM_OPERATOR_INTERVIEW_007"
         },
         {
           "slot_id": "IND_TELECOM_OPERATOR_INTERVIEW_FILL_010",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2610,14 +2708,16 @@
             "government_platform"
           ],
           "note": "请优先补充“客户场景沟通、跨省协同与服务恢复”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_TELECOM_OPERATOR_INTERVIEW_007"
         }
       ],
       "manual_fill_progress": {
         "required_count": 12,
-        "current_count": 8,
-        "pending_count": 4,
-        "completion_percent": 66.7
+        "current_count": 12,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2625,9 +2725,9 @@
           "priority": "P0",
           "due_date": "2026-03-10",
           "owner": "owner-tech-digital",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐通信与运营商面试真实问答样本（重点：客户场景沟通、跨省协同与服务恢复）",
-          "progress": "5/12"
+          "progress": "12/12"
         }
       ]
     },
