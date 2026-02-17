@@ -354,10 +354,20 @@
           "新增事件条目均补充industry_indicator与dual_source证据链，增强可解释性与实证强度。",
           "新增信息源规范文档v1.26.0，按模块细化一级/二级证据与抓取字段标准。"
         ]
+      },
+      {
+        "version": "v1.27.0",
+        "date": "2026-02-17",
+        "summary": [
+          "补齐剩余12个行业的政策变化日志第7条与行业事件日志第8条，统一到全行业同口径密度。",
+          "新增10个官方来源并完成HTTP 200核验，涵盖工信部、教育部、商务部、网信办、交通运输部、国资委等。",
+          "新增条目统一补齐事实/影响/行业指标/evidence_chain，并维持dual_source证据链规范。",
+          "重跑质量流水线，事件密度从min=7提升到min=8，来源集中度进一步下降。"
+        ]
       }
     ],
-    "文档名称": "中国大陆应届生求职行业百科（v1.26.0真实度与可解释性增强版）",
-    "版本": "v1.26.0",
+    "文档名称": "中国大陆应届生求职行业百科（v1.27.0官方来源扩展版）",
+    "版本": "v1.27.0",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -388,6 +398,7 @@
       "质量门禁新增decision_placeholder_hits，发布前要求“待你补充”占位符清零。",
       "v1.25.0全行业事件日志升级为“事实+影响+证据链”结构，并上调真实度门槛。",
       "v1.26.0补齐三大低新鲜度行业的访谈/案例/事件增量，并升级为行业专有指标+双来源证据链。",
+      "v1.27.0补齐剩余12个行业的政策/事件扩展条目，新增10个官方来源并统一到全行业P=7、E=8密度。",
       "岗位画像库新增高分回答示例、失分点与STAR证据模板，个性化待填位独立标识。",
       "薪酬微观层新增观察层语义（JD/offer/统计锚点）并显式区分估算值与观察值。",
       "质量语义升级：新增publish_date/captured_at并用于新鲜度计算回退逻辑。"
@@ -2800,6 +2811,286 @@
       "http_status": 200,
       "access_check": "checked",
       "manual_verification_required": false
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.gov.cn/lianbo/fabu/202509/content_7041793.htm",
+      "source_id": "SRC_MOFCOM_ECOMMERCE_20250930",
+      "source_name": "商务部电子商务司负责人介绍2025年1-8月我国电子商务发展情况",
+      "source_type": "government_policy",
+      "source_url": "https://www.gov.cn/lianbo/fabu/202509/content_7041793.htm",
+      "typical_update_cycle": "quarterly_or_event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_e8e780ef457343699aaa9943a8a158b9.html",
+      "source_id": "SRC_MIIT_ELECTRONICS_STABLE_20250904",
+      "source_name": "工业和信息化部办公厅关于印发《电子信息制造业2025－2026年稳增长行动方案》的通知",
+      "source_type": "government_policy",
+      "source_url": "https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_e8e780ef457343699aaa9943a8a158b9.html",
+      "typical_update_cycle": "event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
+      "source_id": "SRC_NEA_WORKCONF_20260130",
+      "source_name": "国家能源局举行新闻发布会介绍2025年电力工业统计数据有关情况",
+      "source_type": "government_policy",
+      "source_url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
+      "typical_update_cycle": "event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.mohurd.gov.cn/xinwen/gzdt/art/2025/art_4fa6fb32042042d09182581bbd1f092e.html",
+      "source_id": "SRC_MOHURD_URBAN_RENEWAL_20251225",
+      "source_name": "住房城乡建设部：因城施策控增量、去库存、优供给，持续用力推动房地产市场止跌回稳",
+      "source_type": "government_policy",
+      "source_url": "https://www.mohurd.gov.cn/xinwen/gzdt/art/2025/art_4fa6fb32042042d09182581bbd1f092e.html",
+      "typical_update_cycle": "event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://scs.moa.gov.cn/jcyj/202510/t20251009_6477959.htm",
+      "source_id": "SRC_MOA_CASDE_20251009",
+      "source_name": "农业农村部市场预警专家委员会发布2025年10月中国农产品供需形势分析",
+      "source_type": "government_dataset",
+      "source_url": "https://scs.moa.gov.cn/jcyj/202510/t20251009_6477959.htm",
+      "typical_update_cycle": "monthly_or_quarterly"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.nrta.gov.cn/art/2026/2/12/art_113_72461.html",
+      "source_id": "SRC_NRTA_TV_SUPPORT_20260212",
+      "source_name": "国家广播电视总局关于开展2026年度电视剧引导扶持项目申报评审工作的通知",
+      "source_type": "government_policy",
+      "source_url": "https://www.nrta.gov.cn/art/2026/2/12/art_113_72461.html",
+      "typical_update_cycle": "event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://rsj.sh.gov.cn/tgsgg_17341/20260128/t0035_1438398.html",
+      "source_id": "SRC_SHRSJ_PUBLIC_INST_20260128",
+      "source_name": "上海市人社局-上海市2026年事业单位公开招聘公告",
+      "source_type": "government_platform",
+      "source_url": "https://rsj.sh.gov.cn/tgsgg_17341/20260128/t0035_1438398.html",
+      "typical_update_cycle": "annual_or_event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.csrc.gov.cn/csrc/c106311/c7609372/content.shtml",
+      "source_id": "SRC_CSRC_WORKCONF_20260116",
+      "source_name": "中国证监会召开2026年系统工作会议",
+      "source_type": "government_policy",
+      "source_url": "https://www.csrc.gov.cn/csrc/c106311/c7609372/content.shtml",
+      "typical_update_cycle": "annual_or_event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+      "source_id": "SRC_PBC_WORKCONF_20260106",
+      "source_name": "2026年中国人民银行工作会议召开",
+      "source_type": "government_policy",
+      "source_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+      "typical_update_cycle": "annual_or_event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.nmpaic.org.cn/yjzxyw/202602/t20260206_429414.html",
+      "source_id": "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
+      "source_name": "2026年全国医疗器械监督管理工作会议召开（NMPA信息中心转载）",
+      "source_type": "government_policy",
+      "source_url": "https://www.nmpaic.org.cn/yjzxyw/202602/t20260206_429414.html",
+      "typical_update_cycle": "annual_or_event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://wap.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_525ed8efdfd649f5a1c15911769c0590.html",
+      "source_id": "SRC_MIIT_MECHANICAL_STABLE_20250929",
+      "source_name": "工业和信息化部等六部门关于印发《机械行业稳增长工作方案（2025—2026年）》的通知",
+      "source_type": "government_policy",
+      "source_url": "https://wap.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_525ed8efdfd649f5a1c15911769c0590.html",
+      "typical_update_cycle": "event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2025/art_76f6af8d52cb4f0cb0f8fbabddc85241.html",
+      "source_id": "SRC_MIIT_AUTO_STABLE_20250912",
+      "source_name": "工业和信息化部等八部门关于印发《汽车行业稳增长工作方案（2025—2026年）》的通知",
+      "source_type": "government_policy",
+      "source_url": "https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2025/art_76f6af8d52cb4f0cb0f8fbabddc85241.html",
+      "typical_update_cycle": "event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.gov.cn/zhengce/zhengceku/202509/content_7042418.htm",
+      "source_id": "SRC_GOV_PETROCHEM_STABLE_20250926",
+      "source_name": "工业和信息化部等7部门关于印发《石化化工行业稳增长工作方案（2025-2026年）》的通知",
+      "source_type": "government_policy",
+      "source_url": "https://www.gov.cn/zhengce/zhengceku/202509/content_7042418.htm",
+      "typical_update_cycle": "event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.gov.cn/zhengce/202504/content_7020280.htm",
+      "source_id": "SRC_GOV_SERVICE_OPENING_20250421",
+      "source_name": "我国加快推进服务业扩大开放综合试点（政策解读）",
+      "source_type": "government_policy",
+      "source_url": "https://www.gov.cn/zhengce/202504/content_7020280.htm",
+      "typical_update_cycle": "event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.moe.gov.cn/srcsite/A07/s7055/202505/t20250509_1189964.html",
+      "source_id": "SRC_MOE_VOC_EDU_WEEK_20250509",
+      "source_name": "教育部等九部门关于办好2025年职业教育活动周的通知",
+      "source_type": "government_policy",
+      "source_url": "https://www.moe.gov.cn/srcsite/A07/s7055/202505/t20250509_1189964.html",
+      "typical_update_cycle": "annual_or_event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n1y15r/index.html",
+      "source_id": "SRC_MOFCOM_PRESSCONF_20260115",
+      "source_name": "商务部召开例行新闻发布会（2026年1月15日）",
+      "source_type": "government_policy",
+      "source_url": "https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n1y15r/index.html",
+      "typical_update_cycle": "monthly_or_event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.cac.gov.cn/2026-01/09/c_1769688009588554.htm",
+      "source_id": "SRC_CAC_GENAI_RECORD_20260109",
+      "source_name": "国家互联网信息办公室关于发布2025年生成式人工智能服务已备案信息的公告",
+      "source_type": "government_policy",
+      "source_url": "https://www.cac.gov.cn/2026-01/09/c_1769688009588554.htm",
+      "typical_update_cycle": "quarterly_or_event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.mot.gov.cn/shuju/tongjishuju/youzheng/202601/t20260130_4199355.html",
+      "source_id": "SRC_MOT_POSTAL_20260122",
+      "source_name": "国家邮政局公布2025年邮政行业运行情况",
+      "source_type": "government_dataset",
+      "source_url": "https://www.mot.gov.cn/shuju/tongjishuju/youzheng/202601/t20260130_4199355.html",
+      "typical_update_cycle": "monthly_or_quarterly"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "http://wap.sasac.gov.cn/n2588025/n2643314/c35340771/content.html",
+      "source_id": "SRC_SASAC_TALENT_WORKCONF_20260203",
+      "source_name": "国资央企人才工作座谈会在京召开",
+      "source_type": "government_policy",
+      "source_url": "http://wap.sasac.gov.cn/n2588025/n2643314/c35340771/content.html",
+      "typical_update_cycle": "event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-17",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-17",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.miit.gov.cn/jgsj/yxj/xxfb/art/2026/art_bea806f4dd20457cb0158795cc210aa7.html",
+      "source_id": "SRC_MIIT_TELECOM_BULLETIN_20260128",
+      "source_name": "2025年通信业统计公报",
+      "source_type": "government_dataset",
+      "source_url": "https://www.miit.gov.cn/jgsj/yxj/xxfb/art/2026/art_bea806f4dd20457cb0158795cc210aa7.html",
+      "typical_update_cycle": "annual"
     }
   ],
   "枚举字典": {
@@ -7887,6 +8178,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2025-09-29",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.83,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://wap.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_525ed8efdfd649f5a1c15911769c0590.html",
+                "source_date": "2025-09-29",
+                "source_id": "SRC_MIIT_MECHANICAL_STABLE_20250929",
+                "source_name": "工业和信息化部等六部门关于印发《机械行业稳增长工作方案（2025—2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://wap.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_525ed8efdfd649f5a1c15911769c0590.html",
+                "stat_definition": "机械行业稳增长方案明确设备更新与智能制造任务，作为制造岗位需求变化的政策锚点。",
+                "publish_date": "2025-09-29",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "制造企业校招更强调自动化项目实操、交付节点管理与降本增效能力。",
+              "log_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_POLICY_20250929_MIIT",
+              "scope": "全国",
+              "title": "六部门发布机械行业稳增长方案（2025—2026年）",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -9948,6 +10266,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://wap.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_525ed8efdfd649f5a1c15911769c0590.html",
+                "source_date": "2025-09-29",
+                "source_id": "SRC_MIIT_MECHANICAL_STABLE_20250929",
+                "source_name": "工业和信息化部等六部门关于印发《机械行业稳增长工作方案（2025—2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://wap.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_525ed8efdfd649f5a1c15911769c0590.html",
+                "publish_date": "2025-09-29",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "机械行业稳增长政策落地后，校招岗位更偏向具备自动化产线调试与效率改善经验的候选人。",
+              "title": "机械行业稳增长政策落地，制造校招偏向工程化交付能力",
+              "updated_at": "2026-02-17",
+              "fact": "政策明确提出稳增长与智能化改造任务，企业招聘同步强化产线效率与交付稳定能力。",
+              "impact": "应届生需准备OEE提升、设备改造和跨工序协同的可量化项目案例。",
+              "industry_indicator": "OEE、设备稼动率、订单准交率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_MIIT_MECHANICAL_STABLE_20250929",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_INOVANCE_COM_3C75604F"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -10584,11 +10938,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 89.8,
-        "freshness_percent_overall": 86.4,
+        "evidence_percent_overall": 90.2,
+        "freshness_percent_overall": 86.9,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.2,
+        "quality_score_overall": 94.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -10604,7 +10958,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 36.4
+        "ranking_percentile": 40.9
       },
       "slug": "advanced-manufacturing-automation",
       "sources": [
@@ -12961,6 +13315,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2025-10-09",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.84,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://scs.moa.gov.cn/jcyj/202510/t20251009_6477959.htm",
+                "source_date": "2025-10-09",
+                "source_id": "SRC_MOA_CASDE_20251009",
+                "source_name": "农业农村部市场预警专家委员会发布2025年10月中国农产品供需形势分析",
+                "source_type": "government_dataset",
+                "source_url": "https://scs.moa.gov.cn/jcyj/202510/t20251009_6477959.htm",
+                "stat_definition": "农业农村部官方供需分析，作为农业食品岗位景气与用工节奏的行业证据。",
+                "publish_date": "2025-10-09",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "供需结构变化会影响农产品加工、品控与供应链岗位需求节奏。",
+              "log_id": "IND_AGRI_FOOD_POLICY_20251009_MOA",
+              "scope": "全国",
+              "title": "农业农村部发布2025年10月中国农产品供需形势分析",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -15010,6 +15391,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_AGRI_FOOD_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://scs.moa.gov.cn/jcyj/202510/t20251009_6477959.htm",
+                "source_date": "2025-10-09",
+                "source_id": "SRC_MOA_CASDE_20251009",
+                "source_name": "农业农村部市场预警专家委员会发布2025年10月中国农产品供需形势分析",
+                "source_type": "government_dataset",
+                "source_url": "https://scs.moa.gov.cn/jcyj/202510/t20251009_6477959.htm",
+                "publish_date": "2025-10-09",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "农业供需监测持续强化，食品岗位从单点生产执行转向供需协同与质量追溯并重。",
+              "title": "农产品供需监测强化，农业食品岗位更重视产销协同能力",
+              "updated_at": "2026-02-17",
+              "fact": "农业农村部持续发布供需形势分析，企业岗位对产销预测与质量协同要求提升。",
+              "impact": "应届生在面试中应补充供需判断、批次质量追溯和跨部门协调案例。",
+              "industry_indicator": "供需缺口率、批次合格率、库存周转天数",
+              "evidence_chain": {
+                "primary_source_id": "SRC_MOA_CASDE_20251009",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_YILI_COM_D7937E58"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -15604,11 +16021,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 86.9,
-        "freshness_percent_overall": 85.2,
+        "evidence_percent_overall": 87.3,
+        "freshness_percent_overall": 85.7,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.1,
+        "quality_score_overall": 94.2,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -18057,6 +18474,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2025-09-12",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.84,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2025/art_76f6af8d52cb4f0cb0f8fbabddc85241.html",
+                "source_date": "2025-09-12",
+                "source_id": "SRC_MIIT_AUTO_STABLE_20250912",
+                "source_name": "工业和信息化部等八部门关于印发《汽车行业稳增长工作方案（2025—2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2025/art_76f6af8d52cb4f0cb0f8fbabddc85241.html",
+                "stat_definition": "汽车行业稳增长方案明确新能源与智能网联协同目标，是校招岗位结构变化的重要政策依据。",
+                "publish_date": "2025-09-12",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "车企与供应链招聘更偏向软件定义汽车、量产验证与功能安全复合能力。",
+              "log_id": "IND_AUTO_INTELLIGENT_DRIVING_POLICY_20250912_MIIT",
+              "scope": "全国",
+              "title": "八部门发布汽车行业稳增长方案（2025—2026年）",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -20119,6 +20563,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_AUTO_INTELLIGENT_DRIVING_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2025/art_76f6af8d52cb4f0cb0f8fbabddc85241.html",
+                "source_date": "2025-09-12",
+                "source_id": "SRC_MIIT_AUTO_STABLE_20250912",
+                "source_name": "工业和信息化部等八部门关于印发《汽车行业稳增长工作方案（2025—2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2025/art_76f6af8d52cb4f0cb0f8fbabddc85241.html",
+                "publish_date": "2025-09-12",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "汽车稳增长方案明确智能网联与新能源协同方向，企业更偏好具备量产交付经验的应届候选人。",
+              "title": "汽车稳增长政策落地，智能驾驶岗位转向量产导向",
+              "updated_at": "2026-02-17",
+              "fact": "政策强调稳增长与技术升级并行，招聘信号同步抬升车规软件和功能安全能力权重。",
+              "impact": "应届生需准备覆盖感知评测、功能安全闭环与OTA发布治理的项目证据。",
+              "industry_indicator": "智驾渗透率、OTA缺陷关闭周期、接管率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_MIIT_AUTO_STABLE_20250912",
+                "secondary_source_ids": [
+                  "SRC_AUTO_CAREER_BYD_COM_C93FDB3E"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -20755,11 +21235,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 89.8,
-        "freshness_percent_overall": 86.4,
+        "evidence_percent_overall": 90.2,
+        "freshness_percent_overall": 86.9,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.1,
+        "quality_score_overall": 94.2,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -23180,6 +23660,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2026-02-05",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.83,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.nmpaic.org.cn/yjzxyw/202602/t20260206_429414.html",
+                "source_date": "2026-02-05",
+                "source_id": "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
+                "source_name": "2026年全国医疗器械监督管理工作会议召开（NMPA信息中心转载）",
+                "source_type": "government_policy",
+                "source_url": "https://www.nmpaic.org.cn/yjzxyw/202602/t20260206_429414.html",
+                "stat_definition": "药监系统年度工作会议信息，反映医疗器械注册与监管重点方向。",
+                "publish_date": "2026-02-05",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "医疗器械岗位对注册法规理解、临床证据管理与质量体系协同要求进一步提高。",
+              "log_id": "IND_BIOMED_DEVICE_POLICY_20260205_NMPA",
+              "scope": "全国",
+              "title": "药监系统召开2026年全国医疗器械监督管理工作会议",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -25299,6 +25806,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_BIOMED_DEVICE_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.nmpaic.org.cn/yjzxyw/202602/t20260206_429414.html",
+                "source_date": "2026-02-05",
+                "source_id": "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
+                "source_name": "2026年全国医疗器械监督管理工作会议召开（NMPA信息中心转载）",
+                "source_type": "government_policy",
+                "source_url": "https://www.nmpaic.org.cn/yjzxyw/202602/t20260206_429414.html",
+                "publish_date": "2026-02-05",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "器械监管工作会议明确年度监管重点，校招岗位更强调法规理解与注册执行能力。",
+              "title": "医疗器械监管年度重点明确，岗位能力向“合规+证据”双主线收敛",
+              "updated_at": "2026-02-17",
+              "fact": "药监系统年度会议强调风险防控、质量体系和注册监管协同。",
+              "impact": "应届生应准备“法规理解-证据准备-跨部门协同”闭环案例提升通过率。",
+              "industry_indicator": "注册节点达成率、质量体系偏差率、临床证据完整率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -25935,8 +26478,8 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 86.9,
-        "freshness_percent_overall": 83.6,
+        "evidence_percent_overall": 87.3,
+        "freshness_percent_overall": 84.1,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
         "quality_score_overall": 94.4,
@@ -28359,6 +28902,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2025-09-26",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.83,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.gov.cn/zhengce/zhengceku/202509/content_7042418.htm",
+                "source_date": "2025-09-26",
+                "source_id": "SRC_GOV_PETROCHEM_STABLE_20250926",
+                "source_name": "工业和信息化部等7部门关于印发《石化化工行业稳增长工作方案（2025-2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.gov.cn/zhengce/zhengceku/202509/content_7042418.htm",
+                "stat_definition": "石化化工稳增长方案明确高端化、绿色化、数字化方向，为新材料岗位需求变化提供政策锚点。",
+                "publish_date": "2025-09-26",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "化工新材料校招更强调工艺放大、质量一致性和EHS治理的综合能力。",
+              "log_id": "IND_CHEM_NEW_MATERIALS_POLICY_20250926_STATECOUNCIL",
+              "scope": "全国",
+              "title": "七部门发布石化化工行业稳增长方案（2025—2026年）",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -30380,6 +30950,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_CHEM_NEW_MATERIALS_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.gov.cn/zhengce/zhengceku/202509/content_7042418.htm",
+                "source_date": "2025-09-26",
+                "source_id": "SRC_GOV_PETROCHEM_STABLE_20250926",
+                "source_name": "工业和信息化部等7部门关于印发《石化化工行业稳增长工作方案（2025-2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.gov.cn/zhengce/zhengceku/202509/content_7042418.htm",
+                "publish_date": "2025-09-26",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "石化化工稳增长政策推动高端材料与绿色制造并行，企业更偏好具备中试放大和质量控制经验的新人。",
+              "title": "石化化工稳增长政策落地，新材料岗位强调放大与一致性",
+              "updated_at": "2026-02-17",
+              "fact": "政策明确高端化和绿色化任务，招聘口径同步提高工艺验证与安环治理能力权重。",
+              "impact": "应届生需准备从实验室到中试再到量产的完整证据链与风险控制案例。",
+              "industry_indicator": "装置开工率、批次一致性、单位能耗",
+              "evidence_chain": {
+                "primary_source_id": "SRC_GOV_PETROCHEM_STABLE_20250926",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_WHCHEM_COM_7C60B768"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -30974,8 +31580,8 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 88.1,
-        "evidence_percent_overall": 89.5,
-        "freshness_percent_overall": 86,
+        "evidence_percent_overall": 89.8,
+        "freshness_percent_overall": 86.4,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
         "quality_score_overall": 93.6,
@@ -33171,6 +33777,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2025-10-14",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.86,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.gov.cn/lianbo/bumen/202510/content_7044277.htm",
+                "source_date": "2025-10-14",
+                "source_id": "SRC_SCS_EXAM_2026",
+                "source_name": "中央机关及其直属机构2026年度考试录用公务员报名即将开始（中国政府网）",
+                "source_type": "government_policy",
+                "source_url": "https://www.gov.cn/lianbo/bumen/202510/content_7044277.htm",
+                "stat_definition": "国考招录节点直接影响公务员岗位供给与应届生备考节奏。",
+                "publish_date": "2025-10-14",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "应届生可据此倒排报名、笔试和面试准备节奏，降低时间窗口错配风险。",
+              "log_id": "IND_CIVIL_SERVICE_POLICY_20251014_SCS",
+              "scope": "全国",
+              "title": "2026年度国考报名启动信号发布",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -35592,6 +36225,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_CIVIL_SERVICE_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.gov.cn/lianbo/bumen/202510/content_7044277.htm",
+                "source_date": "2025-10-14",
+                "source_id": "SRC_SCS_EXAM_2026",
+                "source_name": "中央机关及其直属机构2026年度考试录用公务员报名即将开始（中国政府网）",
+                "source_type": "government_policy",
+                "source_url": "https://www.gov.cn/lianbo/bumen/202510/content_7044277.htm",
+                "publish_date": "2025-10-14",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "国考节点释放后，岗位竞争进入前置化，备考重点从题量堆叠转向岗位匹配和实务表达。",
+              "title": "国考节点前置，公务员求职进入“岗位匹配+结构化表达”阶段",
+              "updated_at": "2026-02-17",
+              "fact": "招录公告与报名窗口确认后，目标岗位的竞争度和分差预期会快速收敛。",
+              "impact": "应届生应同步准备行测申论与结构化面试案例，并按岗位类型做差异化策略。",
+              "industry_indicator": "报录比、进面分差、调剂成功率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_SCS_EXAM_2026",
+                "secondary_source_ids": [
+                  "SRC_SCS"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -36480,11 +37149,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 97.6,
-        "evidence_percent_overall": 91.3,
-        "freshness_percent_overall": 88.4,
+        "evidence_percent_overall": 91.5,
+        "freshness_percent_overall": 88.7,
         "real_data_ratio_overall": 75,
         "template_ratio_overall": 0,
-        "quality_score_overall": 95,
+        "quality_score_overall": 95.1,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -38850,6 +39519,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2025-04-21",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.gov.cn/zhengce/202504/content_7020280.htm",
+                "source_date": "2025-04-21",
+                "source_id": "SRC_GOV_SERVICE_OPENING_20250421",
+                "source_name": "我国加快推进服务业扩大开放综合试点（政策解读）",
+                "source_type": "government_policy",
+                "source_url": "https://www.gov.cn/zhengce/202504/content_7020280.htm",
+                "stat_definition": "服务业扩大开放政策直接影响咨询、审计、法务等专业服务岗位需求与项目结构。",
+                "publish_date": "2025-04-21",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "咨询与专业服务岗位更重视跨境规则理解、行业方案设计和客户落地协同能力。",
+              "log_id": "IND_CONSULTING_PRO_SERVICES_POLICY_20250421_STATECOUNCIL",
+              "scope": "全国",
+              "title": "服务业扩大开放综合试点持续推进",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -40840,6 +41536,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_CONSULTING_PRO_SERVICES_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.gov.cn/zhengce/202504/content_7020280.htm",
+                "source_date": "2025-04-21",
+                "source_id": "SRC_GOV_SERVICE_OPENING_20250421",
+                "source_name": "我国加快推进服务业扩大开放综合试点（政策解读）",
+                "source_type": "government_policy",
+                "source_url": "https://www.gov.cn/zhengce/202504/content_7020280.htm",
+                "publish_date": "2025-04-21",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "服务业扩大开放推进后，咨询项目更强调产业洞察、合规分析和交付落地一体化能力。",
+              "title": "服务业开放深化，咨询岗位能力模型升级为“洞察+落地”",
+              "updated_at": "2026-02-17",
+              "fact": "政策信号推动专业服务向高附加值和跨境协同演进，招聘标准同步提高。",
+              "impact": "应届生需准备能体现问题拆解、数据论证和客户沟通闭环的项目案例。",
+              "industry_indicator": "项目中标率、交付准时率、回款周期",
+              "evidence_chain": {
+                "primary_source_id": "SRC_GOV_SERVICE_OPENING_20250421",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_PWCCN_COM_B092A9CD"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -41434,11 +42166,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 89.8,
-        "freshness_percent_overall": 88.1,
+        "evidence_percent_overall": 90.2,
+        "freshness_percent_overall": 85.2,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.5,
+        "quality_score_overall": 94.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -41454,7 +42186,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 86.4
+        "ranking_percentile": 77.3
       },
       "slug": "consulting-professional-services",
       "sources": [
@@ -43818,6 +44550,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2025-09-30",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.84,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.gov.cn/lianbo/fabu/202509/content_7041793.htm",
+                "source_date": "2025-09-30",
+                "source_id": "SRC_MOFCOM_ECOMMERCE_20250930",
+                "source_name": "商务部电子商务司负责人介绍2025年1-8月我国电子商务发展情况",
+                "source_type": "government_policy",
+                "source_url": "https://www.gov.cn/lianbo/fabu/202509/content_7041793.htm",
+                "stat_definition": "商务部官方发布，反映电商与跨境电商行业景气和结构变化。",
+                "publish_date": "2025-09-30",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "跨境业务岗位对履约效率、合规经营和精细化运营能力要求同步提高。",
+              "log_id": "IND_ECOMMERCE_CROSSBORDER_POLICY_20250930_MOFCOM",
+              "scope": "全国",
+              "title": "商务部发布2025年1-8月我国电子商务发展情况",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -45825,6 +46584,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_ECOMMERCE_CROSSBORDER_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.gov.cn/lianbo/fabu/202509/content_7041793.htm",
+                "source_date": "2025-09-30",
+                "source_id": "SRC_MOFCOM_ECOMMERCE_20250930",
+                "source_name": "商务部电子商务司负责人介绍2025年1-8月我国电子商务发展情况",
+                "source_type": "government_policy",
+                "source_url": "https://www.gov.cn/lianbo/fabu/202509/content_7041793.htm",
+                "publish_date": "2025-09-30",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "商务部发布电商发展数据后，跨境岗位从“流量导向”进一步转向“合规+履约+经营效率”三维评估。",
+              "title": "电商发展口径更新，跨境岗位能力模型向经营效率与合规并重升级",
+              "updated_at": "2026-02-17",
+              "fact": "官方发展数据强调线上消费活力与结构优化，对跨境业务效率提出更高要求。",
+              "impact": "应届生应重点准备履约时效、退货治理和合规运营的量化案例。",
+              "industry_indicator": "跨境履约时效、退款率、违规率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_MOFCOM_ECOMMERCE_20250930",
+                "secondary_source_ids": [
+                  "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -46378,11 +47173,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
-        "evidence_percent_overall": 86.4,
-        "freshness_percent_overall": 83.1,
+        "evidence_percent_overall": 86.9,
+        "freshness_percent_overall": 83.6,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.4,
+        "quality_score_overall": 94.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -46398,7 +47193,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 77.3
+        "ranking_percentile": 90.9
       },
       "slug": "ecommerce-crossborder",
       "sources": [
@@ -48756,6 +49551,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2025-05-09",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.moe.gov.cn/srcsite/A07/s7055/202505/t20250509_1189964.html",
+                "source_date": "2025-05-09",
+                "source_id": "SRC_MOE_VOC_EDU_WEEK_20250509",
+                "source_name": "教育部等九部门关于办好2025年职业教育活动周的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.moe.gov.cn/srcsite/A07/s7055/202505/t20250509_1189964.html",
+                "stat_definition": "职业教育活动周政策信号体现产教融合与职教社会认知提升，对岗位结构与招聘节奏有直接影响。",
+                "publish_date": "2025-05-09",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "教育职教岗位更强调课程产教协同、实训组织与学习结果追踪能力。",
+              "log_id": "IND_EDU_VOCATIONAL_POLICY_20250509_MOE",
+              "scope": "全国",
+              "title": "教育部等九部门部署2025年职业教育活动周",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -50747,6 +51569,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_EDU_VOCATIONAL_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.moe.gov.cn/srcsite/A07/s7055/202505/t20250509_1189964.html",
+                "source_date": "2025-05-09",
+                "source_id": "SRC_MOE_VOC_EDU_WEEK_20250509",
+                "source_name": "教育部等九部门关于办好2025年职业教育活动周的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.moe.gov.cn/srcsite/A07/s7055/202505/t20250509_1189964.html",
+                "publish_date": "2025-05-09",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "职教活动周政策持续强调产教融合，院校与机构招聘更偏好能连接课程与产业场景的复合型人才。",
+              "title": "产教融合持续推进，教育职教岗位向产业协同能力升级",
+              "updated_at": "2026-02-17",
+              "fact": "政策引导下，课程研发与实训运营岗位更注重学习结果与就业转化闭环。",
+              "impact": "应届生需准备可量化的课程迭代、学员效果追踪和企业协同案例。",
+              "industry_indicator": "完课率、就业去向落实率、课程上新周期",
+              "evidence_chain": {
+                "primary_source_id": "SRC_MOE_VOC_EDU_WEEK_20250509",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -51341,11 +52199,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 89.8,
-        "freshness_percent_overall": 88.1,
+        "evidence_percent_overall": 90.2,
+        "freshness_percent_overall": 85.2,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.6,
+        "quality_score_overall": 94.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -51361,7 +52219,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 90.9
+        "ranking_percentile": 86.4
       },
       "slug": "education-vocational",
       "sources": [
@@ -53748,6 +54606,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2026-01-30",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.84,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
+                "source_date": "2026-01-30",
+                "source_id": "SRC_NEA_WORKCONF_20260130",
+                "source_name": "国家能源局举行新闻发布会介绍2025年电力工业统计数据有关情况",
+                "source_type": "government_policy",
+                "source_url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
+                "stat_definition": "国家能源局电力统计发布可直接反映电网侧与发电侧岗位需求方向。",
+                "publish_date": "2026-01-30",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "公用事业岗位更看重保供调度、安全生产与设备运维协同能力。",
+              "log_id": "IND_ENERGY_UTILITIES_POLICY_20260130_NEA",
+              "scope": "全国",
+              "title": "国家能源局发布2025年电力工业统计情况",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -55738,6 +56623,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_ENERGY_UTILITIES_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
+                "source_date": "2026-01-30",
+                "source_id": "SRC_NEA_WORKCONF_20260130",
+                "source_name": "国家能源局举行新闻发布会介绍2025年电力工业统计数据有关情况",
+                "source_type": "government_policy",
+                "source_url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
+                "publish_date": "2026-01-30",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "电力统计数据发布后，能源公用事业招聘更偏向保供调度、设备可靠性和交易协同能力。",
+              "title": "电力统计信号明确，公用事业岗位向“稳供+协同”升级",
+              "updated_at": "2026-02-17",
+              "fact": "行业公开数据强调电力系统安全稳定运行，企业招聘同步提高调度与运维能力要求。",
+              "impact": "应届生应准备覆盖负荷预测、应急处置和恢复复盘的项目案例。",
+              "industry_indicator": "发电利用小时、电网消纳率、非计划停运率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_NEA_WORKCONF_20260130",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -56332,11 +57253,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 89.8,
-        "freshness_percent_overall": 88.1,
+        "evidence_percent_overall": 90.2,
+        "freshness_percent_overall": 88.5,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.3,
+        "quality_score_overall": 94.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -56352,7 +57273,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 59.1
+        "ranking_percentile": 72.7
       },
       "slug": "energy-utilities",
       "sources": [
@@ -58776,6 +59697,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2026-01-06",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.85,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+                "source_date": "2026-01-06",
+                "source_id": "SRC_PBC_WORKCONF_20260106",
+                "source_name": "2026年中国人民银行工作会议召开",
+                "source_type": "government_policy",
+                "source_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+                "stat_definition": "人民银行年度工作会议，反映银行业信贷投放、风险管理与金融科技方向。",
+                "publish_date": "2026-01-06",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "银行校招岗位对风险识别、合规执行和数字化能力的要求持续提升。",
+              "log_id": "IND_FIN_BANK_POLICY_20260106_PBC",
+              "scope": "全国",
+              "title": "人民银行召开2026年工作会议部署年度重点任务",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -60773,6 +61721,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_FIN_BANK_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+                "source_date": "2026-01-06",
+                "source_id": "SRC_PBC_WORKCONF_20260106",
+                "source_name": "2026年中国人民银行工作会议召开",
+                "source_type": "government_policy",
+                "source_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+                "publish_date": "2026-01-06",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "央行年度工作会议强调稳健货币政策与金融风险防控，银行岗位能力模型继续向“合规+数据”升级。",
+              "title": "人民银行年度会议定调风险防控与数字金融，银行岗位能力要求上移",
+              "updated_at": "2026-02-17",
+              "fact": "年度政策口径持续强化信贷质量管理、风险识别和科技赋能。",
+              "impact": "应届生应准备授信风控、合规执行与流程优化的可量化项目案例。",
+              "industry_indicator": "不良率、风险识别命中率、授信审批时效",
+              "evidence_chain": {
+                "primary_source_id": "SRC_PBC_WORKCONF_20260106",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -61344,11 +62328,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.8,
-        "evidence_percent_overall": 89.5,
-        "freshness_percent_overall": 86,
+        "evidence_percent_overall": 89.8,
+        "freshness_percent_overall": 86.4,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.3,
+        "quality_score_overall": 94.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -61364,7 +62348,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 54.5
+        "ranking_percentile": 68.2
       },
       "slug": "finance-bank",
       "sources": [
@@ -63796,6 +64780,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2026-01-06",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.83,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+                "source_date": "2026-01-06",
+                "source_id": "SRC_PBC_WORKCONF_20260106",
+                "source_name": "2026年中国人民银行工作会议召开",
+                "source_type": "government_policy",
+                "source_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+                "stat_definition": "金融系统年度工作会议，作为保险经营稳健性与风险管理能力建设的政策背景。",
+                "publish_date": "2026-01-06",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "保险岗位对偿付能力管理、产品风控与客户服务协同能力要求进一步强化。",
+              "log_id": "IND_FIN_INSURANCE_POLICY_20260106_PBC",
+              "scope": "全国",
+              "title": "人民银行2026年工作会议强调金融稳健运行与风险防控",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -65793,6 +66804,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_FIN_INSURANCE_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+                "source_date": "2026-01-06",
+                "source_id": "SRC_PBC_WORKCONF_20260106",
+                "source_name": "2026年中国人民银行工作会议召开",
+                "source_type": "government_policy",
+                "source_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+                "publish_date": "2026-01-06",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "金融稳健运行导向下，保险岗位持续加强风险管理、产品定价和客户服务协同能力要求。",
+              "title": "金融稳健导向强化，保险岗位向“精算+风控+服务”复合能力升级",
+              "updated_at": "2026-02-17",
+              "fact": "年度金融工作部署持续强调风险防控和实体经济服务能力。",
+              "impact": "应届生应补齐赔付管理、产品定价与客户运营协同的项目证据。",
+              "industry_indicator": "赔付率、续保率、理赔时效",
+              "evidence_chain": {
+                "primary_source_id": "SRC_PBC_WORKCONF_20260106",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_PINGAN_COM_A4057B5F"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -66364,11 +67411,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.8,
-        "evidence_percent_overall": 89.5,
-        "freshness_percent_overall": 86,
+        "evidence_percent_overall": 89.8,
+        "freshness_percent_overall": 86.4,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 93.8,
+        "quality_score_overall": 93.9,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "外部链接",
@@ -68808,6 +69855,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2026-01-16",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.85,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.csrc.gov.cn/csrc/c106311/c7609372/content.shtml",
+                "source_date": "2026-01-16",
+                "source_id": "SRC_CSRC_WORKCONF_20260116",
+                "source_name": "中国证监会召开2026年系统工作会议",
+                "source_type": "government_policy",
+                "source_url": "https://www.csrc.gov.cn/csrc/c106311/c7609372/content.shtml",
+                "stat_definition": "证监会年度工作会议，反映资本市场监管重点与从业能力需求变化。",
+                "publish_date": "2026-01-16",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "证券基金岗位对合规风控、研究质量和投资者服务能力提出更高要求。",
+              "log_id": "IND_FIN_SECURITIES_FUND_POLICY_20260116_CSRC",
+              "scope": "全国",
+              "title": "证监会召开2026年系统工作会议部署年度监管重点",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -70804,6 +71878,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_FIN_SECURITIES_FUND_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.csrc.gov.cn/csrc/c106311/c7609372/content.shtml",
+                "source_date": "2026-01-16",
+                "source_id": "SRC_CSRC_WORKCONF_20260116",
+                "source_name": "中国证监会召开2026年系统工作会议",
+                "source_type": "government_policy",
+                "source_url": "https://www.csrc.gov.cn/csrc/c106311/c7609372/content.shtml",
+                "publish_date": "2026-01-16",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "证监会年度工作会议信号显示行业更重视合规治理与投资者保护，岗位能力要求向“研究+风控+合规”融合。",
+              "title": "资本市场监管重点更新，证券基金岗位向研究与合规一体化升级",
+              "updated_at": "2026-02-17",
+              "fact": "监管层面持续强调市场稳定、风险防控和投资者保护机制建设。",
+              "impact": "应届生需准备研究框架、风险边界和合规执行三段式案例。",
+              "industry_indicator": "组合回撤、合规事件率、研究命中率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_CSRC_WORKCONF_20260116",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_CS_ECITIC_COM_9B0A617"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -71375,11 +72485,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.8,
-        "evidence_percent_overall": 89.5,
-        "freshness_percent_overall": 86,
+        "evidence_percent_overall": 89.8,
+        "freshness_percent_overall": 86.4,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.3,
+        "quality_score_overall": 94.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -71395,7 +72505,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 50
+        "ranking_percentile": 63.6
       },
       "slug": "finance-securities-fund",
       "sources": [
@@ -73740,6 +74850,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2026-01-15",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n1y15r/index.html",
+                "source_date": "2026-01-15",
+                "source_id": "SRC_MOFCOM_PRESSCONF_20260115",
+                "source_name": "商务部召开例行新闻发布会（2026年1月15日）",
+                "source_type": "government_policy",
+                "source_url": "https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n1y15r/index.html",
+                "stat_definition": "商务部例行发布反映消费市场和流通体系变化，是快消零售岗位趋势判断的重要官方锚点。",
+                "publish_date": "2026-01-15",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "零售与品牌岗位更关注渠道效率、库存周转与终端动销协同能力。",
+              "log_id": "IND_FMCG_RETAIL_POLICY_20260115_MOFCOM",
+              "scope": "全国",
+              "title": "商务部发布最新消费市场与流通运行信号",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -75683,6 +76820,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_FMCG_RETAIL_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n1y15r/index.html",
+                "source_date": "2026-01-15",
+                "source_id": "SRC_MOFCOM_PRESSCONF_20260115",
+                "source_name": "商务部召开例行新闻发布会（2026年1月15日）",
+                "source_type": "government_policy",
+                "source_url": "https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n1y15r/index.html",
+                "publish_date": "2026-01-15",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "消费市场运行信号更新后，快消零售校招更看重渠道效率、供应协同与终端执行能力。",
+              "title": "消费运行信号更新，快消零售岗位向“效率+执行”升级",
+              "updated_at": "2026-02-17",
+              "fact": "官方发布持续强调扩大消费与流通提效，企业招聘同步提升渠道运营和库存管理能力要求。",
+              "impact": "应届生应准备促销策略、动销跟踪和库存优化的量化案例。",
+              "industry_indicator": "同店增长率、库存周转天数、渠道动销率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_MOFCOM_PRESSCONF_20260115",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_CRV_COM_CN_4E747C9B"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -76230,8 +77403,8 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
-        "evidence_percent_overall": 89.5,
-        "freshness_percent_overall": 86,
+        "evidence_percent_overall": 89.8,
+        "freshness_percent_overall": 86.4,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
         "quality_score_overall": 94.1,
@@ -76250,7 +77423,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 22.7
+        "ranking_percentile": 18.2
       },
       "slug": "fmcg-retail",
       "sources": [
@@ -78705,6 +79878,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2026-01-09",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.83,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.cac.gov.cn/2026-01/09/c_1769688009588554.htm",
+                "source_date": "2026-01-09",
+                "source_id": "SRC_CAC_GENAI_RECORD_20260109",
+                "source_name": "国家互联网信息办公室关于发布2025年生成式人工智能服务已备案信息的公告",
+                "source_type": "government_policy",
+                "source_url": "https://www.cac.gov.cn/2026-01/09/c_1769688009588554.htm",
+                "stat_definition": "生成式AI备案公告直接影响大模型应用合规与平台侧岗位需求结构。",
+                "publish_date": "2026-01-09",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "互联网AI岗位更强调模型合规上线、内容安全治理和工程化部署能力。",
+              "log_id": "IND_INTERNET_AI_POLICY_20260109_CAC",
+              "scope": "全国",
+              "title": "网信办发布生成式AI备案信息公告",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -80761,6 +81961,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_INTERNET_AI_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.cac.gov.cn/2026-01/09/c_1769688009588554.htm",
+                "source_date": "2026-01-09",
+                "source_id": "SRC_CAC_GENAI_RECORD_20260109",
+                "source_name": "国家互联网信息办公室关于发布2025年生成式人工智能服务已备案信息的公告",
+                "source_type": "government_policy",
+                "source_url": "https://www.cac.gov.cn/2026-01/09/c_1769688009588554.htm",
+                "publish_date": "2026-01-09",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "生成式AI备案信息更新后，企业招聘更偏向兼具算法工程与合规治理能力的候选人。",
+              "title": "生成式AI备案更新，互联网AI岗位转向“工程+合规”双能力",
+              "updated_at": "2026-02-17",
+              "fact": "官方备案公告强化服务规范与上线要求，企业岗位能力模型同步升级。",
+              "impact": "应届生需准备模型部署、内容安全和风险处置的可量化实战案例。",
+              "industry_indicator": "备案服务数量、推理成本、线上可用性",
+              "evidence_chain": {
+                "primary_source_id": "SRC_CAC_GENAI_RECORD_20260109",
+                "secondary_source_ids": [
+                  "SRC_AUTO_JOBS_BYTEDANCE_COM_4D6E1DEC"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -81396,11 +82632,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 90,
-        "freshness_percent_overall": 86.7,
+        "evidence_percent_overall": 90.3,
+        "freshness_percent_overall": 87.1,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.8,
+        "quality_score_overall": 94.9,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -83826,6 +85062,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2026-01-22",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.83,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.mot.gov.cn/shuju/tongjishuju/youzheng/202601/t20260130_4199355.html",
+                "source_date": "2026-01-22",
+                "source_id": "SRC_MOT_POSTAL_20260122",
+                "source_name": "国家邮政局公布2025年邮政行业运行情况",
+                "source_type": "government_dataset",
+                "source_url": "https://www.mot.gov.cn/shuju/tongjishuju/youzheng/202601/t20260130_4199355.html",
+                "stat_definition": "邮政行业运行数据可直接反映快递物流岗位扩缩与履约压力变化。",
+                "publish_date": "2026-01-22",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "物流供应链岗位更重视履约时效、成本控制与网络协同优化能力。",
+              "log_id": "IND_LOGISTICS_SUPPLYCHAIN_POLICY_20260122_MOT",
+              "scope": "全国",
+              "title": "国家邮政局发布2025年邮政行业运行数据",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -85768,6 +87031,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_LOGISTICS_SUPPLYCHAIN_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.mot.gov.cn/shuju/tongjishuju/youzheng/202601/t20260130_4199355.html",
+                "source_date": "2026-01-22",
+                "source_id": "SRC_MOT_POSTAL_20260122",
+                "source_name": "国家邮政局公布2025年邮政行业运行情况",
+                "source_type": "government_dataset",
+                "source_url": "https://www.mot.gov.cn/shuju/tongjishuju/youzheng/202601/t20260130_4199355.html",
+                "publish_date": "2026-01-22",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "邮政快递运行数据更新后，物流校招更偏向履约效率和网络优化能力。",
+              "title": "邮政快递运行数据更新，物流岗位向“时效+成本”双目标升级",
+              "updated_at": "2026-02-17",
+              "fact": "行业运行数据反映业务量与服务质量并重，企业招聘同步强化末端履约与调度优化能力。",
+              "impact": "应届生需准备仓配协同、路由优化和异常处置的量化案例。",
+              "industry_indicator": "快递业务量、时效履约率、单票成本",
+              "evidence_chain": {
+                "primary_source_id": "SRC_MOT_POSTAL_20260122",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_JDL_COM_79E21FC4"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -86321,8 +87620,8 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
-        "evidence_percent_overall": 89.5,
-        "freshness_percent_overall": 86,
+        "evidence_percent_overall": 89.8,
+        "freshness_percent_overall": 86.4,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
         "quality_score_overall": 94.4,
@@ -86341,7 +87640,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 72.7
+        "ranking_percentile": 59.1
       },
       "slug": "logistics-supply-chain",
       "sources": [
@@ -88712,6 +90011,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2026-02-12",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.84,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.nrta.gov.cn/art/2026/2/12/art_113_72461.html",
+                "source_date": "2026-02-12",
+                "source_id": "SRC_NRTA_TV_SUPPORT_20260212",
+                "source_name": "国家广播电视总局关于开展2026年度电视剧引导扶持项目申报评审工作的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.nrta.gov.cn/art/2026/2/12/art_113_72461.html",
+                "stat_definition": "广电总局年度项目申报通知，反映内容产业导向和招聘能力偏好变化。",
+                "publish_date": "2026-02-12",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "内容行业岗位对选题把控、政策理解和项目管理协同要求同步提升。",
+              "log_id": "IND_MEDIA_GAME_CONTENT_POLICY_20260212_NRTA",
+              "scope": "全国",
+              "title": "广电总局发布2026年度电视剧引导扶持项目申报通知",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -90755,6 +92081,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_MEDIA_GAME_CONTENT_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.nrta.gov.cn/art/2026/2/12/art_113_72461.html",
+                "source_date": "2026-02-12",
+                "source_id": "SRC_NRTA_TV_SUPPORT_20260212",
+                "source_name": "国家广播电视总局关于开展2026年度电视剧引导扶持项目申报评审工作的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.nrta.gov.cn/art/2026/2/12/art_113_72461.html",
+                "publish_date": "2026-02-12",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "政策导向强调内容质量与社会效益并重，传媒内容岗位对项目策划和合规边界把控要求提升。",
+              "title": "内容项目申报导向更新，传媒岗位更重视政策理解与项目统筹",
+              "updated_at": "2026-02-17",
+              "fact": "广电主管部门对年度扶持项目的导向要求影响内容制作与发行岗位能力模型。",
+              "impact": "应届生应补充“选题判断-执行统筹-合规审核”三段式项目证据。",
+              "industry_indicator": "项目通过率、内容投诉率、上线周期",
+              "evidence_chain": {
+                "primary_source_id": "SRC_NRTA_TV_SUPPORT_20260212",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_BILIBILI_COM_6263DF22"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -91349,8 +92711,8 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 86.9,
-        "freshness_percent_overall": 85.2,
+        "evidence_percent_overall": 87.3,
+        "freshness_percent_overall": 85.7,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
         "quality_score_overall": 94.4,
@@ -91369,7 +92731,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 68.2
+        "ranking_percentile": 54.5
       },
       "slug": "media-game-content",
       "sources": [
@@ -93772,6 +95134,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2026-01-30",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.84,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
+                "source_date": "2026-01-30",
+                "source_id": "SRC_NEA_WORKCONF_20260130",
+                "source_name": "国家能源局举行新闻发布会介绍2025年电力工业统计数据有关情况",
+                "source_type": "government_policy",
+                "source_url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
+                "stat_definition": "国家能源局发布会信息，反映新能源并网、发电结构与项目投资节奏。",
+                "publish_date": "2026-01-30",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "新能源岗位对并网交付、系统稳定性和电力场景数据理解能力要求提升。",
+              "log_id": "IND_NEW_ENERGY_POLICY_20260130_NEA",
+              "scope": "全国",
+              "title": "国家能源局发布2025年电力工业统计数据相关情况",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -95892,6 +97281,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_NEW_ENERGY_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
+                "source_date": "2026-01-30",
+                "source_id": "SRC_NEA_WORKCONF_20260130",
+                "source_name": "国家能源局举行新闻发布会介绍2025年电力工业统计数据有关情况",
+                "source_type": "government_policy",
+                "source_url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
+                "publish_date": "2026-01-30",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "能源统计发布会释放并网与系统稳定信号，新能源岗位更强调交付质量和运维协同能力。",
+              "title": "电力统计口径更新，新能源岗位向交付与运维一体化升级",
+              "updated_at": "2026-02-17",
+              "fact": "新能源行业岗位要求从研发单点能力扩展到并网交付和系统稳定性治理。",
+              "impact": "应届生需准备“方案设计-并网验证-运维优化”完整证据链。",
+              "industry_indicator": "并网通过率、系统可用率、故障恢复时长",
+              "evidence_chain": {
+                "primary_source_id": "SRC_NEA_WORKCONF_20260130",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_CATL_COM_551E6E0C"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -96527,8 +97952,8 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 86.9,
-        "freshness_percent_overall": 83.6,
+        "evidence_percent_overall": 87.3,
+        "freshness_percent_overall": 84.1,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
         "quality_score_overall": 94.4,
@@ -96547,7 +97972,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 63.6
+        "ranking_percentile": 50
       },
       "slug": "new-energy",
       "sources": [
@@ -98723,6 +100148,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2026-01-28",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.84,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://rsj.sh.gov.cn/tgsgg_17341/20260128/t0035_1438398.html",
+                "source_date": "2026-01-28",
+                "source_id": "SRC_SHRSJ_PUBLIC_INST_20260128",
+                "source_name": "上海市人社局-上海市2026年事业单位公开招聘公告",
+                "source_type": "government_platform",
+                "source_url": "https://rsj.sh.gov.cn/tgsgg_17341/20260128/t0035_1438398.html",
+                "stat_definition": "地方人社部门公开招聘公告，反映事业单位岗位结构与考试窗口的最新节奏。",
+                "publish_date": "2026-01-28",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "事业单位岗位批次化释放更明显，需按地区公告节奏拆分投递与备考计划。",
+              "log_id": "IND_PUBLIC_INSTITUTION_POLICY_20260128_SHRSJ",
+              "scope": "上海",
+              "title": "上海市发布2026年事业单位公开招聘公告",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -101219,6 +102671,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_PUBLIC_INSTITUTION_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://rsj.sh.gov.cn/tgsgg_17341/20260128/t0035_1438398.html",
+                "source_date": "2026-01-28",
+                "source_id": "SRC_SHRSJ_PUBLIC_INST_20260128",
+                "source_name": "上海市人社局-上海市2026年事业单位公开招聘公告",
+                "source_type": "government_platform",
+                "source_url": "https://rsj.sh.gov.cn/tgsgg_17341/20260128/t0035_1438398.html",
+                "publish_date": "2026-01-28",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "地方事业单位招聘公告密集发布，岗位按批次分流，报考准备需前置到公告窗口前。",
+              "title": "地方事业单位招聘批次化加快，备考节奏前移",
+              "updated_at": "2026-02-17",
+              "fact": "地方人社部门公告显示事业单位招聘批次与岗位结构更趋细分化。",
+              "impact": "应届生应按地区公告拆分投递计划并准备“公共基础+专业课”双线备考方案。",
+              "industry_indicator": "岗位招录比、进面分数线、岗位开考率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_SHRSJ_PUBLIC_INST_20260128",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -102149,11 +103637,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 97.6,
-        "evidence_percent_overall": 88.9,
-        "freshness_percent_overall": 75,
+        "evidence_percent_overall": 89.2,
+        "freshness_percent_overall": 75.7,
         "real_data_ratio_overall": 75.3,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.1,
+        "quality_score_overall": 94.2,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -102169,7 +103657,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 18.2
+        "ranking_percentile": 22.7
       },
       "slug": "public-institution",
       "sources": [
@@ -104504,6 +105992,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2025-12-25",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.84,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.mohurd.gov.cn/xinwen/gzdt/art/2025/art_4fa6fb32042042d09182581bbd1f092e.html",
+                "source_date": "2025-12-25",
+                "source_id": "SRC_MOHURD_URBAN_RENEWAL_20251225",
+                "source_name": "住房城乡建设部：因城施策控增量、去库存、优供给，持续用力推动房地产市场止跌回稳",
+                "source_type": "government_policy",
+                "source_url": "https://www.mohurd.gov.cn/xinwen/gzdt/art/2025/art_4fa6fb32042042d09182581bbd1f092e.html",
+                "stat_definition": "住建部政策表述，反映地产与基建岗位需求节奏和项目交付重心变化。",
+                "publish_date": "2025-12-25",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "地产基建岗位对存量项目治理、成本控制和交付质量能力要求上升。",
+              "log_id": "IND_REAL_ESTATE_INFRA_POLICY_20251225_MOHURD",
+              "scope": "全国",
+              "title": "住建部强调因城施策推动房地产市场止跌回稳",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -106553,6 +108068,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_REAL_ESTATE_INFRA_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.mohurd.gov.cn/xinwen/gzdt/art/2025/art_4fa6fb32042042d09182581bbd1f092e.html",
+                "source_date": "2025-12-25",
+                "source_id": "SRC_MOHURD_URBAN_RENEWAL_20251225",
+                "source_name": "住房城乡建设部：因城施策控增量、去库存、优供给，持续用力推动房地产市场止跌回稳",
+                "source_type": "government_policy",
+                "source_url": "https://www.mohurd.gov.cn/xinwen/gzdt/art/2025/art_4fa6fb32042042d09182581bbd1f092e.html",
+                "publish_date": "2025-12-25",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "住建政策导向聚焦存量盘活和项目交付，地产基建岗位更重视节点履约与成本治理能力。",
+              "title": "住建政策聚焦存量与交付，地产基建岗位能力模型更新",
+              "updated_at": "2026-02-17",
+              "fact": "行业招聘口径与政策方向同步强调“交付、安全、成本”三目标协同。",
+              "impact": "应届生应准备项目节点管理、变更控制和风险兜底的案例证据。",
+              "industry_indicator": "节点履约率、变更签证周期、安全质量事件率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_MOHURD_URBAN_RENEWAL_20251225",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_CSCEC_COM_F3573BC4"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -107141,8 +108692,8 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 86.9,
-        "freshness_percent_overall": 85.2,
+        "evidence_percent_overall": 87.3,
+        "freshness_percent_overall": 85.7,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
         "quality_score_overall": 93.8,
@@ -109637,6 +111188,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2025-09-04",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.84,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_e8e780ef457343699aaa9943a8a158b9.html",
+                "source_date": "2025-09-04",
+                "source_id": "SRC_MIIT_ELECTRONICS_STABLE_20250904",
+                "source_name": "工业和信息化部办公厅关于印发《电子信息制造业2025－2026年稳增长行动方案》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_e8e780ef457343699aaa9943a8a158b9.html",
+                "stat_definition": "工信部稳增长行动方案，反映电子信息与半导体产业链招聘方向变化。",
+                "publish_date": "2025-09-04",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "半导体与电子岗位对量产交付、工艺协同和工程化能力要求进一步提升。",
+              "log_id": "IND_SEMICONDUCTOR_ELECTRONICS_POLICY_20250904_MIIT",
+              "scope": "全国",
+              "title": "工信部印发电子信息制造业2025-2026年稳增长行动方案",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -111757,6 +113335,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_SEMICONDUCTOR_ELECTRONICS_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_e8e780ef457343699aaa9943a8a158b9.html",
+                "source_date": "2025-09-04",
+                "source_id": "SRC_MIIT_ELECTRONICS_STABLE_20250904",
+                "source_name": "工业和信息化部办公厅关于印发《电子信息制造业2025－2026年稳增长行动方案》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_e8e780ef457343699aaa9943a8a158b9.html",
+                "publish_date": "2025-09-04",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "稳增长行动方案落地后，半导体岗位从功能开发扩展到产线协同与交付质量并重。",
+              "title": "电子信息稳增长方案推动岗位向工程化交付能力升级",
+              "updated_at": "2026-02-17",
+              "fact": "政策强调产业链协同与量产提质增效，对校招能力模型产生直接影响。",
+              "impact": "应届生应重点准备PPA权衡、验证覆盖与流片协同等工程案例。",
+              "industry_indicator": "流片通过率、验证覆盖率、量产良率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_MIIT_ELECTRONICS_STABLE_20250904",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_SMICS_COM_7D437B2"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -112392,8 +114006,8 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 87.1,
-        "freshness_percent_overall": 83.9,
+        "evidence_percent_overall": 87.5,
+        "freshness_percent_overall": 84.4,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
         "quality_score_overall": 94.3,
@@ -112412,7 +114026,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 45.5
+        "ranking_percentile": 36.4
       },
       "slug": "semiconductor-electronics",
       "sources": [
@@ -114720,6 +116334,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2026-02-03",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.84,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "http://wap.sasac.gov.cn/n2588025/n2643314/c35340771/content.html",
+                "source_date": "2026-02-03",
+                "source_id": "SRC_SASAC_TALENT_WORKCONF_20260203",
+                "source_name": "国资央企人才工作座谈会在京召开",
+                "source_type": "government_policy",
+                "source_url": "http://wap.sasac.gov.cn/n2588025/n2643314/c35340771/content.html",
+                "stat_definition": "国资系统人才工作会议直接影响央国企校招重点岗位和能力模型。",
+                "publish_date": "2026-02-03",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "央国企岗位更强调治理意识、工程执行和关键岗位培养潜力。",
+              "log_id": "IND_STATE_OWNED_ENTERPRISE_POLICY_20260203_SASAC",
+              "scope": "全国",
+              "title": "国资央企人才工作座谈会释放校招能力导向",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -117099,6 +118740,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_STATE_OWNED_ENTERPRISE_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "http://wap.sasac.gov.cn/n2588025/n2643314/c35340771/content.html",
+                "source_date": "2026-02-03",
+                "source_id": "SRC_SASAC_TALENT_WORKCONF_20260203",
+                "source_name": "国资央企人才工作座谈会在京召开",
+                "source_type": "government_policy",
+                "source_url": "http://wap.sasac.gov.cn/n2588025/n2643314/c35340771/content.html",
+                "publish_date": "2026-02-03",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "国资人才工作会议后，央国企校招更强调长期培养潜力、合规意识和跨组织协同能力。",
+              "title": "国资人才会议后，央国企岗位能力模型向“培养潜力+治理执行”升级",
+              "updated_at": "2026-02-17",
+              "fact": "官方会议口径强化人才强企导向，招聘标准同步提高对治理与执行闭环的要求。",
+              "impact": "应届生应准备能证明跨部门推进、风险识别与任务闭环的项目证据。",
+              "industry_indicator": "校招计划岗位数、关键岗位到岗率、关键任务达成率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_SASAC_TALENT_WORKCONF_20260203",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_CSCEC_COM_F3573BC4"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -118029,11 +119706,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 97.6,
-        "evidence_percent_overall": 90.1,
-        "freshness_percent_overall": 87.3,
+        "evidence_percent_overall": 90.4,
+        "freshness_percent_overall": 87.7,
         "real_data_ratio_overall": 75,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.3,
+        "quality_score_overall": 94.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "公司清单",
@@ -118049,7 +119726,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 40.9
+        "ranking_percentile": 45.5
       },
       "slug": "state-owned-enterprise",
       "sources": [
@@ -120357,6 +122034,33 @@
               "scope": "全国",
               "title": "国家统计局发布2024年居民收入和消费支出情况",
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2026-01-28",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.84,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.miit.gov.cn/jgsj/yxj/xxfb/art/2026/art_bea806f4dd20457cb0158795cc210aa7.html",
+                "source_date": "2026-01-28",
+                "source_id": "SRC_MIIT_TELECOM_BULLETIN_20260128",
+                "source_name": "2025年通信业统计公报",
+                "source_type": "government_dataset",
+                "source_url": "https://www.miit.gov.cn/jgsj/yxj/xxfb/art/2026/art_bea806f4dd20457cb0158795cc210aa7.html",
+                "stat_definition": "通信业统计公报反映网络建设、用户结构和业务收入变化，是运营商岗位趋势的核心官方依据。",
+                "publish_date": "2026-01-28",
+                "captured_at": "2026-02-17"
+              },
+              "impact": "通信运营商岗位更强调网络质量治理、自动化运维和政企服务交付能力。",
+              "log_id": "IND_TELECOM_OPERATOR_POLICY_20260128_MIIT",
+              "scope": "全国",
+              "title": "工信部发布2025年通信业统计公报",
+              "updated_at": "2026-02-17"
             }
           ],
           "last_checked": "2026-02-16",
@@ -122413,6 +124117,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_TELECOM_OPERATOR_EVENT_2026Q1_EXT_06",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.miit.gov.cn/jgsj/yxj/xxfb/art/2026/art_bea806f4dd20457cb0158795cc210aa7.html",
+                "source_date": "2026-01-28",
+                "source_id": "SRC_MIIT_TELECOM_BULLETIN_20260128",
+                "source_name": "2025年通信业统计公报",
+                "source_type": "government_dataset",
+                "source_url": "https://www.miit.gov.cn/jgsj/yxj/xxfb/art/2026/art_bea806f4dd20457cb0158795cc210aa7.html",
+                "publish_date": "2026-01-28",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "通信统计公报发布后，运营商校招更偏向网络质量治理和云网协同交付能力。",
+              "title": "通信统计公报更新，运营商岗位向“质量+协同”升级",
+              "updated_at": "2026-02-17",
+              "fact": "行业运行数据强调网络质量与业务结构升级，招聘标准同步提升技术与服务融合能力。",
+              "impact": "应届生应准备网络优化、自动化运维和客户场景交付的量化案例。",
+              "industry_indicator": "5G用户渗透率、ARPU、网络可用性",
+              "evidence_chain": {
+                "primary_source_id": "SRC_MIIT_TELECOM_BULLETIN_20260128",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_CHINATELECOM_COM_CN_3DC2C159"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -123048,8 +124788,8 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 89.7,
-        "freshness_percent_overall": 86.2,
+        "evidence_percent_overall": 90,
+        "freshness_percent_overall": 86.7,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
         "quality_score_overall": 94.1,
