@@ -137,6 +137,21 @@ for (const entry of entries) {
     )
     : 0;
 
+  const eventItems = Array.isArray(dynamic['行业事件日志']?.items) ? dynamic['行业事件日志'].items : [];
+  const eventTotalTarget = Math.max(2, toNum(data?.['治理配置']?.['发布硬门槛']?.event_log_min_count, 6));
+  const eventRecentTarget = Math.max(1, toNum(data?.['治理配置']?.['发布硬门槛']?.event_recent_180d_min_count, 4));
+  const eventRecentCount = eventItems.filter((it) => {
+    const d = it?.evidence?.source_date || null;
+    const days = daysSince(d, nowTs);
+    return days !== null && days <= 180;
+  }).length;
+  const eventDensityScore = round1(
+    (
+      ratioScore(Math.min(eventItems.length, eventTotalTarget), eventTotalTarget)
+      + ratioScore(Math.min(eventRecentCount, eventRecentTarget), eventRecentTarget)
+    ) / 2,
+  );
+
   const allItems = collections.flatMap(([, col]) => (Array.isArray(col?.items) ? col.items : []));
   const totalItems = allItems.length;
   const strongEvidenceCount = allItems.filter((item) => {
@@ -164,10 +179,11 @@ for (const entry of entries) {
 
   // v1.22: 将覆盖门槛、证据强度、来源多样性与新鲜度并入总分，提升行业差异可解释性。
   const qualityScoreOverall = round1(
-    baseQualityScore * 0.5
+    baseQualityScore * 0.45
     + salaryCoverageScore * 0.15
     + questionRoleCoverageScore * 0.1
     + decisionEvidenceScore * 0.1
+    + eventDensityScore * 0.05
     + sourceDiversityScore * 0.05
     + evidenceStrengthScore * 0.05
     + freshnessLiveScore * 0.05,

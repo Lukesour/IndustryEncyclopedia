@@ -37,6 +37,8 @@ def stddev($arr):
 ([."行业词条"[]|((.dynamic["笔试真题库"].items|length)+(.dynamic["面试真题库"].items|length))]) as $question_depth_counts |
 ([."行业词条"[]|(.dynamic["笔试真题库"].items|map(.role_id)|unique|length)]) as $written_role_coverages |
 ([."行业词条"[]|(.dynamic["面试真题库"].items|map(.role_id)|unique|length)]) as $interview_role_coverages |
+([."行业词条"[]|(.dynamic["行业事件日志"].items|length)]) as $event_counts |
+([."行业词条"[]|([.dynamic["行业事件日志"].items[]? | select(((.evidence.source_date // "") | type == "string") and ((.evidence.source_date // "") >= "2025-08-21"))] | length)]) as $event_recent_counts |
 ([."行业词条"[]|.dynamic["自定义扩展"].items[]?|(.x_decision_estimation_method // empty)]) as $decision_methods |
 ([."行业词条"[]|(.dynamic["自定义扩展"].items[]?.evidence.sample_size // 0)]) as $decision_sample_sizes |
 ([."行业词条"[]|.dynamic["自定义扩展"].items[]?|(.x_decision_reliability_tier // "NA")]) as $decision_reliability_tiers |
@@ -92,6 +94,12 @@ def stddev($arr):
     interview_role_coverage_stddev: stddev($interview_role_coverages),
     interview_role_coverage_min: ($interview_role_coverages | min),
     interview_role_coverage_max: ($interview_role_coverages | max),
+    event_count_stddev: stddev($event_counts),
+    event_count_min: ($event_counts | min),
+    event_count_max: ($event_counts | max),
+    event_recent_180d_stddev: stddev($event_recent_counts),
+    event_recent_180d_min: ($event_recent_counts | min),
+    event_recent_180d_max: ($event_recent_counts | max),
     decision_evidence_sample_size_stddev: stddev($decision_sample_sizes),
     decision_evidence_sample_size_min: ($decision_sample_sizes | min),
     decision_evidence_sample_size_max: ($decision_sample_sizes | max)
@@ -383,6 +391,18 @@ DECISION_EVIDENCE_LOWSAMPLE_JSON="$(jq '
 ' "${DATA_PATH}")"
 DECISION_EVIDENCE_LOWSAMPLE_COUNT="$(jq 'length' <<<"${DECISION_EVIDENCE_LOWSAMPLE_JSON}")"
 
+EVENT_LOG_COVERAGE_JSON="$(jq '
+[
+  ."行业词条"[]
+  | {
+      industry_id,
+      industry_name: ."行业名称",
+      event_total: (.dynamic["行业事件日志"].items | length),
+      event_recent_180d: ([.dynamic["行业事件日志"].items[]? | select(((.evidence.source_date // "") | type == "string") and ((.evidence.source_date // "") >= "2025-08-21"))] | length)
+    }
+]
+' "${DATA_PATH}")"
+
 # New explainable gate metrics.
 P0_SLOT_TOTAL="$(jq '[."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P0")]|length' "${DATA_PATH}")"
 P0_PENDING_TOTAL="$(jq '[."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P0")|select((.status // "pending")|startswith("pending"))]|length' "${DATA_PATH}")"
@@ -410,6 +430,8 @@ GATE_SALARY_OBS_TIER_MAX="$(jq '."治理配置"."发布硬门槛".salary_observe
 GATE_QUESTION_ROLE_MIN="$(jq '."治理配置"."发布硬门槛".question_role_coverage_min // 5' "${DATA_PATH}")"
 GATE_QUESTION_ROLE_MAX="$(jq '."治理配置"."发布硬门槛".question_role_coverage_max_hits // 0' "${DATA_PATH}")"
 GATE_DECISION_EVIDENCE_MAX="$(jq '."治理配置"."发布硬门槛".decision_evidence_lowsample_max_hits // 0' "${DATA_PATH}")"
+GATE_EVENT_MIN_COUNT="$(jq '."治理配置"."发布硬门槛".event_log_min_count // 2' "${DATA_PATH}")"
+GATE_EVENT_RECENT_MIN="$(jq '."治理配置"."发布硬门槛".event_recent_180d_min_count // 1' "${DATA_PATH}")"
 GATE_SOURCE_TOP1_MAX="$(jq '."治理配置"."发布硬门槛".source_concentration_top1_max_percent // 100' "${DATA_PATH}")"
 GATE_SOURCE_TOP5_MAX="$(jq '."治理配置"."发布硬门槛".source_concentration_top5_max_percent // 100' "${DATA_PATH}")"
 
@@ -452,6 +474,14 @@ QUESTION_ROLE_ISSUES="$(jq --argjson min "${GATE_QUESTION_ROLE_MIN}" '
 ' <<<"${QUESTION_ROLE_COVERAGE_JSON}")"
 QUESTION_ROLE_COUNT="$(jq 'length' <<<"${QUESTION_ROLE_ISSUES}")"
 
+EVENT_LOG_ISSUES="$(jq --argjson min_total "${GATE_EVENT_MIN_COUNT}" --argjson min_recent "${GATE_EVENT_RECENT_MIN}" '
+[
+  .[]
+  | select(.event_total < $min_total or .event_recent_180d < $min_recent)
+]
+' <<<"${EVENT_LOG_COVERAGE_JSON}")"
+EVENT_LOG_ISSUE_COUNT="$(jq 'length' <<<"${EVENT_LOG_ISSUES}")"
+
 HAS_BLOCKERS=0
 if [[ "${PLACEHOLDER_COUNT}" -gt 0 ]]; then HAS_BLOCKERS=1; fi
 if [[ "${DUP_SOURCE_COUNT}" -gt 0 ]]; then HAS_BLOCKERS=1; fi
@@ -466,6 +496,7 @@ if awk -v a="${SALARY_OBS_COVERAGE_COUNT}" -v b="${GATE_SALARY_OBS_COVERAGE_MAX}
 if awk -v a="${SALARY_OBS_TIER_COUNT}" -v b="${GATE_SALARY_OBS_TIER_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${QUESTION_ROLE_COUNT}" -v b="${GATE_QUESTION_ROLE_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${DECISION_EVIDENCE_LOWSAMPLE_COUNT}" -v b="${GATE_DECISION_EVIDENCE_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${EVENT_LOG_ISSUE_COUNT}" 'BEGIN{exit !(a > 0)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${SOURCE_TOP1_SHARE}" -v b="${GATE_SOURCE_TOP1_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${SOURCE_TOP5_SHARE}" -v b="${GATE_SOURCE_TOP5_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${P0_COMPLETION_PERCENT}" -v b="${GATE_P0_MIN}" 'BEGIN{exit !(a < b)}'; then HAS_BLOCKERS=1; fi
@@ -484,6 +515,7 @@ SALARY_OBS_COVERAGE_ISSUE="$(jq -n --argjson actual "${SALARY_OBS_COVERAGE_COUNT
 SALARY_OBS_TIER_ISSUE="$(jq -n --argjson actual "${SALARY_OBS_TIER_COUNT}" --argjson threshold "${GATE_SALARY_OBS_TIER_MAX}" '{actual_hits:$actual, threshold_hits:$threshold}')"
 QUESTION_ROLE_ISSUE="$(jq -n --argjson actual "${QUESTION_ROLE_COUNT}" --argjson threshold "${GATE_QUESTION_ROLE_MAX}" --argjson min_required "${GATE_QUESTION_ROLE_MIN}" '{actual_hits:$actual, threshold_hits:$threshold, min_role_coverage:$min_required}')"
 DECISION_EVIDENCE_ISSUE="$(jq -n --argjson actual "${DECISION_EVIDENCE_LOWSAMPLE_COUNT}" --argjson threshold "${GATE_DECISION_EVIDENCE_MAX}" '{actual_hits:$actual, threshold_hits:$threshold}')"
+EVENT_LOG_ISSUE="$(jq -n --argjson actual "${EVENT_LOG_ISSUE_COUNT}" --argjson min_total "${GATE_EVENT_MIN_COUNT}" --argjson min_recent "${GATE_EVENT_RECENT_MIN}" '{actual_hits:$actual, min_event_total:$min_total, min_recent_180d:$min_recent}')"
 SOURCE_TOP1_ISSUE="$(jq -n --argjson actual "${SOURCE_TOP1_SHARE}" --argjson threshold "${GATE_SOURCE_TOP1_MAX}" '{actual_percent:$actual, threshold_percent:$threshold}')"
 SOURCE_TOP5_ISSUE="$(jq -n --argjson actual "${SOURCE_TOP5_SHARE}" --argjson threshold "${GATE_SOURCE_TOP5_MAX}" '{actual_percent:$actual, threshold_percent:$threshold}')"
 
@@ -511,6 +543,9 @@ jq -n \
   --argjson question_role_min "${GATE_QUESTION_ROLE_MIN}" \
   --argjson decision_evidence_lowsample_count "${DECISION_EVIDENCE_LOWSAMPLE_COUNT}" \
   --argjson decision_evidence_lowsample_max "${GATE_DECISION_EVIDENCE_MAX}" \
+  --argjson event_log_issue_count "${EVENT_LOG_ISSUE_COUNT}" \
+  --argjson event_log_min_count "${GATE_EVENT_MIN_COUNT}" \
+  --argjson event_recent_min_count "${GATE_EVENT_RECENT_MIN}" \
   --argjson source_top1_share "${SOURCE_TOP1_SHARE}" \
   --argjson source_top1_max "${GATE_SOURCE_TOP1_MAX}" \
   --argjson source_top5_share "${SOURCE_TOP5_SHARE}" \
@@ -536,6 +571,7 @@ jq -n \
   --argjson salary_obs_tier_issues "${SALARY_OBS_TIER_ISSUES}" \
   --argjson question_role_issues "${QUESTION_ROLE_ISSUES}" \
   --argjson decision_evidence_lowsample_issues "${DECISION_EVIDENCE_LOWSAMPLE_JSON}" \
+  --argjson event_log_issues "${EVENT_LOG_ISSUES}" \
   --argjson p0_completion_issue "${P0_COMPLETION_ISSUE}" \
   --argjson template_ratio_issue "${TEMPLATE_RATIO_ISSUE}" \
   --argjson source_http_issue "${SOURCE_HTTP_ISSUE}" \
@@ -547,6 +583,7 @@ jq -n \
   --argjson salary_obs_tier_issue "${SALARY_OBS_TIER_ISSUE}" \
   --argjson question_role_issue "${QUESTION_ROLE_ISSUE}" \
   --argjson decision_evidence_issue "${DECISION_EVIDENCE_ISSUE}" \
+  --argjson event_log_issue "${EVENT_LOG_ISSUE}" \
   --argjson source_top1_issue "${SOURCE_TOP1_ISSUE}" \
   --argjson source_top5_issue "${SOURCE_TOP5_ISSUE}" \
   '{
@@ -575,6 +612,9 @@ jq -n \
       question_role_coverage_min: $question_role_min,
       decision_evidence_lowsample_hits: $decision_evidence_lowsample_count,
       decision_evidence_lowsample_max_hits: $decision_evidence_lowsample_max,
+      event_log_coverage_hits: $event_log_issue_count,
+      event_log_min_count: $event_log_min_count,
+      event_recent_180d_min_count: $event_recent_min_count,
       source_concentration_top1_percent: $source_top1_share,
       source_concentration_top1_max_percent: $source_top1_max,
       source_concentration_top5_percent: $source_top5_share,
@@ -601,6 +641,7 @@ jq -n \
       salary_observed_company_tier_records: $salary_obs_tier_issues,
       question_role_coverage_records: $question_role_issues,
       decision_evidence_lowsample_records: $decision_evidence_lowsample_issues,
+      event_log_coverage_records: $event_log_issues,
       p0_completion_threshold: $p0_completion_issue,
       template_ratio_threshold: $template_ratio_issue,
       source_http_200_threshold: $source_http_issue,
@@ -612,6 +653,7 @@ jq -n \
       salary_observed_company_tier_threshold: $salary_obs_tier_issue,
       question_role_coverage_threshold: $question_role_issue,
       decision_evidence_lowsample_threshold: $decision_evidence_issue,
+      event_log_coverage_threshold: $event_log_issue,
       source_concentration_top1_threshold: $source_top1_issue,
       source_concentration_top5_threshold: $source_top5_issue
     }
