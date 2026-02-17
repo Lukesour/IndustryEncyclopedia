@@ -9,12 +9,13 @@ REPORT_PATH="${REPORT_DIR}/quality_report_${DATE_TAG}.json"
 LATEST_PATH="${REPORT_DIR}/quality_report_latest.json"
 GATE_PATH="${REPORT_DIR}/quality_gate_${DATE_TAG}.json"
 LATEST_GATE_PATH="${REPORT_DIR}/quality_gate_latest.json"
+RECENT_CUTOFF="$(date -v-180d +%Y-%m-%d 2>/dev/null || date -d '180 days ago' +%Y-%m-%d)"
 
 mkdir -p "${REPORT_DIR}"
 
 "${ROOT_DIR}/scripts/validate_industry_encyclopedia.sh" "${ROOT_DIR}/行业百科.schema.json" "${DATA_PATH}"
 
-jq '
+jq --arg recent_cutoff "${RECENT_CUTOFF}" '
 def stddev($arr):
   if ($arr | length) == 0 then 0
   else
@@ -25,7 +26,7 @@ def stddev($arr):
 ([."行业词条"[]|.dynamic["笔试真题库"].items[]?]) as $written_items |
 ([."行业词条"[]|.dynamic["面试真题库"].items[]?]) as $interview_items |
 ([."行业词条"[]|.dynamic|to_entries[]|.value.items[]?|(.evidence.source_id // .source_id // empty)]) as $source_refs |
-([.. | objects | .source_date? | select(type == "string" and test("^\\d{4}-\\d{2}-\\d{2}$"))]) as $source_dates |
+([.. | objects | (.publish_date? // .source_date?) | select(type == "string" and test("^\\d{4}-\\d{2}-\\d{2}$"))]) as $source_dates |
 ([."行业词条"[]|.progress.quality_score_overall]) as $quality_scores |
 ([."行业词条"[]|.progress.real_data_ratio_overall]) as $real_ratios |
 ([."行业词条"[]|.progress.evidence_percent_overall]) as $evidence_ratios |
@@ -38,7 +39,7 @@ def stddev($arr):
 ([."行业词条"[]|(.dynamic["笔试真题库"].items|map(.role_id)|unique|length)]) as $written_role_coverages |
 ([."行业词条"[]|(.dynamic["面试真题库"].items|map(.role_id)|unique|length)]) as $interview_role_coverages |
 ([."行业词条"[]|(.dynamic["行业事件日志"].items|length)]) as $event_counts |
-([."行业词条"[]|([.dynamic["行业事件日志"].items[]? | select(((.evidence.source_date // "") | type == "string") and ((.evidence.source_date // "") >= "2025-08-21"))] | length)]) as $event_recent_counts |
+([."行业词条"[]|([.dynamic["行业事件日志"].items[]? | ((.evidence.publish_date // .publish_date // .evidence.source_date // .source_date // "") | tostring) as $d | select(($d | test("^\\d{4}-\\d{2}-\\d{2}$")) and ($d >= $recent_cutoff))] | length)]) as $event_recent_counts |
 ([."行业词条"[]|.dynamic["自定义扩展"].items[]?|(.x_decision_estimation_method // empty)]) as $decision_methods |
 ([."行业词条"[]|(.dynamic["自定义扩展"].items[]?.evidence.sample_size // 0)]) as $decision_sample_sizes |
 ([."行业词条"[]|.dynamic["自定义扩展"].items[]?|(.x_decision_reliability_tier // "NA")]) as $decision_reliability_tiers |
@@ -136,6 +137,7 @@ def stddev($arr):
   },
   freshness_detail: {
     source_date_records: ($source_dates | length),
+    effective_date_method: "publish_date_first_fallback_source_date",
     within_180_days_percent: (
       if ($source_dates | length) == 0 then 0
       else (([$source_dates[] | select((now - (. | strptime("%Y-%m-%d") | mktime)) <= (180*86400))] | length) * 100 / ($source_dates | length))
@@ -179,6 +181,15 @@ def stddev($arr):
     p1_completed_slots: ([."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P1" and .status=="completed")]|length),
     p2_total_slots: ([."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P2")]|length),
     p2_completed_slots: ([."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P2" and .status=="completed")]|length)
+  },
+  personalization: {
+    slots_total: ([."行业词条"[]|.dynamic["岗位画像库"].items[]?|.project_evidence_slots[]?]|length),
+    pending_total: ([."行业词条"[]|.dynamic["岗位画像库"].items[]?|.project_evidence_slots[]?|select((.status // "") as $s | ($s | startswith("pending_personalization")) or ($s == "pending_user_fill"))]|length),
+    completion_percent: (
+      ([."行业词条"[]|.dynamic["岗位画像库"].items[]?|.project_evidence_slots[]?]|length) as $total
+      | ([."行业词条"[]|.dynamic["岗位画像库"].items[]?|.project_evidence_slots[]?|select((.status // "") as $s | ($s | startswith("pending_personalization")) or ($s == "pending_user_fill"))]|length) as $pending
+      | if $total == 0 then 100 else ((($total - $pending) * 100) / $total) end
+    )
   },
   decision_metrics: {
     entries_with_decision_fields: ([."行业词条"[]|select(.dynamic["自定义扩展"].payload.extension_fields? != null)]|length),
@@ -391,14 +402,14 @@ DECISION_EVIDENCE_LOWSAMPLE_JSON="$(jq '
 ' "${DATA_PATH}")"
 DECISION_EVIDENCE_LOWSAMPLE_COUNT="$(jq 'length' <<<"${DECISION_EVIDENCE_LOWSAMPLE_JSON}")"
 
-EVENT_LOG_COVERAGE_JSON="$(jq '
+EVENT_LOG_COVERAGE_JSON="$(jq --arg recent_cutoff "${RECENT_CUTOFF}" '
 [
   ."行业词条"[]
   | {
       industry_id,
       industry_name: ."行业名称",
       event_total: (.dynamic["行业事件日志"].items | length),
-      event_recent_180d: ([.dynamic["行业事件日志"].items[]? | select(((.evidence.source_date // "") | type == "string") and ((.evidence.source_date // "") >= "2025-08-21"))] | length)
+      event_recent_180d: ([.dynamic["行业事件日志"].items[]? | ((.evidence.publish_date // .publish_date // .evidence.source_date // .source_date // "") | tostring) as $d | select(($d | test("^\\d{4}-\\d{2}-\\d{2}$")) and ($d >= $recent_cutoff))] | length)
     }
 ]
 ' "${DATA_PATH}")"

@@ -27,6 +27,17 @@ function ratioScore(actual, target) {
   return round1(v * 100);
 }
 
+function getPublishDate(item) {
+  if (!item || typeof item !== 'object') return null;
+  return (
+    item?.evidence?.publish_date
+    || item?.publish_date
+    || item?.evidence?.source_date
+    || item?.source_date
+    || null
+  );
+}
+
 const entries = data['行业词条'] || [];
 const nowTs = Date.parse('2026-02-17T00:00:00Z');
 
@@ -141,7 +152,7 @@ for (const entry of entries) {
   const eventTotalTarget = Math.max(2, toNum(data?.['治理配置']?.['发布硬门槛']?.event_log_min_count, 6));
   const eventRecentTarget = Math.max(1, toNum(data?.['治理配置']?.['发布硬门槛']?.event_recent_180d_min_count, 4));
   const eventRecentCount = eventItems.filter((it) => {
-    const d = it?.evidence?.source_date || null;
+    const d = getPublishDate(it);
     const days = daysSince(d, nowTs);
     return days !== null && days <= 180;
   }).length;
@@ -167,9 +178,19 @@ for (const entry of entries) {
       .filter(Boolean),
   );
   const sourceDiversityScore = ratioScore(sourceIds.size, Math.min(18, Math.max(6, Math.floor(totalItems / 6) || 6)));
+  const sourceIdList = allItems
+    .map((item) => item?.evidence?.source_id || item?.source_id)
+    .filter(Boolean);
+  const sourceCounts = sourceIdList.reduce((acc, id) => {
+    acc[id] = (acc[id] || 0) + 1;
+    return acc;
+  }, {});
+  const topSourceCount = Object.values(sourceCounts).reduce((mx, n) => Math.max(mx, Number(n || 0)), 0);
+  const top1SharePercent = sourceIdList.length > 0 ? round1((topSourceCount * 100) / sourceIdList.length) : 0;
+  const sourceIndependenceScore = round1(Math.max(0, 100 - top1SharePercent));
 
   const datedItems = allItems
-    .map((item) => item?.evidence?.source_date || item?.source_date || null)
+    .map((item) => getPublishDate(item))
     .filter(Boolean);
   const freshCount = datedItems.filter((d) => {
     const days = daysSince(d, nowTs);
@@ -177,16 +198,27 @@ for (const entry of entries) {
   }).length;
   const freshnessLiveScore = datedItems.length > 0 ? round1((freshCount * 100) / datedItems.length) : 0;
 
-  // v1.22: 将覆盖门槛、证据强度、来源多样性与新鲜度并入总分，提升行业差异可解释性。
+  const personalizationSlots = (dynamic['岗位画像库']?.items || []).flatMap((role) => role?.project_evidence_slots || []);
+  const personalizationTotal = personalizationSlots.length;
+  const personalizationPending = personalizationSlots.filter((slot) => {
+    const status = String(slot?.status || '');
+    return status.startsWith('pending_personalization') || status === 'pending_user_fill';
+  }).length;
+  const personalizationCompletion = personalizationTotal > 0
+    ? round1(((personalizationTotal - personalizationPending) * 100) / personalizationTotal)
+    : 100;
+
+  // v1.25: 新增来源独立性权重，并以publish_date优先计算新鲜度，提升分数可解释性。
   const qualityScoreOverall = round1(
-    baseQualityScore * 0.45
-    + salaryCoverageScore * 0.15
+    baseQualityScore * 0.42
+    + salaryCoverageScore * 0.14
     + questionRoleCoverageScore * 0.1
     + decisionEvidenceScore * 0.1
     + eventDensityScore * 0.05
     + sourceDiversityScore * 0.05
+    + sourceIndependenceScore * 0.05
     + evidenceStrengthScore * 0.05
-    + freshnessLiveScore * 0.05,
+    + freshnessLiveScore * 0.04,
   );
 
   entry.progress = {
@@ -206,6 +238,9 @@ for (const entry of entries) {
     manual_fill_required_total: manualRequiredTotal,
     manual_fill_pending_total: manualPendingTotal,
     manual_fill_completion_percent: completion,
+    personalization_slots_total: personalizationTotal,
+    personalization_pending_total: personalizationPending,
+    personalization_completion_percent: personalizationCompletion,
     salary_micro_status: dynamic['薪酬快照_按城市_按公司层级_按岗位']?.data_status || 'not_collected',
     salary_macro_status: dynamic['薪酬实证_国家统计口径']?.data_status || 'not_collected',
     updated_at: '2026-02-17',

@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://example.com/industry-encyclopedia.schema.json",
-  "title": "中国大陆应届生求职行业百科 v1.6.1",
+  "title": "中国大陆应届生求职行业百科 v1.25.0",
   "type": "object",
   "required": [
     "文档元数据",
@@ -333,6 +333,9 @@
         "manual_fill_required_total": { "type": "integer", "minimum": 0 },
         "manual_fill_pending_total": { "type": "integer", "minimum": 0 },
         "manual_fill_completion_percent": { "type": "number", "minimum": 0, "maximum": 100 },
+        "personalization_slots_total": { "type": "integer", "minimum": 0 },
+        "personalization_pending_total": { "type": "integer", "minimum": 0 },
+        "personalization_completion_percent": { "type": "number", "minimum": 0, "maximum": 100 },
         "salary_micro_status": { "enum": ["not_collected", "in_progress", "verified", "confirmed_empty"] },
         "salary_macro_status": { "enum": ["not_collected", "in_progress", "verified", "confirmed_empty"] },
         "updated_at": { "$ref": "#/definitions/date" }
