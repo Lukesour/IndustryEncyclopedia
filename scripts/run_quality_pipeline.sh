@@ -30,6 +30,9 @@ def stddev($arr):
 ([."行业词条"[]|.progress.real_data_ratio_overall]) as $real_ratios |
 ([."行业词条"[]|.progress.evidence_percent_overall]) as $evidence_ratios |
 ([."行业词条"[]|.progress.freshness_percent_overall]) as $freshness_ratios |
+([."行业词条"[]|(.dynamic["薪酬快照_按城市_按公司层级_按岗位"].observed_items|length)]) as $salary_observed_counts |
+([."行业词条"[]|((.dynamic["笔试真题库"].items|length)+(.dynamic["面试真题库"].items|length))]) as $question_depth_counts |
+([."行业词条"[]|(.dynamic["自定义扩展"].items[]?.evidence.sample_size // 0)]) as $decision_sample_sizes |
 
 {
   generated_at: now | strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -59,6 +62,17 @@ def stddev($arr):
     freshness_stddev: stddev($freshness_ratios),
     quality_score_min: ($quality_scores | min),
     quality_score_max: ($quality_scores | max)
+  },
+  quality_differentiation_v2: {
+    salary_observed_items_stddev: stddev($salary_observed_counts),
+    salary_observed_items_min: ($salary_observed_counts | min),
+    salary_observed_items_max: ($salary_observed_counts | max),
+    question_depth_stddev: stddev($question_depth_counts),
+    question_depth_min: ($question_depth_counts | min),
+    question_depth_max: ($question_depth_counts | max),
+    decision_evidence_sample_size_stddev: stddev($decision_sample_sizes),
+    decision_evidence_sample_size_min: ($decision_sample_sizes | min),
+    decision_evidence_sample_size_max: ($decision_sample_sizes | max)
   },
   content_realness: {
     written_total: ($written_items | length),
@@ -248,6 +262,40 @@ DECISION_PLACEHOLDER_JSON="$(jq '
 ' "${DATA_PATH}")"
 DECISION_PLACEHOLDER_COUNT="$(jq 'length' <<<"${DECISION_PLACEHOLDER_JSON}")"
 
+# Salary observed layer consistency gates.
+SALARY_OBS_INPROGRESS_JSON="$(jq '
+[
+  ."行业词条"[]
+  | {
+      industry_id,
+      industry_name: ."行业名称",
+      observed_status: .dynamic["薪酬快照_按城市_按公司层级_按岗位"].observed_status
+    }
+  | select(.observed_status != "verified")
+]
+' "${DATA_PATH}")"
+SALARY_OBS_INPROGRESS_COUNT="$(jq 'length' <<<"${SALARY_OBS_INPROGRESS_JSON}")"
+
+SALARY_OBS_LOWSAMPLE_JSON="$(jq '
+[
+  ."行业词条"[]
+  | .industry_id as $iid
+  | .dynamic["薪酬快照_按城市_按公司层级_按岗位"] as $col
+  | ($col.min_sample_size_for_verified // 10) as $min
+  | $col.observed_items[]?
+  | select((.sample_size // 0) < $min)
+  | {
+      industry_id: $iid,
+      role_id: (.role_id // null),
+      city_id: (.city_id // null),
+      sample_size: (.sample_size // 0),
+      min_sample_size_for_verified: $min,
+      source_id: (.source_id // null)
+    }
+]
+' "${DATA_PATH}")"
+SALARY_OBS_LOWSAMPLE_COUNT="$(jq 'length' <<<"${SALARY_OBS_LOWSAMPLE_JSON}")"
+
 # New explainable gate metrics.
 P0_SLOT_TOTAL="$(jq '[."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P0")]|length' "${DATA_PATH}")"
 P0_PENDING_TOTAL="$(jq '[."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P0")|select((.status // "pending")|startswith("pending"))]|length' "${DATA_PATH}")"
@@ -268,6 +316,8 @@ GATE_TEMPLATE_MAX="$(jq '."治理配置"."发布硬门槛".template_ratio_max_pe
 GATE_SOURCE_MIN="$(jq '."治理配置"."发布硬门槛".source_http_200_min_percent // 90' "${DATA_PATH}")"
 GATE_REAL_Q_MIN="$(jq '."治理配置"."发布硬门槛".real_question_min_percent // 25' "${DATA_PATH}")"
 GATE_DECISION_PLACEHOLDER_MAX="$(jq '."治理配置"."发布硬门槛".decision_placeholder_max_hits // 0' "${DATA_PATH}")"
+GATE_SALARY_OBS_INPROGRESS_MAX="$(jq '."治理配置"."发布硬门槛".salary_observed_inprogress_max // 0' "${DATA_PATH}")"
+GATE_SALARY_OBS_LOWSAMPLE_MAX="$(jq '."治理配置"."发布硬门槛".salary_observed_lowsample_max // 0' "${DATA_PATH}")"
 
 HAS_BLOCKERS=0
 if [[ "${PLACEHOLDER_COUNT}" -gt 0 ]]; then HAS_BLOCKERS=1; fi
@@ -277,6 +327,8 @@ if [[ "${PUBLISHED_P0_COUNT}" -gt 0 ]]; then HAS_BLOCKERS=1; fi
 if [[ "${SOURCE_MISMATCH_COUNT}" -gt 0 ]]; then HAS_BLOCKERS=1; fi
 if [[ "${FUTURE_URL_COUNT}" -gt 0 ]]; then HAS_BLOCKERS=1; fi
 if awk -v a="${DECISION_PLACEHOLDER_COUNT}" -v b="${GATE_DECISION_PLACEHOLDER_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${SALARY_OBS_INPROGRESS_COUNT}" -v b="${GATE_SALARY_OBS_INPROGRESS_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${SALARY_OBS_LOWSAMPLE_COUNT}" -v b="${GATE_SALARY_OBS_LOWSAMPLE_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${P0_COMPLETION_PERCENT}" -v b="${GATE_P0_MIN}" 'BEGIN{exit !(a < b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${TEMPLATE_RATIO_PERCENT}" -v b="${GATE_TEMPLATE_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${SOURCE_HTTP_200_RATIO}" -v b="${GATE_SOURCE_MIN}" 'BEGIN{exit !(a < b)}'; then HAS_BLOCKERS=1; fi
@@ -287,6 +339,8 @@ TEMPLATE_RATIO_ISSUE="$(jq -n --argjson actual "${TEMPLATE_RATIO_PERCENT}" --arg
 SOURCE_HTTP_ISSUE="$(jq -n --argjson actual "${SOURCE_HTTP_200_RATIO}" --argjson threshold "${GATE_SOURCE_MIN}" '{actual_percent:$actual, threshold_percent:$threshold}')"
 REAL_QUESTION_ISSUE="$(jq -n --argjson actual "${REAL_QUESTION_READY_RATIO}" --argjson threshold "${GATE_REAL_Q_MIN}" '{actual_percent:$actual, threshold_percent:$threshold}')"
 DECISION_PLACEHOLDER_ISSUE="$(jq -n --argjson actual "${DECISION_PLACEHOLDER_COUNT}" --argjson threshold "${GATE_DECISION_PLACEHOLDER_MAX}" '{actual_hits:$actual, threshold_hits:$threshold}')"
+SALARY_OBS_INPROGRESS_ISSUE="$(jq -n --argjson actual "${SALARY_OBS_INPROGRESS_COUNT}" --argjson threshold "${GATE_SALARY_OBS_INPROGRESS_MAX}" '{actual_hits:$actual, threshold_hits:$threshold}')"
+SALARY_OBS_LOWSAMPLE_ISSUE="$(jq -n --argjson actual "${SALARY_OBS_LOWSAMPLE_COUNT}" --argjson threshold "${GATE_SALARY_OBS_LOWSAMPLE_MAX}" '{actual_hits:$actual, threshold_hits:$threshold}')"
 
 jq -n \
   --arg generated_at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
@@ -299,6 +353,10 @@ jq -n \
   --argjson future_url_count "${FUTURE_URL_COUNT}" \
   --argjson decision_placeholder_count "${DECISION_PLACEHOLDER_COUNT}" \
   --argjson decision_placeholder_max "${GATE_DECISION_PLACEHOLDER_MAX}" \
+  --argjson salary_obs_inprogress_count "${SALARY_OBS_INPROGRESS_COUNT}" \
+  --argjson salary_obs_inprogress_max "${GATE_SALARY_OBS_INPROGRESS_MAX}" \
+  --argjson salary_obs_lowsample_count "${SALARY_OBS_LOWSAMPLE_COUNT}" \
+  --argjson salary_obs_lowsample_max "${GATE_SALARY_OBS_LOWSAMPLE_MAX}" \
   --argjson p0_completion_percent "${P0_COMPLETION_PERCENT}" \
   --argjson p0_completion_min "${GATE_P0_MIN}" \
   --argjson template_ratio_percent "${TEMPLATE_RATIO_PERCENT}" \
@@ -314,11 +372,15 @@ jq -n \
   --argjson source_mismatch_issues "${SOURCE_MISMATCH_JSON}" \
   --argjson future_url_issues "${FUTURE_URL_JSON}" \
   --argjson decision_placeholder_issues "${DECISION_PLACEHOLDER_JSON}" \
+  --argjson salary_obs_inprogress_issues "${SALARY_OBS_INPROGRESS_JSON}" \
+  --argjson salary_obs_lowsample_issues "${SALARY_OBS_LOWSAMPLE_JSON}" \
   --argjson p0_completion_issue "${P0_COMPLETION_ISSUE}" \
   --argjson template_ratio_issue "${TEMPLATE_RATIO_ISSUE}" \
   --argjson source_http_issue "${SOURCE_HTTP_ISSUE}" \
   --argjson real_question_issue "${REAL_QUESTION_ISSUE}" \
   --argjson decision_placeholder_issue "${DECISION_PLACEHOLDER_ISSUE}" \
+  --argjson salary_obs_inprogress_issue "${SALARY_OBS_INPROGRESS_ISSUE}" \
+  --argjson salary_obs_lowsample_issue "${SALARY_OBS_LOWSAMPLE_ISSUE}" \
   '{
     generated_at: $generated_at,
     data_file: $data_file,
@@ -332,6 +394,10 @@ jq -n \
       future_dated_source_urls: $future_url_count,
       decision_placeholder_hits: $decision_placeholder_count,
       decision_placeholder_max_hits: $decision_placeholder_max,
+      salary_observed_inprogress_hits: $salary_obs_inprogress_count,
+      salary_observed_inprogress_max_hits: $salary_obs_inprogress_max,
+      salary_observed_lowsample_hits: $salary_obs_lowsample_count,
+      salary_observed_lowsample_max_hits: $salary_obs_lowsample_max,
       p0_completion_percent: $p0_completion_percent,
       p0_completion_min_percent: $p0_completion_min,
       template_ratio_percent: $template_ratio_percent,
@@ -348,11 +414,15 @@ jq -n \
       source_id_url_host_mismatch: $source_mismatch_issues,
       future_dated_source_urls: $future_url_issues,
       decision_placeholder_records: $decision_placeholder_issues,
+      salary_observed_inprogress_records: $salary_obs_inprogress_issues,
+      salary_observed_lowsample_records: $salary_obs_lowsample_issues,
       p0_completion_threshold: $p0_completion_issue,
       template_ratio_threshold: $template_ratio_issue,
       source_http_200_threshold: $source_http_issue,
       real_question_threshold: $real_question_issue,
-      decision_placeholder_threshold: $decision_placeholder_issue
+      decision_placeholder_threshold: $decision_placeholder_issue,
+      salary_observed_inprogress_threshold: $salary_obs_inprogress_issue,
+      salary_observed_lowsample_threshold: $salary_obs_lowsample_issue
     }
   }' > "${GATE_PATH}"
 
