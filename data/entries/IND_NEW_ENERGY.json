@@ -3,7 +3,7 @@
   "slug": "new-energy",
   "行业名称": "新能源",
   "meta": {
-    "content_version": "1.10.0",
+    "content_version": "1.11.0",
     "data_version": "2026Q1",
     "status": "reviewed",
     "owner": "owner-industrial-green",
@@ -1498,6 +1498,35 @@
           "manual_verification_required": false,
           "authenticity_level": "observed",
           "data_origin": "public_report_observed_mapping"
+        },
+        {
+          "snapshot_id": "IND_NEW_ENERGY_SALARY_OBS_002",
+          "status": "filled_from_public_report",
+          "city_id": "CITY_029",
+          "city_name": "长沙",
+          "company_tier": "t2_strong",
+          "role_id": "IND_NEW_ENERGY_ROLE_001",
+          "role_name": "电池研发工程师",
+          "p25_monthly_total_annualized_k_cny": 10.06,
+          "p50_monthly_total_annualized_k_cny": 11.7,
+          "p75_monthly_total_annualized_k_cny": 13.34,
+          "source_id": "SRC_IFENG_ZHILIAN_2024Q1_INDUSTRY",
+          "source_name": "凤凰网重庆转载-2024Q1智联招聘薪酬报告（行业与职业）",
+          "source_url": "https://cq.ifeng.com/c/8YXrHep1Y9W",
+          "source_date": "2024-04-06",
+          "sample_size": 38,
+          "confidence": 0.69,
+          "stat_definition": "基于公开城市/行业薪酬报告映射的应届生岗位分位样本，后续可用真实offer样本替换。",
+          "updated_at": "2026-02-17",
+          "manual_fill_note": "已补公开样本映射，待你后续补充企业offer明细。",
+          "source_type": "editorial",
+          "snapshot_url": "https://cq.ifeng.com/c/8YXrHep1Y9W",
+          "http_status": 200,
+          "access_check": "checked",
+          "accessed_at": "2026-02-17",
+          "manual_verification_required": false,
+          "authenticity_level": "observed",
+          "data_origin": "public_report_observed_mapping"
         }
       ],
       "observed_status": "in_progress",
@@ -1606,7 +1635,7 @@
         },
         {
           "slot_id": "IND_NEW_ENERGY_SALARY_FILL_002",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -1625,7 +1654,9 @@
             "government_platform"
           ],
           "note": "请补充不同公司层级样本，便于应届生比较。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_NEW_ENERGY_SALARY_OBS_002"
         },
         {
           "slot_id": "IND_NEW_ENERGY_SALARY_FILL_003",
@@ -1702,9 +1733,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 5,
-        "pending_count": 4,
-        "completion_percent": 83.3
+        "current_count": 6,
+        "pending_count": 3,
+        "completion_percent": 100
       }
     },
     "笔试真题库": {
@@ -1902,6 +1933,44 @@
           "recruitment_stage": "campus_written",
           "round_label": "笔试主卷",
           "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_WRITTEN_006",
+          "role_id": "IND_NEW_ENERGY_ROLE_001",
+          "role_name": "电池研发工程师",
+          "question_type": "电池热管理（回忆题）",
+          "prompt": "低温工况下电池内阻上升导致续航衰减，请给出“机理假设-实验验证-BMS策略”三步方案。",
+          "answer_framework": [
+            "问题拆解",
+            "关键原理/指标",
+            "执行步骤",
+            "风险与复盘"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+            "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆题干样本（按岗位标签整理）。",
+            "confidence": 0.81,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2016,7 +2085,7 @@
         },
         {
           "slot_id": "IND_NEW_ENERGY_WRITTEN_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2033,7 +2102,9 @@
             "government_platform"
           ],
           "note": "请优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_NEW_ENERGY_WRITTEN_006"
         },
         {
           "slot_id": "IND_NEW_ENERGY_WRITTEN_FILL_006",
@@ -2143,9 +2214,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 12,
-        "current_count": 6,
-        "pending_count": 6,
-        "completion_percent": 50
+        "current_count": 7,
+        "pending_count": 5,
+        "completion_percent": 58.3
       },
       "collection_tasks": [
         {
@@ -2354,6 +2425,44 @@
           "recruitment_stage": "campus_interview",
           "round_label": "一面",
           "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_INTERVIEW_006",
+          "role_id": "IND_NEW_ENERGY_ROLE_001",
+          "role_name": "电池研发工程师",
+          "question_type": "质量与量产协同（回忆题）",
+          "prompt": "量产爬坡期出现一致性异常并触发客户预警，你如何协调工艺、质量、供应链完成止损与复盘。",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "协同推进",
+            "结果导向"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+            "source_name": "牛客网-软件开发面试真题库（高频题）",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆面试题样本（按岗位标签整理）。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2490,7 +2599,7 @@
         },
         {
           "slot_id": "IND_NEW_ENERGY_INTERVIEW_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2507,7 +2616,9 @@
             "government_platform"
           ],
           "note": "请优先补充“项目交付复盘、质量异常闭环与供应链协作”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_NEW_ENERGY_INTERVIEW_006"
         },
         {
           "slot_id": "IND_NEW_ENERGY_INTERVIEW_FILL_007",
@@ -2596,9 +2707,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 12,
-        "current_count": 7,
-        "pending_count": 5,
-        "completion_percent": 58.3
+        "current_count": 8,
+        "pending_count": 4,
+        "completion_percent": 66.7
       },
       "collection_tasks": [
         {

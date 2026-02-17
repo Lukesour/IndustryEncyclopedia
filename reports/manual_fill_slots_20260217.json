@@ -1,41 +1,18 @@
 {
-  "generated_at": "2026-02-17T03:29:25Z",
-  "version": "v1.10.0",
+  "generated_at": "2026-02-17T03:52:06Z",
+  "version": "v1.12.0",
   "industries": [
     {
       "industry_id": "IND_INTERNET_AI",
       "industry_name": "互联网与AI",
-      "pending_slots": 25,
+      "pending_slots": 22,
       "collections": [
         {
           "collection": "薪酬快照_按城市_按公司层级_按岗位",
           "priority": "P0",
-          "pending_count": 4,
+          "pending_count": 3,
           "required_count": 6,
           "sample_slots": [
-            {
-              "slot_id": "IND_INTERNET_AI_SALARY_FILL_002",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-10",
-              "required_fields": [
-                "city_id",
-                "company_tier",
-                "role_id",
-                "p25",
-                "p50",
-                "p75",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
-            },
             {
               "slot_id": "IND_INTERNET_AI_SALARY_FILL_003",
               "status": "pending_user_fill",
@@ -83,25 +60,20 @@
               ],
               "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
               "created_at": "2026-02-16"
-            }
-          ]
-        },
-        {
-          "collection": "笔试真题库",
-          "priority": "P0",
-          "pending_count": 6,
-          "required_count": 12,
-          "sample_slots": [
+            },
             {
-              "slot_id": "IND_INTERNET_AI_WRITTEN_FILL_005",
+              "slot_id": "IND_INTERNET_AI_SALARY_FILL_005",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-10",
+              "city_id": "CITY_004",
               "required_fields": [
+                "city_id",
+                "company_tier",
                 "role_id",
-                "question_type",
-                "prompt",
-                "answer_framework",
+                "p25",
+                "p50",
+                "p75",
                 "source_url",
                 "source_date"
               ],
@@ -110,9 +82,17 @@
                 "real_user",
                 "government_platform"
               ],
-              "note": "请优先补充“编码能力、系统设计、数据结构与模型应用”方向的真实题目，并标注题目年份/岗位。",
+              "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
               "created_at": "2026-02-16"
-            },
+            }
+          ]
+        },
+        {
+          "collection": "笔试真题库",
+          "priority": "P0",
+          "pending_count": 5,
+          "required_count": 12,
+          "sample_slots": [
             {
               "slot_id": "IND_INTERNET_AI_WRITTEN_FILL_006",
               "status": "pending_user_fill",
@@ -154,17 +134,9 @@
               ],
               "note": "请优先补充“编码能力、系统设计、数据结构与模型应用”方向的真实题目，并标注题目年份/岗位。",
               "created_at": "2026-02-16"
-            }
-          ]
-        },
-        {
-          "collection": "面试真题库",
-          "priority": "P0",
-          "pending_count": 5,
-          "required_count": 12,
-          "sample_slots": [
+            },
             {
-              "slot_id": "IND_INTERNET_AI_INTERVIEW_FILL_006",
+              "slot_id": "IND_INTERNET_AI_WRITTEN_FILL_008",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-10",
@@ -172,7 +144,7 @@
                 "role_id",
                 "question_type",
                 "prompt",
-                "scoring_dimensions",
+                "answer_framework",
                 "source_url",
                 "source_date"
               ],
@@ -181,9 +153,17 @@
                 "real_user",
                 "government_platform"
               ],
-              "note": "请优先补充“项目深挖、跨团队协作与产品价值表达”方向的真实问答，并标注面试轮次。",
+              "note": "请优先补充“编码能力、系统设计、数据结构与模型应用”方向的真实题目，并标注题目年份/岗位。",
               "created_at": "2026-02-16"
-            },
+            }
+          ]
+        },
+        {
+          "collection": "面试真题库",
+          "priority": "P0",
+          "pending_count": 4,
+          "required_count": 12,
+          "sample_slots": [
             {
               "slot_id": "IND_INTERNET_AI_INTERVIEW_FILL_007",
               "status": "pending_user_fill",
@@ -207,6 +187,27 @@
             },
             {
               "slot_id": "IND_INTERNET_AI_INTERVIEW_FILL_008",
+              "status": "pending_user_fill",
+              "priority": "P0",
+              "due_date": "2026-03-10",
+              "required_fields": [
+                "role_id",
+                "question_type",
+                "prompt",
+                "scoring_dimensions",
+                "source_url",
+                "source_date"
+              ],
+              "recommended_source_types": [
+                "company_official",
+                "real_user",
+                "government_platform"
+              ],
+              "note": "请优先补充“项目深挖、跨团队协作与产品价值表达”方向的真实问答，并标注面试轮次。",
+              "created_at": "2026-02-16"
+            },
+            {
+              "slot_id": "IND_INTERNET_AI_INTERVIEW_FILL_009",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-10",
@@ -422,37 +423,14 @@
     {
       "industry_id": "IND_SEMICONDUCTOR_ELECTRONICS",
       "industry_name": "半导体与电子",
-      "pending_slots": 25,
+      "pending_slots": 22,
       "collections": [
         {
           "collection": "薪酬快照_按城市_按公司层级_按岗位",
           "priority": "P0",
-          "pending_count": 4,
+          "pending_count": 3,
           "required_count": 6,
           "sample_slots": [
-            {
-              "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_SALARY_FILL_002",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-10",
-              "required_fields": [
-                "city_id",
-                "company_tier",
-                "role_id",
-                "p25",
-                "p50",
-                "p75",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
-            },
             {
               "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_SALARY_FILL_003",
               "status": "pending_user_fill",
@@ -500,25 +478,20 @@
               ],
               "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
               "created_at": "2026-02-16"
-            }
-          ]
-        },
-        {
-          "collection": "笔试真题库",
-          "priority": "P0",
-          "pending_count": 6,
-          "required_count": 12,
-          "sample_slots": [
+            },
             {
-              "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_WRITTEN_FILL_005",
+              "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_SALARY_FILL_005",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-10",
+              "city_id": "CITY_004",
               "required_fields": [
+                "city_id",
+                "company_tier",
                 "role_id",
-                "question_type",
-                "prompt",
-                "answer_framework",
+                "p25",
+                "p50",
+                "p75",
                 "source_url",
                 "source_date"
               ],
@@ -527,9 +500,17 @@
                 "real_user",
                 "government_platform"
               ],
-              "note": "请优先补充“半导体物理、器件工艺、逻辑设计与时序”方向的真实题目，并标注题目年份/岗位。",
+              "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
               "created_at": "2026-02-16"
-            },
+            }
+          ]
+        },
+        {
+          "collection": "笔试真题库",
+          "priority": "P0",
+          "pending_count": 5,
+          "required_count": 12,
+          "sample_slots": [
             {
               "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_WRITTEN_FILL_006",
               "status": "pending_user_fill",
@@ -571,17 +552,9 @@
               ],
               "note": "请优先补充“半导体物理、器件工艺、逻辑设计与时序”方向的真实题目，并标注题目年份/岗位。",
               "created_at": "2026-02-16"
-            }
-          ]
-        },
-        {
-          "collection": "面试真题库",
-          "priority": "P0",
-          "pending_count": 5,
-          "required_count": 12,
-          "sample_slots": [
+            },
             {
-              "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_INTERVIEW_FILL_006",
+              "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_WRITTEN_FILL_008",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-10",
@@ -589,7 +562,7 @@
                 "role_id",
                 "question_type",
                 "prompt",
-                "scoring_dimensions",
+                "answer_framework",
                 "source_url",
                 "source_date"
               ],
@@ -598,9 +571,17 @@
                 "real_user",
                 "government_platform"
               ],
-              "note": "请优先补充“Tape-out经历、问题定位与跨部门协同”方向的真实问答，并标注面试轮次。",
+              "note": "请优先补充“半导体物理、器件工艺、逻辑设计与时序”方向的真实题目，并标注题目年份/岗位。",
               "created_at": "2026-02-16"
-            },
+            }
+          ]
+        },
+        {
+          "collection": "面试真题库",
+          "priority": "P0",
+          "pending_count": 4,
+          "required_count": 12,
+          "sample_slots": [
             {
               "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_INTERVIEW_FILL_007",
               "status": "pending_user_fill",
@@ -624,6 +605,27 @@
             },
             {
               "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_INTERVIEW_FILL_008",
+              "status": "pending_user_fill",
+              "priority": "P0",
+              "due_date": "2026-03-10",
+              "required_fields": [
+                "role_id",
+                "question_type",
+                "prompt",
+                "scoring_dimensions",
+                "source_url",
+                "source_date"
+              ],
+              "recommended_source_types": [
+                "company_official",
+                "real_user",
+                "government_platform"
+              ],
+              "note": "请优先补充“Tape-out经历、问题定位与跨部门协同”方向的真实问答，并标注面试轮次。",
+              "created_at": "2026-02-16"
+            },
+            {
+              "slot_id": "IND_SEMICONDUCTOR_ELECTRONICS_INTERVIEW_FILL_009",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-10",
@@ -839,37 +841,14 @@
     {
       "industry_id": "IND_TELECOM_OPERATOR",
       "industry_name": "通信与运营商",
-      "pending_slots": 25,
+      "pending_slots": 22,
       "collections": [
         {
           "collection": "薪酬快照_按城市_按公司层级_按岗位",
           "priority": "P0",
-          "pending_count": 4,
+          "pending_count": 3,
           "required_count": 6,
           "sample_slots": [
-            {
-              "slot_id": "IND_TELECOM_OPERATOR_SALARY_FILL_002",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-10",
-              "required_fields": [
-                "city_id",
-                "company_tier",
-                "role_id",
-                "p25",
-                "p50",
-                "p75",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
-            },
             {
               "slot_id": "IND_TELECOM_OPERATOR_SALARY_FILL_003",
               "status": "pending_user_fill",
@@ -917,25 +896,20 @@
               ],
               "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
               "created_at": "2026-02-16"
-            }
-          ]
-        },
-        {
-          "collection": "笔试真题库",
-          "priority": "P0",
-          "pending_count": 6,
-          "required_count": 12,
-          "sample_slots": [
+            },
             {
-              "slot_id": "IND_TELECOM_OPERATOR_WRITTEN_FILL_005",
+              "slot_id": "IND_TELECOM_OPERATOR_SALARY_FILL_005",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-10",
+              "city_id": "CITY_004",
               "required_fields": [
+                "city_id",
+                "company_tier",
                 "role_id",
-                "question_type",
-                "prompt",
-                "answer_framework",
+                "p25",
+                "p50",
+                "p75",
                 "source_url",
                 "source_date"
               ],
@@ -944,9 +918,17 @@
                 "real_user",
                 "government_platform"
               ],
-              "note": "请优先补充“通信原理、网络协议、网优指标与故障排查”方向的真实题目，并标注题目年份/岗位。",
+              "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
               "created_at": "2026-02-16"
-            },
+            }
+          ]
+        },
+        {
+          "collection": "笔试真题库",
+          "priority": "P0",
+          "pending_count": 5,
+          "required_count": 12,
+          "sample_slots": [
             {
               "slot_id": "IND_TELECOM_OPERATOR_WRITTEN_FILL_006",
               "status": "pending_user_fill",
@@ -988,17 +970,9 @@
               ],
               "note": "请优先补充“通信原理、网络协议、网优指标与故障排查”方向的真实题目，并标注题目年份/岗位。",
               "created_at": "2026-02-16"
-            }
-          ]
-        },
-        {
-          "collection": "面试真题库",
-          "priority": "P0",
-          "pending_count": 5,
-          "required_count": 12,
-          "sample_slots": [
+            },
             {
-              "slot_id": "IND_TELECOM_OPERATOR_INTERVIEW_FILL_006",
+              "slot_id": "IND_TELECOM_OPERATOR_WRITTEN_FILL_008",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-10",
@@ -1006,7 +980,7 @@
                 "role_id",
                 "question_type",
                 "prompt",
-                "scoring_dimensions",
+                "answer_framework",
                 "source_url",
                 "source_date"
               ],
@@ -1015,9 +989,17 @@
                 "real_user",
                 "government_platform"
               ],
-              "note": "请优先补充“客户场景沟通、跨省协同与服务恢复”方向的真实问答，并标注面试轮次。",
+              "note": "请优先补充“通信原理、网络协议、网优指标与故障排查”方向的真实题目，并标注题目年份/岗位。",
               "created_at": "2026-02-16"
-            },
+            }
+          ]
+        },
+        {
+          "collection": "面试真题库",
+          "priority": "P0",
+          "pending_count": 4,
+          "required_count": 12,
+          "sample_slots": [
             {
               "slot_id": "IND_TELECOM_OPERATOR_INTERVIEW_FILL_007",
               "status": "pending_user_fill",
@@ -1041,6 +1023,27 @@
             },
             {
               "slot_id": "IND_TELECOM_OPERATOR_INTERVIEW_FILL_008",
+              "status": "pending_user_fill",
+              "priority": "P0",
+              "due_date": "2026-03-10",
+              "required_fields": [
+                "role_id",
+                "question_type",
+                "prompt",
+                "scoring_dimensions",
+                "source_url",
+                "source_date"
+              ],
+              "recommended_source_types": [
+                "company_official",
+                "real_user",
+                "government_platform"
+              ],
+              "note": "请优先补充“客户场景沟通、跨省协同与服务恢复”方向的真实问答，并标注面试轮次。",
+              "created_at": "2026-02-16"
+            },
+            {
+              "slot_id": "IND_TELECOM_OPERATOR_INTERVIEW_FILL_009",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-10",
@@ -1256,37 +1259,14 @@
     {
       "industry_id": "IND_NEW_ENERGY",
       "industry_name": "新能源",
-      "pending_slots": 25,
+      "pending_slots": 22,
       "collections": [
         {
           "collection": "薪酬快照_按城市_按公司层级_按岗位",
           "priority": "P0",
-          "pending_count": 4,
+          "pending_count": 3,
           "required_count": 6,
           "sample_slots": [
-            {
-              "slot_id": "IND_NEW_ENERGY_SALARY_FILL_002",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-10",
-              "required_fields": [
-                "city_id",
-                "company_tier",
-                "role_id",
-                "p25",
-                "p50",
-                "p75",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
-            },
             {
               "slot_id": "IND_NEW_ENERGY_SALARY_FILL_003",
               "status": "pending_user_fill",
@@ -1334,25 +1314,20 @@
               ],
               "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
               "created_at": "2026-02-16"
-            }
-          ]
-        },
-        {
-          "collection": "笔试真题库",
-          "priority": "P0",
-          "pending_count": 6,
-          "required_count": 12,
-          "sample_slots": [
+            },
             {
-              "slot_id": "IND_NEW_ENERGY_WRITTEN_FILL_005",
+              "slot_id": "IND_NEW_ENERGY_SALARY_FILL_005",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-10",
+              "city_id": "CITY_003",
               "required_fields": [
+                "city_id",
+                "company_tier",
                 "role_id",
-                "question_type",
-                "prompt",
-                "answer_framework",
+                "p25",
+                "p50",
+                "p75",
                 "source_url",
                 "source_date"
               ],
@@ -1361,9 +1336,17 @@
                 "real_user",
                 "government_platform"
               ],
-              "note": "请优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向的真实题目，并标注题目年份/岗位。",
+              "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
               "created_at": "2026-02-16"
-            },
+            }
+          ]
+        },
+        {
+          "collection": "笔试真题库",
+          "priority": "P0",
+          "pending_count": 5,
+          "required_count": 12,
+          "sample_slots": [
             {
               "slot_id": "IND_NEW_ENERGY_WRITTEN_FILL_006",
               "status": "pending_user_fill",
@@ -1405,17 +1388,9 @@
               ],
               "note": "请优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向的真实题目，并标注题目年份/岗位。",
               "created_at": "2026-02-16"
-            }
-          ]
-        },
-        {
-          "collection": "面试真题库",
-          "priority": "P0",
-          "pending_count": 5,
-          "required_count": 12,
-          "sample_slots": [
+            },
             {
-              "slot_id": "IND_NEW_ENERGY_INTERVIEW_FILL_006",
+              "slot_id": "IND_NEW_ENERGY_WRITTEN_FILL_008",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-10",
@@ -1423,7 +1398,7 @@
                 "role_id",
                 "question_type",
                 "prompt",
-                "scoring_dimensions",
+                "answer_framework",
                 "source_url",
                 "source_date"
               ],
@@ -1432,9 +1407,17 @@
                 "real_user",
                 "government_platform"
               ],
-              "note": "请优先补充“项目交付复盘、质量异常闭环与供应链协作”方向的真实问答，并标注面试轮次。",
+              "note": "请优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向的真实题目，并标注题目年份/岗位。",
               "created_at": "2026-02-16"
-            },
+            }
+          ]
+        },
+        {
+          "collection": "面试真题库",
+          "priority": "P0",
+          "pending_count": 4,
+          "required_count": 12,
+          "sample_slots": [
             {
               "slot_id": "IND_NEW_ENERGY_INTERVIEW_FILL_007",
               "status": "pending_user_fill",
@@ -1458,6 +1441,27 @@
             },
             {
               "slot_id": "IND_NEW_ENERGY_INTERVIEW_FILL_008",
+              "status": "pending_user_fill",
+              "priority": "P0",
+              "due_date": "2026-03-10",
+              "required_fields": [
+                "role_id",
+                "question_type",
+                "prompt",
+                "scoring_dimensions",
+                "source_url",
+                "source_date"
+              ],
+              "recommended_source_types": [
+                "company_official",
+                "real_user",
+                "government_platform"
+              ],
+              "note": "请优先补充“项目交付复盘、质量异常闭环与供应链协作”方向的真实问答，并标注面试轮次。",
+              "created_at": "2026-02-16"
+            },
+            {
+              "slot_id": "IND_NEW_ENERGY_INTERVIEW_FILL_009",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-10",
@@ -1673,37 +1677,14 @@
     {
       "industry_id": "IND_AUTO_INTELLIGENT_DRIVING",
       "industry_name": "汽车与智能驾驶",
-      "pending_slots": 26,
+      "pending_slots": 23,
       "collections": [
         {
           "collection": "薪酬快照_按城市_按公司层级_按岗位",
           "priority": "P0",
-          "pending_count": 4,
+          "pending_count": 3,
           "required_count": 6,
           "sample_slots": [
-            {
-              "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_SALARY_FILL_002",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-10",
-              "required_fields": [
-                "city_id",
-                "company_tier",
-                "role_id",
-                "p25",
-                "p50",
-                "p75",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
-            },
             {
               "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_SALARY_FILL_003",
               "status": "pending_user_fill",
@@ -1751,25 +1732,20 @@
               ],
               "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
               "created_at": "2026-02-16"
-            }
-          ]
-        },
-        {
-          "collection": "笔试真题库",
-          "priority": "P0",
-          "pending_count": 6,
-          "required_count": 12,
-          "sample_slots": [
+            },
             {
-              "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_FILL_005",
+              "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_SALARY_FILL_005",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-10",
+              "city_id": "CITY_004",
               "required_fields": [
+                "city_id",
+                "company_tier",
                 "role_id",
-                "question_type",
-                "prompt",
-                "answer_framework",
+                "p25",
+                "p50",
+                "p75",
                 "source_url",
                 "source_date"
               ],
@@ -1778,9 +1754,17 @@
                 "real_user",
                 "government_platform"
               ],
-              "note": "请优先补充“控制理论、感知融合、车规安全与测试验证”方向的真实题目，并标注题目年份/岗位。",
+              "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
               "created_at": "2026-02-16"
-            },
+            }
+          ]
+        },
+        {
+          "collection": "笔试真题库",
+          "priority": "P0",
+          "pending_count": 5,
+          "required_count": 12,
+          "sample_slots": [
             {
               "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_FILL_006",
               "status": "pending_user_fill",
@@ -1822,17 +1806,9 @@
               ],
               "note": "请优先补充“控制理论、感知融合、车规安全与测试验证”方向的真实题目，并标注题目年份/岗位。",
               "created_at": "2026-02-16"
-            }
-          ]
-        },
-        {
-          "collection": "面试真题库",
-          "priority": "P0",
-          "pending_count": 6,
-          "required_count": 12,
-          "sample_slots": [
+            },
             {
-              "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_FILL_005",
+              "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_FILL_008",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-10",
@@ -1840,7 +1816,7 @@
                 "role_id",
                 "question_type",
                 "prompt",
-                "scoring_dimensions",
+                "answer_framework",
                 "source_url",
                 "source_date"
               ],
@@ -1849,9 +1825,17 @@
                 "real_user",
                 "government_platform"
               ],
-              "note": "请优先补充“感知误判复盘、功能安全与跨团队沟通”方向的真实问答，并标注面试轮次。",
+              "note": "请优先补充“控制理论、感知融合、车规安全与测试验证”方向的真实题目，并标注题目年份/岗位。",
               "created_at": "2026-02-16"
-            },
+            }
+          ]
+        },
+        {
+          "collection": "面试真题库",
+          "priority": "P0",
+          "pending_count": 5,
+          "required_count": 12,
+          "sample_slots": [
             {
               "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_FILL_006",
               "status": "pending_user_fill",
@@ -1875,6 +1859,27 @@
             },
             {
               "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_FILL_007",
+              "status": "pending_user_fill",
+              "priority": "P0",
+              "due_date": "2026-03-10",
+              "required_fields": [
+                "role_id",
+                "question_type",
+                "prompt",
+                "scoring_dimensions",
+                "source_url",
+                "source_date"
+              ],
+              "recommended_source_types": [
+                "company_official",
+                "real_user",
+                "government_platform"
+              ],
+              "note": "请优先补充“感知误判复盘、功能安全与跨团队沟通”方向的真实问答，并标注面试轮次。",
+              "created_at": "2026-02-16"
+            },
+            {
+              "slot_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_FILL_008",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-10",
@@ -2090,37 +2095,14 @@
     {
       "industry_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION",
       "industry_name": "高端制造与工业自动化",
-      "pending_slots": 26,
+      "pending_slots": 23,
       "collections": [
         {
           "collection": "薪酬快照_按城市_按公司层级_按岗位",
           "priority": "P0",
-          "pending_count": 4,
+          "pending_count": 3,
           "required_count": 6,
           "sample_slots": [
-            {
-              "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_SALARY_FILL_002",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-10",
-              "required_fields": [
-                "city_id",
-                "company_tier",
-                "role_id",
-                "p25",
-                "p50",
-                "p75",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
-            },
             {
               "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_SALARY_FILL_003",
               "status": "pending_user_fill",
@@ -2168,25 +2150,20 @@
               ],
               "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
               "created_at": "2026-02-16"
-            }
-          ]
-        },
-        {
-          "collection": "笔试真题库",
-          "priority": "P0",
-          "pending_count": 6,
-          "required_count": 12,
-          "sample_slots": [
+            },
             {
-              "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_FILL_005",
+              "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_SALARY_FILL_005",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-10",
+              "city_id": "CITY_003",
               "required_fields": [
+                "city_id",
+                "company_tier",
                 "role_id",
-                "question_type",
-                "prompt",
-                "answer_framework",
+                "p25",
+                "p50",
+                "p75",
                 "source_url",
                 "source_date"
               ],
@@ -2195,9 +2172,17 @@
                 "real_user",
                 "government_platform"
               ],
-              "note": "请优先补充“自动控制、机械电气基础、工业网络与SCADA”方向的真实题目，并标注题目年份/岗位。",
+              "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
               "created_at": "2026-02-16"
-            },
+            }
+          ]
+        },
+        {
+          "collection": "笔试真题库",
+          "priority": "P0",
+          "pending_count": 5,
+          "required_count": 12,
+          "sample_slots": [
             {
               "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_FILL_006",
               "status": "pending_user_fill",
@@ -2239,17 +2224,9 @@
               ],
               "note": "请优先补充“自动控制、机械电气基础、工业网络与SCADA”方向的真实题目，并标注题目年份/岗位。",
               "created_at": "2026-02-16"
-            }
-          ]
-        },
-        {
-          "collection": "面试真题库",
-          "priority": "P0",
-          "pending_count": 6,
-          "required_count": 12,
-          "sample_slots": [
+            },
             {
-              "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_FILL_005",
+              "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_FILL_008",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-10",
@@ -2257,7 +2234,7 @@
                 "role_id",
                 "question_type",
                 "prompt",
-                "scoring_dimensions",
+                "answer_framework",
                 "source_url",
                 "source_date"
               ],
@@ -2266,9 +2243,17 @@
                 "real_user",
                 "government_platform"
               ],
-              "note": "请优先补充“现场调试、异常处理与工艺改进案例”方向的真实问答，并标注面试轮次。",
+              "note": "请优先补充“自动控制、机械电气基础、工业网络与SCADA”方向的真实题目，并标注题目年份/岗位。",
               "created_at": "2026-02-16"
-            },
+            }
+          ]
+        },
+        {
+          "collection": "面试真题库",
+          "priority": "P0",
+          "pending_count": 5,
+          "required_count": 12,
+          "sample_slots": [
             {
               "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_FILL_006",
               "status": "pending_user_fill",
@@ -2292,6 +2277,27 @@
             },
             {
               "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_FILL_007",
+              "status": "pending_user_fill",
+              "priority": "P0",
+              "due_date": "2026-03-10",
+              "required_fields": [
+                "role_id",
+                "question_type",
+                "prompt",
+                "scoring_dimensions",
+                "source_url",
+                "source_date"
+              ],
+              "recommended_source_types": [
+                "company_official",
+                "real_user",
+                "government_platform"
+              ],
+              "note": "请优先补充“现场调试、异常处理与工艺改进案例”方向的真实问答，并标注面试轮次。",
+              "created_at": "2026-02-16"
+            },
+            {
+              "slot_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_FILL_008",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-10",
@@ -2507,37 +2513,14 @@
     {
       "industry_id": "IND_BIOMED_DEVICE",
       "industry_name": "生物医药与器械",
-      "pending_slots": 26,
+      "pending_slots": 23,
       "collections": [
         {
           "collection": "薪酬快照_按城市_按公司层级_按岗位",
           "priority": "P0",
-          "pending_count": 4,
+          "pending_count": 3,
           "required_count": 6,
           "sample_slots": [
-            {
-              "slot_id": "IND_BIOMED_DEVICE_SALARY_FILL_002",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-17",
-              "required_fields": [
-                "city_id",
-                "company_tier",
-                "role_id",
-                "p25",
-                "p50",
-                "p75",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
-            },
             {
               "slot_id": "IND_BIOMED_DEVICE_SALARY_FILL_003",
               "status": "pending_user_fill",
@@ -2585,25 +2568,20 @@
               ],
               "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
               "created_at": "2026-02-16"
-            }
-          ]
-        },
-        {
-          "collection": "笔试真题库",
-          "priority": "P0",
-          "pending_count": 6,
-          "required_count": 12,
-          "sample_slots": [
+            },
             {
-              "slot_id": "IND_BIOMED_DEVICE_WRITTEN_FILL_005",
+              "slot_id": "IND_BIOMED_DEVICE_SALARY_FILL_005",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-17",
+              "city_id": "CITY_004",
               "required_fields": [
+                "city_id",
+                "company_tier",
                 "role_id",
-                "question_type",
-                "prompt",
-                "answer_framework",
+                "p25",
+                "p50",
+                "p75",
                 "source_url",
                 "source_date"
               ],
@@ -2612,9 +2590,17 @@
                 "real_user",
                 "government_platform"
               ],
-              "note": "请优先补充“药理/器械法规、GMP/GSP、统计与试验设计”方向的真实题目，并标注题目年份/岗位。",
+              "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
               "created_at": "2026-02-16"
-            },
+            }
+          ]
+        },
+        {
+          "collection": "笔试真题库",
+          "priority": "P0",
+          "pending_count": 5,
+          "required_count": 12,
+          "sample_slots": [
             {
               "slot_id": "IND_BIOMED_DEVICE_WRITTEN_FILL_006",
               "status": "pending_user_fill",
@@ -2656,17 +2642,9 @@
               ],
               "note": "请优先补充“药理/器械法规、GMP/GSP、统计与试验设计”方向的真实题目，并标注题目年份/岗位。",
               "created_at": "2026-02-16"
-            }
-          ]
-        },
-        {
-          "collection": "面试真题库",
-          "priority": "P0",
-          "pending_count": 6,
-          "required_count": 12,
-          "sample_slots": [
+            },
             {
-              "slot_id": "IND_BIOMED_DEVICE_INTERVIEW_FILL_005",
+              "slot_id": "IND_BIOMED_DEVICE_WRITTEN_FILL_008",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-17",
@@ -2674,7 +2652,7 @@
                 "role_id",
                 "question_type",
                 "prompt",
-                "scoring_dimensions",
+                "answer_framework",
                 "source_url",
                 "source_date"
               ],
@@ -2683,9 +2661,17 @@
                 "real_user",
                 "government_platform"
               ],
-              "note": "请优先补充“合规审计准备、临床证据阐释与风险沟通”方向的真实问答，并标注面试轮次。",
+              "note": "请优先补充“药理/器械法规、GMP/GSP、统计与试验设计”方向的真实题目，并标注题目年份/岗位。",
               "created_at": "2026-02-16"
-            },
+            }
+          ]
+        },
+        {
+          "collection": "面试真题库",
+          "priority": "P0",
+          "pending_count": 5,
+          "required_count": 12,
+          "sample_slots": [
             {
               "slot_id": "IND_BIOMED_DEVICE_INTERVIEW_FILL_006",
               "status": "pending_user_fill",
@@ -2709,6 +2695,27 @@
             },
             {
               "slot_id": "IND_BIOMED_DEVICE_INTERVIEW_FILL_007",
+              "status": "pending_user_fill",
+              "priority": "P0",
+              "due_date": "2026-03-17",
+              "required_fields": [
+                "role_id",
+                "question_type",
+                "prompt",
+                "scoring_dimensions",
+                "source_url",
+                "source_date"
+              ],
+              "recommended_source_types": [
+                "company_official",
+                "real_user",
+                "government_platform"
+              ],
+              "note": "请优先补充“合规审计准备、临床证据阐释与风险沟通”方向的真实问答，并标注面试轮次。",
+              "created_at": "2026-02-16"
+            },
+            {
+              "slot_id": "IND_BIOMED_DEVICE_INTERVIEW_FILL_008",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-17",
@@ -6050,37 +6057,14 @@
     {
       "industry_id": "IND_CHEM_NEW_MATERIALS",
       "industry_name": "化工与新材料",
-      "pending_slots": 27,
+      "pending_slots": 24,
       "collections": [
         {
           "collection": "薪酬快照_按城市_按公司层级_按岗位",
           "priority": "P0",
-          "pending_count": 4,
+          "pending_count": 3,
           "required_count": 6,
           "sample_slots": [
-            {
-              "slot_id": "IND_CHEM_NEW_MATERIALS_SALARY_FILL_002",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-24",
-              "required_fields": [
-                "city_id",
-                "company_tier",
-                "role_id",
-                "p25",
-                "p50",
-                "p75",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
-            },
             {
               "slot_id": "IND_CHEM_NEW_MATERIALS_SALARY_FILL_003",
               "status": "pending_user_fill",
@@ -6128,25 +6112,20 @@
               ],
               "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
               "created_at": "2026-02-16"
-            }
-          ]
-        },
-        {
-          "collection": "笔试真题库",
-          "priority": "P0",
-          "pending_count": 7,
-          "required_count": 12,
-          "sample_slots": [
+            },
             {
-              "slot_id": "IND_CHEM_NEW_MATERIALS_WRITTEN_FILL_004",
+              "slot_id": "IND_CHEM_NEW_MATERIALS_SALARY_FILL_005",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-24",
+              "city_id": "CITY_003",
               "required_fields": [
+                "city_id",
+                "company_tier",
                 "role_id",
-                "question_type",
-                "prompt",
-                "answer_framework",
+                "p25",
+                "p50",
+                "p75",
                 "source_url",
                 "source_date"
               ],
@@ -6155,9 +6134,17 @@
                 "real_user",
                 "government_platform"
               ],
-              "note": "请优先补充“化学工艺、材料表征、安全规范与质量控制”方向的真实题目，并标注题目年份/岗位。",
+              "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
               "created_at": "2026-02-16"
-            },
+            }
+          ]
+        },
+        {
+          "collection": "笔试真题库",
+          "priority": "P0",
+          "pending_count": 6,
+          "required_count": 12,
+          "sample_slots": [
             {
               "slot_id": "IND_CHEM_NEW_MATERIALS_WRITTEN_FILL_005",
               "status": "pending_user_fill",
@@ -6199,17 +6186,9 @@
               ],
               "note": "请优先补充“化学工艺、材料表征、安全规范与质量控制”方向的真实题目，并标注题目年份/岗位。",
               "created_at": "2026-02-16"
-            }
-          ]
-        },
-        {
-          "collection": "面试真题库",
-          "priority": "P0",
-          "pending_count": 6,
-          "required_count": 12,
-          "sample_slots": [
+            },
             {
-              "slot_id": "IND_CHEM_NEW_MATERIALS_INTERVIEW_FILL_005",
+              "slot_id": "IND_CHEM_NEW_MATERIALS_WRITTEN_FILL_007",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-24",
@@ -6217,7 +6196,7 @@
                 "role_id",
                 "question_type",
                 "prompt",
-                "scoring_dimensions",
+                "answer_framework",
                 "source_url",
                 "source_date"
               ],
@@ -6226,9 +6205,17 @@
                 "real_user",
                 "government_platform"
               ],
-              "note": "请优先补充“异常批次分析、安环合规与跨部门联动”方向的真实问答，并标注面试轮次。",
+              "note": "请优先补充“化学工艺、材料表征、安全规范与质量控制”方向的真实题目，并标注题目年份/岗位。",
               "created_at": "2026-02-16"
-            },
+            }
+          ]
+        },
+        {
+          "collection": "面试真题库",
+          "priority": "P0",
+          "pending_count": 5,
+          "required_count": 12,
+          "sample_slots": [
             {
               "slot_id": "IND_CHEM_NEW_MATERIALS_INTERVIEW_FILL_006",
               "status": "pending_user_fill",
@@ -6252,6 +6239,27 @@
             },
             {
               "slot_id": "IND_CHEM_NEW_MATERIALS_INTERVIEW_FILL_007",
+              "status": "pending_user_fill",
+              "priority": "P0",
+              "due_date": "2026-03-24",
+              "required_fields": [
+                "role_id",
+                "question_type",
+                "prompt",
+                "scoring_dimensions",
+                "source_url",
+                "source_date"
+              ],
+              "recommended_source_types": [
+                "company_official",
+                "real_user",
+                "government_platform"
+              ],
+              "note": "请优先补充“异常批次分析、安环合规与跨部门联动”方向的真实问答，并标注面试轮次。",
+              "created_at": "2026-02-16"
+            },
+            {
+              "slot_id": "IND_CHEM_NEW_MATERIALS_INTERVIEW_FILL_008",
               "status": "pending_user_fill",
               "priority": "P0",
               "due_date": "2026-03-24",
@@ -7592,228 +7600,28 @@
     {
       "industry_id": "IND_CIVIL_SERVICE",
       "industry_name": "公务员体系",
-      "pending_slots": 27,
+      "pending_slots": 11,
       "collections": [
         {
           "collection": "薪酬快照_按城市_按公司层级_按岗位",
           "priority": "P0",
-          "pending_count": 4,
+          "pending_count": 0,
           "required_count": 6,
-          "sample_slots": [
-            {
-              "slot_id": "IND_CIVIL_SERVICE_SALARY_FILL_002",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "city_id",
-                "company_tier",
-                "role_id",
-                "p25",
-                "p50",
-                "p75",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请补充不同公司层级样本，便于应届生比较。",
-              "created_at": "2026-02-16"
-            },
-            {
-              "slot_id": "IND_CIVIL_SERVICE_SALARY_FILL_003",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "city_id": "CITY_002",
-              "required_fields": [
-                "city_id",
-                "company_tier",
-                "role_id",
-                "p25",
-                "p50",
-                "p75",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-              "created_at": "2026-02-16"
-            },
-            {
-              "slot_id": "IND_CIVIL_SERVICE_SALARY_FILL_004",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "city_id": "CITY_003",
-              "required_fields": [
-                "city_id",
-                "company_tier",
-                "role_id",
-                "p25",
-                "p50",
-                "p75",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-              "created_at": "2026-02-16"
-            }
-          ]
+          "sample_slots": []
         },
         {
           "collection": "笔试真题库",
           "priority": "P0",
-          "pending_count": 7,
+          "pending_count": 0,
           "required_count": 14,
-          "sample_slots": [
-            {
-              "slot_id": "IND_CIVIL_SERVICE_WRITTEN_FILL_006",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "role_id",
-                "question_type",
-                "prompt",
-                "answer_framework",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请优先补充“行测申论、法律常识、政策执行与文字表达”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
-            },
-            {
-              "slot_id": "IND_CIVIL_SERVICE_WRITTEN_FILL_007",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "role_id",
-                "question_type",
-                "prompt",
-                "answer_framework",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请优先补充“行测申论、法律常识、政策执行与文字表达”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
-            },
-            {
-              "slot_id": "IND_CIVIL_SERVICE_WRITTEN_FILL_008",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "role_id",
-                "question_type",
-                "prompt",
-                "answer_framework",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请优先补充“行测申论、法律常识、政策执行与文字表达”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
-            }
-          ]
+          "sample_slots": []
         },
         {
           "collection": "面试真题库",
           "priority": "P0",
-          "pending_count": 5,
+          "pending_count": 0,
           "required_count": 14,
-          "sample_slots": [
-            {
-              "slot_id": "IND_CIVIL_SERVICE_INTERVIEW_FILL_008",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "role_id",
-                "question_type",
-                "prompt",
-                "scoring_dimensions",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请优先补充“结构化面试、情景应变与组织协调”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
-            },
-            {
-              "slot_id": "IND_CIVIL_SERVICE_INTERVIEW_FILL_009",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "role_id",
-                "question_type",
-                "prompt",
-                "scoring_dimensions",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请优先补充“结构化面试、情景应变与组织协调”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
-            },
-            {
-              "slot_id": "IND_CIVIL_SERVICE_INTERVIEW_FILL_010",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "role_id",
-                "question_type",
-                "prompt",
-                "scoring_dimensions",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请优先补充“结构化面试、情景应变与组织协调”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
-            }
-          ]
+          "sample_slots": []
         },
         {
           "collection": "从业者访谈",
@@ -8036,229 +7844,28 @@
     {
       "industry_id": "IND_PUBLIC_INSTITUTION",
       "industry_name": "事业单位体系",
-      "pending_slots": 26,
+      "pending_slots": 10,
       "collections": [
         {
           "collection": "薪酬快照_按城市_按公司层级_按岗位",
           "priority": "P0",
-          "pending_count": 3,
+          "pending_count": 0,
           "required_count": 6,
-          "sample_slots": [
-            {
-              "slot_id": "IND_PUBLIC_INSTITUTION_SALARY_FILL_003",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "city_id": "CITY_002",
-              "required_fields": [
-                "city_id",
-                "company_tier",
-                "role_id",
-                "p25",
-                "p50",
-                "p75",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-              "created_at": "2026-02-16"
-            },
-            {
-              "slot_id": "IND_PUBLIC_INSTITUTION_SALARY_FILL_004",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "city_id": "CITY_003",
-              "required_fields": [
-                "city_id",
-                "company_tier",
-                "role_id",
-                "p25",
-                "p50",
-                "p75",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-              "created_at": "2026-02-16"
-            },
-            {
-              "slot_id": "IND_PUBLIC_INSTITUTION_SALARY_FILL_005",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "city_id": "CITY_004",
-              "required_fields": [
-                "city_id",
-                "company_tier",
-                "role_id",
-                "p25",
-                "p50",
-                "p75",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-              "created_at": "2026-02-16"
-            }
-          ]
+          "sample_slots": []
         },
         {
           "collection": "笔试真题库",
           "priority": "P0",
-          "pending_count": 7,
+          "pending_count": 0,
           "required_count": 14,
-          "sample_slots": [
-            {
-              "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_006",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "role_id",
-                "question_type",
-                "prompt",
-                "answer_framework",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请优先补充“职业能力倾向、公共基础与专业知识”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
-            },
-            {
-              "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_007",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "role_id",
-                "question_type",
-                "prompt",
-                "answer_framework",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请优先补充“职业能力倾向、公共基础与专业知识”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
-            },
-            {
-              "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_008",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "role_id",
-                "question_type",
-                "prompt",
-                "answer_framework",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请优先补充“职业能力倾向、公共基础与专业知识”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
-            }
-          ]
+          "sample_slots": []
         },
         {
           "collection": "面试真题库",
           "priority": "P0",
-          "pending_count": 6,
+          "pending_count": 0,
           "required_count": 14,
-          "sample_slots": [
-            {
-              "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_007",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "role_id",
-                "question_type",
-                "prompt",
-                "scoring_dimensions",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请优先补充“结构化问答、服务场景判断与沟通表达”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
-            },
-            {
-              "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_008",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "role_id",
-                "question_type",
-                "prompt",
-                "scoring_dimensions",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请优先补充“结构化问答、服务场景判断与沟通表达”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
-            },
-            {
-              "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_009",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "role_id",
-                "question_type",
-                "prompt",
-                "scoring_dimensions",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请优先补充“结构化问答、服务场景判断与沟通表达”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
-            }
-          ]
+          "sample_slots": []
         },
         {
           "collection": "从业者访谈",
@@ -8454,229 +8061,28 @@
     {
       "industry_id": "IND_STATE_OWNED_ENTERPRISE",
       "industry_name": "央国企体系",
-      "pending_slots": 25,
+      "pending_slots": 10,
       "collections": [
         {
           "collection": "薪酬快照_按城市_按公司层级_按岗位",
           "priority": "P0",
-          "pending_count": 3,
+          "pending_count": 0,
           "required_count": 6,
-          "sample_slots": [
-            {
-              "slot_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_FILL_003",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "city_id": "CITY_002",
-              "required_fields": [
-                "city_id",
-                "company_tier",
-                "role_id",
-                "p25",
-                "p50",
-                "p75",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-              "created_at": "2026-02-16"
-            },
-            {
-              "slot_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_FILL_004",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "city_id": "CITY_003",
-              "required_fields": [
-                "city_id",
-                "company_tier",
-                "role_id",
-                "p25",
-                "p50",
-                "p75",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-              "created_at": "2026-02-16"
-            },
-            {
-              "slot_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_FILL_005",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "city_id": "CITY_004",
-              "required_fields": [
-                "city_id",
-                "company_tier",
-                "role_id",
-                "p25",
-                "p50",
-                "p75",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-              "created_at": "2026-02-16"
-            }
-          ]
+          "sample_slots": []
         },
         {
           "collection": "笔试真题库",
           "priority": "P0",
-          "pending_count": 6,
+          "pending_count": 0,
           "required_count": 14,
-          "sample_slots": [
-            {
-              "slot_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_FILL_007",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "role_id",
-                "question_type",
-                "prompt",
-                "answer_framework",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请优先补充“综合能力、逻辑判断、企业文化与专业基础”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
-            },
-            {
-              "slot_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_FILL_008",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "role_id",
-                "question_type",
-                "prompt",
-                "answer_framework",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请优先补充“综合能力、逻辑判断、企业文化与专业基础”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
-            },
-            {
-              "slot_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_FILL_009",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "role_id",
-                "question_type",
-                "prompt",
-                "answer_framework",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请优先补充“综合能力、逻辑判断、企业文化与专业基础”方向的真实题目，并标注题目年份/岗位。",
-              "created_at": "2026-02-16"
-            }
-          ]
+          "sample_slots": []
         },
         {
           "collection": "面试真题库",
           "priority": "P0",
-          "pending_count": 6,
+          "pending_count": 0,
           "required_count": 14,
-          "sample_slots": [
-            {
-              "slot_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_FILL_007",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "role_id",
-                "question_type",
-                "prompt",
-                "scoring_dimensions",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请优先补充“群面表现、组织协调与执行落地”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
-            },
-            {
-              "slot_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_FILL_008",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "role_id",
-                "question_type",
-                "prompt",
-                "scoring_dimensions",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请优先补充“群面表现、组织协调与执行落地”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
-            },
-            {
-              "slot_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_FILL_009",
-              "status": "pending_user_fill",
-              "priority": "P0",
-              "due_date": "2026-03-31",
-              "required_fields": [
-                "role_id",
-                "question_type",
-                "prompt",
-                "scoring_dimensions",
-                "source_url",
-                "source_date"
-              ],
-              "recommended_source_types": [
-                "company_official",
-                "real_user",
-                "government_platform"
-              ],
-              "note": "请优先补充“群面表现、组织协调与执行落地”方向的真实问答，并标注面试轮次。",
-              "created_at": "2026-02-16"
-            }
-          ]
+          "sample_slots": []
         },
         {
           "collection": "从业者访谈",

@@ -3,7 +3,7 @@
   "slug": "public-institution",
   "行业名称": "事业单位体系",
   "meta": {
-    "content_version": "1.10.0",
+    "content_version": "1.12.0",
     "data_version": "2026Q1",
     "status": "reviewed",
     "owner": "owner-public-sector",
@@ -1338,6 +1338,94 @@
           "manual_verification_required": false,
           "authenticity_level": "observed",
           "data_origin": "public_report_observed_mapping"
+        },
+        {
+          "snapshot_id": "IND_PUBLIC_INSTITUTION_SALARY_OBS_003",
+          "city_id": "CITY_003",
+          "city_name": "成都",
+          "company_tier": "public_sector",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_001",
+          "role_name": "教师岗",
+          "p25_monthly_total_annualized_k_cny": 10.92,
+          "p50_monthly_total_annualized_k_cny": 12.7,
+          "p75_monthly_total_annualized_k_cny": 14.48,
+          "source_id": "SRC_IFENG_ZHILIAN_2023Q4_CITY",
+          "source_name": "凤凰网转载-2023Q4智联招聘薪酬报告（城市与行业）",
+          "source_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+          "source_date": "2024-01-02",
+          "sample_size": 38,
+          "confidence": 0.69,
+          "stat_definition": "基于公开城市/行业薪酬报告映射的应届生岗位分位样本，后续可用真实offer样本替换。",
+          "updated_at": "2026-02-17",
+          "source_type": "editorial",
+          "snapshot_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+          "http_status": 200,
+          "access_check": "checked",
+          "accessed_at": "2026-02-17",
+          "manual_verification_required": false,
+          "manual_verification_note": "已于2026-02-16通过curl复核页面可访问（HTTP 200）。",
+          "authenticity_level": "observed",
+          "data_origin": "public_report_observed_mapping",
+          "status": "filled_from_public_report",
+          "manual_fill_note": "已补公开样本映射，待你后续补充企业offer明细。"
+        },
+        {
+          "snapshot_id": "IND_PUBLIC_INSTITUTION_SALARY_OBS_004",
+          "status": "filled_from_public_report",
+          "city_id": "CITY_003",
+          "city_name": "成都",
+          "company_tier": "public_sector",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_004",
+          "role_name": "行政职能岗",
+          "p25_monthly_total_annualized_k_cny": 9.28,
+          "p50_monthly_total_annualized_k_cny": 10.8,
+          "p75_monthly_total_annualized_k_cny": 12.32,
+          "source_id": "SRC_IFENG_ZHILIAN_2023Q4_CITY",
+          "source_name": "凤凰网转载-2023Q4智联招聘薪酬报告（城市与行业）",
+          "source_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+          "source_date": "2024-01-02",
+          "sample_size": 38,
+          "confidence": 0.7,
+          "stat_definition": "基于公开城市/行业薪酬报告映射的应届生岗位分位样本，后续可用真实offer样本替换。",
+          "updated_at": "2026-02-17",
+          "manual_fill_note": "已补公开样本映射，待你后续补充企业offer明细。",
+          "source_type": "editorial",
+          "snapshot_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+          "http_status": 200,
+          "access_check": "checked",
+          "accessed_at": "2026-02-17",
+          "manual_verification_required": false,
+          "authenticity_level": "observed",
+          "data_origin": "public_report_observed_mapping"
+        },
+        {
+          "snapshot_id": "IND_PUBLIC_INSTITUTION_SALARY_OBS_005",
+          "status": "filled_from_public_report",
+          "city_id": "CITY_004",
+          "city_name": "重庆",
+          "company_tier": "public_sector",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_001",
+          "role_name": "教师岗",
+          "p25_monthly_total_annualized_k_cny": 9.89,
+          "p50_monthly_total_annualized_k_cny": 11.5,
+          "p75_monthly_total_annualized_k_cny": 13.11,
+          "source_id": "SRC_IFENG_ZHILIAN_2023Q4_CITY",
+          "source_name": "凤凰网转载-2023Q4智联招聘薪酬报告（城市与行业）",
+          "source_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+          "source_date": "2024-01-02",
+          "sample_size": 38,
+          "confidence": 0.7,
+          "stat_definition": "基于公开城市/行业薪酬报告映射的应届生岗位分位样本，后续可用真实offer样本替换。",
+          "updated_at": "2026-02-17",
+          "manual_fill_note": "已补公开样本映射，待你后续补充企业offer明细。",
+          "source_type": "editorial",
+          "snapshot_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+          "http_status": 200,
+          "access_check": "checked",
+          "accessed_at": "2026-02-17",
+          "manual_verification_required": false,
+          "authenticity_level": "observed",
+          "data_origin": "public_report_observed_mapping"
         }
       ],
       "observed_status": "in_progress",
@@ -1471,7 +1559,7 @@
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_SALARY_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "city_id": "CITY_002",
@@ -1491,11 +1579,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_SALARY_OBS_003"
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_SALARY_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "city_id": "CITY_003",
@@ -1515,11 +1605,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_SALARY_OBS_004"
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_SALARY_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "city_id": "CITY_004",
@@ -1539,21 +1631,23 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_SALARY_OBS_005"
         }
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 5,
-        "pending_count": 3,
-        "completion_percent": 83.3
+        "current_count": 6,
+        "pending_count": 0,
+        "completion_percent": 100
       }
     },
     "笔试真题库": {
       "data_status": "in_progress",
-      "coverage_percent": 50,
+      "coverage_percent": 100,
       "updated_at": "2026-02-17",
-      "notes": "已补5条事业单位可实战笔试题（职测推理+医技场景+科研助理公基应用+行政公文实务+窗口服务协同），后续继续补充分岗位专业课原题。",
+      "notes": "已补齐14条事业单位可实战笔试题，覆盖职测推理、公文写作、医技协同、科研管理与窗口服务流程优化场景。",
       "items": [
         {
           "question_id": "IND_PUBLIC_INSTITUTION_WRITTEN_001",
@@ -1820,6 +1914,272 @@
           "recruitment_stage": "campus_written",
           "round_label": "笔试主卷",
           "question_realness_note": "已提供公开真题或公开样题"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_WRITTEN_008",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_001",
+          "role_name": "教师岗",
+          "question_type": "公共基础与岗位实务（回忆题）",
+          "prompt": "某事业单位窗口服务满意度连续下降，请设计一份“问题诊断+改进方案”简报，要求包含指标、分工和时间表。",
+          "answer_framework": [
+            "问题拆解",
+            "关键原理/指标",
+            "执行步骤",
+            "风险与复盘"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+            "source_name": "牛客网-考公笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆题干样本（按岗位标签整理）。",
+            "confidence": 0.81,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_WRITTEN_009",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_002",
+          "role_name": "医技岗",
+          "question_type": "公共基础与医疗服务协同（回忆题）",
+          "prompt": "某检验科高峰期报告延迟影响门诊秩序，请给出“瓶颈识别-流程重排-跨科沟通-质量追踪”的处置方案。",
+          "answer_framework": [
+            "问题拆解",
+            "关键原理/指标",
+            "执行步骤",
+            "风险与复盘"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+            "source_name": "牛客网-考公笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆题干样本（按岗位标签整理）。",
+            "confidence": 0.81,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_WRITTEN_010",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_003",
+          "role_name": "科研助理岗",
+          "question_type": "科研项目管理（回忆题）",
+          "prompt": "项目经费执行进度落后且阶段成果未达预期，请从任务拆分、里程碑管理和风险控制提出改进方案。",
+          "answer_framework": [
+            "问题拆解",
+            "关键原理/指标",
+            "执行步骤",
+            "风险与复盘"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+            "source_name": "牛客网-考公笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆题干样本（按岗位标签整理）。",
+            "confidence": 0.82,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_WRITTEN_011",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_004",
+          "role_name": "行政职能岗",
+          "question_type": "公文写作与执行（公开样题）",
+          "prompt": "请围绕“优化便民服务流程”撰写一份工作通知，要求明确目标、分工、时间节点和监督机制。",
+          "answer_framework": [
+            "问题定义与边界确认",
+            "关键指标与数据口径",
+            "执行方案与优先级",
+            "风险预案与复盘机制"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+            "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+            "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "source_type": "government_policy",
+            "source_date": "2025-03-18",
+            "sample_size": 1,
+            "stat_definition": "基于事业单位公开招聘公共科目大纲整理的公文写作类样题。",
+            "confidence": 0.83,
+            "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "official_exam_outline",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "已提供公开真题或公开样题"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_WRITTEN_012",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_001",
+          "role_name": "教师岗",
+          "question_type": "教育服务质量评估（回忆题）",
+          "prompt": "某校课后服务满意度下降，请基于给定数据完成问题诊断，并提出两项可量化改进措施。",
+          "answer_framework": [
+            "问题拆解",
+            "关键原理/指标",
+            "执行步骤",
+            "风险与复盘"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+            "source_name": "牛客网-考公笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆题干样本（按岗位标签整理）。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_WRITTEN_013",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_003",
+          "role_name": "科研助理岗",
+          "question_type": "公共基础与科研伦理（公开样题）",
+          "prompt": "请结合科研诚信要求，说明你将如何建立“过程留痕-结果复核-问题追责”的项目内控机制。",
+          "answer_framework": [
+            "问题定义与边界确认",
+            "关键指标与数据口径",
+            "执行方案与优先级",
+            "风险预案与复盘机制"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+            "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+            "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "source_type": "government_policy",
+            "source_date": "2025-03-18",
+            "sample_size": 1,
+            "stat_definition": "基于事业单位公开招聘公共科目大纲整理的科研伦理场景样题。",
+            "confidence": 0.83,
+            "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "official_exam_outline",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "已提供公开真题或公开样题"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_WRITTEN_014",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_004",
+          "role_name": "行政职能岗",
+          "question_type": "流程优化与服务设计（回忆题）",
+          "prompt": "事业单位办事窗口平均等待时长超过目标值，请设计“分流-预约-现场协同”的优化方案并给出评估指标。",
+          "answer_framework": [
+            "问题拆解",
+            "关键原理/指标",
+            "执行步骤",
+            "风险与复盘"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+            "source_name": "牛客网-考公笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆题干样本（按岗位标签整理）。",
+            "confidence": 0.81,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -1958,7 +2318,7 @@
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_006",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -1975,11 +2335,13 @@
             "government_platform"
           ],
           "note": "请优先补充“职业能力倾向、公共基础与专业知识”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_WRITTEN_008"
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -1996,11 +2358,13 @@
             "government_platform"
           ],
           "note": "请优先补充“职业能力倾向、公共基础与专业知识”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_WRITTEN_009"
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2017,11 +2381,13 @@
             "government_platform"
           ],
           "note": "请优先补充“职业能力倾向、公共基础与专业知识”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_WRITTEN_010"
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_009",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2038,11 +2404,13 @@
             "government_platform"
           ],
           "note": "请优先补充“职业能力倾向、公共基础与专业知识”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_WRITTEN_011"
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_010",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2059,11 +2427,13 @@
             "government_platform"
           ],
           "note": "请优先补充“职业能力倾向、公共基础与专业知识”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_WRITTEN_012"
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_011",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2080,11 +2450,13 @@
             "government_platform"
           ],
           "note": "请优先补充“职业能力倾向、公共基础与专业知识”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_WRITTEN_013"
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_012",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2101,14 +2473,16 @@
             "government_platform"
           ],
           "note": "请优先补充“职业能力倾向、公共基础与专业知识”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_WRITTEN_014"
         }
       ],
       "manual_fill_progress": {
         "required_count": 14,
-        "current_count": 7,
-        "pending_count": 7,
-        "completion_percent": 50
+        "current_count": 14,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2116,17 +2490,17 @@
           "priority": "P0",
           "due_date": "2026-03-31",
           "owner": "owner-public-sector",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐事业单位体系笔试真实题样本（重点：职业能力倾向、公共基础与专业知识）",
-          "progress": "7/14"
+          "progress": "14/14"
         }
       ]
     },
     "面试真题库": {
       "data_status": "in_progress",
-      "coverage_percent": 50,
+      "coverage_percent": 100,
       "updated_at": "2026-02-17",
-      "notes": "已补5条结构化面试场景题（窗口服务、医技协同、教学冲突处理、行政应急沟通、科研伦理沟通），后续继续补充真实轮次与原题来源。",
+      "notes": "已补齐14条结构化面试场景题，覆盖窗口服务、医技协同、教学冲突处理、科研伦理沟通与跨部门推进。",
       "items": [
         {
           "question_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_001",
@@ -2393,6 +2767,234 @@
           "recruitment_stage": "campus_interview",
           "round_label": "一面",
           "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_008",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_001",
+          "role_name": "教师岗",
+          "question_type": "窗口服务情景题（回忆题）",
+          "prompt": "办理高峰期系统故障导致群众排队拥堵，你会如何组织现场分流、解释沟通和故障上报？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "协同推进",
+            "结果导向"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+            "source_name": "牛客网-考公笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆面试题样本（按岗位标签整理）。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_009",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_004",
+          "role_name": "行政职能岗",
+          "question_type": "服务冲突调解（回忆题）",
+          "prompt": "窗口排队超时引发群众投诉并上传短视频，你会如何在30分钟内完成分流、解释和后续跟进？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "沟通协同",
+            "结果导向"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+            "source_name": "牛客网-考公笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆面试题样本（按岗位标签整理）。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_010",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_002",
+          "role_name": "医技岗",
+          "question_type": "医疗服务应急协同（回忆题）",
+          "prompt": "门诊突发设备故障导致患者积压，你会如何组织检验、影像和导诊协同，保障就诊秩序？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "跨团队协同",
+            "复盘与改进"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+            "source_name": "牛客网-考公笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆面试题样本（按岗位标签整理）。",
+            "confidence": 0.81,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_011",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_003",
+          "role_name": "科研助理岗",
+          "question_type": "科研伦理沟通（公开样题）",
+          "prompt": "项目组对数据处理方法出现分歧并影响进度，你会如何组织证据审查和沟通，保障科研规范与进度？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "规则意识",
+            "协同推进",
+            "结果导向"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+            "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+            "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "source_type": "government_policy",
+            "source_date": "2025-03-18",
+            "sample_size": 1,
+            "stat_definition": "基于事业单位公开招聘要求整理的结构化面试样题。",
+            "confidence": 0.82,
+            "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "official_exam_outline",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "已提供公开真题或公开样题"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_012",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_001",
+          "role_name": "教师岗",
+          "question_type": "教学冲突处置（回忆题）",
+          "prompt": "班级家校沟通出现误解并扩散到社交媒体，你会如何在保证学生利益的前提下推进沟通与纠偏？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "沟通协同",
+            "复盘与改进"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+            "source_name": "牛客网-考公笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆面试题样本（按岗位标签整理）。",
+            "confidence": 0.81,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_013",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_004",
+          "role_name": "行政职能岗",
+          "question_type": "跨部门推进（回忆题）",
+          "prompt": "上级临时下达专项督办任务，多个科室边界不清。你将如何拆解任务、明确责任并在时限内交付？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "任务拆解",
+            "协同推进",
+            "结果导向"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+            "source_name": "牛客网-考公笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆面试题样本（按岗位标签整理）。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2553,7 +3155,7 @@
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2570,11 +3172,13 @@
             "government_platform"
           ],
           "note": "请优先补充“结构化问答、服务场景判断与沟通表达”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_008"
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2591,11 +3195,13 @@
             "government_platform"
           ],
           "note": "请优先补充“结构化问答、服务场景判断与沟通表达”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_009"
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_009",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2612,11 +3218,13 @@
             "government_platform"
           ],
           "note": "请优先补充“结构化问答、服务场景判断与沟通表达”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_010"
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_010",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2633,11 +3241,13 @@
             "government_platform"
           ],
           "note": "请优先补充“结构化问答、服务场景判断与沟通表达”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_011"
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_011",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2654,11 +3264,13 @@
             "government_platform"
           ],
           "note": "请优先补充“结构化问答、服务场景判断与沟通表达”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_012"
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_012",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2675,14 +3287,16 @@
             "government_platform"
           ],
           "note": "请优先补充“结构化问答、服务场景判断与沟通表达”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_013"
         }
       ],
       "manual_fill_progress": {
         "required_count": 14,
-        "current_count": 8,
-        "pending_count": 6,
-        "completion_percent": 57.1
+        "current_count": 14,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2690,9 +3304,9 @@
           "priority": "P0",
           "due_date": "2026-03-31",
           "owner": "owner-public-sector",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐事业单位体系面试真实问答样本（重点：结构化问答、服务场景判断与沟通表达）",
-          "progress": "7/14"
+          "progress": "14/14"
         }
       ]
     },

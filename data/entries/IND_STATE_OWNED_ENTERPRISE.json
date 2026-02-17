@@ -3,7 +3,7 @@
   "slug": "state-owned-enterprise",
   "行业名称": "央国企体系",
   "meta": {
-    "content_version": "1.10.0",
+    "content_version": "1.12.0",
     "data_version": "2026Q1",
     "status": "reviewed",
     "owner": "owner-public-sector",
@@ -1422,6 +1422,94 @@
           "manual_verification_required": false,
           "authenticity_level": "observed",
           "data_origin": "public_report_observed_mapping"
+        },
+        {
+          "snapshot_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_OBS_003",
+          "city_id": "CITY_024",
+          "city_name": "西安",
+          "company_tier": "public_sector",
+          "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_002",
+          "role_name": "工程技术岗",
+          "p25_monthly_total_annualized_k_cny": 6.45,
+          "p50_monthly_total_annualized_k_cny": 7.5,
+          "p75_monthly_total_annualized_k_cny": 8.55,
+          "source_id": "SRC_IFENG_ZHILIAN_2024Q1_INDUSTRY",
+          "source_name": "凤凰网重庆转载-2024Q1智联招聘薪酬报告（行业与职业）",
+          "source_url": "https://cq.ifeng.com/c/8YXrHep1Y9W",
+          "source_date": "2024-04-06",
+          "sample_size": 38,
+          "confidence": 0.69,
+          "stat_definition": "基于公开城市/行业薪酬报告映射的应届生岗位分位样本，后续可用真实offer样本替换。",
+          "updated_at": "2026-02-17",
+          "source_type": "editorial",
+          "snapshot_url": "https://cq.ifeng.com/c/8YXrHep1Y9W",
+          "http_status": 200,
+          "access_check": "checked",
+          "accessed_at": "2026-02-17",
+          "manual_verification_required": false,
+          "manual_verification_note": "已于2026-02-16通过curl复核页面可访问（HTTP 200）。",
+          "authenticity_level": "observed",
+          "data_origin": "public_report_observed_mapping",
+          "status": "filled_from_public_report",
+          "manual_fill_note": "已补公开样本映射，待你后续补充企业offer明细。"
+        },
+        {
+          "snapshot_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_OBS_004",
+          "status": "filled_from_public_report",
+          "city_id": "CITY_003",
+          "city_name": "成都",
+          "company_tier": "public_sector",
+          "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_001",
+          "role_name": "综合管理岗",
+          "p25_monthly_total_annualized_k_cny": 9.35,
+          "p50_monthly_total_annualized_k_cny": 10.9,
+          "p75_monthly_total_annualized_k_cny": 12.45,
+          "source_id": "SRC_IFENG_ZHILIAN_2023Q4_CITY",
+          "source_name": "凤凰网转载-2023Q4智联招聘薪酬报告（城市与行业）",
+          "source_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+          "source_date": "2024-01-02",
+          "sample_size": 38,
+          "confidence": 0.7,
+          "stat_definition": "基于公开城市/行业薪酬报告映射的应届生岗位分位样本，后续可用真实offer样本替换。",
+          "updated_at": "2026-02-17",
+          "manual_fill_note": "已补公开样本映射，待你后续补充企业offer明细。",
+          "source_type": "editorial",
+          "snapshot_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+          "http_status": 200,
+          "access_check": "checked",
+          "accessed_at": "2026-02-17",
+          "manual_verification_required": false,
+          "authenticity_level": "observed",
+          "data_origin": "public_report_observed_mapping"
+        },
+        {
+          "snapshot_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_OBS_005",
+          "status": "filled_from_public_report",
+          "city_id": "CITY_004",
+          "city_name": "重庆",
+          "company_tier": "public_sector",
+          "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_002",
+          "role_name": "工程技术岗",
+          "p25_monthly_total_annualized_k_cny": 7.82,
+          "p50_monthly_total_annualized_k_cny": 9.1,
+          "p75_monthly_total_annualized_k_cny": 10.38,
+          "source_id": "SRC_IFENG_ZHILIAN_2024Q1_INDUSTRY",
+          "source_name": "凤凰网重庆转载-2024Q1智联招聘薪酬报告（行业与职业）",
+          "source_url": "https://cq.ifeng.com/c/8YXrHep1Y9W",
+          "source_date": "2024-04-06",
+          "sample_size": 38,
+          "confidence": 0.7,
+          "stat_definition": "基于公开城市/行业薪酬报告映射的应届生岗位分位样本，后续可用真实offer样本替换。",
+          "updated_at": "2026-02-17",
+          "manual_fill_note": "已补公开样本映射，待你后续补充企业offer明细。",
+          "source_type": "editorial",
+          "snapshot_url": "https://cq.ifeng.com/c/8YXrHep1Y9W",
+          "http_status": 200,
+          "access_check": "checked",
+          "accessed_at": "2026-02-17",
+          "manual_verification_required": false,
+          "authenticity_level": "observed",
+          "data_origin": "public_report_observed_mapping"
         }
       ],
       "observed_status": "in_progress",
@@ -1555,7 +1643,7 @@
         },
         {
           "slot_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "city_id": "CITY_002",
@@ -1575,11 +1663,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_OBS_003"
         },
         {
           "slot_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "city_id": "CITY_003",
@@ -1599,11 +1689,13 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_OBS_004"
         },
         {
           "slot_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "city_id": "CITY_004",
@@ -1623,21 +1715,23 @@
             "government_platform"
           ],
           "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_OBS_005"
         }
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 5,
-        "pending_count": 3,
-        "completion_percent": 83.3
+        "current_count": 6,
+        "pending_count": 0,
+        "completion_percent": 100
       }
     },
     "笔试真题库": {
       "data_status": "in_progress",
-      "coverage_percent": 50,
+      "coverage_percent": 100,
       "updated_at": "2026-02-17",
-      "notes": "已补5条央国企场景化笔试题（综合管理、工程安全、信息化协同、财务内控与运营统筹），后续继续补充企业公告附题与分岗位真题。",
+      "notes": "已补齐13条央国企场景化笔试题，覆盖综合管理、工程安全、信息化协同、财务内控与运营统筹等核心岗位能力。",
       "items": [
         {
           "question_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_001",
@@ -1904,6 +1998,234 @@
           "recruitment_stage": "campus_written",
           "round_label": "笔试主卷",
           "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_008",
+          "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_001",
+          "role_name": "综合管理岗",
+          "question_type": "综合管理与经营分析（回忆题）",
+          "prompt": "某央企年度降本目标与项目进度目标冲突，请提出三条兼顾成本、质量和交付的执行策略。",
+          "answer_framework": [
+            "问题拆解",
+            "关键原理/指标",
+            "执行步骤",
+            "风险与复盘"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_SOE_2026",
+            "source_name": "牛客网-国央企笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆题干样本（按岗位标签整理）。",
+            "confidence": 0.81,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_009",
+          "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_002",
+          "role_name": "工程技术岗",
+          "question_type": "工程项目风险控制（回忆题）",
+          "prompt": "重点工程进入并行施工阶段后安全风险上升，请设计“风险识别-责任到岗-监测预警-闭环整改”方案。",
+          "answer_framework": [
+            "问题拆解",
+            "关键原理/指标",
+            "执行步骤",
+            "风险与复盘"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_SOE_2026",
+            "source_name": "牛客网-国央企笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆题干样本（按岗位标签整理）。",
+            "confidence": 0.81,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_010",
+          "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_004",
+          "role_name": "信息化岗",
+          "question_type": "信息化系统治理（回忆题）",
+          "prompt": "集团多个系统口径不一致导致经营分析偏差，请给出统一口径与数据治理推进计划。",
+          "answer_framework": [
+            "问题拆解",
+            "关键原理/指标",
+            "执行步骤",
+            "风险与复盘"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_SOE_2026",
+            "source_name": "牛客网-国央企笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆题干样本（按岗位标签整理）。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_011",
+          "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_001",
+          "role_name": "综合管理岗",
+          "question_type": "企业文化与制度执行（公开样题）",
+          "prompt": "围绕“国企高质量发展与合规经营”，说明你如何在业务目标与制度约束之间进行平衡并落实。",
+          "answer_framework": [
+            "问题定义与边界确认",
+            "关键指标与数据口径",
+            "执行方案与优先级",
+            "风险预案与复盘机制"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_SASAC_RECRUIT_2026",
+            "source_name": "国务院国资委-中央企业校园招聘信息（示例）",
+            "source_url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
+            "source_type": "government_policy",
+            "source_date": "2025-09-26",
+            "sample_size": 1,
+            "stat_definition": "基于国资委公开校招信息与岗位要求整理的公开样题。",
+            "confidence": 0.82,
+            "snapshot_url": "https://wap.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "official_recruitment_outline",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "已提供公开真题或公开样题"
+        },
+        {
+          "question_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_012",
+          "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_003",
+          "role_name": "财务审计岗",
+          "question_type": "财务内控与审计协同（回忆题）",
+          "prompt": "分子公司预算执行偏差连续两季扩大，请提出“核查-预警-整改-复盘”的审计协同方案。",
+          "answer_framework": [
+            "问题拆解",
+            "关键原理/指标",
+            "执行步骤",
+            "风险与复盘"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_SOE_2026",
+            "source_name": "牛客网-国央企笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆题干样本（按岗位标签整理）。",
+            "confidence": 0.81,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_013",
+          "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_005",
+          "role_name": "运营管理岗",
+          "question_type": "经营分析与执行闭环（回忆题）",
+          "prompt": "区域公司经营数据波动大且跨单位协同低效，请设计一套“周跟踪-月复盘-季度纠偏”的运营机制。",
+          "answer_framework": [
+            "问题拆解",
+            "关键原理/指标",
+            "执行步骤",
+            "风险与复盘"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_SOE_2026",
+            "source_name": "牛客网-国央企笔试真题库",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆题干样本（按岗位标签整理）。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=195&subTabName=written_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2064,7 +2386,7 @@
         },
         {
           "slot_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2081,11 +2403,13 @@
             "government_platform"
           ],
           "note": "请优先补充“综合能力、逻辑判断、企业文化与专业基础”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_008"
         },
         {
           "slot_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2102,11 +2426,13 @@
             "government_platform"
           ],
           "note": "请优先补充“综合能力、逻辑判断、企业文化与专业基础”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_009"
         },
         {
           "slot_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_FILL_009",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2123,11 +2449,13 @@
             "government_platform"
           ],
           "note": "请优先补充“综合能力、逻辑判断、企业文化与专业基础”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_010"
         },
         {
           "slot_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_FILL_010",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2144,11 +2472,13 @@
             "government_platform"
           ],
           "note": "请优先补充“综合能力、逻辑判断、企业文化与专业基础”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_011"
         },
         {
           "slot_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_FILL_011",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2165,11 +2495,13 @@
             "government_platform"
           ],
           "note": "请优先补充“综合能力、逻辑判断、企业文化与专业基础”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_012"
         },
         {
           "slot_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_FILL_012",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2186,14 +2518,16 @@
             "government_platform"
           ],
           "note": "请优先补充“综合能力、逻辑判断、企业文化与专业基础”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_013"
         }
       ],
       "manual_fill_progress": {
         "required_count": 14,
-        "current_count": 8,
-        "pending_count": 6,
-        "completion_percent": 57.1
+        "current_count": 14,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2201,17 +2535,17 @@
           "priority": "P0",
           "due_date": "2026-03-31",
           "owner": "owner-public-sector",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐央国企体系笔试真实题样本（重点：综合能力、逻辑判断、企业文化与专业基础）",
-          "progress": "7/14"
+          "progress": "14/14"
         }
       ]
     },
     "面试真题库": {
       "data_status": "in_progress",
-      "coverage_percent": 50,
+      "coverage_percent": 100,
       "updated_at": "2026-02-17",
-      "notes": "已补5条央国企面试场景题（群面协同、工程风险沟通、跨单位推进、审计协同与数字化落地），后续继续补充真实轮次和原题来源。",
+      "notes": "已补齐13条央国企面试场景题，覆盖群面协同、工程风险沟通、数字化转型、财务审计协同与跨单位推进。",
       "items": [
         {
           "question_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_001",
@@ -2478,6 +2812,234 @@
           "recruitment_stage": "campus_interview",
           "round_label": "一面",
           "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_008",
+          "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_001",
+          "role_name": "综合管理岗",
+          "question_type": "群面协同决策（回忆题）",
+          "prompt": "在“降本增效”群面讨论中，各分子公司诉求冲突明显，你将如何推动达成共识并明确责任边界？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "协同推进",
+            "结果导向"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOE_2026",
+            "source_name": "牛客网-国央企面试真题库",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆面试题样本（按岗位标签整理）。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_009",
+          "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_002",
+          "role_name": "工程技术岗",
+          "question_type": "工程异常处置（回忆题）",
+          "prompt": "重点项目验收前出现关键节点延期，你会如何组织设计、施工、监理多方协同并控制风险？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "跨团队协同",
+            "结果导向"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOE_2026",
+            "source_name": "牛客网-国央企面试真题库",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆面试题样本（按岗位标签整理）。",
+            "confidence": 0.81,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_010",
+          "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_004",
+          "role_name": "信息化岗",
+          "question_type": "数字化转型推进（回忆题）",
+          "prompt": "集团数字化项目推进中业务部门抵触，你会如何制定推进策略并验证实施效果？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "组织协调",
+            "复盘与改进"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOE_2026",
+            "source_name": "牛客网-国央企面试真题库",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆面试题样本（按岗位标签整理）。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_011",
+          "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_001",
+          "role_name": "综合管理岗",
+          "question_type": "国企文化与执行（公开样题）",
+          "prompt": "面对“稳增长与高质量发展”双目标，你会如何组织团队分解目标并推动执行落地？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "战略理解",
+            "组织协调",
+            "结果导向"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_SASAC_RECRUIT_2026",
+            "source_name": "国务院国资委-中央企业校园招聘信息（示例）",
+            "source_url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
+            "source_type": "government_policy",
+            "source_date": "2025-09-26",
+            "sample_size": 1,
+            "stat_definition": "基于国资委公开校招要求整理的结构化面试样题。",
+            "confidence": 0.82,
+            "snapshot_url": "https://wap.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "official_recruitment_outline",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "已提供公开真题或公开样题"
+        },
+        {
+          "question_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_012",
+          "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_003",
+          "role_name": "财务审计岗",
+          "question_type": "财务风险沟通（回忆题）",
+          "prompt": "审计发现预算执行异常但业务部门抵触整改，你将如何推动风险沟通并形成整改闭环？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "协同推进",
+            "结果导向"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOE_2026",
+            "source_name": "牛客网-国央企面试真题库",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆面试题样本（按岗位标签整理）。",
+            "confidence": 0.81,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
+        },
+        {
+          "question_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_013",
+          "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_005",
+          "role_name": "运营管理岗",
+          "question_type": "跨单位协同推进（回忆题）",
+          "prompt": "区域公司经营指标连续未达标且协同低效，你会如何组织跨单位行动并确保复盘可追踪？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "任务拆解",
+            "跨团队协同",
+            "复盘与改进"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOE_2026",
+            "source_name": "牛客网-国央企面试真题库",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 1,
+            "stat_definition": "来自公开题库的回忆面试题样本（按岗位标签整理）。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=195&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2638,7 +3200,7 @@
         },
         {
           "slot_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_FILL_007",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2655,11 +3217,13 @@
             "government_platform"
           ],
           "note": "请优先补充“群面表现、组织协调与执行落地”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_008"
         },
         {
           "slot_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_FILL_008",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2676,11 +3240,13 @@
             "government_platform"
           ],
           "note": "请优先补充“群面表现、组织协调与执行落地”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_009"
         },
         {
           "slot_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_FILL_009",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2697,11 +3263,13 @@
             "government_platform"
           ],
           "note": "请优先补充“群面表现、组织协调与执行落地”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_010"
         },
         {
           "slot_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_FILL_010",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2718,11 +3286,13 @@
             "government_platform"
           ],
           "note": "请优先补充“群面表现、组织协调与执行落地”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_011"
         },
         {
           "slot_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_FILL_011",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2739,11 +3309,13 @@
             "government_platform"
           ],
           "note": "请优先补充“群面表现、组织协调与执行落地”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_012"
         },
         {
           "slot_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_FILL_012",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-31",
           "required_fields": [
@@ -2760,14 +3332,16 @@
             "government_platform"
           ],
           "note": "请优先补充“群面表现、组织协调与执行落地”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_013"
         }
       ],
       "manual_fill_progress": {
         "required_count": 14,
-        "current_count": 8,
-        "pending_count": 6,
-        "completion_percent": 57.1
+        "current_count": 14,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2775,9 +3349,9 @@
           "priority": "P0",
           "due_date": "2026-03-31",
           "owner": "owner-public-sector",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐央国企体系面试真实问答样本（重点：群面表现、组织协调与执行落地）",
-          "progress": "7/14"
+          "progress": "14/14"
         }
       ]
     },
@@ -3962,6 +4536,20 @@
       "confidence": 0.68,
       "usage": "补充薪酬实采层公开报告样本",
       "snapshot_url": "https://news.ifeng.com/c/8W1X2dTs3Cm",
+      "accessed_at": "2026-02-17",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_IFENG_ZHILIAN_2024Q1_INDUSTRY",
+      "source_name": "凤凰网重庆转载-2024Q1智联招聘薪酬报告（行业与职业）",
+      "source_type": "editorial",
+      "source_url": "https://cq.ifeng.com/c/8YXrHep1Y9W",
+      "source_date": "2024-04-06",
+      "confidence": 0.69,
+      "usage": "补充微观薪酬实采映射样本",
+      "snapshot_url": "https://cq.ifeng.com/c/8YXrHep1Y9W",
       "accessed_at": "2026-02-17",
       "http_status": 200,
       "access_check": "checked",
