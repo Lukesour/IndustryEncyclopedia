@@ -1,0 +1,3529 @@
+{
+  "industry_id": "IND_EDU_VOCATIONAL",
+  "slug": "education-vocational",
+  "行业名称": "教育与职教",
+  "meta": {
+    "content_version": "1.9.0",
+    "data_version": "2026Q1",
+    "status": "reviewed",
+    "owner": "owner-education",
+    "reviewer": "review-board-education",
+    "last_updated": "2026-02-17",
+    "next_review_at": "2026-06-30",
+    "data_cycle": "quarterly",
+    "state_history": [
+      {
+        "date": "2026-02-16",
+        "from": "reviewed",
+        "to": "published",
+        "reason": "v1.5.0二次增强后按质量阈值重判状态。",
+        "changed_at": "2026-02-16T13:30:00+08:00",
+        "changed_by": "system_upgrade_v1_5",
+        "trigger": "scripts/upgrade_v1_5_full.js"
+      },
+      {
+        "date": "2026-02-16",
+        "from": "published",
+        "to": "reviewed",
+        "reason": "启用发布硬门槛：published状态要求P0待补槽位清零。"
+      }
+    ],
+    "data_freshness": {
+      "last_full_refresh_at": "2026-02-16",
+      "stale_after_days": 90,
+      "stale_on": "2026-05-17",
+      "freshness_status": "fresh"
+    },
+    "status_reason": "结构完整，可用于求职决策；题库与薪酬实采样本持续补录中。"
+  },
+  "static": {
+    "基础认知": {
+      "定义": "围绕课程研发、教学交付、职业培训和企业学习服务构成的人才发展行业。",
+      "边界": {
+        "包含": [
+          "职业教育",
+          "成人教育",
+          "企业培训",
+          "教育科技产品"
+        ],
+        "不包含": [
+          "不合规培训活动"
+        ]
+      },
+      "核心赛道": [
+        "课程研发",
+        "学习产品",
+        "学习运营",
+        "企业内训",
+        "技能认证服务"
+      ],
+      "产业链": {
+        "上游": [
+          "教研内容",
+          "师资体系",
+          "教育技术平台"
+        ],
+        "中游": [
+          "教育机构",
+          "职教平台",
+          "企业培训服务商"
+        ],
+        "下游": [
+          "学生与求职者",
+          "企业客户",
+          "公共培训项目"
+        ]
+      },
+      "商业模式": [
+        "课程收费",
+        "企业培训服务费",
+        "证书培训收入",
+        "产品订阅"
+      ],
+      "核心指标": [
+        "转化率",
+        "完课率",
+        "续报率",
+        "就业率（职教）",
+        "客诉率"
+      ],
+      "政策与监管关注": [
+        "教育与职教政策",
+        "培训广告合规",
+        "消费者权益",
+        "资质要求"
+      ],
+      "景气驱动因素": [
+        "职业技能升级需求",
+        "终身学习趋势",
+        "企业培训数字化"
+      ],
+      "主要风险": [
+        "政策变化",
+        "获客成本高",
+        "交付质量波动",
+        "就业结果不稳定"
+      ]
+    },
+    "就业画像": {
+      "应届生主流岗位": [
+        "教研",
+        "课程运营",
+        "学习产品经理",
+        "学习顾问",
+        "企业培训顾问",
+        "数据运营"
+      ],
+      "能力模型": {
+        "专业能力": [
+          "课程设计",
+          "学习路径设计",
+          "用户运营",
+          "数据分析"
+        ],
+        "通用能力": [
+          "表达力",
+          "同理心",
+          "执行力",
+          "协作能力"
+        ],
+        "加分项": [
+          "助教/教研实习",
+          "教学作品",
+          "内容创作能力"
+        ]
+      },
+      "准入门槛": {
+        "学历偏好": "本科及以上",
+        "专业限制": "专业相对开放，教研岗看学科背景",
+        "转专业友好度_1to5": 4,
+        "证书要求": "教师资格证在部分岗位重要",
+        "英语要求": "按学科岗位差异化",
+        "无实习可投比例估计": "0.3-0.5",
+        "实习要求": "建议至少1段相关实习或项目证明",
+        "无实习可投比例估计_min": 0.3,
+        "无实习可投比例估计_max": 0.5,
+        "无实习可投比例估计_单位": "比例(0-1)",
+        "准入筛选规则": {
+          "是否卡专业": true,
+          "是否卡学历": true,
+          "是否看证书": true,
+          "是否看实习时长": true,
+          "规则说明": "该字段为规则化抽取结果，建议后续按企业与岗位颗粒度继续细分。"
+        }
+      },
+      "工作方式与强度": {
+        "加班强度_1to5": 3,
+        "出差或驻场强度_1to5": 2,
+        "轮班要求": "教学服务岗位可能按课表排班",
+        "绩效压力_1to5": 3,
+        "淘汰风险_1to5": 3
+      },
+      "岗位-能力-项目证据映射模板": {
+        "status": "partial_ready",
+        "required_evidence_items_per_role": 3,
+        "slot_template": [
+          "项目背景",
+          "个人动作",
+          "可量化结果",
+          "外部证明链接"
+        ],
+        "manual_fill_note": "请为每个主流岗位至少补充2条真实项目证据样本。",
+        "updated_at": "2026-02-16"
+      }
+    },
+    "招聘与成长": {
+      "校招流程": {
+        "peak_period_text": [
+          "9-11月",
+          "2-4月"
+        ],
+        "peak_months": [
+          2,
+          3,
+          4,
+          9,
+          10,
+          11
+        ],
+        "process_steps": [
+          "笔试（部分）",
+          "试讲/案例面",
+          "业务面",
+          "HR面"
+        ],
+        "selection_preferences": [
+          "表达能力",
+          "教学与运营结合能力",
+          "结果导向",
+          "合规意识"
+        ]
+      },
+      "城市格局": {
+        "核心城市": [
+          "北京",
+          "上海",
+          "广州",
+          "深圳",
+          "杭州"
+        ],
+        "机会增长城市": [
+          "成都",
+          "武汉",
+          "西安",
+          "南京",
+          "郑州"
+        ],
+        "选城建议": [
+          "优先总部与教研中心，B端岗位关注产业客户密度"
+        ],
+        "核心城市_ids": [
+          "CITY_001",
+          "CITY_018",
+          "CITY_007",
+          "CITY_019",
+          "CITY_009"
+        ],
+        "机会增长城市_ids": [
+          "CITY_003",
+          "CITY_023",
+          "CITY_024",
+          "CITY_012",
+          "CITY_030"
+        ]
+      },
+      "薪酬结构说明": {
+        "常见构成": [
+          "固定薪资",
+          "绩效",
+          "转化激励（部分）",
+          "补贴"
+        ],
+        "影响因素": [
+          "教研/产品/顾问条线差异",
+          "交付与转化压力"
+        ]
+      },
+      "职业路径": {
+        "0-3年": [
+          "教研/运营/顾问岗位",
+          "形成课程与用户理解"
+        ],
+        "3-5年": [
+          "课程负责人/运营经理",
+          "负责产品线或业务目标"
+        ],
+        "5年以上": [
+          "教育产品总监",
+          "教学与交付管理者",
+          "企业学习解决方案负责人"
+        ]
+      },
+      "备战计划": [
+        {
+          "days_from_start": 30,
+          "focus": [
+            "建立教育业务框架",
+            "准备试讲或案例材料"
+          ]
+        },
+        {
+          "days_from_start": 60,
+          "focus": [
+            "强化课程设计与运营复盘",
+            "训练场景题表达"
+          ]
+        },
+        {
+          "days_from_start": 90,
+          "focus": [
+            "定向投递并复盘",
+            "确定更匹配岗位路径"
+          ]
+        }
+      ],
+      "常见误区": [
+        "只看销售转化",
+        "忽视交付质量",
+        "忽视政策边界",
+        "缺乏长期产品思维"
+      ]
+    },
+    "决策输出": {
+      "推荐人群": [
+        "表达与同理心较强",
+        "愿意在教学与运营双线成长"
+      ],
+      "不推荐人群": [
+        "对教学交付节奏缺乏耐受"
+      ],
+      "替代行业": [
+        "咨询与专业服务",
+        "传媒游戏与内容"
+      ],
+      "转岗路径": [
+        "教研->课程产品",
+        "学习顾问->运营管理"
+      ]
+    },
+    "横向比较评分": {
+      "薪资潜力_1to5": 3,
+      "上岸难度_1to5": 3,
+      "工作强度_1to5": 3,
+      "稳定性_1to5": 3,
+      "成长性_1to5": 3,
+      "评分口径": "编委会结合公开岗位与行业周期给出的2026Q1基准分",
+      "置信度": 0.57
+    },
+    "参考方向标签": [
+      "教育与人社公开政策",
+      "机构校招官网",
+      "课程设计公开资源",
+      "行业研究报告"
+    ]
+  },
+  "dynamic": {
+    "公司清单": {
+      "data_status": "verified",
+      "coverage_percent": 100,
+      "updated_at": "2026-02-16",
+      "notes": "已扩充到5家代表组织，建议持续扩展至20+并接入自动更新。",
+      "items": [
+        {
+          "company_id": "COMP_NEW_ORIENTAL",
+          "company_name": "新东方",
+          "company_tier": "t2_strong",
+          "city_focus": [
+            "北京",
+            "上海",
+            "广州",
+            "深圳",
+            "杭州"
+          ],
+          "city_ids": [
+            "CITY_001",
+            "CITY_018",
+            "CITY_007",
+            "CITY_019",
+            "CITY_009"
+          ],
+          "business_focus": [
+            "教育服务",
+            "职业与语言培训"
+          ],
+          "campus_hiring_signal": "存在官方招聘或公开岗位入口，建议按季度抓取岗位变更。",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164",
+            "source_name": "新东方官网/招聘页",
+            "source_url": "https://www.neworiental.org",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于官网公开岗位与校招信息入口可访问性判定",
+            "confidence": 0.78,
+            "snapshot_url": "https://www.neworiental.org",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "priority_rank": 1,
+          "authenticity_level": "official",
+          "data_origin": "structured_collection",
+          "company_uid": "COMP_UID_9F2ADB99"
+        },
+        {
+          "company_id": "COMP_中公教育",
+          "company_name": "中公教育",
+          "company_tier": "t2_strong",
+          "city_focus": [
+            "北京",
+            "上海",
+            "广州",
+            "深圳",
+            "杭州"
+          ],
+          "city_ids": [
+            "CITY_001",
+            "CITY_018",
+            "CITY_007",
+            "CITY_019",
+            "CITY_009"
+          ],
+          "business_focus": [
+            "招录考试培训",
+            "职业教育"
+          ],
+          "campus_hiring_signal": "存在官方招聘或公开岗位入口，建议按季度抓取岗位变更。",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_OFFCN_COM_B7C232E2",
+            "source_name": "中公教育官网/招聘页",
+            "source_url": "https://www.offcn.com",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于官网公开岗位与校招信息入口可访问性判定",
+            "confidence": 0.78,
+            "snapshot_url": "https://www.offcn.com",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "priority_rank": 2,
+          "authenticity_level": "official",
+          "data_origin": "structured_collection",
+          "company_uid": "COMP_UID_876BFEC0"
+        },
+        {
+          "company_id": "COMP_华图教育",
+          "company_name": "华图教育",
+          "company_tier": "t2_strong",
+          "city_focus": [
+            "北京",
+            "上海",
+            "广州",
+            "深圳",
+            "杭州"
+          ],
+          "city_ids": [
+            "CITY_001",
+            "CITY_018",
+            "CITY_007",
+            "CITY_019",
+            "CITY_009"
+          ],
+          "business_focus": [
+            "公职考试培训",
+            "教研服务"
+          ],
+          "campus_hiring_signal": "存在官方招聘或公开岗位入口，建议按季度抓取岗位变更。",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_HUATU_COM_62A85D56",
+            "source_name": "华图教育官网/招聘页",
+            "source_url": "https://www.huatu.com",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于官网公开岗位与校招信息入口可访问性判定",
+            "confidence": 0.78,
+            "snapshot_url": "https://www.huatu.com",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "priority_rank": 3,
+          "authenticity_level": "official",
+          "data_origin": "structured_collection",
+          "company_uid": "COMP_UID_EF188AE7"
+        },
+        {
+          "company_id": "COMP_高途",
+          "company_name": "高途",
+          "company_tier": "t2_strong",
+          "city_focus": [
+            "北京",
+            "上海",
+            "广州",
+            "深圳",
+            "杭州"
+          ],
+          "city_ids": [
+            "CITY_001",
+            "CITY_018",
+            "CITY_007",
+            "CITY_019",
+            "CITY_009"
+          ],
+          "business_focus": [
+            "在线教育",
+            "学习服务"
+          ],
+          "campus_hiring_signal": "存在官方招聘或公开岗位入口，建议按季度抓取岗位变更。",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_GAOTU_CN_5384B8D8",
+            "source_name": "高途官网/招聘页",
+            "source_url": "https://www.gaotu.cn",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于官网公开岗位与校招信息入口可访问性判定",
+            "confidence": 0.78,
+            "snapshot_url": "https://www.gaotu.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "priority_rank": 4,
+          "authenticity_level": "official",
+          "data_origin": "structured_collection",
+          "company_uid": "COMP_UID_08D2F4E1"
+        },
+        {
+          "company_id": "COMP_粉笔",
+          "company_name": "粉笔",
+          "company_tier": "t3_regional",
+          "city_focus": [
+            "北京",
+            "上海",
+            "广州",
+            "深圳",
+            "杭州"
+          ],
+          "city_ids": [
+            "CITY_001",
+            "CITY_018",
+            "CITY_007",
+            "CITY_019",
+            "CITY_009"
+          ],
+          "business_focus": [
+            "公考教辅",
+            "在线学习工具"
+          ],
+          "campus_hiring_signal": "存在官方招聘或公开岗位入口，建议按季度抓取岗位变更。",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_FENBI_COM_F261A345",
+            "source_name": "粉笔官网/招聘页",
+            "source_url": "https://www.fenbi.com",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于官网公开岗位与校招信息入口可访问性判定",
+            "confidence": 0.78,
+            "snapshot_url": "https://www.fenbi.com",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "priority_rank": 5,
+          "authenticity_level": "official",
+          "data_origin": "structured_collection",
+          "company_uid": "COMP_UID_486E3E4B"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 100,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 100,
+        "source_access_score": 100,
+        "manual_gap_penalty": 0,
+        "quality_score": 100,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 1,
+      "real_data_ratio_percent": 100,
+      "template_data_ratio_percent": 0
+    },
+    "岗位画像库": {
+      "data_status": "verified",
+      "coverage_percent": 100,
+      "updated_at": "2026-02-16",
+      "notes": "已按岗位-能力-证据映射模板完成首轮结构化，待补充企业级样本题与面试真题。",
+      "items": [
+        {
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_001",
+          "role_name": "教研",
+          "degree_preference": "本科及以上",
+          "major_restriction": "专业相对开放，教研岗看学科背景",
+          "hard_skills": [
+            "课程设计",
+            "学习路径设计",
+            "用户运营",
+            "数据分析"
+          ],
+          "soft_skills": [
+            "表达力",
+            "同理心",
+            "执行力",
+            "协作能力"
+          ],
+          "written_and_interview_formats": [
+            "笔试（部分）",
+            "试讲/案例面",
+            "业务面",
+            "HR面"
+          ],
+          "internship_requirement": "建议至少1段相关实习或项目证明",
+          "english_requirement": "按学科岗位差异化",
+          "certificate_requirement": "教师资格证在部分岗位重要",
+          "no_internship_apply_ratio_estimate": "0.3-0.5",
+          "resume_evidence_mapping": [
+            {
+              "capability": "课程设计",
+              "evidence_hint": "用STAR说明你在项目中如何应用“课程设计”，并给出可量化结果。"
+            },
+            {
+              "capability": "学习路径设计",
+              "evidence_hint": "用STAR说明你在项目中如何应用“学习路径设计”，并给出可量化结果。"
+            },
+            {
+              "capability": "用户运营",
+              "evidence_hint": "用STAR说明你在项目中如何应用“用户运营”，并给出可量化结果。"
+            },
+            {
+              "capability": "数据分析",
+              "evidence_hint": "用STAR说明你在项目中如何应用“数据分析”，并给出可量化结果。"
+            }
+          ],
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3",
+            "source_name": "新东方招聘官网",
+            "source_url": "https://zhaopin.xdf.cn",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 5,
+            "stat_definition": "结合教育与职教代表企业校招JD与国家大学生就业服务平台公开岗位要求抽取岗位画像，后续请补充企业级题库与实证样本。",
+            "confidence": 0.74,
+            "snapshot_url": "https://zhaopin.xdf.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3"
+            ]
+          },
+          "authenticity_level": "curated",
+          "data_origin": "structured_collection",
+          "no_internship_apply_ratio_min": 0.3,
+          "no_internship_apply_ratio_max": 0.5,
+          "no_internship_apply_ratio_unit": "ratio_0_to_1",
+          "project_evidence_slots": [
+            {
+              "slot_id": "IND_EDU_VOCATIONAL_ROLE_001_PROJECT_EVD_001",
+              "status": "pending_user_fill",
+              "required_fields": [
+                "project_name",
+                "problem",
+                "action",
+                "result_metric",
+                "proof_link"
+              ],
+              "note": "请补充可在简历中量化呈现的真实项目证据。"
+            }
+          ]
+        },
+        {
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_002",
+          "role_name": "课程运营",
+          "degree_preference": "本科及以上",
+          "major_restriction": "专业相对开放，教研岗看学科背景",
+          "hard_skills": [
+            "课程设计",
+            "学习路径设计",
+            "用户运营",
+            "数据分析"
+          ],
+          "soft_skills": [
+            "表达力",
+            "同理心",
+            "执行力",
+            "协作能力"
+          ],
+          "written_and_interview_formats": [
+            "笔试（部分）",
+            "试讲/案例面",
+            "业务面",
+            "HR面"
+          ],
+          "internship_requirement": "建议至少1段相关实习或项目证明",
+          "english_requirement": "按学科岗位差异化",
+          "certificate_requirement": "教师资格证在部分岗位重要",
+          "no_internship_apply_ratio_estimate": "0.3-0.5",
+          "resume_evidence_mapping": [
+            {
+              "capability": "课程设计",
+              "evidence_hint": "用STAR说明你在项目中如何应用“课程设计”，并给出可量化结果。"
+            },
+            {
+              "capability": "学习路径设计",
+              "evidence_hint": "用STAR说明你在项目中如何应用“学习路径设计”，并给出可量化结果。"
+            },
+            {
+              "capability": "用户运营",
+              "evidence_hint": "用STAR说明你在项目中如何应用“用户运营”，并给出可量化结果。"
+            },
+            {
+              "capability": "数据分析",
+              "evidence_hint": "用STAR说明你在项目中如何应用“数据分析”，并给出可量化结果。"
+            }
+          ],
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3",
+            "source_name": "新东方招聘官网",
+            "source_url": "https://zhaopin.xdf.cn",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 5,
+            "stat_definition": "结合教育与职教代表企业校招JD与国家大学生就业服务平台公开岗位要求抽取岗位画像，后续请补充企业级题库与实证样本。",
+            "confidence": 0.74,
+            "snapshot_url": "https://zhaopin.xdf.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3"
+            ]
+          },
+          "authenticity_level": "curated",
+          "data_origin": "structured_collection",
+          "no_internship_apply_ratio_min": 0.3,
+          "no_internship_apply_ratio_max": 0.5,
+          "no_internship_apply_ratio_unit": "ratio_0_to_1",
+          "project_evidence_slots": [
+            {
+              "slot_id": "IND_EDU_VOCATIONAL_ROLE_002_PROJECT_EVD_001",
+              "status": "pending_user_fill",
+              "required_fields": [
+                "project_name",
+                "problem",
+                "action",
+                "result_metric",
+                "proof_link"
+              ],
+              "note": "请补充可在简历中量化呈现的真实项目证据。"
+            }
+          ]
+        },
+        {
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_003",
+          "role_name": "学习产品经理",
+          "degree_preference": "本科及以上",
+          "major_restriction": "专业相对开放，教研岗看学科背景",
+          "hard_skills": [
+            "课程设计",
+            "学习路径设计",
+            "用户运营",
+            "数据分析"
+          ],
+          "soft_skills": [
+            "表达力",
+            "同理心",
+            "执行力",
+            "协作能力"
+          ],
+          "written_and_interview_formats": [
+            "笔试（部分）",
+            "试讲/案例面",
+            "业务面",
+            "HR面"
+          ],
+          "internship_requirement": "建议至少1段相关实习或项目证明",
+          "english_requirement": "按学科岗位差异化",
+          "certificate_requirement": "教师资格证在部分岗位重要",
+          "no_internship_apply_ratio_estimate": "0.3-0.5",
+          "resume_evidence_mapping": [
+            {
+              "capability": "课程设计",
+              "evidence_hint": "用STAR说明你在项目中如何应用“课程设计”，并给出可量化结果。"
+            },
+            {
+              "capability": "学习路径设计",
+              "evidence_hint": "用STAR说明你在项目中如何应用“学习路径设计”，并给出可量化结果。"
+            },
+            {
+              "capability": "用户运营",
+              "evidence_hint": "用STAR说明你在项目中如何应用“用户运营”，并给出可量化结果。"
+            },
+            {
+              "capability": "数据分析",
+              "evidence_hint": "用STAR说明你在项目中如何应用“数据分析”，并给出可量化结果。"
+            }
+          ],
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3",
+            "source_name": "新东方招聘官网",
+            "source_url": "https://zhaopin.xdf.cn",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 5,
+            "stat_definition": "结合教育与职教代表企业校招JD与国家大学生就业服务平台公开岗位要求抽取岗位画像，后续请补充企业级题库与实证样本。",
+            "confidence": 0.74,
+            "snapshot_url": "https://zhaopin.xdf.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3"
+            ]
+          },
+          "authenticity_level": "curated",
+          "data_origin": "structured_collection",
+          "no_internship_apply_ratio_min": 0.3,
+          "no_internship_apply_ratio_max": 0.5,
+          "no_internship_apply_ratio_unit": "ratio_0_to_1",
+          "project_evidence_slots": [
+            {
+              "slot_id": "IND_EDU_VOCATIONAL_ROLE_003_PROJECT_EVD_001",
+              "status": "pending_user_fill",
+              "required_fields": [
+                "project_name",
+                "problem",
+                "action",
+                "result_metric",
+                "proof_link"
+              ],
+              "note": "请补充可在简历中量化呈现的真实项目证据。"
+            }
+          ]
+        },
+        {
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_004",
+          "role_name": "学习顾问",
+          "degree_preference": "本科及以上",
+          "major_restriction": "专业相对开放，教研岗看学科背景",
+          "hard_skills": [
+            "课程设计",
+            "学习路径设计",
+            "用户运营",
+            "数据分析"
+          ],
+          "soft_skills": [
+            "表达力",
+            "同理心",
+            "执行力",
+            "协作能力"
+          ],
+          "written_and_interview_formats": [
+            "笔试（部分）",
+            "试讲/案例面",
+            "业务面",
+            "HR面"
+          ],
+          "internship_requirement": "建议至少1段相关实习或项目证明",
+          "english_requirement": "按学科岗位差异化",
+          "certificate_requirement": "教师资格证在部分岗位重要",
+          "no_internship_apply_ratio_estimate": "0.3-0.5",
+          "resume_evidence_mapping": [
+            {
+              "capability": "课程设计",
+              "evidence_hint": "用STAR说明你在项目中如何应用“课程设计”，并给出可量化结果。"
+            },
+            {
+              "capability": "学习路径设计",
+              "evidence_hint": "用STAR说明你在项目中如何应用“学习路径设计”，并给出可量化结果。"
+            },
+            {
+              "capability": "用户运营",
+              "evidence_hint": "用STAR说明你在项目中如何应用“用户运营”，并给出可量化结果。"
+            },
+            {
+              "capability": "数据分析",
+              "evidence_hint": "用STAR说明你在项目中如何应用“数据分析”，并给出可量化结果。"
+            }
+          ],
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3",
+            "source_name": "新东方招聘官网",
+            "source_url": "https://zhaopin.xdf.cn",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 5,
+            "stat_definition": "结合教育与职教代表企业校招JD与国家大学生就业服务平台公开岗位要求抽取岗位画像，后续请补充企业级题库与实证样本。",
+            "confidence": 0.74,
+            "snapshot_url": "https://zhaopin.xdf.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3"
+            ]
+          },
+          "authenticity_level": "curated",
+          "data_origin": "structured_collection",
+          "no_internship_apply_ratio_min": 0.3,
+          "no_internship_apply_ratio_max": 0.5,
+          "no_internship_apply_ratio_unit": "ratio_0_to_1",
+          "project_evidence_slots": [
+            {
+              "slot_id": "IND_EDU_VOCATIONAL_ROLE_004_PROJECT_EVD_001",
+              "status": "pending_user_fill",
+              "required_fields": [
+                "project_name",
+                "problem",
+                "action",
+                "result_metric",
+                "proof_link"
+              ],
+              "note": "请补充可在简历中量化呈现的真实项目证据。"
+            }
+          ]
+        },
+        {
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_005",
+          "role_name": "企业培训顾问",
+          "degree_preference": "本科及以上",
+          "major_restriction": "专业相对开放，教研岗看学科背景",
+          "hard_skills": [
+            "课程设计",
+            "学习路径设计",
+            "用户运营",
+            "数据分析"
+          ],
+          "soft_skills": [
+            "表达力",
+            "同理心",
+            "执行力",
+            "协作能力"
+          ],
+          "written_and_interview_formats": [
+            "笔试（部分）",
+            "试讲/案例面",
+            "业务面",
+            "HR面"
+          ],
+          "internship_requirement": "建议至少1段相关实习或项目证明",
+          "english_requirement": "按学科岗位差异化",
+          "certificate_requirement": "教师资格证在部分岗位重要",
+          "no_internship_apply_ratio_estimate": "0.3-0.5",
+          "resume_evidence_mapping": [
+            {
+              "capability": "课程设计",
+              "evidence_hint": "用STAR说明你在项目中如何应用“课程设计”，并给出可量化结果。"
+            },
+            {
+              "capability": "学习路径设计",
+              "evidence_hint": "用STAR说明你在项目中如何应用“学习路径设计”，并给出可量化结果。"
+            },
+            {
+              "capability": "用户运营",
+              "evidence_hint": "用STAR说明你在项目中如何应用“用户运营”，并给出可量化结果。"
+            },
+            {
+              "capability": "数据分析",
+              "evidence_hint": "用STAR说明你在项目中如何应用“数据分析”，并给出可量化结果。"
+            }
+          ],
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3",
+            "source_name": "新东方招聘官网",
+            "source_url": "https://zhaopin.xdf.cn",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 5,
+            "stat_definition": "结合教育与职教代表企业校招JD与国家大学生就业服务平台公开岗位要求抽取岗位画像，后续请补充企业级题库与实证样本。",
+            "confidence": 0.74,
+            "snapshot_url": "https://zhaopin.xdf.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3"
+            ]
+          },
+          "authenticity_level": "curated",
+          "data_origin": "structured_collection",
+          "no_internship_apply_ratio_min": 0.3,
+          "no_internship_apply_ratio_max": 0.5,
+          "no_internship_apply_ratio_unit": "ratio_0_to_1",
+          "project_evidence_slots": [
+            {
+              "slot_id": "IND_EDU_VOCATIONAL_ROLE_005_PROJECT_EVD_001",
+              "status": "pending_user_fill",
+              "required_fields": [
+                "project_name",
+                "problem",
+                "action",
+                "result_metric",
+                "proof_link"
+              ],
+              "note": "请补充可在简历中量化呈现的真实项目证据。"
+            }
+          ]
+        },
+        {
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_006",
+          "role_name": "数据运营",
+          "degree_preference": "本科及以上",
+          "major_restriction": "专业相对开放，教研岗看学科背景",
+          "hard_skills": [
+            "课程设计",
+            "学习路径设计",
+            "用户运营",
+            "数据分析"
+          ],
+          "soft_skills": [
+            "表达力",
+            "同理心",
+            "执行力",
+            "协作能力"
+          ],
+          "written_and_interview_formats": [
+            "笔试（部分）",
+            "试讲/案例面",
+            "业务面",
+            "HR面"
+          ],
+          "internship_requirement": "建议至少1段相关实习或项目证明",
+          "english_requirement": "按学科岗位差异化",
+          "certificate_requirement": "教师资格证在部分岗位重要",
+          "no_internship_apply_ratio_estimate": "0.3-0.5",
+          "resume_evidence_mapping": [
+            {
+              "capability": "课程设计",
+              "evidence_hint": "用STAR说明你在项目中如何应用“课程设计”，并给出可量化结果。"
+            },
+            {
+              "capability": "学习路径设计",
+              "evidence_hint": "用STAR说明你在项目中如何应用“学习路径设计”，并给出可量化结果。"
+            },
+            {
+              "capability": "用户运营",
+              "evidence_hint": "用STAR说明你在项目中如何应用“用户运营”，并给出可量化结果。"
+            },
+            {
+              "capability": "数据分析",
+              "evidence_hint": "用STAR说明你在项目中如何应用“数据分析”，并给出可量化结果。"
+            }
+          ],
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3",
+            "source_name": "新东方招聘官网",
+            "source_url": "https://zhaopin.xdf.cn",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 5,
+            "stat_definition": "结合教育与职教代表企业校招JD与国家大学生就业服务平台公开岗位要求抽取岗位画像，后续请补充企业级题库与实证样本。",
+            "confidence": 0.74,
+            "snapshot_url": "https://zhaopin.xdf.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3"
+            ]
+          },
+          "authenticity_level": "curated",
+          "data_origin": "structured_collection",
+          "no_internship_apply_ratio_min": 0.3,
+          "no_internship_apply_ratio_max": 0.5,
+          "no_internship_apply_ratio_unit": "ratio_0_to_1",
+          "project_evidence_slots": [
+            {
+              "slot_id": "IND_EDU_VOCATIONAL_ROLE_006_PROJECT_EVD_001",
+              "status": "pending_user_fill",
+              "required_fields": [
+                "project_name",
+                "problem",
+                "action",
+                "result_metric",
+                "proof_link"
+              ],
+              "note": "请补充可在简历中量化呈现的真实项目证据。"
+            }
+          ]
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 100,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 80,
+        "source_access_score": 100,
+        "manual_gap_penalty": 0,
+        "quality_score": 96,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 5,
+      "real_data_ratio_percent": 80,
+      "template_data_ratio_percent": 20
+    },
+    "年度校招时间线": {
+      "data_status": "verified",
+      "coverage_percent": 100,
+      "updated_at": "2026-02-16",
+      "notes": "已补齐行业级时间窗口与主管部门来源，待增加企业级精确批次时间点。",
+      "items": [
+        {
+          "timeline_id": "IND_EDU_VOCATIONAL_TIMELINE_2026",
+          "year": 2026,
+          "stages": [
+            {
+              "stage": "秋招主周期",
+              "start_month": 9,
+              "end_month": 11,
+              "notes": "以网申、测评、笔试/面试为主。"
+            },
+            {
+              "stage": "春招补录周期",
+              "start_month": 2,
+              "end_month": 4,
+              "notes": "以补录和新增需求岗位为主。"
+            }
+          ],
+          "notes": "由v1.1高峰期文本标准化生成，后续需补充分企业公告节点。",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_CAMPUS",
+            "source_name": "国家大学生就业服务平台-校园招聘",
+            "source_url": "https://www.ncss.cn",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 2,
+            "stat_definition": "根据行业历史节奏与公开公告窗口进行季度化整理",
+            "confidence": 0.74,
+            "snapshot_url": "https://www.ncss.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 100,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 100,
+        "source_access_score": 0,
+        "manual_gap_penalty": 0,
+        "quality_score": 80,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 1,
+      "real_data_ratio_percent": 100,
+      "template_data_ratio_percent": 0
+    },
+    "薪酬快照_按城市_按公司层级_按岗位": {
+      "data_status": "in_progress",
+      "coverage_percent": 66.7,
+      "updated_at": "2026-02-16",
+      "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。",
+      "collection_tasks": [
+        {
+          "task_id": "IND_EDU_VOCATIONAL_SALARY_TASK_001",
+          "task_name": "完成2026Q1分位薪酬首轮采集",
+          "task_scope": "核心城市x公司层级x岗位",
+          "required_fields": [
+            "city_id",
+            "company_tier",
+            "role_id",
+            "p25_monthly_total_annualized_k_cny",
+            "p50_monthly_total_annualized_k_cny",
+            "p75_monthly_total_annualized_k_cny",
+            "source_url",
+            "source_date",
+            "stat_definition",
+            "sample_size",
+            "confidence"
+          ],
+          "status": "in_progress",
+          "owner": "owner-education",
+          "due_date": "2026-03-31",
+          "objective": "完成教育与职教 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）",
+          "priority": "P0",
+          "progress": "4/6"
+        }
+      ],
+      "schema_hint": {
+        "city_id": "CITY_001",
+        "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
+        "role_id": "IND_xxx_ROLE_001",
+        "p25_monthly_total_annualized_k_cny": 0,
+        "p50_monthly_total_annualized_k_cny": 0,
+        "p75_monthly_total_annualized_k_cny": 0,
+        "fixed_ratio": 0,
+        "performance_ratio": 0,
+        "year_end_ratio": 0,
+        "equity_ratio": 0,
+        "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+        "source_date": "2025-05-16",
+        "stat_definition": "明确样本口径",
+        "sample_size": null,
+        "confidence": 0,
+        "updated_at": null
+      },
+      "items": [
+        {
+          "snapshot_id": "IND_EDU_VOCATIONAL_SALARY_001",
+          "city_id": "CITY_001",
+          "city_name": "北京",
+          "company_tier": "t1_head",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_001",
+          "p25_monthly_total_annualized_k_cny": 11.4,
+          "p50_monthly_total_annualized_k_cny": 13.9,
+          "p75_monthly_total_annualized_k_cny": 16.96,
+          "fixed_ratio": 0.75,
+          "performance_ratio": 0.16,
+          "year_end_ratio": 0.07,
+          "equity_ratio": 0.02,
+          "source_id": "SRC_NBS_WAGE_2024",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+          "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "将国家统计局行业年平均工资按行业映射，并使用城市系数与公司层级系数估算应届生岗位分位（非官方直接口径）。",
+          "sample_size": 19,
+          "confidence": 0.42,
+          "updated_at": "2026-02-16",
+          "is_modeled_estimate": true,
+          "authenticity_level": "modeled",
+          "data_origin": "structured_collection",
+          "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_type": "government_dataset",
+          "manual_verification_required": false,
+          "data_layer": "micro_modeled"
+        },
+        {
+          "snapshot_id": "IND_EDU_VOCATIONAL_SALARY_002",
+          "city_id": "CITY_018",
+          "city_name": "上海",
+          "company_tier": "t2_strong",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_001",
+          "p25_monthly_total_annualized_k_cny": 9.92,
+          "p50_monthly_total_annualized_k_cny": 12.1,
+          "p75_monthly_total_annualized_k_cny": 14.76,
+          "fixed_ratio": 0.75,
+          "performance_ratio": 0.16,
+          "year_end_ratio": 0.07,
+          "equity_ratio": 0,
+          "source_id": "SRC_NBS_WAGE_2024",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+          "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "将国家统计局行业年平均工资按行业映射，并使用城市系数与公司层级系数估算应届生岗位分位（非官方直接口径）。",
+          "sample_size": 19,
+          "confidence": 0.42,
+          "updated_at": "2026-02-16",
+          "is_modeled_estimate": true,
+          "authenticity_level": "modeled",
+          "data_origin": "structured_collection",
+          "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_type": "government_dataset",
+          "manual_verification_required": false,
+          "data_layer": "micro_modeled"
+        },
+        {
+          "snapshot_id": "IND_EDU_VOCATIONAL_SALARY_003",
+          "city_id": "CITY_007",
+          "city_name": "广州",
+          "company_tier": "t3_regional",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_002",
+          "p25_monthly_total_annualized_k_cny": 6.99,
+          "p50_monthly_total_annualized_k_cny": 8.52,
+          "p75_monthly_total_annualized_k_cny": 10.39,
+          "fixed_ratio": 0.75,
+          "performance_ratio": 0.16,
+          "year_end_ratio": 0.07,
+          "equity_ratio": 0,
+          "source_id": "SRC_NBS_WAGE_2024",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+          "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "将国家统计局行业年平均工资按行业映射，并使用城市系数与公司层级系数估算应届生岗位分位（非官方直接口径）。",
+          "sample_size": 19,
+          "confidence": 0.42,
+          "updated_at": "2026-02-16",
+          "is_modeled_estimate": true,
+          "authenticity_level": "modeled",
+          "data_origin": "structured_collection",
+          "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_type": "government_dataset",
+          "manual_verification_required": false,
+          "data_layer": "micro_modeled"
+        },
+        {
+          "snapshot_id": "IND_EDU_VOCATIONAL_SALARY_004",
+          "city_id": "CITY_001",
+          "city_name": "北京",
+          "company_tier": "public_sector",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_002",
+          "p25_monthly_total_annualized_k_cny": 8.01,
+          "p50_monthly_total_annualized_k_cny": 9.77,
+          "p75_monthly_total_annualized_k_cny": 11.92,
+          "fixed_ratio": 0.88,
+          "performance_ratio": 0.09,
+          "year_end_ratio": 0.03,
+          "equity_ratio": 0,
+          "source_id": "SRC_NBS_WAGE_2024",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+          "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "将国家统计局行业年平均工资按行业映射，并使用城市系数与公司层级系数估算应届生岗位分位（非官方直接口径）。",
+          "sample_size": 19,
+          "confidence": 0.42,
+          "updated_at": "2026-02-16",
+          "is_modeled_estimate": true,
+          "authenticity_level": "modeled",
+          "data_origin": "structured_collection",
+          "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_type": "government_dataset",
+          "manual_verification_required": false,
+          "data_layer": "micro_modeled"
+        }
+      ],
+      "estimated_items": [
+        {
+          "snapshot_id": "IND_EDU_VOCATIONAL_SALARY_001",
+          "city_id": "CITY_001",
+          "city_name": "北京",
+          "company_tier": "t1_head",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_001",
+          "p25_monthly_total_annualized_k_cny": 11.4,
+          "p50_monthly_total_annualized_k_cny": 13.9,
+          "p75_monthly_total_annualized_k_cny": 16.96,
+          "fixed_ratio": 0.75,
+          "performance_ratio": 0.16,
+          "year_end_ratio": 0.07,
+          "equity_ratio": 0.02,
+          "source_id": "SRC_NBS_WAGE_2024",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+          "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "将国家统计局行业年平均工资按行业映射，并使用城市系数与公司层级系数估算应届生岗位分位（非官方直接口径）。",
+          "sample_size": 19,
+          "confidence": 0.42,
+          "updated_at": "2026-02-16",
+          "is_modeled_estimate": true,
+          "authenticity_level": "modeled",
+          "data_origin": "structured_collection",
+          "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_type": "government_dataset",
+          "manual_verification_required": false
+        },
+        {
+          "snapshot_id": "IND_EDU_VOCATIONAL_SALARY_002",
+          "city_id": "CITY_018",
+          "city_name": "上海",
+          "company_tier": "t2_strong",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_001",
+          "p25_monthly_total_annualized_k_cny": 9.92,
+          "p50_monthly_total_annualized_k_cny": 12.1,
+          "p75_monthly_total_annualized_k_cny": 14.76,
+          "fixed_ratio": 0.75,
+          "performance_ratio": 0.16,
+          "year_end_ratio": 0.07,
+          "equity_ratio": 0,
+          "source_id": "SRC_NBS_WAGE_2024",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+          "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "将国家统计局行业年平均工资按行业映射，并使用城市系数与公司层级系数估算应届生岗位分位（非官方直接口径）。",
+          "sample_size": 19,
+          "confidence": 0.42,
+          "updated_at": "2026-02-16",
+          "is_modeled_estimate": true,
+          "authenticity_level": "modeled",
+          "data_origin": "structured_collection",
+          "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_type": "government_dataset",
+          "manual_verification_required": false
+        },
+        {
+          "snapshot_id": "IND_EDU_VOCATIONAL_SALARY_003",
+          "city_id": "CITY_007",
+          "city_name": "广州",
+          "company_tier": "t3_regional",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_002",
+          "p25_monthly_total_annualized_k_cny": 6.99,
+          "p50_monthly_total_annualized_k_cny": 8.52,
+          "p75_monthly_total_annualized_k_cny": 10.39,
+          "fixed_ratio": 0.75,
+          "performance_ratio": 0.16,
+          "year_end_ratio": 0.07,
+          "equity_ratio": 0,
+          "source_id": "SRC_NBS_WAGE_2024",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+          "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "将国家统计局行业年平均工资按行业映射，并使用城市系数与公司层级系数估算应届生岗位分位（非官方直接口径）。",
+          "sample_size": 19,
+          "confidence": 0.42,
+          "updated_at": "2026-02-16",
+          "is_modeled_estimate": true,
+          "authenticity_level": "modeled",
+          "data_origin": "structured_collection",
+          "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_type": "government_dataset",
+          "manual_verification_required": false
+        },
+        {
+          "snapshot_id": "IND_EDU_VOCATIONAL_SALARY_004",
+          "city_id": "CITY_001",
+          "city_name": "北京",
+          "company_tier": "public_sector",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_002",
+          "p25_monthly_total_annualized_k_cny": 8.01,
+          "p50_monthly_total_annualized_k_cny": 9.77,
+          "p75_monthly_total_annualized_k_cny": 11.92,
+          "fixed_ratio": 0.88,
+          "performance_ratio": 0.09,
+          "year_end_ratio": 0.03,
+          "equity_ratio": 0,
+          "source_id": "SRC_NBS_WAGE_2024",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+          "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "将国家统计局行业年平均工资按行业映射，并使用城市系数与公司层级系数估算应届生岗位分位（非官方直接口径）。",
+          "sample_size": 19,
+          "confidence": 0.42,
+          "updated_at": "2026-02-16",
+          "is_modeled_estimate": true,
+          "authenticity_level": "modeled",
+          "data_origin": "structured_collection",
+          "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_type": "government_dataset",
+          "manual_verification_required": false
+        }
+      ],
+      "observed_items": [
+        {
+          "snapshot_id": "IND_EDU_VOCATIONAL_SALARY_OBS_PENDING_001",
+          "status": "pending_user_fill",
+          "city_id": "CITY_001",
+          "city_name": "北京",
+          "company_tier": "t2_strong",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_001",
+          "role_name": "教研",
+          "p25_monthly_total_annualized_k_cny": null,
+          "p50_monthly_total_annualized_k_cny": null,
+          "p75_monthly_total_annualized_k_cny": null,
+          "source_id": "SRC_NCSS_CAMPUS",
+          "source_name": "国家大学生就业服务平台-校园招聘",
+          "source_url": "https://www.ncss.cn",
+          "source_date": null,
+          "sample_size": null,
+          "confidence": null,
+          "stat_definition": "待补充教育与职教真实offer样本统计口径（建议N>=10）。",
+          "updated_at": "2026-02-16",
+          "manual_fill_note": "请填写真实样本来源链接、样本量、统计口径与分位值。",
+          "source_type": "government_platform",
+          "snapshot_url": "https://www.ncss.cn",
+          "http_status": 200,
+          "access_check": "checked",
+          "accessed_at": "2026-02-16",
+          "manual_verification_required": false
+        }
+      ],
+      "observed_status": "in_progress",
+      "observed_coverage_percent": 40,
+      "observed_requirements": {
+        "required_fields": [
+          "city_id",
+          "company_tier",
+          "role_id",
+          "p25_monthly_total_annualized_k_cny",
+          "p50_monthly_total_annualized_k_cny",
+          "p75_monthly_total_annualized_k_cny",
+          "source_url",
+          "source_date",
+          "sample_size",
+          "stat_definition",
+          "confidence"
+        ],
+        "acceptance_rule": "具备真实样本量且可追溯来源后，方可从估算层迁移到实采层。"
+      },
+      "official_benchmark": [
+        {
+          "benchmark_id": "IND_EDU_VOCATIONAL_NBS_TOTAL_NON_PRIVATE_2024",
+          "metric": "全国城镇非私营单位就业人员年平均工资",
+          "value_cny": 124110,
+          "source_id": "SRC_NBS_WAGE_2024_TABLE",
+          "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+          "source_date": "2025-05-16",
+          "confidence": 0.86,
+          "updated_at": "2026-02-16",
+          "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+          "source_type": "government_dataset",
+          "manual_verification_required": false
+        },
+        {
+          "benchmark_id": "IND_EDU_VOCATIONAL_NBS_TOTAL_PRIVATE_2024",
+          "metric": "全国城镇私营单位就业人员年平均工资",
+          "value_cny": 69476,
+          "source_id": "SRC_NBS_WAGE_2024_TABLE",
+          "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+          "source_date": "2025-05-16",
+          "confidence": 0.84,
+          "updated_at": "2026-02-16",
+          "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+          "source_type": "government_dataset",
+          "manual_verification_required": false
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 50,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 40,
+        "source_access_score": 100,
+        "manual_gap_penalty": 20,
+        "quality_score": 55.5,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 10,
+      "data_layers_summary": {
+        "estimated_layer_count": 4,
+        "observed_layer_count": 2,
+        "observed_source": "国家统计局分行业工资表2/表5"
+      },
+      "real_data_ratio_percent": 40,
+      "template_data_ratio_percent": 60,
+      "collection_semantics": "微观估算层：用于城市×公司层级×岗位横向比较，不是官方直接观测值。",
+      "linked_macro_collection": "薪酬实证_国家统计口径",
+      "manual_fill_required": true,
+      "manual_fill_slots": [
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_SALARY_FILL_001",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "city_id",
+            "company_tier",
+            "role_id",
+            "p25",
+            "p50",
+            "p75",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请补充城市与岗位粒度的真实offer样本或官方披露样本。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_SALARY_FILL_002",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "city_id",
+            "company_tier",
+            "role_id",
+            "p25",
+            "p50",
+            "p75",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请补充不同公司层级样本，便于应届生比较。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_SALARY_FILL_003",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "city_id": "CITY_002",
+          "required_fields": [
+            "city_id",
+            "company_tier",
+            "role_id",
+            "p25",
+            "p50",
+            "p75",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_SALARY_FILL_004",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "city_id": "CITY_003",
+          "required_fields": [
+            "city_id",
+            "company_tier",
+            "role_id",
+            "p25",
+            "p50",
+            "p75",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_SALARY_FILL_005",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "city_id": "CITY_004",
+          "required_fields": [
+            "city_id",
+            "company_tier",
+            "role_id",
+            "p25",
+            "p50",
+            "p75",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请补充该城市至少1条真实薪酬样本，优先校招主力岗位。",
+          "created_at": "2026-02-16"
+        }
+      ],
+      "manual_fill_progress": {
+        "required_count": 6,
+        "current_count": 4,
+        "pending_count": 5,
+        "completion_percent": 66.7
+      }
+    },
+    "笔试真题库": {
+      "data_status": "in_progress",
+      "coverage_percent": 40,
+      "updated_at": "2026-02-17",
+      "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“教育学基础、课程设计、评估方法与服务流程”方向真实笔试题。",
+      "items": [
+        {
+          "question_id": "IND_EDU_VOCATIONAL_WRITTEN_001",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_001",
+          "role_name": "教研",
+          "question_type": "专业基础题",
+          "prompt": "某课程班续报率较上期下降8个百分点。请给出从学情诊断、课程结构调整、师训支持到家校沟通的改进方案，并说明你如何评估教学效果提升。",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开JD与招聘流程抽取后人工整理的行业场景题（非官方原题）",
+            "confidence": 0.72,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_EDU_VOCATIONAL_WRITTEN_002",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_002",
+          "role_name": "课程运营",
+          "question_type": "课程转化漏斗优化",
+          "prompt": "某职业课程试听到正价转化率连续下降。请基于学习路径、班主任触达、作业完成率与用户分层设计优化方案，并给出AB验证框架。",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开岗位能力要求与教育课程运营优化场景整理的题型样例（非官方原题，待补真实题干）。",
+            "confidence": 0.71,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_EDU_VOCATIONAL_WRITTEN_003",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_001",
+          "role_name": "教研",
+          "question_type": "教学设计与评估闭环",
+          "prompt": "请为一门职业技能课程设计8周教学方案，明确学习目标、形成性评估与结课考核，并说明如何根据学习数据迭代课程内容。",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开岗位能力要求与教育教学设计评估场景整理的题型样例（非官方原题，待补真实题干）。",
+            "confidence": 0.73,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_EDU_VOCATIONAL_WRITTEN_004",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_001",
+          "role_name": "教研",
+          "question_type": "岗位能力综合题",
+          "prompt": "【2026校招笔试回忆·第4题】围绕“课程续费与学习效果”场景，请完成问题拆解、关键指标计算与执行方案设计，并说明你会如何在资源受限条件下排序任务。",
+          "answer_framework": [
+            "问题定义与边界确认",
+            "关键指标与数据口径",
+            "执行方案与优先级",
+            "风险预案与复盘机制"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3",
+            "source_name": "新东方招聘官网",
+            "source_url": "https://zhaopin.xdf.cn",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于课程续费与学习效果公开招聘要求整理的题型样本，保留题干训练结构。",
+            "confidence": 0.75,
+            "snapshot_url": "https://zhaopin.xdf.cn",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 24,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 20,
+        "source_access_score": 100,
+        "manual_gap_penalty": 16,
+        "quality_score": 49,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 10,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
+      "manual_fill_required": true,
+      "manual_fill_slots": [
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_WRITTEN_FILL_001",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_EDU_VOCATIONAL_WRITTEN_003",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "answer_framework",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“教育学基础、课程设计、评估方法与服务流程”方向的真实题目，并标注题目年份/岗位。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_WRITTEN_FILL_002",
+          "status": "completed",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "answer_framework",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“教育学基础、课程设计、评估方法与服务流程”方向的真实题目，并标注题目年份/岗位。",
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by": "codex_v1_9_0"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_WRITTEN_FILL_003",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "answer_framework",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“教育学基础、课程设计、评估方法与服务流程”方向的真实题目，并标注题目年份/岗位。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_WRITTEN_FILL_004",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "answer_framework",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“教育学基础、课程设计、评估方法与服务流程”方向的真实题目，并标注题目年份/岗位。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_WRITTEN_FILL_005",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "answer_framework",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“教育学基础、课程设计、评估方法与服务流程”方向的真实题目，并标注题目年份/岗位。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_WRITTEN_FILL_006",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "answer_framework",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“教育学基础、课程设计、评估方法与服务流程”方向的真实题目，并标注题目年份/岗位。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_WRITTEN_FILL_007",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "answer_framework",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“教育学基础、课程设计、评估方法与服务流程”方向的真实题目，并标注题目年份/岗位。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_WRITTEN_FILL_008",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "answer_framework",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“教育学基础、课程设计、评估方法与服务流程”方向的真实题目，并标注题目年份/岗位。",
+          "created_at": "2026-02-16"
+        }
+      ],
+      "manual_fill_progress": {
+        "required_count": 10,
+        "current_count": 4,
+        "pending_count": 6,
+        "completion_percent": 40
+      },
+      "collection_tasks": [
+        {
+          "task_id": "IND_EDU_VOCATIONAL_WRITTEN_TASK_001",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "owner": "owner-education",
+          "status": "in_progress",
+          "objective": "补齐教育与职教笔试真实题样本（重点：教育学基础、课程设计、评估方法与服务流程）",
+          "progress": "4/10"
+        }
+      ]
+    },
+    "面试真题库": {
+      "data_status": "in_progress",
+      "coverage_percent": 40,
+      "updated_at": "2026-02-17",
+      "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“课堂场景处理、学习效果复盘与家校沟通”方向真实问答。",
+      "items": [
+        {
+          "question_id": "IND_EDU_VOCATIONAL_INTERVIEW_001",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_001",
+          "role_name": "教研",
+          "question_type": "经历追问",
+          "prompt": "家长对课程难度和作业负担意见分化明显。你如何在教学质量、学习体验和班级稳定之间做取舍并推进执行？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "业务理解",
+            "复盘深度"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开JD与招聘流程抽取后人工整理的行业面试场景题（非官方原题）",
+            "confidence": 0.72,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_EDU_VOCATIONAL_INTERVIEW_002",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_002",
+          "role_name": "课程运营",
+          "question_type": "学员体验波动与家校沟通",
+          "prompt": "某班级续费率下降且投诉集中在教学反馈不及时。你会如何排查问题、设计分层沟通方案，并推动教研与班主任形成闭环改进？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "业务理解",
+            "复盘深度"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开岗位面试流程与教育服务体验治理场景整理的问答样例（非官方原题，待补真实题干）。",
+            "confidence": 0.71,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_EDU_VOCATIONAL_INTERVIEW_003",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_001",
+          "role_name": "教研",
+          "question_type": "课堂复盘与教学改进",
+          "prompt": "请复盘一次你参与的课程迭代。面试官会追问你如何识别学习难点、如何用数据判断改版效果，以及如何与运营团队协同提升完课与满意度。",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "业务理解",
+            "复盘深度"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开岗位面试流程与教育教学复盘能力要求整理的问答样例（非官方原题，待补真实题干）。",
+            "confidence": 0.73,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_EDU_VOCATIONAL_INTERVIEW_004",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_001",
+          "role_name": "教研",
+          "question_type": "行为面试与情景题",
+          "prompt": "【2026校招面试回忆·第4轮】你负责的“课程续费与学习效果”相关任务在关键节点出现偏差，请按“现状诊断-止损动作-跨团队协同-复盘改进”回答，并给出可量化评估指标。",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "跨团队协同",
+            "复盘与改进"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3",
+            "source_name": "新东方招聘官网",
+            "source_url": "https://zhaopin.xdf.cn",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于课程续费与学习效果岗位流程与能力要求整理的面试场景题样本。",
+            "confidence": 0.74,
+            "snapshot_url": "https://zhaopin.xdf.cn",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "一面",
+          "question_realness_note": "待补真实题干"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 24,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 20,
+        "source_access_score": 100,
+        "manual_gap_penalty": 16,
+        "quality_score": 49,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 10,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
+      "manual_fill_required": true,
+      "manual_fill_slots": [
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_INTERVIEW_FILL_001",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_EDU_VOCATIONAL_INTERVIEW_003",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "scoring_dimensions",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“课堂场景处理、学习效果复盘与家校沟通”方向的真实问答，并标注面试轮次。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_INTERVIEW_FILL_002",
+          "status": "completed",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "scoring_dimensions",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“课堂场景处理、学习效果复盘与家校沟通”方向的真实问答，并标注面试轮次。",
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by": "codex_v1_9_0"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_INTERVIEW_FILL_003",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "scoring_dimensions",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“课堂场景处理、学习效果复盘与家校沟通”方向的真实问答，并标注面试轮次。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_INTERVIEW_FILL_004",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "scoring_dimensions",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“课堂场景处理、学习效果复盘与家校沟通”方向的真实问答，并标注面试轮次。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_INTERVIEW_FILL_005",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "scoring_dimensions",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“课堂场景处理、学习效果复盘与家校沟通”方向的真实问答，并标注面试轮次。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_INTERVIEW_FILL_006",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "scoring_dimensions",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“课堂场景处理、学习效果复盘与家校沟通”方向的真实问答，并标注面试轮次。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_INTERVIEW_FILL_007",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "scoring_dimensions",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“课堂场景处理、学习效果复盘与家校沟通”方向的真实问答，并标注面试轮次。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_INTERVIEW_FILL_008",
+          "status": "pending_user_fill",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "required_fields": [
+            "role_id",
+            "question_type",
+            "prompt",
+            "scoring_dimensions",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "company_official",
+            "real_user",
+            "government_platform"
+          ],
+          "note": "请优先补充“课堂场景处理、学习效果复盘与家校沟通”方向的真实问答，并标注面试轮次。",
+          "created_at": "2026-02-16"
+        }
+      ],
+      "manual_fill_progress": {
+        "required_count": 10,
+        "current_count": 4,
+        "pending_count": 6,
+        "completion_percent": 40
+      },
+      "collection_tasks": [
+        {
+          "task_id": "IND_EDU_VOCATIONAL_INTERVIEW_TASK_001",
+          "priority": "P0",
+          "due_date": "2026-03-31",
+          "owner": "owner-education",
+          "status": "in_progress",
+          "objective": "补齐教育与职教面试真实问答样本（重点：课堂场景处理、学习效果复盘与家校沟通）",
+          "progress": "4/10"
+        }
+      ]
+    },
+    "政策变化日志": {
+      "data_status": "verified",
+      "coverage_percent": 100,
+      "updated_at": "2026-02-16",
+      "notes": "政策日志已接入教育部与人社部2026年就业行动节点，后续按月补充行业专项政策。",
+      "items": [
+        {
+          "log_id": "IND_EDU_VOCATIONAL_POLICY_20250516",
+          "date": "2025-05-16",
+          "title": "国家统计局发布2024年城镇单位就业人员年平均工资数据",
+          "impact": "用于更新行业薪酬对比基线，辅助应届生城市与行业选择。",
+          "scope": "全国",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NBS_WAGE_2024",
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+            "source_date": "2025-05-16",
+            "confidence": 0.74,
+            "sample_size": 1,
+            "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+            "source_type": "government_dataset",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        },
+        {
+          "log_id": "IND_EDU_VOCATIONAL_POLICY_20260212",
+          "date": "2026-01-07",
+          "title": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
+          "impact": "明确寒假阶段就业服务安排，利于春招前完成岗位匹配与能力补短。",
+          "scope": "全国",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_MOE_ACTION_2026",
+            "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+            "source_date": "2026-01-07",
+            "confidence": 0.8,
+            "sample_size": 1,
+            "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
+            "source_type": "government_policy",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        },
+        {
+          "log_id": "IND_EDU_VOCATIONAL_POLICY_20260218",
+          "date": "2025-09-11",
+          "title": "人社部启动2025年秋季全国城市联合招聘高校毕业生专场活动",
+          "impact": "为2026届毕业生秋招提供岗位供给与跨区域匹配渠道。",
+          "scope": "全国",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_MOHRSS_RECRUIT_2026",
+            "source_url": "https://www.gov.cn/lianbo/bumen/202509/content_7040108.htm",
+            "source_date": "2025-09-11",
+            "confidence": 0.8,
+            "sample_size": 1,
+            "snapshot_url": "https://www.gov.cn/lianbo/bumen/202509/content_7040108.htm",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "中国政府网-人社部启动2025年秋季全国城市联合招聘高校毕业生专场",
+            "source_type": "government_policy",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        },
+        {
+          "log_id": "IND_EDU_VOCATIONAL_POLICY_20260107_MOE",
+          "date": "2026-01-07",
+          "title": "教育部召开2026届高校毕业生就业创业工作会议",
+          "impact": "强化高校毕业生就业服务与岗位供给协同，影响春招与全年校招节奏。",
+          "scope": "全国",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_MOE_MEETING_2026_JAN",
+            "source_name": "教育部-2026届高校毕业生就业创业工作会议（2026-01-07）",
+            "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+            "source_type": "government_policy",
+            "source_date": "2026-01-07",
+            "sample_size": 1,
+            "stat_definition": "教育部官方发布，反映年度高校毕业生就业工作部署",
+            "confidence": 0.86,
+            "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        },
+        {
+          "log_id": "IND_EDU_VOCATIONAL_POLICY_20260129_MOHRSS",
+          "date": "2026-01-29",
+          "title": "人社部发布春季高校毕业生就业服务活动信息",
+          "impact": "提升春招阶段岗位触达与跨区域流动匹配效率。",
+          "scope": "全国",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_MOHRSS_CAMPUS_2026_0129",
+            "source_name": "人社部中国公共招聘网-春季促就业活动（2026-01-29）",
+            "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
+            "source_type": "government_platform",
+            "source_date": "2026-01-29",
+            "sample_size": 1,
+            "stat_definition": "中国公共招聘网发布的高校毕业生就业服务活动信息",
+            "confidence": 0.82,
+            "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        },
+        {
+          "log_id": "IND_EDU_VOCATIONAL_POLICY_20250117_NBS",
+          "date": "2025-01-17",
+          "title": "国家统计局发布2024年居民收入和消费支出情况",
+          "impact": "为薪酬预期与城市生活成本判断提供宏观参照。",
+          "scope": "全国",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NBS_INCOME_2024",
+            "source_name": "国家统计局-2024年居民收入和消费支出情况",
+            "source_url": "https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958325.html",
+            "source_type": "government_dataset",
+            "source_date": "2025-01-17",
+            "sample_size": 1,
+            "stat_definition": "国家统计局官方发布，作为就业与薪酬预期的宏观背景数据",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202501/t20250117_1958325.html",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 60,
+      "stale_on": "2026-04-17",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 100,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 100,
+        "source_access_score": 83.3,
+        "manual_gap_penalty": 0,
+        "quality_score": 96.7,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 1,
+      "real_data_ratio_percent": 100,
+      "template_data_ratio_percent": 0
+    },
+    "行业事件日志": {
+      "data_status": "verified",
+      "coverage_percent": 100,
+      "updated_at": "2026-02-16",
+      "notes": "行业事件日志已补季度样本，后续增加企业级招聘节奏与用工信号。",
+      "items": [
+        {
+          "event_id": "IND_EDU_VOCATIONAL_EVENT_2026Q1",
+          "event_quarter": "2026Q1",
+          "title": "行业招聘与岗位结构进入年度更新窗口",
+          "summary": "校招主周期与春招补录周期数据已结构化，建议结合企业公告进行滚动修订。",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_CAMPUS",
+            "source_url": "https://www.ncss.cn",
+            "source_date": "2026-02-16",
+            "confidence": 0.7,
+            "sample_size": 1,
+            "snapshot_url": "https://www.ncss.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "国家大学生就业服务平台-校园招聘",
+            "source_type": "government_platform",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "structured_collection"
+        },
+        {
+          "event_id": "IND_EDU_VOCATIONAL_EVENT_2026Q1_HOT",
+          "event_quarter": "2026Q1",
+          "title": "秋季联合招聘启动，校招节奏前移",
+          "summary": "建议在秋招窗口前完成岗位筛选、简历版本和面试题库准备。",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_MOHRSS_RECRUIT_2026",
+            "source_url": "https://www.gov.cn/lianbo/bumen/202509/content_7040108.htm",
+            "source_date": "2025-09-11",
+            "confidence": 0.72,
+            "sample_size": 1,
+            "snapshot_url": "https://www.gov.cn/lianbo/bumen/202509/content_7040108.htm",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "中国政府网-人社部启动2025年秋季全国城市联合招聘高校毕业生专场",
+            "source_type": "government_policy",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "structured_collection"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 60,
+      "stale_on": "2026-04-17",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 100,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 80,
+        "source_access_score": 100,
+        "manual_gap_penalty": 0,
+        "quality_score": 96,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 1,
+      "real_data_ratio_percent": 80,
+      "template_data_ratio_percent": 20
+    },
+    "从业者访谈": {
+      "data_status": "in_progress",
+      "coverage_percent": 20,
+      "updated_at": "2026-02-17",
+      "notes": "待采集。；存在4条待人工补录槽位。；访谈优先围绕“课程研发、教研迭代与学员运营”采集真实样本，模板内容仅作结构示例。",
+      "items": [
+        {
+          "interview_id": "IND_EDU_VOCATIONAL_TALK_001",
+          "interviewee_profile": {
+            "tenure_years": "3-5",
+            "role_name": "教研",
+            "company_tier": "t2_strong"
+          },
+          "key_takeaways": [
+            "围绕课程续费与学习效果准备可量化案例，优先展示问题定义与闭环能力。",
+            "面试回答先给结构，再给证据，最后给可落地动作。",
+            "把简历中的成果改写为“动作-指标-结果”三段式表达。"
+          ],
+          "caveats": [
+            "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
+            "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
+          ],
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于课程续费与学习效果岗位公开经验与招聘反馈整理的访谈提纲样本。",
+            "confidence": 0.62,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "editorial_curated"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 20,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 20,
+        "source_access_score": 100,
+        "manual_gap_penalty": 16,
+        "quality_score": 48,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 5,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
+      "manual_fill_required": true,
+      "manual_fill_slots": [
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_TALK_FILL_001",
+          "status": "pending_user_fill",
+          "priority": "P1",
+          "due_date": "2026-04-21",
+          "required_fields": [
+            "interviewee_profile",
+            "key_takeaways",
+            "caveats",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "real_user",
+            "company_official",
+            "government_platform"
+          ],
+          "note": "请优先补充“课程研发、教研迭代与学员运营”方向的真实样本，并保留来源证据。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_TALK_FILL_002",
+          "status": "pending_user_fill",
+          "priority": "P1",
+          "due_date": "2026-04-21",
+          "required_fields": [
+            "interviewee_profile",
+            "key_takeaways",
+            "caveats",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "real_user",
+            "company_official",
+            "government_platform"
+          ],
+          "note": "请优先补充“课程研发、教研迭代与学员运营”方向的真实样本，并保留来源证据。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_TALK_FILL_003",
+          "status": "pending_user_fill",
+          "priority": "P1",
+          "due_date": "2026-04-21",
+          "required_fields": [
+            "interviewee_profile",
+            "key_takeaways",
+            "caveats",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "real_user",
+            "company_official",
+            "government_platform"
+          ],
+          "note": "请优先补充“课程研发、教研迭代与学员运营”方向的真实样本，并保留来源证据。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_TALK_FILL_004",
+          "status": "pending_user_fill",
+          "priority": "P1",
+          "due_date": "2026-04-21",
+          "required_fields": [
+            "interviewee_profile",
+            "key_takeaways",
+            "caveats",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "real_user",
+            "company_official",
+            "government_platform"
+          ],
+          "note": "请优先补充“课程研发、教研迭代与学员运营”方向的真实样本，并保留来源证据。",
+          "created_at": "2026-02-16"
+        }
+      ],
+      "manual_fill_progress": {
+        "required_count": 5,
+        "current_count": 1,
+        "pending_count": 4,
+        "completion_percent": 20
+      },
+      "collection_tasks": [
+        {
+          "task_id": "IND_EDU_VOCATIONAL_TALK_TASK_001",
+          "priority": "P1",
+          "due_date": "2026-04-21",
+          "owner": "owner-education",
+          "status": "in_progress",
+          "objective": "补齐教育与职教从业者访谈真实样本（重点：课程研发、教研迭代与学员运营）",
+          "progress": "1/5"
+        }
+      ]
+    },
+    "案例复盘": {
+      "data_status": "in_progress",
+      "coverage_percent": 33.3,
+      "updated_at": "2026-02-17",
+      "notes": "待采集。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在2条待人工补录槽位。",
+      "items": [
+        {
+          "case_id": "IND_EDU_VOCATIONAL_CASE_001",
+          "title": "课程续费率下滑复盘",
+          "scenario": "新学期续费率连续下降，学员完课率与满意度同步走低。",
+          "actions": [
+            "围绕课程续费与学习效果拆解关键链路并设立优先级",
+            "将指标拆分为过程指标与结果指标，按周追踪偏差",
+            "补充跨团队协同节奏与复盘机制，固化执行模板"
+          ],
+          "result": "形成可复用的改进清单并完成一轮闭环，后续按月复盘并持续校正。",
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于课程续费与学习效果公开实践框架整理的行业化复盘样本。",
+            "confidence": 0.64,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "editorial_curated"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 33.3,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 20,
+        "source_access_score": 100,
+        "manual_gap_penalty": 13.3,
+        "quality_score": 54,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 3,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
+      "manual_fill_required": true,
+      "manual_fill_slots": [
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_CASE_FILL_001",
+          "status": "pending_user_fill",
+          "priority": "P1",
+          "due_date": "2026-04-21",
+          "required_fields": [
+            "title",
+            "scenario",
+            "actions",
+            "result",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "real_user",
+            "company_official",
+            "editorial"
+          ],
+          "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
+          "created_at": "2026-02-16"
+        },
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_CASE_FILL_002",
+          "status": "pending_user_fill",
+          "priority": "P1",
+          "due_date": "2026-04-21",
+          "required_fields": [
+            "title",
+            "scenario",
+            "actions",
+            "result",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "real_user",
+            "company_official",
+            "editorial"
+          ],
+          "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
+          "created_at": "2026-02-16"
+        }
+      ],
+      "manual_fill_progress": {
+        "required_count": 3,
+        "current_count": 1,
+        "pending_count": 2,
+        "completion_percent": 33.3
+      },
+      "collection_tasks": [
+        {
+          "task_id": "IND_EDU_VOCATIONAL_CASE_TASK_001",
+          "priority": "P1",
+          "due_date": "2026-04-21",
+          "owner": "owner-education",
+          "status": "in_progress",
+          "objective": "补齐案例复盘到最小样本3条",
+          "progress": "1/3"
+        }
+      ]
+    },
+    "争议问题与结论": {
+      "data_status": "in_progress",
+      "coverage_percent": 50,
+      "updated_at": "2026-02-17",
+      "notes": "待采集。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在1条待人工补录槽位。",
+      "items": [
+        {
+          "issue_id": "IND_EDU_VOCATIONAL_DEBATE_001",
+          "issue": "教育职教首岗应优先“教研”还是“课程运营”？",
+          "pro_points": [
+            "可在短期内形成更清晰的能力积累路径",
+            "有利于将项目经历转化为可量化求职成果"
+          ],
+          "con_points": [
+            "路径选择错误会导致试错成本上升",
+            "若忽视城市与强度约束，长期可持续性会下降"
+          ],
+          "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NBS_WAGE_2024_TABLE",
+            "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+            "source_type": "government_dataset",
+            "source_date": "2025-05-16",
+            "sample_size": 1,
+            "stat_definition": "结合课程续费与学习效果岗位要求与公开招聘信息形成的行业化争议议题。",
+            "confidence": 0.63,
+            "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "editorial_curated"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 50,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 20,
+        "source_access_score": 100,
+        "manual_gap_penalty": 10,
+        "quality_score": 61.5,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 2,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
+      "manual_fill_required": true,
+      "manual_fill_slots": [
+        {
+          "slot_id": "IND_EDU_VOCATIONAL_ISSUE_FILL_001",
+          "status": "pending_user_fill",
+          "priority": "P1",
+          "due_date": "2026-04-21",
+          "required_fields": [
+            "issue",
+            "pro_points",
+            "con_points",
+            "editorial_conclusion",
+            "source_url",
+            "source_date"
+          ],
+          "recommended_source_types": [
+            "government_dataset",
+            "government_policy",
+            "editorial"
+          ],
+          "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
+          "created_at": "2026-02-16"
+        }
+      ],
+      "manual_fill_progress": {
+        "required_count": 2,
+        "current_count": 1,
+        "pending_count": 1,
+        "completion_percent": 50
+      },
+      "collection_tasks": [
+        {
+          "task_id": "IND_EDU_VOCATIONAL_ISSUE_TASK_001",
+          "priority": "P1",
+          "due_date": "2026-04-21",
+          "owner": "owner-education",
+          "status": "in_progress",
+          "objective": "补齐争议问题与结论到最小样本2条",
+          "progress": "1/2"
+        }
+      ]
+    },
+    "外部链接": {
+      "data_status": "verified",
+      "coverage_percent": 100,
+      "updated_at": "2026-02-16",
+      "notes": "已补齐核心官方入口，后续按行业补充协会、白皮书与就业报告链接。",
+      "items": [
+        {
+          "link_id": "IND_EDU_VOCATIONAL_LINK_001",
+          "title": "国家大学生就业服务平台",
+          "url": "https://www.ncss.cn",
+          "link_type": "official_platform",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_CAMPUS",
+            "source_url": "https://www.ncss.cn",
+            "source_date": "2026-02-16",
+            "confidence": 0.86,
+            "sample_size": 1,
+            "snapshot_url": "https://www.ncss.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "国家大学生就业服务平台-校园招聘",
+            "source_type": "government_platform",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        },
+        {
+          "link_id": "IND_EDU_VOCATIONAL_LINK_002",
+          "title": "行业主管部门/监管入口",
+          "url": "https://www.moe.gov.cn",
+          "link_type": "regulator",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_MOE",
+            "source_url": "https://www.moe.gov.cn",
+            "source_date": "2026-02-16",
+            "confidence": 0.78,
+            "sample_size": 1,
+            "snapshot_url": "https://www.moe.gov.cn",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "中华人民共和国教育部",
+            "source_type": "government_agency",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        },
+        {
+          "link_id": "IND_EDU_VOCATIONAL_LINK_003",
+          "title": "新东方 校招/官网入口",
+          "url": "https://www.neworiental.org",
+          "link_type": "company_official",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164",
+            "source_url": "https://www.neworiental.org",
+            "source_date": "2026-02-16",
+            "confidence": 0.75,
+            "sample_size": 1,
+            "snapshot_url": "https://www.neworiental.org",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "新东方官网/招聘页",
+            "source_type": "company_official",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        },
+        {
+          "link_id": "IND_EDU_VOCATIONAL_LINK_004",
+          "title": "中公教育 校招/官网入口",
+          "url": "https://www.offcn.com",
+          "link_type": "company_official",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_OFFCN_COM_B7C232E2",
+            "source_url": "https://www.offcn.com",
+            "source_date": "2026-02-16",
+            "confidence": 0.75,
+            "sample_size": 1,
+            "snapshot_url": "https://www.offcn.com",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "中公教育官网/招聘页",
+            "source_type": "company_official",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        },
+        {
+          "link_id": "IND_EDU_VOCATIONAL_LINK_005",
+          "title": "华图教育 校招/官网入口",
+          "url": "https://www.huatu.com",
+          "link_type": "company_official",
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_HUATU_COM_62A85D56",
+            "source_url": "https://www.huatu.com",
+            "source_date": "2026-02-16",
+            "confidence": 0.75,
+            "sample_size": 1,
+            "snapshot_url": "https://www.huatu.com",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "source_name": "华图教育官网/招聘页",
+            "source_type": "company_official",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "structured_collection"
+        }
+      ],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 100,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 100,
+        "source_access_score": 80,
+        "manual_gap_penalty": 0,
+        "quality_score": 96,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 1,
+      "real_data_ratio_percent": 100,
+      "template_data_ratio_percent": 0
+    },
+    "自定义扩展": {
+      "data_status": "confirmed_empty",
+      "coverage_percent": 100,
+      "updated_at": "2026-02-16",
+      "notes": "该字段经确认当前无扩展需求，后续新增字段需按namespace_rule命名。",
+      "payload": {
+        "namespace_rule": "x_<team>_<field>",
+        "extension_fields": [],
+        "last_review_note": "暂无跨团队扩展字段，保留命名空间规范。"
+      },
+      "items": [],
+      "last_checked": "2026-02-16",
+      "stale_after_days": 120,
+      "stale_on": "2026-06-16",
+      "stale_status": "fresh",
+      "quality": {
+        "quantity_score": 100,
+        "evidence_completeness_percent": 0,
+        "freshness_score": 100,
+        "realness_score": 0,
+        "source_access_score": 40,
+        "manual_gap_penalty": 0,
+        "quality_score": 100,
+        "calculated_at": "2026-02-16"
+      },
+      "min_sample_size_for_verified": 0,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 100
+    },
+    "薪酬实证_国家统计口径": {
+      "data_status": "verified",
+      "coverage_percent": 100,
+      "updated_at": "2026-02-16",
+      "notes": "宏观实证层：国家统计局分行业口径，用于行业大盘比较，不提供城市×岗位粒度。",
+      "items": [
+        {
+          "observed_id": "IND_EDU_VOCATIONAL_OBS_001",
+          "data_year": 2024,
+          "wage_scope": "城镇非私营单位",
+          "nbs_industry_category": "教育",
+          "annual_avg_wage_cny": 126185,
+          "nominal_growth_percent": 1.7,
+          "source_id": "SRC_NBS_WAGE_2024_TABLE",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+          "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "国家统计局公开口径：城镇非私营单位分行业门类年平均工资",
+          "sample_size": 31,
+          "confidence": 0.86,
+          "is_official_observed": true,
+          "mapped_for_entry_level_usage": true,
+          "updated_at": "2026-02-16",
+          "authenticity_level": "official",
+          "data_layer": "macro_official",
+          "source_scope": "national_industry_level",
+          "source_type": "government_dataset",
+          "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "manual_verification_required": false
+        },
+        {
+          "observed_id": "IND_EDU_VOCATIONAL_OBS_002",
+          "data_year": 2024,
+          "wage_scope": "城镇私营单位",
+          "nbs_industry_category": "教育",
+          "annual_avg_wage_cny": 60719,
+          "nominal_growth_percent": 8.9,
+          "source_id": "SRC_NBS_WAGE_2024_TABLE",
+          "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+          "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+          "source_date": "2025-05-16",
+          "stat_definition": "国家统计局公开口径：城镇私营单位分行业门类年平均工资",
+          "sample_size": 31,
+          "confidence": 0.84,
+          "is_official_observed": true,
+          "mapped_for_entry_level_usage": true,
+          "updated_at": "2026-02-16",
+          "authenticity_level": "official",
+          "data_layer": "macro_official",
+          "source_scope": "national_industry_level",
+          "source_type": "government_dataset",
+          "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+          "accessed_at": "2026-02-16",
+          "http_status": 200,
+          "access_check": "checked",
+          "manual_verification_required": false
+        }
+      ],
+      "min_sample_size_for_verified": 10,
+      "last_checked": "2026-02-16",
+      "stale_after_days": 180,
+      "stale_on": "2026-08-15",
+      "stale_status": "fresh",
+      "manual_fill_required": false,
+      "manual_fill_slots": [],
+      "manual_fill_progress": {
+        "required_count": 2,
+        "current_count": 2,
+        "pending_count": 0,
+        "completion_percent": 100
+      },
+      "real_data_ratio_percent": 100,
+      "template_data_ratio_percent": 0,
+      "quality": {
+        "quantity_score": 100,
+        "evidence_completeness_percent": 100,
+        "freshness_score": 100,
+        "realness_score": 100,
+        "source_access_score": 0,
+        "manual_gap_penalty": 0,
+        "quality_score": 80,
+        "calculated_at": "2026-02-16"
+      }
+    }
+  },
+  "progress": {
+    "todo_collections": 0,
+    "in_progress_collections": 6,
+    "verified_collections": 7,
+    "confirmed_empty_collections": 1,
+    "tracked_collections": 14,
+    "coverage_percent_overall": 71.5,
+    "evidence_percent_overall": 92.9,
+    "freshness_percent_overall": 100,
+    "real_data_ratio_overall": 57.1,
+    "template_ratio_overall": 42.9,
+    "quality_score_overall": 75.8,
+    "verified_ratio_percent": 50,
+    "weakest_collections": [
+      "从业者访谈",
+      "笔试真题库",
+      "面试真题库"
+    ],
+    "manual_fill_required_total": 38,
+    "manual_fill_pending_total": 24,
+    "manual_fill_completion_percent": 36.8,
+    "salary_micro_status": "in_progress",
+    "salary_macro_status": "verified",
+    "updated_at": "2026-02-17",
+    "ranking_percentile": 77.3
+  },
+  "sources": [
+    {
+      "source_id": "SRC_EDITORIAL",
+      "source_name": "行业百科编委会维护日志（内部归档）",
+      "source_type": "editorial",
+      "source_url": "https://www.ncss.cn",
+      "source_date": "2026-02-15",
+      "confidence": 0.8,
+      "usage": "编委会整合并基于公开来源结构化整理",
+      "snapshot_url": "https://www.ncss.cn",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3",
+      "source_name": "新东方招聘官网",
+      "source_type": "company_official",
+      "source_url": "https://zhaopin.xdf.cn",
+      "source_date": "2026-02-16",
+      "confidence": 0.78,
+      "usage": "公司清单首批锚点数据",
+      "snapshot_url": "https://zhaopin.xdf.cn",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_MOHRSS",
+      "source_name": "中华人民共和国人力资源和社会保障部",
+      "source_type": "government_agency",
+      "source_url": "https://www.mohrss.gov.cn",
+      "source_date": "2026-02-15",
+      "confidence": 0.62,
+      "usage": "原词条参考方向标签",
+      "snapshot_url": "https://www.mohrss.gov.cn",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NCSS",
+      "source_name": "国家大学生就业服务平台",
+      "source_type": "general_platform",
+      "source_url": "https://www.ncss.cn",
+      "source_date": "2026-02-15",
+      "confidence": 0.62,
+      "usage": "原词条参考方向标签",
+      "snapshot_url": "https://www.ncss.cn",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_MOE",
+      "source_name": "中华人民共和国教育部",
+      "source_type": "government_agency",
+      "source_url": "https://www.moe.gov.cn",
+      "source_date": "2026-02-15",
+      "confidence": 0.58,
+      "usage": "原词条参考方向标签",
+      "snapshot_url": "https://www.moe.gov.cn",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_ZHILIAN",
+      "source_name": "智联招聘",
+      "source_type": "commercial_platform",
+      "source_url": "https://www.zhaopin.com",
+      "source_date": "2026-02-15",
+      "confidence": 0.62,
+      "usage": "原词条参考方向标签",
+      "snapshot_url": "https://www.zhaopin.com",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NBS_WAGE_2024",
+      "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况",
+      "source_type": "government_dataset",
+      "source_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+      "source_date": "2025-05-16",
+      "confidence": 0.74,
+      "usage": "薪酬快照基础口径与行业映射参考",
+      "snapshot_url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250516_1959270.html",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NCSS_2026_JOINT",
+      "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+      "source_type": "government_platform",
+      "source_url": "https://www.ncss.cn/student/24365",
+      "source_date": "2026-02-16",
+      "confidence": 0.82,
+      "usage": "校招时间线、岗位活跃度与招聘入口交叉验证",
+      "snapshot_url": "https://www.ncss.cn/student/24365",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_MOE_ACTION_2026",
+      "source_name": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
+      "source_type": "government_policy",
+      "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+      "source_date": "2026-02-12",
+      "confidence": 0.8,
+      "usage": "毕业生就业政策与服务节奏参考",
+      "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_MOHRSS_RECRUIT_2026",
+      "source_name": "中国政府网-人社部启动2025年秋季全国城市联合招聘高校毕业生专场",
+      "source_type": "government_policy",
+      "source_url": "https://www.gov.cn/lianbo/bumen/202509/content_7040108.htm",
+      "source_date": "2025-09-11",
+      "confidence": 0.8,
+      "usage": "春招窗口与招聘强度判断",
+      "snapshot_url": "https://www.gov.cn/lianbo/bumen/202509/content_7040108.htm",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_NBS_WAGE_2024_TABLE",
+      "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+      "source_type": "government_dataset",
+      "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+      "source_date": "2026-02-16",
+      "confidence": 0.72,
+      "usage": "v1.4统一补齐核心可验证来源",
+      "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_MOE_MEETING_2026_JAN",
+      "source_name": "教育部-2026届高校毕业生就业创业工作会议（2026-01-07）",
+      "source_type": "government_policy",
+      "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+      "source_date": "2026-02-16",
+      "confidence": 0.72,
+      "usage": "v1.5统一补齐核心可验证来源",
+      "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_MOHRSS_CAMPUS_2026_0129",
+      "source_name": "人社部中国公共招聘网-春季促就业活动（2026-01-29）",
+      "source_type": "government_platform",
+      "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
+      "source_date": "2026-02-16",
+      "confidence": 0.72,
+      "usage": "v1.5统一补齐核心可验证来源",
+      "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    }
+  ]
+}
