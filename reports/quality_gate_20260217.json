@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-17T13:12:47Z",
+  "generated_at": "2026-02-17T13:36:10Z",
   "data_file": "/Users/suan/Desktop/留学/资料/行业百科/行业百科.json",
   "has_blockers": false,
   "gates": {
@@ -17,11 +17,17 @@
     "salary_observed_lowsample_max_hits": 0,
     "salary_observed_coverage_hits": 0,
     "salary_observed_coverage_max_hits": 0,
+    "salary_observed_company_tier_hits": 0,
+    "salary_observed_company_tier_max_hits": 0,
     "question_role_coverage_hits": 0,
     "question_role_coverage_max_hits": 0,
-    "question_role_coverage_min": 4,
+    "question_role_coverage_min": 5,
     "decision_evidence_lowsample_hits": 0,
     "decision_evidence_lowsample_max_hits": 0,
+    "source_concentration_top1_percent": 9.334415584415584,
+    "source_concentration_top1_max_percent": 10,
+    "source_concentration_top5_percent": 33.603896103896105,
+    "source_concentration_top5_max_percent": 35,
     "p0_completion_percent": 100,
     "p0_completion_min_percent": 95,
     "template_ratio_percent": 0,
@@ -41,6 +47,7 @@
     "salary_observed_inprogress_records": [],
     "salary_observed_lowsample_records": [],
     "salary_observed_coverage_records": [],
+    "salary_observed_company_tier_records": [],
     "question_role_coverage_records": [],
     "decision_evidence_lowsample_records": [],
     "p0_completion_threshold": {
@@ -75,14 +82,26 @@
       "actual_hits": 0,
       "threshold_hits": 0
     },
+    "salary_observed_company_tier_threshold": {
+      "actual_hits": 0,
+      "threshold_hits": 0
+    },
     "question_role_coverage_threshold": {
       "actual_hits": 0,
       "threshold_hits": 0,
-      "min_role_coverage": 4
+      "min_role_coverage": 5
     },
     "decision_evidence_lowsample_threshold": {
       "actual_hits": 0,
       "threshold_hits": 0
+    },
+    "source_concentration_top1_threshold": {
+      "actual_percent": 9.334415584415584,
+      "threshold_percent": 10
+    },
+    "source_concentration_top5_threshold": {
+      "actual_percent": 33.603896103896105,
+      "threshold_percent": 35
     }
   }
 }

@@ -14,6 +14,13 @@ function round1(n) {
   return Math.round(n * 10) / 10;
 }
 
+function daysSince(dateStr, nowTs) {
+  if (typeof dateStr !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) return null;
+  const ts = Date.parse(`${dateStr}T00:00:00Z`);
+  if (!Number.isFinite(ts)) return null;
+  return (nowTs - ts) / (24 * 3600 * 1000);
+}
+
 function ratioScore(actual, target) {
   if (target <= 0) return 100;
   const v = Math.min(1, actual / target);
@@ -21,6 +28,7 @@ function ratioScore(actual, target) {
 }
 
 const entries = data['行业词条'] || [];
+const nowTs = Date.parse('2026-02-17T00:00:00Z');
 
 for (const entry of entries) {
   const dynamic = entry.dynamic || {};
@@ -93,16 +101,29 @@ for (const entry of entries) {
   const observedItems = Array.isArray(salaryMicro.observed_items) ? salaryMicro.observed_items : [];
   const salaryCityCoverage = new Set(observedItems.map((x) => x?.city_id).filter(Boolean)).size;
   const salaryRoleCoverage = new Set(observedItems.map((x) => x?.role_id).filter(Boolean)).size;
+  const salaryTierCoverage = new Set(observedItems.map((x) => x?.company_tier).filter(Boolean)).size;
+  const salaryCityTarget = Math.max(1, toNum(salaryMicro?.observed_requirements?.min_cities, 4));
+  const salaryRoleTarget = Math.max(1, toNum(salaryMicro?.observed_requirements?.min_roles, 4));
+  const salaryTierTarget = Math.max(1, toNum(salaryMicro?.observed_requirements?.min_company_tiers, 1));
   const salaryCoverageScore = round1(
-    (ratioScore(Math.min(salaryCityCoverage, 4), 4) + ratioScore(Math.min(salaryRoleCoverage, 4), 4)) / 2,
+    (
+      ratioScore(Math.min(salaryCityCoverage, salaryCityTarget), salaryCityTarget)
+      + ratioScore(Math.min(salaryRoleCoverage, salaryRoleTarget), salaryRoleTarget)
+      + ratioScore(Math.min(salaryTierCoverage, salaryTierTarget), salaryTierTarget)
+    ) / 3,
   );
 
   const writtenItems = Array.isArray(dynamic['笔试真题库']?.items) ? dynamic['笔试真题库'].items : [];
   const interviewItems = Array.isArray(dynamic['面试真题库']?.items) ? dynamic['面试真题库'].items : [];
+  const roleTotal = Array.isArray(dynamic['岗位画像库']?.items) ? dynamic['岗位画像库'].items.length : 0;
+  const questionRoleTarget = Math.max(1, Math.min(5, roleTotal || 5));
   const writtenRoleCoverage = new Set(writtenItems.map((x) => x?.role_id).filter(Boolean)).size;
   const interviewRoleCoverage = new Set(interviewItems.map((x) => x?.role_id).filter(Boolean)).size;
   const questionRoleCoverageScore = round1(
-    (ratioScore(Math.min(writtenRoleCoverage, 4), 4) + ratioScore(Math.min(interviewRoleCoverage, 4), 4)) / 2,
+    (
+      ratioScore(Math.min(writtenRoleCoverage, questionRoleTarget), questionRoleTarget)
+      + ratioScore(Math.min(interviewRoleCoverage, questionRoleTarget), questionRoleTarget)
+    ) / 2,
   );
 
   const decisionItems = Array.isArray(dynamic['自定义扩展']?.items) ? dynamic['自定义扩展'].items : [];
@@ -116,12 +137,40 @@ for (const entry of entries) {
     )
     : 0;
 
-  // v1.21: 将可解释性增强指标并入总分，拉开行业差异。
+  const allItems = collections.flatMap(([, col]) => (Array.isArray(col?.items) ? col.items : []));
+  const totalItems = allItems.length;
+  const strongEvidenceCount = allItems.filter((item) => {
+    const ev = item?.evidence;
+    if (!ev || typeof ev !== 'object') return false;
+    return !!(ev.source_id && ev.source_url && ev.source_date) && toNum(ev.sample_size, 0) >= 1;
+  }).length;
+  const evidenceStrengthScore = totalItems > 0 ? round1((strongEvidenceCount * 100) / totalItems) : 0;
+
+  const sourceIds = new Set(
+    allItems
+      .map((item) => item?.evidence?.source_id || item?.source_id)
+      .filter(Boolean),
+  );
+  const sourceDiversityScore = ratioScore(sourceIds.size, Math.min(18, Math.max(6, Math.floor(totalItems / 6) || 6)));
+
+  const datedItems = allItems
+    .map((item) => item?.evidence?.source_date || item?.source_date || null)
+    .filter(Boolean);
+  const freshCount = datedItems.filter((d) => {
+    const days = daysSince(d, nowTs);
+    return days !== null && days <= 180;
+  }).length;
+  const freshnessLiveScore = datedItems.length > 0 ? round1((freshCount * 100) / datedItems.length) : 0;
+
+  // v1.22: 将覆盖门槛、证据强度、来源多样性与新鲜度并入总分，提升行业差异可解释性。
   const qualityScoreOverall = round1(
-    baseQualityScore * 0.7
+    baseQualityScore * 0.5
     + salaryCoverageScore * 0.15
     + questionRoleCoverageScore * 0.1
-    + decisionEvidenceScore * 0.05,
+    + decisionEvidenceScore * 0.1
+    + sourceDiversityScore * 0.05
+    + evidenceStrengthScore * 0.05
+    + freshnessLiveScore * 0.05,
   );
 
   entry.progress = {
@@ -131,8 +180,8 @@ for (const entry of entries) {
     confirmed_empty_collections: confirmedEmpty,
     tracked_collections: tracked,
     coverage_percent_overall: metricCount ? round1(sumCoverage / metricCount) : 0,
-    evidence_percent_overall: metricCount ? round1(sumEvidence / metricCount) : 0,
-    freshness_percent_overall: metricCount ? round1(sumFreshness / metricCount) : 0,
+    evidence_percent_overall: evidenceStrengthScore,
+    freshness_percent_overall: freshnessLiveScore,
     real_data_ratio_overall: metricCount ? round1(sumReal / metricCount) : 0,
     template_ratio_overall: metricCount ? round1(sumTemplate / metricCount) : 0,
     quality_score_overall: qualityScoreOverall,
