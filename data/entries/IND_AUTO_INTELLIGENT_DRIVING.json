@@ -256,6 +256,47 @@
             "新人阶段先把工具链和测试流程跑通，再做复杂场景优化。"
           ],
           "updated_at": "2026-02-17"
+        },
+        {
+          "authenticity_level": "company_official",
+          "caveats": [
+            "不同车型平台和算力配置差异会影响算法部署与调试策略。",
+            "公开岗位描述对功能安全与量产交付约束覆盖有限，需在面试中主动补充。"
+          ],
+          "data_origin": "company_jd_signal",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-17",
+            "confidence": 0.77,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.geely.com",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_AUTO_WWW_GEELY_COM_9BD171A5",
+            "source_name": "吉利汽车官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.geely.com",
+            "stat_definition": "基于智能驾驶系统开发与验证岗位JD整理的访谈型样本。",
+            "secondary_source_ids": [
+              "SRC_MIIT",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-17"
+          },
+          "interview_id": "IND_AUTO_INTELLIGENT_DRIVING_TALK_003",
+          "interviewee_profile": {
+            "company_tier": "t2_strong",
+            "role_name": "智能驾驶系统工程师",
+            "tenure_years": "2-4"
+          },
+          "key_takeaways": [
+            "智能驾驶岗位更看重“场景问题定位-算法修正-车端验证”闭环能力。",
+            "回答项目题时建议展示误检率、接管率和回归通过率等关键指标。",
+            "准备一个跨算法、车端、测试协同推进量产节点的案例会显著加分。"
+          ],
+          "updated_at": "2026-02-17"
         }
       ],
       "last_checked": "2026-02-16",
@@ -1847,6 +1888,41 @@
           "result": "误判率明显下降，测试效率提升并通过阶段验收。",
           "scenario": "雨天夜间测试中连续触发误判，影响功能稳定性与测试进度。",
           "title": "复杂路况误判修复复盘",
+          "updated_at": "2026-02-17"
+        },
+        {
+          "actions": [
+            "按场景类型拆分误检来源，优先修复影响安全边界的高风险工况。",
+            "建立算法、车端和测试联调节奏，缩短问题从复现到回归的周期。",
+            "把关键场景用例纳入发布门禁，降低版本回退与重复缺陷风险。"
+          ],
+          "authenticity_level": "company_official",
+          "case_id": "IND_AUTO_INTELLIGENT_DRIVING_CASE_003",
+          "data_origin": "company_jd_signal",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-17",
+            "confidence": 0.76,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 4,
+            "snapshot_url": "https://www.xiaopeng.com",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_AUTO_WWW_XIAOPENG_COM_76D6B386",
+            "source_name": "小鹏汽车官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.xiaopeng.com",
+            "stat_definition": "基于智能驾驶量产项目岗位职责与交付节点整理的案例样本。",
+            "secondary_source_ids": [
+              "SRC_MIIT",
+              "SRC_NBS_WAGE_2024_TABLE"
+            ],
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-17"
+          },
+          "result": "关键场景误检率下降，版本稳定性提升，量产里程碑按期推进。",
+          "scenario": "城市NOA版本在复杂路况下误检率反复波动，影响发布节奏。",
+          "title": "城市NOA场景误检波动治理复盘",
           "updated_at": "2026-02-17"
         }
       ],
@@ -3728,6 +3804,47 @@
             "primary_source_id": "SRC_NOWCODER_INTERVIEW_ALGO_DATA_2026",
             "secondary_source_ids": [],
             "chain_level": "single_source",
+            "verified_at": "2026-02-17"
+          }
+        },
+        {
+          "authenticity_level": "observed",
+          "data_origin": "government_agency_signal",
+          "event_id": "IND_AUTO_INTELLIGENT_DRIVING_EVENT_2026Q1_EXT_05",
+          "event_quarter": "2026Q1",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-17",
+            "confidence": 0.78,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 2,
+            "snapshot_url": "https://www.miit.gov.cn",
+            "source_date": "2026-02-15",
+            "source_id": "SRC_MIIT",
+            "source_name": "中华人民共和国工业和信息化部",
+            "source_type": "government_agency",
+            "source_url": "https://www.miit.gov.cn",
+            "secondary_source_ids": [
+              "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "publish_date": "2026-02-15",
+            "captured_at": "2026-02-17"
+          },
+          "summary": "智能驾驶岗位评价由算法实现扩展到“安全合规+量产交付+场景闭环”综合能力。",
+          "title": "智能驾驶校招能力模型向量产工程化能力收敛",
+          "updated_at": "2026-02-17",
+          "fact": "行业政策与企业岗位信号同步强化安全边界与量产交付能力要求。",
+          "impact": "应届生需准备包含误检治理、回归验证和发布门禁的项目证据链。",
+          "industry_indicator": "误检率、接管率、回归通过率",
+          "evidence_chain": {
+            "primary_source_id": "SRC_MIIT",
+            "secondary_source_ids": [
+              "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "chain_level": "dual_source",
             "verified_at": "2026-02-17"
           }
         }

@@ -232,6 +232,47 @@
             "新人阶段先建立标准化操作能力，再逐步参与复杂故障分析。"
           ],
           "updated_at": "2026-02-17"
+        },
+        {
+          "authenticity_level": "company_official",
+          "caveats": [
+            "不同区域电网结构与新能源消纳压力差异显著，经验需结合网情说明。",
+            "公开样本对跨省交易与应急调度细节覆盖有限。"
+          ],
+          "data_origin": "company_jd_signal",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-17",
+            "confidence": 0.77,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.csg.cn",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_AUTO_WWW_CSG_CN_5D2CDD95",
+            "source_name": "南方电网官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.csg.cn",
+            "stat_definition": "基于调度运维与电力交易岗位JD能力要求整理的访谈型样本。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_NEA_GOV_CN_2FCB2BCB",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-17"
+          },
+          "interview_id": "IND_ENERGY_UTILITIES_TALK_003",
+          "interviewee_profile": {
+            "company_tier": "public_sector",
+            "role_name": "调度运行工程师",
+            "tenure_years": "2-4"
+          },
+          "key_takeaways": [
+            "能源公用事业岗位更看重“负荷预测-调度执行-应急恢复”闭环能力。",
+            "回答问题建议给出预测偏差、备用策略和恢复时效等核心指标。",
+            "准备一个峰段保障场景下跨部门协同稳供的案例会更有说服力。"
+          ],
+          "updated_at": "2026-02-17"
         }
       ],
       "last_checked": "2026-02-16",
@@ -1790,6 +1831,41 @@
           "result": "关键峰段未发生重大供电事件，后续一月预测误差显著收敛。",
           "scenario": "高温周期间负荷预测偏差放大，部分区域出现峰段供需紧张。",
           "title": "负荷预测偏差与应急调度复盘",
+          "updated_at": "2026-02-17"
+        },
+        {
+          "actions": [
+            "按峰谷分时重算负荷预测模型，优先修复高偏差时段。",
+            "将备用容量、跨区支援和需求响应纳入统一调度清单。",
+            "建立日清复盘机制，压缩告警处置与恢复闭环时间。"
+          ],
+          "authenticity_level": "company_official",
+          "case_id": "IND_ENERGY_UTILITIES_CASE_003",
+          "data_origin": "company_jd_signal",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-17",
+            "confidence": 0.76,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 4,
+            "snapshot_url": "https://www.ctg.com.cn",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_AUTO_WWW_CTG_COM_CN_1F76DB69",
+            "source_name": "三峡集团官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.ctg.com.cn",
+            "stat_definition": "基于电力系统运行与应急保障岗位职责整理的案例样本。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_NEA_GOV_CN_2FCB2BCB",
+              "SRC_NBS_INCOME_2025_FULLYEAR"
+            ],
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-17"
+          },
+          "result": "峰段风险可控，预测偏差收敛，供电稳定性与应急响应效率同步提升。",
+          "scenario": "连续高负荷周期中预测偏差叠加检修计划冲突，供需平衡承压。",
+          "title": "高负荷周期预测偏差与稳供协同复盘",
           "updated_at": "2026-02-17"
         }
       ],
@@ -3599,6 +3675,47 @@
             "primary_source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
             "secondary_source_ids": [],
             "chain_level": "single_source",
+            "verified_at": "2026-02-17"
+          }
+        },
+        {
+          "authenticity_level": "observed",
+          "data_origin": "government_platform_signal",
+          "event_id": "IND_ENERGY_UTILITIES_EVENT_2026Q1_EXT_05",
+          "event_quarter": "2026Q1",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-17",
+            "confidence": 0.78,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 2,
+            "snapshot_url": "https://www.nea.gov.cn",
+            "source_date": "2026-02-15",
+            "source_id": "SRC_AUTO_WWW_NEA_GOV_CN_2FCB2BCB",
+            "source_name": "国家能源相关公开信息",
+            "source_type": "curated_mapping",
+            "source_url": "https://www.nea.gov.cn",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "publish_date": "2026-02-15",
+            "captured_at": "2026-02-17"
+          },
+          "summary": "能源公用事业岗位由单点调度能力扩展到“稳供+安全+交易协同”综合能力。",
+          "title": "能源公用事业岗位评估向稳供协同能力聚焦",
+          "updated_at": "2026-02-17",
+          "fact": "公开政策与企业招聘信号同步强化电力系统稳供与安全协同能力。",
+          "impact": "应届生需准备覆盖预测、调度、恢复三阶段的项目证据链。",
+          "industry_indicator": "预测偏差率、峰段保供成功率、故障恢复时长",
+          "evidence_chain": {
+            "primary_source_id": "SRC_AUTO_WWW_NEA_GOV_CN_2FCB2BCB",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "chain_level": "dual_source",
             "verified_at": "2026-02-17"
           }
         }

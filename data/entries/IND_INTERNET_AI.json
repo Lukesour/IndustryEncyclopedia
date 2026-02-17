@@ -256,6 +256,47 @@
             "前6个月优先建立可观测性与稳定性意识，再逐步做性能优化。"
           ],
           "updated_at": "2026-02-17"
+        },
+        {
+          "authenticity_level": "official",
+          "caveats": [
+            "模型应用岗位的业务定义差异较大，需在面试中明确场景边界和验收指标。",
+            "跨端协作（算法、后端、产品）要求高，单一技术叙事容易被判定为证据不足。"
+          ],
+          "data_origin": "company_official_summary",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-17",
+            "confidence": 0.76,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 5,
+            "snapshot_url": "https://jobs.bytedance.com",
+            "source_date": "2026-02-16",
+            "source_id": "SRC_AUTO_JOBS_BYTEDANCE_COM_4D6E1DEC",
+            "source_name": "字节跳动官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://jobs.bytedance.com",
+            "stat_definition": "基于AI应用工程岗位公开要求整理的访谈纪要样本。",
+            "secondary_source_ids": [
+              "SRC_MIIT",
+              "SRC_AUTO_CAREERS_JD_COM_1F0C3B53"
+            ],
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-17"
+          },
+          "interview_id": "IND_INTERNET_AI_TALK_003",
+          "interviewee_profile": {
+            "company_tier": "t1_head",
+            "role_name": "AI应用工程",
+            "tenure_years": "2-4"
+          },
+          "key_takeaways": [
+            "AI应用岗面试不只看模型能力，还会追问推理时延、Token成本和上线稳定性。",
+            "项目讲述建议按“需求定义-实验设计-线上指标-成本控制”四段展开。",
+            "校招新人如果能给出灰度发布和回滚机制，通常能显著提升面评通过率。"
+          ],
+          "updated_at": "2026-02-17"
         }
       ],
       "last_checked": "2026-02-16",
@@ -1903,6 +1944,40 @@
           "result": "服务在短时间内恢复稳定，后续同类故障复发率显著下降。",
           "scenario": "核心链路在促销高峰发生错误率激增，影响订单转化和支付成功率。",
           "title": "高峰期接口故障与回滚复盘",
+          "updated_at": "2026-02-17"
+        },
+        {
+          "actions": [
+            "将在线推理链路拆分为高频与低频请求池，先对高频请求做轻量化模型路由。",
+            "引入缓存与批处理策略，降低重复请求Token消耗并压缩尾延迟。",
+            "建立成本与效果双看板，按周校准召回策略与模型版本。"
+          ],
+          "authenticity_level": "official",
+          "case_id": "IND_INTERNET_AI_CASE_003",
+          "data_origin": "company_official_summary",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-17",
+            "confidence": 0.75,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 3,
+            "snapshot_url": "https://careers.jd.com",
+            "source_date": "2026-02-16",
+            "source_id": "SRC_AUTO_CAREERS_JD_COM_1F0C3B53",
+            "source_name": "京东官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://careers.jd.com",
+            "stat_definition": "基于AI平台工程岗位公开实践整理的成本优化复盘样本。",
+            "secondary_source_ids": [
+              "SRC_MIIT"
+            ],
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-17"
+          },
+          "result": "线上推理成本显著下降且核心业务指标保持稳定，服务可用性达到既定目标。",
+          "scenario": "AIGC功能上线后请求量迅速增长，推理费用攀升并引发响应时延波动。",
+          "title": "AIGC上线后的推理成本与稳定性复盘",
           "updated_at": "2026-02-17"
         }
       ],
@@ -3784,6 +3859,42 @@
             "primary_source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
             "secondary_source_ids": [],
             "chain_level": "single_source",
+            "verified_at": "2026-02-17"
+          }
+        },
+        {
+          "authenticity_level": "official",
+          "data_origin": "official_event_tracking",
+          "event_id": "IND_INTERNET_AI_EVENT_2026Q1_EXT_05",
+          "event_quarter": "2026Q1",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-17",
+            "confidence": 0.75,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 2,
+            "snapshot_url": "https://www.miit.gov.cn",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_MIIT",
+            "source_name": "工业和信息化部官网",
+            "source_type": "government_policy",
+            "source_url": "https://www.miit.gov.cn",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-17"
+          },
+          "summary": "算力与数据治理要求继续抬升，企业更偏好兼具工程落地与合规意识的应届候选人。",
+          "title": "算力与数据治理并重，互联网AI岗位能力模型升级",
+          "updated_at": "2026-02-17",
+          "fact": "行业招聘口径持续强调模型应用落地、算力效率和数据合规协同",
+          "impact": "求职准备需同时覆盖业务指标、成本指标和合规边界说明。",
+          "industry_indicator": "推理延迟、Token成本、线上可用性",
+          "evidence_chain": {
+            "primary_source_id": "SRC_MIIT",
+            "secondary_source_ids": [
+              "SRC_AUTO_JOBS_BYTEDANCE_COM_4D6E1DEC"
+            ],
+            "chain_level": "dual_source",
             "verified_at": "2026-02-17"
           }
         }

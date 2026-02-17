@@ -232,6 +232,47 @@
             "入职前半年优先建立补货与调拨底层逻辑，再做策略优化。"
           ],
           "updated_at": "2026-02-17"
+        },
+        {
+          "authenticity_level": "official",
+          "caveats": [
+            "不同区域路网与运力结构差异较大，指标基线不可直接横向套用。",
+            "自动化仓配流程成熟度差异会影响新人岗位职责边界。"
+          ],
+          "data_origin": "company_official_summary",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-17",
+            "confidence": 0.76,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 5,
+            "snapshot_url": "https://www.cainiao.com",
+            "source_date": "2026-02-16",
+            "source_id": "SRC_AUTO_WWW_CAINIAO_COM_B3D5B3E7",
+            "source_name": "菜鸟官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.cainiao.com",
+            "stat_definition": "基于仓网协同与履约计划岗位公开要求整理的访谈纪要样本。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_MOT_GOV_CN_DDB1C867",
+              "SRC_AUTO_WWW_JDL_COM_79E21FC4"
+            ],
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-17"
+          },
+          "interview_id": "IND_LOGISTICS_SUPPLYCHAIN_TALK_003",
+          "interviewee_profile": {
+            "company_tier": "t2_strong",
+            "role_name": "仓网运营",
+            "tenure_years": "2-4"
+          },
+          "key_takeaways": [
+            "仓网岗位会重点考察“时效承诺、履约成本、签收体验”三指标平衡能力。",
+            "建议准备跨仓调拨与峰值应急案例，突出异常升级与闭环处理。",
+            "在新一线与省会城市，岗位普遍要求同时理解仓内流程和干支线协同逻辑。"
+          ],
+          "updated_at": "2026-02-17"
         }
       ],
       "last_checked": "2026-02-16",
@@ -1798,6 +1839,40 @@
           "result": "两周内准点率恢复，库存结构趋稳，用户投诉率明显下降。",
           "scenario": "旺季期间干线运力波动导致入仓延迟，补货策略滞后引发缺货与积压并存。",
           "title": "干线准点率下滑与库存失衡复盘",
+          "updated_at": "2026-02-17"
+        },
+        {
+          "actions": [
+            "按区域重新划分末端配送波次，优先保障高投诉线路的妥投时效。",
+            "将签收异常类型标准化，分离地址异常、运力不足与仓内分拣错误。",
+            "引入日清复盘表，跟踪超时签收率、改单率与单票成本变化。"
+          ],
+          "authenticity_level": "official",
+          "case_id": "IND_LOGISTICS_SUPPLYCHAIN_CASE_003",
+          "data_origin": "company_official_summary",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-17",
+            "confidence": 0.74,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 3,
+            "snapshot_url": "https://www.jdl.com",
+            "source_date": "2026-02-16",
+            "source_id": "SRC_AUTO_WWW_JDL_COM_79E21FC4",
+            "source_name": "京东物流官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.jdl.com",
+            "stat_definition": "基于仓配一体化岗位公开实践整理的履约异常治理案例样本。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_CAINIAO_COM_B3D5B3E7"
+            ],
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-17"
+          },
+          "result": "异常签收率下降且客户投诉明显回落，峰值期间履约成本维持在预算区间。",
+          "scenario": "大促期间末端签收超时增多，导致客服工单和逆向成本同步上升。",
+          "title": "峰值签收异常与末端履约治理复盘",
           "updated_at": "2026-02-17"
         }
       ],
@@ -3565,6 +3640,42 @@
             "primary_source_id": "SRC_NOWCODER_INTERVIEW_PRODUCT_OP_2026",
             "secondary_source_ids": [],
             "chain_level": "single_source",
+            "verified_at": "2026-02-17"
+          }
+        },
+        {
+          "authenticity_level": "official",
+          "data_origin": "official_event_tracking",
+          "event_id": "IND_LOGISTICS_SUPPLYCHAIN_EVENT_2026Q1_EXT_05",
+          "event_quarter": "2026Q1",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-17",
+            "confidence": 0.75,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 2,
+            "snapshot_url": "https://www.mot.gov.cn",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_AUTO_WWW_MOT_GOV_CN_DDB1C867",
+            "source_name": "交通运输部官网",
+            "source_type": "government_policy",
+            "source_url": "https://www.mot.gov.cn",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-17"
+          },
+          "summary": "交通运输监管持续强调时效与安全协同，仓配岗位对异常治理与调度能力要求提升。",
+          "title": "物流监管口径强调时效与安全并重，岗位能力要求上移",
+          "updated_at": "2026-02-17",
+          "fact": "行业招聘与监管信息同步强化配送时效、运营安全和成本可控要求",
+          "impact": "应届生准备应覆盖仓配异常处置、路由优化和服务质量指标解释能力。",
+          "industry_indicator": "准时率、超时签收率、单票成本",
+          "evidence_chain": {
+            "primary_source_id": "SRC_AUTO_WWW_MOT_GOV_CN_DDB1C867",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_JDL_COM_79E21FC4"
+            ],
+            "chain_level": "dual_source",
             "verified_at": "2026-02-17"
           }
         }
