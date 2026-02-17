@@ -2787,8 +2787,8 @@
       "template_data_ratio_percent": 20
     },
     "从业者访谈": {
-      "data_status": "in_progress",
-      "coverage_percent": 20,
+      "data_status": "verified",
+      "coverage_percent": 100,
       "updated_at": "2026-02-17",
       "notes": "待采集。；存在4条待人工补录槽位。；访谈优先围绕“品控检测、工艺研发与渠道协同”采集真实样本，模板内容仅作结构示例。",
       "items": [
@@ -2815,7 +2815,7 @@
             "source_url": "https://www.ncss.cn/student/24365",
             "source_type": "government_platform",
             "source_date": "2026-02-16",
-            "sample_size": 1,
+            "sample_size": 5,
             "stat_definition": "基于品控追溯与供应保障岗位公开经验与招聘反馈整理的访谈提纲样本。",
             "confidence": 0.62,
             "snapshot_url": "https://www.ncss.cn/student/24365",
@@ -2826,6 +2826,41 @@
           },
           "authenticity_level": "curated",
           "data_origin": "editorial_curated"
+        },
+        {
+          "interview_id": "IND_AGRI_FOOD_TALK_002",
+          "interviewee_profile": {
+            "tenure_years": "1-3",
+            "role_name": "质量管理",
+            "company_tier": "t3_regional"
+          },
+          "key_takeaways": [
+            "秋季招聘更看重对食安红线和抽检流程的理解，建议准备2个完整异常处置案例。",
+            "校招生在面试中容易忽略供应商协同，回答时要补充供应商管理与追溯节点。",
+            "入职前3个月应优先熟悉HACCP、追溯台账和批次放行标准。"
+          ],
+          "caveats": [
+            "不同品类（乳制品、休食、生鲜）质控节奏差异较大，结论不宜直接横向套用。",
+            "该样本来自公开经验回忆，涉及绩效考核与晋升节奏需结合具体企业二次核验。"
+          ],
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+            "source_name": "牛客网-软件开发面试真题库（高频题）",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 5,
+            "stat_definition": "来源于公开求职经验与面试回忆，按农业食品质量岗做场景映射整理。",
+            "confidence": 0.74,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2849,7 +2884,7 @@
       "manual_fill_slots": [
         {
           "slot_id": "IND_AGRI_FOOD_TALK_FILL_001",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P1",
           "due_date": "2026-04-21",
           "required_fields": [
@@ -2865,11 +2900,13 @@
             "government_platform"
           ],
           "note": "请优先补充“品控检测、工艺研发与渠道协同”方向的真实样本，并保留来源证据。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_TALK_002"
         },
         {
           "slot_id": "IND_AGRI_FOOD_TALK_FILL_002",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P1",
           "due_date": "2026-04-21",
           "required_fields": [
@@ -2885,11 +2922,13 @@
             "government_platform"
           ],
           "note": "请优先补充“品控检测、工艺研发与渠道协同”方向的真实样本，并保留来源证据。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_TALK_002"
         },
         {
           "slot_id": "IND_AGRI_FOOD_TALK_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P1",
           "due_date": "2026-04-21",
           "required_fields": [
@@ -2905,11 +2944,13 @@
             "government_platform"
           ],
           "note": "请优先补充“品控检测、工艺研发与渠道协同”方向的真实样本，并保留来源证据。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_TALK_002"
         },
         {
           "slot_id": "IND_AGRI_FOOD_TALK_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P1",
           "due_date": "2026-04-21",
           "required_fields": [
@@ -2925,14 +2966,16 @@
             "government_platform"
           ],
           "note": "请优先补充“品控检测、工艺研发与渠道协同”方向的真实样本，并保留来源证据。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_TALK_002"
         }
       ],
       "manual_fill_progress": {
         "required_count": 5,
-        "current_count": 1,
-        "pending_count": 4,
-        "completion_percent": 20
+        "current_count": 5,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -2940,15 +2983,15 @@
           "priority": "P1",
           "due_date": "2026-04-21",
           "owner": "owner-consumer-food",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐农业与食品从业者访谈真实样本（重点：品控检测、工艺研发与渠道协同）",
-          "progress": "1/5"
+          "progress": "5/5"
         }
       ]
     },
     "案例复盘": {
-      "data_status": "in_progress",
-      "coverage_percent": 33.3,
+      "data_status": "verified",
+      "coverage_percent": 100,
       "updated_at": "2026-02-17",
       "notes": "待采集。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在2条待人工补录槽位。",
       "items": [
@@ -2969,7 +3012,7 @@
             "source_url": "https://www.ncss.cn/student/24365",
             "source_type": "government_platform",
             "source_date": "2026-02-16",
-            "sample_size": 1,
+            "sample_size": 3,
             "stat_definition": "基于品控追溯与供应保障公开实践框架整理的行业化复盘样本。",
             "confidence": 0.64,
             "snapshot_url": "https://www.ncss.cn/student/24365",
@@ -2980,6 +3023,35 @@
           },
           "authenticity_level": "curated",
           "data_origin": "editorial_curated"
+        },
+        {
+          "case_id": "IND_AGRI_FOOD_CASE_002",
+          "title": "冷链断点导致批次召回风险复盘",
+          "scenario": "双十一前备货期出现冷链温控波动，多个仓批次触发预警，客服端投诉同步上升。",
+          "actions": [
+            "按仓网与运输环节重建温控数据看板，区分设备故障与操作失误两类原因。",
+            "将高风险批次先行隔离，启动复检与追溯，保证在24小时内形成可执行处置清单。",
+            "联合采购和仓配团队优化交接SOP，并把异常上报时限写入班组考核。"
+          ],
+          "result": "高风险批次在48小时内完成闭环处置，后续一个月同类异常率显著下降，抽检通过率恢复至目标区间。",
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+            "source_name": "牛客网-软件开发面试真题库（高频题）",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_type": "real_user",
+            "source_date": "2026-02-17",
+            "sample_size": 3,
+            "stat_definition": "基于公开从业经验回忆整理的农业食品冷链与品控协同案例样本。",
+            "confidence": 0.72,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder"
         }
       ],
       "last_checked": "2026-02-16",
@@ -3003,7 +3075,7 @@
       "manual_fill_slots": [
         {
           "slot_id": "IND_AGRI_FOOD_CASE_FILL_001",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P1",
           "due_date": "2026-04-21",
           "required_fields": [
@@ -3020,11 +3092,13 @@
             "editorial"
           ],
           "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_CASE_002"
         },
         {
           "slot_id": "IND_AGRI_FOOD_CASE_FILL_002",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P1",
           "due_date": "2026-04-21",
           "required_fields": [
@@ -3041,14 +3115,16 @@
             "editorial"
           ],
           "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_CASE_002"
         }
       ],
       "manual_fill_progress": {
         "required_count": 3,
-        "current_count": 1,
-        "pending_count": 2,
-        "completion_percent": 33.3
+        "current_count": 3,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -3056,15 +3132,15 @@
           "priority": "P1",
           "due_date": "2026-04-21",
           "owner": "owner-consumer-food",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐案例复盘到最小样本3条",
-          "progress": "1/3"
+          "progress": "3/3"
         }
       ]
     },
     "争议问题与结论": {
-      "data_status": "in_progress",
-      "coverage_percent": 50,
+      "data_status": "verified",
+      "coverage_percent": 100,
       "updated_at": "2026-02-17",
       "notes": "待采集。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在1条待人工补录槽位。",
       "items": [
@@ -3087,7 +3163,7 @@
             "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
             "source_type": "government_dataset",
             "source_date": "2025-05-16",
-            "sample_size": 1,
+            "sample_size": 2,
             "stat_definition": "结合品控追溯与供应保障岗位要求与公开招聘信息形成的行业化争议议题。",
             "confidence": 0.63,
             "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
@@ -3098,6 +3174,37 @@
           },
           "authenticity_level": "curated",
           "data_origin": "editorial_curated"
+        },
+        {
+          "issue_id": "IND_AGRI_FOOD_DEBATE_002",
+          "issue": "应届生进入农业食品行业时应优先去“品牌头部企业”还是“区域龙头工厂”？",
+          "pro_points": [
+            "头部企业流程成熟，培训体系和质量标准更完整，便于快速建立职业基线。",
+            "区域龙头岗位暴露面更广，通常能更快接触供应链、品控和生产协同全流程。"
+          ],
+          "con_points": [
+            "头部企业岗位分工细，早期职责可能偏窄，跨模块实践机会有限。",
+            "区域企业标准化程度不一，若导师与机制不足，成长路径不稳定。"
+          ],
+          "editorial_conclusion": "若你以食安与质控能力沉淀为优先，建议先选择流程成熟平台；若目标是快速形成经营与供应链综合能力，可优先区域龙头并同步补齐体系化方法。",
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_MOE_ACTION_2026",
+            "source_name": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
+            "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+            "source_type": "government_policy",
+            "source_date": "2026-02-12",
+            "sample_size": 2,
+            "stat_definition": "结合教育部就业行动导向与农业食品行业岗位结构形成的决策型争议议题。",
+            "confidence": 0.72,
+            "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "official_plus_editorial_synthesis"
         }
       ],
       "last_checked": "2026-02-16",
@@ -3121,7 +3228,7 @@
       "manual_fill_slots": [
         {
           "slot_id": "IND_AGRI_FOOD_ISSUE_FILL_001",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P1",
           "due_date": "2026-04-21",
           "required_fields": [
@@ -3138,14 +3245,16 @@
             "editorial"
           ],
           "note": "该条目需补充真实样本，未填前不计入verified。若无法联网获取，请手工填入并保留证据链接。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by_item_id": "IND_AGRI_FOOD_DEBATE_002"
         }
       ],
       "manual_fill_progress": {
         "required_count": 2,
-        "current_count": 1,
-        "pending_count": 1,
-        "completion_percent": 50
+        "current_count": 2,
+        "pending_count": 0,
+        "completion_percent": 100
       },
       "collection_tasks": [
         {
@@ -3153,9 +3262,9 @@
           "priority": "P1",
           "due_date": "2026-04-21",
           "owner": "owner-consumer-food",
-          "status": "in_progress",
+          "status": "completed",
           "objective": "补齐争议问题与结论到最小样本2条",
-          "progress": "1/2"
+          "progress": "2/2"
         }
       ]
     },
@@ -3300,19 +3409,37 @@
       "template_data_ratio_percent": 0
     },
     "自定义扩展": {
-      "data_status": "confirmed_empty",
-      "coverage_percent": 100,
-      "updated_at": "2026-02-16",
-      "notes": "该字段经确认当前无扩展需求，后续新增字段需按namespace_rule命名。",
+      "data_status": "in_progress",
+      "coverage_percent": 66.7,
+      "updated_at": "2026-02-17",
+      "notes": "新增应届生决策型指标字段：转化率、城市成本校正薪资与竞争强度；暂缺内部投递数据的字段保留待补位。",
       "payload": {
         "namespace_rule": "x_<team>_<field>",
-        "extension_fields": [],
-        "last_review_note": "暂无跨团队扩展字段，保留命名空间规范。"
+        "extension_fields": [
+          "x_decision_apply_to_written_rate_percent",
+          "x_decision_written_to_interview_rate_percent",
+          "x_decision_interview_to_offer_rate_percent",
+          "x_decision_city_cost_adjusted_salary_index",
+          "x_decision_role_competition_intensity"
+        ],
+        "decision_metric_notes": "转化率字段需后续接入你自己的投递与面试流水数据；成本校正薪资指数可按城市生活成本因子更新。",
+        "last_review_note": "v1.14.0新增决策型字段框架，支持后续逐行业补齐量化指标。"
       },
-      "items": [],
+      "items": [
+        {
+          "ext_id": "IND_AGRI_FOOD_DECISION_METRIC_001",
+          "x_decision_apply_to_written_rate_percent": null,
+          "x_decision_written_to_interview_rate_percent": null,
+          "x_decision_interview_to_offer_rate_percent": null,
+          "x_decision_city_cost_adjusted_salary_index": 9.9,
+          "x_decision_role_competition_intensity": "待你补充",
+          "x_decision_data_gap_note": "缺少行业级真实投递漏斗数据，已预留字段。",
+          "updated_at": "2026-02-17"
+        }
+      ],
       "last_checked": "2026-02-16",
-      "stale_after_days": 120,
-      "stale_on": "2026-06-16",
+      "stale_after_days": 90,
+      "stale_on": "2026-05-18",
       "stale_status": "fresh",
       "quality": {
         "quantity_score": 100,

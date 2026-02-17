@@ -127,6 +127,21 @@ def stddev($arr):
     p0_pending_total: ([."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P0")|select((.status // "pending_user_fill") | startswith("pending"))]|length),
     p1_pending_total: ([."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P1")|select((.status // "pending_user_fill") | startswith("pending"))]|length),
     p2_pending_total: ([."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P2")|select((.status // "pending_user_fill") | startswith("pending"))]|length)
+  },
+  manual_fill_explainability: {
+    p0_total_slots: ([."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P0")]|length),
+    p0_completed_slots: ([."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P0" and .status=="completed")]|length),
+    p1_total_slots: ([."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P1")]|length),
+    p1_completed_slots: ([."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P1" and .status=="completed")]|length),
+    p2_total_slots: ([."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P2")]|length),
+    p2_completed_slots: ([."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P2" and .status=="completed")]|length)
+  },
+  decision_metrics: {
+    entries_with_decision_fields: ([."行业词条"[]|select(.dynamic["自定义扩展"].payload.extension_fields? != null)]|length),
+    decision_items_total: ([."行业词条"[]|.dynamic["自定义扩展"].items[]?]|length),
+    conversion_fields_filled: ([."行业词条"[]|.dynamic["自定义扩展"].items[]?|select(.x_decision_apply_to_written_rate_percent!=null and .x_decision_written_to_interview_rate_percent!=null and .x_decision_interview_to_offer_rate_percent!=null)]|length),
+    city_cost_salary_filled: ([."行业词条"[]|.dynamic["自定义扩展"].items[]?|select(.x_decision_city_cost_adjusted_salary_index!=null)]|length),
+    competition_fields_filled: ([."行业词条"[]|.dynamic["自定义扩展"].items[]?|select((.x_decision_role_competition_intensity // "") != "" and .x_decision_role_competition_intensity != "待你补充")]|length)
   }
 }' "${DATA_PATH}" > "${REPORT_PATH}"
 
