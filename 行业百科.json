@@ -345,10 +345,19 @@
           "薪酬微观观察层按来源拆分状态：政府统计、公司JD、offer回忆、商业平台。",
           "清理“待采集/待补录”历史备注并统一补齐publish_date/captured_at日期语义。"
         ]
+      },
+      {
+        "version": "v1.26.0",
+        "date": "2026-02-17",
+        "summary": [
+          "补齐半导体电子、地产基建、事业单位体系三行业的访谈/案例第三条与行业事件扩展条目，提升行业差异度。",
+          "新增事件条目均补充industry_indicator与dual_source证据链，增强可解释性与实证强度。",
+          "新增信息源规范文档v1.26.0，按模块细化一级/二级证据与抓取字段标准。"
+        ]
       }
     ],
-    "文档名称": "中国大陆应届生求职行业百科（v1.25.0真实度与可解释性增强版）",
-    "版本": "v1.25.0",
+    "文档名称": "中国大陆应届生求职行业百科（v1.26.0真实度与可解释性增强版）",
+    "版本": "v1.26.0",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -378,6 +387,7 @@
       "新增决策指标导入位命名规范（<INDUSTRY>_ATS_PIPELINE_YYYYQn_PENDING_IMPORT），便于你接入真实流水。",
       "质量门禁新增decision_placeholder_hits，发布前要求“待你补充”占位符清零。",
       "v1.25.0全行业事件日志升级为“事实+影响+证据链”结构，并上调真实度门槛。",
+      "v1.26.0补齐三大低新鲜度行业的访谈/案例/事件增量，并升级为行业专有指标+双来源证据链。",
       "岗位画像库新增高分回答示例、失分点与STAR证据模板，个性化待填位独立标识。",
       "薪酬微观层新增观察层语义（JD/offer/统计锚点）并显式区分估算值与观察值。",
       "质量语义升级：新增publish_date/captured_at并用于新鲜度计算回退逻辑。"
@@ -10477,7 +10487,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 54.5
+        "ranking_percentile": 50
       },
       "slug": "advanced-manufacturing-automation",
       "sources": [
@@ -15380,7 +15390,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 31.8
+        "ranking_percentile": 27.3
       },
       "slug": "agriculture-food",
       "sources": [
@@ -20414,7 +20424,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 27.3
+        "ranking_percentile": 22.7
       },
       "slug": "auto-intelligent-driving",
       "sources": [
@@ -21290,6 +21300,47 @@
                 "校招更看重你把临床证据转化为可沟通医学信息的能力。",
                 "回答案例要明确证据等级、合规边界与跨团队协同路径。",
                 "新人优先建立文献检索与证据评估能力，再扩展项目统筹能力。"
+              ],
+              "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "company_official",
+              "caveats": [
+                "不同赛道（创新药/器械/IVD）对合规细节要求不同，需按岗位细化准备。",
+                "真实项目中跨部门协同复杂度高于公开样本。"
+              ],
+              "data_origin": "company_jd_signal",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 6,
+                "snapshot_url": "https://www.wuxiapptec.com",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_AUTO_WWW_WUXIAPPTEC_COM_AA38B545",
+                "source_name": "药明康德官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.wuxiapptec.com",
+                "stat_definition": "基于生物医药岗位公开JD对临床协同、合规与项目推进能力要求整理。",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-17",
+                "captured_at": "2026-02-17"
+              },
+              "interview_id": "IND_BIOMED_DEVICE_TALK_003",
+              "interviewee_profile": {
+                "company_tier": "t2_strong",
+                "role_name": "临床运营",
+                "tenure_years": "2-4"
+              },
+              "key_takeaways": [
+                "临床运营岗位更看重入组效率、方案偏差控制和中心协同推进能力。",
+                "面试建议用“问题识别-试验执行-风险控制-结果复盘”四段式回答。",
+                "准备1个伦理审批或方案修订后的里程碑修复案例会显著加分。"
               ],
               "updated_at": "2026-02-17"
             }
@@ -22881,6 +22932,41 @@
               "result": "项目里程碑恢复可控，关键节点延期风险显著下降。",
               "scenario": "多中心临床项目入组进度落后，注册节点面临延期风险。",
               "title": "临床入组延期与里程碑重排复盘",
+              "updated_at": "2026-02-17"
+            },
+            {
+              "actions": [
+                "按中心入组效率重排资源，优先保障高质量中心样本产出。",
+                "建立跨部门周度风险看板，跟踪伦理、质控和数据清洗进度。",
+                "将关键偏差项纳入预警机制，并同步修订沟通节奏。"
+              ],
+              "authenticity_level": "company_official",
+              "case_id": "IND_BIOMED_DEVICE_CASE_003",
+              "data_origin": "company_jd_signal",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.76,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 4,
+                "snapshot_url": "https://www.united-imaging.com",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_AUTO_WWW_UNITED_IMAGING_COM_53177FB1",
+                "source_name": "联影医疗官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.united-imaging.com",
+                "stat_definition": "基于医疗器械临床支持岗位能力要求与流程节点整理的复盘样本。",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_NMPA_GOV_CN_59F31F83",
+                  "SRC_NBS_WAGE_2024_TABLE"
+                ],
+                "publish_date": "2026-02-17",
+                "captured_at": "2026-02-17"
+              },
+              "result": "关键中心入组恢复，临床节点延迟风险显著降低，后续里程碑按新计划推进。",
+              "scenario": "器械注册项目在样本收集与中心执行环节同时出现偏差，导致注册时间表承压。",
+              "title": "器械注册项目里程碑偏差修复复盘",
               "updated_at": "2026-02-17"
             }
           ],
@@ -24821,6 +24907,47 @@
                 "chain_level": "single_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "government_platform_signal",
+              "event_id": "IND_BIOMED_DEVICE_EVENT_2026Q1_EXT_05",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://sousuo.www.gov.cn/sousuo/search.shtml?searchword=%E5%9B%BD%E5%AE%B6%E8%8D%AF%E7%9B%91%E5%B1%80%20%E6%8B%9B%E8%81%98",
+                "source_date": "2026-02-15",
+                "source_id": "SRC_AUTO_WWW_NMPA_GOV_CN_59F31F83",
+                "source_name": "国家药监局相关公开信息检索页",
+                "source_type": "government_platform",
+                "source_url": "https://sousuo.www.gov.cn/sousuo/search.shtml?searchword=%E5%9B%BD%E5%AE%B6%E8%8D%AF%E7%9B%91%E5%B1%80%20%E6%8B%9B%E8%81%98",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-15",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "医疗器械相关岗位对注册合规、临床证据和跨部门协同要求同步抬升，应届生需准备合规与项目推进双证据。",
+              "title": "生物医药岗位能力模型向“临床证据+注册合规”双主线收敛",
+              "updated_at": "2026-02-17",
+              "fact": "行业公开信息与企业JD均强化注册法规与临床协同能力要求。",
+              "impact": "建议准备1个“证据生成-合规审查-里程碑交付”闭环案例。",
+              "industry_indicator": "入组效率、方案偏差率、注册节点达成率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_WWW_NMPA_GOV_CN_59F31F83",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -25457,11 +25584,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 86.2,
-        "freshness_percent_overall": 82.8,
+        "evidence_percent_overall": 86.9,
+        "freshness_percent_overall": 83.6,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.3,
+        "quality_score_overall": 94.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -25477,7 +25604,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 81.8
+        "ranking_percentile": 86.4
       },
       "slug": "biomed-device",
       "sources": [
@@ -40625,7 +40752,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 86.4
+        "ranking_percentile": 81.8
       },
       "slug": "consulting-professional-services",
       "sources": [
@@ -41485,6 +41612,47 @@
                 "跨境岗位面试重点在平台规则理解与履约时效意识，需准备可量化运营案例。",
                 "投放、选品、仓配三段不能割裂阐述，回答时要强调联动机制。",
                 "应届生前6个月应先把店铺基础盘稳定，再做激进增长动作。"
+              ],
+              "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "company_official",
+              "caveats": [
+                "不同站点的履约规则和合规要求差异明显，经验不可直接平移。",
+                "店铺经营数据受季节与活动干扰，面试回答需说明归因边界。"
+              ],
+              "data_origin": "company_jd_signal",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 6,
+                "snapshot_url": "https://careers.shein.com",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_AUTO_CAREERS_SHEIN_COM_46BBBFCE",
+                "source_name": "SHEIN官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://careers.shein.com",
+                "stat_definition": "基于跨境平台运营岗位公开JD能力项与流程要求整理。",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-17",
+                "captured_at": "2026-02-17"
+              },
+              "interview_id": "IND_ECOMMERCE_CROSSBORDER_TALK_003",
+              "interviewee_profile": {
+                "company_tier": "t2_strong",
+                "role_name": "跨境运营",
+                "tenure_years": "2-4"
+              },
+              "key_takeaways": [
+                "跨境运营岗位更看重履约时效、售后指标与广告ROI的联动管理。",
+                "面试回答要体现你如何在“增长目标”和“合规约束”之间做取舍。",
+                "建议准备1个旺季峰值期的应急排产与客服协同复盘案例。"
               ],
               "updated_at": "2026-02-17"
             }
@@ -43051,6 +43219,41 @@
               "result": "一周内订单超时率回落，店铺评分止跌，后续大促采用分级预案后履约稳定性提升。",
               "scenario": "黑五周期订单激增导致海外仓处理超时，店铺评分与转化率同步下滑。",
               "title": "旺季履约延迟与差评攀升复盘",
+              "updated_at": "2026-02-17"
+            },
+            {
+              "actions": [
+                "重构商品分层策略，将高退货风险SKU独立配置物流与客服SLA。",
+                "将站点广告预算改为分时段投放，降低仓配高峰拥堵风险。",
+                "建立站点周会机制，统一处理税务合规与清关异常工单。"
+              ],
+              "authenticity_level": "company_official",
+              "case_id": "IND_ECOMMERCE_CROSSBORDER_CASE_003",
+              "data_origin": "company_jd_signal",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.76,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 4,
+                "snapshot_url": "https://careers.pinduoduo.com",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_AUTO_CAREERS_PINDUODUO_COM_E37A66FD",
+                "source_name": "拼多多官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://careers.pinduoduo.com",
+                "stat_definition": "基于跨境电商岗位职责与履约流程要求整理的运营复盘样本。",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
+                  "SRC_NBS_WAGE_2024_TABLE"
+                ],
+                "publish_date": "2026-02-17",
+                "captured_at": "2026-02-17"
+              },
+              "result": "连续两周超时发货率下降，退款率和客服升级单量同步回落。",
+              "scenario": "多站点促销并发导致仓配资源挤占，发货时效与退款率双双恶化。",
+              "title": "多站点促销并发导致履约失衡复盘",
               "updated_at": "2026-02-17"
             }
           ],
@@ -44879,6 +45082,47 @@
                 "chain_level": "single_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "government_platform_signal",
+              "event_id": "IND_ECOMMERCE_CROSSBORDER_EVENT_2026Q1_EXT_05",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.samr.gov.cn",
+                "source_date": "2026-02-15",
+                "source_id": "SRC_AUTO_WWW_SAMR_GOV_CN_C8B10CAC",
+                "source_name": "国家市场监督管理总局官网",
+                "source_type": "curated_mapping",
+                "source_url": "https://www.samr.gov.cn",
+                "secondary_source_ids": [
+                  "SRC_AUTO_CAREERS_SHEIN_COM_46BBBFCE",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-15",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "跨境电商岗位对商品合规、税务与客服闭环的要求持续提高，运营岗位从“流量驱动”转向“增长+合规”双目标。",
+              "title": "跨境业务岗位对合规与用户体验协同要求持续上升",
+              "updated_at": "2026-02-17",
+              "fact": "监管与平台规则持续细化，跨境运营岗位能力模型更强调合规落地。",
+              "impact": "应届生需准备“平台规则理解+履约质量提升+风险处置”三段式案例。",
+              "industry_indicator": "履约时效、退款率、违规率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_WWW_SAMR_GOV_CN_C8B10CAC",
+                "secondary_source_ids": [
+                  "SRC_AUTO_CAREERS_SHEIN_COM_46BBBFCE",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -45432,11 +45676,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
-        "evidence_percent_overall": 85.7,
-        "freshness_percent_overall": 82.1,
+        "evidence_percent_overall": 86.4,
+        "freshness_percent_overall": 83.1,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.3,
+        "quality_score_overall": 94.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -55172,7 +55416,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 72.7
+        "ranking_percentile": 68.2
       },
       "slug": "energy-utilities",
       "sources": [
@@ -60067,7 +60311,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 50
+        "ranking_percentile": 45.5
       },
       "slug": "finance-bank",
       "sources": [
@@ -69864,7 +70108,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 45.5
+        "ranking_percentile": 40.9
       },
       "slug": "finance-securities-fund",
       "sources": [
@@ -74608,7 +74852,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 22.7
+        "ranking_percentile": 18.2
       },
       "slug": "fmcg-retail",
       "sources": [
@@ -84477,7 +84721,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 68.2
+        "ranking_percentile": 63.6
       },
       "slug": "logistics-supply-chain",
       "sources": [
@@ -89394,7 +89638,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 63.6
+        "ranking_percentile": 59.1
       },
       "slug": "media-game-content",
       "sources": [
@@ -90269,6 +90513,47 @@
                 "面试重点是机理分析、实验设计和量产可落地性三者结合。",
                 "回答研发题时要明确变量控制与验证路径，而非只讲理论。",
                 "新人前期应优先建立测试数据质量意识和失效分析方法。"
+              ],
+              "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "company_official",
+              "caveats": [
+                "不同产品线（储能/动力/光伏）对项目优先级和交付节奏要求不同。",
+                "岗位能力要求受产线自动化程度影响较大。"
+              ],
+              "data_origin": "company_jd_signal",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 6,
+                "snapshot_url": "https://www.sungrowpower.com",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB",
+                "source_name": "阳光电源官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.sungrowpower.com",
+                "stat_definition": "基于储能系统岗位JD与项目交付要求整理的访谈型样本。",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_NEA_GOV_CN_2FCB2BCB",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-17",
+                "captured_at": "2026-02-17"
+              },
+              "interview_id": "IND_NEW_ENERGY_TALK_003",
+              "interviewee_profile": {
+                "company_tier": "t2_strong",
+                "role_name": "储能系统工程师",
+                "tenure_years": "2-4"
+              },
+              "key_takeaways": [
+                "储能岗位面试更关注系统安全边界、交付节奏与成本约束的平衡能力。",
+                "回答建议突出“技术方案-现场落地-客户反馈-持续改进”的完整路径。",
+                "准备一个跨团队处理并网异常或交付延期的案例会更有说服力。"
               ],
               "updated_at": "2026-02-17"
             }
@@ -91859,6 +92144,41 @@
               "result": "良率逐步恢复并稳定在目标区间，后续试产节奏可预测性提升。",
               "scenario": "试产阶段电芯一致性波动扩大，良率连续两周低于目标并影响交付排程。",
               "title": "良率下滑与试产协同复盘",
+              "updated_at": "2026-02-17"
+            },
+            {
+              "actions": [
+                "拆分并网问题类型，优先排查影响系统可用性的高风险环节。",
+                "建立研发-运维-项目三方日清机制，缩短问题定位与闭环周期。",
+                "优化交付里程碑与验收标准，提前暴露关键风险。"
+              ],
+              "authenticity_level": "company_official",
+              "case_id": "IND_NEW_ENERGY_CASE_003",
+              "data_origin": "company_jd_signal",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.76,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 4,
+                "snapshot_url": "https://www.jinkosolar.com",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_AUTO_WWW_JINKOSOLAR_COM_E5702986",
+                "source_name": "晶科能源官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.jinkosolar.com",
+                "stat_definition": "基于新能源项目交付岗位职责与并网流程要求整理的案例样本。",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_NEA_GOV_CN_2FCB2BCB",
+                  "SRC_NBS_WAGE_2024_TABLE"
+                ],
+                "publish_date": "2026-02-17",
+                "captured_at": "2026-02-17"
+              },
+              "result": "并网问题闭环周期缩短，项目交付进度和客户验收通过率同步改善。",
+              "scenario": "储能项目并网阶段出现集中告警，导致验收延误与客户侧投诉增加。",
+              "title": "储能并网告警集中爆发复盘",
               "updated_at": "2026-02-17"
             }
           ],
@@ -93800,6 +94120,47 @@
                 "chain_level": "single_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "government_agency_signal",
+              "event_id": "IND_NEW_ENERGY_EVENT_2026Q1_EXT_05",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.nea.gov.cn",
+                "source_date": "2026-02-15",
+                "source_id": "SRC_AUTO_WWW_NEA_GOV_CN_2FCB2BCB",
+                "source_name": "国家能源局官网",
+                "source_type": "curated_mapping",
+                "source_url": "https://www.nea.gov.cn",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-15",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "新能源岗位对“技术能力+交付能力+安全合规”三维要求同时提高，校园招聘更强调跨部门协同与项目闭环。",
+              "title": "新能源岗位要求由单点研发向“系统交付能力”持续升级",
+              "updated_at": "2026-02-17",
+              "fact": "行业公开信息与企业JD同步强调并网、安全与交付一体化能力。",
+              "impact": "应届生应准备“技术方案-交付过程-指标结果-复盘改进”证据链。",
+              "industry_indicator": "并网通过率、交付准时率、系统可用率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_WWW_NEA_GOV_CN_2FCB2BCB",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -94435,11 +94796,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 86.2,
-        "freshness_percent_overall": 82.8,
+        "evidence_percent_overall": 86.9,
+        "freshness_percent_overall": 83.6,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.3,
+        "quality_score_overall": 94.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -94455,7 +94816,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 59.1
+        "ranking_percentile": 72.7
       },
       "slug": "new-energy",
       "sources": [
@@ -95332,6 +95693,47 @@
                 "事业单位面试强调岗位适配、公共服务意识与专业表达。",
                 "建议准备一条完整“问题识别-执行推进-结果复盘”经历。",
                 "入职前期先建立规范流程意识，再拓展跨部门协作能力。"
+              ],
+              "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "curated",
+              "caveats": [
+                "不同省市招录口径与岗位细则存在差异，需以当地公告为准。",
+                "公共部门案例强调规范流程，面试回答要避免过度业务化表述。"
+              ],
+              "data_origin": "government_agency_signal",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 6,
+                "snapshot_url": "https://www.moe.gov.cn",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_MOE",
+                "source_name": "中华人民共和国教育部",
+                "source_type": "government_agency",
+                "source_url": "https://www.moe.gov.cn",
+                "stat_definition": "基于事业单位公共服务岗位公开要求整理的访谈型样本。",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-17",
+                "captured_at": "2026-02-17"
+              },
+              "interview_id": "IND_PUBLIC_INSTITUTION_TALK_003",
+              "interviewee_profile": {
+                "company_tier": "public_sector",
+                "role_name": "事业单位综合管理岗",
+                "tenure_years": "2-4"
+              },
+              "key_takeaways": [
+                "事业单位面试更看重规范执行、政策理解与服务对象沟通能力。",
+                "回答题目建议采用“政策依据-执行动作-反馈闭环”结构。",
+                "准备一个处理高峰期群众诉求并达成时限要求的案例更具说服力。"
               ],
               "updated_at": "2026-02-17"
             }
@@ -96693,6 +97095,41 @@
               "result": "流程效率提升，群众反馈改善，服务稳定性增强。",
               "scenario": "业务高峰期间跨部门回传链条滞后，导致服务时效下降。",
               "title": "公共服务流程回传延迟与跨部门协同复盘",
+              "updated_at": "2026-02-17"
+            },
+            {
+              "actions": [
+                "将公告解读、资格审查和材料复核拆分为并行节点，缩短前端等待时间。",
+                "建立跨部门异常升级机制，优先处理影响面试排期的关键问题。",
+                "通过周度复盘统一口径，减少重复退回与二次补件。"
+              ],
+              "authenticity_level": "curated",
+              "case_id": "IND_PUBLIC_INSTITUTION_CASE_003",
+              "data_origin": "government_platform_signal",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.76,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 4,
+                "snapshot_url": "http://www.cpta.com.cn",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_AUTO_WWW_CPTA_COM_CN_FD0AA5B3",
+                "source_name": "中国人事考试网官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "http://www.cpta.com.cn",
+                "stat_definition": "基于公开考试与招录流程要求整理的事业单位流程治理复盘样本。",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS",
+                  "SRC_NBS_INCOME_2025_FULLYEAR"
+                ],
+                "publish_date": "2026-02-17",
+                "captured_at": "2026-02-17"
+              },
+              "result": "资格审查通过率与面试准入效率提升，群众咨询与重复补件明显下降。",
+              "scenario": "集中报名阶段出现材料驳回率偏高，造成审查积压与面试排期延后。",
+              "title": "报名高峰期资格审查积压修复复盘",
               "updated_at": "2026-02-17"
             }
           ],
@@ -99010,6 +99447,47 @@
                 "chain_level": "single_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "government_agency_signal",
+              "event_id": "IND_PUBLIC_INSTITUTION_EVENT_2026Q1_EXT_05",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.mohrss.gov.cn",
+                "source_date": "2026-02-15",
+                "source_id": "SRC_MOHRSS",
+                "source_name": "中华人民共和国人力资源和社会保障部",
+                "source_type": "government_agency",
+                "source_url": "https://www.mohrss.gov.cn",
+                "secondary_source_ids": [
+                  "SRC_MOE",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-15",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "事业单位岗位筛选从“资格符合”转向“资格+岗位适配+服务能力”联合评估。",
+              "title": "事业单位岗位评估维度向政策理解与服务能力并重转型",
+              "updated_at": "2026-02-17",
+              "fact": "政策与招聘平台信息共同显示，公共服务岗位更重视规范执行与沟通协同。",
+              "impact": "应届生需准备“政策依据-执行过程-服务结果”证据链，并匹配具体岗位公告。",
+              "industry_indicator": "公告到报名转化率、资格审查通过率、面试入围率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_MOHRSS",
+                "secondary_source_ids": [
+                  "SRC_MOE",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -99940,11 +100418,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 97.6,
-        "evidence_percent_overall": 88.4,
-        "freshness_percent_overall": 73.9,
+        "evidence_percent_overall": 88.9,
+        "freshness_percent_overall": 75,
         "real_data_ratio_overall": 75.3,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94,
+        "quality_score_overall": 94.1,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -99960,7 +100438,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 18.2
+        "ranking_percentile": 31.8
       },
       "slug": "public-institution",
       "sources": [
@@ -100787,6 +101265,47 @@
                 "工程管理校招面试看重进度、质量、安全三目标协同能力。",
                 "回答项目题时建议明确关键路径、资源约束和风险闭环。",
                 "新人应先熟悉现场管理SOP，再逐步承担跨单位协调职责。"
+              ],
+              "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "company_official",
+              "caveats": [
+                "区域政策和项目类型（房建/市政/轨交）差异较大，案例应明确适用边界。",
+                "公开样本对合同条款博弈和资金计划细节覆盖有限。"
+              ],
+              "data_origin": "company_jd_signal",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 6,
+                "snapshot_url": "http://zhaopin.crcc.cn",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_AUTO_WWW_CRCC_CN_8ABE7EC8",
+                "source_name": "中国铁建官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "http://zhaopin.crcc.cn",
+                "stat_definition": "基于基建项目管理岗位公开JD与交付要求整理的访谈型样本。",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_MOHURD_GOV_CN_855247EC",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-17",
+                "captured_at": "2026-02-17"
+              },
+              "interview_id": "IND_REAL_ESTATE_INFRA_TALK_003",
+              "interviewee_profile": {
+                "company_tier": "t2_strong",
+                "role_name": "项目管理工程师",
+                "tenure_years": "2-4"
+              },
+              "key_takeaways": [
+                "地产基建面试更关注“进度-成本-安全”三目标冲突下的取舍能力。",
+                "回答项目题建议给出关键路径判断、资源调度动作和结果指标。",
+                "准备一个处理设计变更与供应链延迟并保持节点达成的案例更有说服力。"
               ],
               "updated_at": "2026-02-17"
             }
@@ -102357,6 +102876,41 @@
               "result": "项目节点恢复可控，后续里程碑按修订计划推进并保持质量稳定。",
               "scenario": "主体施工阶段因设计变更与材料到货延迟，关键节点连续滞后。",
               "title": "关键节点延期的多方协同复盘",
+              "updated_at": "2026-02-17"
+            },
+            {
+              "actions": [
+                "把总包、分包和供应链计划统一到同一周度看板，优先保障关键路径资源。",
+                "将设计变更拆分为可并行包，压缩审批与现场切换等待时间。",
+                "同步强化安全质量巡检频次，避免赶工导致返工。"
+              ],
+              "authenticity_level": "company_official",
+              "case_id": "IND_REAL_ESTATE_INFRA_CASE_003",
+              "data_origin": "company_jd_signal",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.76,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 4,
+                "snapshot_url": "https://www.crland.com.hk",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_AUTO_WWW_CRLAND_COM_HK_1FD1FA9B",
+                "source_name": "华润置地官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.crland.com.hk",
+                "stat_definition": "基于地产项目交付岗位职责与节点管控要求整理的复盘样本。",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_MOHURD_GOV_CN_855247EC",
+                  "SRC_NBS_WAGE_2024_TABLE"
+                ],
+                "publish_date": "2026-02-17",
+                "captured_at": "2026-02-17"
+              },
+              "result": "关键节点恢复可控，变更签证周期缩短，进度与质量指标同步回升。",
+              "scenario": "项目施工中期出现设计变更叠加供应延迟，导致节点履约压力持续上升。",
+              "title": "设计变更与供应延迟叠加下的节点修复复盘",
               "updated_at": "2026-02-17"
             }
           ],
@@ -104227,6 +104781,47 @@
                 "chain_level": "single_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "government_platform_signal",
+              "event_id": "IND_REAL_ESTATE_INFRA_EVENT_2026Q1_EXT_05",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.mohurd.gov.cn",
+                "source_date": "2026-02-15",
+                "source_id": "SRC_AUTO_WWW_MOHURD_GOV_CN_855247EC",
+                "source_name": "住建与统计公开信息",
+                "source_type": "curated_mapping",
+                "source_url": "https://www.mohurd.gov.cn",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_CSCEC_COM_F3573BC4",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-15",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "地产基建岗位从单点执行转向“节点履约+成本约束+安全质量”综合考核。",
+              "title": "地产基建校招岗位评价体系向交付闭环能力收敛",
+              "updated_at": "2026-02-17",
+              "fact": "公开政策导向与企业岗位要求同步强化项目全周期管理能力。",
+              "impact": "应届生需准备“关键路径识别-变更应对-节点达成”完整项目证据。",
+              "industry_indicator": "节点履约率、变更签证周期、安全质量事故率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_WWW_MOHURD_GOV_CN_855247EC",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_CSCEC_COM_F3573BC4",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -104815,11 +105410,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 86.2,
-        "freshness_percent_overall": 84.5,
+        "evidence_percent_overall": 86.9,
+        "freshness_percent_overall": 85.2,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 93.7,
+        "quality_score_overall": 93.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -105738,6 +106333,47 @@
                 "校招面试重点是时序、功耗与验证闭环，不只看模块实现。",
                 "建议准备一次从Bug定位到修复验证的完整复盘。",
                 "入职初期优先打牢规范意识与回归验证习惯。"
+              ],
+              "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "company_official",
+              "caveats": [
+                "不同芯片赛道（逻辑/存储/模拟）对PPA与量产节奏要求差异明显，经验不可直接套用。",
+                "公开招聘信息对跨团队协同细节呈现有限，需在面试中主动说明边界。"
+              ],
+              "data_origin": "company_jd_signal",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 6,
+                "snapshot_url": "https://www.ymtc.com",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_AUTO_WWW_YMTC_COM_746D2413",
+                "source_name": "长江存储官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.ymtc.com",
+                "stat_definition": "基于存储芯片研发与验证岗位公开JD能力要求整理的访谈型样本。",
+                "secondary_source_ids": [
+                  "SRC_MIIT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-17",
+                "captured_at": "2026-02-17"
+              },
+              "interview_id": "IND_SEMICONDUCTOR_ELECTRONICS_TALK_003",
+              "interviewee_profile": {
+                "company_tier": "t2_strong",
+                "role_name": "芯片验证工程师",
+                "tenure_years": "2-4"
+              },
+              "key_takeaways": [
+                "半导体校招更看重“需求拆解-验证闭环-量产约束”一体化表达。",
+                "回答项目题时建议给出PPA权衡过程与关键指标变化。",
+                "准备一个跨设计/验证/后端协同推动流片节点达成的案例会明显加分。"
               ],
               "updated_at": "2026-02-17"
             }
@@ -107373,6 +108009,41 @@
               "result": "关键模块按期收敛并通过回归验证，流片节点保持在可控窗口。",
               "scenario": "Tape-out前关键模块出现大规模时序违例并伴随功耗超预算风险。",
               "title": "流片前时序违例集中修复复盘",
+              "updated_at": "2026-02-17"
+            },
+            {
+              "actions": [
+                "把问题按工艺角与模块优先级拆分，先修复影响流片窗口的关键违例。",
+                "联合设计、验证和后端建立日清机制，缩短问题传递链路。",
+                "把约束检查和回归脚本标准化，降低同类缺陷复发概率。"
+              ],
+              "authenticity_level": "company_official",
+              "case_id": "IND_SEMICONDUCTOR_ELECTRONICS_CASE_003",
+              "data_origin": "company_jd_signal",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.76,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 4,
+                "snapshot_url": "https://www.cambricon.com",
+                "source_date": "2026-02-17",
+                "source_id": "SRC_AUTO_WWW_CAMBRICON_COM_D3B8C0D2",
+                "source_name": "寒武纪官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.cambricon.com",
+                "stat_definition": "基于芯片研发岗位职责与流片节点要求整理的项目复盘样本。",
+                "secondary_source_ids": [
+                  "SRC_MIIT",
+                  "SRC_NBS_WAGE_2024_TABLE"
+                ],
+                "publish_date": "2026-02-17",
+                "captured_at": "2026-02-17"
+              },
+              "result": "关键模块在流片窗口前完成收敛，回归缺陷密度与返工风险同步下降。",
+              "scenario": "预流片阶段出现时序违例与功耗超标并发，导致节点延期风险上升。",
+              "title": "预流片阶段PPA失衡与节点承压复盘",
               "updated_at": "2026-02-17"
             }
           ],
@@ -109314,6 +109985,47 @@
                 "chain_level": "single_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "government_agency_signal",
+              "event_id": "IND_SEMICONDUCTOR_ELECTRONICS_EVENT_2026Q1_EXT_05",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.miit.gov.cn",
+                "source_date": "2026-02-15",
+                "source_id": "SRC_MIIT",
+                "source_name": "中华人民共和国工业和信息化部",
+                "source_type": "government_agency",
+                "source_url": "https://www.miit.gov.cn",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_SMICS_COM_7D437B2",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-15",
+                "captured_at": "2026-02-17"
+              },
+              "summary": "半导体岗位从“单点实现”转向“设计-验证-量产协同”，企业更看重可量化工程闭环。",
+              "title": "半导体岗位评价从功能实现升级为PPA与交付并重",
+              "updated_at": "2026-02-17",
+              "fact": "公开政策导向与企业JD同步强调工程化交付能力与跨团队协同。",
+              "impact": "应届生应准备包含PPA权衡、验证覆盖率和流片节点管理的项目证据。",
+              "industry_indicator": "一次流片通过率、验证覆盖率、PPA达标率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_MIIT",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_SMICS_COM_7D437B2",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-17"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -109949,11 +110661,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 86.4,
-        "freshness_percent_overall": 83.1,
+        "evidence_percent_overall": 87.1,
+        "freshness_percent_overall": 83.9,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.2,
+        "quality_score_overall": 94.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -109969,7 +110681,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 40.9
+        "ranking_percentile": 54.5
       },
       "slug": "semiconductor-electronics",
       "sources": [

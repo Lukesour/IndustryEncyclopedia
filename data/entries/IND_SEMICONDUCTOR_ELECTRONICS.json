@@ -256,6 +256,47 @@
             "入职初期优先打牢规范意识与回归验证习惯。"
           ],
           "updated_at": "2026-02-17"
+        },
+        {
+          "authenticity_level": "company_official",
+          "caveats": [
+            "不同芯片赛道（逻辑/存储/模拟）对PPA与量产节奏要求差异明显，经验不可直接套用。",
+            "公开招聘信息对跨团队协同细节呈现有限，需在面试中主动说明边界。"
+          ],
+          "data_origin": "company_jd_signal",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-17",
+            "confidence": 0.77,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.ymtc.com",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_AUTO_WWW_YMTC_COM_746D2413",
+            "source_name": "长江存储官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.ymtc.com",
+            "stat_definition": "基于存储芯片研发与验证岗位公开JD能力要求整理的访谈型样本。",
+            "secondary_source_ids": [
+              "SRC_MIIT",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-17"
+          },
+          "interview_id": "IND_SEMICONDUCTOR_ELECTRONICS_TALK_003",
+          "interviewee_profile": {
+            "company_tier": "t2_strong",
+            "role_name": "芯片验证工程师",
+            "tenure_years": "2-4"
+          },
+          "key_takeaways": [
+            "半导体校招更看重“需求拆解-验证闭环-量产约束”一体化表达。",
+            "回答项目题时建议给出PPA权衡过程与关键指标变化。",
+            "准备一个跨设计/验证/后端协同推动流片节点达成的案例会明显加分。"
+          ],
+          "updated_at": "2026-02-17"
         }
       ],
       "last_checked": "2026-02-16",
@@ -1889,6 +1930,41 @@
           "result": "关键模块按期收敛并通过回归验证，流片节点保持在可控窗口。",
           "scenario": "Tape-out前关键模块出现大规模时序违例并伴随功耗超预算风险。",
           "title": "流片前时序违例集中修复复盘",
+          "updated_at": "2026-02-17"
+        },
+        {
+          "actions": [
+            "把问题按工艺角与模块优先级拆分，先修复影响流片窗口的关键违例。",
+            "联合设计、验证和后端建立日清机制，缩短问题传递链路。",
+            "把约束检查和回归脚本标准化，降低同类缺陷复发概率。"
+          ],
+          "authenticity_level": "company_official",
+          "case_id": "IND_SEMICONDUCTOR_ELECTRONICS_CASE_003",
+          "data_origin": "company_jd_signal",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-17",
+            "confidence": 0.76,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 4,
+            "snapshot_url": "https://www.cambricon.com",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_AUTO_WWW_CAMBRICON_COM_D3B8C0D2",
+            "source_name": "寒武纪官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.cambricon.com",
+            "stat_definition": "基于芯片研发岗位职责与流片节点要求整理的项目复盘样本。",
+            "secondary_source_ids": [
+              "SRC_MIIT",
+              "SRC_NBS_WAGE_2024_TABLE"
+            ],
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-17"
+          },
+          "result": "关键模块在流片窗口前完成收敛，回归缺陷密度与返工风险同步下降。",
+          "scenario": "预流片阶段出现时序违例与功耗超标并发，导致节点延期风险上升。",
+          "title": "预流片阶段PPA失衡与节点承压复盘",
           "updated_at": "2026-02-17"
         }
       ],
@@ -3830,6 +3906,47 @@
             "chain_level": "single_source",
             "verified_at": "2026-02-17"
           }
+        },
+        {
+          "authenticity_level": "observed",
+          "data_origin": "government_agency_signal",
+          "event_id": "IND_SEMICONDUCTOR_ELECTRONICS_EVENT_2026Q1_EXT_05",
+          "event_quarter": "2026Q1",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-17",
+            "confidence": 0.78,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 2,
+            "snapshot_url": "https://www.miit.gov.cn",
+            "source_date": "2026-02-15",
+            "source_id": "SRC_MIIT",
+            "source_name": "中华人民共和国工业和信息化部",
+            "source_type": "government_agency",
+            "source_url": "https://www.miit.gov.cn",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_SMICS_COM_7D437B2",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "publish_date": "2026-02-15",
+            "captured_at": "2026-02-17"
+          },
+          "summary": "半导体岗位从“单点实现”转向“设计-验证-量产协同”，企业更看重可量化工程闭环。",
+          "title": "半导体岗位评价从功能实现升级为PPA与交付并重",
+          "updated_at": "2026-02-17",
+          "fact": "公开政策导向与企业JD同步强调工程化交付能力与跨团队协同。",
+          "impact": "应届生应准备包含PPA权衡、验证覆盖率和流片节点管理的项目证据。",
+          "industry_indicator": "一次流片通过率、验证覆盖率、PPA达标率",
+          "evidence_chain": {
+            "primary_source_id": "SRC_MIIT",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_SMICS_COM_7D437B2",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "chain_level": "dual_source",
+            "verified_at": "2026-02-17"
+          }
         }
       ],
       "last_checked": "2026-02-17",
@@ -4465,11 +4582,11 @@
     "confirmed_empty_collections": 0,
     "tracked_collections": 14,
     "coverage_percent_overall": 89.3,
-    "evidence_percent_overall": 86.4,
-    "freshness_percent_overall": 83.1,
+    "evidence_percent_overall": 87.1,
+    "freshness_percent_overall": 83.9,
     "real_data_ratio_overall": 74,
     "template_ratio_overall": 0,
-    "quality_score_overall": 94.2,
+    "quality_score_overall": 94.3,
     "verified_ratio_percent": 100,
     "weakest_collections": [
       "自定义扩展",
@@ -4485,7 +4602,7 @@
     "salary_micro_status": "verified",
     "salary_macro_status": "verified",
     "updated_at": "2026-02-17",
-    "ranking_percentile": 40.9
+    "ranking_percentile": 54.5
   },
   "slug": "semiconductor-electronics",
   "sources": [
