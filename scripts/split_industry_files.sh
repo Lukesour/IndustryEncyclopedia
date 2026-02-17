@@ -17,6 +17,7 @@ jq '{
   generated_at: now | strftime("%Y-%m-%dT%H:%M:%SZ"),
   source_file: input_filename,
   version: ."文档元数据"."版本",
+  release_date: ."文档元数据"."发布日期",
   entries: ([."行业索引"[] | . + {file_path:("entries/" + .industry_id + ".json")}])
 }' "${DATA_PATH}" > "${OUT_DIR}/index.json"
 
