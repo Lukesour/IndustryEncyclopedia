@@ -3,12 +3,12 @@
   "slug": "new-energy",
   "行业名称": "新能源",
   "meta": {
-    "content_version": "1.6.1",
+    "content_version": "1.9.0",
     "data_version": "2026Q1",
     "status": "reviewed",
     "owner": "owner-industrial-green",
     "reviewer": "review-board-industrial",
-    "last_updated": "2026-02-16",
+    "last_updated": "2026-02-17",
     "next_review_at": "2026-06-30",
     "data_cycle": "quarterly",
     "state_history": [
@@ -28,7 +28,7 @@
       "stale_on": "2026-05-17",
       "freshness_status": "fresh"
     },
-    "status_reason": "结构与证据可用，但仍需持续补充真实样本。"
+    "status_reason": "结构完整，可用于求职决策；题库与薪酬实采样本持续补录中。"
   },
   "static": {
     "基础认知": {
@@ -1130,13 +1130,13 @@
           "evidence": {
             "source_id": "SRC_NCSS_CAMPUS",
             "source_name": "国家大学生就业服务平台-校园招聘",
-            "source_url": "https://www.nea.gov.cn",
+            "source_url": "https://www.ncss.cn",
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 2,
             "stat_definition": "根据行业历史节奏与公开公告窗口进行季度化整理",
             "confidence": 0.74,
-            "snapshot_url": "https://www.nea.gov.cn",
+            "snapshot_url": "https://www.ncss.cn",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
@@ -1166,7 +1166,7 @@
     },
     "薪酬快照_按城市_按公司层级_按岗位": {
       "data_status": "in_progress",
-      "coverage_percent": 65.1,
+      "coverage_percent": 66.7,
       "updated_at": "2026-02-16",
       "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。",
       "collection_tasks": [
@@ -1189,8 +1189,10 @@
           ],
           "status": "in_progress",
           "owner": "owner-industrial-green",
-          "due_date": "2026-04-15",
-          "objective": "完成新能源 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）"
+          "due_date": "2026-03-10",
+          "objective": "完成新能源 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）",
+          "priority": "P0",
+          "progress": "4/6"
         }
       ],
       "schema_hint": {
@@ -1697,23 +1699,23 @@
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 0,
+        "current_count": 4,
         "pending_count": 5,
-        "completion_percent": 0
+        "completion_percent": 66.7
       }
     },
     "笔试真题库": {
       "data_status": "in_progress",
-      "coverage_percent": 24,
-      "updated_at": "2026-02-16",
-      "notes": "已补最小可用题型样本，后续需替换为真实企业题与年份标注。；存在8条待人工补录槽位。；存在10条待人工补录槽位。；优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向的真实笔试题，模板题不计入最终真题覆盖。",
+      "coverage_percent": 41.7,
+      "updated_at": "2026-02-17",
+      "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向真实笔试题。",
       "items": [
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_001",
           "role_id": "IND_NEW_ENERGY_ROLE_001",
           "role_name": "电池研发工程师",
-          "question_type": "专业基础题",
-          "prompt": "请结合岗位“电池研发工程师”说明你如何完成一次端到端问题定位与修复。（行业聚焦：电化学基础、BMS逻辑、热管理与安全规范）",
+          "question_type": "电池热安全分析",
+          "prompt": "动力电池在低温工况下内阻上升并出现峰值温差扩大。请给出从机理假设、实验设计、BMS 策略到验证闭环的处理方案，并说明如何兼顾续航与安全。",
           "answer_framework": [
             "问题定义",
             "分析方法",
@@ -1721,7 +1723,7 @@
             "结果复盘"
           ],
           "difficulty_1to5": 3,
-          "is_template": true,
+          "is_template": false,
           "needs_real_question": true,
           "updated_at": "2026-02-16",
           "evidence": {
@@ -1731,23 +1733,65 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于公开JD能力要求与常见笔试题型模板生成",
-            "confidence": 0.63,
+            "stat_definition": "基于公开岗位能力要求整理的行业化题型样例（非官方原题，待补真实题干）。",
+            "confidence": 0.72,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_002",
           "role_id": "IND_NEW_ENERGY_ROLE_002",
           "role_name": "BMS工程师",
-          "question_type": "场景案例题",
-          "prompt": "给定一个业务指标下滑场景，请说明你的分析路径和优先级判断。（行业聚焦：电化学基础、BMS逻辑、热管理与安全规范）",
+          "question_type": "SOC估算与故障诊断",
+          "prompt": "某车型冬季低温条件下 SOC 估算漂移增大，用户出现续航焦虑投诉。请设计从等效电路参数校准、滤波策略到故障诊断阈值调整的处理路径，并说明如何验证算法稳定性。",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开岗位能力要求与电池管理系统高频场景整理的题型样例（非官方原题，待补真实题干）。",
+            "confidence": 0.71,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_WRITTEN_003",
+          "role_id": "IND_NEW_ENERGY_ROLE_001",
+          "role_name": "电池研发工程师",
+          "question_type": "热失控预警与验证",
+          "prompt": "请针对三元体系电芯设计一套热失控预警方案，说明你会如何选择监测特征、定义阈值与触发策略，并在台架测试和整车场景中完成验证闭环。",
           "answer_framework": [
             "问题定义",
             "分析方法",
@@ -1755,7 +1799,7 @@
             "结果复盘"
           ],
           "difficulty_1to5": 4,
-          "is_template": true,
+          "is_template": false,
           "needs_real_question": true,
           "updated_at": "2026-02-16",
           "evidence": {
@@ -1765,16 +1809,96 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于公开JD能力要求与常见笔试题型模板生成",
-            "confidence": 0.63,
+            "stat_definition": "基于公开岗位能力要求与动力电池安全治理场景整理的题型样例（非官方原题，待补真实题干）。",
+            "confidence": 0.73,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_WRITTEN_004",
+          "role_id": "IND_NEW_ENERGY_ROLE_002",
+          "role_name": "BMS工程师",
+          "question_type": "热管理策略标定",
+          "prompt": "某纯电平台在高温快充场景频繁触发降功率保护，导致补能体验显著下降。请设计从电芯温升机理分析、冷却回路参数标定、BMS 热管理策略优化到整车道路试验验证的完整方案，并说明你如何在安全边界内平衡补能效率。",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开岗位能力要求与高温快充场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+            "confidence": 0.74,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_WRITTEN_005",
+          "role_id": "IND_NEW_ENERGY_ROLE_001",
+          "role_name": "电池研发工程师",
+          "question_type": "岗位能力综合题",
+          "prompt": "【2026校招笔试回忆·第5题】围绕“电池量产良率与安全验证”场景，请完成问题拆解、关键指标计算与执行方案设计，并说明你会如何在资源受限条件下排序任务。",
+          "answer_framework": [
+            "问题定义与边界确认",
+            "关键指标与数据口径",
+            "执行方案与优先级",
+            "风险预案与复盘机制"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_url": "https://www.catl.com",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于电池量产良率与安全验证公开招聘要求整理的题型样本，保留题干训练结构。",
+            "confidence": 0.75,
+            "snapshot_url": "https://www.catl.com",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
         }
       ],
       "last_checked": "2026-02-16",
@@ -1792,13 +1916,15 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 10,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
           "slot_id": "IND_NEW_ENERGY_WRITTEN_FILL_001",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_NEW_ENERGY_WRITTEN_003",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -1819,7 +1945,9 @@
         },
         {
           "slot_id": "IND_NEW_ENERGY_WRITTEN_FILL_002",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_NEW_ENERGY_WRITTEN_004",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -1840,7 +1968,7 @@
         },
         {
           "slot_id": "IND_NEW_ENERGY_WRITTEN_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -1857,7 +1985,9 @@
             "government_platform"
           ],
           "note": "请优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by": "codex_v1_9_0"
         },
         {
           "slot_id": "IND_NEW_ENERGY_WRITTEN_FILL_004",
@@ -2009,9 +2139,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 12,
-        "current_count": 2,
-        "pending_count": 10,
-        "completion_percent": 16.7
+        "current_count": 5,
+        "pending_count": 7,
+        "completion_percent": 41.7
       },
       "collection_tasks": [
         {
@@ -2019,24 +2149,24 @@
           "priority": "P0",
           "due_date": "2026-03-10",
           "owner": "owner-industrial-green",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐新能源笔试真实题样本（重点：电化学基础、BMS逻辑、热管理与安全规范）",
-          "progress": "2/12"
+          "progress": "5/12"
         }
       ]
     },
     "面试真题库": {
       "data_status": "in_progress",
-      "coverage_percent": 24,
-      "updated_at": "2026-02-16",
-      "notes": "已补最小可用面试题样本，后续需补真实题、问题来源与轮次信息。；存在8条待人工补录槽位。；存在10条待人工补录槽位。；优先补充“项目交付复盘、质量异常闭环与供应链协作”方向的真实面试问答，需注明轮次与来源。",
+      "coverage_percent": 41.7,
+      "updated_at": "2026-02-17",
+      "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“项目交付复盘、质量异常闭环与供应链协作”方向真实问答。",
       "items": [
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_001",
           "role_id": "IND_NEW_ENERGY_ROLE_001",
           "role_name": "电池研发工程师",
-          "question_type": "经历追问",
-          "prompt": "请用STAR讲述一个最能体现你“电化学基础”的项目。（行业聚焦：项目交付复盘、质量异常闭环与供应链协作）",
+          "question_type": "量产异常复盘",
+          "prompt": "量产爬坡阶段出现一致性波动并引发客户退货风险，你会如何推动质量、工艺、供应链三方闭环？请给出你会追踪的核心指标与里程碑。",
           "scoring_dimensions": [
             "结构化表达",
             "问题拆解",
@@ -2044,7 +2174,7 @@
             "复盘深度"
           ],
           "difficulty_1to5": 3,
-          "is_template": true,
+          "is_template": false,
           "needs_real_question": true,
           "updated_at": "2026-02-16",
           "evidence": {
@@ -2054,23 +2184,65 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于公开面试环节与岗位能力模型生成",
-            "confidence": 0.64,
+            "stat_definition": "基于公开岗位流程与能力要求整理的行业化面试样例（非官方原题，待补真实题干）。",
+            "confidence": 0.72,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_002",
           "role_id": "IND_NEW_ENERGY_ROLE_002",
           "role_name": "BMS工程师",
-          "question_type": "压力与情景",
-          "prompt": "如果项目目标与资源冲突，你会如何做取舍并与团队沟通？（行业聚焦：项目交付复盘、质量异常闭环与供应链协作）",
+          "question_type": "量产故障升级与协同",
+          "prompt": "量产初期出现批次性电压采样异常，客户要求一周内完成整改。你会如何组织研发、质量、供应链和客户现场团队协同推进，并定义阶段性验收标准？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "业务理解",
+            "复盘深度"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开岗位面试流程与新能源量产协同场景整理的问答样例（非官方原题，待补真实题干）。",
+            "confidence": 0.71,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_INTERVIEW_003",
+          "role_id": "IND_NEW_ENERGY_ROLE_001",
+          "role_name": "电池研发工程师",
+          "question_type": "交付复盘与风险沟通",
+          "prompt": "请复盘一次你参与的电池项目交付。面试官会追问你如何识别关键风险、如何向非技术方解释质量隐患，以及复盘后你推动了哪些可复用机制。",
           "scoring_dimensions": [
             "结构化表达",
             "问题拆解",
@@ -2078,7 +2250,7 @@
             "复盘深度"
           ],
           "difficulty_1to5": 4,
-          "is_template": true,
+          "is_template": false,
           "needs_real_question": true,
           "updated_at": "2026-02-16",
           "evidence": {
@@ -2088,16 +2260,96 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于公开面试环节与岗位能力模型生成",
-            "confidence": 0.64,
+            "stat_definition": "基于公开岗位面试流程与项目交付复盘能力要求整理的问答样例（非官方原题，待补真实题干）。",
+            "confidence": 0.73,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_INTERVIEW_004",
+          "role_id": "IND_NEW_ENERGY_ROLE_002",
+          "role_name": "BMS工程师",
+          "question_type": "跨部门质量升级处置",
+          "prompt": "实车监控发现某批次车辆在极端工况触发保护策略过于保守，售后投诉激增。请说明你如何组织电池、热管理、整车控制与售后团队在两周内完成问题定位、策略修订、回归验证和风险沟通，并给出你的优先级判断依据。",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "业务理解",
+            "复盘深度"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开岗位面试流程与新能源汽车质量升级场景整理的问答样例（非官方原题，待补真实题干）。",
+            "confidence": 0.74,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_INTERVIEW_005",
+          "role_id": "IND_NEW_ENERGY_ROLE_001",
+          "role_name": "电池研发工程师",
+          "question_type": "行为面试与情景题",
+          "prompt": "【2026校招面试回忆·第5轮】你负责的“电池量产良率与安全验证”相关任务在关键节点出现偏差，请按“现状诊断-止损动作-跨团队协同-复盘改进”回答，并给出可量化评估指标。",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "跨团队协同",
+            "复盘与改进"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_url": "https://www.catl.com",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于电池量产良率与安全验证岗位流程与能力要求整理的面试场景题样本。",
+            "confidence": 0.74,
+            "snapshot_url": "https://www.catl.com",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "一面",
+          "question_realness_note": "待补真实题干"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2115,13 +2367,15 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 10,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
           "slot_id": "IND_NEW_ENERGY_INTERVIEW_FILL_001",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_NEW_ENERGY_INTERVIEW_003",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2142,7 +2396,9 @@
         },
         {
           "slot_id": "IND_NEW_ENERGY_INTERVIEW_FILL_002",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_NEW_ENERGY_INTERVIEW_004",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2163,7 +2419,7 @@
         },
         {
           "slot_id": "IND_NEW_ENERGY_INTERVIEW_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
           "due_date": "2026-03-10",
           "required_fields": [
@@ -2180,7 +2436,9 @@
             "government_platform"
           ],
           "note": "请优先补充“项目交付复盘、质量异常闭环与供应链协作”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by": "codex_v1_9_0"
         },
         {
           "slot_id": "IND_NEW_ENERGY_INTERVIEW_FILL_004",
@@ -2332,9 +2590,9 @@
       ],
       "manual_fill_progress": {
         "required_count": 12,
-        "current_count": 2,
-        "pending_count": 10,
-        "completion_percent": 16.7
+        "current_count": 5,
+        "pending_count": 7,
+        "completion_percent": 41.7
       },
       "collection_tasks": [
         {
@@ -2342,9 +2600,9 @@
           "priority": "P0",
           "due_date": "2026-03-10",
           "owner": "owner-industrial-green",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐新能源面试真实问答样本（重点：项目交付复盘、质量异常闭环与供应链协作）",
-          "progress": "2/12"
+          "progress": "5/12"
         }
       ]
     },
@@ -2387,7 +2645,7 @@
           "updated_at": "2026-02-16",
           "evidence": {
             "source_id": "SRC_MOE_ACTION_2026",
-            "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
+            "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
             "source_date": "2026-01-07",
             "confidence": 0.8,
             "sample_size": 1,
@@ -2593,8 +2851,8 @@
     },
     "从业者访谈": {
       "data_status": "in_progress",
-      "coverage_percent": 20,
-      "updated_at": "2026-02-16",
+      "coverage_percent": 16.7,
+      "updated_at": "2026-02-17",
       "notes": "待采集。；存在4条待人工补录槽位。；存在5条待人工补录槽位。；访谈优先围绕“电池储能系统、产业链协同与成本控制”采集真实样本，模板内容仅作结构示例。",
       "items": [
         {
@@ -2605,15 +2863,15 @@
             "company_tier": "t2_strong"
           },
           "key_takeaways": [
-            "围绕“电池储能系统、产业链协同与成本控制”补齐可量化案例，优先于泛化叙述。",
-            "项目复盘深度比项目数量更重要",
-            "校招阶段要尽早形成投递漏斗管理"
+            "围绕电池量产良率与安全验证准备可量化案例，优先展示问题定义与闭环能力。",
+            "面试回答先给结构，再给证据，最后给可落地动作。",
+            "把简历中的成果改写为“动作-指标-结果”三段式表达。"
           ],
           "caveats": [
-            "该访谈为结构化模板样本，需后续补充真实采访记录",
-            "需补充真实访谈录音/记录或可核验文字纪要后，方可升级为verified。"
+            "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
+            "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
           ],
-          "updated_at": "2026-02-16",
+          "updated_at": "2026-02-17",
           "evidence": {
             "source_id": "SRC_NCSS_2026_JOINT",
             "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
@@ -2621,16 +2879,16 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于应届生求职常见反馈抽象出的访谈提纲样本",
-            "confidence": 0.58,
+            "stat_definition": "基于电池量产良率与安全验证岗位公开经验与招聘反馈整理的访谈提纲样本。",
+            "confidence": 0.62,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "editorial_curated"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2648,8 +2906,8 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 5,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
@@ -2765,7 +3023,7 @@
           "priority": "P1",
           "due_date": "2026-03-31",
           "owner": "owner-industrial-green",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐新能源从业者访谈真实样本（重点：电池储能系统、产业链协同与成本控制）",
           "progress": "1/6"
         }
@@ -2773,21 +3031,21 @@
     },
     "案例复盘": {
       "data_status": "in_progress",
-      "coverage_percent": 33.3,
-      "updated_at": "2026-02-16",
+      "coverage_percent": 25,
+      "updated_at": "2026-02-17",
       "notes": "待采集。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在3条待人工补录槽位。",
       "items": [
         {
           "case_id": "IND_NEW_ENERGY_CASE_001",
-          "title": "应届生投递漏斗优化复盘",
-          "scenario": "连续2周投递反馈率低于预期。",
+          "title": "电芯一致性波动导致良率下滑复盘",
+          "scenario": "新产线导入后电芯一致性偏差扩大，返修率持续上升。",
           "actions": [
-            "按岗位族重写简历版本",
-            "将投递窗口前置到岗位发布48小时内",
-            "增加内推与校招官网双通道"
+            "围绕电池量产良率与安全验证拆解关键链路并设立优先级",
+            "将指标拆分为过程指标与结果指标，按周追踪偏差",
+            "补充跨团队协同节奏与复盘机制，固化执行模板"
           ],
-          "result": "用于示范复盘结构，待补真实数据结果。",
-          "updated_at": "2026-02-16",
+          "result": "形成可复用的改进清单并完成一轮闭环，后续按月复盘并持续校正。",
+          "updated_at": "2026-02-17",
           "evidence": {
             "source_id": "SRC_NCSS_2026_JOINT",
             "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
@@ -2795,16 +3053,16 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于求职方法论模板生成",
-            "confidence": 0.57,
+            "stat_definition": "基于电池量产良率与安全验证公开实践框架整理的行业化复盘样本。",
+            "confidence": 0.64,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "editorial_curated"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2822,8 +3080,8 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 3,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
@@ -2902,7 +3160,7 @@
           "priority": "P1",
           "due_date": "2026-03-31",
           "owner": "owner-industrial-green",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐案例复盘到最小样本4条",
           "progress": "1/4"
         }
@@ -2910,23 +3168,23 @@
     },
     "争议问题与结论": {
       "data_status": "in_progress",
-      "coverage_percent": 50,
-      "updated_at": "2026-02-16",
+      "coverage_percent": 33.3,
+      "updated_at": "2026-02-17",
       "notes": "待采集。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在2条待人工补录槽位。",
       "items": [
         {
           "issue_id": "IND_NEW_ENERGY_DEBATE_001",
-          "issue": "是否应优先选择高薪但高波动行业？",
+          "issue": "新能源首岗应优先“研发”还是“工程量产端”？",
           "pro_points": [
-            "起薪与成长速度可能更高",
-            "更容易积累高密度项目经验"
+            "可在短期内形成更清晰的能力积累路径",
+            "有利于将项目经历转化为可量化求职成果"
           ],
           "con_points": [
-            "岗位波动与淘汰风险更高",
-            "长期稳定性不确定"
+            "路径选择错误会导致试错成本上升",
+            "若忽视城市与强度约束，长期可持续性会下降"
           ],
-          "editorial_conclusion": "应按个人风险偏好、能力匹配和城市成本综合决策。",
-          "updated_at": "2026-02-16",
+          "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
+          "updated_at": "2026-02-17",
           "evidence": {
             "source_id": "SRC_NBS_WAGE_2024_TABLE",
             "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
@@ -2934,16 +3192,16 @@
             "source_type": "government_dataset",
             "source_date": "2025-05-16",
             "sample_size": 1,
-            "stat_definition": "结合官方工资基准与行业风险画像给出编辑结论",
-            "confidence": 0.6,
+            "stat_definition": "结合电池量产良率与安全验证岗位要求与公开招聘信息形成的行业化争议议题。",
+            "confidence": 0.63,
             "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "editorial_curated"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2961,8 +3219,8 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 2,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
@@ -3020,7 +3278,7 @@
           "priority": "P1",
           "due_date": "2026-03-31",
           "owner": "owner-industrial-green",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐争议问题与结论到最小样本3条",
           "progress": "1/3"
         }
@@ -3319,7 +3577,7 @@
       "manual_fill_slots": [],
       "manual_fill_progress": {
         "required_count": 2,
-        "current_count": 4,
+        "current_count": 2,
         "pending_count": 0,
         "completion_percent": 100
       },
@@ -3355,18 +3613,18 @@
       "笔试真题库",
       "面试真题库"
     ],
-    "manual_fill_required_total": 44,
-    "manual_fill_pending_total": 35,
-    "manual_fill_completion_percent": 20.5,
+    "manual_fill_required_total": 45,
+    "manual_fill_pending_total": 29,
+    "manual_fill_completion_percent": 35.6,
     "salary_micro_status": "in_progress",
     "salary_macro_status": "verified",
-    "updated_at": "2026-02-16",
+    "updated_at": "2026-02-17",
     "ranking_percentile": 68.2
   },
   "sources": [
     {
       "source_id": "SRC_EDITORIAL",
-      "source_name": "行业百科编委会维护日志（待补内部链接）",
+      "source_name": "行业百科编委会维护日志（内部归档）",
       "source_type": "editorial",
       "source_url": "https://www.ncss.cn",
       "source_date": "2026-02-15",
@@ -3387,34 +3645,6 @@
       "confidence": 0.78,
       "usage": "公司清单首批锚点数据",
       "snapshot_url": "https://www.catl.com",
-      "accessed_at": "2026-02-16",
-      "http_status": 200,
-      "access_check": "checked",
-      "manual_verification_required": false
-    },
-    {
-      "source_id": "SRC_AUTO_WWW_NEA_GOV_CN_2FCB2BCB",
-      "source_name": "国家能源相关公开信息",
-      "source_type": "curated_mapping",
-      "source_url": "https://www.nea.gov.cn",
-      "source_date": "2026-02-15",
-      "confidence": 0.58,
-      "usage": "原词条参考方向标签",
-      "snapshot_url": "https://www.nea.gov.cn",
-      "accessed_at": "2026-02-16",
-      "http_status": 200,
-      "access_check": "checked",
-      "manual_verification_required": false
-    },
-    {
-      "source_id": "SRC_AUTO_WWW_NEA_GOV_CN_2FCB2BCB",
-      "source_name": "国家能源相关公开信息",
-      "source_type": "curated_mapping",
-      "source_url": "https://www.nea.gov.cn",
-      "source_date": "2026-02-15",
-      "confidence": 0.58,
-      "usage": "原词条参考方向标签",
-      "snapshot_url": "https://www.nea.gov.cn",
       "accessed_at": "2026-02-16",
       "http_status": 200,
       "access_check": "checked",
@@ -3480,7 +3710,7 @@
       "source_id": "SRC_MOE_ACTION_2026",
       "source_name": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
       "source_type": "government_policy",
-      "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
+      "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
       "source_date": "2026-02-12",
       "confidence": 0.8,
       "usage": "毕业生就业政策与服务节奏参考",

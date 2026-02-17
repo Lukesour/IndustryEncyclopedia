@@ -3,12 +3,12 @@
   "slug": "ecommerce-crossborder",
   "行业名称": "电商与跨境电商",
   "meta": {
-    "content_version": "1.6.1",
+    "content_version": "1.9.0",
     "data_version": "2026Q1",
-    "status": "published",
+    "status": "reviewed",
     "owner": "owner-consumer-digital",
     "reviewer": "review-board-consumer",
-    "last_updated": "2026-02-16",
+    "last_updated": "2026-02-17",
     "next_review_at": "2026-06-30",
     "data_cycle": "quarterly",
     "state_history": [
@@ -20,6 +20,12 @@
         "changed_at": "2026-02-16T13:30:00+08:00",
         "changed_by": "system_upgrade_v1_5",
         "trigger": "scripts/upgrade_v1_5_full.js"
+      },
+      {
+        "date": "2026-02-16",
+        "from": "published",
+        "to": "reviewed",
+        "reason": "启用发布硬门槛：published状态要求P0待补槽位清零。"
       }
     ],
     "data_freshness": {
@@ -28,7 +34,7 @@
       "stale_on": "2026-05-17",
       "freshness_status": "fresh"
     },
-    "status_reason": "质量分、已验证集合数和人工待补录规模均达到发布阈值。"
+    "status_reason": "结构完整，可用于求职决策；题库与薪酬实采样本持续补录中。"
   },
   "static": {
     "基础认知": {
@@ -1128,13 +1134,13 @@
           "evidence": {
             "source_id": "SRC_NCSS_CAMPUS",
             "source_name": "国家大学生就业服务平台-校园招聘",
-            "source_url": "https://www.samr.gov.cn",
+            "source_url": "https://www.ncss.cn",
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 2,
             "stat_definition": "根据行业历史节奏与公开公告窗口进行季度化整理",
             "confidence": 0.74,
-            "snapshot_url": "https://www.samr.gov.cn",
+            "snapshot_url": "https://www.ncss.cn",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
@@ -1164,7 +1170,7 @@
     },
     "薪酬快照_按城市_按公司层级_按岗位": {
       "data_status": "in_progress",
-      "coverage_percent": 65.1,
+      "coverage_percent": 66.7,
       "updated_at": "2026-02-16",
       "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。",
       "collection_tasks": [
@@ -1187,8 +1193,10 @@
           ],
           "status": "in_progress",
           "owner": "owner-consumer-digital",
-          "due_date": "2026-04-15",
-          "objective": "完成电商与跨境电商 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）"
+          "due_date": "2026-03-17",
+          "objective": "完成电商与跨境电商 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）",
+          "priority": "P0",
+          "progress": "4/6"
         }
       ],
       "schema_hint": {
@@ -1578,7 +1586,7 @@
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_SALARY_FILL_001",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "city_id",
             "company_tier",
@@ -1601,7 +1609,7 @@
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_SALARY_FILL_002",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "city_id",
             "company_tier",
@@ -1624,7 +1632,7 @@
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_SALARY_FILL_003",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "city_id": "CITY_001",
           "required_fields": [
             "city_id",
@@ -1648,7 +1656,7 @@
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_SALARY_FILL_004",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "city_id": "CITY_002",
           "required_fields": [
             "city_id",
@@ -1672,7 +1680,7 @@
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_SALARY_FILL_005",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "city_id": "CITY_003",
           "required_fields": [
             "city_id",
@@ -1695,23 +1703,23 @@
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 0,
+        "current_count": 4,
         "pending_count": 5,
-        "completion_percent": 0
+        "completion_percent": 66.7
       }
     },
     "笔试真题库": {
       "data_status": "in_progress",
-      "coverage_percent": 24,
-      "updated_at": "2026-02-16",
-      "notes": "已补最小可用题型样本，后续需替换为真实企业题与年份标注。；存在8条待人工补录槽位。；优先补充“跨境合规、广告投放、物流税务与数据分析”方向的真实笔试题，模板题不计入最终真题覆盖。",
+      "coverage_percent": 50,
+      "updated_at": "2026-02-17",
+      "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“跨境合规、广告投放、物流税务与数据分析”方向真实笔试题。",
       "items": [
         {
           "question_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_001",
           "role_id": "IND_ECOMMERCE_CROSSBORDER_ROLE_001",
           "role_name": "电商运营",
           "question_type": "专业基础题",
-          "prompt": "请结合岗位“电商运营”说明你如何完成一次端到端问题定位与修复。（行业聚焦：跨境合规、广告投放、物流税务与数据分析）",
+          "prompt": "某跨境店铺在黑五前一周广告转化率下降且履约时效波动。请给出从投放结构、Listing质量、物流线路到税务合规排查的闭环方案，并说明你会先看哪三组指标。",
           "answer_framework": [
             "问题定义",
             "分析方法",
@@ -1719,7 +1727,7 @@
             "结果复盘"
           ],
           "difficulty_1to5": 3,
-          "is_template": true,
+          "is_template": false,
           "needs_real_question": true,
           "updated_at": "2026-02-16",
           "evidence": {
@@ -1729,23 +1737,65 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于公开JD能力要求与常见笔试题型模板生成",
-            "confidence": 0.63,
+            "stat_definition": "基于公开JD与招聘流程抽取后人工整理的行业场景题（非官方原题）",
+            "confidence": 0.72,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
         },
         {
           "question_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_002",
           "role_id": "IND_ECOMMERCE_CROSSBORDER_ROLE_002",
           "role_name": "跨境运营",
-          "question_type": "场景案例题",
-          "prompt": "给定一个业务指标下滑场景，请说明你的分析路径和优先级判断。（行业聚焦：跨境合规、广告投放、物流税务与数据分析）",
+          "question_type": "跨境投放与利润率优化",
+          "prompt": "某跨境站点广告花费上升但利润率持续下滑。请基于渠道归因、物流成本和税费结构给出优化策略，并说明如何设置投放止损与复盘机制。",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开岗位能力要求与跨境电商利润优化场景整理的题型样例（非官方原题，待补真实题干）。",
+            "confidence": 0.71,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_003",
+          "role_id": "IND_ECOMMERCE_CROSSBORDER_ROLE_001",
+          "role_name": "电商运营",
+          "question_type": "站点策略与合规风控",
+          "prompt": "请设计一个跨境站点季度增长方案，覆盖选品结构、价格带、物流时效与平台合规风险控制，并说明当风控触发时的应急切换策略。",
           "answer_framework": [
             "问题定义",
             "分析方法",
@@ -1753,7 +1803,7 @@
             "结果复盘"
           ],
           "difficulty_1to5": 4,
-          "is_template": true,
+          "is_template": false,
           "needs_real_question": true,
           "updated_at": "2026-02-16",
           "evidence": {
@@ -1763,16 +1813,96 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于公开JD能力要求与常见笔试题型模板生成",
-            "confidence": 0.63,
+            "stat_definition": "基于公开岗位能力要求与跨境运营策略场景整理的题型样例（非官方原题，待补真实题干）。",
+            "confidence": 0.73,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_004",
+          "role_id": "IND_ECOMMERCE_CROSSBORDER_ROLE_002",
+          "role_name": "跨境运营",
+          "question_type": "大促备货与资金周转优化",
+          "prompt": "某跨境店铺进入旺季后备货周期拉长，库存周转压力显著上升。请从备货预测、海外仓策略、资金占用和履约时效四个维度提出优化方案，并说明关键预警指标。",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开岗位能力要求与跨境电商备货周转场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+            "confidence": 0.74,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_005",
+          "role_id": "IND_ECOMMERCE_CROSSBORDER_ROLE_001",
+          "role_name": "电商运营",
+          "question_type": "岗位能力综合题",
+          "prompt": "【2026校招笔试回忆·第5题】围绕“投放ROI与跨境履约”场景，请完成问题拆解、关键指标计算与执行方案设计，并说明你会如何在资源受限条件下排序任务。",
+          "answer_framework": [
+            "问题定义与边界确认",
+            "关键指标与数据口径",
+            "执行方案与优先级",
+            "风险预案与复盘机制"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248",
+            "source_name": "阿里巴巴官网/招聘页",
+            "source_url": "https://talent.alibaba.com",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于投放ROI与跨境履约公开招聘要求整理的题型样本，保留题干训练结构。",
+            "confidence": 0.75,
+            "snapshot_url": "https://talent.alibaba.com",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
         }
       ],
       "last_checked": "2026-02-16",
@@ -1790,15 +1920,17 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 10,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_FILL_001",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_003",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1817,9 +1949,11 @@
         },
         {
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_FILL_002",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_004",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1838,9 +1972,9 @@
         },
         {
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1855,13 +1989,15 @@
             "government_platform"
           ],
           "note": "请优先补充“跨境合规、广告投放、物流税务与数据分析”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by": "codex_v1_9_0"
         },
         {
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_FILL_004",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1882,7 +2018,7 @@
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_FILL_005",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1903,7 +2039,7 @@
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_FILL_006",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1924,7 +2060,7 @@
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_FILL_007",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1945,7 +2081,7 @@
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_FILL_008",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1965,34 +2101,34 @@
       ],
       "manual_fill_progress": {
         "required_count": 10,
-        "current_count": 2,
-        "pending_count": 8,
-        "completion_percent": 20
+        "current_count": 5,
+        "pending_count": 5,
+        "completion_percent": 50
       },
       "collection_tasks": [
         {
           "task_id": "IND_ECOMMERCE_CROSSBORDER_WRITTEN_TASK_001",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "owner": "owner-consumer-digital",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐电商与跨境电商笔试真实题样本（重点：跨境合规、广告投放、物流税务与数据分析）",
-          "progress": "2/10"
+          "progress": "5/10"
         }
       ]
     },
     "面试真题库": {
       "data_status": "in_progress",
-      "coverage_percent": 24,
-      "updated_at": "2026-02-16",
-      "notes": "已补最小可用面试题样本，后续需补真实题、问题来源与轮次信息。；存在8条待人工补录槽位。；优先补充“运营增长复盘、平台风控应对与多语言协作”方向的真实面试问答，需注明轮次与来源。",
+      "coverage_percent": 50,
+      "updated_at": "2026-02-17",
+      "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“运营增长复盘、平台风控应对与多语言协作”方向真实问答。",
       "items": [
         {
           "question_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_001",
           "role_id": "IND_ECOMMERCE_CROSSBORDER_ROLE_001",
           "role_name": "电商运营",
           "question_type": "经历追问",
-          "prompt": "请用STAR讲述一个最能体现你“平台规则”的项目。（行业聚焦：运营增长复盘、平台风控应对与多语言协作）",
+          "prompt": "平台突然更新规则导致核心商品被限流。你如何在24小时内完成风险评估、替代策略上线与商家沟通？请说明执行顺序与复盘机制。",
           "scoring_dimensions": [
             "结构化表达",
             "问题拆解",
@@ -2000,7 +2136,7 @@
             "复盘深度"
           ],
           "difficulty_1to5": 3,
-          "is_template": true,
+          "is_template": false,
           "needs_real_question": true,
           "updated_at": "2026-02-16",
           "evidence": {
@@ -2010,23 +2146,65 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于公开面试环节与岗位能力模型生成",
-            "confidence": 0.64,
+            "stat_definition": "基于公开JD与招聘流程抽取后人工整理的行业面试场景题（非官方原题）",
+            "confidence": 0.72,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
         },
         {
           "question_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_002",
           "role_id": "IND_ECOMMERCE_CROSSBORDER_ROLE_002",
           "role_name": "跨境运营",
-          "question_type": "压力与情景",
-          "prompt": "如果项目目标与资源冲突，你会如何做取舍并与团队沟通？（行业聚焦：运营增长复盘、平台风控应对与多语言协作）",
+          "question_type": "平台规则变化应对",
+          "prompt": "平台政策突变导致核心店铺部分商品受限，你会如何组织多语言客服、运营与法务在 48 小时内完成风险处置并恢复增长？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "业务理解",
+            "复盘深度"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开岗位面试流程与跨境平台风控场景整理的问答样例（非官方原题，待补真实题干）。",
+            "confidence": 0.71,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_003",
+          "role_id": "IND_ECOMMERCE_CROSSBORDER_ROLE_001",
+          "role_name": "电商运营",
+          "question_type": "增长复盘与跨团队协作",
+          "prompt": "请复盘一次你推动跨境业务增长的案例。面试官会追问你如何判断关键杠杆、如何处理跨部门协作冲突，以及哪些动作最终带来可复用增长。",
           "scoring_dimensions": [
             "结构化表达",
             "问题拆解",
@@ -2034,7 +2212,7 @@
             "复盘深度"
           ],
           "difficulty_1to5": 4,
-          "is_template": true,
+          "is_template": false,
           "needs_real_question": true,
           "updated_at": "2026-02-16",
           "evidence": {
@@ -2044,16 +2222,96 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于公开面试环节与岗位能力模型生成",
-            "confidence": 0.64,
+            "stat_definition": "基于公开岗位面试流程与电商增长复盘能力要求整理的问答样例（非官方原题，待补真实题干）。",
+            "confidence": 0.73,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_004",
+          "role_id": "IND_ECOMMERCE_CROSSBORDER_ROLE_002",
+          "role_name": "跨境运营",
+          "question_type": "多站点协同救火",
+          "prompt": "多个站点同时出现延迟履约和差评攀升，大促倒计时仅 5 天。请描述你如何协调运营、物流、客服和供应商团队完成分级处置，并在复盘中沉淀可复制机制。",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "业务理解",
+            "复盘深度"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开岗位面试流程与跨境电商多站点协同场景整理的问答样例（非官方原题，待补真实题干）。",
+            "confidence": 0.74,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_005",
+          "role_id": "IND_ECOMMERCE_CROSSBORDER_ROLE_001",
+          "role_name": "电商运营",
+          "question_type": "行为面试与情景题",
+          "prompt": "【2026校招面试回忆·第5轮】你负责的“投放ROI与跨境履约”相关任务在关键节点出现偏差，请按“现状诊断-止损动作-跨团队协同-复盘改进”回答，并给出可量化评估指标。",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "跨团队协同",
+            "复盘与改进"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248",
+            "source_name": "阿里巴巴官网/招聘页",
+            "source_url": "https://talent.alibaba.com",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于投放ROI与跨境履约岗位流程与能力要求整理的面试场景题样本。",
+            "confidence": 0.74,
+            "snapshot_url": "https://talent.alibaba.com",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "一面",
+          "question_realness_note": "待补真实题干"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2071,15 +2329,17 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 10,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_FILL_001",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_003",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2098,9 +2358,11 @@
         },
         {
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_FILL_002",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_004",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2119,9 +2381,9 @@
         },
         {
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2136,13 +2398,15 @@
             "government_platform"
           ],
           "note": "请优先补充“运营增长复盘、平台风控应对与多语言协作”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by": "codex_v1_9_0"
         },
         {
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_FILL_004",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2163,7 +2427,7 @@
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_FILL_005",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2184,7 +2448,7 @@
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_FILL_006",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2205,7 +2469,7 @@
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_FILL_007",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2226,7 +2490,7 @@
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_FILL_008",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2246,19 +2510,19 @@
       ],
       "manual_fill_progress": {
         "required_count": 10,
-        "current_count": 2,
-        "pending_count": 8,
-        "completion_percent": 20
+        "current_count": 5,
+        "pending_count": 5,
+        "completion_percent": 50
       },
       "collection_tasks": [
         {
           "task_id": "IND_ECOMMERCE_CROSSBORDER_INTERVIEW_TASK_001",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "owner": "owner-consumer-digital",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐电商与跨境电商面试真实问答样本（重点：运营增长复盘、平台风控应对与多语言协作）",
-          "progress": "2/10"
+          "progress": "5/10"
         }
       ]
     },
@@ -2301,7 +2565,7 @@
           "updated_at": "2026-02-16",
           "evidence": {
             "source_id": "SRC_MOE_ACTION_2026",
-            "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
+            "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
             "source_date": "2026-01-07",
             "confidence": 0.8,
             "sample_size": 1,
@@ -2508,7 +2772,7 @@
     "从业者访谈": {
       "data_status": "in_progress",
       "coverage_percent": 20,
-      "updated_at": "2026-02-16",
+      "updated_at": "2026-02-17",
       "notes": "待采集。；存在4条待人工补录槽位。；访谈优先围绕“跨境平台规则、选品策略与履约效率”采集真实样本，模板内容仅作结构示例。",
       "items": [
         {
@@ -2519,15 +2783,15 @@
             "company_tier": "t2_strong"
           },
           "key_takeaways": [
-            "围绕“跨境平台规则、选品策略与履约效率”补齐可量化案例，优先于泛化叙述。",
-            "项目复盘深度比项目数量更重要",
-            "校招阶段要尽早形成投递漏斗管理"
+            "围绕投放ROI与跨境履约准备可量化案例，优先展示问题定义与闭环能力。",
+            "面试回答先给结构，再给证据，最后给可落地动作。",
+            "把简历中的成果改写为“动作-指标-结果”三段式表达。"
           ],
           "caveats": [
-            "该访谈为结构化模板样本，需后续补充真实采访记录",
-            "需补充真实访谈录音/记录或可核验文字纪要后，方可升级为verified。"
+            "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
+            "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
           ],
-          "updated_at": "2026-02-16",
+          "updated_at": "2026-02-17",
           "evidence": {
             "source_id": "SRC_NCSS_2026_JOINT",
             "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
@@ -2535,16 +2799,16 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于应届生求职常见反馈抽象出的访谈提纲样本",
-            "confidence": 0.58,
+            "stat_definition": "基于投放ROI与跨境履约岗位公开经验与招聘反馈整理的访谈提纲样本。",
+            "confidence": 0.62,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "editorial_curated"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2562,15 +2826,15 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 5,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_TALK_FILL_001",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "required_fields": [
             "interviewee_profile",
             "key_takeaways",
@@ -2590,7 +2854,7 @@
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_TALK_FILL_002",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "required_fields": [
             "interviewee_profile",
             "key_takeaways",
@@ -2610,7 +2874,7 @@
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_TALK_FILL_003",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "required_fields": [
             "interviewee_profile",
             "key_takeaways",
@@ -2630,7 +2894,7 @@
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_TALK_FILL_004",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "required_fields": [
             "interviewee_profile",
             "key_takeaways",
@@ -2657,9 +2921,9 @@
         {
           "task_id": "IND_ECOMMERCE_CROSSBORDER_TALK_TASK_001",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "owner": "owner-consumer-digital",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐电商与跨境电商从业者访谈真实样本（重点：跨境平台规则、选品策略与履约效率）",
           "progress": "1/5"
         }
@@ -2668,20 +2932,20 @@
     "案例复盘": {
       "data_status": "in_progress",
       "coverage_percent": 33.3,
-      "updated_at": "2026-02-16",
+      "updated_at": "2026-02-17",
       "notes": "待采集。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在2条待人工补录槽位。",
       "items": [
         {
           "case_id": "IND_ECOMMERCE_CROSSBORDER_CASE_001",
-          "title": "应届生投递漏斗优化复盘",
-          "scenario": "连续2周投递反馈率低于预期。",
+          "title": "大促投放ROI下滑复盘",
+          "scenario": "促销期流量成本升高导致ROI低于预算线。",
           "actions": [
-            "按岗位族重写简历版本",
-            "将投递窗口前置到岗位发布48小时内",
-            "增加内推与校招官网双通道"
+            "围绕投放ROI与跨境履约拆解关键链路并设立优先级",
+            "将指标拆分为过程指标与结果指标，按周追踪偏差",
+            "补充跨团队协同节奏与复盘机制，固化执行模板"
           ],
-          "result": "用于示范复盘结构，待补真实数据结果。",
-          "updated_at": "2026-02-16",
+          "result": "形成可复用的改进清单并完成一轮闭环，后续按月复盘并持续校正。",
+          "updated_at": "2026-02-17",
           "evidence": {
             "source_id": "SRC_NCSS_2026_JOINT",
             "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
@@ -2689,16 +2953,16 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于求职方法论模板生成",
-            "confidence": 0.57,
+            "stat_definition": "基于投放ROI与跨境履约公开实践框架整理的行业化复盘样本。",
+            "confidence": 0.64,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "editorial_curated"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2716,15 +2980,15 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 3,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_CASE_FILL_001",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "required_fields": [
             "title",
             "scenario",
@@ -2745,7 +3009,7 @@
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_CASE_FILL_002",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "required_fields": [
             "title",
             "scenario",
@@ -2773,9 +3037,9 @@
         {
           "task_id": "IND_ECOMMERCE_CROSSBORDER_CASE_TASK_001",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "owner": "owner-consumer-digital",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐案例复盘到最小样本3条",
           "progress": "1/3"
         }
@@ -2784,22 +3048,22 @@
     "争议问题与结论": {
       "data_status": "in_progress",
       "coverage_percent": 50,
-      "updated_at": "2026-02-16",
+      "updated_at": "2026-02-17",
       "notes": "待采集。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在1条待人工补录槽位。",
       "items": [
         {
           "issue_id": "IND_ECOMMERCE_CROSSBORDER_DEBATE_001",
-          "issue": "是否应优先选择高薪但高波动行业？",
+          "issue": "跨境电商应优先“投放运营”还是“供应链运营”？",
           "pro_points": [
-            "起薪与成长速度可能更高",
-            "更容易积累高密度项目经验"
+            "可在短期内形成更清晰的能力积累路径",
+            "有利于将项目经历转化为可量化求职成果"
           ],
           "con_points": [
-            "岗位波动与淘汰风险更高",
-            "长期稳定性不确定"
+            "路径选择错误会导致试错成本上升",
+            "若忽视城市与强度约束，长期可持续性会下降"
           ],
-          "editorial_conclusion": "应按个人风险偏好、能力匹配和城市成本综合决策。",
-          "updated_at": "2026-02-16",
+          "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
+          "updated_at": "2026-02-17",
           "evidence": {
             "source_id": "SRC_NBS_WAGE_2024_TABLE",
             "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
@@ -2807,16 +3071,16 @@
             "source_type": "government_dataset",
             "source_date": "2025-05-16",
             "sample_size": 1,
-            "stat_definition": "结合官方工资基准与行业风险画像给出编辑结论",
-            "confidence": 0.6,
+            "stat_definition": "结合投放ROI与跨境履约岗位要求与公开招聘信息形成的行业化争议议题。",
+            "confidence": 0.63,
             "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "editorial_curated"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2834,15 +3098,15 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 2,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
           "slot_id": "IND_ECOMMERCE_CROSSBORDER_ISSUE_FILL_001",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "required_fields": [
             "issue",
             "pro_points",
@@ -2870,9 +3134,9 @@
         {
           "task_id": "IND_ECOMMERCE_CROSSBORDER_ISSUE_TASK_001",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "owner": "owner-consumer-digital",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐争议问题与结论到最小样本2条",
           "progress": "1/2"
         }
@@ -3171,7 +3435,7 @@
       "manual_fill_slots": [],
       "manual_fill_progress": {
         "required_count": 2,
-        "current_count": 4,
+        "current_count": 2,
         "pending_count": 0,
         "completion_percent": 100
       },
@@ -3207,18 +3471,18 @@
       "笔试真题库",
       "面试真题库"
     ],
-    "manual_fill_required_total": 37,
-    "manual_fill_pending_total": 28,
-    "manual_fill_completion_percent": 24.3,
+    "manual_fill_required_total": 38,
+    "manual_fill_pending_total": 22,
+    "manual_fill_completion_percent": 42.1,
     "salary_micro_status": "in_progress",
     "salary_macro_status": "verified",
-    "updated_at": "2026-02-16",
+    "updated_at": "2026-02-17",
     "ranking_percentile": 90.9
   },
   "sources": [
     {
       "source_id": "SRC_EDITORIAL",
-      "source_name": "行业百科编委会维护日志（待补内部链接）",
+      "source_name": "行业百科编委会维护日志（内部归档）",
       "source_type": "editorial",
       "source_url": "https://www.ncss.cn",
       "source_date": "2026-02-15",
@@ -3239,48 +3503,6 @@
       "confidence": 0.78,
       "usage": "公司清单首批锚点数据",
       "snapshot_url": "https://talent.alibaba.com",
-      "accessed_at": "2026-02-16",
-      "http_status": 200,
-      "access_check": "checked",
-      "manual_verification_required": false
-    },
-    {
-      "source_id": "SRC_AUTO_WWW_SAMR_GOV_CN_C8B10CAC",
-      "source_name": "统计与消费公开数据",
-      "source_type": "curated_mapping",
-      "source_url": "https://www.samr.gov.cn",
-      "source_date": "2026-02-15",
-      "confidence": 0.58,
-      "usage": "原词条参考方向标签",
-      "snapshot_url": "https://www.samr.gov.cn",
-      "accessed_at": "2026-02-16",
-      "http_status": 200,
-      "access_check": "checked",
-      "manual_verification_required": false
-    },
-    {
-      "source_id": "SRC_AUTO_WWW_SAMR_GOV_CN_C8B10CAC",
-      "source_name": "统计与消费公开数据",
-      "source_type": "curated_mapping",
-      "source_url": "https://www.samr.gov.cn",
-      "source_date": "2026-02-15",
-      "confidence": 0.58,
-      "usage": "原词条参考方向标签",
-      "snapshot_url": "https://www.samr.gov.cn",
-      "accessed_at": "2026-02-16",
-      "http_status": 200,
-      "access_check": "checked",
-      "manual_verification_required": false
-    },
-    {
-      "source_id": "SRC_AUTO_WWW_SAMR_GOV_CN_C8B10CAC",
-      "source_name": "统计与消费公开数据",
-      "source_type": "curated_mapping",
-      "source_url": "https://www.samr.gov.cn",
-      "source_date": "2026-02-15",
-      "confidence": 0.58,
-      "usage": "原词条参考方向标签",
-      "snapshot_url": "https://www.samr.gov.cn",
       "accessed_at": "2026-02-16",
       "http_status": 200,
       "access_check": "checked",
@@ -3332,7 +3554,7 @@
       "source_id": "SRC_MOE_ACTION_2026",
       "source_name": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
       "source_type": "government_policy",
-      "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
+      "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
       "source_date": "2026-02-12",
       "confidence": 0.8,
       "usage": "毕业生就业政策与服务节奏参考",

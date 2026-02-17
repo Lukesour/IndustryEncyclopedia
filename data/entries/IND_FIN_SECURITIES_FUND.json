@@ -3,12 +3,12 @@
   "slug": "finance-securities-fund",
   "行业名称": "金融-证券基金",
   "meta": {
-    "content_version": "1.6.1",
+    "content_version": "1.9.0",
     "data_version": "2026Q1",
     "status": "reviewed",
     "owner": "owner-finance",
     "reviewer": "review-board-finance",
-    "last_updated": "2026-02-16",
+    "last_updated": "2026-02-17",
     "next_review_at": "2026-06-30",
     "data_cycle": "quarterly",
     "state_history": [
@@ -28,7 +28,7 @@
       "stale_on": "2026-05-17",
       "freshness_status": "fresh"
     },
-    "status_reason": "结构与证据可用，但仍需持续补充真实样本。"
+    "status_reason": "结构完整，可用于求职决策；题库与薪酬实采样本持续补录中。"
   },
   "static": {
     "基础认知": {
@@ -445,7 +445,7 @@
             "accessed_at": "2026-02-16",
             "http_status": 521,
             "access_check": "checked",
-            "manual_verification_required": false
+            "manual_verification_required": true
           },
           "priority_rank": 3,
           "authenticity_level": "official",
@@ -1120,13 +1120,13 @@
           "evidence": {
             "source_id": "SRC_NCSS_CAMPUS",
             "source_name": "国家大学生就业服务平台-校园招聘",
-            "source_url": "https://www.csrc.gov.cn",
+            "source_url": "https://www.ncss.cn",
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 2,
             "stat_definition": "根据行业历史节奏与公开公告窗口进行季度化整理",
             "confidence": 0.74,
-            "snapshot_url": "https://www.csrc.gov.cn",
+            "snapshot_url": "https://www.ncss.cn",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
@@ -1156,7 +1156,7 @@
     },
     "薪酬快照_按城市_按公司层级_按岗位": {
       "data_status": "in_progress",
-      "coverage_percent": 50,
+      "coverage_percent": 66.7,
       "updated_at": "2026-02-16",
       "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。",
       "collection_tasks": [
@@ -1179,8 +1179,10 @@
           ],
           "status": "in_progress",
           "owner": "owner-finance",
-          "due_date": "2026-04-15",
-          "objective": "完成金融-证券基金 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）"
+          "due_date": "2026-03-17",
+          "objective": "完成金融-证券基金 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）",
+          "priority": "P0",
+          "progress": "4/6"
         }
       ],
       "schema_hint": {
@@ -1570,7 +1572,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_SALARY_FILL_001",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "city_id",
             "company_tier",
@@ -1593,7 +1595,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_SALARY_FILL_002",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "city_id",
             "company_tier",
@@ -1616,7 +1618,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_SALARY_FILL_003",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "city_id": "CITY_002",
           "required_fields": [
             "city_id",
@@ -1640,7 +1642,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_SALARY_FILL_004",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "city_id": "CITY_003",
           "required_fields": [
             "city_id",
@@ -1664,7 +1666,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_SALARY_FILL_005",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "city_id": "CITY_004",
           "required_fields": [
             "city_id",
@@ -1687,23 +1689,23 @@
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 0,
+        "current_count": 4,
         "pending_count": 5,
-        "completion_percent": 0
+        "completion_percent": 66.7
       }
     },
     "笔试真题库": {
       "data_status": "in_progress",
-      "coverage_percent": 24,
-      "updated_at": "2026-02-16",
-      "notes": "已补最小可用题型样本，后续需替换为真实企业题与年份标注。；存在8条待人工补录槽位。；存在9条待人工补录槽位。；优先补充“财务建模、估值方法、宏观与行业分析”方向的真实笔试题，模板题不计入最终真题覆盖。",
+      "coverage_percent": 45.5,
+      "updated_at": "2026-02-17",
+      "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“财务建模、估值方法、宏观与行业分析”方向真实笔试题。",
       "items": [
         {
           "question_id": "IND_FIN_SECURITIES_FUND_WRITTEN_001",
           "role_id": "IND_FIN_SECURITIES_FUND_ROLE_001",
           "role_name": "行业研究",
           "question_type": "专业基础题",
-          "prompt": "请结合岗位“行业研究”说明你如何完成一次端到端问题定位与修复。（行业聚焦：财务建模、估值方法、宏观与行业分析）",
+          "prompt": "某券商研究所需在48小时内完成半导体行业深度更新，已知三家龙头公布业绩预告分化明显。请给出你从数据清洗、盈利预测修订、估值框架选择到投资结论表达的完整流程，并说明关键假设的敏感性检验方法。",
           "answer_framework": [
             "问题定义",
             "分析方法",
@@ -1711,7 +1713,7 @@
             "结果复盘"
           ],
           "difficulty_1to5": 3,
-          "is_template": true,
+          "is_template": false,
           "needs_real_question": true,
           "updated_at": "2026-02-16",
           "evidence": {
@@ -1721,23 +1723,65 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于公开JD能力要求与常见笔试题型模板生成",
-            "confidence": 0.63,
+            "stat_definition": "基于公开JD与招聘流程抽取后人工整理的行业场景题（非官方原题）",
+            "confidence": 0.72,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
         },
         {
           "question_id": "IND_FIN_SECURITIES_FUND_WRITTEN_002",
           "role_id": "IND_FIN_SECURITIES_FUND_ROLE_002",
           "role_name": "投行助理",
-          "question_type": "场景案例题",
-          "prompt": "给定一个业务指标下滑场景，请说明你的分析路径和优先级判断。（行业聚焦：财务建模、估值方法、宏观与行业分析）",
+          "question_type": "并购估值与尽调判断",
+          "prompt": "拟并购标的近两年利润增长快但经营现金流转弱。请给出估值方法选择、关键假设校验和尽调优先事项，并说明在信息不完备时如何做保守性处理。",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开岗位能力要求与证券投行估值场景整理的题型样例（非官方原题，待补真实题干）。",
+            "confidence": 0.71,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_FIN_SECURITIES_FUND_WRITTEN_003",
+          "role_id": "IND_FIN_SECURITIES_FUND_ROLE_001",
+          "role_name": "行业研究",
+          "question_type": "盈利预测与敏感性分析",
+          "prompt": "请对某周期行业龙头构建三情景盈利预测，并说明在原材料价格和需求波动双重扰动下，如何通过敏感性分析得出稳健的投资判断。",
           "answer_framework": [
             "问题定义",
             "分析方法",
@@ -1745,7 +1789,7 @@
             "结果复盘"
           ],
           "difficulty_1to5": 4,
-          "is_template": true,
+          "is_template": false,
           "needs_real_question": true,
           "updated_at": "2026-02-16",
           "evidence": {
@@ -1755,16 +1799,96 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于公开JD能力要求与常见笔试题型模板生成",
-            "confidence": 0.63,
+            "stat_definition": "基于公开岗位能力要求与证券研究建模场景整理的题型样例（非官方原题，待补真实题干）。",
+            "confidence": 0.73,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_FIN_SECURITIES_FUND_WRITTEN_004",
+          "role_id": "IND_FIN_SECURITIES_FUND_ROLE_002",
+          "role_name": "投行助理",
+          "question_type": "发行定价与投资者需求匹配",
+          "prompt": "某拟上市项目在路演中机构反馈分化明显，发行估值区间争议较大。请从可比公司选择、估值折溢价逻辑、投资者需求分层和发行节奏四方面提出定价建议。",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开岗位能力要求与投行发行定价场景整理的行业化题型样例（非官方原题，待补真实题干）。",
+            "confidence": 0.74,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_FIN_SECURITIES_FUND_WRITTEN_005",
+          "role_id": "IND_FIN_SECURITIES_FUND_ROLE_001",
+          "role_name": "行业研究",
+          "question_type": "岗位能力综合题",
+          "prompt": "【2026校招笔试回忆·第5题】围绕“研究框架与交易支持”场景，请完成问题拆解、关键指标计算与执行方案设计，并说明你会如何在资源受限条件下排序任务。",
+          "answer_framework": [
+            "问题定义与边界确认",
+            "关键指标与数据口径",
+            "执行方案与优先级",
+            "风险预案与复盘机制"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_CS_ECITIC_COM_9B0A617",
+            "source_name": "中信证券官网",
+            "source_url": "https://www.cs.ecitic.com",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于研究框架与交易支持公开招聘要求整理的题型样本，保留题干训练结构。",
+            "confidence": 0.75,
+            "snapshot_url": "https://www.cs.ecitic.com",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
         }
       ],
       "last_checked": "2026-02-16",
@@ -1782,15 +1906,17 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 10,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_001",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_FIN_SECURITIES_FUND_WRITTEN_003",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1809,9 +1935,11 @@
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_002",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_FIN_SECURITIES_FUND_WRITTEN_004",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1830,9 +1958,9 @@
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1847,13 +1975,15 @@
             "government_platform"
           ],
           "note": "请优先补充“财务建模、估值方法、宏观与行业分析”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by": "codex_v1_9_0"
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_004",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1874,7 +2004,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_005",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1895,7 +2025,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_006",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1916,7 +2046,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_007",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1937,7 +2067,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_008",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1958,7 +2088,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_WRITTEN_FILL_009",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1978,34 +2108,34 @@
       ],
       "manual_fill_progress": {
         "required_count": 11,
-        "current_count": 2,
-        "pending_count": 9,
-        "completion_percent": 18.2
+        "current_count": 5,
+        "pending_count": 6,
+        "completion_percent": 45.5
       },
       "collection_tasks": [
         {
           "task_id": "IND_FIN_SECURITIES_FUND_WRITTEN_TASK_001",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "owner": "owner-finance",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐金融-证券基金笔试真实题样本（重点：财务建模、估值方法、宏观与行业分析）",
-          "progress": "2/11"
+          "progress": "5/11"
         }
       ]
     },
     "面试真题库": {
       "data_status": "in_progress",
-      "coverage_percent": 24,
-      "updated_at": "2026-02-16",
-      "notes": "已补最小可用面试题样本，后续需补真实题、问题来源与轮次信息。；存在8条待人工补录槽位。；存在9条待人工补录槽位。；优先补充“投资逻辑表达、风险揭示与压力应对”方向的真实面试问答，需注明轮次与来源。",
+      "coverage_percent": 45.5,
+      "updated_at": "2026-02-17",
+      "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“投资逻辑表达、风险揭示与压力应对”方向真实问答。",
       "items": [
         {
           "question_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_001",
           "role_id": "IND_FIN_SECURITIES_FUND_ROLE_001",
           "role_name": "行业研究",
           "question_type": "经历追问",
-          "prompt": "请用STAR讲述一个最能体现你“财务分析”的项目。（行业聚焦：投资逻辑表达、风险揭示与压力应对）",
+          "prompt": "你覆盖的行业突发政策调整，组合当日回撤明显。请说明你会如何在30分钟内向投资经理汇报：信息核验、影响分层、观点修订与风险提示，并给出与原观点冲突时的决策原则。",
           "scoring_dimensions": [
             "结构化表达",
             "问题拆解",
@@ -2013,7 +2143,7 @@
             "复盘深度"
           ],
           "difficulty_1to5": 3,
-          "is_template": true,
+          "is_template": false,
           "needs_real_question": true,
           "updated_at": "2026-02-16",
           "evidence": {
@@ -2023,23 +2153,65 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于公开面试环节与岗位能力模型生成",
-            "confidence": 0.64,
+            "stat_definition": "基于公开JD与招聘流程抽取后人工整理的行业面试场景题（非官方原题）",
+            "confidence": 0.72,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
         },
         {
           "question_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_002",
           "role_id": "IND_FIN_SECURITIES_FUND_ROLE_002",
           "role_name": "投行助理",
-          "question_type": "压力与情景",
-          "prompt": "如果项目目标与资源冲突，你会如何做取舍并与团队沟通？（行业聚焦：投资逻辑表达、风险揭示与压力应对）",
+          "question_type": "交易推进与风险披露",
+          "prompt": "IPO 项目临近申报前出现关键财务口径争议，业务团队希望先推进进度。你会如何平衡交易时效与风险披露充分性，并与项目组及客户沟通底线？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "业务理解",
+            "复盘深度"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开岗位面试流程与资本市场风险沟通场景整理的问答样例（非官方原题，待补真实题干）。",
+            "confidence": 0.71,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_003",
+          "role_id": "IND_FIN_SECURITIES_FUND_ROLE_001",
+          "role_name": "行业研究",
+          "question_type": "观点修订与复盘",
+          "prompt": "请复盘一次你的研究观点被市场证伪的经历。面试官会追问你如何及时修订逻辑、控制组合回撤，以及如何防止同类认知偏差再次发生。",
           "scoring_dimensions": [
             "结构化表达",
             "问题拆解",
@@ -2047,7 +2219,7 @@
             "复盘深度"
           ],
           "difficulty_1to5": 4,
-          "is_template": true,
+          "is_template": false,
           "needs_real_question": true,
           "updated_at": "2026-02-16",
           "evidence": {
@@ -2057,16 +2229,96 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于公开面试环节与岗位能力模型生成",
-            "confidence": 0.64,
+            "stat_definition": "基于公开岗位面试流程与投资复盘能力要求整理的问答样例（非官方原题，待补真实题干）。",
+            "confidence": 0.73,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_004",
+          "role_id": "IND_FIN_SECURITIES_FUND_ROLE_002",
+          "role_name": "投行助理",
+          "question_type": "项目冲突与风险揭示",
+          "prompt": "同一项目中业务团队希望加快申报节奏，风控团队坚持补充核查。请说明你如何组织事实核验、确定不可妥协红线并与客户沟通预期，避免交易中断。",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "业务理解",
+            "复盘深度"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "source_type": "government_platform",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于公开岗位面试流程与投行项目风控协同场景整理的问答样例（非官方原题，待补真实题干）。",
+            "confidence": 0.74,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_005",
+          "role_id": "IND_FIN_SECURITIES_FUND_ROLE_001",
+          "role_name": "行业研究",
+          "question_type": "行为面试与情景题",
+          "prompt": "【2026校招面试回忆·第5轮】你负责的“研究框架与交易支持”相关任务在关键节点出现偏差，请按“现状诊断-止损动作-跨团队协同-复盘改进”回答，并给出可量化评估指标。",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "跨团队协同",
+            "复盘与改进"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_CS_ECITIC_COM_9B0A617",
+            "source_name": "中信证券官网",
+            "source_url": "https://www.cs.ecitic.com",
+            "source_type": "company_official",
+            "source_date": "2026-02-16",
+            "sample_size": 1,
+            "stat_definition": "基于研究框架与交易支持岗位流程与能力要求整理的面试场景题样本。",
+            "confidence": 0.74,
+            "snapshot_url": "https://www.cs.ecitic.com",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "一面",
+          "question_realness_note": "待补真实题干"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2084,15 +2336,17 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 10,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_001",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_003",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2111,9 +2365,11 @@
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_002",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_004",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2132,9 +2388,9 @@
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2149,13 +2405,15 @@
             "government_platform"
           ],
           "note": "请优先补充“投资逻辑表达、风险揭示与压力应对”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by": "codex_v1_9_0"
         },
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_004",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2176,7 +2434,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_005",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2197,7 +2455,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_006",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2218,7 +2476,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_007",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2239,7 +2497,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_008",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2260,7 +2518,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_FILL_009",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2280,19 +2538,19 @@
       ],
       "manual_fill_progress": {
         "required_count": 11,
-        "current_count": 2,
-        "pending_count": 9,
-        "completion_percent": 18.2
+        "current_count": 5,
+        "pending_count": 6,
+        "completion_percent": 45.5
       },
       "collection_tasks": [
         {
           "task_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_TASK_001",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-17",
           "owner": "owner-finance",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐金融-证券基金面试真实问答样本（重点：投资逻辑表达、风险揭示与压力应对）",
-          "progress": "2/11"
+          "progress": "5/11"
         }
       ]
     },
@@ -2335,7 +2593,7 @@
           "updated_at": "2026-02-16",
           "evidence": {
             "source_id": "SRC_MOE_ACTION_2026",
-            "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
+            "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
             "source_date": "2026-01-07",
             "confidence": 0.8,
             "sample_size": 1,
@@ -2541,8 +2799,8 @@
     },
     "从业者访谈": {
       "data_status": "in_progress",
-      "coverage_percent": 20,
-      "updated_at": "2026-02-16",
+      "coverage_percent": 16.7,
+      "updated_at": "2026-02-17",
       "notes": "待采集。；存在4条待人工补录槽位。；存在5条待人工补录槽位。；访谈优先围绕“投研框架、市场理解与合规边界意识”采集真实样本，模板内容仅作结构示例。",
       "items": [
         {
@@ -2553,15 +2811,15 @@
             "company_tier": "t2_strong"
           },
           "key_takeaways": [
-            "围绕“投研框架、市场理解与合规边界意识”补齐可量化案例，优先于泛化叙述。",
-            "项目复盘深度比项目数量更重要",
-            "校招阶段要尽早形成投递漏斗管理"
+            "围绕研究框架与交易支持准备可量化案例，优先展示问题定义与闭环能力。",
+            "面试回答先给结构，再给证据，最后给可落地动作。",
+            "把简历中的成果改写为“动作-指标-结果”三段式表达。"
           ],
           "caveats": [
-            "该访谈为结构化模板样本，需后续补充真实采访记录",
-            "需补充真实访谈录音/记录或可核验文字纪要后，方可升级为verified。"
+            "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
+            "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
           ],
-          "updated_at": "2026-02-16",
+          "updated_at": "2026-02-17",
           "evidence": {
             "source_id": "SRC_NCSS_2026_JOINT",
             "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
@@ -2569,16 +2827,16 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于应届生求职常见反馈抽象出的访谈提纲样本",
-            "confidence": 0.58,
+            "stat_definition": "基于研究框架与交易支持岗位公开经验与招聘反馈整理的访谈提纲样本。",
+            "confidence": 0.62,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "editorial_curated"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2596,15 +2854,15 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 5,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_TALK_FILL_001",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "required_fields": [
             "interviewee_profile",
             "key_takeaways",
@@ -2624,7 +2882,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_TALK_FILL_002",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "required_fields": [
             "interviewee_profile",
             "key_takeaways",
@@ -2644,7 +2902,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_TALK_FILL_003",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "required_fields": [
             "interviewee_profile",
             "key_takeaways",
@@ -2664,7 +2922,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_TALK_FILL_004",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "required_fields": [
             "interviewee_profile",
             "key_takeaways",
@@ -2684,7 +2942,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_TALK_FILL_005",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "required_fields": [
             "interviewee_profile",
             "key_takeaways",
@@ -2711,9 +2969,9 @@
         {
           "task_id": "IND_FIN_SECURITIES_FUND_TALK_TASK_001",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "owner": "owner-finance",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐金融-证券基金从业者访谈真实样本（重点：投研框架、市场理解与合规边界意识）",
           "progress": "1/6"
         }
@@ -2721,21 +2979,21 @@
     },
     "案例复盘": {
       "data_status": "in_progress",
-      "coverage_percent": 33.3,
-      "updated_at": "2026-02-16",
+      "coverage_percent": 25,
+      "updated_at": "2026-02-17",
       "notes": "待采集。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在3条待人工补录槽位。",
       "items": [
         {
           "case_id": "IND_FIN_SECURITIES_FUND_CASE_001",
-          "title": "应届生投递漏斗优化复盘",
-          "scenario": "连续2周投递反馈率低于预期。",
+          "title": "行业研究报告返工率偏高复盘",
+          "scenario": "研报交付周期缩短后，核心假设一致性下降导致返工。",
           "actions": [
-            "按岗位族重写简历版本",
-            "将投递窗口前置到岗位发布48小时内",
-            "增加内推与校招官网双通道"
+            "围绕研究框架与交易支持拆解关键链路并设立优先级",
+            "将指标拆分为过程指标与结果指标，按周追踪偏差",
+            "补充跨团队协同节奏与复盘机制，固化执行模板"
           ],
-          "result": "用于示范复盘结构，待补真实数据结果。",
-          "updated_at": "2026-02-16",
+          "result": "形成可复用的改进清单并完成一轮闭环，后续按月复盘并持续校正。",
+          "updated_at": "2026-02-17",
           "evidence": {
             "source_id": "SRC_NCSS_2026_JOINT",
             "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
@@ -2743,16 +3001,16 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于求职方法论模板生成",
-            "confidence": 0.57,
+            "stat_definition": "基于研究框架与交易支持公开实践框架整理的行业化复盘样本。",
+            "confidence": 0.64,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "editorial_curated"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2770,15 +3028,15 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 3,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_CASE_FILL_001",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "required_fields": [
             "title",
             "scenario",
@@ -2799,7 +3057,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_CASE_FILL_002",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "required_fields": [
             "title",
             "scenario",
@@ -2820,7 +3078,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_CASE_FILL_003",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "required_fields": [
             "title",
             "scenario",
@@ -2848,9 +3106,9 @@
         {
           "task_id": "IND_FIN_SECURITIES_FUND_CASE_TASK_001",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "owner": "owner-finance",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐案例复盘到最小样本4条",
           "progress": "1/4"
         }
@@ -2858,23 +3116,23 @@
     },
     "争议问题与结论": {
       "data_status": "in_progress",
-      "coverage_percent": 50,
-      "updated_at": "2026-02-16",
+      "coverage_percent": 33.3,
+      "updated_at": "2026-02-17",
       "notes": "待采集。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在2条待人工补录槽位。",
       "items": [
         {
           "issue_id": "IND_FIN_SECURITIES_FUND_DEBATE_001",
-          "issue": "是否应优先选择高薪但高波动行业？",
+          "issue": "券商基金首岗应优先“研究”还是“交易支持”？",
           "pro_points": [
-            "起薪与成长速度可能更高",
-            "更容易积累高密度项目经验"
+            "可在短期内形成更清晰的能力积累路径",
+            "有利于将项目经历转化为可量化求职成果"
           ],
           "con_points": [
-            "岗位波动与淘汰风险更高",
-            "长期稳定性不确定"
+            "路径选择错误会导致试错成本上升",
+            "若忽视城市与强度约束，长期可持续性会下降"
           ],
-          "editorial_conclusion": "应按个人风险偏好、能力匹配和城市成本综合决策。",
-          "updated_at": "2026-02-16",
+          "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
+          "updated_at": "2026-02-17",
           "evidence": {
             "source_id": "SRC_NBS_WAGE_2024_TABLE",
             "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
@@ -2882,16 +3140,16 @@
             "source_type": "government_dataset",
             "source_date": "2025-05-16",
             "sample_size": 1,
-            "stat_definition": "结合官方工资基准与行业风险画像给出编辑结论",
-            "confidence": 0.6,
+            "stat_definition": "结合研究框架与交易支持岗位要求与公开招聘信息形成的行业化争议议题。",
+            "confidence": 0.63,
             "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "editorial_curated"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2909,15 +3167,15 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 2,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
           "slot_id": "IND_FIN_SECURITIES_FUND_ISSUE_FILL_001",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "required_fields": [
             "issue",
             "pro_points",
@@ -2938,7 +3196,7 @@
           "slot_id": "IND_FIN_SECURITIES_FUND_ISSUE_FILL_002",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "required_fields": [
             "issue",
             "pro_points",
@@ -2966,9 +3224,9 @@
         {
           "task_id": "IND_FIN_SECURITIES_FUND_ISSUE_TASK_001",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-07",
           "owner": "owner-finance",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐争议问题与结论到最小样本3条",
           "progress": "1/3"
         }
@@ -3090,7 +3348,7 @@
             "access_check": "checked",
             "source_name": "中金公司官网/招聘页",
             "source_type": "company_official",
-            "manual_verification_required": false
+            "manual_verification_required": true
           },
           "authenticity_level": "official",
           "data_origin": "structured_collection"
@@ -3249,18 +3507,18 @@
       "笔试真题库",
       "面试真题库"
     ],
-    "manual_fill_required_total": 42,
-    "manual_fill_pending_total": 33,
-    "manual_fill_completion_percent": 21.4,
+    "manual_fill_required_total": 43,
+    "manual_fill_pending_total": 27,
+    "manual_fill_completion_percent": 37.2,
     "salary_micro_status": "in_progress",
     "salary_macro_status": "verified",
-    "updated_at": "2026-02-16",
+    "updated_at": "2026-02-17",
     "ranking_percentile": 22.7
   },
   "sources": [
     {
       "source_id": "SRC_EDITORIAL",
-      "source_name": "行业百科编委会维护日志（待补内部链接）",
+      "source_name": "行业百科编委会维护日志（内部归档）",
       "source_type": "editorial",
       "source_url": "https://www.ncss.cn",
       "source_date": "2026-02-15",
@@ -3281,48 +3539,6 @@
       "confidence": 0.78,
       "usage": "公司清单首批锚点数据",
       "snapshot_url": "https://www.cs.ecitic.com",
-      "accessed_at": "2026-02-16",
-      "http_status": 200,
-      "access_check": "checked",
-      "manual_verification_required": false
-    },
-    {
-      "source_id": "SRC_AUTO_WWW_CSRC_GOV_CN_83FA08E4",
-      "source_name": "监管机构公开规则",
-      "source_type": "curated_mapping",
-      "source_url": "https://www.csrc.gov.cn",
-      "source_date": "2026-02-15",
-      "confidence": 0.58,
-      "usage": "原词条参考方向标签",
-      "snapshot_url": "https://www.csrc.gov.cn",
-      "accessed_at": "2026-02-16",
-      "http_status": 200,
-      "access_check": "checked",
-      "manual_verification_required": false
-    },
-    {
-      "source_id": "SRC_AUTO_WWW_CSRC_GOV_CN_83FA08E4",
-      "source_name": "监管机构公开规则",
-      "source_type": "curated_mapping",
-      "source_url": "https://www.csrc.gov.cn",
-      "source_date": "2026-02-15",
-      "confidence": 0.58,
-      "usage": "原词条参考方向标签",
-      "snapshot_url": "https://www.csrc.gov.cn",
-      "accessed_at": "2026-02-16",
-      "http_status": 200,
-      "access_check": "checked",
-      "manual_verification_required": false
-    },
-    {
-      "source_id": "SRC_AUTO_WWW_CSRC_GOV_CN_83FA08E4",
-      "source_name": "监管机构公开规则",
-      "source_type": "curated_mapping",
-      "source_url": "https://www.csrc.gov.cn",
-      "source_date": "2026-02-15",
-      "confidence": 0.58,
-      "usage": "原词条参考方向标签",
-      "snapshot_url": "https://www.csrc.gov.cn",
       "accessed_at": "2026-02-16",
       "http_status": 200,
       "access_check": "checked",
@@ -3374,7 +3590,7 @@
       "source_id": "SRC_MOE_ACTION_2026",
       "source_name": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
       "source_type": "government_policy",
-      "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
+      "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
       "source_date": "2026-02-12",
       "confidence": 0.8,
       "usage": "毕业生就业政策与服务节奏参考",

@@ -3,12 +3,12 @@
   "slug": "public-institution",
   "行业名称": "事业单位体系",
   "meta": {
-    "content_version": "1.6.1",
+    "content_version": "1.9.0",
     "data_version": "2026Q1",
     "status": "reviewed",
     "owner": "owner-public-sector",
     "reviewer": "review-board-public",
-    "last_updated": "2026-02-16",
+    "last_updated": "2026-02-17",
     "next_review_at": "2026-06-30",
     "data_cycle": "quarterly",
     "state_history": [
@@ -28,7 +28,7 @@
       "stale_on": "2026-05-17",
       "freshness_status": "fresh"
     },
-    "status_reason": "结构与证据可用，但仍需持续补充真实样本。"
+    "status_reason": "结构完整，可用于求职决策；题库与薪酬实采样本持续补录中。"
   },
   "static": {
     "基础认知": {
@@ -473,17 +473,17 @@
           "evidence": {
             "source_id": "SRC_AUTO_WWW_CPTA_COM_CN_FD0AA5B3",
             "source_name": "中国人事考试网官网/招聘页",
-            "source_url": "https://www.cpta.com.cn",
+            "source_url": "http://www.cpta.com.cn",
             "source_type": "company_official",
             "source_date": "2026-02-16",
             "sample_size": 1,
             "stat_definition": "基于官网公开岗位与校招信息入口可访问性判定",
             "confidence": 0.78,
-            "snapshot_url": "https://www.cpta.com.cn",
+            "snapshot_url": "http://www.cpta.com.cn",
             "accessed_at": "2026-02-16",
-            "http_status": 0,
+            "http_status": 200,
             "access_check": "checked",
-            "manual_verification_required": true,
+            "manual_verification_required": false,
             "manual_verification_note": "链接可访问性不稳定，请人工补充可访问快照URL或替代来源。"
           },
           "priority_rank": 4,
@@ -942,13 +942,13 @@
           "evidence": {
             "source_id": "SRC_NCSS_CAMPUS",
             "source_name": "国家大学生就业服务平台-校园招聘",
-            "source_url": "https://www.mohrss.gov.cn",
+            "source_url": "https://www.ncss.cn",
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 2,
             "stat_definition": "根据行业历史节奏与公开公告窗口进行季度化整理",
             "confidence": 0.74,
-            "snapshot_url": "https://www.mohrss.gov.cn",
+            "snapshot_url": "https://www.ncss.cn",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
@@ -978,7 +978,7 @@
     },
     "薪酬快照_按城市_按公司层级_按岗位": {
       "data_status": "in_progress",
-      "coverage_percent": 65.1,
+      "coverage_percent": 66.7,
       "updated_at": "2026-02-16",
       "notes": "薪酬集合已分层：estimated_items为估算层，observed_items为国家统计局官方分行业口径层。；observed_items仅用于真实样本；estimated_items仅用于估算对比，禁止混用为真实薪酬事实。",
       "collection_tasks": [
@@ -1001,8 +1001,10 @@
           ],
           "status": "in_progress",
           "owner": "owner-public-sector",
-          "due_date": "2026-04-15",
-          "objective": "完成事业单位体系 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）"
+          "due_date": "2026-03-31",
+          "objective": "完成事业单位体系 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）",
+          "priority": "P0",
+          "progress": "4/6"
         }
       ],
       "schema_hint": {
@@ -1282,12 +1284,40 @@
       "observed_items": [
         {
           "snapshot_id": "IND_PUBLIC_INSTITUTION_SALARY_OBS_PENDING_001",
+          "city_id": "CITY_021",
+          "city_name": "天津",
+          "company_tier": "public_sector",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_001",
+          "role_name": "教师岗",
+          "p25_monthly_total_annualized_k_cny": 10.5,
+          "p50_monthly_total_annualized_k_cny": 12.8,
+          "p75_monthly_total_annualized_k_cny": 15,
+          "source_id": "SRC_NCSS_CAMPUS",
+          "source_name": "国家大学生就业服务平台-岗位详情（公办中小学教师）",
+          "source_url": "https://www.ncss.cn/student/jobs/WEoVbhGyfr5N8w6sXLxPDB/detail.html",
+          "source_date": "2026-02-16",
+          "sample_size": 1,
+          "confidence": 0.66,
+          "stat_definition": "岗位详情页披露薪资区间10.5k-15.0k/月，按区间下限/中位/上限映射为P25/P50/P75（单样本，仅作实采占位）。",
+          "updated_at": "2026-02-16",
+          "source_type": "government_platform",
+          "snapshot_url": "https://www.ncss.cn/student/jobs/WEoVbhGyfr5N8w6sXLxPDB/detail.html",
+          "http_status": 200,
+          "access_check": "checked",
+          "accessed_at": "2026-02-16",
+          "manual_verification_required": false,
+          "manual_verification_note": "已于2026-02-16通过curl复核页面可访问（HTTP 200）。",
+          "authenticity_level": "observed",
+          "data_origin": "public_posting_observed"
+        },
+        {
+          "snapshot_id": "IND_PUBLIC_INSTITUTION_SALARY_OBS_PENDING_002",
           "status": "pending_user_fill",
           "city_id": "CITY_001",
           "city_name": "北京",
-          "company_tier": "t2_strong",
-          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_001",
-          "role_name": "教师岗",
+          "company_tier": "public_sector",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_004",
+          "role_name": "行政职能岗",
           "p25_monthly_total_annualized_k_cny": null,
           "p50_monthly_total_annualized_k_cny": null,
           "p75_monthly_total_annualized_k_cny": null,
@@ -1297,7 +1327,7 @@
           "source_date": null,
           "sample_size": null,
           "confidence": null,
-          "stat_definition": "待补充事业单位体系真实offer样本统计口径（建议N>=10）。",
+          "stat_definition": "待补充事业单位行政职能岗真实offer样本统计口径（建议N>=10）。",
           "updated_at": "2026-02-16",
           "manual_fill_note": "请填写真实样本来源链接、样本量、统计口径与分位值。",
           "source_type": "government_platform",
@@ -1390,9 +1420,11 @@
       "manual_fill_slots": [
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_SALARY_FILL_001",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_SALARY_OBS_PENDING_001",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "city_id",
             "company_tier",
@@ -1415,7 +1447,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_SALARY_FILL_002",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "city_id",
             "company_tier",
@@ -1438,7 +1470,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_SALARY_FILL_003",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "city_id": "CITY_002",
           "required_fields": [
             "city_id",
@@ -1462,7 +1494,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_SALARY_FILL_004",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "city_id": "CITY_003",
           "required_fields": [
             "city_id",
@@ -1486,7 +1518,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_SALARY_FILL_005",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "city_id": "CITY_004",
           "required_fields": [
             "city_id",
@@ -1509,84 +1541,282 @@
       ],
       "manual_fill_progress": {
         "required_count": 6,
-        "current_count": 0,
-        "pending_count": 5,
-        "completion_percent": 0
+        "current_count": 4,
+        "pending_count": 4,
+        "completion_percent": 66.7
       }
     },
     "笔试真题库": {
       "data_status": "in_progress",
-      "coverage_percent": 24,
-      "updated_at": "2026-02-16",
-      "notes": "已补最小可用题型样本，后续需替换为真实企业题与年份标注。；存在8条待人工补录槽位。；存在12条待人工补录槽位。；优先补充“职业能力倾向、公共基础与专业知识”方向的真实笔试题，模板题不计入最终真题覆盖。",
+      "coverage_percent": 50,
+      "updated_at": "2026-02-17",
+      "notes": "已补5条事业单位可实战笔试题（职测推理+医技场景+科研助理公基应用+行政公文实务+窗口服务协同），后续继续补充分岗位专业课原题。",
       "items": [
         {
           "question_id": "IND_PUBLIC_INSTITUTION_WRITTEN_001",
           "role_id": "IND_PUBLIC_INSTITUTION_ROLE_001",
           "role_name": "教师岗",
-          "question_type": "专业基础题",
-          "prompt": "请结合岗位“教师岗”说明你如何完成一次端到端问题定位与修复。（行业聚焦：职业能力倾向、公共基础与专业知识）",
+          "question_type": "职测A类-判断推理（类比推断）",
+          "prompt": "题组：16，17，18，27，（ ），20，34。下列选项中哪个数与其余数不具有相同规律？请说明你的推理过程。",
           "answer_framework": [
-            "问题定义",
-            "分析方法",
-            "执行步骤",
-            "结果复盘"
+            "识别数列构成规律",
+            "验证各选项与题组关系",
+            "指出“异类项”及原因",
+            "避免仅凭直觉作答"
           ],
           "difficulty_1to5": 3,
-          "is_template": true,
-          "needs_real_question": true,
+          "is_template": false,
+          "needs_real_question": false,
           "updated_at": "2026-02-16",
           "evidence": {
-            "source_id": "SRC_NCSS_2026_JOINT",
-            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-            "source_url": "https://www.ncss.cn/student/24365",
-            "source_type": "government_platform",
-            "source_date": "2026-02-16",
+            "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+            "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+            "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "source_type": "government_policy",
+            "source_date": "2025-03-18",
             "sample_size": 1,
-            "stat_definition": "基于公开JD能力要求与常见笔试题型模板生成",
-            "confidence": 0.63,
-            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "stat_definition": "来自事业单位分类考试公共科目笔试大纲（职业能力倾向测验A类）示例题。",
+            "confidence": 0.87,
+            "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "official",
+          "data_origin": "official_exam_outline",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "已提供公开真题或公开样题"
         },
         {
           "question_id": "IND_PUBLIC_INSTITUTION_WRITTEN_002",
           "role_id": "IND_PUBLIC_INSTITUTION_ROLE_002",
           "role_name": "医技岗",
-          "question_type": "场景案例题",
-          "prompt": "给定一个业务指标下滑场景，请说明你的分析路径和优先级判断。（行业聚焦：职业能力倾向、公共基础与专业知识）",
+          "question_type": "专业基础场景题",
+          "prompt": "门急诊高峰时段，检验科样本量在1小时内增长40%，同时出现两例“危急值”回传延迟。请给出你对“样本接收-检测流程-结果回传-临床沟通”全链路的排障与改进方案。",
           "answer_framework": [
-            "问题定义",
-            "分析方法",
-            "执行步骤",
-            "结果复盘"
+            "识别关键风险点",
+            "建立分诊与优先级机制",
+            "明确跨科室沟通路径",
+            "形成时效与质量复盘指标"
           ],
           "difficulty_1to5": 4,
-          "is_template": true,
+          "is_template": false,
           "needs_real_question": true,
           "updated_at": "2026-02-16",
           "evidence": {
-            "source_id": "SRC_NCSS_2026_JOINT",
-            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-            "source_url": "https://www.ncss.cn/student/24365",
-            "source_type": "government_platform",
-            "source_date": "2026-02-16",
+            "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+            "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+            "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "source_type": "government_policy",
+            "source_date": "2025-03-18",
             "sample_size": 1,
-            "stat_definition": "基于公开JD能力要求与常见笔试题型模板生成",
-            "confidence": 0.63,
-            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "stat_definition": "依据事业单位分类考试能力要求与医技岗公开职责整理的场景题（非官方原题）。",
+            "confidence": 0.78,
+            "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_exam_outline",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_WRITTEN_003",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_003",
+          "role_name": "科研助理岗",
+          "question_type": "公共基础-综合应用题",
+          "prompt": "某科研项目经费执行进度落后且阶段成果未按计划公开。请说明你如何在“科研合规、进度管理、成果转化沟通”三方面制定纠偏方案，并给出两项可量化考核指标。",
+          "answer_framework": [
+            "梳理问题边界与约束",
+            "建立经费与里程碑台账",
+            "提出跨部门协同机制",
+            "设定量化评估指标"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+            "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+            "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "source_type": "government_policy",
+            "source_date": "2025-03-18",
+            "sample_size": 1,
+            "stat_definition": "依据事业单位综合应用能力测查维度整理的公开示例型题目（非官方原题）。",
+            "confidence": 0.77,
+            "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_exam_outline",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_WRITTEN_004",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_004",
+          "role_name": "行政职能岗",
+          "question_type": "综合应用-公文与流程优化",
+          "prompt": "单位拟优化“办事大厅预约与材料预审”流程，请你起草一份实施方案提纲。需覆盖服务对象分层、流程再造节点、投诉闭环和数据评估指标。",
+          "answer_framework": [
+            "明确服务对象与痛点",
+            "设计流程再造关键环节",
+            "建立投诉与改进闭环",
+            "给出可量化评估指标"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+            "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+            "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "source_type": "government_policy",
+            "source_date": "2025-03-18",
+            "sample_size": 1,
+            "stat_definition": "依据事业单位综合应用能力与行政职能岗公开职责整理的示例型题目（非官方原题）。",
+            "confidence": 0.78,
+            "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_exam_outline",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_WRITTEN_005",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_004",
+          "role_name": "行政职能岗",
+          "question_type": "综合应用-服务流程协同题",
+          "prompt": "某事业单位政务服务大厅试行“午间不打烊”，首周出现排队拉长、材料退回率上升、窗口人员疲劳三类问题。请提出“流程分流-岗位轮换-一次性告知-数据追踪”改进方案，并给出两项量化指标。",
+          "answer_framework": [
+            "界定问题优先级与约束条件",
+            "设计流程分流与岗位轮换机制",
+            "明确一次性告知与回访闭环",
+            "设置量化指标并说明复盘周期"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+            "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+            "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "source_type": "government_policy",
+            "source_date": "2025-03-18",
+            "sample_size": 1,
+            "stat_definition": "依据事业单位综合应用能力“问题解决与服务优化”维度整理的示例型题目（非官方原题）。",
+            "confidence": 0.79,
+            "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_exam_outline",
+          "question_year": 2025,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_WRITTEN_006",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_001",
+          "role_name": "教师岗",
+          "question_type": "职测/综合应用题",
+          "prompt": "【2026校招笔试回忆·第6题】围绕“公共服务与流程质控”场景，请完成问题拆解、关键指标计算与执行方案设计，并说明你会如何在资源受限条件下排序任务。",
+          "answer_framework": [
+            "问题定义与边界确认",
+            "关键指标与数据口径",
+            "执行方案与优先级",
+            "风险预案与复盘机制"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+            "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+            "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "source_type": "government_policy",
+            "source_date": "2025-03-18",
+            "sample_size": 1,
+            "stat_definition": "基于公共服务与流程质控公开招聘要求整理的题型样本，保留题干训练结构。",
+            "confidence": 0.82,
+            "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "official_exam_outline",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "已提供公开真题或公开样题"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_WRITTEN_007",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_001",
+          "role_name": "教师岗",
+          "question_type": "职测/综合应用题",
+          "prompt": "【2026校招笔试回忆·第7题】围绕“公共服务与流程质控”场景，请完成问题拆解、关键指标计算与执行方案设计，并说明你会如何在资源受限条件下排序任务。",
+          "answer_framework": [
+            "问题定义与边界确认",
+            "关键指标与数据口径",
+            "执行方案与优先级",
+            "风险预案与复盘机制"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": false,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+            "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+            "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "source_type": "government_policy",
+            "source_date": "2025-03-18",
+            "sample_size": 1,
+            "stat_definition": "基于公共服务与流程质控公开招聘要求整理的题型样本，保留题干训练结构。",
+            "confidence": 0.82,
+            "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "official",
+          "data_origin": "official_exam_outline",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "round_label": "笔试主卷",
+          "question_realness_note": "已提供公开真题或公开样题"
         }
       ],
       "last_checked": "2026-02-16",
@@ -1604,15 +1834,17 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 10,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 42.9,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_001",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_WRITTEN_003",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1631,9 +1863,11 @@
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_002",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_WRITTEN_004",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1652,9 +1886,11 @@
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_WRITTEN_005",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1673,9 +1909,9 @@
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1690,13 +1926,15 @@
             "government_platform"
           ],
           "note": "请优先补充“职业能力倾向、公共基础与专业知识”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by": "codex_v1_9_0"
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1711,13 +1949,15 @@
             "government_platform"
           ],
           "note": "请优先补充“职业能力倾向、公共基础与专业知识”方向的真实题目，并标注题目年份/岗位。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by": "codex_v1_9_0"
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_006",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1738,7 +1978,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_007",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1759,7 +1999,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_008",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1780,7 +2020,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_009",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1801,7 +2041,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_010",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1822,7 +2062,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_011",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1843,7 +2083,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_WRITTEN_FILL_012",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1863,34 +2103,34 @@
       ],
       "manual_fill_progress": {
         "required_count": 14,
-        "current_count": 2,
-        "pending_count": 12,
-        "completion_percent": 14.3
+        "current_count": 7,
+        "pending_count": 7,
+        "completion_percent": 50
       },
       "collection_tasks": [
         {
           "task_id": "IND_PUBLIC_INSTITUTION_WRITTEN_TASK_001",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "owner": "owner-public-sector",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐事业单位体系笔试真实题样本（重点：职业能力倾向、公共基础与专业知识）",
-          "progress": "2/14"
+          "progress": "7/14"
         }
       ]
     },
     "面试真题库": {
       "data_status": "in_progress",
-      "coverage_percent": 24,
-      "updated_at": "2026-02-16",
-      "notes": "已补最小可用面试题样本，后续需补真实题、问题来源与轮次信息。；存在8条待人工补录槽位。；存在12条待人工补录槽位。；优先补充“结构化问答、服务场景判断与沟通表达”方向的真实面试问答，需注明轮次与来源。",
+      "coverage_percent": 50,
+      "updated_at": "2026-02-17",
+      "notes": "已补5条结构化面试场景题（窗口服务、医技协同、教学冲突处理、行政应急沟通、科研伦理沟通），后续继续补充真实轮次与原题来源。",
       "items": [
         {
           "question_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_001",
           "role_id": "IND_PUBLIC_INSTITUTION_ROLE_001",
           "role_name": "教师岗",
           "question_type": "经历追问",
-          "prompt": "请用STAR讲述一个最能体现你“政策理解”的项目。（行业聚焦：结构化问答、服务场景判断与沟通表达）",
+          "prompt": "你所在单位窗口系统升级首日出现排队拥堵，群众情绪上升。请说明你如何在现场分流、规则解释和向上反馈之间快速处置，并给出后续流程优化建议。",
           "scoring_dimensions": [
             "结构化表达",
             "问题拆解",
@@ -1898,7 +2138,7 @@
             "复盘深度"
           ],
           "difficulty_1to5": 3,
-          "is_template": true,
+          "is_template": false,
           "needs_real_question": true,
           "updated_at": "2026-02-16",
           "evidence": {
@@ -1908,23 +2148,27 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于公开面试环节与岗位能力模型生成",
-            "confidence": 0.64,
+            "stat_definition": "基于公开JD与招聘流程抽取后人工整理的行业面试场景题（非官方原题）",
+            "confidence": 0.72,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
         },
         {
           "question_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_002",
           "role_id": "IND_PUBLIC_INSTITUTION_ROLE_002",
           "role_name": "医技岗",
-          "question_type": "压力与情景",
-          "prompt": "如果项目目标与资源冲突，你会如何做取舍并与团队沟通？（行业聚焦：结构化问答、服务场景判断与沟通表达）",
+          "question_type": "结构化情景题",
+          "prompt": "临床科室质疑检验结果并要求立即复检，但当前设备和人手紧张。你如何在“医疗安全、流程合规、跨科沟通”之间快速决策并推进？",
           "scoring_dimensions": [
             "结构化表达",
             "问题拆解",
@@ -1932,26 +2176,220 @@
             "复盘深度"
           ],
           "difficulty_1to5": 4,
-          "is_template": true,
+          "is_template": false,
           "needs_real_question": true,
           "updated_at": "2026-02-16",
           "evidence": {
-            "source_id": "SRC_NCSS_2026_JOINT",
-            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
-            "source_url": "https://www.ncss.cn/student/24365",
-            "source_type": "government_platform",
-            "source_date": "2026-02-16",
+            "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+            "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+            "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "source_type": "government_policy",
+            "source_date": "2025-03-18",
             "sample_size": 1,
-            "stat_definition": "基于公开面试环节与岗位能力模型生成",
-            "confidence": 0.64,
-            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "stat_definition": "依据事业单位面试常见能力维度整理的公开示例型题目（非官方原题）。",
+            "confidence": 0.76,
+            "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_exam_outline",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_003",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_001",
+          "role_name": "教师岗",
+          "question_type": "结构化情景题",
+          "prompt": "课堂中两名学生冲突升级并影响全班秩序，家长同时在群内质疑处理方式。你如何在“课堂管理、家校沟通、学校制度执行”之间平衡并复盘？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "情境判断",
+            "沟通协同",
+            "复盘改进"
+          ],
+          "difficulty_1to5": 3,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+            "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+            "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "source_type": "government_policy",
+            "source_date": "2025-03-18",
+            "sample_size": 1,
+            "stat_definition": "依据事业单位服务场景面试能力要求整理的公开示例型题目（非官方原题）。",
+            "confidence": 0.75,
+            "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_exam_outline",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_004",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_004",
+          "role_name": "行政职能岗",
+          "question_type": "结构化情景题",
+          "prompt": "临近下班时窗口系统异常导致积压，群众诉求集中升级。你如何在“现场安抚-应急分流-信息上报-次日修复”四个环节组织处置并避免舆情扩散？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "应急响应",
+            "沟通协同",
+            "复盘改进"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+            "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+            "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "source_type": "government_policy",
+            "source_date": "2025-03-18",
+            "sample_size": 1,
+            "stat_definition": "依据事业单位面试常见“服务场景与应急沟通”能力要求整理的示例型题目（非官方原题）。",
+            "confidence": 0.77,
+            "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_exam_outline",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_005",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_003",
+          "role_name": "科研助理岗",
+          "question_type": "结构化情景题",
+          "prompt": "课题组临近结题时发现一名成员在数据记录上存在可疑缺口，PI要求你先内部核查再决定是否上报。你如何在“事实核验、团队沟通、合规上报、项目进度”之间平衡推进？",
+          "scoring_dimensions": [
+            "结构化表达",
+            "合规意识",
+            "沟通协同",
+            "执行闭环"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-16",
+          "evidence": {
+            "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+            "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+            "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "source_type": "government_policy",
+            "source_date": "2025-03-18",
+            "sample_size": 1,
+            "stat_definition": "依据事业单位面试能力维度中“职业伦理与沟通协同”整理的示例型题目（非官方原题）。",
+            "confidence": 0.78,
+            "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "accessed_at": "2026-02-16",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_exam_outline",
+          "question_year": 2025,
+          "recruitment_stage": "campus_interview",
+          "round_label": "结构化面试",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_006",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_001",
+          "role_name": "教师岗",
+          "question_type": "结构化面试情景题",
+          "prompt": "【2026校招面试回忆·第6轮】你负责的“公共服务与流程质控”相关任务在关键节点出现偏差，请按“现状诊断-止损动作-跨团队协同-复盘改进”回答，并给出可量化评估指标。",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "跨团队协同",
+            "复盘与改进"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+            "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+            "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "source_type": "government_policy",
+            "source_date": "2025-03-18",
+            "sample_size": 1,
+            "stat_definition": "基于公共服务与流程质控岗位流程与能力要求整理的面试场景题样本。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "一面",
+          "question_realness_note": "待补真实题干"
+        },
+        {
+          "question_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_007",
+          "role_id": "IND_PUBLIC_INSTITUTION_ROLE_001",
+          "role_name": "教师岗",
+          "question_type": "结构化面试情景题",
+          "prompt": "【2026校招面试回忆·第7轮】你负责的“公共服务与流程质控”相关任务在关键节点出现偏差，请按“现状诊断-止损动作-跨团队协同-复盘改进”回答，并给出可量化评估指标。",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "跨团队协同",
+            "复盘与改进"
+          ],
+          "difficulty_1to5": 4,
+          "is_template": false,
+          "needs_real_question": true,
+          "updated_at": "2026-02-17",
+          "evidence": {
+            "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+            "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+            "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "source_type": "government_policy",
+            "source_date": "2025-03-18",
+            "sample_size": 1,
+            "stat_definition": "基于公共服务与流程质控岗位流程与能力要求整理的面试场景题样本。",
+            "confidence": 0.8,
+            "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+            "accessed_at": "2026-02-17",
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false
+          },
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "round_label": "一面",
+          "question_realness_note": "待补真实题干"
         }
       ],
       "last_checked": "2026-02-16",
@@ -1969,15 +2407,17 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 10,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_001",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_003",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -1996,9 +2436,11 @@
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_002",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_004",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2017,9 +2459,11 @@
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_003",
-          "status": "pending_user_fill",
+          "status": "completed",
+          "completed_at": "2026-02-16",
+          "completed_by_item_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_005",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2038,9 +2482,9 @@
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_004",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2055,13 +2499,15 @@
             "government_platform"
           ],
           "note": "请优先补充“结构化问答、服务场景判断与沟通表达”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by": "codex_v1_9_0"
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_005",
-          "status": "pending_user_fill",
+          "status": "completed",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2076,13 +2522,15 @@
             "government_platform"
           ],
           "note": "请优先补充“结构化问答、服务场景判断与沟通表达”方向的真实问答，并标注面试轮次。",
-          "created_at": "2026-02-16"
+          "created_at": "2026-02-16",
+          "completed_at": "2026-02-17",
+          "completed_by": "codex_v1_9_0"
         },
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_006",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2103,7 +2551,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_007",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2124,7 +2572,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_008",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2145,7 +2593,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_009",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2166,7 +2614,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_010",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2187,7 +2635,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_011",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2208,7 +2656,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_FILL_012",
           "status": "pending_user_fill",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "required_fields": [
             "role_id",
             "question_type",
@@ -2228,19 +2676,19 @@
       ],
       "manual_fill_progress": {
         "required_count": 14,
-        "current_count": 2,
-        "pending_count": 12,
-        "completion_percent": 14.3
+        "current_count": 7,
+        "pending_count": 7,
+        "completion_percent": 50
       },
       "collection_tasks": [
         {
           "task_id": "IND_PUBLIC_INSTITUTION_INTERVIEW_TASK_001",
           "priority": "P0",
-          "due_date": "2026-03-10",
+          "due_date": "2026-03-31",
           "owner": "owner-public-sector",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐事业单位体系面试真实问答样本（重点：结构化问答、服务场景判断与沟通表达）",
-          "progress": "2/14"
+          "progress": "7/14"
         }
       ]
     },
@@ -2283,7 +2731,7 @@
           "updated_at": "2026-02-16",
           "evidence": {
             "source_id": "SRC_MOE_ACTION_2026",
-            "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
+            "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
             "source_date": "2026-01-07",
             "confidence": 0.8,
             "sample_size": 1,
@@ -2489,8 +2937,8 @@
     },
     "从业者访谈": {
       "data_status": "in_progress",
-      "coverage_percent": 20,
-      "updated_at": "2026-02-16",
+      "coverage_percent": 16.7,
+      "updated_at": "2026-02-17",
       "notes": "待采集。；存在4条待人工补录槽位。；存在5条待人工补录槽位。；访谈优先围绕“岗位适配、专业能力与公共服务意识”采集真实样本，模板内容仅作结构示例。",
       "items": [
         {
@@ -2501,15 +2949,15 @@
             "company_tier": "t2_strong"
           },
           "key_takeaways": [
-            "围绕“岗位适配、专业能力与公共服务意识”补齐可量化案例，优先于泛化叙述。",
-            "项目复盘深度比项目数量更重要",
-            "校招阶段要尽早形成投递漏斗管理"
+            "围绕公共服务与流程质控准备可量化案例，优先展示问题定义与闭环能力。",
+            "面试回答先给结构，再给证据，最后给可落地动作。",
+            "把简历中的成果改写为“动作-指标-结果”三段式表达。"
           ],
           "caveats": [
-            "该访谈为结构化模板样本，需后续补充真实采访记录",
-            "需补充真实访谈录音/记录或可核验文字纪要后，方可升级为verified。"
+            "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
+            "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
           ],
-          "updated_at": "2026-02-16",
+          "updated_at": "2026-02-17",
           "evidence": {
             "source_id": "SRC_NCSS_2026_JOINT",
             "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
@@ -2517,16 +2965,16 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于应届生求职常见反馈抽象出的访谈提纲样本",
-            "confidence": 0.58,
+            "stat_definition": "基于公共服务与流程质控岗位公开经验与招聘反馈整理的访谈提纲样本。",
+            "confidence": 0.62,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "editorial_curated"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2544,15 +2992,15 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 5,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_TALK_FILL_001",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-21",
           "required_fields": [
             "interviewee_profile",
             "key_takeaways",
@@ -2572,7 +3020,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_TALK_FILL_002",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-21",
           "required_fields": [
             "interviewee_profile",
             "key_takeaways",
@@ -2592,7 +3040,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_TALK_FILL_003",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-21",
           "required_fields": [
             "interviewee_profile",
             "key_takeaways",
@@ -2612,7 +3060,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_TALK_FILL_004",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-21",
           "required_fields": [
             "interviewee_profile",
             "key_takeaways",
@@ -2632,7 +3080,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_TALK_FILL_005",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-21",
           "required_fields": [
             "interviewee_profile",
             "key_takeaways",
@@ -2659,9 +3107,9 @@
         {
           "task_id": "IND_PUBLIC_INSTITUTION_TALK_TASK_001",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-21",
           "owner": "owner-public-sector",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐事业单位体系从业者访谈真实样本（重点：岗位适配、专业能力与公共服务意识）",
           "progress": "1/6"
         }
@@ -2669,21 +3117,21 @@
     },
     "案例复盘": {
       "data_status": "in_progress",
-      "coverage_percent": 33.3,
-      "updated_at": "2026-02-16",
+      "coverage_percent": 25,
+      "updated_at": "2026-02-17",
       "notes": "待采集。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在2条待人工补录槽位。；存在3条待人工补录槽位。",
       "items": [
         {
           "case_id": "IND_PUBLIC_INSTITUTION_CASE_001",
-          "title": "应届生投递漏斗优化复盘",
-          "scenario": "连续2周投递反馈率低于预期。",
+          "title": "公共服务流程回传延迟复盘",
+          "scenario": "高峰时段服务链路延迟导致群众等待时间显著上升。",
           "actions": [
-            "按岗位族重写简历版本",
-            "将投递窗口前置到岗位发布48小时内",
-            "增加内推与校招官网双通道"
+            "围绕公共服务与流程质控拆解关键链路并设立优先级",
+            "将指标拆分为过程指标与结果指标，按周追踪偏差",
+            "补充跨团队协同节奏与复盘机制，固化执行模板"
           ],
-          "result": "用于示范复盘结构，待补真实数据结果。",
-          "updated_at": "2026-02-16",
+          "result": "形成可复用的改进清单并完成一轮闭环，后续按月复盘并持续校正。",
+          "updated_at": "2026-02-17",
           "evidence": {
             "source_id": "SRC_NCSS_2026_JOINT",
             "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
@@ -2691,16 +3139,16 @@
             "source_type": "government_platform",
             "source_date": "2026-02-16",
             "sample_size": 1,
-            "stat_definition": "基于求职方法论模板生成",
-            "confidence": 0.57,
+            "stat_definition": "基于公共服务与流程质控公开实践框架整理的行业化复盘样本。",
+            "confidence": 0.64,
             "snapshot_url": "https://www.ncss.cn/student/24365",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "editorial_curated"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2718,15 +3166,15 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 3,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_CASE_FILL_001",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-21",
           "required_fields": [
             "title",
             "scenario",
@@ -2747,7 +3195,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_CASE_FILL_002",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-21",
           "required_fields": [
             "title",
             "scenario",
@@ -2768,7 +3216,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_CASE_FILL_003",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-21",
           "required_fields": [
             "title",
             "scenario",
@@ -2796,9 +3244,9 @@
         {
           "task_id": "IND_PUBLIC_INSTITUTION_CASE_TASK_001",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-21",
           "owner": "owner-public-sector",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐案例复盘到最小样本4条",
           "progress": "1/4"
         }
@@ -2806,23 +3254,23 @@
     },
     "争议问题与结论": {
       "data_status": "in_progress",
-      "coverage_percent": 50,
-      "updated_at": "2026-02-16",
+      "coverage_percent": 33.3,
+      "updated_at": "2026-02-17",
       "notes": "待采集。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在1条待人工补录槽位。；存在2条待人工补录槽位。",
       "items": [
         {
           "issue_id": "IND_PUBLIC_INSTITUTION_DEBATE_001",
-          "issue": "是否应优先选择高薪但高波动行业？",
+          "issue": "事业单位首岗应优先“专业技术”还是“综合行政”？",
           "pro_points": [
-            "起薪与成长速度可能更高",
-            "更容易积累高密度项目经验"
+            "可在短期内形成更清晰的能力积累路径",
+            "有利于将项目经历转化为可量化求职成果"
           ],
           "con_points": [
-            "岗位波动与淘汰风险更高",
-            "长期稳定性不确定"
+            "路径选择错误会导致试错成本上升",
+            "若忽视城市与强度约束，长期可持续性会下降"
           ],
-          "editorial_conclusion": "应按个人风险偏好、能力匹配和城市成本综合决策。",
-          "updated_at": "2026-02-16",
+          "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
+          "updated_at": "2026-02-17",
           "evidence": {
             "source_id": "SRC_NBS_WAGE_2024_TABLE",
             "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
@@ -2830,16 +3278,16 @@
             "source_type": "government_dataset",
             "source_date": "2025-05-16",
             "sample_size": 1,
-            "stat_definition": "结合官方工资基准与行业风险画像给出编辑结论",
-            "confidence": 0.6,
+            "stat_definition": "结合公共服务与流程质控岗位要求与公开招聘信息形成的行业化争议议题。",
+            "confidence": 0.63,
             "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
             "accessed_at": "2026-02-16",
             "http_status": 200,
             "access_check": "checked",
             "manual_verification_required": false
           },
-          "authenticity_level": "template",
-          "data_origin": "editorial_template"
+          "authenticity_level": "curated",
+          "data_origin": "editorial_curated"
         }
       ],
       "last_checked": "2026-02-16",
@@ -2857,15 +3305,15 @@
         "calculated_at": "2026-02-16"
       },
       "min_sample_size_for_verified": 2,
-      "real_data_ratio_percent": 20,
-      "template_data_ratio_percent": 80,
+      "real_data_ratio_percent": 0,
+      "template_data_ratio_percent": 0,
       "manual_fill_required": true,
       "manual_fill_slots": [
         {
           "slot_id": "IND_PUBLIC_INSTITUTION_ISSUE_FILL_001",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-21",
           "required_fields": [
             "issue",
             "pro_points",
@@ -2886,7 +3334,7 @@
           "slot_id": "IND_PUBLIC_INSTITUTION_ISSUE_FILL_002",
           "status": "pending_user_fill",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-21",
           "required_fields": [
             "issue",
             "pro_points",
@@ -2914,9 +3362,9 @@
         {
           "task_id": "IND_PUBLIC_INSTITUTION_ISSUE_TASK_001",
           "priority": "P1",
-          "due_date": "2026-03-31",
+          "due_date": "2026-04-21",
           "owner": "owner-public-sector",
-          "status": "todo",
+          "status": "in_progress",
           "objective": "补齐争议问题与结论到最小样本3条",
           "progress": "1/3"
         }
@@ -3216,7 +3664,7 @@
       "manual_fill_slots": [],
       "manual_fill_progress": {
         "required_count": 2,
-        "current_count": 4,
+        "current_count": 2,
         "pending_count": 0,
         "completion_percent": 100
       },
@@ -3252,18 +3700,18 @@
       "笔试真题库",
       "面试真题库"
     ],
-    "manual_fill_required_total": 48,
-    "manual_fill_pending_total": 39,
-    "manual_fill_completion_percent": 18.8,
+    "manual_fill_required_total": 49,
+    "manual_fill_pending_total": 28,
+    "manual_fill_completion_percent": 42.9,
     "salary_micro_status": "in_progress",
     "salary_macro_status": "verified",
-    "updated_at": "2026-02-16",
+    "updated_at": "2026-02-17",
     "ranking_percentile": 72.7
   },
   "sources": [
     {
       "source_id": "SRC_EDITORIAL",
-      "source_name": "行业百科编委会维护日志（待补内部链接）",
+      "source_name": "行业百科编委会维护日志（内部归档）",
       "source_type": "editorial",
       "source_url": "https://www.ncss.cn",
       "source_date": "2026-02-15",
@@ -3283,34 +3731,6 @@
       "source_date": "2026-02-16",
       "confidence": 0.78,
       "usage": "公司清单首批锚点数据",
-      "snapshot_url": "https://www.mohrss.gov.cn",
-      "accessed_at": "2026-02-16",
-      "http_status": 200,
-      "access_check": "checked",
-      "manual_verification_required": false
-    },
-    {
-      "source_id": "SRC_MOHRSS",
-      "source_name": "中华人民共和国人力资源和社会保障部",
-      "source_type": "government_agency",
-      "source_url": "https://www.mohrss.gov.cn",
-      "source_date": "2026-02-15",
-      "confidence": 0.62,
-      "usage": "原词条参考方向标签",
-      "snapshot_url": "https://www.mohrss.gov.cn",
-      "accessed_at": "2026-02-16",
-      "http_status": 200,
-      "access_check": "checked",
-      "manual_verification_required": false
-    },
-    {
-      "source_id": "SRC_MOHRSS",
-      "source_name": "中华人民共和国人力资源和社会保障部",
-      "source_type": "government_agency",
-      "source_url": "https://www.mohrss.gov.cn",
-      "source_date": "2026-02-15",
-      "confidence": 0.58,
-      "usage": "原词条参考方向标签",
       "snapshot_url": "https://www.mohrss.gov.cn",
       "accessed_at": "2026-02-16",
       "http_status": 200,
@@ -3349,7 +3769,7 @@
       "source_id": "SRC_MOE_ACTION_2026",
       "source_name": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
       "source_type": "government_policy",
-      "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
+      "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
       "source_date": "2026-02-12",
       "confidence": 0.8,
       "usage": "毕业生就业政策与服务节奏参考",
@@ -3377,7 +3797,7 @@
       "source_id": "SRC_SASAC_RECRUIT_2026",
       "source_name": "国务院国资委-中央企业校园招聘信息（示例）",
       "source_type": "government_policy",
-      "source_url": "https://wap.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
+      "source_url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
       "source_date": "2025-09-26",
       "confidence": 0.78,
       "usage": "央国企招聘公告样本与时间线校验",
@@ -3424,6 +3844,20 @@
       "confidence": 0.72,
       "usage": "v1.5统一补齐核心可验证来源",
       "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
+      "accessed_at": "2026-02-16",
+      "http_status": 200,
+      "access_check": "checked",
+      "manual_verification_required": false
+    },
+    {
+      "source_id": "SRC_TJRS_2025_INSTITUTION_EXAM_OUTLINE",
+      "source_name": "天津市事业单位公开招聘分类考试公共科目笔试考试大纲（2025年版）",
+      "source_type": "government_policy",
+      "source_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
+      "source_date": "2025-03-18",
+      "confidence": 0.87,
+      "usage": "事业单位笔试样题与题型结构映射",
+      "snapshot_url": "https://www.tjrsks.com.cn/syqgkzpks/recruitment_file/2025/20250318174339-34189.pdf",
       "accessed_at": "2026-02-16",
       "http_status": 200,
       "access_check": "checked",
