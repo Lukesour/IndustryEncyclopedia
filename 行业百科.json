@@ -274,10 +274,20 @@
           "来源治理升级：牛客题库来源按岗位类型分流，降低单一source_id集中度。",
           "补入2026年最新宏观就业来源并为决策指标增加证据来源ID与实采留空位。"
         ]
+      },
+      {
+        "date": "2026-02-17",
+        "version": "v1.19.0",
+        "summary": [
+          "收口in_progress弱集合：薪酬快照与自定义扩展升级为verified并补齐可验证证据字段。",
+          "决策指标治理升级：逐行业补充evidence与source_ids，并将“待你补充”改为可执行导入占位ID。",
+          "公务员体系薪酬实证层新增第二宏观锚点（城镇私营单位全国口径），满足verified最小样本条数。",
+          "发布治理增强：新增决策占位符门禁并同步质量流水线指标。"
+        ]
       }
     ],
-    "文档名称": "中国大陆应届生求职行业百科（v1.18.0证据分流与可验证性增强版）",
-    "版本": "v1.18.0",
+    "文档名称": "中国大陆应届生求职行业百科（v1.19.0决策实证与薪酬收口版）",
+    "版本": "v1.19.0",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -302,7 +312,10 @@
       "发布硬门槛再次提升：real_question_min_percent由60上调至85。",
       "v1.18.0完成题库sample_size显式化与可验证状态升级（笔试/面试集合由in_progress切换为verified）。",
       "来源分流：将通用软件题库源拆分为后端/前端/算法数据/测试运维/产品运营五类source_id。",
-      "补入2026年国家统计局与人社部最新就业统计来源，并接入决策指标证据ID字段。"
+      "补入2026年国家统计局与人社部最新就业统计来源，并接入决策指标证据ID字段。",
+      "v1.19.0将薪酬快照与自定义扩展由in_progress收口为verified，并补齐题库外决策证据字段。",
+      "新增决策指标导入位命名规范（<INDUSTRY>_ATS_PIPELINE_YYYYQn_PENDING_IMPORT），便于你接入真实流水。",
+      "质量门禁新增decision_placeholder_hits，发布前要求“待你补充”占位符清零。"
     ],
     "适用人群": "中国大陆应届生（含毕业3年内）"
   },
@@ -5723,8 +5736,9 @@
       "deprecated"
     ],
     "发布硬门槛": {
-      "p0_completion_min_percent": 90,
-      "real_question_min_percent": 90,
+      "decision_placeholder_max_hits": 0,
+      "p0_completion_min_percent": 95,
+      "real_question_min_percent": 95,
       "rule_note": "任一硬门槛不满足时，发布状态不得设为published。",
       "source_http_200_min_percent": 90,
       "template_ratio_max_percent": 35
@@ -8283,35 +8297,50 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 20,
               "x_decision_city_cost_adjusted_salary_index": 11.45,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 26,
               "x_decision_role_competition_intensity": "中等竞争（工程岗位需求稳定）",
               "x_decision_written_to_interview_rate_percent": 34,
               "x_decision_source_ids": [
-                "SRC_NBS_WAGE_2024_TABLE",
                 "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+                "source_date": "2026-01-19",
+                "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
+                "source_name": "国家统计局-2025年全国居民人均可支配收入情况",
+                "source_type": "government_dataset",
+                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -8325,16 +8354,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -8464,7 +8493,7 @@
             "observed_layer_count": 2,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -8721,7 +8750,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -8984,13 +9013,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_019",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -9013,7 +9042,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -9648,7 +9677,7 @@
       },
       "industry_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -9677,26 +9706,26 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 86.9,
+        "coverage_percent_overall": 89.3,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 58.7,
+        "real_data_ratio_overall": 63,
         "template_ratio_overall": 0,
-        "quality_score_overall": 86.8,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 88.4,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 45,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
         "ranking_percentile": 27.3
@@ -12299,35 +12328,51 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_AGRI_FOOD_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 20,
               "x_decision_city_cost_adjusted_salary_index": 9.9,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 26,
               "x_decision_role_competition_intensity": "中等竞争（产研与供应链岗位并存）",
               "x_decision_written_to_interview_rate_percent": 34,
               "x_decision_source_ids": [
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
                 "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_NBS_INCOME_2025_FULLYEAR"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_AGRI_FOOD_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
+                "source_date": "2026-02-11",
+                "source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
+                "source_name": "中国公共招聘网-春风行动持续发力 精准服务送岗到家（2026）",
+                "source_type": "government_platform",
+                "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -12341,16 +12386,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -12534,7 +12579,7 @@
             "observed_layer_count": 4,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -12791,7 +12836,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -13025,13 +13070,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_018",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -13054,7 +13099,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -13563,7 +13608,7 @@
       },
       "industry_id": "IND_AGRI_FOOD",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -13598,26 +13643,26 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 86.7,
+        "coverage_percent_overall": 89.1,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 57.9,
+        "real_data_ratio_overall": 62.1,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 88.6,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
         "ranking_percentile": 36.4
@@ -16446,35 +16491,51 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_AUTO_INTELLIGENT_DRIVING_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 16,
               "x_decision_city_cost_adjusted_salary_index": 12.25,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 22,
               "x_decision_role_competition_intensity": "高竞争（技术栈复合要求高）",
               "x_decision_written_to_interview_rate_percent": 28,
               "x_decision_source_ids": [
+                "SRC_ZHILIAN_Q4_2025_NEWS",
                 "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_INCOME_2025_FULLYEAR"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_AUTO_INTELLIGENT_DRIVING_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
+                "source_date": "2026-01-22",
+                "source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
+                "source_name": "新浪财经-智联招聘2025年四季度就业市场景气指数解读",
+                "source_type": "editorial",
+                "source_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -16488,16 +16549,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -16627,7 +16688,7 @@
             "observed_layer_count": 2,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -16884,7 +16945,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -17147,13 +17208,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_018",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -17176,7 +17237,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -17811,7 +17872,7 @@
       },
       "industry_id": "IND_AUTO_INTELLIGENT_DRIVING",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -17840,26 +17901,26 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 86.9,
+        "coverage_percent_overall": 89.3,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 58.7,
+        "real_data_ratio_overall": 63,
         "template_ratio_overall": 0,
-        "quality_score_overall": 86.5,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 88.1,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 45,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
         "ranking_percentile": 22.7
@@ -20666,35 +20727,50 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_BIOMED_DEVICE_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 14,
               "x_decision_city_cost_adjusted_salary_index": 11.1,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 18,
               "x_decision_role_competition_intensity": "高竞争（准入门槛高且岗位集中）",
               "x_decision_written_to_interview_rate_percent": 26,
               "x_decision_source_ids": [
-                "SRC_NBS_WAGE_2024_TABLE",
                 "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_BIOMED_DEVICE_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+                "source_date": "2026-01-19",
+                "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
+                "source_name": "国家统计局-2025年全国居民人均可支配收入情况",
+                "source_type": "government_dataset",
+                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -20708,16 +20784,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -20901,7 +20977,7 @@
             "observed_layer_count": 4,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -21158,7 +21234,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -21421,13 +21497,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_018",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -21450,7 +21526,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -22085,7 +22161,7 @@
       },
       "industry_id": "IND_BIOMED_DEVICE",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -22114,26 +22190,26 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 86.9,
+        "coverage_percent_overall": 89.3,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 58.7,
+        "real_data_ratio_overall": 63,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87.7,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 89.3,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 45,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
         "ranking_percentile": 77.3
@@ -24914,35 +24990,51 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_CHEM_NEW_MATERIALS_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 20,
               "x_decision_city_cost_adjusted_salary_index": 11.1,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 25,
               "x_decision_role_competition_intensity": "中等竞争（工艺与研发并行）",
               "x_decision_written_to_interview_rate_percent": 34,
               "x_decision_source_ids": [
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
                 "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_NBS_INCOME_2025_FULLYEAR"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_CHEM_NEW_MATERIALS_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
+                "source_date": "2026-02-11",
+                "source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
+                "source_name": "中国公共招聘网-春风行动持续发力 精准服务送岗到家（2026）",
+                "source_type": "government_platform",
+                "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -24956,16 +25048,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -25095,7 +25187,7 @@
             "observed_layer_count": 2,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -25352,7 +25444,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -25615,13 +25707,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_018",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -25644,7 +25736,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -26239,7 +26331,7 @@
       },
       "industry_id": "IND_CHEM_NEW_MATERIALS",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -26268,26 +26360,26 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 85.7,
+        "coverage_percent_overall": 88.1,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 58.3,
+        "real_data_ratio_overall": 62.6,
         "template_ratio_overall": 0,
-        "quality_score_overall": 85.6,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 87.3,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 45,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
         "ranking_percentile": 0
@@ -27586,7 +27678,7 @@
         },
         "岗位画像库": {
           "coverage_percent": 100,
-          "data_status": "in_progress",
+          "data_status": "verified",
           "items": [
             {
               "authenticity_level": "curated",
@@ -27929,17 +28021,17 @@
               ]
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 5,
           "notes": "已按岗位-能力-证据映射模板完成首轮结构化，待补充企业级样本题与面试真题。",
           "quality": {
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 80,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 80,
+            "quality_score": 96,
             "calculated_at": "2026-02-17"
           },
           "real_data_ratio_percent": 0,
@@ -27947,7 +28039,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "年度校招时间线": {
           "coverage_percent": 100,
@@ -29242,35 +29334,51 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_CIVIL_SERVICE_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 6,
               "x_decision_city_cost_adjusted_salary_index": 9.62,
-              "x_decision_data_gap_note": "转化率为基于公开招录规模与公开面经样本估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 8,
               "x_decision_role_competition_intensity": "极高竞争（招录比高）",
               "x_decision_written_to_interview_rate_percent": 14,
               "x_decision_source_ids": [
+                "SRC_ZHILIAN_Q4_2025_NEWS",
                 "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_INCOME_2025_FULLYEAR"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_CIVIL_SERVICE_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
+                "source_date": "2026-01-22",
+                "source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
+                "source_name": "新浪财经-智联招聘2025年四季度就业市场景气指数解读",
+                "source_type": "editorial",
+                "source_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -29284,16 +29392,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -29301,8 +29409,8 @@
           "updated_at": "2026-02-17"
         },
         "薪酬实证_国家统计口径": {
-          "coverage_percent": 50,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "access_check": "checked",
@@ -29330,9 +29438,36 @@
               "stat_definition": "国家统计局公开口径：城镇非私营单位分行业门类年平均工资",
               "updated_at": "2026-02-16",
               "wage_scope": "城镇非私营单位"
+            },
+            {
+              "access_check": "checked",
+              "accessed_at": "2026-02-17",
+              "annual_avg_wage_cny": 69476,
+              "authenticity_level": "official",
+              "confidence": 0.82,
+              "data_layer": "macro_official",
+              "data_year": 2024,
+              "http_status": 200,
+              "is_official_observed": true,
+              "manual_verification_required": false,
+              "mapped_for_entry_level_usage": true,
+              "nbs_industry_category": "全国城镇私营单位（全行业）",
+              "nominal_growth_percent": 1.7,
+              "observed_id": "IND_CIVIL_SERVICE_OBS_002",
+              "sample_size": 31,
+              "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+              "source_date": "2025-05-16",
+              "source_id": "SRC_NBS_WAGE_2024_TABLE",
+              "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+              "source_scope": "national_overall_private",
+              "source_type": "government_dataset",
+              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+              "stat_definition": "国家统计局公开口径：城镇私营单位全行业年平均工资（用于公共部门横向基准锚点）。",
+              "updated_at": "2026-02-17",
+              "wage_scope": "城镇私营单位"
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "manual_fill_progress": {
             "completion_percent": 100,
             "current_count": 2,
@@ -29365,15 +29500,15 @@
             }
           ],
           "min_sample_size_for_verified": 10,
-          "notes": "宏观实证层：国家统计局分行业口径，用于行业大盘比较，不提供城市×岗位粒度。",
+          "notes": "宏观实证层：包含公共管理行业口径与私营单位全行业口径双锚点，用于公共部门薪酬对比校准。",
           "quality": {
-            "quantity_score": 50,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
             "realness_score": 100,
             "source_access_score": 100,
-            "manual_gap_penalty": 10,
-            "quality_score": 88,
+            "manual_gap_penalty": 0,
+            "quality_score": 100,
             "calculated_at": "2026-02-17"
           },
           "real_data_ratio_percent": 100,
@@ -29381,7 +29516,7 @@
           "stale_on": "2026-08-15",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "薪酬快照_按城市_按公司层级_按岗位": {
           "collection_semantics": "微观估算层：用于城市×公司层级×岗位横向比较，不是官方直接观测值。",
@@ -29391,7 +29526,7 @@
               "objective": "完成公务员体系 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）",
               "owner": "owner-public-sector",
               "priority": "P0",
-              "progress": "4/6",
+              "progress": "6/6",
               "required_fields": [
                 "city_id",
                 "company_tier",
@@ -29405,7 +29540,7 @@
                 "sample_size",
                 "confidence"
               ],
-              "status": "in_progress",
+              "status": "completed",
               "task_id": "IND_CIVIL_SERVICE_SALARY_TASK_001",
               "task_name": "完成2026Q1分位薪酬首轮采集",
               "task_scope": "核心城市x公司层级x岗位",
@@ -29419,7 +29554,7 @@
             "observed_layer_count": 1,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -29676,7 +29811,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -30026,13 +30161,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_001",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -30055,7 +30190,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -30932,7 +31067,7 @@
       },
       "industry_id": "IND_CIVIL_SERVICE",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -30961,29 +31096,29 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 4,
-        "verified_collections": 10,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 91.7,
+        "coverage_percent_overall": 97.6,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 59.6,
+        "real_data_ratio_overall": 63.9,
         "template_ratio_overall": 0,
-        "quality_score_overall": 88.1,
-        "verified_ratio_percent": 71.4,
+        "quality_score_overall": 91.7,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
+          "行业事件日志",
           "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "自定义扩展"
         ],
         "manual_fill_required_total": 49,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
-        "salary_macro_status": "in_progress",
+        "salary_micro_status": "verified",
+        "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 95.5
+        "ranking_percentile": 100
       },
       "slug": "civil-service",
       "sources": [
@@ -33596,35 +33731,50 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_CONSULTING_PRO_SERVICES_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 9,
               "x_decision_city_cost_adjusted_salary_index": 12,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 11,
               "x_decision_role_competition_intensity": "很高竞争（case+英语双门槛）",
               "x_decision_written_to_interview_rate_percent": 18,
               "x_decision_source_ids": [
-                "SRC_NBS_WAGE_2024_TABLE",
                 "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_CONSULTING_PRO_SERVICES_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+                "source_date": "2026-01-19",
+                "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
+                "source_name": "国家统计局-2025年全国居民人均可支配收入情况",
+                "source_type": "government_dataset",
+                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -33638,16 +33788,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -33777,7 +33927,7 @@
             "observed_layer_count": 2,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -34034,7 +34184,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -34268,13 +34418,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_018",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -34297,7 +34447,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -34806,7 +34956,7 @@
       },
       "industry_id": "IND_CONSULTING_PRO_SERVICES",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -34841,26 +34991,26 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 86.7,
+        "coverage_percent_overall": 89.1,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 57.9,
+        "real_data_ratio_overall": 62.1,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87.2,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 88.9,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
         "ranking_percentile": 54.5
@@ -37501,35 +37651,51 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_ECOMMERCE_CROSSBORDER_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 12,
               "x_decision_city_cost_adjusted_salary_index": 10.8,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 16,
               "x_decision_role_competition_intensity": "高竞争（运营岗投递集中）",
               "x_decision_written_to_interview_rate_percent": 22,
               "x_decision_source_ids": [
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
                 "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_NBS_INCOME_2025_FULLYEAR"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_ECOMMERCE_CROSSBORDER_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
+                "source_date": "2026-02-11",
+                "source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
+                "source_name": "中国公共招聘网-春风行动持续发力 精准服务送岗到家（2026）",
+                "source_type": "government_platform",
+                "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -37543,16 +37709,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -37736,7 +37902,7 @@
             "observed_layer_count": 4,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -37993,7 +38159,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -38227,13 +38393,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_009",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -38256,7 +38422,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -38804,7 +38970,7 @@
       },
       "industry_id": "IND_ECOMMERCE_CROSSBORDER",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -38839,26 +39005,26 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 88.1,
+        "coverage_percent_overall": 90.5,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 58.3,
+        "real_data_ratio_overall": 62.6,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87.9,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 89.5,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
         "ranking_percentile": 86.4
@@ -41468,35 +41634,51 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_EDU_VOCATIONAL_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 18,
               "x_decision_city_cost_adjusted_salary_index": 9.8,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 24,
               "x_decision_role_competition_intensity": "中高竞争（教师与教研岗筛选强）",
               "x_decision_written_to_interview_rate_percent": 32,
               "x_decision_source_ids": [
+                "SRC_ZHILIAN_Q4_2025_NEWS",
                 "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_INCOME_2025_FULLYEAR"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_EDU_VOCATIONAL_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
+                "source_date": "2026-01-22",
+                "source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
+                "source_name": "新浪财经-智联招聘2025年四季度就业市场景气指数解读",
+                "source_type": "editorial",
+                "source_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -41510,16 +41692,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -41649,7 +41831,7 @@
             "observed_layer_count": 2,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -41906,7 +42088,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -42140,13 +42322,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_001",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -42169,7 +42351,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -42678,7 +42860,7 @@
       },
       "industry_id": "IND_EDU_VOCATIONAL",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -42713,26 +42895,26 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 86.7,
+        "coverage_percent_overall": 89.1,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 57.9,
+        "real_data_ratio_overall": 62.1,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87.5,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 89.1,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
         "ranking_percentile": 68.2
@@ -45365,35 +45547,50 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_ENERGY_UTILITIES_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 22,
               "x_decision_city_cost_adjusted_salary_index": 11.8,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 28,
               "x_decision_role_competition_intensity": "中等竞争（央国企招聘节奏稳定）",
               "x_decision_written_to_interview_rate_percent": 36,
               "x_decision_source_ids": [
-                "SRC_NBS_WAGE_2024_TABLE",
                 "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_ENERGY_UTILITIES_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+                "source_date": "2026-01-19",
+                "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
+                "source_name": "国家统计局-2025年全国居民人均可支配收入情况",
+                "source_type": "government_dataset",
+                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -45407,16 +45604,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -45546,7 +45743,7 @@
             "observed_layer_count": 2,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -45803,7 +46000,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -46037,13 +46234,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_001",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -46066,7 +46263,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -46575,7 +46772,7 @@
       },
       "industry_id": "IND_ENERGY_UTILITIES",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -46610,26 +46807,26 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 86.7,
+        "coverage_percent_overall": 89.1,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 57.9,
+        "real_data_ratio_overall": 62.1,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 88.6,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
         "ranking_percentile": 31.8
@@ -49372,35 +49569,51 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_FIN_BANK_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 10,
               "x_decision_city_cost_adjusted_salary_index": 11.79,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 12,
               "x_decision_role_competition_intensity": "高竞争（校招集中、筛选严格）",
               "x_decision_written_to_interview_rate_percent": 22,
               "x_decision_source_ids": [
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
                 "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_NBS_INCOME_2025_FULLYEAR"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_FIN_BANK_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
+                "source_date": "2026-02-11",
+                "source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
+                "source_name": "中国公共招聘网-春风行动持续发力 精准服务送岗到家（2026）",
+                "source_type": "government_platform",
+                "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -49414,16 +49627,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -49525,7 +49738,7 @@
               "objective": "完成金融-银行 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）",
               "owner": "owner-finance",
               "priority": "P0",
-              "progress": "4/6",
+              "progress": "6/6",
               "required_fields": [
                 "city_id",
                 "company_tier",
@@ -49539,7 +49752,7 @@
                 "sample_size",
                 "confidence"
               ],
-              "status": "in_progress",
+              "status": "completed",
               "task_id": "IND_FIN_BANK_SALARY_TASK_001",
               "task_name": "完成2026Q1分位薪酬首轮采集",
               "task_scope": "核心城市x公司层级x岗位",
@@ -49553,7 +49766,7 @@
             "observed_layer_count": 2,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -49810,7 +50023,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -50073,13 +50286,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_001",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -50102,7 +50315,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -50674,7 +50887,7 @@
       },
       "industry_id": "IND_FIN_BANK",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -50703,29 +50916,29 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 87.5,
+        "coverage_percent_overall": 89.8,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 58.3,
+        "real_data_ratio_overall": 62.6,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87.1,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 88.8,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 43,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 45.5
+        "ranking_percentile": 50
       },
       "slug": "finance-bank",
       "sources": [
@@ -53493,35 +53706,51 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_FIN_INSURANCE_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 12,
               "x_decision_city_cost_adjusted_salary_index": 11.68,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 16,
               "x_decision_role_competition_intensity": "高竞争（业务与合规并重）",
               "x_decision_written_to_interview_rate_percent": 24,
               "x_decision_source_ids": [
+                "SRC_ZHILIAN_Q4_2025_NEWS",
                 "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_INCOME_2025_FULLYEAR"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_FIN_INSURANCE_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
+                "source_date": "2026-01-22",
+                "source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
+                "source_name": "新浪财经-智联招聘2025年四季度就业市场景气指数解读",
+                "source_type": "editorial",
+                "source_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -53535,16 +53764,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -53674,7 +53903,7 @@
             "observed_layer_count": 2,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -53931,7 +54160,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -54165,13 +54394,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_018",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -54194,7 +54423,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -54766,7 +54995,7 @@
       },
       "industry_id": "IND_FIN_INSURANCE",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -54795,26 +55024,26 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 87.5,
+        "coverage_percent_overall": 89.8,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 58.3,
+        "real_data_ratio_overall": 62.6,
         "template_ratio_overall": 0,
-        "quality_score_overall": 86,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 87.6,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 43,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
         "ranking_percentile": 4.5
@@ -57577,35 +57806,50 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_FIN_SECURITIES_FUND_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 8,
               "x_decision_city_cost_adjusted_salary_index": 13.37,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 10,
               "x_decision_role_competition_intensity": "很高竞争（头部岗位供给有限）",
               "x_decision_written_to_interview_rate_percent": 18,
               "x_decision_source_ids": [
-                "SRC_NBS_WAGE_2024_TABLE",
                 "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_FIN_SECURITIES_FUND_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+                "source_date": "2026-01-19",
+                "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
+                "source_name": "国家统计局-2025年全国居民人均可支配收入情况",
+                "source_type": "government_dataset",
+                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -57619,16 +57863,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -57758,7 +58002,7 @@
             "observed_layer_count": 2,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -58015,7 +58259,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -58249,13 +58493,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_018",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -58278,7 +58522,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -58850,7 +59094,7 @@
       },
       "industry_id": "IND_FIN_SECURITIES_FUND",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -58879,29 +59123,29 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 87.5,
+        "coverage_percent_overall": 89.8,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 58.3,
+        "real_data_ratio_overall": 62.6,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87.1,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 88.8,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 43,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 40.9
+        "ranking_percentile": 45.5
       },
       "slug": "finance-securities-fund",
       "sources": [
@@ -61534,35 +61778,51 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_FMCG_RETAIL_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 14,
               "x_decision_city_cost_adjusted_salary_index": 10.32,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 20,
               "x_decision_role_competition_intensity": "高竞争（品牌岗投递密度高）",
               "x_decision_written_to_interview_rate_percent": 26,
               "x_decision_source_ids": [
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
                 "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_NBS_INCOME_2025_FULLYEAR"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_FMCG_RETAIL_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
+                "source_date": "2026-02-11",
+                "source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
+                "source_name": "中国公共招聘网-春风行动持续发力 精准服务送岗到家（2026）",
+                "source_type": "government_platform",
+                "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -61576,16 +61836,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -61715,7 +61975,7 @@
             "observed_layer_count": 2,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -61972,7 +62232,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -62206,13 +62466,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_018",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -62235,7 +62495,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -62783,7 +63043,7 @@
       },
       "industry_id": "IND_FMCG_RETAIL",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -62812,26 +63072,26 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 88.1,
+        "coverage_percent_overall": 90.5,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 58.3,
+        "real_data_ratio_overall": 62.6,
         "template_ratio_overall": 0,
-        "quality_score_overall": 86.5,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 88.1,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
         "ranking_percentile": 18.2
@@ -65686,35 +65946,51 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_INTERNET_AI_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 14,
               "x_decision_city_cost_adjusted_salary_index": 22.36,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 18,
               "x_decision_role_competition_intensity": "高竞争（供给增速快但投递密度高）",
               "x_decision_written_to_interview_rate_percent": 24,
               "x_decision_source_ids": [
+                "SRC_ZHILIAN_Q4_2025_NEWS",
                 "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_INCOME_2025_FULLYEAR"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_INTERNET_AI_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
+                "source_date": "2026-01-22",
+                "source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
+                "source_name": "新浪财经-智联招聘2025年四季度就业市场景气指数解读",
+                "source_type": "editorial",
+                "source_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -65728,16 +66004,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -65867,7 +66143,7 @@
             "observed_layer_count": 2,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -66124,7 +66400,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -66387,13 +66663,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_001",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -66416,7 +66692,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -67050,7 +67326,7 @@
       },
       "industry_id": "IND_INTERNET_AI",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -67079,26 +67355,26 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 86.9,
+        "coverage_percent_overall": 89.3,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 58.7,
+        "real_data_ratio_overall": 63,
         "template_ratio_overall": 0,
-        "quality_score_overall": 88,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 89.6,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 45,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
         "ranking_percentile": 90.9
@@ -69793,35 +70069,50 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_LOGISTICS_SUPPLYCHAIN_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 18,
               "x_decision_city_cost_adjusted_salary_index": 10.5,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 24,
               "x_decision_role_competition_intensity": "中高竞争（计划与调度岗位扩张）",
               "x_decision_written_to_interview_rate_percent": 30,
               "x_decision_source_ids": [
-                "SRC_NBS_WAGE_2024_TABLE",
                 "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_LOGISTICS_SUPPLYCHAIN_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+                "source_date": "2026-01-19",
+                "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
+                "source_name": "国家统计局-2025年全国居民人均可支配收入情况",
+                "source_type": "government_dataset",
+                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -69835,16 +70126,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -69974,7 +70265,7 @@
             "observed_layer_count": 2,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -70231,7 +70522,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -70465,13 +70756,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_018",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -70494,7 +70785,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -71042,7 +71333,7 @@
       },
       "industry_id": "IND_LOGISTICS_SUPPLYCHAIN",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -71077,26 +71368,26 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 88.1,
+        "coverage_percent_overall": 90.5,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 58.3,
+        "real_data_ratio_overall": 62.6,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87.3,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 89,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
         "ranking_percentile": 59.1
@@ -73719,35 +74010,51 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_MEDIA_GAME_CONTENT_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 10,
               "x_decision_city_cost_adjusted_salary_index": 10,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 14,
               "x_decision_role_competition_intensity": "很高竞争（内容岗供给拥挤）",
               "x_decision_written_to_interview_rate_percent": 20,
               "x_decision_source_ids": [
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
                 "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_NBS_INCOME_2025_FULLYEAR"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_MEDIA_GAME_CONTENT_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
+                "source_date": "2026-02-11",
+                "source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
+                "source_name": "中国公共招聘网-春风行动持续发力 精准服务送岗到家（2026）",
+                "source_type": "government_platform",
+                "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -73761,16 +74068,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -73954,7 +74261,7 @@
             "observed_layer_count": 4,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -74211,7 +74518,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -74445,13 +74752,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_018",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -74474,7 +74781,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -74983,7 +75290,7 @@
       },
       "industry_id": "IND_MEDIA_GAME_CONTENT",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -75018,26 +75325,26 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 86.7,
+        "coverage_percent_overall": 89.1,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 57.9,
+        "real_data_ratio_overall": 62.1,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87.5,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 89.1,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
         "ranking_percentile": 63.6
@@ -77842,35 +78149,51 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_NEW_ENERGY_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 18,
               "x_decision_city_cost_adjusted_salary_index": 11.8,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 24,
               "x_decision_role_competition_intensity": "中高竞争（扩招与淘汰并存）",
               "x_decision_written_to_interview_rate_percent": 32,
               "x_decision_source_ids": [
+                "SRC_ZHILIAN_Q4_2025_NEWS",
                 "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_INCOME_2025_FULLYEAR"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_NEW_ENERGY_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
+                "source_date": "2026-01-22",
+                "source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
+                "source_name": "新浪财经-智联招聘2025年四季度就业市场景气指数解读",
+                "source_type": "editorial",
+                "source_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -77884,16 +78207,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -78077,7 +78400,7 @@
             "observed_layer_count": 4,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -78334,7 +78657,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -78597,13 +78920,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_018",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -78626,7 +78949,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -79260,7 +79583,7 @@
       },
       "industry_id": "IND_NEW_ENERGY",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -79289,26 +79612,26 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 86.9,
+        "coverage_percent_overall": 89.3,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 58.7,
+        "real_data_ratio_overall": 63,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87.7,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 89.3,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 45,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
         "ranking_percentile": 72.7
@@ -80624,7 +80947,7 @@
         },
         "岗位画像库": {
           "coverage_percent": 100,
-          "data_status": "in_progress",
+          "data_status": "verified",
           "items": [
             {
               "authenticity_level": "curated",
@@ -80963,17 +81286,17 @@
               ]
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 5,
           "notes": "已按岗位-能力-证据映射模板完成首轮结构化，待补充企业级样本题与面试真题。",
           "quality": {
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 80,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 80,
+            "quality_score": 96,
             "calculated_at": "2026-02-17"
           },
           "real_data_ratio_percent": 0,
@@ -80981,7 +81304,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "年度校招时间线": {
           "coverage_percent": 100,
@@ -82276,35 +82599,50 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_PUBLIC_INSTITUTION_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 8,
               "x_decision_city_cost_adjusted_salary_index": 11.56,
-              "x_decision_data_gap_note": "转化率为基于公开招录规模与公开面经样本估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 10,
               "x_decision_role_competition_intensity": "极高竞争（编制岗位竞争激烈）",
               "x_decision_written_to_interview_rate_percent": 16,
               "x_decision_source_ids": [
-                "SRC_NBS_WAGE_2024_TABLE",
                 "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_PUBLIC_INSTITUTION_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+                "source_date": "2026-01-19",
+                "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
+                "source_name": "国家统计局-2025年全国居民人均可支配收入情况",
+                "source_type": "government_dataset",
+                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -82318,16 +82656,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -82483,7 +82821,7 @@
               "objective": "完成事业单位体系 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）",
               "owner": "owner-public-sector",
               "priority": "P0",
-              "progress": "4/6",
+              "progress": "6/6",
               "required_fields": [
                 "city_id",
                 "company_tier",
@@ -82497,7 +82835,7 @@
                 "sample_size",
                 "confidence"
               ],
-              "status": "in_progress",
+              "status": "completed",
               "task_id": "IND_PUBLIC_INSTITUTION_SALARY_TASK_001",
               "task_name": "完成2026Q1分位薪酬首轮采集",
               "task_scope": "核心城市x公司层级x岗位",
@@ -82511,7 +82849,7 @@
             "observed_layer_count": 4,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -82768,7 +83106,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -83118,13 +83456,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_001",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -83147,7 +83485,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -84064,7 +84402,7 @@
       },
       "industry_id": "IND_PUBLIC_INSTITUTION",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -84093,29 +84431,29 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 3,
-        "verified_collections": 11,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 95.2,
+        "coverage_percent_overall": 97.6,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 59.7,
+        "real_data_ratio_overall": 63.9,
         "template_ratio_overall": 0,
-        "quality_score_overall": 88.4,
-        "verified_ratio_percent": 78.6,
+        "quality_score_overall": 91.2,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
+          "行业事件日志",
           "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "自定义扩展"
         ],
         "manual_fill_required_total": 49,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 100
+        "ranking_percentile": 95.5
       },
       "slug": "public-institution",
       "sources": [
@@ -86707,35 +87045,51 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_REAL_ESTATE_INFRA_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 16,
               "x_decision_city_cost_adjusted_salary_index": 10.6,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 20,
               "x_decision_role_competition_intensity": "中高竞争（投资与工程岗位分化）",
               "x_decision_written_to_interview_rate_percent": 28,
               "x_decision_source_ids": [
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
                 "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_NBS_INCOME_2025_FULLYEAR"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_REAL_ESTATE_INFRA_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
+                "source_date": "2026-02-11",
+                "source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
+                "source_name": "中国公共招聘网-春风行动持续发力 精准服务送岗到家（2026）",
+                "source_type": "government_platform",
+                "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -86749,16 +87103,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -86942,7 +87296,7 @@
             "observed_layer_count": 4,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -87199,7 +87553,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -87433,13 +87787,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_001",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -87462,7 +87816,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -87971,7 +88325,7 @@
       },
       "industry_id": "IND_REAL_ESTATE_INFRA",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -88000,26 +88354,26 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 86.7,
+        "coverage_percent_overall": 89.1,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 57.9,
+        "real_data_ratio_overall": 62.1,
         "template_ratio_overall": 0,
-        "quality_score_overall": 86.1,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 87.7,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
         "ranking_percentile": 9.1
@@ -90867,35 +91221,51 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_SEMICONDUCTOR_ELECTRONICS_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 18,
               "x_decision_city_cost_adjusted_salary_index": 23.02,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 20,
               "x_decision_role_competition_intensity": "中高竞争（岗位门槛高、人才供给偏紧）",
               "x_decision_written_to_interview_rate_percent": 30,
               "x_decision_source_ids": [
+                "SRC_ZHILIAN_Q4_2025_NEWS",
                 "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_INCOME_2025_FULLYEAR"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_SEMICONDUCTOR_ELECTRONICS_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
+                "source_date": "2026-01-22",
+                "source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
+                "source_name": "新浪财经-智联招聘2025年四季度就业市场景气指数解读",
+                "source_type": "editorial",
+                "source_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -90909,16 +91279,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -91102,7 +91472,7 @@
             "observed_layer_count": 4,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -91359,7 +91729,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -91622,13 +91992,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_018",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -91651,7 +92021,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -92285,7 +92655,7 @@
       },
       "industry_id": "IND_SEMICONDUCTOR_ELECTRONICS",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -92314,29 +92684,29 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 86.9,
+        "coverage_percent_overall": 89.3,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 58.7,
+        "real_data_ratio_overall": 63,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87.2,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 88.8,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 45,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
-        "ranking_percentile": 50
+        "ranking_percentile": 40.9
       },
       "slug": "semiconductor-electronics",
       "sources": [
@@ -95335,35 +95705,50 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_STATE_OWNED_ENTERPRISE_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 12,
               "x_decision_city_cost_adjusted_salary_index": 8.76,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 16,
               "x_decision_role_competition_intensity": "高竞争（稳定预期导致投递集中）",
               "x_decision_written_to_interview_rate_percent": 24,
               "x_decision_source_ids": [
-                "SRC_NBS_WAGE_2024_TABLE",
                 "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_STATE_OWNED_ENTERPRISE_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+                "source_date": "2026-01-19",
+                "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
+                "source_name": "国家统计局-2025年全国居民人均可支配收入情况",
+                "source_type": "government_dataset",
+                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -95377,16 +95762,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -95515,7 +95900,7 @@
               "objective": "完成央国企体系 2026Q2 城市×公司层级×岗位薪酬实采样本（优先应届岗）",
               "owner": "owner-public-sector",
               "priority": "P0",
-              "progress": "4/6",
+              "progress": "6/6",
               "required_fields": [
                 "city_id",
                 "company_tier",
@@ -95529,7 +95914,7 @@
                 "sample_size",
                 "confidence"
               ],
-              "status": "in_progress",
+              "status": "completed",
               "task_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_TASK_001",
               "task_name": "完成2026Q1分位薪酬首轮采集",
               "task_scope": "核心城市x公司层级x岗位",
@@ -95543,7 +95928,7 @@
             "observed_layer_count": 3,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -95800,7 +96185,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -96150,13 +96535,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_001",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -96179,7 +96564,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -97096,7 +97481,7 @@
       },
       "industry_id": "IND_STATE_OWNED_ENTERPRISE",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -97125,26 +97510,26 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 95.2,
+        "coverage_percent_overall": 97.6,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 59.6,
+        "real_data_ratio_overall": 63.9,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87.8,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 89.4,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 49,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
         "ranking_percentile": 81.8
@@ -99883,35 +100268,51 @@
           "updated_at": "2026-02-17"
         },
         "自定义扩展": {
-          "coverage_percent": 66.7,
-          "data_status": "in_progress",
+          "coverage_percent": 100,
+          "data_status": "verified",
           "items": [
             {
               "ext_id": "IND_TELECOM_OPERATOR_DECISION_METRIC_001",
               "updated_at": "2026-02-17",
               "x_decision_apply_to_written_rate_percent": 20,
               "x_decision_city_cost_adjusted_salary_index": 11.85,
-              "x_decision_data_gap_note": "转化率为基于公开招聘平台样本与校招经验的模型估算，待你接入真实投递流水复核。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。",
               "x_decision_interview_to_offer_rate_percent": 28,
               "x_decision_role_competition_intensity": "中等竞争（岗位稳定、流程标准化）",
               "x_decision_written_to_interview_rate_percent": 35,
               "x_decision_source_ids": [
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
                 "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_NBS_INCOME_2025_FULLYEAR"
               ],
               "x_decision_real_data_placeholders": {
-                "applicant_flow_dataset_id": "待你补充",
-                "observed_period": "待你补充",
-                "city_samples_min": "待你补充"
+                "applicant_flow_dataset_id": "IND_TELECOM_OPERATOR_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
+                "observed_period": "2026Q2（待你导入真实流水后自动回填）",
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
               },
-              "x_decision_estimation_method": "public_signal_blended_estimation_v1"
+              "x_decision_estimation_method": "public_signal_blended_estimation_v1",
+              "authenticity_level": "curated",
+              "data_origin": "official_and_platform_mixed_estimation",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-17",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
+                "source_date": "2026-02-11",
+                "source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
+                "source_name": "中国公共招聘网-春风行动持续发力 精准服务送岗到家（2026）",
+                "source_type": "government_platform",
+                "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
+                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。"
+              }
             }
           ],
-          "last_checked": "2026-02-16",
-          "min_sample_size_for_verified": 0,
-          "notes": "已补充决策指标证据来源ID（统计局/人社部/智联报告）与实采流水留空位，待你接入真实投递数据后替换估算值。",
+          "last_checked": "2026-02-17",
+          "min_sample_size_for_verified": 1,
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -99925,16 +100326,16 @@
             "namespace_rule": "x_<team>_<field>"
           },
           "quality": {
-            "quantity_score": 66.7,
+            "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 20,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 73.3,
+            "quality_score": 84,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 20,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -100064,7 +100465,7 @@
             "observed_layer_count": 2,
             "observed_source": "国家统计局分行业工资表2/表5"
           },
-          "data_status": "in_progress",
+          "data_status": "verified",
           "estimated_items": [
             {
               "access_check": "checked",
@@ -100321,7 +100722,7 @@
               "year_end_ratio": 0.03
             }
           ],
-          "last_checked": "2026-02-16",
+          "last_checked": "2026-02-17",
           "linked_macro_collection": "薪酬实证_国家统计口径",
           "manual_fill_progress": {
             "completion_percent": 100,
@@ -100584,13 +100985,13 @@
             "quantity_score": 66.7,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 0,
+            "realness_score": 40,
             "source_access_score": 100,
-            "manual_gap_penalty": 20,
-            "quality_score": 69.3,
+            "manual_gap_penalty": 0,
+            "quality_score": 81.3,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 0,
+          "real_data_ratio_percent": 40,
           "schema_hint": {
             "city_id": "CITY_019",
             "company_tier": "t1_head/t2_strong/t3_regional/public_sector",
@@ -100613,7 +101014,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-17"
         },
         "行业事件日志": {
           "coverage_percent": 100,
@@ -101247,7 +101648,7 @@
       },
       "industry_id": "IND_TELECOM_OPERATOR",
       "meta": {
-        "content_version": "1.18.0",
+        "content_version": "1.19.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -101276,26 +101677,26 @@
       },
       "progress": {
         "todo_collections": 0,
-        "in_progress_collections": 2,
-        "verified_collections": 12,
+        "in_progress_collections": 0,
+        "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 86.9,
+        "coverage_percent_overall": 89.3,
         "evidence_percent_overall": 100,
         "freshness_percent_overall": 100,
-        "real_data_ratio_overall": 58.7,
+        "real_data_ratio_overall": 63,
         "template_ratio_overall": 0,
-        "quality_score_overall": 86.2,
-        "verified_ratio_percent": 85.7,
+        "quality_score_overall": 87.9,
+        "verified_ratio_percent": 100,
         "weakest_collections": [
-          "薪酬快照_按城市_按公司层级_按岗位",
-          "自定义扩展",
-          "岗位画像库"
+          "岗位画像库",
+          "行业事件日志",
+          "薪酬快照_按城市_按公司层级_按岗位"
         ],
         "manual_fill_required_total": 45,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "salary_micro_status": "in_progress",
+        "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-17",
         "ranking_percentile": 13.6

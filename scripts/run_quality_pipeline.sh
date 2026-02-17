@@ -141,7 +141,9 @@ def stddev($arr):
     decision_items_total: ([."行业词条"[]|.dynamic["自定义扩展"].items[]?]|length),
     conversion_fields_filled: ([."行业词条"[]|.dynamic["自定义扩展"].items[]?|select(.x_decision_apply_to_written_rate_percent!=null and .x_decision_written_to_interview_rate_percent!=null and .x_decision_interview_to_offer_rate_percent!=null)]|length),
     city_cost_salary_filled: ([."行业词条"[]|.dynamic["自定义扩展"].items[]?|select(.x_decision_city_cost_adjusted_salary_index!=null)]|length),
-    competition_fields_filled: ([."行业词条"[]|.dynamic["自定义扩展"].items[]?|select((.x_decision_role_competition_intensity // "") != "" and .x_decision_role_competition_intensity != "待你补充")]|length)
+    competition_fields_filled: ([."行业词条"[]|.dynamic["自定义扩展"].items[]?|select((.x_decision_role_competition_intensity // "") != "" and .x_decision_role_competition_intensity != "待你补充")]|length),
+    decision_items_with_evidence: ([."行业词条"[]|.dynamic["自定义扩展"].items[]?|select(.evidence.source_id!=null and .evidence.source_url!=null and .evidence.source_date!=null and .evidence.sample_size!=null)]|length),
+    decision_placeholder_pending_items: ([."行业词条"[]|.dynamic["自定义扩展"].items[]?|select((.x_decision_real_data_placeholders.applicant_flow_dataset_id // "")=="待你补充" or (.x_decision_real_data_placeholders.observed_period // "")=="待你补充" or (.x_decision_real_data_placeholders.city_samples_min // "")=="待你补充")]|length)
   }
 }' "${DATA_PATH}" > "${REPORT_PATH}"
 
@@ -232,6 +234,20 @@ FUTURE_URL_JSON="$(jq --arg today "${TODAY_COMPACT}" '
 ' "${DATA_PATH}")"
 FUTURE_URL_COUNT="$(jq 'length' <<<"${FUTURE_URL_JSON}")"
 
+# Decision placeholder gate.
+DECISION_PLACEHOLDER_JSON="$(jq '
+[
+  ."行业词条"[]
+  | .industry_id as $industry_id
+  | .dynamic["自定义扩展"].items[]?
+  | select((.x_decision_real_data_placeholders.applicant_flow_dataset_id // "") == "待你补充"
+      or (.x_decision_real_data_placeholders.observed_period // "") == "待你补充"
+      or (.x_decision_real_data_placeholders.city_samples_min // "") == "待你补充")
+  | {industry_id: $industry_id, ext_id: (.ext_id // null), placeholders: .x_decision_real_data_placeholders}
+]
+' "${DATA_PATH}")"
+DECISION_PLACEHOLDER_COUNT="$(jq 'length' <<<"${DECISION_PLACEHOLDER_JSON}")"
+
 # New explainable gate metrics.
 P0_SLOT_TOTAL="$(jq '[."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P0")]|length' "${DATA_PATH}")"
 P0_PENDING_TOTAL="$(jq '[."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P0")|select((.status // "pending")|startswith("pending"))]|length' "${DATA_PATH}")"
@@ -251,6 +267,7 @@ GATE_P0_MIN="$(jq '."治理配置"."发布硬门槛".p0_completion_min_percent /
 GATE_TEMPLATE_MAX="$(jq '."治理配置"."发布硬门槛".template_ratio_max_percent // 35' "${DATA_PATH}")"
 GATE_SOURCE_MIN="$(jq '."治理配置"."发布硬门槛".source_http_200_min_percent // 90' "${DATA_PATH}")"
 GATE_REAL_Q_MIN="$(jq '."治理配置"."发布硬门槛".real_question_min_percent // 25' "${DATA_PATH}")"
+GATE_DECISION_PLACEHOLDER_MAX="$(jq '."治理配置"."发布硬门槛".decision_placeholder_max_hits // 0' "${DATA_PATH}")"
 
 HAS_BLOCKERS=0
 if [[ "${PLACEHOLDER_COUNT}" -gt 0 ]]; then HAS_BLOCKERS=1; fi
@@ -259,6 +276,7 @@ if [[ "${NON200_UNMARKED_COUNT}" -gt 0 ]]; then HAS_BLOCKERS=1; fi
 if [[ "${PUBLISHED_P0_COUNT}" -gt 0 ]]; then HAS_BLOCKERS=1; fi
 if [[ "${SOURCE_MISMATCH_COUNT}" -gt 0 ]]; then HAS_BLOCKERS=1; fi
 if [[ "${FUTURE_URL_COUNT}" -gt 0 ]]; then HAS_BLOCKERS=1; fi
+if awk -v a="${DECISION_PLACEHOLDER_COUNT}" -v b="${GATE_DECISION_PLACEHOLDER_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${P0_COMPLETION_PERCENT}" -v b="${GATE_P0_MIN}" 'BEGIN{exit !(a < b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${TEMPLATE_RATIO_PERCENT}" -v b="${GATE_TEMPLATE_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${SOURCE_HTTP_200_RATIO}" -v b="${GATE_SOURCE_MIN}" 'BEGIN{exit !(a < b)}'; then HAS_BLOCKERS=1; fi
@@ -268,6 +286,7 @@ P0_COMPLETION_ISSUE="$(jq -n --argjson actual "${P0_COMPLETION_PERCENT}" --argjs
 TEMPLATE_RATIO_ISSUE="$(jq -n --argjson actual "${TEMPLATE_RATIO_PERCENT}" --argjson threshold "${GATE_TEMPLATE_MAX}" '{actual_percent:$actual, threshold_percent:$threshold}')"
 SOURCE_HTTP_ISSUE="$(jq -n --argjson actual "${SOURCE_HTTP_200_RATIO}" --argjson threshold "${GATE_SOURCE_MIN}" '{actual_percent:$actual, threshold_percent:$threshold}')"
 REAL_QUESTION_ISSUE="$(jq -n --argjson actual "${REAL_QUESTION_READY_RATIO}" --argjson threshold "${GATE_REAL_Q_MIN}" '{actual_percent:$actual, threshold_percent:$threshold}')"
+DECISION_PLACEHOLDER_ISSUE="$(jq -n --argjson actual "${DECISION_PLACEHOLDER_COUNT}" --argjson threshold "${GATE_DECISION_PLACEHOLDER_MAX}" '{actual_hits:$actual, threshold_hits:$threshold}')"
 
 jq -n \
   --arg generated_at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
@@ -278,6 +297,8 @@ jq -n \
   --argjson published_p0_count "${PUBLISHED_P0_COUNT}" \
   --argjson source_mismatch_count "${SOURCE_MISMATCH_COUNT}" \
   --argjson future_url_count "${FUTURE_URL_COUNT}" \
+  --argjson decision_placeholder_count "${DECISION_PLACEHOLDER_COUNT}" \
+  --argjson decision_placeholder_max "${GATE_DECISION_PLACEHOLDER_MAX}" \
   --argjson p0_completion_percent "${P0_COMPLETION_PERCENT}" \
   --argjson p0_completion_min "${GATE_P0_MIN}" \
   --argjson template_ratio_percent "${TEMPLATE_RATIO_PERCENT}" \
@@ -292,10 +313,12 @@ jq -n \
   --argjson published_p0_issues "${PUBLISHED_P0_JSON}" \
   --argjson source_mismatch_issues "${SOURCE_MISMATCH_JSON}" \
   --argjson future_url_issues "${FUTURE_URL_JSON}" \
+  --argjson decision_placeholder_issues "${DECISION_PLACEHOLDER_JSON}" \
   --argjson p0_completion_issue "${P0_COMPLETION_ISSUE}" \
   --argjson template_ratio_issue "${TEMPLATE_RATIO_ISSUE}" \
   --argjson source_http_issue "${SOURCE_HTTP_ISSUE}" \
   --argjson real_question_issue "${REAL_QUESTION_ISSUE}" \
+  --argjson decision_placeholder_issue "${DECISION_PLACEHOLDER_ISSUE}" \
   '{
     generated_at: $generated_at,
     data_file: $data_file,
@@ -307,6 +330,8 @@ jq -n \
       published_entries_with_p0_pending: $published_p0_count,
       source_id_url_host_mismatch: $source_mismatch_count,
       future_dated_source_urls: $future_url_count,
+      decision_placeholder_hits: $decision_placeholder_count,
+      decision_placeholder_max_hits: $decision_placeholder_max,
       p0_completion_percent: $p0_completion_percent,
       p0_completion_min_percent: $p0_completion_min,
       template_ratio_percent: $template_ratio_percent,
@@ -322,10 +347,12 @@ jq -n \
       published_entries_with_p0_pending: $published_p0_issues,
       source_id_url_host_mismatch: $source_mismatch_issues,
       future_dated_source_urls: $future_url_issues,
+      decision_placeholder_records: $decision_placeholder_issues,
       p0_completion_threshold: $p0_completion_issue,
       template_ratio_threshold: $template_ratio_issue,
       source_http_200_threshold: $source_http_issue,
-      real_question_threshold: $real_question_issue
+      real_question_threshold: $real_question_issue,
+      decision_placeholder_threshold: $decision_placeholder_issue
     }
   }' > "${GATE_PATH}"
 
