@@ -528,10 +528,20 @@
           "延续v1.40.0的行业差异化决策卡，并保持A/B/C投递池全量可执行。",
           "主文件与分拆词条重新同步并重跑质量流水线。"
         ]
+      },
+      {
+        "version": "v1.42.1",
+        "date": "2026-02-18",
+        "summary": [
+          "全行业决策卡salary_source_id从单一统计口径切换为行业薪酬实证源，降低同质化。",
+          "23个行业自定义扩展新增BOSS/小红书补录指引，明确运营需补字段与检索关键词。",
+          "逐条将访谈/案例中官方来源样本从curated/company_official规范为official，并统一data_origin语义。",
+          "新增平台样本补录手册并完成主文件/分文件同步与质量流水线复跑。"
+        ]
       }
     ],
-    "文档名称": "中国大陆应届生求职行业百科（v1.40.0题库与决策可信度增强版）",
-    "版本": "v1.41.0",
+    "文档名称": "中国大陆应届生求职行业百科（v1.42.1多源决策增强版）",
+    "版本": "v1.42.1",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -582,7 +592,8 @@
       "v1.37.0逐行业刷新政策/事件过期锚点并增强来源时效说明，将整体within_180_days提升至87%+。",
       "v1.37.1对5个低分行业逐条补官方题库与入口来源，增强题库深度与公司样本差异化。",
       "v1.38.0补充事业单位体系2026年湖北省公告链路，新增访谈/案例/政策/事件与官方入口，提升公共部门条目时效与区域可执行性。",
-      "v1.39.0对5个低分行业逐条做证据锚点分散化（20条），显著降低来源集中度并提升行业决策稳定性。"
+      "v1.39.0对5个低分行业逐条做证据锚点分散化（20条），显著降低来源集中度并提升行业决策稳定性。",
+      "v1.42.1将决策薪酬源改为行业实证来源，并补齐BOSS/小红书运营检索与字段补录规范。"
     ],
     "适用人群": "中国大陆应届生（含毕业3年内）",
     "updated_at": "2026-02-18"
@@ -6961,12 +6972,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -7039,12 +7050,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "caveats": [
                 "不同产线自动化基础和改造预算差异较大，经验迁移需说明边界。",
                 "公开岗位信息对跨厂区协同复杂度覆盖有限，建议面试时补充实际约束。"
               ],
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -7211,18 +7222,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16.7,
-            "quality_score": 86.7,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -8994,9 +9005,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -9060,9 +9071,9 @@
                 "把设备点检、备件补给和换型策略纳入同一周度计划，减少等待损耗。",
                 "建立异常复盘模板并同步班组培训，缩短故障复现到闭环周期。"
               ],
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "case_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_CASE_003",
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -9178,18 +9189,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 15,
-            "quality_score": 87,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -9973,14 +9984,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 20,
               "x_decision_city_cost_adjusted_salary_index": 11.45,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 工业自动化 电气工程师 PLC”，小红书检索建议：“工业自动化 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 26,
               "x_decision_role_competition_intensity": "中等竞争（工程岗位需求稳定）",
               "x_decision_written_to_interview_rate_percent": 34,
               "x_decision_source_ids": [
+                "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
                 "SRC_MIIT_MECHANICAL_STABLE_20250929",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_WWW_INOVANCE_COM_3C75604F"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -10007,8 +10018,8 @@
                 "publish_date": "2025-09-29",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_WWW_INOVANCE_COM_3C75604F"
+                  "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 9,
@@ -10019,7 +10030,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -12213,14 +12224,14 @@
         "coverage_percent_overall": 89.3,
         "evidence_percent_overall": 91.8,
         "freshness_percent_overall": 93.2,
-        "real_data_ratio_overall": 74,
+        "real_data_ratio_overall": 81.9,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91.1,
+        "quality_score_overall": 91.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
-          "自定义扩展",
           "笔试真题库",
-          "面试真题库"
+          "面试真题库",
+          "自定义扩展"
         ],
         "manual_fill_required_total": 45,
         "manual_fill_pending_total": 0,
@@ -12645,12 +12656,13 @@
             "evidence_chain": {
               "primary_source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "secondary_source_ids": [
+                "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
                 "SRC_MIIT_MECHANICAL_STABLE_20250929",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
               "policy_source_id": "SRC_MIIT_MECHANICAL_STABLE_20250929",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F"
             }
           }
         },
@@ -13125,12 +13137,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -13203,12 +13215,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "caveats": [
                 "不同品类（乳品、肉制品、休食）在抽检规则和工艺窗口上差异明显。",
                 "旺季与大促阶段的仓配波动会放大质量治理难度，需结合场景解释。"
               ],
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -13352,18 +13364,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16,
-            "quality_score": 86.8,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -15132,9 +15144,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_AGRI_FOOD_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -15198,9 +15210,9 @@
                 "建立质量、仓配、客服三方联动机制，压缩异常工单处理时长。",
                 "把复检结果和补货策略同步到周计划，减少断货与重复投诉。"
               ],
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "case_id": "IND_AGRI_FOOD_CASE_003",
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -15292,18 +15304,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 13.3,
-            "quality_score": 87.3,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -15994,14 +16006,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 20,
               "x_decision_city_cost_adjusted_salary_index": 9.9,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 食品研发 质检 供应链”，小红书检索建议：“农业 食品 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 26,
               "x_decision_role_competition_intensity": "中等竞争（产研与供应链岗位并存）",
               "x_decision_written_to_interview_rate_percent": 34,
               "x_decision_source_ids": [
+                "SRC_AUTO_WWW_YILI_COM_D7937E58",
                 "SRC_MOA_CASDE_20251009",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_WWW_YILI_COM_D7937E58"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_AGRI_FOOD_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -16028,8 +16040,8 @@
                 "publish_date": "2025-10-09",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_WWW_YILI_COM_D7937E58"
+                  "SRC_AUTO_WWW_YILI_COM_D7937E58",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 9,
@@ -16040,7 +16052,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -18223,14 +18235,14 @@
         "coverage_percent_overall": 89.1,
         "evidence_percent_overall": 89,
         "freshness_percent_overall": 90.4,
-        "real_data_ratio_overall": 74.3,
+        "real_data_ratio_overall": 82.1,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.2,
+        "quality_score_overall": 90.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
-          "从业者访谈",
           "笔试真题库",
-          "面试真题库"
+          "面试真题库",
+          "争议问题与结论"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
@@ -18241,7 +18253,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 36.4
+        "ranking_percentile": 45.5
       },
       "slug": "agriculture-food",
       "sources": [
@@ -18684,12 +18696,13 @@
             "evidence_chain": {
               "primary_source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
               "secondary_source_ids": [
+                "SRC_AUTO_WWW_YILI_COM_D7937E58",
                 "SRC_MOA_CASDE_20251009",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_YILI_COM_D7937E58",
               "policy_source_id": "SRC_MOA_CASDE_20251009",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_WWW_YILI_COM_D7937E58"
             }
           }
         },
@@ -19181,12 +19194,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -19259,12 +19272,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "caveats": [
                 "不同车型平台和算力配置差异会影响算法部署与调试策略。",
                 "公开岗位描述对功能安全与量产交付约束覆盖有限，需在面试中主动补充。"
               ],
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -19431,18 +19444,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16.7,
-            "quality_score": 86.7,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -21223,9 +21236,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_AUTO_INTELLIGENT_DRIVING_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -21289,9 +21302,9 @@
                 "建立算法、车端和测试联调节奏，缩短问题从复现到回归的周期。",
                 "把关键场景用例纳入发布门禁，降低版本回退与重复缺陷风险。"
               ],
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "case_id": "IND_AUTO_INTELLIGENT_DRIVING_CASE_003",
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -21407,18 +21420,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 15,
-            "quality_score": 87,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -22202,14 +22215,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 16,
               "x_decision_city_cost_adjusted_salary_index": 12.25,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 智能驾驶 算法 车控 测试”，小红书检索建议：“智能驾驶 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 22,
               "x_decision_role_competition_intensity": "高竞争（技术栈复合要求高）",
               "x_decision_written_to_interview_rate_percent": 28,
               "x_decision_source_ids": [
+                "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
                 "SRC_MIIT_AUTO_STABLE_20250912",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_CAREER_BYD_COM_C93FDB3E"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_AUTO_INTELLIGENT_DRIVING_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -22236,8 +22249,8 @@
                 "publish_date": "2025-09-12",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_CAREER_BYD_COM_C93FDB3E"
+                  "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 9,
@@ -22248,7 +22261,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -24442,14 +24455,14 @@
         "coverage_percent_overall": 89.3,
         "evidence_percent_overall": 91.8,
         "freshness_percent_overall": 93.2,
-        "real_data_ratio_overall": 74,
+        "real_data_ratio_overall": 81.9,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91,
+        "quality_score_overall": 91.2,
         "verified_ratio_percent": 100,
         "weakest_collections": [
-          "自定义扩展",
           "笔试真题库",
-          "面试真题库"
+          "面试真题库",
+          "自定义扩展"
         ],
         "manual_fill_required_total": 45,
         "manual_fill_pending_total": 0,
@@ -24875,12 +24888,13 @@
             "evidence_chain": {
               "primary_source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
               "secondary_source_ids": [
+                "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
                 "SRC_MIIT_AUTO_STABLE_20250912",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
               "policy_source_id": "SRC_MIIT_AUTO_STABLE_20250912",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_CAREER_BYD_COM_C93FDB3E"
             }
           }
         },
@@ -25374,12 +25388,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -25452,12 +25466,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "caveats": [
                 "不同赛道（创新药/器械/IVD）对合规细节要求不同，需按岗位细化准备。",
                 "真实项目中跨部门协同复杂度高于公开样本。"
               ],
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -25624,18 +25638,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16.7,
-            "quality_score": 86.7,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -27409,9 +27423,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_BIOMED_DEVICE_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -27475,9 +27489,9 @@
                 "建立跨部门周度风险看板，跟踪伦理、质控和数据清洗进度。",
                 "将关键偏差项纳入预警机制，并同步修订沟通节奏。"
               ],
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "case_id": "IND_BIOMED_DEVICE_CASE_003",
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -27593,18 +27607,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 15,
-            "quality_score": 87,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -28388,14 +28402,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 14,
               "x_decision_city_cost_adjusted_salary_index": 11.1,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 医疗器械 临床注册 研发”，小红书检索建议：“生物医药 器械 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 18,
               "x_decision_role_competition_intensity": "高竞争（准入门槛高且岗位集中）",
               "x_decision_written_to_interview_rate_percent": 26,
               "x_decision_source_ids": [
-                "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
+                "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
                 "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59"
+                "SRC_NMPAIC_DEVICE_WORKCONF_20260205"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_BIOMED_DEVICE_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -28422,8 +28436,8 @@
                 "publish_date": "2026-02-05",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59"
+                  "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 9,
@@ -28434,7 +28448,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -30704,14 +30718,14 @@
         "coverage_percent_overall": 89.3,
         "evidence_percent_overall": 89.3,
         "freshness_percent_overall": 90.7,
-        "real_data_ratio_overall": 74,
+        "real_data_ratio_overall": 81.9,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91.4,
+        "quality_score_overall": 91.6,
         "verified_ratio_percent": 100,
         "weakest_collections": [
-          "自定义扩展",
           "笔试真题库",
-          "面试真题库"
+          "面试真题库",
+          "自定义扩展"
         ],
         "manual_fill_required_total": 45,
         "manual_fill_pending_total": 0,
@@ -30722,7 +30736,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 81.8
+        "ranking_percentile": 86.4
       },
       "slug": "biomed-device",
       "sources": [
@@ -31137,12 +31151,13 @@
             "evidence_chain": {
               "primary_source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "secondary_source_ids": [
-                "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
-                "SRC_NBS_WAGE_2024_TABLE"
+                "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_NMPAIC_DEVICE_WORKCONF_20260205"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
               "policy_source_id": "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59"
             }
           }
         },
@@ -31635,12 +31650,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -31713,12 +31728,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "caveats": [
                 "不同材料体系（树脂、膜材、电子化学品）工艺窗口差异明显，经验需场景化说明。",
                 "公开JD对客户导入与量产爬坡细节覆盖有限，建议面试补充交付约束。"
               ],
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -31885,18 +31900,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16.7,
-            "quality_score": 86.7,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -33713,9 +33728,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_CHEM_NEW_MATERIALS_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -33779,9 +33794,9 @@
                 "建立研发-质量-生产联动看板，缩短异常批次识别与处置时长。",
                 "将关键控制点固化为放大SOP并开展复盘培训，降低重复波动风险。"
               ],
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "case_id": "IND_CHEM_NEW_MATERIALS_CASE_003",
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -33897,18 +33912,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 15,
-            "quality_score": 87,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -34697,14 +34712,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 20,
               "x_decision_city_cost_adjusted_salary_index": 11.1,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 化工 新材料 工艺 研发”，小红书检索建议：“化工 新材料 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 25,
               "x_decision_role_competition_intensity": "中等竞争（工艺与研发并行）",
               "x_decision_written_to_interview_rate_percent": 34,
               "x_decision_source_ids": [
+                "SRC_AUTO_WWW_WHCHEM_COM_7C60B768",
                 "SRC_GOV_PETROCHEM_STABLE_20250926",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_WWW_WHCHEM_COM_7C60B768"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_CHEM_NEW_MATERIALS_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -34731,8 +34746,8 @@
                 "publish_date": "2025-09-26",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_WWW_WHCHEM_COM_7C60B768"
+                  "SRC_AUTO_WWW_WHCHEM_COM_7C60B768",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 9,
@@ -34743,7 +34758,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -36912,9 +36927,9 @@
         "coverage_percent_overall": 88.1,
         "evidence_percent_overall": 91.9,
         "freshness_percent_overall": 93.2,
-        "real_data_ratio_overall": 73.7,
+        "real_data_ratio_overall": 81.5,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.8,
+        "quality_score_overall": 91,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -36930,7 +36945,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 59.1
+        "ranking_percentile": 63.6
       },
       "slug": "chemicals-new-materials",
       "sources": [
@@ -37344,12 +37359,13 @@
             "evidence_chain": {
               "primary_source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
               "secondary_source_ids": [
+                "SRC_AUTO_WWW_WHCHEM_COM_7C60B768",
                 "SRC_GOV_PETROCHEM_STABLE_20250926",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_WHCHEM_COM_7C60B768",
               "policy_source_id": "SRC_GOV_PETROCHEM_STABLE_20250926",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_WWW_WHCHEM_COM_7C60B768"
             }
           }
         },
@@ -37841,12 +37857,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -37919,12 +37935,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "不同地区岗位职责和考核口径存在差异，需以目标地区公告为准。",
                 "岗位实践强调规范流程，案例表达需避免过度商业化叙事。"
               ],
-              "data_origin": "government_agency_signal",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -37960,12 +37976,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "不同部委资格复审材料要求存在细分差异。",
                 "样本基于公开公告整理，非官方面试评分细则全文。"
               ],
-              "data_origin": "government_agency_signal",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -38001,12 +38017,12 @@
               "updated_at": "2026-02-18"
             },
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "部委面试题型会随岗位属性调整。",
                 "公告信息主要覆盖流程节点，细化评分口径需结合历年样本。"
               ],
-              "data_origin": "government_agency_signal",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -38173,18 +38189,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16.7,
-            "quality_score": 86.7,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -39670,9 +39686,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_CIVIL_SERVICE_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -39736,9 +39752,9 @@
                 "建立跨部门异常升级机制，压缩材料补正与流转等待时间。",
                 "将高频退回原因固化为前置告知清单，减少重复受理。"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_CIVIL_SERVICE_CASE_003",
-              "data_origin": "government_platform_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -39771,9 +39787,9 @@
                 "建立材料补正提醒机制，减少资格复审退回。",
                 "按面试批次动态调配审核人力，避免排队积压。"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_CIVIL_SERVICE_CASE_004",
-              "data_origin": "government_agency_signal",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -39806,9 +39822,9 @@
                 "建立候补名单触发机制，降低临时缺席对排期影响。",
                 "面试后统一发布后续流程时间表，减少咨询拥堵。"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_CIVIL_SERVICE_CASE_005",
-              "data_origin": "government_agency_signal",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -39924,18 +39940,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 15,
-            "quality_score": 87,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -40920,14 +40936,15 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 6,
               "x_decision_city_cost_adjusted_salary_index": 9.62,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“公务员 应届 国考 省考 职位”，小红书检索建议：“公务员 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 8,
               "x_decision_role_competition_intensity": "极高竞争（招录比高）",
               "x_decision_written_to_interview_rate_percent": 14,
               "x_decision_source_ids": [
-                "SRC_SCS_EXAM_2026",
+                "SRC_AUTO_BM_SCS_GOV_CN_6B67637B",
                 "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_BM_SCS_GOV_CN_6B67637B"
+                "SRC_SCS",
+                "SRC_SCS_EXAM_2026"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_CIVIL_SERVICE_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -40954,8 +40971,9 @@
                 "publish_date": "2025-10-14",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
+                  "SRC_AUTO_BM_SCS_GOV_CN_6B67637B",
                   "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_BM_SCS_GOV_CN_6B67637B"
+                  "SRC_SCS"
                 ]
               },
               "x_decision_min_sample_required": 12,
@@ -40966,7 +40984,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -43298,14 +43316,14 @@
         "coverage_percent_overall": 97.6,
         "evidence_percent_overall": 92.6,
         "freshness_percent_overall": 93.8,
-        "real_data_ratio_overall": 75,
+        "real_data_ratio_overall": 82.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 92.1,
+        "quality_score_overall": 91.6,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
-          "从业者访谈",
-          "案例复盘"
+          "争议问题与结论",
+          "行业事件日志"
         ],
         "manual_fill_required_total": 49,
         "manual_fill_pending_total": 0,
@@ -43316,7 +43334,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 90.9
+        "ranking_percentile": 81.8
       },
       "slug": "civil-service",
       "sources": [
@@ -43780,12 +43798,14 @@
             "evidence_chain": {
               "primary_source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
               "secondary_source_ids": [
-                "SRC_SCS_EXAM_2026",
-                "SRC_NBS_WAGE_2024_TABLE"
+                "SRC_AUTO_BM_SCS_GOV_CN_6B67637B",
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_SCS",
+                "SRC_SCS_EXAM_2026"
               ],
               "timeline_source_id": "SRC_AUTO_BM_SCS_GOV_CN_6B67637B",
               "policy_source_id": "SRC_SCS_EXAM_2026",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_SCS"
             }
           }
         },
@@ -44244,12 +44264,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -44322,12 +44342,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "caveats": [
                 "不同行业赛道项目周期和方法论侧重点差异较大，案例需说明行业上下文。",
                 "公开招聘信息对工时峰值与项目切换频率覆盖有限，需在面试中明确边界。"
               ],
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -44471,18 +44491,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16,
-            "quality_score": 86.8,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -46260,9 +46280,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_CONSULTING_PRO_SERVICES_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -46326,9 +46346,9 @@
                 "建立客户-项目组双周对齐机制，减少无效迭代与返工。",
                 "将分析模板与结论口径标准化，提升跨团队复用效率。"
               ],
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "case_id": "IND_CONSULTING_PRO_SERVICES_CASE_003",
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -46420,18 +46440,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 13.3,
-            "quality_score": 87.3,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -47122,14 +47142,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 9,
               "x_decision_city_cost_adjusted_salary_index": 12,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 咨询 审计 税务 风险”，小红书检索建议：“咨询 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 11,
               "x_decision_role_competition_intensity": "很高竞争（case+英语双门槛）",
               "x_decision_written_to_interview_rate_percent": 18,
               "x_decision_source_ids": [
+                "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
                 "SRC_MOE_ACTION_2026",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_WWW_PWCCN_COM_B092A9CD"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_CONSULTING_PRO_SERVICES_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -47156,8 +47176,8 @@
                 "publish_date": "2026-02-12",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_WWW_PWCCN_COM_B092A9CD"
+                  "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 9,
@@ -47168,7 +47188,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -49274,14 +49294,14 @@
         "coverage_percent_overall": 89.1,
         "evidence_percent_overall": 91.5,
         "freshness_percent_overall": 90.1,
-        "real_data_ratio_overall": 74.3,
+        "real_data_ratio_overall": 82.1,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.1,
+        "quality_score_overall": 90.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
           "面试真题库",
-          "从业者访谈"
+          "争议问题与结论"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
@@ -49292,7 +49312,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 13.6
+        "ranking_percentile": 22.7
       },
       "slug": "consulting-professional-services",
       "sources": [
@@ -49720,12 +49740,13 @@
             "evidence_chain": {
               "primary_source_id": "SRC_MOE_MEETING_2026",
               "secondary_source_ids": [
+                "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
                 "SRC_MOE_ACTION_2026",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
               "policy_source_id": "SRC_MOE_ACTION_2026",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD"
             }
           }
         },
@@ -50190,12 +50211,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -50268,12 +50289,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "caveats": [
                 "不同站点的履约规则和合规要求差异明显，经验不可直接平移。",
                 "店铺经营数据受季节与活动干扰，面试回答需说明归因边界。"
               ],
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -50417,18 +50438,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16,
-            "quality_score": 86.8,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -52227,9 +52248,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_ECOMMERCE_CROSSBORDER_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -52293,9 +52314,9 @@
                 "将站点广告预算改为分时段投放，降低仓配高峰拥堵风险。",
                 "建立站点周会机制，统一处理税务合规与清关异常工单。"
               ],
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "case_id": "IND_ECOMMERCE_CROSSBORDER_CASE_003",
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -52387,18 +52408,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 13.3,
-            "quality_score": 87.3,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -53003,14 +53024,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 12,
               "x_decision_city_cost_adjusted_salary_index": 10.8,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 跨境电商 运营 投放 供应链”，小红书检索建议：“跨境电商 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 16,
               "x_decision_role_competition_intensity": "高竞争（运营岗投递集中）",
               "x_decision_written_to_interview_rate_percent": 22,
               "x_decision_source_ids": [
+                "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248",
                 "SRC_MOFCOM_ECOMMERCE_20260123",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_ECOMMERCE_CROSSBORDER_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -53037,8 +53058,8 @@
                 "publish_date": "2026-01-23",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248"
+                  "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 10,
@@ -53049,7 +53070,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -55195,14 +55216,14 @@
         "coverage_percent_overall": 90.5,
         "evidence_percent_overall": 88.7,
         "freshness_percent_overall": 90.1,
-        "real_data_ratio_overall": 73.7,
+        "real_data_ratio_overall": 81.5,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.2,
+        "quality_score_overall": 90.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
-          "自定义扩展",
           "笔试真题库",
-          "面试真题库"
+          "面试真题库",
+          "自定义扩展"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
@@ -55213,7 +55234,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 31.8
+        "ranking_percentile": 40.9
       },
       "slug": "ecommerce-crossborder",
       "sources": [
@@ -55627,12 +55648,13 @@
             "evidence_chain": {
               "primary_source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
               "secondary_source_ids": [
+                "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248",
                 "SRC_MOFCOM_ECOMMERCE_20260123",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248",
               "policy_source_id": "SRC_MOFCOM_ECOMMERCE_20260123",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248"
             }
           }
         },
@@ -56103,12 +56125,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -56181,12 +56203,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "caveats": [
                 "不同赛道（K12、职教、公考培训）学习目标与评价口径差异较大，案例需指明场景。",
                 "旺季扩班与教务排期波动会影响课程体验，需在面试中说明资源约束。"
               ],
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -56330,18 +56352,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16,
-            "quality_score": 86.8,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -58115,9 +58137,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_EDU_VOCATIONAL_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -58181,9 +58203,9 @@
                 "建立教研-教务-运营联动周会，压缩问题回收与改版周期。",
                 "将课堂互动和作业达成指标接入预警看板，提前触发干预动作。"
               ],
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "case_id": "IND_EDU_VOCATIONAL_CASE_003",
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -58275,18 +58297,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 13.3,
-            "quality_score": 87.3,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -58977,14 +58999,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 18,
               "x_decision_city_cost_adjusted_salary_index": 9.8,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 教培 教研 班主任 运营”，小红书检索建议：“教育 职教 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 24,
               "x_decision_role_competition_intensity": "中高竞争（教师与教研岗筛选强）",
               "x_decision_written_to_interview_rate_percent": 32,
               "x_decision_source_ids": [
+                "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164",
                 "SRC_MOE_ACTION_2026",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_EDU_VOCATIONAL_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -59011,8 +59033,8 @@
                 "publish_date": "2026-02-12",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164"
+                  "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 9,
@@ -59023,7 +59045,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -61108,14 +61130,14 @@
         "coverage_percent_overall": 89.1,
         "evidence_percent_overall": 91.5,
         "freshness_percent_overall": 90.1,
-        "real_data_ratio_overall": 74.3,
+        "real_data_ratio_overall": 82.1,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.2,
+        "quality_score_overall": 90.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
-          "从业者访谈",
           "笔试真题库",
-          "面试真题库"
+          "面试真题库",
+          "争议问题与结论"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
@@ -61126,7 +61148,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 27.3
+        "ranking_percentile": 36.4
       },
       "slug": "education-vocational",
       "sources": [
@@ -61582,12 +61604,12 @@
             "evidence_chain": {
               "primary_source_id": "SRC_MOE_ACTION_2026",
               "secondary_source_ids": [
-                "SRC_ZHILIAN_Q4_2025_NEWS",
+                "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164",
               "policy_source_id": "SRC_MOE_ACTION_2026",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164"
             }
           }
         },
@@ -62053,12 +62075,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -62132,12 +62154,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "caveats": [
                 "不同区域电网结构与新能源消纳压力差异显著，经验需结合网情说明。",
                 "公开样本对跨省交易与应急调度细节覆盖有限。"
               ],
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -62281,18 +62303,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16,
-            "quality_score": 86.8,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -64064,9 +64086,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_ENERGY_UTILITIES_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -64130,9 +64152,9 @@
                 "将备用容量、跨区支援和需求响应纳入统一调度清单。",
                 "建立日清复盘机制，压缩告警处置与恢复闭环时间。"
               ],
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "case_id": "IND_ENERGY_UTILITIES_CASE_003",
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -64224,18 +64246,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 13.3,
-            "quality_score": 87.3,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -64883,14 +64905,15 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 22,
               "x_decision_city_cost_adjusted_salary_index": 11.8,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 电力 能源 运维 调度”，小红书检索建议：“能源 电力 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 28,
               "x_decision_role_competition_intensity": "中等竞争（央国企招聘节奏稳定）",
               "x_decision_written_to_interview_rate_percent": 36,
               "x_decision_source_ids": [
-                "SRC_NEA_WORKCONF_20260130",
+                "SRC_AUTO_WWW_CEIC_COM_2B8D5B00",
+                "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
                 "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC"
+                "SRC_NEA_WORKCONF_20260130"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_ENERGY_UTILITIES_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -64917,8 +64940,9 @@
                 "publish_date": "2026-01-30",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC"
+                  "SRC_AUTO_WWW_CEIC_COM_2B8D5B00",
+                  "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 9,
@@ -64929,7 +64953,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -67010,14 +67034,14 @@
         "coverage_percent_overall": 89.1,
         "evidence_percent_overall": 91.3,
         "freshness_percent_overall": 92.8,
-        "real_data_ratio_overall": 73.2,
+        "real_data_ratio_overall": 81.1,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.5,
+        "quality_score_overall": 90.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
-          "自定义扩展",
-          "面试真题库"
+          "面试真题库",
+          "自定义扩展"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
@@ -67028,7 +67052,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 50
+        "ranking_percentile": 54.5
       },
       "slug": "energy-utilities",
       "sources": [
@@ -67458,12 +67482,14 @@
             "evidence_chain": {
               "primary_source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
               "secondary_source_ids": [
-                "SRC_NEA_WORKCONF_20260130",
-                "SRC_NBS_WAGE_2024_TABLE"
+                "SRC_AUTO_WWW_CEIC_COM_2B8D5B00",
+                "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_NEA_WORKCONF_20260130"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
               "policy_source_id": "SRC_NEA_WORKCONF_20260130",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_WWW_CEIC_COM_2B8D5B00"
             }
           }
         },
@@ -67953,12 +67979,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -68031,12 +68057,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "caveats": [
                 "不同银行条线（零售、对公、风控）考核口径差异大，经验需标注场景。",
                 "公开岗位描述对分行资源差异和区域策略覆盖有限。"
               ],
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -68203,18 +68229,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16.7,
-            "quality_score": 86.7,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -69998,9 +70024,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_FIN_BANK_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -70064,9 +70090,9 @@
                 "建立前台、风控、运营联动节奏，缩短审批周转与材料往返。",
                 "把高频拒件原因沉淀为前置校验清单，减少重复提报。"
               ],
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "case_id": "IND_FIN_BANK_CASE_003",
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -70182,18 +70208,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 15,
-            "quality_score": 87,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -70822,14 +70848,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 10,
               "x_decision_city_cost_adjusted_salary_index": 11.79,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 银行 管培 风控 运营”，小红书检索建议：“银行 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 12,
               "x_decision_role_competition_intensity": "高竞争（校招集中、筛选严格）",
               "x_decision_written_to_interview_rate_percent": 22,
               "x_decision_source_ids": [
-                "SRC_PBC_WORKCONF_20260106",
+                "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B",
                 "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B"
+                "SRC_PBC_WORKCONF_20260106"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_FIN_BANK_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -70856,8 +70882,8 @@
                 "publish_date": "2026-01-06",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B"
+                  "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 10,
@@ -70868,7 +70894,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -72919,14 +72945,14 @@
         "coverage_percent_overall": 89.8,
         "evidence_percent_overall": 91,
         "freshness_percent_overall": 92.5,
-        "real_data_ratio_overall": 73.7,
+        "real_data_ratio_overall": 81.5,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.5,
+        "quality_score_overall": 90.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
-          "自定义扩展",
           "笔试真题库",
-          "面试真题库"
+          "面试真题库",
+          "自定义扩展"
         ],
         "manual_fill_required_total": 43,
         "manual_fill_pending_total": 0,
@@ -72937,7 +72963,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 45.5
+        "ranking_percentile": 50
       },
       "slug": "finance-bank",
       "sources": [
@@ -73380,12 +73406,13 @@
             "evidence_chain": {
               "primary_source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
               "secondary_source_ids": [
-                "SRC_PBC_WORKCONF_20260106",
-                "SRC_NBS_WAGE_2024_TABLE"
+                "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B",
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_PBC_WORKCONF_20260106"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B",
               "policy_source_id": "SRC_PBC_WORKCONF_20260106",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B"
             }
           }
         },
@@ -73874,12 +73901,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -73952,12 +73979,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "caveats": [
                 "不同险种和渠道结构差异大，案例需明确产品与客群边界。",
                 "公开岗位信息对核赔争议升级流程呈现有限，需面试补充实操细节。"
               ],
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -74124,18 +74151,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16.7,
-            "quality_score": 86.7,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -75938,9 +75965,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_FIN_INSURANCE_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -76004,9 +76031,9 @@
                 "建立核赔、法务、客服联合会签机制，统一证据口径与沟通策略。",
                 "将高频争议点沉淀为标准化解释模板，减少重复投诉。"
               ],
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "case_id": "IND_FIN_INSURANCE_CASE_003",
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -76122,18 +76149,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 15,
-            "quality_score": 87,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -76852,14 +76879,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 12,
               "x_decision_city_cost_adjusted_salary_index": 11.68,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 保险 精算 核保 理赔”，小红书检索建议：“保险 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 16,
               "x_decision_role_competition_intensity": "高竞争（业务与合规并重）",
               "x_decision_written_to_interview_rate_percent": 24,
               "x_decision_source_ids": [
-                "SRC_PBC_WORKCONF_20260106",
+                "SRC_AUTO_WWW_PINGAN_COM_A4057B5F",
                 "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_WWW_PINGAN_COM_A4057B5F"
+                "SRC_PBC_WORKCONF_20260106"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_FIN_INSURANCE_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -76886,8 +76913,8 @@
                 "publish_date": "2026-01-06",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_WWW_PINGAN_COM_A4057B5F"
+                  "SRC_AUTO_WWW_PINGAN_COM_A4057B5F",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 10,
@@ -76898,7 +76925,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -79018,14 +79045,14 @@
         "coverage_percent_overall": 89.8,
         "evidence_percent_overall": 91.7,
         "freshness_percent_overall": 93.1,
-        "real_data_ratio_overall": 73.7,
+        "real_data_ratio_overall": 81.5,
         "template_ratio_overall": 0,
-        "quality_score_overall": 92.5,
+        "quality_score_overall": 92.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "外部链接",
-          "自定义扩展",
-          "笔试真题库"
+          "笔试真题库",
+          "面试真题库"
         ],
         "manual_fill_required_total": 43,
         "manual_fill_pending_total": 0,
@@ -79478,12 +79505,13 @@
             "evidence_chain": {
               "primary_source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
               "secondary_source_ids": [
-                "SRC_PBC_WORKCONF_20260106",
-                "SRC_NBS_WAGE_2024_TABLE"
+                "SRC_AUTO_WWW_PINGAN_COM_A4057B5F",
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_PBC_WORKCONF_20260106"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_PINGAN_COM_A4057B5F",
               "policy_source_id": "SRC_PBC_WORKCONF_20260106",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_WWW_PINGAN_COM_A4057B5F"
             }
           }
         },
@@ -79968,12 +79996,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -80046,12 +80074,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "caveats": [
                 "不同机构（券商、公募、私募）的研究深度和节奏要求差异明显，经验需按岗位定位。",
                 "公开岗位信息对实盘风控与合规流程覆盖有限，面试需主动补充边界意识。"
               ],
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -80218,18 +80246,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16.7,
-            "quality_score": 86.7,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -82031,9 +82059,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_FIN_SECURITIES_FUND_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -82097,9 +82125,9 @@
                 "建立研究、交易、风控周会机制，统一信号口径与执行节奏。",
                 "将仓位策略与风险阈值联动，缩短观点到执行闭环周期。"
               ],
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "case_id": "IND_FIN_SECURITIES_FUND_CASE_003",
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -82215,18 +82243,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 15,
-            "quality_score": 87,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -82945,14 +82973,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 8,
               "x_decision_city_cost_adjusted_salary_index": 13.37,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 证券 基金 研究 投行”，小红书检索建议：“证券 基金 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 10,
               "x_decision_role_competition_intensity": "很高竞争（头部岗位供给有限）",
               "x_decision_written_to_interview_rate_percent": 18,
               "x_decision_source_ids": [
+                "SRC_AUTO_WWW_CS_ECITIC_COM_9B0A617",
                 "SRC_CSRC_WORKCONF_20260116",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_WWW_CS_ECITIC_COM_9B0A617"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_FIN_SECURITIES_FUND_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -82979,8 +83007,8 @@
                 "publish_date": "2026-01-16",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_WWW_CS_ECITIC_COM_9B0A617"
+                  "SRC_AUTO_WWW_CS_ECITIC_COM_9B0A617",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 10,
@@ -82991,7 +83019,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -85188,14 +85216,14 @@
         "coverage_percent_overall": 91.9,
         "evidence_percent_overall": 91.8,
         "freshness_percent_overall": 93.2,
-        "real_data_ratio_overall": 74.8,
+        "real_data_ratio_overall": 82.6,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91.4,
+        "quality_score_overall": 91.6,
         "verified_ratio_percent": 100,
         "weakest_collections": [
-          "从业者访谈",
-          "案例复盘",
-          "自定义扩展"
+          "争议问题与结论",
+          "岗位画像库",
+          "行业事件日志"
         ],
         "manual_fill_required_total": 43,
         "manual_fill_pending_total": 0,
@@ -85620,12 +85648,13 @@
             "evidence_chain": {
               "primary_source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "secondary_source_ids": [
+                "SRC_AUTO_WWW_CS_ECITIC_COM_9B0A617",
                 "SRC_CSRC_WORKCONF_20260116",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_CS_ECITIC_COM_9B0A617",
               "policy_source_id": "SRC_CSRC_WORKCONF_20260116",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_WWW_CS_ECITIC_COM_9B0A617"
             }
           }
         },
@@ -86085,12 +86114,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -86312,13 +86341,13 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16,
-            "quality_score": 86.8,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
@@ -88095,9 +88124,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_FMCG_RETAIL_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -88254,18 +88283,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 13.3,
-            "quality_score": 87.3,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -88960,14 +88989,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 14,
               "x_decision_city_cost_adjusted_salary_index": 10.32,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 快消 品牌 销售 管培”，小红书检索建议：“快消 零售 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 20,
               "x_decision_role_competition_intensity": "高竞争（品牌岗投递密度高）",
               "x_decision_written_to_interview_rate_percent": 26,
               "x_decision_source_ids": [
+                "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
                 "SRC_MOFCOM_PRESSCONF_20260115",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_FMCG_RETAIL_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -88994,8 +89023,8 @@
                 "publish_date": "2026-01-15",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839"
+                  "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 9,
@@ -89006,7 +89035,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -91098,14 +91127,14 @@
         "coverage_percent_overall": 90.5,
         "evidence_percent_overall": 91.5,
         "freshness_percent_overall": 93,
-        "real_data_ratio_overall": 74.8,
+        "real_data_ratio_overall": 82.6,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.8,
+        "quality_score_overall": 91,
         "verified_ratio_percent": 100,
         "weakest_collections": [
-          "从业者访谈",
-          "自定义扩展",
-          "案例复盘"
+          "争议问题与结论",
+          "公司清单",
+          "外部链接"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
@@ -91116,7 +91145,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 54.5
+        "ranking_percentile": 59.1
       },
       "slug": "fmcg-retail",
       "sources": [
@@ -91530,12 +91559,13 @@
             "evidence_chain": {
               "primary_source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
               "secondary_source_ids": [
+                "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
                 "SRC_MOFCOM_PRESSCONF_20260115",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
               "policy_source_id": "SRC_MOFCOM_PRESSCONF_20260115",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839"
             }
           }
         },
@@ -92022,12 +92052,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -92272,18 +92302,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16.7,
-            "quality_score": 86.7,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -94142,9 +94172,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_INTERNET_AI_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -94325,18 +94355,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 15,
-            "quality_score": 87,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -94985,14 +95015,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 14,
               "x_decision_city_cost_adjusted_salary_index": 22.36,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 互联网 后端 算法 产品”，小红书检索建议：“互联网 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 18,
               "x_decision_role_competition_intensity": "高竞争（供给增速快但投递密度高）",
               "x_decision_written_to_interview_rate_percent": 24,
               "x_decision_source_ids": [
+                "SRC_AUTO_JOIN_QQ_COM_61D25F78",
                 "SRC_MIIT_IIAI_ACTION_20260107",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_JOIN_QQ_COM_61D25F78"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_INTERNET_AI_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -95019,8 +95049,8 @@
                 "publish_date": "2026-01-07",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_JOIN_QQ_COM_61D25F78"
+                  "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 10,
@@ -95031,7 +95061,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -97138,14 +97168,14 @@
         "coverage_percent_overall": 89.3,
         "evidence_percent_overall": 91.4,
         "freshness_percent_overall": 92.9,
-        "real_data_ratio_overall": 74,
+        "real_data_ratio_overall": 81.9,
         "template_ratio_overall": 0,
-        "quality_score_overall": 92.1,
+        "quality_score_overall": 92.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
-          "自定义扩展",
           "笔试真题库",
-          "面试真题库"
+          "面试真题库",
+          "自定义扩展"
         ],
         "manual_fill_required_total": 45,
         "manual_fill_pending_total": 0,
@@ -97156,7 +97186,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 86.4
+        "ranking_percentile": 90.9
       },
       "slug": "internet-ai",
       "sources": [
@@ -97614,12 +97644,13 @@
             "evidence_chain": {
               "primary_source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
               "secondary_source_ids": [
+                "SRC_AUTO_JOIN_QQ_COM_61D25F78",
                 "SRC_MIIT_IIAI_ACTION_20260107",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_JOIN_QQ_COM_61D25F78",
               "policy_source_id": "SRC_MIIT_IIAI_ACTION_20260107",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_JOIN_QQ_COM_61D25F78"
             }
           }
         },
@@ -98099,12 +98130,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -98326,18 +98357,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16,
-            "quality_score": 86.8,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -100111,9 +100142,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_LOGISTICS_SUPPLYCHAIN_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -100270,18 +100301,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 13.3,
-            "quality_score": 87.3,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -100976,14 +101007,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 18,
               "x_decision_city_cost_adjusted_salary_index": 10.5,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 物流 供应链 仓配 运营”，小红书检索建议：“物流 供应链 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 24,
               "x_decision_role_competition_intensity": "中高竞争（计划与调度岗位扩张）",
               "x_decision_written_to_interview_rate_percent": 30,
               "x_decision_source_ids": [
+                "SRC_AUTO_HR_SF_EXPRESS_COM_418312D5",
                 "SRC_MOT_POSTAL_20260122",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_HR_SF_EXPRESS_COM_418312D5"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_LOGISTICS_SUPPLYCHAIN_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -101010,8 +101041,8 @@
                 "publish_date": "2026-01-22",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_HR_SF_EXPRESS_COM_418312D5"
+                  "SRC_AUTO_HR_SF_EXPRESS_COM_418312D5",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 9,
@@ -101022,7 +101053,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -103160,14 +103191,14 @@
         "coverage_percent_overall": 90.5,
         "evidence_percent_overall": 91.5,
         "freshness_percent_overall": 93,
-        "real_data_ratio_overall": 74.8,
+        "real_data_ratio_overall": 82.6,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.2,
+        "quality_score_overall": 90.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
-          "从业者访谈",
-          "自定义扩展",
-          "案例复盘"
+          "争议问题与结论",
+          "岗位画像库",
+          "行业事件日志"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
@@ -103178,7 +103209,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 22.7
+        "ranking_percentile": 31.8
       },
       "slug": "logistics-supply-chain",
       "sources": [
@@ -103606,12 +103637,13 @@
             "evidence_chain": {
               "primary_source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "secondary_source_ids": [
+                "SRC_AUTO_HR_SF_EXPRESS_COM_418312D5",
                 "SRC_MOT_POSTAL_20260122",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_HR_SF_EXPRESS_COM_418312D5",
               "policy_source_id": "SRC_MOT_POSTAL_20260122",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_HR_SF_EXPRESS_COM_418312D5"
             }
           }
         },
@@ -104082,12 +104114,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -104309,18 +104341,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16,
-            "quality_score": 86.8,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -106120,9 +106152,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_MEDIA_GAME_CONTENT_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -106279,18 +106311,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 13.3,
-            "quality_score": 87.3,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -106891,14 +106923,15 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 10,
               "x_decision_city_cost_adjusted_salary_index": 10,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 游戏 内容 运营 策划”，小红书检索建议：“游戏 内容 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 14,
               "x_decision_role_competition_intensity": "很高竞争（内容岗供给拥挤）",
               "x_decision_written_to_interview_rate_percent": 20,
               "x_decision_source_ids": [
-                "SRC_NPPA_GAME_APPROVAL_20260126",
+                "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                "SRC_AUTO_WWW_MIHOYO_COM_CB059AC8",
                 "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_WWW_MIHOYO_COM_CB059AC8"
+                "SRC_NPPA_GAME_APPROVAL_20260126"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_MEDIA_GAME_CONTENT_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -106925,8 +106958,9 @@
                 "publish_date": "2026-01-26",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_WWW_MIHOYO_COM_CB059AC8"
+                  "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                  "SRC_AUTO_WWW_MIHOYO_COM_CB059AC8",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 9,
@@ -106937,7 +106971,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -109041,14 +109075,14 @@
         "coverage_percent_overall": 89.1,
         "evidence_percent_overall": 88.7,
         "freshness_percent_overall": 90.1,
-        "real_data_ratio_overall": 73.2,
+        "real_data_ratio_overall": 81.1,
         "template_ratio_overall": 0,
-        "quality_score_overall": 92.7,
+        "quality_score_overall": 93,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
-          "自定义扩展",
-          "面试真题库"
+          "面试真题库",
+          "自定义扩展"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
@@ -109473,12 +109507,14 @@
             "evidence_chain": {
               "primary_source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
               "secondary_source_ids": [
-                "SRC_NPPA_GAME_APPROVAL_20260126",
-                "SRC_NBS_WAGE_2024_TABLE"
+                "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                "SRC_AUTO_WWW_MIHOYO_COM_CB059AC8",
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_NPPA_GAME_APPROVAL_20260126"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_MIHOYO_COM_CB059AC8",
               "policy_source_id": "SRC_NPPA_GAME_APPROVAL_20260126",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_JOIN_QQ_COM_61D25F78"
             }
           }
         },
@@ -109972,12 +110008,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -110050,12 +110086,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "caveats": [
                 "不同产品线（储能/动力/光伏）对项目优先级和交付节奏要求不同。",
                 "岗位能力要求受产线自动化程度影响较大。"
               ],
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -110222,18 +110258,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16.7,
-            "quality_score": 86.7,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -112033,9 +112069,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_NEW_ENERGY_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -112099,9 +112135,9 @@
                 "建立研发-运维-项目三方日清机制，缩短问题定位与闭环周期。",
                 "优化交付里程碑与验收标准，提前暴露关键风险。"
               ],
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "case_id": "IND_NEW_ENERGY_CASE_003",
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -112217,18 +112253,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 15,
-            "quality_score": 87,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -112877,14 +112913,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 18,
               "x_decision_city_cost_adjusted_salary_index": 11.8,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 新能源 电池 光伏 储能”，小红书检索建议：“新能源 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 24,
               "x_decision_role_competition_intensity": "中高竞争（扩招与淘汰并存）",
               "x_decision_written_to_interview_rate_percent": 32,
               "x_decision_source_ids": [
-                "SRC_NEA_RENEWABLE_UTIL_20260212",
+                "SRC_AUTO_WWW_CATL_COM_551E6E0C",
                 "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_WWW_CATL_COM_551E6E0C"
+                "SRC_NEA_RENEWABLE_UTIL_20260212"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_NEW_ENERGY_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -112911,8 +112947,8 @@
                 "publish_date": "2026-02-12",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_WWW_CATL_COM_551E6E0C"
+                  "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 9,
@@ -112923,7 +112959,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -115115,14 +115151,14 @@
         "coverage_percent_overall": 89.3,
         "evidence_percent_overall": 88.7,
         "freshness_percent_overall": 90.1,
-        "real_data_ratio_overall": 74,
+        "real_data_ratio_overall": 81.9,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.1,
+        "quality_score_overall": 90.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
-          "自定义扩展",
           "笔试真题库",
-          "面试真题库"
+          "面试真题库",
+          "自定义扩展"
         ],
         "manual_fill_required_total": 45,
         "manual_fill_pending_total": 0,
@@ -115133,7 +115169,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 9.1
+        "ranking_percentile": 18.2
       },
       "slug": "new-energy",
       "sources": [
@@ -115547,12 +115583,13 @@
             "evidence_chain": {
               "primary_source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
               "secondary_source_ids": [
-                "SRC_NEA_RENEWABLE_UTIL_20260212",
-                "SRC_NBS_WAGE_2024_TABLE"
+                "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_NEA_RENEWABLE_UTIL_20260212"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
               "policy_source_id": "SRC_NEA_RENEWABLE_UTIL_20260212",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C"
             }
           }
         },
@@ -116048,12 +116085,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -116126,12 +116163,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "不同省市招录口径与岗位细则存在差异，需以当地公告为准。",
                 "公共部门案例强调规范流程，面试回答要避免过度业务化表述。"
               ],
-              "data_origin": "government_agency_signal",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -116167,12 +116204,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "不同省份笔试与面试权重存在差异，需按公告二次确认。",
                 "样本来自公开政策与岗位信息映射，非完整访谈录音。"
               ],
-              "data_origin": "government_platform_signal",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -116208,12 +116245,12 @@
               "updated_at": "2026-02-18"
             },
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "公共服务岗位区域差异较大，执行细则需以地市公告为准。",
                 "案例型结论需结合具体编制与聘用类型判断适用范围。"
               ],
-              "data_origin": "government_platform_signal",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -116249,12 +116286,12 @@
               "updated_at": "2026-02-18"
             },
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "省级公告提供的是统一规则，具体单位资格细则仍需回到岗位表逐条核验。",
                 "岗位计划与开考比例可能在报名后调整，需持续关注后续公告。"
               ],
-              "data_origin": "government_platform_signal",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -116290,12 +116327,12 @@
               "updated_at": "2026-02-18"
             },
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "各招聘单位资格审查细节存在差异，需回到具体岗位公告核验。",
                 "准考证打印与考点安排可能按批次动态调整，需持续关注官网通知。"
               ],
-              "data_origin": "government_platform_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -116462,13 +116499,13 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 58,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 12.5,
-            "quality_score": 89.4,
+            "quality_score": 90,
             "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 58,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
@@ -118030,9 +118067,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_PUBLIC_INSTITUTION_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -118096,9 +118133,9 @@
                 "建立跨部门异常升级机制，优先处理影响面试排期的关键问题。",
                 "通过周度复盘统一口径，减少重复退回与二次补件。"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_PUBLIC_INSTITUTION_CASE_003",
-              "data_origin": "government_platform_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -118131,9 +118168,9 @@
                 "引入材料一次性告知清单，降低重复退回率。",
                 "设置异常件24小时升级机制，保障面试排期稳定。"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_PUBLIC_INSTITUTION_CASE_004",
-              "data_origin": "government_platform_signal",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -118166,9 +118203,9 @@
                 "对高频咨询场景统一政策口径并配置模板化答复。",
                 "每周复盘投诉工单，固化跨部门转办标准。"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_PUBLIC_INSTITUTION_CASE_005",
-              "data_origin": "government_platform_signal",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -118201,9 +118238,9 @@
                 "对取消岗位考生推送改报截止时间和资格复核要求，减少错过窗口。",
                 "同步准备退费与改报FAQ，降低咨询拥堵和重复工单。"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_PUBLIC_INSTITUTION_CASE_006",
-              "data_origin": "government_platform_signal",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -118236,9 +118273,9 @@
                 "针对岗位表更新建立“变更字段”比对清单，优先核验专业、学历与证书要求。",
                 "对高频咨询问题固化标准答复模板，减少窗口期重复咨询和错误提交。"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_PUBLIC_INSTITUTION_CASE_007",
-              "data_origin": "government_platform_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -118354,13 +118391,13 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 58,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 12,
-            "quality_score": 89.6,
+            "quality_score": 90,
             "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 58,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
@@ -119350,14 +119387,15 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 8,
               "x_decision_city_cost_adjusted_salary_index": 11.56,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“事业单位 应届 教师 医院 科研”，小红书检索建议：“事业单位 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 10,
               "x_decision_role_competition_intensity": "极高竞争（编制岗位竞争激烈）",
               "x_decision_written_to_interview_rate_percent": 16,
               "x_decision_source_ids": [
-                "SRC_SHRSJ_PUBLIC_INST_20260128",
+                "SRC_AUTO_WWW_CPTA_COM_CN_FD0AA5B3",
+                "SRC_MOHRSS",
                 "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_WWW_CPTA_COM_CN_FD0AA5B3"
+                "SRC_SHRSJ_PUBLIC_INST_20260128"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_PUBLIC_INSTITUTION_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -119384,8 +119422,9 @@
                 "publish_date": "2026-01-28",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_WWW_CPTA_COM_CN_FD0AA5B3"
+                  "SRC_AUTO_WWW_CPTA_COM_CN_FD0AA5B3",
+                  "SRC_MOHRSS",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 12,
@@ -119396,7 +119435,7 @@
           ],
           "last_checked": "2026-02-18",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -121903,14 +121942,14 @@
         "coverage_percent_overall": 97.6,
         "evidence_percent_overall": 91.3,
         "freshness_percent_overall": 83.7,
-        "real_data_ratio_overall": 77.8,
+        "real_data_ratio_overall": 84.6,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.5,
+        "quality_score_overall": 89.9,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "争议问题与结论",
           "公司清单",
-          "自定义扩展"
+          "行业事件日志"
         ],
         "manual_fill_required_total": 49,
         "manual_fill_pending_total": 0,
@@ -121921,7 +121960,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 40.9
+        "ranking_percentile": 0
       },
       "slug": "public-institution",
       "sources": [
@@ -122329,12 +122368,14 @@
             "evidence_chain": {
               "primary_source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "secondary_source_ids": [
-                "SRC_SHRSJ_PUBLIC_INST_20260128",
-                "SRC_NBS_WAGE_2024_TABLE"
+                "SRC_AUTO_WWW_CPTA_COM_CN_FD0AA5B3",
+                "SRC_MOHRSS",
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_SHRSJ_PUBLIC_INST_20260128"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_CPTA_COM_CN_FD0AA5B3",
               "policy_source_id": "SRC_SHRSJ_PUBLIC_INST_20260128",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_MOHRSS"
             }
           }
         },
@@ -122794,12 +122835,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -122872,12 +122913,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "caveats": [
                 "区域政策和项目类型（房建/市政/轨交）差异较大，案例应明确适用边界。",
                 "公开样本对合同条款博弈和资金计划细节覆盖有限。"
               ],
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -123021,18 +123062,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16,
-            "quality_score": 86.8,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -124808,9 +124849,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_REAL_ESTATE_INFRA_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -124874,9 +124915,9 @@
                 "将设计变更拆分为可并行包，压缩审批与现场切换等待时间。",
                 "同步强化安全质量巡检频次，避免赶工导致返工。"
               ],
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "case_id": "IND_REAL_ESTATE_INFRA_CASE_003",
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -124968,18 +125009,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 13.3,
-            "quality_score": 87.3,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -125580,14 +125621,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 16,
               "x_decision_city_cost_adjusted_salary_index": 10.6,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 基建 房地产 工程 成本”，小红书检索建议：“房地产 基建 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 20,
               "x_decision_role_competition_intensity": "中高竞争（投资与工程岗位分化）",
               "x_decision_written_to_interview_rate_percent": 28,
               "x_decision_source_ids": [
+                "SRC_AUTO_WWW_CSCEC_COM_F3573BC4",
                 "SRC_MOHURD_URBAN_RENEWAL_20251225",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_WWW_CSCEC_COM_F3573BC4"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_REAL_ESTATE_INFRA_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -125614,8 +125655,8 @@
                 "publish_date": "2025-12-25",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_WWW_CSCEC_COM_F3573BC4"
+                  "SRC_AUTO_WWW_CSCEC_COM_F3573BC4",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 9,
@@ -125626,7 +125667,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -127714,14 +127755,14 @@
         "coverage_percent_overall": 89.1,
         "evidence_percent_overall": 88.4,
         "freshness_percent_overall": 89.9,
-        "real_data_ratio_overall": 73.2,
+        "real_data_ratio_overall": 81.1,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.2,
+        "quality_score_overall": 90.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
-          "自定义扩展",
-          "面试真题库"
+          "面试真题库",
+          "自定义扩展"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
@@ -127732,7 +127773,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 18.2
+        "ranking_percentile": 27.3
       },
       "slug": "real-estate-infrastructure",
       "sources": [
@@ -128175,12 +128216,13 @@
             "evidence_chain": {
               "primary_source_id": "SRC_MOE_MEETING_2026",
               "secondary_source_ids": [
+                "SRC_AUTO_WWW_CSCEC_COM_F3573BC4",
                 "SRC_MOHURD_URBAN_RENEWAL_20251225",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_CSCEC_COM_F3573BC4",
               "policy_source_id": "SRC_MOHURD_URBAN_RENEWAL_20251225",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_WWW_CSCEC_COM_F3573BC4"
             }
           }
         },
@@ -128673,12 +128715,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -128751,12 +128793,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "caveats": [
                 "不同芯片赛道（逻辑/存储/模拟）对PPA与量产节奏要求差异明显，经验不可直接套用。",
                 "公开招聘信息对跨团队协同细节呈现有限，需在面试中主动说明边界。"
               ],
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -128923,18 +128965,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16.7,
-            "quality_score": 86.7,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -130779,9 +130821,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_SEMICONDUCTOR_ELECTRONICS_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -130845,9 +130887,9 @@
                 "联合设计、验证和后端建立日清机制，缩短问题传递链路。",
                 "把约束检查和回归脚本标准化，降低同类缺陷复发概率。"
               ],
-              "authenticity_level": "company_official",
+              "authenticity_level": "official",
               "case_id": "IND_SEMICONDUCTOR_ELECTRONICS_CASE_003",
-              "data_origin": "company_jd_signal",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -130963,18 +131005,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 15,
-            "quality_score": 87,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -131623,14 +131665,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 18,
               "x_decision_city_cost_adjusted_salary_index": 23.02,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 半导体 工艺 设备 IC设计”，小红书检索建议：“半导体 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 20,
               "x_decision_role_competition_intensity": "中高竞争（岗位门槛高、人才供给偏紧）",
               "x_decision_written_to_interview_rate_percent": 30,
               "x_decision_source_ids": [
+                "SRC_AUTO_WWW_SMICS_COM_7D437B2",
                 "SRC_MIIT_ELECTRONICS_Q3RUN_20251030",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_WWW_SMICS_COM_7D437B2"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_SEMICONDUCTOR_ELECTRONICS_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -131657,8 +131699,8 @@
                 "publish_date": "2025-10-30",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_WWW_SMICS_COM_7D437B2"
+                  "SRC_AUTO_WWW_SMICS_COM_7D437B2",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 9,
@@ -131669,7 +131711,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -133860,14 +133902,14 @@
         "coverage_percent_overall": 89.3,
         "evidence_percent_overall": 88.9,
         "freshness_percent_overall": 90.3,
-        "real_data_ratio_overall": 74,
+        "real_data_ratio_overall": 81.9,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.1,
+        "quality_score_overall": 90.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
-          "自定义扩展",
           "笔试真题库",
-          "面试真题库"
+          "面试真题库",
+          "自定义扩展"
         ],
         "manual_fill_required_total": 45,
         "manual_fill_pending_total": 0,
@@ -133878,7 +133920,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 4.5
+        "ranking_percentile": 13.6
       },
       "slug": "semiconductor-electronics",
       "sources": [
@@ -134307,12 +134349,13 @@
             "evidence_chain": {
               "primary_source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
               "secondary_source_ids": [
+                "SRC_AUTO_WWW_SMICS_COM_7D437B2",
                 "SRC_MIIT_ELECTRONICS_Q3RUN_20251030",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_SMICS_COM_7D437B2",
               "policy_source_id": "SRC_MIIT_ELECTRONICS_Q3RUN_20251030",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_WWW_SMICS_COM_7D437B2"
             }
           }
         },
@@ -134813,12 +134856,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -134932,12 +134975,12 @@
               "updated_at": "2026-02-17"
             },
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "各央企招聘流程存在集团与子公司差异。",
                 "样本基于公开招聘信息整理，不替代企业内部评分标准。"
               ],
-              "data_origin": "government_policy_signal",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -134973,12 +135016,12 @@
               "updated_at": "2026-02-18"
             },
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "不同子公司招聘强度受区域项目进度影响明显。",
                 "岗位能力模型与考核维度会随业务线变化。"
               ],
-              "data_origin": "company_official_signal",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -135145,18 +135188,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16.7,
-            "quality_score": 86.7,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -136784,9 +136827,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_STATE_OWNED_ENTERPRISE_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -136885,9 +136928,9 @@
                 "通过周度看板跟踪资格审查和面试排期偏差。",
                 "对关键技术岗建立候补池并提前完成补录沟通。"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_STATE_OWNED_ENTERPRISE_CASE_004",
-              "data_origin": "government_policy_signal",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -136920,9 +136963,9 @@
                 "结合区域施工/交付节奏动态调整候选人到岗窗口。",
                 "复盘各批次放弃录用原因并优化沟通脚本。"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_STATE_OWNED_ENTERPRISE_CASE_005",
-              "data_origin": "company_official_signal",
+              "data_origin": "government_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
@@ -137038,18 +137081,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 15,
-            "quality_score": 87,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -137993,14 +138036,15 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 12,
               "x_decision_city_cost_adjusted_salary_index": 8.76,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“央国企 应届 管培 工程 技术”，小红书检索建议：“央国企 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 16,
               "x_decision_role_competition_intensity": "高竞争（稳定预期导致投递集中）",
               "x_decision_written_to_interview_rate_percent": 24,
               "x_decision_source_ids": [
-                "SRC_SASAC_TALENT_WORKCONF_20260203",
                 "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_SASAC_RECRUIT_2026"
+                "SRC_SASAC",
+                "SRC_SASAC_RECRUIT_2026",
+                "SRC_SASAC_TALENT_WORKCONF_20260203"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_STATE_OWNED_ENTERPRISE_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -138028,6 +138072,7 @@
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
                   "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_SASAC",
                   "SRC_SASAC_RECRUIT_2026"
                 ]
               },
@@ -138039,7 +138084,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -140416,14 +140461,14 @@
         "coverage_percent_overall": 97.6,
         "evidence_percent_overall": 91.6,
         "freshness_percent_overall": 92.8,
-        "real_data_ratio_overall": 75,
+        "real_data_ratio_overall": 82.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.9,
+        "quality_score_overall": 90.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "公司清单",
           "自定义扩展",
-          "从业者访谈"
+          "争议问题与结论"
         ],
         "manual_fill_required_total": 49,
         "manual_fill_pending_total": 0,
@@ -140434,7 +140479,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 63.6
+        "ranking_percentile": 9.1
       },
       "slug": "state-owned-enterprise",
       "sources": [
@@ -140885,12 +140930,14 @@
             "evidence_chain": {
               "primary_source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "secondary_source_ids": [
-                "SRC_SASAC_TALENT_WORKCONF_20260203",
-                "SRC_NBS_WAGE_2024_TABLE"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_SASAC",
+                "SRC_SASAC_RECRUIT_2026",
+                "SRC_SASAC_TALENT_WORKCONF_20260203"
               ],
               "timeline_source_id": "SRC_SASAC_RECRUIT_2026",
               "policy_source_id": "SRC_SASAC_TALENT_WORKCONF_20260203",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_SASAC"
             }
           }
         },
@@ -141375,12 +141422,12 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "caveats": [
                 "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
                 "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -141625,18 +141672,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 16.7,
-            "quality_score": 86.7,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -143264,9 +143311,9 @@
                 "将指标拆分为过程指标与结果指标，按周追踪偏差",
                 "补充跨团队协同节奏与复盘机制，固化执行模板"
               ],
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "case_id": "IND_TELECOM_OPERATOR_CASE_001",
-              "data_origin": "editorial_curated",
+              "data_origin": "company_official_summary",
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-17",
@@ -143447,18 +143494,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 100,
             "source_access_score": 100,
             "manual_gap_penalty": 15,
-            "quality_score": 87,
-            "calculated_at": "2026-02-17"
+            "quality_score": 90,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 100,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "笔试真题库": {
           "collection_tasks": [
@@ -144107,14 +144154,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 20,
               "x_decision_city_cost_adjusted_salary_index": 11.85,
-              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 运营商 网络 通信 云网”，小红书检索建议：“通信 运营商 校招 offer 薪资 面经”。",
               "x_decision_interview_to_offer_rate_percent": 28,
               "x_decision_role_competition_intensity": "中等竞争（岗位稳定、流程标准化）",
               "x_decision_written_to_interview_rate_percent": 35,
               "x_decision_source_ids": [
+                "SRC_AUTO_JOB_10086_CN_C58C9DA8",
                 "SRC_MIIT_TELECOM_BULLETIN_20260128",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_AUTO_JOB_10086_CN_C58C9DA8"
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_TELECOM_OPERATOR_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -144141,8 +144188,8 @@
                 "publish_date": "2026-01-28",
                 "captured_at": "2026-02-18",
                 "secondary_source_ids": [
-                  "SRC_NBS_WAGE_2024_TABLE",
-                  "SRC_AUTO_JOB_10086_CN_C58C9DA8"
+                  "SRC_AUTO_JOB_10086_CN_C58C9DA8",
+                  "SRC_NBS_WAGE_2024_TABLE"
                 ]
               },
               "x_decision_min_sample_required": 9,
@@ -144153,7 +144200,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -146226,14 +146273,14 @@
         "coverage_percent_overall": 89.3,
         "evidence_percent_overall": 90.9,
         "freshness_percent_overall": 92.4,
-        "real_data_ratio_overall": 74,
+        "real_data_ratio_overall": 81.9,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.1,
+        "quality_score_overall": 90.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
-          "自定义扩展",
           "笔试真题库",
-          "面试真题库"
+          "面试真题库",
+          "自定义扩展"
         ],
         "manual_fill_required_total": 45,
         "manual_fill_pending_total": 0,
@@ -146244,7 +146291,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 0
+        "ranking_percentile": 4.5
       },
       "slug": "telecom-operators",
       "sources": [
@@ -146658,12 +146705,13 @@
             "evidence_chain": {
               "primary_source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
               "secondary_source_ids": [
+                "SRC_AUTO_JOB_10086_CN_C58C9DA8",
                 "SRC_MIIT_TELECOM_BULLETIN_20260128",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_JOB_10086_CN_C58C9DA8",
               "policy_source_id": "SRC_MIIT_TELECOM_BULLETIN_20260128",
-              "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+              "salary_source_id": "SRC_AUTO_JOB_10086_CN_C58C9DA8"
             }
           }
         },

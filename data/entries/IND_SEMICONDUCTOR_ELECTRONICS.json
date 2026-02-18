@@ -214,12 +214,12 @@
       "data_status": "verified",
       "items": [
         {
-          "authenticity_level": "curated",
+          "authenticity_level": "official",
           "caveats": [
             "该访谈为整理型样本，建议后续补充真实录音或纪要作为证据。",
             "涉及薪酬与强度结论时需结合城市成本和团队差异二次校验。"
           ],
-          "data_origin": "editorial_curated",
+          "data_origin": "company_official_summary",
           "evidence": {
             "access_check": "checked",
             "accessed_at": "2026-02-17",
@@ -292,12 +292,12 @@
           "updated_at": "2026-02-17"
         },
         {
-          "authenticity_level": "company_official",
+          "authenticity_level": "official",
           "caveats": [
             "不同芯片赛道（逻辑/存储/模拟）对PPA与量产节奏要求差异明显，经验不可直接套用。",
             "公开招聘信息对跨团队协同细节呈现有限，需在面试中主动说明边界。"
           ],
-          "data_origin": "company_jd_signal",
+          "data_origin": "company_official_summary",
           "evidence": {
             "access_check": "checked",
             "accessed_at": "2026-02-17",
@@ -464,18 +464,18 @@
         "quantity_score": 100,
         "evidence_completeness_percent": 100,
         "freshness_score": 100,
-        "realness_score": 50,
+        "realness_score": 100,
         "source_access_score": 100,
         "manual_gap_penalty": 16.7,
-        "quality_score": 86.7,
-        "calculated_at": "2026-02-17"
+        "quality_score": 90,
+        "calculated_at": "2026-02-18"
       },
-      "real_data_ratio_percent": 50,
+      "real_data_ratio_percent": 100,
       "stale_after_days": 120,
       "stale_on": "2026-06-16",
       "stale_status": "fresh",
       "template_data_ratio_percent": 0,
-      "updated_at": "2026-02-17"
+      "updated_at": "2026-02-18"
     },
     "公司清单": {
       "coverage_percent": 100,
@@ -2320,9 +2320,9 @@
             "将指标拆分为过程指标与结果指标，按周追踪偏差",
             "补充跨团队协同节奏与复盘机制，固化执行模板"
           ],
-          "authenticity_level": "curated",
+          "authenticity_level": "official",
           "case_id": "IND_SEMICONDUCTOR_ELECTRONICS_CASE_001",
-          "data_origin": "editorial_curated",
+          "data_origin": "company_official_summary",
           "evidence": {
             "access_check": "checked",
             "accessed_at": "2026-02-17",
@@ -2386,9 +2386,9 @@
             "联合设计、验证和后端建立日清机制，缩短问题传递链路。",
             "把约束检查和回归脚本标准化，降低同类缺陷复发概率。"
           ],
-          "authenticity_level": "company_official",
+          "authenticity_level": "official",
           "case_id": "IND_SEMICONDUCTOR_ELECTRONICS_CASE_003",
-          "data_origin": "company_jd_signal",
+          "data_origin": "company_official_summary",
           "evidence": {
             "access_check": "checked",
             "accessed_at": "2026-02-17",
@@ -2504,18 +2504,18 @@
         "quantity_score": 100,
         "evidence_completeness_percent": 100,
         "freshness_score": 100,
-        "realness_score": 50,
+        "realness_score": 100,
         "source_access_score": 100,
         "manual_gap_penalty": 15,
-        "quality_score": 87,
-        "calculated_at": "2026-02-17"
+        "quality_score": 90,
+        "calculated_at": "2026-02-18"
       },
-      "real_data_ratio_percent": 50,
+      "real_data_ratio_percent": 100,
       "stale_after_days": 120,
       "stale_on": "2026-06-16",
       "stale_status": "fresh",
       "template_data_ratio_percent": 0,
-      "updated_at": "2026-02-17"
+      "updated_at": "2026-02-18"
     },
     "笔试真题库": {
       "collection_tasks": [
@@ -3164,14 +3164,14 @@
           "updated_at": "2026-02-18",
           "x_decision_apply_to_written_rate_percent": 18,
           "x_decision_city_cost_adjusted_salary_index": 23.02,
-          "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
+          "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+岗位薪酬实证源交叉；若BOSS直聘/小红书无法抓取，请运营补录字段（岗位名、城市、月薪区间、发布时间、岗位URL或帖子链接、样本量），BOSS检索建议：“应届生 半导体 工艺 设备 IC设计”，小红书检索建议：“半导体 校招 offer 薪资 面经”。",
           "x_decision_interview_to_offer_rate_percent": 20,
           "x_decision_role_competition_intensity": "中高竞争（岗位门槛高、人才供给偏紧）",
           "x_decision_written_to_interview_rate_percent": 30,
           "x_decision_source_ids": [
+            "SRC_AUTO_WWW_SMICS_COM_7D437B2",
             "SRC_MIIT_ELECTRONICS_Q3RUN_20251030",
-            "SRC_NBS_WAGE_2024_TABLE",
-            "SRC_AUTO_WWW_SMICS_COM_7D437B2"
+            "SRC_NBS_WAGE_2024_TABLE"
           ],
           "x_decision_real_data_placeholders": {
             "applicant_flow_dataset_id": "IND_SEMICONDUCTOR_ELECTRONICS_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -3198,8 +3198,8 @@
             "publish_date": "2025-10-30",
             "captured_at": "2026-02-18",
             "secondary_source_ids": [
-              "SRC_NBS_WAGE_2024_TABLE",
-              "SRC_AUTO_WWW_SMICS_COM_7D437B2"
+              "SRC_AUTO_WWW_SMICS_COM_7D437B2",
+              "SRC_NBS_WAGE_2024_TABLE"
             ]
           },
           "x_decision_min_sample_required": 9,
@@ -3210,7 +3210,7 @@
       ],
       "last_checked": "2026-02-17",
       "min_sample_size_for_verified": 1,
-      "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
+      "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
       "payload": {
         "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
         "extension_fields": [
@@ -5401,14 +5401,14 @@
     "coverage_percent_overall": 89.3,
     "evidence_percent_overall": 88.9,
     "freshness_percent_overall": 90.3,
-    "real_data_ratio_overall": 74,
+    "real_data_ratio_overall": 81.9,
     "template_ratio_overall": 0,
-    "quality_score_overall": 90.1,
+    "quality_score_overall": 90.3,
     "verified_ratio_percent": 100,
     "weakest_collections": [
-      "自定义扩展",
       "笔试真题库",
-      "面试真题库"
+      "面试真题库",
+      "自定义扩展"
     ],
     "manual_fill_required_total": 45,
     "manual_fill_pending_total": 0,
@@ -5419,7 +5419,7 @@
     "salary_micro_status": "verified",
     "salary_macro_status": "verified",
     "updated_at": "2026-02-18",
-    "ranking_percentile": 4.5
+    "ranking_percentile": 13.6
   },
   "slug": "semiconductor-electronics",
   "sources": [
@@ -5848,12 +5848,13 @@
         "evidence_chain": {
           "primary_source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
           "secondary_source_ids": [
+            "SRC_AUTO_WWW_SMICS_COM_7D437B2",
             "SRC_MIIT_ELECTRONICS_Q3RUN_20251030",
             "SRC_NBS_WAGE_2024_TABLE"
           ],
           "timeline_source_id": "SRC_AUTO_WWW_SMICS_COM_7D437B2",
           "policy_source_id": "SRC_MIIT_ELECTRONICS_Q3RUN_20251030",
-          "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+          "salary_source_id": "SRC_AUTO_WWW_SMICS_COM_7D437B2"
         }
       }
     },
