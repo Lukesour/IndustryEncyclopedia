@@ -27,3 +27,20 @@ node scripts/recompute_progress_v1_15.js 行业百科.json
 bash scripts/run_quality_pipeline.sh 行业百科.json
 bash scripts/split_industry_files.sh 行业百科.json data
 ```
+
+## 前端审阅页
+已新增静态审阅页：`review-ui/`，用于逐行业查看深度指南、决策卡、岗位画像、题库与来源证据，帮助快速判断需要增删改的信息。
+
+启动方式：
+```bash
+python3 -m http.server 8000
+```
+
+浏览器打开：
+`http://localhost:8000/review-ui/`
+
+页面能力：
+- 行业搜索与“仅看高风险行业”过滤
+- 审阅信号看板（深度长度、回忆题占比、来源首页占比、岗位画像差异度）
+- 深度指南、决策卡、题库、来源全量展开查看
+- 自动加载失败时支持手动上传 `行业百科.json`

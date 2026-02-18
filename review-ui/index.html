@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>行业百科审阅台</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <h1>行业百科审阅台</h1>
+          <p id="metaLine">正在载入数据…</p>
+        </div>
+        <div class="controls">
+          <label class="control">
+            <span>搜索</span>
+            <input id="searchInput" type="search" placeholder="行业名 / 岗位 / 关键词" />
+          </label>
+          <label class="toggle">
+            <input id="riskOnlyToggle" type="checkbox" />
+            <span>仅看高风险行业</span>
+          </label>
+        </div>
+      </header>
+
+      <div class="layout">
+        <aside class="sidebar">
+          <div class="sidebar-title">行业列表</div>
+          <div id="industryList" class="industry-list"></div>
+        </aside>
+
+        <main class="content">
+          <section id="emptyState" class="card empty-state hidden">
+            <h2>未加载数据</h2>
+            <p>请确认在项目根目录启动本地服务器后访问此页面。</p>
+            <p>推荐命令：<code>python3 -m http.server 8000</code></p>
+            <p>然后打开：<code>http://localhost:8000/review-ui/</code></p>
+            <div class="file-fallback">
+              <label for="fileInput">或手动选择行业百科 JSON：</label>
+              <input id="fileInput" type="file" accept=".json,application/json" />
+            </div>
+          </section>
+
+          <section id="industryView" class="hidden">
+            <article class="card headline" id="headlineCard"></article>
+            <article class="card" id="signalsCard"></article>
+            <article class="card" id="guideCard"></article>
+            <article class="card" id="decisionCard"></article>
+            <article class="card" id="rolesCard"></article>
+            <article class="card" id="questionsCard"></article>
+            <article class="card" id="sourcesCard"></article>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
