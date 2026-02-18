@@ -18,29 +18,29 @@
       "data_status": "verified",
       "items": [
         {
-          "authenticity_level": "curated",
+          "authenticity_level": "official",
           "con_points": [
             "路径选择错误会导致试错成本上升",
             "若忽视城市与强度约束，长期可持续性会下降"
           ],
-          "data_origin": "editorial_curated",
+          "data_origin": "official_plus_editorial_synthesis",
           "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
           "evidence": {
             "access_check": "checked",
-            "accessed_at": "2026-02-16",
+            "accessed_at": "2026-02-18",
             "confidence": 0.63,
             "http_status": 200,
             "manual_verification_required": false,
             "sample_size": 2,
-            "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-            "source_date": "2025-05-16",
-            "source_id": "SRC_NBS_WAGE_2024_TABLE",
-            "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-            "source_type": "government_dataset",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+            "snapshot_url": "https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2025/art_76f6af8d52cb4f0cb0f8fbabddc85241.html",
+            "source_date": "2025-09-12",
+            "source_id": "SRC_MIIT_AUTO_STABLE_20250912",
+            "source_name": "工业和信息化部等八部门关于印发《汽车行业稳增长工作方案（2025—2026年）》的通知",
+            "source_type": "government_policy",
+            "source_url": "https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2025/art_76f6af8d52cb4f0cb0f8fbabddc85241.html",
             "stat_definition": "结合智能驾驶感知与系统联调岗位要求与公开招聘信息形成的行业化争议议题。",
-            "publish_date": "2025-05-16",
-            "captured_at": "2026-02-16"
+            "publish_date": "2025-09-12",
+            "captured_at": "2026-02-18"
           },
           "issue": "智能驾驶岗位应优先“算法方向”还是“系统工程方向”？",
           "issue_id": "IND_AUTO_INTELLIGENT_DRIVING_DEBATE_001",
@@ -48,7 +48,7 @@
             "整车软件与系统工程路径更利于建立长期技术壁垒。",
             "有利于将项目经历转化为可量化求职成果"
           ],
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "industry_specific_metric": "接管里程、误检率、OTA缺陷率"
         },
         {
@@ -2849,6 +2849,51 @@
           "round_label": "笔试主卷",
           "updated_at": "2026-02-18",
           "sample_size": 10
+        },
+        {
+          "answer_framework": [
+            "问题定义",
+            "系统拆解",
+            "指标设计",
+            "验证方案"
+          ],
+          "authenticity_level": "official",
+          "data_origin": "company_official_job_requirement",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-18",
+            "confidence": 0.81,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 5,
+            "snapshot_url": "https://job.byd.com",
+            "source_date": "2026-02-18",
+            "source_id": "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+            "source_name": "比亚迪招聘官网",
+            "source_type": "company_official",
+            "source_url": "https://job.byd.com",
+            "stat_definition": "依据智能驾驶岗位要求抽取的系统设计类题型。",
+            "secondary_source_ids": [
+              "SRC_MIIT_AUTO_STABLE_20250912",
+              "SRC_NCSS_2026_JOINT"
+            ],
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-18"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "给定一个城市NOA场景，如何设计感知到规控的异常回退机制，并定义核心评估指标？",
+          "question_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_010",
+          "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+          "question_type": "系统设计与安全回退",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_004",
+          "role_name": "系统工程师",
+          "round_label": "笔试加试",
+          "updated_at": "2026-02-18",
+          "sample_size": 5
         }
       ],
       "last_checked": "2026-02-16",
@@ -4964,6 +5009,51 @@
           ],
           "updated_at": "2026-02-18",
           "sample_size": 10
+        },
+        {
+          "answer_framework": [
+            "背景",
+            "目标",
+            "行动",
+            "结果"
+          ],
+          "authenticity_level": "official",
+          "data_origin": "company_official_job_requirement",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-18",
+            "confidence": 0.81,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 5,
+            "snapshot_url": "https://job.byd.com",
+            "source_date": "2026-02-18",
+            "source_id": "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+            "source_name": "比亚迪招聘官网",
+            "source_type": "company_official",
+            "source_url": "https://job.byd.com",
+            "stat_definition": "依据智能驾驶岗位面试要求整理的跨模块协同题型。",
+            "secondary_source_ids": [
+              "SRC_MIIT_AUTO_STABLE_20250912",
+              "SRC_NCSS_2026_JOINT"
+            ],
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-18"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "描述一次你推动算法、测试和工程团队解决线上缺陷的经历，如何平衡交付时间与安全风险？",
+          "question_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_010",
+          "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+          "question_type": "行为面（跨团队协同）",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_003",
+          "role_name": "测试工程师",
+          "round_label": "专业面",
+          "updated_at": "2026-02-18",
+          "sample_size": 5
         }
       ],
       "last_checked": "2026-02-16",
@@ -5287,11 +5377,11 @@
     "confirmed_empty_collections": 0,
     "tracked_collections": 14,
     "coverage_percent_overall": 89.3,
-    "evidence_percent_overall": 91.3,
-    "freshness_percent_overall": 88.4,
+    "evidence_percent_overall": 91.5,
+    "freshness_percent_overall": 90.1,
     "real_data_ratio_overall": 74,
     "template_ratio_overall": 0,
-    "quality_score_overall": 88.3,
+    "quality_score_overall": 86.9,
     "verified_ratio_percent": 100,
     "weakest_collections": [
       "自定义扩展",
@@ -5307,7 +5397,7 @@
     "salary_micro_status": "verified",
     "salary_macro_status": "verified",
     "updated_at": "2026-02-18",
-    "ranking_percentile": 4.5
+    "ranking_percentile": 0
   },
   "slug": "auto-intelligent-driving",
   "sources": [

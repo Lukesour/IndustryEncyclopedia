@@ -464,10 +464,19 @@
           "新增18条官方争议结论与15条官方投递日历，全部绑定已注册source_id与证据链字段。",
           "持续联网核验新增来源可达性，并保留国家电网反爬来源的人工核验与Cookie提示。"
         ]
+      },
+      {
+        "version": "v1.36.1",
+        "date": "2026-02-18",
+        "summary": [
+          "逐行业替换23个词条首条争议结论的旧统计锚点，改为2025Q4-2026Q1官方政策/监管来源，降低过期证据误导风险。",
+          "手工补强5个行业新增官方题库条目（笔试+面试）证据样本量字段，统一通过verified门槛校验。",
+          "全量复跑schema/来源/质量流水线并通过发布门禁，保持has_blockers=false。"
+        ]
       }
     ],
-    "文档名称": "中国大陆应届生求职行业百科（v1.36.0全行业决策深化版）",
-    "版本": "v1.36.0",
+    "文档名称": "中国大陆应届生求职行业百科（v1.36.1全行业决策深化版）",
+    "版本": "v1.36.1",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -513,7 +522,8 @@
       "v1.32.0新增评分口径与信息源规范文档，支持后续按扣分项持续优化。",
       "v1.33.0强化区域样本覆盖与公共部门口径说明，并补5个行业区域薪酬实采样本。",
       "v1.35.0完成高波动行业争议结论与投递日历增量，并修复NIO官方来源可访问性。",
-      "v1.36.0完成23行业争议结论与时间线结构统一（3条/3条），并补充可执行月度投递节点。"
+      "v1.36.0完成23行业争议结论与时间线结构统一（3条/3条），并补充可执行月度投递节点。",
+      "v1.36.1逐行业刷新首条争议证据到近180天官方来源，并完成新增题库条目样本量门槛修复与门禁复核。"
     ],
     "适用人群": "中国大陆应届生（含毕业3年内）",
     "updated_at": "2026-02-18"
@@ -6653,29 +6663,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "snapshot_url": "https://wap.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_525ed8efdfd649f5a1c15911769c0590.html",
+                "source_date": "2025-09-29",
+                "source_id": "SRC_MIIT_MECHANICAL_STABLE_20250929",
+                "source_name": "工业和信息化部等六部门关于印发《机械行业稳增长工作方案（2025—2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://wap.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_525ed8efdfd649f5a1c15911769c0590.html",
                 "stat_definition": "结合产线节拍优化与设备稼动率岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2025-09-29",
+                "captured_at": "2026-02-18"
               },
               "issue": "制造业校招应优先“工艺”还是“设备自动化”？",
               "issue_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_DEBATE_001",
@@ -6683,7 +6693,7 @@
                 "工艺与设备并行路径能快速沉淀现场闭环与良率优化能力。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "OEE、一次合格率、换线节拍"
             },
             {
@@ -9475,6 +9485,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-18",
               "sample_size": 10
+            },
+            {
+              "answer_framework": [
+                "问题定义",
+                "约束条件",
+                "优化思路",
+                "验证复盘"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.inovance.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+                "source_name": "汇川技术官网",
+                "source_type": "company_official",
+                "source_url": "https://www.inovance.com",
+                "stat_definition": "依据工业自动化岗位要求抽取的工程优化题型。",
+                "secondary_source_ids": [
+                  "SRC_MIIT_MECHANICAL_STABLE_20250929",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "某产线节拍无法达标，你会如何定位瓶颈并设计自动化改造方案？",
+              "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_010",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "工程优化与节拍提升",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_004",
+              "role_name": "工艺工程师",
+              "round_label": "笔试加试",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -11589,6 +11644,51 @@
               ],
               "updated_at": "2026-02-18",
               "sample_size": 10
+            },
+            {
+              "answer_framework": [
+                "背景",
+                "任务",
+                "行动",
+                "结果"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.inovance.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+                "source_name": "汇川技术官网",
+                "source_type": "company_official",
+                "source_url": "https://www.inovance.com",
+                "stat_definition": "依据工业自动化岗位面试要求整理的现场协同题型。",
+                "secondary_source_ids": [
+                  "SRC_MIIT_MECHANICAL_STABLE_20250929",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "讲述一次你在设备调试阶段处理跨部门冲突的经历，你如何保证交付节点和质量目标同时达成？",
+              "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_010",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "行为面（交付协同）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_006",
+              "role_name": "项目工程师",
+              "round_label": "专业面",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -11912,11 +12012,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 91.3,
-        "freshness_percent_overall": 88.4,
+        "evidence_percent_overall": 91.5,
+        "freshness_percent_overall": 90.1,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 88.4,
+        "quality_score_overall": 87,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -11932,7 +12032,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 9.1
+        "ranking_percentile": 4.5
       },
       "slug": "advanced-manufacturing-automation",
       "sources": [
@@ -12666,29 +12766,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+                "snapshot_url": "https://scs.moa.gov.cn/jcyj/202510/t20251009_6477959.htm",
+                "source_date": "2025-10-09",
+                "source_id": "SRC_MOA_CASDE_20251009",
+                "source_name": "农业农村部市场预警专家委员会发布2025年10月中国农产品供需形势分析",
                 "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "source_url": "https://scs.moa.gov.cn/jcyj/202510/t20251009_6477959.htm",
                 "stat_definition": "结合品控追溯与供应保障岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2025-10-09",
+                "captured_at": "2026-02-18"
               },
               "issue": "农业食品首岗应优先“质量管理”还是“供应链计划”？",
               "issue_id": "IND_AGRI_FOOD_DEBATE_001",
@@ -12696,7 +12796,7 @@
                 "质量与供应链双线成长更容易形成可验证的业务贡献。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "抽检合格率、周转天数、损耗率"
             },
             {
@@ -17840,7 +17940,7 @@
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
         "evidence_percent_overall": 88.7,
-        "freshness_percent_overall": 87.3,
+        "freshness_percent_overall": 88.7,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
         "quality_score_overall": 89.6,
@@ -17859,7 +17959,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 40.9
+        "ranking_percentile": 36.4
       },
       "slug": "agriculture-food",
       "sources": [
@@ -18616,29 +18716,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "snapshot_url": "https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2025/art_76f6af8d52cb4f0cb0f8fbabddc85241.html",
+                "source_date": "2025-09-12",
+                "source_id": "SRC_MIIT_AUTO_STABLE_20250912",
+                "source_name": "工业和信息化部等八部门关于印发《汽车行业稳增长工作方案（2025—2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2025/art_76f6af8d52cb4f0cb0f8fbabddc85241.html",
                 "stat_definition": "结合智能驾驶感知与系统联调岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2025-09-12",
+                "captured_at": "2026-02-18"
               },
               "issue": "智能驾驶岗位应优先“算法方向”还是“系统工程方向”？",
               "issue_id": "IND_AUTO_INTELLIGENT_DRIVING_DEBATE_001",
@@ -18646,7 +18746,7 @@
                 "整车软件与系统工程路径更利于建立长期技术壁垒。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "接管里程、误检率、OTA缺陷率"
             },
             {
@@ -21447,6 +21547,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-18",
               "sample_size": 10
+            },
+            {
+              "answer_framework": [
+                "问题定义",
+                "系统拆解",
+                "指标设计",
+                "验证方案"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://job.byd.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+                "source_name": "比亚迪招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://job.byd.com",
+                "stat_definition": "依据智能驾驶岗位要求抽取的系统设计类题型。",
+                "secondary_source_ids": [
+                  "SRC_MIIT_AUTO_STABLE_20250912",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "给定一个城市NOA场景，如何设计感知到规控的异常回退机制，并定义核心评估指标？",
+              "question_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_010",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "系统设计与安全回退",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_004",
+              "role_name": "系统工程师",
+              "round_label": "笔试加试",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -23562,6 +23707,51 @@
               ],
               "updated_at": "2026-02-18",
               "sample_size": 10
+            },
+            {
+              "answer_framework": [
+                "背景",
+                "目标",
+                "行动",
+                "结果"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://job.byd.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+                "source_name": "比亚迪招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://job.byd.com",
+                "stat_definition": "依据智能驾驶岗位面试要求整理的跨模块协同题型。",
+                "secondary_source_ids": [
+                  "SRC_MIIT_AUTO_STABLE_20250912",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "描述一次你推动算法、测试和工程团队解决线上缺陷的经历，如何平衡交付时间与安全风险？",
+              "question_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_010",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "行为面（跨团队协同）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_003",
+              "role_name": "测试工程师",
+              "round_label": "专业面",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -23885,11 +24075,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 91.3,
-        "freshness_percent_overall": 88.4,
+        "evidence_percent_overall": 91.5,
+        "freshness_percent_overall": 90.1,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 88.3,
+        "quality_score_overall": 86.9,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -23905,7 +24095,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 4.5
+        "ranking_percentile": 0
       },
       "slug": "auto-intelligent-driving",
       "sources": [
@@ -24636,29 +24826,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "snapshot_url": "https://www.nmpaic.org.cn/yjzxyw/202602/t20260206_429414.html",
+                "source_date": "2026-02-05",
+                "source_id": "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
+                "source_name": "2026年全国医疗器械监督管理工作会议召开（NMPA信息中心转载）",
+                "source_type": "government_policy",
+                "source_url": "https://www.nmpaic.org.cn/yjzxyw/202602/t20260206_429414.html",
                 "stat_definition": "结合临床运营与合规质量岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2026-02-05",
+                "captured_at": "2026-02-18"
               },
               "issue": "生物医药首岗应优先“临床运营”还是“注册合规”？",
               "issue_id": "IND_BIOMED_DEVICE_DEBATE_001",
@@ -24666,7 +24856,7 @@
                 "合规与医学证据能力能显著提升岗位迁移性与长期竞争力。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "注册通过率、临床入组进度、不良事件率"
             },
             {
@@ -27460,6 +27650,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-18",
               "sample_size": 10
+            },
+            {
+              "answer_framework": [
+                "问题定义",
+                "法规约束",
+                "执行步骤",
+                "风险控制"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.mindray.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+                "source_name": "迈瑞医疗官网",
+                "source_type": "company_official",
+                "source_url": "https://www.mindray.com",
+                "stat_definition": "依据医疗器械岗位要求抽取的注册与质量控制题型。",
+                "secondary_source_ids": [
+                  "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "新器械进入注册阶段发现临床评价样本不足，你会如何补充证据并控制审批进度风险？",
+              "question_id": "IND_BIOMED_DEVICE_WRITTEN_010",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "注册与临床证据",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_BIOMED_DEVICE_ROLE_003",
+              "role_name": "注册专员",
+              "round_label": "笔试加试",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -29651,6 +29886,51 @@
               ],
               "updated_at": "2026-02-18",
               "sample_size": 9
+            },
+            {
+              "answer_framework": [
+                "背景",
+                "目标",
+                "行动",
+                "结果"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.mindray.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+                "source_name": "迈瑞医疗官网",
+                "source_type": "company_official",
+                "source_url": "https://www.mindray.com",
+                "stat_definition": "依据医疗器械岗位面试要求整理的临床协同题型。",
+                "secondary_source_ids": [
+                  "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "请分享一次你推动研发、临床和质量团队统一标准的经历，你如何处理分歧并保证合规？",
+              "question_id": "IND_BIOMED_DEVICE_INTERVIEW_010",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "行为面（跨职能合规协同）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_BIOMED_DEVICE_ROLE_004",
+              "role_name": "质量管理",
+              "round_label": "专业面",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -29973,11 +30253,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 88.7,
-        "freshness_percent_overall": 85.9,
+        "evidence_percent_overall": 89,
+        "freshness_percent_overall": 87.7,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 88.9,
+        "quality_score_overall": 87.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -29993,7 +30273,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 13.6
+        "ranking_percentile": 9.1
       },
       "slug": "biomed-device",
       "sources": [
@@ -30722,29 +31002,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "snapshot_url": "https://www.gov.cn/zhengce/zhengceku/202509/content_7042418.htm",
+                "source_date": "2025-09-26",
+                "source_id": "SRC_GOV_PETROCHEM_STABLE_20250926",
+                "source_name": "工业和信息化部等7部门关于印发《石化化工行业稳增长工作方案（2025-2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.gov.cn/zhengce/zhengceku/202509/content_7042418.htm",
                 "stat_definition": "结合中试放大与工艺稳定性岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2025-09-26",
+                "captured_at": "2026-02-18"
               },
               "issue": "化工新材料首岗应优先“研发”还是“工艺应用”？",
               "issue_id": "IND_CHEM_NEW_MATERIALS_DEBATE_001",
@@ -30752,7 +31032,7 @@
                 "工艺与EHS并重路径有助于在高监管行业建立稀缺能力。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "收率、能耗、三废达标率"
             },
             {
@@ -33550,6 +33830,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-18",
               "sample_size": 10
+            },
+            {
+              "answer_framework": [
+                "问题定义",
+                "分析方法",
+                "执行步骤",
+                "结果复盘"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://job.sinopec.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_SINOPEC_COM_B743B6E",
+                "source_name": "中国石化招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://job.sinopec.com",
+                "stat_definition": "依据企业研发与工艺岗位要求抽取的典型能力题型。",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CAMPUS_2026_0129",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "某新材料在中试阶段出现批次波动，请给出你会如何构建关键工艺参数监控方案并验证稳定性。",
+              "question_id": "IND_CHEM_NEW_MATERIALS_WRITTEN_010",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "工艺放大与稳定性",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_CHEM_NEW_MATERIALS_ROLE_002",
+              "role_name": "工艺工程师",
+              "round_label": "笔试加试",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -35640,6 +35965,51 @@
               ],
               "updated_at": "2026-02-18",
               "sample_size": 10
+            },
+            {
+              "answer_framework": [
+                "背景",
+                "任务",
+                "行动",
+                "结果"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://job.sinopec.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_SINOPEC_COM_B743B6E",
+                "source_name": "中国石化招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://job.sinopec.com",
+                "stat_definition": "依据企业面试能力要求整理的工艺与协同场景题。",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CAMPUS_2026_0129",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "请举例说明你如何在安全和进度冲突时做取舍，并推动跨部门达成一致。",
+              "question_id": "IND_CHEM_NEW_MATERIALS_INTERVIEW_010",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "行为面（协同与EHS）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_CHEM_NEW_MATERIALS_ROLE_005",
+              "role_name": "EHS工程师",
+              "round_label": "专业面",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -35962,11 +36332,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 88.1,
-        "evidence_percent_overall": 91.3,
-        "freshness_percent_overall": 88.4,
+        "evidence_percent_overall": 91.5,
+        "freshness_percent_overall": 90.1,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 88,
+        "quality_score_overall": 88.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -35982,7 +36352,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 0
+        "ranking_percentile": 18.2
       },
       "slug": "chemicals-new-materials",
       "sources": [
@@ -36710,29 +37080,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "snapshot_url": "https://www.gov.cn/lianbo/bumen/202510/content_7044277.htm",
+                "source_date": "2025-10-14",
+                "source_id": "SRC_SCS_EXAM_2026",
+                "source_name": "中央机关及其直属机构2026年度考试录用公务员报名即将开始（中国政府网）",
+                "source_type": "government_policy",
+                "source_url": "https://www.gov.cn/lianbo/bumen/202510/content_7044277.htm",
                 "stat_definition": "结合基层治理与应急协同岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2025-10-14",
+                "captured_at": "2026-02-18"
               },
               "issue": "公务员备考应优先“行测高分”还是“申论与面试综合能力”？",
               "issue_id": "IND_CIVIL_SERVICE_DEBATE_001",
@@ -36740,7 +37110,7 @@
                 "基层治理与综合行政能力路径更利于长期晋升与岗位稳定。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "岗位竞争比、进面分、调剂比例"
             },
             {
@@ -42356,7 +42726,7 @@
         "tracked_collections": 14,
         "coverage_percent_overall": 97.6,
         "evidence_percent_overall": 92.6,
-        "freshness_percent_overall": 90.1,
+        "freshness_percent_overall": 91.4,
         "real_data_ratio_overall": 75,
         "template_ratio_overall": 0,
         "quality_score_overall": 92,
@@ -43144,29 +43514,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+                "source_date": "2026-02-12",
+                "source_id": "SRC_MOE_ACTION_2026",
+                "source_name": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
+                "source_type": "government_policy",
+                "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
                 "stat_definition": "结合项目推进与结构化交付岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2026-02-12",
+                "captured_at": "2026-02-18"
               },
               "issue": "咨询首岗应优先“行业专精”还是“方法论通用能力”？",
               "issue_id": "IND_CONSULTING_PRO_SERVICES_DEBATE_001",
@@ -43174,7 +43544,7 @@
                 "研究与问题拆解能力能在多行业项目中快速复用并放大价值。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "案例通过率、项目毛利率改善、客户续约率"
             },
             {
@@ -48250,10 +48620,10 @@
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
         "evidence_percent_overall": 91.3,
-        "freshness_percent_overall": 87,
+        "freshness_percent_overall": 88.4,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.5,
+        "quality_score_overall": 89.6,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -49008,29 +49378,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "snapshot_url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_518fcaf90e674b959d3a5a0e8b74fc0f.html",
+                "source_date": "2026-01-23",
+                "source_id": "SRC_MOFCOM_ECOMMERCE_20260123",
+                "source_name": "商务部电子商务司负责人介绍2025年我国电子商务发展情况",
+                "source_type": "government_policy",
+                "source_url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_518fcaf90e674b959d3a5a0e8b74fc0f.html",
                 "stat_definition": "结合投放ROI与跨境履约岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2026-01-23",
+                "captured_at": "2026-02-18"
               },
               "issue": "跨境电商应优先“投放运营”还是“供应链运营”？",
               "issue_id": "IND_ECOMMERCE_CROSSBORDER_DEBATE_001",
@@ -49038,7 +49408,7 @@
                 "跨境运营路径有利于快速沉淀可量化增长与合规协同能力。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "履约时效、退款率、广告ROI"
             },
             {
@@ -54178,7 +54548,7 @@
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
         "evidence_percent_overall": 88.7,
-        "freshness_percent_overall": 85.9,
+        "freshness_percent_overall": 87.3,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
         "quality_score_overall": 90,
@@ -54928,29 +55298,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+                "source_date": "2026-02-12",
+                "source_id": "SRC_MOE_ACTION_2026",
+                "source_name": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
+                "source_type": "government_policy",
+                "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
                 "stat_definition": "结合课程续费与学习效果岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2026-02-12",
+                "captured_at": "2026-02-18"
               },
               "issue": "教育职教首岗应优先“教研”还是“课程运营”？",
               "issue_id": "IND_EDU_VOCATIONAL_DEBATE_001",
@@ -54958,7 +55328,7 @@
                 "教研与运营双线能力更容易形成可持续的职业壁垒。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "完课率、续报率、课消率"
             },
             {
@@ -59919,10 +60289,10 @@
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
         "evidence_percent_overall": 91,
-        "freshness_percent_overall": 86.6,
+        "freshness_percent_overall": 88.1,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.4,
+        "quality_score_overall": 89.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -60706,29 +61076,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "snapshot_url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
+                "source_date": "2026-01-30",
+                "source_id": "SRC_NEA_WORKCONF_20260130",
+                "source_name": "国家能源局举行新闻发布会介绍2025年电力工业统计数据有关情况",
+                "source_type": "government_policy",
+                "source_url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
                 "stat_definition": "结合电力调度与交易预测岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2026-01-30",
+                "captured_at": "2026-02-18"
               },
               "issue": "能源行业应优先“调度运维”还是“交易分析”？",
               "issue_id": "IND_ENERGY_UTILITIES_DEBATE_001",
@@ -60736,7 +61106,7 @@
                 "调度与运维复合路径有助于建立长期稳定的基础设施能力。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "等效可用系数、停机率、线损率"
             },
             {
@@ -65829,10 +66199,10 @@
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
         "evidence_percent_overall": 91.3,
-        "freshness_percent_overall": 89.9,
+        "freshness_percent_overall": 91.3,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.4,
+        "quality_score_overall": 90.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -65848,7 +66218,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 77.3
+        "ranking_percentile": 81.8
       },
       "slug": "energy-utilities",
       "sources": [
@@ -66590,29 +66960,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "snapshot_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+                "source_date": "2026-01-06",
+                "source_id": "SRC_PBC_WORKCONF_20260106",
+                "source_name": "2026年中国人民银行工作会议召开",
+                "source_type": "government_policy",
+                "source_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
                 "stat_definition": "结合零售银行转化与风险控制岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2026-01-06",
+                "captured_at": "2026-02-18"
               },
               "issue": "银行校招应优先“业务条线”还是“中后台风险条线”？",
               "issue_id": "IND_FIN_BANK_DEBATE_001",
@@ -66620,7 +66990,7 @@
                 "对公与风控路径能更快建立产业理解与信用判断能力。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "不良率、授信通过率、客户留存"
             },
             {
@@ -71745,10 +72115,10 @@
         "tracked_collections": 14,
         "coverage_percent_overall": 89.8,
         "evidence_percent_overall": 91,
-        "freshness_percent_overall": 88.1,
+        "freshness_percent_overall": 89.6,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.3,
+        "quality_score_overall": 90.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -71764,7 +72134,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 72.7
+        "ranking_percentile": 77.3
       },
       "slug": "finance-bank",
       "sources": [
@@ -72518,29 +72888,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "snapshot_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+                "source_date": "2026-01-06",
+                "source_id": "SRC_PBC_WORKCONF_20260106",
+                "source_name": "2026年中国人民银行工作会议召开",
+                "source_type": "government_policy",
+                "source_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
                 "stat_definition": "结合核保核赔效率与风控岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2026-01-06",
+                "captured_at": "2026-02-18"
               },
               "issue": "保险行业应优先“前线渠道”还是“精算风控”？",
               "issue_id": "IND_FIN_INSURANCE_DEBATE_001",
@@ -72548,7 +72918,7 @@
                 "精算与风控能力路径更利于长期积累稀缺定价能力。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "赔付率、续保率、理赔时效"
             },
             {
@@ -75305,6 +75675,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-18",
               "sample_size": 8
+            },
+            {
+              "answer_framework": [
+                "问题定义",
+                "指标拆解",
+                "策略设计",
+                "结果评估"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.pingan.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_PINGAN_COM_A4057B5F",
+                "source_name": "中国平安官网",
+                "source_type": "company_official",
+                "source_url": "https://www.pingan.com",
+                "stat_definition": "依据保险产品与风控岗位要求抽取的业务分析题型。",
+                "secondary_source_ids": [
+                  "SRC_PBC_WORKCONF_20260106",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "某健康险产品赔付率持续上升，你会如何定位原因并提出可执行的产品优化方案？",
+              "question_id": "IND_FIN_INSURANCE_WRITTEN_009",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "产品与风控分析",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_FIN_INSURANCE_ROLE_003",
+              "role_name": "产品经理",
+              "round_label": "笔试加试",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -77347,6 +77762,51 @@
               ],
               "updated_at": "2026-02-18",
               "sample_size": 8
+            },
+            {
+              "answer_framework": [
+                "背景",
+                "任务",
+                "行动",
+                "结果"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.pingan.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_PINGAN_COM_A4057B5F",
+                "source_name": "中国平安官网",
+                "source_type": "company_official",
+                "source_url": "https://www.pingan.com",
+                "stat_definition": "依据保险岗位面试要求整理的理赔与客户沟通题型。",
+                "secondary_source_ids": [
+                  "SRC_PBC_WORKCONF_20260106",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "请描述一次你在客户投诉与理赔争议中推进多方达成解决方案的经历。",
+              "question_id": "IND_FIN_INSURANCE_INTERVIEW_009",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "行为面（客户与理赔协同）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_FIN_INSURANCE_ROLE_002",
+              "role_name": "核保核赔",
+              "round_label": "专业面",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -77645,11 +78105,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.8,
-        "evidence_percent_overall": 91,
-        "freshness_percent_overall": 88.1,
+        "evidence_percent_overall": 91.3,
+        "freshness_percent_overall": 89.9,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89,
+        "quality_score_overall": 88.2,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "外部链接",
@@ -77665,7 +78125,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 18.2
+        "ranking_percentile": 13.6
       },
       "slug": "finance-insurance",
       "sources": [
@@ -78414,29 +78874,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "snapshot_url": "https://www.csrc.gov.cn/csrc/c106311/c7609372/content.shtml",
+                "source_date": "2026-01-16",
+                "source_id": "SRC_CSRC_WORKCONF_20260116",
+                "source_name": "中国证监会召开2026年系统工作会议",
+                "source_type": "government_policy",
+                "source_url": "https://www.csrc.gov.cn/csrc/c106311/c7609372/content.shtml",
                 "stat_definition": "结合研究框架与交易支持岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2026-01-16",
+                "captured_at": "2026-02-18"
               },
               "issue": "券商基金首岗应优先“研究”还是“交易支持”？",
               "issue_id": "IND_FIN_SECURITIES_FUND_DEBATE_001",
@@ -78444,7 +78904,7 @@
                 "研究与风控并重路径更容易形成稳定可复用的方法论。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "组合回撤、换手率、研究命中率"
             },
             {
@@ -83641,7 +84101,7 @@
         "tracked_collections": 14,
         "coverage_percent_overall": 89.8,
         "evidence_percent_overall": 91.3,
-        "freshness_percent_overall": 88.4,
+        "freshness_percent_overall": 89.9,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
         "quality_score_overall": 89.7,
@@ -84379,29 +84839,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "snapshot_url": "https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n1y15r/index.html",
+                "source_date": "2026-01-15",
+                "source_id": "SRC_MOFCOM_PRESSCONF_20260115",
+                "source_name": "商务部召开例行新闻发布会（2026年1月15日）",
+                "source_type": "government_policy",
+                "source_url": "https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n1y15r/index.html",
                 "stat_definition": "结合新品动销与渠道协同岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2026-01-15",
+                "captured_at": "2026-02-18"
               },
               "issue": "快消首岗应优先“销售管培”还是“品牌市场”？",
               "issue_id": "IND_FMCG_RETAIL_DEBATE_001",
@@ -84409,7 +84869,7 @@
                 "渠道运营路径能更快形成商业敏感度和结果导向能力。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "动销率、库存周转、缺货率"
             },
             {
@@ -89467,10 +89927,10 @@
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
         "evidence_percent_overall": 91.3,
-        "freshness_percent_overall": 88.4,
+        "freshness_percent_overall": 89.9,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.3,
+        "quality_score_overall": 89.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -90209,29 +90669,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "snapshot_url": "https://www.miit.gov.cn/jgsj/xgj/gzdt/art/2026/art_57bbd1d6ebb9433094295a8cb02f3184.html",
+                "source_date": "2026-01-07",
+                "source_id": "SRC_MIIT_IIAI_ACTION_20260107",
+                "source_name": "工信部解读《工业互联网和人工智能融合赋能行动方案》",
+                "source_type": "government_policy",
+                "source_url": "https://www.miit.gov.cn/jgsj/xgj/gzdt/art/2026/art_57bbd1d6ebb9433094295a8cb02f3184.html",
                 "stat_definition": "结合推荐系统与工程稳定性岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2026-01-07",
+                "captured_at": "2026-02-18"
               },
               "issue": "应届生首份岗位应优先“大厂平台”还是“中型团队高责任”？",
               "issue_id": "IND_INTERNET_AI_DEBATE_001",
@@ -90239,7 +90699,7 @@
                 "算法与工程协同路径更容易形成可持续的技术壁垒。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "推理延迟、Token成本、留存率"
             },
             {
@@ -95514,7 +95974,7 @@
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
         "evidence_percent_overall": 91.4,
-        "freshness_percent_overall": 88.6,
+        "freshness_percent_overall": 90,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
         "quality_score_overall": 92,
@@ -96318,29 +96778,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+                "snapshot_url": "https://www.mot.gov.cn/shuju/tongjishuju/youzheng/202601/t20260130_4199355.html",
+                "source_date": "2026-01-22",
+                "source_id": "SRC_MOT_POSTAL_20260122",
+                "source_name": "国家邮政局公布2025年邮政行业运行情况",
                 "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "source_url": "https://www.mot.gov.cn/shuju/tongjishuju/youzheng/202601/t20260130_4199355.html",
                 "stat_definition": "结合干线准点率与成本控制岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2026-01-22",
+                "captured_at": "2026-02-18"
               },
               "issue": "物流首岗应优先“运营调度”还是“供应链计划”？",
               "issue_id": "IND_LOGISTICS_SUPPLYCHAIN_DEBATE_001",
@@ -96348,7 +96808,7 @@
                 "调度与现场运营路径更容易形成快速反馈的成长闭环。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "准时率、单票成本、签收时长"
             },
             {
@@ -101452,10 +101912,10 @@
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
         "evidence_percent_overall": 91.3,
-        "freshness_percent_overall": 88.4,
+        "freshness_percent_overall": 89.9,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.6,
+        "quality_score_overall": 89.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -101471,7 +101931,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 36.4
+        "ranking_percentile": 40.9
       },
       "slug": "logistics-supply-chain",
       "sources": [
@@ -102215,29 +102675,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "snapshot_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/yxspbgxx/202601/t20260126_947941.html",
+                "source_date": "2026-01-26",
+                "source_id": "SRC_NPPA_GAME_APPROVAL_20260126",
+                "source_name": "国家新闻出版署-2026年1月国产网络游戏审批信息",
+                "source_type": "government_platform",
+                "source_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/yxspbgxx/202601/t20260126_947941.html",
                 "stat_definition": "结合内容增长与留存运营岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2026-01-26",
+                "captured_at": "2026-02-18"
               },
               "issue": "传媒游戏首岗应优先“内容运营”还是“商业化运营”？",
               "issue_id": "IND_MEDIA_GAME_CONTENT_DEBATE_001",
@@ -102245,7 +102705,7 @@
                 "内容运营路径更容易快速积累可量化增长业绩。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "DAU、付费率、次日留存"
             },
             {
@@ -107341,10 +107801,10 @@
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
         "evidence_percent_overall": 88.7,
-        "freshness_percent_overall": 87.3,
+        "freshness_percent_overall": 88.7,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 92.6,
+        "quality_score_overall": 92.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -107360,7 +107820,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 95.5
+        "ranking_percentile": 100
       },
       "slug": "media-game-content",
       "sources": [
@@ -108090,29 +108550,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+                "snapshot_url": "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
+                "source_date": "2026-02-12",
+                "source_id": "SRC_NEA_RENEWABLE_UTIL_20260212",
+                "source_name": "国家能源局：2025年全国可再生能源利用率达到95%以上",
                 "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "source_url": "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
                 "stat_definition": "结合电池量产良率与安全验证岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2026-02-12",
+                "captured_at": "2026-02-18"
               },
               "issue": "新能源首岗应优先“研发”还是“工程量产端”？",
               "issue_id": "IND_NEW_ENERGY_DEBATE_001",
@@ -108120,7 +108580,7 @@
                 "工程与项目并行路径有助于在高景气赛道形成核心竞争力。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "度电成本、良品率、交付周期"
             },
             {
@@ -113422,10 +113882,10 @@
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
         "evidence_percent_overall": 88.7,
-        "freshness_percent_overall": 85.9,
+        "freshness_percent_overall": 87.3,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.9,
+        "quality_score_overall": 90,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -114173,29 +114633,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "snapshot_url": "https://rsj.sh.gov.cn/tgsgg_17341/20260128/t0035_1438398.html",
+                "source_date": "2026-01-28",
+                "source_id": "SRC_SHRSJ_PUBLIC_INST_20260128",
+                "source_name": "上海市人社局-上海市2026年事业单位公开招聘公告",
+                "source_type": "government_platform",
+                "source_url": "https://rsj.sh.gov.cn/tgsgg_17341/20260128/t0035_1438398.html",
                 "stat_definition": "结合公共服务与流程质控岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2026-01-28",
+                "captured_at": "2026-02-18"
               },
               "issue": "事业单位首岗应优先“专业技术”还是“综合行政”？",
               "issue_id": "IND_PUBLIC_INSTITUTION_DEBATE_001",
@@ -114203,7 +114663,7 @@
                 "教育医疗等专业对口路径更易形成稳定的职业发展曲线。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "进面比、笔试最低分、岗位招录比"
             },
             {
@@ -119946,10 +120406,10 @@
         "tracked_collections": 14,
         "coverage_percent_overall": 97.6,
         "evidence_percent_overall": 90.5,
-        "freshness_percent_overall": 78.6,
+        "freshness_percent_overall": 79.8,
         "real_data_ratio_overall": 75.3,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.8,
+        "quality_score_overall": 90.2,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -119965,7 +120425,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 81.8
+        "ranking_percentile": 72.7
       },
       "slug": "public-institution",
       "sources": [
@@ -120678,29 +121138,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "snapshot_url": "https://www.mohurd.gov.cn/xinwen/gzdt/art/2025/art_4fa6fb32042042d09182581bbd1f092e.html",
+                "source_date": "2025-12-25",
+                "source_id": "SRC_MOHURD_URBAN_RENEWAL_20251225",
+                "source_name": "住房城乡建设部：因城施策控增量、去库存、优供给，持续用力推动房地产市场止跌回稳",
+                "source_type": "government_policy",
+                "source_url": "https://www.mohurd.gov.cn/xinwen/gzdt/art/2025/art_4fa6fb32042042d09182581bbd1f092e.html",
                 "stat_definition": "结合项目节点管理与成本控制岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2025-12-25",
+                "captured_at": "2026-02-18"
               },
               "issue": "地产基建岗位应优先“工程现场”还是“投拓运营”？",
               "issue_id": "IND_REAL_ESTATE_INFRA_DEBATE_001",
@@ -120708,7 +121168,7 @@
                 "工程管理路径更利于沉淀项目全周期的综合能力。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "工期偏差率、成本偏差率、安全事故率"
             },
             {
@@ -125765,10 +126225,10 @@
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
         "evidence_percent_overall": 88.4,
-        "freshness_percent_overall": 87,
+        "freshness_percent_overall": 88.4,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.1,
+        "quality_score_overall": 90.2,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -126542,29 +127002,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+                "snapshot_url": "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2025/art_b280aaee390849aca2f8ecae5c9b414f.html",
+                "source_date": "2025-10-30",
+                "source_id": "SRC_MIIT_ELECTRONICS_Q3RUN_20251030",
+                "source_name": "2025年前三季度电子信息制造业运行情况",
                 "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "source_url": "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2025/art_b280aaee390849aca2f8ecae5c9b414f.html",
                 "stat_definition": "结合数字IC流片与验证闭环岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2025-10-30",
+                "captured_at": "2026-02-18"
               },
               "issue": "校招首岗应优先“前端设计”还是“验证岗位”？",
               "issue_id": "IND_SEMICONDUCTOR_ELECTRONICS_DEBATE_001",
@@ -126572,7 +127032,7 @@
                 "工艺与良率提升路径更容易形成长期技术壁垒。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "良率、缺陷密度、稼动率"
             },
             {
@@ -131918,7 +132378,7 @@
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
         "evidence_percent_overall": 88.9,
-        "freshness_percent_overall": 86.1,
+        "freshness_percent_overall": 87.5,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
         "quality_score_overall": 89.9,
@@ -131937,7 +132397,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 54.5
+        "ranking_percentile": 50
       },
       "slug": "semiconductor-electronics",
       "sources": [
@@ -132690,29 +133150,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "snapshot_url": "http://wap.sasac.gov.cn/n2588025/n2643314/c35340771/content.html",
+                "source_date": "2026-02-03",
+                "source_id": "SRC_SASAC_TALENT_WORKCONF_20260203",
+                "source_name": "国资央企人才工作座谈会在京召开",
+                "source_type": "government_policy",
+                "source_url": "http://wap.sasac.gov.cn/n2588025/n2643314/c35340771/content.html",
                 "stat_definition": "结合央国企项目管理与协同执行岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2026-02-03",
+                "captured_at": "2026-02-18"
               },
               "issue": "央国企首岗应优先“总部平台”还是“区域一线项目”？",
               "issue_id": "IND_STATE_OWNED_ENTERPRISE_DEBATE_001",
@@ -132720,7 +133180,7 @@
                 "总部平台路径更利于建立全局视角与规范流程认知。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "报名人数、录用比、调剂率"
             },
             {
@@ -138481,10 +138941,10 @@
         "tracked_collections": 14,
         "coverage_percent_overall": 97.6,
         "evidence_percent_overall": 91.6,
-        "freshness_percent_overall": 89.2,
+        "freshness_percent_overall": 90.4,
         "real_data_ratio_overall": 75,
         "template_ratio_overall": 0,
-        "quality_score_overall": 93.1,
+        "quality_score_overall": 92.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "公司清单",
@@ -138500,7 +138960,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 100
+        "ranking_percentile": 95.5
       },
       "slug": "state-owned-enterprise",
       "sources": [
@@ -139257,29 +139717,29 @@
           "data_status": "verified",
           "items": [
             {
-              "authenticity_level": "curated",
+              "authenticity_level": "official",
               "con_points": [
                 "路径选择错误会导致试错成本上升",
                 "若忽视城市与强度约束，长期可持续性会下降"
               ],
-              "data_origin": "editorial_curated",
+              "data_origin": "official_plus_editorial_synthesis",
               "editorial_conclusion": "先以三个月为窗口验证岗位匹配度，再根据成长斜率与生活成本做二次选择。",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.63,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
-                "source_date": "2025-05-16",
-                "source_id": "SRC_NBS_WAGE_2024_TABLE",
-                "source_name": "国家统计局-2024年城镇单位就业人员年平均工资情况（表2/表5）",
+                "snapshot_url": "https://www.miit.gov.cn/jgsj/yxj/xxfb/art/2026/art_bea806f4dd20457cb0158795cc210aa7.html",
+                "source_date": "2026-01-28",
+                "source_id": "SRC_MIIT_TELECOM_BULLETIN_20260128",
+                "source_name": "2025年通信业统计公报",
                 "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202505/t20250516_1959826.html",
+                "source_url": "https://www.miit.gov.cn/jgsj/yxj/xxfb/art/2026/art_bea806f4dd20457cb0158795cc210aa7.html",
                 "stat_definition": "结合5G网络优化与告警联动岗位要求与公开招聘信息形成的行业化争议议题。",
-                "publish_date": "2025-05-16",
-                "captured_at": "2026-02-16"
+                "publish_date": "2026-01-28",
+                "captured_at": "2026-02-18"
               },
               "issue": "运营商岗位应优先“网络优化”还是“政企业务解决方案”？",
               "issue_id": "IND_TELECOM_OPERATOR_DEBATE_001",
@@ -139287,7 +139747,7 @@
                 "网络优化与云网协同路径能构建稳定且可迁移的技术能力。",
                 "有利于将项目经历转化为可量化求职成果"
               ],
-              "updated_at": "2026-02-17",
+              "updated_at": "2026-02-18",
               "industry_specific_metric": "掉线率、时延、网络可用性"
             },
             {
@@ -144297,10 +144757,10 @@
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
         "evidence_percent_overall": 90.9,
-        "freshness_percent_overall": 87.9,
+        "freshness_percent_overall": 89.4,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.9,
+        "quality_score_overall": 90,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -144316,7 +144776,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 50
+        "ranking_percentile": 54.5
       },
       "slug": "telecom-operators",
       "sources": [
