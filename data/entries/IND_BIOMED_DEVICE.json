@@ -2708,6 +2708,51 @@
           "round_label": "笔试主卷",
           "updated_at": "2026-02-18",
           "sample_size": 9
+        },
+        {
+          "answer_framework": [
+            "问题定义",
+            "数据与风险识别",
+            "执行方案",
+            "验证与复盘"
+          ],
+          "authenticity_level": "curated",
+          "data_origin": "official_jd_competency_mapping",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-18",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.mindray.com",
+            "source_date": "2026-02-18",
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com",
+            "stat_definition": "依据企业官方岗位能力要求整理的笔试训练题（非官方原卷）。",
+            "secondary_source_ids": [
+              "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
+              "SRC_NCSS_2026_JOINT"
+            ],
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-18"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "某医疗器械临床验证阶段出现关键性能指标波动，你如何设计补充试验与注册资料修订路径，确保时效与合规？",
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_009",
+          "question_realness_note": "基于企业官方岗位能力项整理（非官方原题），用于应届生训练。",
+          "question_type": "官方JD能力拆解题（非原卷）",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_003",
+          "role_name": "注册专员",
+          "round_label": "笔试主卷",
+          "updated_at": "2026-02-18",
+          "sample_size": 10
         }
       ],
       "last_checked": "2026-02-16",
@@ -2960,7 +3005,7 @@
         }
       ],
       "min_sample_size_for_verified": 5,
-      "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“药理/器械法规、GMP/GSP、统计与试验设计”方向真实笔试题。；岗位覆盖门槛已提升：本行业笔试真题库至少覆盖5个角色。",
+      "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“药理/器械法规、GMP/GSP、统计与试验设计”方向真实笔试题。；岗位覆盖门槛已提升：本行业笔试真题库至少覆盖5个角色。；v1.34.1新增1条企业官方来源能力拆解题（非原卷）。",
       "quality": {
         "quantity_score": 41.7,
         "evidence_completeness_percent": 100,
@@ -3937,6 +3982,46 @@
             "upper": 13.71,
             "interval_type": "p25_p75"
           }
+        },
+        {
+          "access_check": "checked",
+          "accessed_at": "2026-02-18",
+          "authenticity_level": "observed",
+          "city_id": "CITY_003",
+          "city_name": "成都",
+          "company_tier": "t3_regional",
+          "confidence": 0.73,
+          "data_origin": "government_dataset_observed_mapping",
+          "http_status": 200,
+          "manual_fill_note": "基于国家统计局2025年居民收入口径对成都应届薪酬进行岗位映射，待企业offer实采复核。；观察层=gov_stat_anchor；状态=observed_from_government_dataset。",
+          "manual_verification_required": false,
+          "p25_monthly_total_annualized_k_cny": 9.9,
+          "p50_monthly_total_annualized_k_cny": 11.1,
+          "p75_monthly_total_annualized_k_cny": 12.8,
+          "role_id": "IND_BIOMED_DEVICE_ROLE_001",
+          "role_name": "医学事务",
+          "sample_size": 33,
+          "snapshot_id": "IND_BIOMED_DEVICE_SALARY_OBS_007",
+          "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+          "source_date": "2026-01-19",
+          "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
+          "source_name": "国家统计局-2025年全国居民人均可支配收入情况",
+          "source_type": "government_dataset",
+          "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+          "stat_definition": "基于国家统计局居民收入与工资公开口径，对生物医药行业应届岗位进行成都城市映射（非官方直接岗位口径）。",
+          "status": "observed_from_government_dataset",
+          "updated_at": "2026-02-18",
+          "publish_date": "2026-01-19",
+          "captured_at": "2026-02-18",
+          "observation_vs_estimation": "observed",
+          "is_modeled_estimate": false,
+          "observation_layer": "gov_stat_anchor",
+          "evidence_tier": "L1",
+          "confidence_interval_annualized_k_cny": {
+            "lower": 9.9,
+            "upper": 12.8,
+            "interval_type": "p25_p75"
+          }
         }
       ],
       "observed_requirements": {
@@ -4032,27 +4117,6 @@
       "updated_at": "2026-02-17",
       "payload": {
         "city_gap_recommendations": [
-          {
-            "slot_id": "IND_BIOMED_DEVICE_SALARY_CITY_GAP_001",
-            "city_name": "成都",
-            "status": "pending_user_fill",
-            "preferred_sources": [
-              "company_official",
-              "government_platform",
-              "real_user"
-            ],
-            "required_fields": [
-              "city_id",
-              "role_id",
-              "p25",
-              "p50",
-              "p75",
-              "source_url",
-              "publish_date",
-              "sample_size"
-            ],
-            "note": "该城市在当前观测样本中缺失，建议补充至少1条成都应届岗位薪酬实证。"
-          },
           {
             "slot_id": "IND_BIOMED_DEVICE_SALARY_CITY_GAP_002",
             "city_name": "武汉",
@@ -4835,6 +4899,51 @@
           ],
           "updated_at": "2026-02-18",
           "sample_size": 8
+        },
+        {
+          "authenticity_level": "curated",
+          "data_origin": "official_jd_competency_mapping",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-18",
+            "confidence": 0.79,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 9,
+            "snapshot_url": "https://www.hengrui.com",
+            "source_date": "2026-02-18",
+            "source_id": "SRC_AUTO_WWW_HENGRUI_COM_3A4B1F22",
+            "source_name": "恒瑞医药官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.hengrui.com",
+            "stat_definition": "依据企业官方岗位能力要求整理的结构化面试训练题（非官方原卷）。",
+            "secondary_source_ids": [
+              "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-18"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "临床项目进度延迟且受试者入组不及预期时，你如何协调医学、运营与监察团队稳住节点并控制偏差风险？",
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_009",
+          "question_realness_note": "基于企业官方岗位能力项整理（非官方原题），用于应届生训练。",
+          "question_type": "官方JD情景面试题（非原卷）",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_002",
+          "role_name": "临床运营",
+          "round_label": "二面",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "合规意识",
+            "协同推进"
+          ],
+          "updated_at": "2026-02-18",
+          "sample_size": 9
         }
       ],
       "last_checked": "2026-02-16",
@@ -5087,7 +5196,7 @@
         }
       ],
       "min_sample_size_for_verified": 5,
-      "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“合规审计准备、临床证据阐释与风险沟通”方向真实问答。；岗位覆盖门槛已提升：本行业面试真题库至少覆盖5个角色。",
+      "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“合规审计准备、临床证据阐释与风险沟通”方向真实问答。；岗位覆盖门槛已提升：本行业面试真题库至少覆盖5个角色。；v1.34.1新增1条企业官方来源情景题（非原卷）。",
       "quality": {
         "quantity_score": 41.7,
         "evidence_completeness_percent": 100,

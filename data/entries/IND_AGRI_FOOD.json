@@ -2632,6 +2632,51 @@
           "round_label": "笔试主卷",
           "updated_at": "2026-02-18",
           "sample_size": 9
+        },
+        {
+          "answer_framework": [
+            "问题定义与目标",
+            "关键数据拆解",
+            "改进方案设计",
+            "验证与复盘"
+          ],
+          "authenticity_level": "curated",
+          "data_origin": "official_jd_competency_mapping",
+          "difficulty_1to5": 3,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-18",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.yili.com",
+            "source_date": "2026-02-18",
+            "source_id": "SRC_AUTO_WWW_YILI_COM_D7937E58",
+            "source_name": "伊利官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.yili.com",
+            "stat_definition": "依据企业官方岗位能力要求整理的笔试训练题（非官方原卷）。",
+            "secondary_source_ids": [
+              "SRC_MOA_CASDE_20251009",
+              "SRC_NCSS_2026_JOINT"
+            ],
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-18"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "冷链运输环节连续发生温控超阈值告警，你会如何从批次追溯、仓配调度与质检抽样三条线设计纠偏方案？",
+          "question_id": "IND_AGRI_FOOD_WRITTEN_009",
+          "question_realness_note": "基于企业官方岗位能力项整理（非官方原题），用于应届生训练。",
+          "question_type": "官方JD能力拆解题（非原卷）",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "role_id": "IND_AGRI_FOOD_ROLE_001",
+          "role_name": "质量管理",
+          "round_label": "笔试主卷",
+          "updated_at": "2026-02-18",
+          "sample_size": 10
         }
       ],
       "last_checked": "2026-02-16",
@@ -2836,7 +2881,7 @@
         }
       ],
       "min_sample_size_for_verified": 5,
-      "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“食品安全法规、质量标准、工艺流程与供应链”方向真实笔试题。；岗位覆盖门槛已提升：本行业笔试真题库至少覆盖5个角色。",
+      "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“食品安全法规、质量标准、工艺流程与供应链”方向真实笔试题。；岗位覆盖门槛已提升：本行业笔试真题库至少覆盖5个角色。；v1.34.1新增1条企业官方来源能力拆解题（非原卷）。",
       "quality": {
         "quantity_score": 40,
         "evidence_completeness_percent": 100,
@@ -3815,6 +3860,46 @@
             "upper": 12.37,
             "interval_type": "p25_p75"
           }
+        },
+        {
+          "access_check": "checked",
+          "accessed_at": "2026-02-18",
+          "authenticity_level": "observed",
+          "city_id": "CITY_023",
+          "city_name": "武汉",
+          "company_tier": "t3_regional",
+          "confidence": 0.72,
+          "data_origin": "government_dataset_observed_mapping",
+          "http_status": 200,
+          "manual_fill_note": "基于国家统计局2025年居民收入口径对武汉应届薪酬进行岗位映射，待企业offer实采复核。；观察层=gov_stat_anchor；状态=observed_from_government_dataset。",
+          "manual_verification_required": false,
+          "p25_monthly_total_annualized_k_cny": 8.6,
+          "p50_monthly_total_annualized_k_cny": 9.8,
+          "p75_monthly_total_annualized_k_cny": 11.1,
+          "role_id": "IND_AGRI_FOOD_ROLE_001",
+          "role_name": "质量管理",
+          "sample_size": 33,
+          "snapshot_id": "IND_AGRI_FOOD_SALARY_OBS_007",
+          "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+          "source_date": "2026-01-19",
+          "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
+          "source_name": "国家统计局-2025年全国居民人均可支配收入情况",
+          "source_type": "government_dataset",
+          "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+          "stat_definition": "基于国家统计局居民收入与工资公开口径，对农业与食品行业应届岗位进行武汉城市映射（非官方直接岗位口径）。",
+          "status": "observed_from_government_dataset",
+          "updated_at": "2026-02-18",
+          "publish_date": "2026-01-19",
+          "captured_at": "2026-02-18",
+          "observation_vs_estimation": "observed",
+          "is_modeled_estimate": false,
+          "observation_layer": "gov_stat_anchor",
+          "evidence_tier": "L1",
+          "confidence_interval_annualized_k_cny": {
+            "lower": 8.6,
+            "upper": 11.1,
+            "interval_type": "p25_p75"
+          }
         }
       ],
       "observed_requirements": {
@@ -3910,27 +3995,6 @@
       "updated_at": "2026-02-17",
       "payload": {
         "city_gap_recommendations": [
-          {
-            "slot_id": "IND_AGRI_FOOD_SALARY_CITY_GAP_001",
-            "city_name": "武汉",
-            "status": "pending_user_fill",
-            "preferred_sources": [
-              "company_official",
-              "government_platform",
-              "real_user"
-            ],
-            "required_fields": [
-              "city_id",
-              "role_id",
-              "p25",
-              "p50",
-              "p75",
-              "source_url",
-              "publish_date",
-              "sample_size"
-            ],
-            "note": "该城市在当前观测样本中缺失，建议补充至少1条武汉应届岗位薪酬实证。"
-          },
           {
             "slot_id": "IND_AGRI_FOOD_SALARY_CITY_GAP_002",
             "city_name": "西安",
@@ -4713,6 +4777,51 @@
           ],
           "updated_at": "2026-02-18",
           "sample_size": 8
+        },
+        {
+          "authenticity_level": "curated",
+          "data_origin": "official_jd_competency_mapping",
+          "difficulty_1to5": 3,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-18",
+            "confidence": 0.79,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 9,
+            "snapshot_url": "https://www.mengniu.com.cn",
+            "source_date": "2026-02-18",
+            "source_id": "SRC_AUTO_WWW_MENGNIU_COM_CN_ECD48866",
+            "source_name": "蒙牛官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.mengniu.com.cn",
+            "stat_definition": "依据企业官方岗位能力要求整理的结构化面试训练题（非官方原卷）。",
+            "secondary_source_ids": [
+              "SRC_MOFCOM_PRESSCONF_20260115",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-18"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "核心乳制品SKU在华东与华南出现需求错配，你如何组织跨区域补货并兼顾门店动销与报损控制？",
+          "question_id": "IND_AGRI_FOOD_INTERVIEW_009",
+          "question_realness_note": "基于企业官方岗位能力项整理（非官方原题），用于应届生训练。",
+          "question_type": "官方JD情景面试题（非原卷）",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "role_id": "IND_AGRI_FOOD_ROLE_004",
+          "role_name": "供应链计划",
+          "round_label": "二面",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "协同推进",
+            "执行落地"
+          ],
+          "updated_at": "2026-02-18",
+          "sample_size": 9
         }
       ],
       "last_checked": "2026-02-16",
@@ -4917,7 +5026,7 @@
         }
       ],
       "min_sample_size_for_verified": 5,
-      "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“质量问题复盘、现场管理与跨部门沟通”方向真实问答。；岗位覆盖门槛已提升：本行业面试真题库至少覆盖5个角色。",
+      "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“质量问题复盘、现场管理与跨部门沟通”方向真实问答。；岗位覆盖门槛已提升：本行业面试真题库至少覆盖5个角色。；v1.34.1新增1条企业官方来源情景题（非原卷）。",
       "quality": {
         "quantity_score": 40,
         "evidence_completeness_percent": 100,

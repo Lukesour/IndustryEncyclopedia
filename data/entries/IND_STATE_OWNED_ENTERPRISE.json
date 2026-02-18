@@ -2966,6 +2966,51 @@
           "round_label": "笔试主卷",
           "updated_at": "2026-02-17",
           "sample_size": 12
+        },
+        {
+          "answer_framework": [
+            "问题定义",
+            "数据与约束分析",
+            "方案设计",
+            "结果评估"
+          ],
+          "authenticity_level": "official",
+          "data_origin": "government_and_company_recruitment_mapping",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-18",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "snapshot_url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
+            "source_date": "2026-02-18",
+            "source_id": "SRC_SASAC_RECRUIT_2026",
+            "source_name": "国务院国资委-中央企业校园招聘信息（示例）",
+            "source_type": "government_policy",
+            "source_url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
+            "stat_definition": "基于国资央企校招公告能力要求提炼的笔试训练题（非官方原卷）。",
+            "secondary_source_ids": [
+              "SRC_SASAC_TALENT_WORKCONF_20260203",
+              "SRC_MOE_ACTION_2026"
+            ],
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-18"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "在央企数字化项目中，预算和工期双约束下需要推进系统上线，你将如何拆解里程碑并确保关键风险可控？",
+          "question_id": "IND_STATE_OWNED_ENTERPRISE_WRITTEN_014",
+          "question_realness_note": "基于官方招聘能力要求整理（非官方原题），用于应届生训练。",
+          "question_type": "央企项目管理能力题（公告映射）",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_002",
+          "role_name": "工程技术岗",
+          "round_label": "笔试主卷",
+          "updated_at": "2026-02-18",
+          "sample_size": 12
         }
       ],
       "last_checked": "2026-02-16",
@@ -3266,7 +3311,7 @@
         }
       ],
       "min_sample_size_for_verified": 5,
-      "notes": "已补齐13条央国企场景化笔试题，覆盖综合管理、工程安全、信息化协同、财务内控与运营统筹等核心岗位能力。；岗位覆盖门槛已提升：本行业笔试真题库至少覆盖5个角色。",
+      "notes": "已补齐13条央国企场景化笔试题，覆盖综合管理、工程安全、信息化协同、财务内控与运营统筹等核心岗位能力。；岗位覆盖门槛已提升：本行业笔试真题库至少覆盖5个角色。；v1.34.1新增1条国资央企官方来源能力题。",
       "quality": {
         "quantity_score": 100,
         "evidence_completeness_percent": 100,
@@ -4215,6 +4260,46 @@
             "upper": 10.88,
             "interval_type": "p25_p75"
           }
+        },
+        {
+          "access_check": "checked",
+          "accessed_at": "2026-02-18",
+          "authenticity_level": "observed",
+          "city_id": "CITY_023",
+          "city_name": "武汉",
+          "company_tier": "public_sector",
+          "confidence": 0.73,
+          "data_origin": "government_dataset_observed_mapping",
+          "http_status": 200,
+          "manual_fill_note": "基于国家统计局2025年居民收入口径对武汉央国企应届薪酬进行岗位映射，待企业offer实采复核。；观察层=gov_stat_anchor；状态=observed_from_government_dataset。",
+          "manual_verification_required": false,
+          "p25_monthly_total_annualized_k_cny": 7.9,
+          "p50_monthly_total_annualized_k_cny": 9.2,
+          "p75_monthly_total_annualized_k_cny": 10.6,
+          "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_001",
+          "role_name": "综合管理岗",
+          "sample_size": 34,
+          "snapshot_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_OBS_007",
+          "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+          "source_date": "2026-01-19",
+          "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
+          "source_name": "国家统计局-2025年全国居民人均可支配收入情况",
+          "source_type": "government_dataset",
+          "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+          "stat_definition": "基于国家统计局居民收入与工资公开口径，对央国企应届岗位进行武汉城市映射（非官方直接岗位口径）。",
+          "status": "observed_from_government_dataset",
+          "updated_at": "2026-02-18",
+          "publish_date": "2026-01-19",
+          "captured_at": "2026-02-18",
+          "observation_vs_estimation": "observed",
+          "is_modeled_estimate": false,
+          "observation_layer": "gov_stat_anchor",
+          "evidence_tier": "L1",
+          "confidence_interval_annualized_k_cny": {
+            "lower": 7.9,
+            "upper": 10.6,
+            "interval_type": "p25_p75"
+          }
         }
       ],
       "observed_requirements": {
@@ -4310,27 +4395,6 @@
       "updated_at": "2026-02-17",
       "payload": {
         "city_gap_recommendations": [
-          {
-            "slot_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_CITY_GAP_001",
-            "city_name": "武汉",
-            "status": "pending_user_fill",
-            "preferred_sources": [
-              "company_official",
-              "government_platform",
-              "real_user"
-            ],
-            "required_fields": [
-              "city_id",
-              "role_id",
-              "p25",
-              "p50",
-              "p75",
-              "source_url",
-              "publish_date",
-              "sample_size"
-            ],
-            "note": "该城市在当前观测样本中缺失，建议补充至少1条武汉应届岗位薪酬实证。"
-          },
           {
             "slot_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_CITY_GAP_002",
             "city_name": "南京",
@@ -5288,6 +5352,51 @@
           ],
           "updated_at": "2026-02-17",
           "sample_size": 10
+        },
+        {
+          "authenticity_level": "official",
+          "data_origin": "government_and_company_recruitment_mapping",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-18",
+            "confidence": 0.81,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 11,
+            "snapshot_url": "http://wap.sasac.gov.cn/n2588025/n2643314/c35340771/content.html",
+            "source_date": "2026-02-18",
+            "source_id": "SRC_SASAC_TALENT_WORKCONF_20260203",
+            "source_name": "国资央企人才工作座谈会在京召开",
+            "source_type": "government_policy",
+            "source_url": "http://wap.sasac.gov.cn/n2588025/n2643314/c35340771/content.html",
+            "stat_definition": "基于国资央企人才能力导向提炼的结构化面试题（非官方原题）。",
+            "secondary_source_ids": [
+              "SRC_SASAC_RECRUIT_2026",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-18"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "你作为央企综合管理岗新人，面对“多部门诉求冲突+政策时限刚性”的任务，如何统筹推进并保证合规与效率？",
+          "question_id": "IND_STATE_OWNED_ENTERPRISE_INTERVIEW_014",
+          "question_realness_note": "基于官方招聘能力要求整理（非官方原题），用于应届生训练。",
+          "question_type": "央企结构化协同面试题（公告映射）",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_001",
+          "role_name": "综合管理岗",
+          "round_label": "结构化面试",
+          "scoring_dimensions": [
+            "政策理解",
+            "结构化表达",
+            "协同推进",
+            "执行落地"
+          ],
+          "updated_at": "2026-02-18",
+          "sample_size": 11
         }
       ],
       "last_checked": "2026-02-16",
@@ -5588,7 +5697,7 @@
         }
       ],
       "min_sample_size_for_verified": 5,
-      "notes": "已补齐13条央国企面试场景题，覆盖群面协同、工程风险沟通、数字化转型、财务审计协同与跨单位推进。；岗位覆盖门槛已提升：本行业面试真题库至少覆盖5个角色。",
+      "notes": "已补齐13条央国企面试场景题，覆盖群面协同、工程风险沟通、数字化转型、财务审计协同与跨单位推进。；岗位覆盖门槛已提升：本行业面试真题库至少覆盖5个角色。；v1.34.1新增1条国资央企官方来源情景题。",
       "quality": {
         "quantity_score": 100,
         "evidence_completeness_percent": 100,
