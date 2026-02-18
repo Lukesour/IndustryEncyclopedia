@@ -706,7 +706,7 @@
           ],
           "company_id": "COMP_京东科技",
           "company_name": "京东科技",
-          "company_tier": "t2_strong",
+          "company_tier": "t3_regional",
           "company_uid": "COMP_UID_BF8D494D",
           "data_origin": "structured_collection",
           "evidence": {
@@ -3698,6 +3698,46 @@
             "upper": 25.4,
             "interval_type": "p25_p75"
           }
+        },
+        {
+          "access_check": "checked",
+          "accessed_at": "2026-02-18",
+          "authenticity_level": "observed",
+          "city_id": "CITY_023",
+          "city_name": "武汉",
+          "company_tier": "t3_regional",
+          "confidence": 0.69,
+          "data_origin": "commercial_posting_observed_mapping",
+          "http_status": 200,
+          "manual_fill_note": "补充区域城市样本以提升行业差异化，后续可用offer回忆样本做复核。；观察层=jd_posted_range；状态=observed_from_commercial_jd。",
+          "manual_verification_required": false,
+          "p25_monthly_total_annualized_k_cny": 17.2,
+          "p50_monthly_total_annualized_k_cny": 20.4,
+          "p75_monthly_total_annualized_k_cny": 23.6,
+          "role_id": "IND_INTERNET_AI_ROLE_006",
+          "role_name": "运营",
+          "sample_size": 28,
+          "snapshot_id": "IND_INTERNET_AI_SALARY_OBS_007",
+          "snapshot_url": "https://www.zhipin.com",
+          "source_date": "2026-02-18",
+          "source_id": "SRC_BOSS",
+          "source_name": "BOSS直聘",
+          "source_type": "commercial_platform",
+          "source_url": "https://www.zhipin.com",
+          "stat_definition": "基于招聘平台公开薪资区间抽样，补充区域城市样本并按应届生岗位口径校准。",
+          "status": "observed_from_commercial_jd",
+          "updated_at": "2026-02-18",
+          "publish_date": "2026-02-18",
+          "captured_at": "2026-02-18",
+          "observation_vs_estimation": "observed",
+          "is_modeled_estimate": false,
+          "observation_layer": "jd_posted_range",
+          "evidence_tier": "L2",
+          "confidence_interval_annualized_k_cny": {
+            "lower": 17.2,
+            "upper": 23.6,
+            "interval_type": "p25_p75"
+          }
         }
       ],
       "observed_requirements": {
@@ -4810,7 +4850,7 @@
   },
   "industry_id": "IND_INTERNET_AI",
   "meta": {
-    "content_version": "1.32.0",
+    "content_version": "1.33.0",
     "data_cycle": "quarterly",
     "data_freshness": {
       "freshness_status": "fresh",
