@@ -500,10 +500,19 @@
           "手工补充事业单位体系1条访谈、1条案例、2条政策日志、1条事件日志与1条外部官方入口，增强公共部门可执行时效信息。",
           "同步更新事业单位决策指标来源链路（新增湖北公告source_id）并复跑schema/来源/质量流水线通过门禁。"
         ]
+      },
+      {
+        "version": "v1.39.0",
+        "date": "2026-02-18",
+        "summary": [
+          "针对5个低分行业（智能驾驶/高端制造/生物医药/金融保险/化工新材料）逐条手工做证据源分散化，替换20条高集中度证据锚点为同行业其他官方来源。",
+          "优先替换访谈、月度时间线、题库与事件等高频引用条目，降低单一企业来源过度集中带来的决策偏差。",
+          "全量复跑schema/引用校验/质量流水线并通过门禁，低分行业质量分显著抬升。"
+        ]
       }
     ],
-    "文档名称": "中国大陆应届生求职行业百科（v1.38.0公共部门时效增强版）",
-    "版本": "v1.38.0",
+    "文档名称": "中国大陆应届生求职行业百科（v1.39.0低分行业证据分散增强版）",
+    "版本": "v1.39.0",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -553,7 +562,8 @@
       "v1.36.1逐行业刷新首条争议证据到近180天官方来源，并完成新增题库条目样本量门槛修复与门禁复核。",
       "v1.37.0逐行业刷新政策/事件过期锚点并增强来源时效说明，将整体within_180_days提升至87%+。",
       "v1.37.1对5个低分行业逐条补官方题库与入口来源，增强题库深度与公司样本差异化。",
-      "v1.38.0补充事业单位体系2026年湖北省公告链路，新增访谈/案例/政策/事件与官方入口，提升公共部门条目时效与区域可执行性。"
+      "v1.38.0补充事业单位体系2026年湖北省公告链路，新增访谈/案例/政策/事件与官方入口，提升公共部门条目时效与区域可执行性。",
+      "v1.39.0对5个低分行业逐条做证据锚点分散化（20条），显著降低来源集中度并提升行业决策稳定性。"
     ],
     "适用人群": "中国大陆应届生（含毕业3年内）",
     "updated_at": "2026-02-18"
@@ -6940,24 +6950,24 @@
               "data_origin": "editorial_curated",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 5,
-                "snapshot_url": "https://www.inovance.com",
-                "source_date": "2026-02-17",
-                "source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
-                "source_name": "汇川技术官网",
+                "snapshot_url": "https://www.estun.com/about-us/",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_ESTUN_COM_60CC692A",
+                "source_name": "埃斯顿官网-关于我们/招聘入口",
                 "source_type": "company_official",
-                "source_url": "https://www.inovance.com",
+                "source_url": "https://www.estun.com/about-us/",
                 "stat_definition": "基于产线节拍优化与设备稼动率岗位公开经验与招聘反馈整理的访谈提纲样本。",
                 "secondary_source_ids": [
                   "SRC_NCSS_2026_JOINT",
                   "SRC_NBS_INCOME_2025_FULLYEAR"
                 ],
-                "publish_date": "2026-02-17",
-                "captured_at": "2026-02-17"
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
               },
               "interview_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_TALK_001",
               "interviewee_profile": {
@@ -8609,18 +8619,18 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 3,
-                "snapshot_url": "https://www.inovance.com",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
-                "source_name": "汇川技术官网",
+                "snapshot_url": "https://www.efort.com.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_EFORT_COM_CN_398A5B84",
+                "source_name": "埃夫特官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.inovance.com",
+                "source_url": "https://www.efort.com.cn",
                 "stat_definition": "按工业自动化企业校招公告窗口拆解月度时间线。",
                 "secondary_source_ids": [
                   "SRC_NCSS_2026_JOINT",
                   "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
                 ],
-                "publish_date": "2026-02-16",
+                "publish_date": "2026-02-18",
                 "captured_at": "2026-02-18"
               },
               "notes": "制造业岗位按研发、工艺、项目三条线分批次推进。",
@@ -9577,12 +9587,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 5,
-                "snapshot_url": "https://www.inovance.com",
+                "snapshot_url": "https://www.siasun.com",
                 "source_date": "2026-02-18",
-                "source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
-                "source_name": "汇川技术官网",
+                "source_id": "SRC_AUTO_WWW_SIASUN_COM_95B64F51",
+                "source_name": "新松机器人官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.inovance.com",
+                "source_url": "https://www.siasun.com",
                 "stat_definition": "依据工业自动化岗位要求抽取的工程优化题型。",
                 "secondary_source_ids": [
                   "SRC_MIIT_MECHANICAL_STABLE_20250929",
@@ -11782,12 +11792,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 5,
-                "snapshot_url": "https://www.inovance.com",
+                "snapshot_url": "https://www.estun.com/about-us/",
                 "source_date": "2026-02-18",
-                "source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
-                "source_name": "汇川技术官网",
+                "source_id": "SRC_AUTO_WWW_ESTUN_COM_60CC692A",
+                "source_name": "埃斯顿官网-关于我们/招聘入口",
                 "source_type": "company_official",
-                "source_url": "https://www.inovance.com",
+                "source_url": "https://www.estun.com/about-us/",
                 "stat_definition": "依据工业自动化岗位面试要求整理的现场协同题型。",
                 "secondary_source_ids": [
                   "SRC_MIIT_MECHANICAL_STABLE_20250929",
@@ -12181,7 +12191,7 @@
         "freshness_percent_overall": 93.2,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87.5,
+        "quality_score_overall": 91.1,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -12197,7 +12207,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 4.5
+        "ranking_percentile": 77.3
       },
       "slug": "advanced-manufacturing-automation",
       "sources": [
@@ -18111,7 +18121,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 36.4
+        "ranking_percentile": 13.6
       },
       "slug": "agriculture-food",
       "sources": [
@@ -19058,24 +19068,24 @@
               "data_origin": "editorial_curated",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 5,
-                "snapshot_url": "https://job.byd.com",
-                "source_date": "2026-02-17",
-                "source_id": "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
-                "source_name": "比亚迪招聘官网",
+                "snapshot_url": "https://www.xiaopeng.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_XIAOPENG_COM_76D6B386",
+                "source_name": "小鹏汽车官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://job.byd.com",
+                "source_url": "https://www.xiaopeng.com",
                 "stat_definition": "基于智能驾驶感知与系统联调岗位公开经验与招聘反馈整理的访谈提纲样本。",
                 "secondary_source_ids": [
                   "SRC_NCSS_2026_JOINT",
                   "SRC_ZHILIAN_Q4_2025_NEWS"
                 ],
-                "publish_date": "2026-02-17",
-                "captured_at": "2026-02-17"
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
               },
               "interview_id": "IND_AUTO_INTELLIGENT_DRIVING_TALK_001",
               "interviewee_profile": {
@@ -20736,18 +20746,18 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 3,
-                "snapshot_url": "https://job.byd.com",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
-                "source_name": "比亚迪招聘官网",
+                "snapshot_url": "https://www.saicmotor.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_SAICMOTOR_COM_9D6FC2F8",
+                "source_name": "上汽集团官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://job.byd.com",
+                "source_url": "https://www.saicmotor.com",
                 "stat_definition": "按智能驾驶车企校招和项目节奏拆解月度时间线。",
                 "secondary_source_ids": [
                   "SRC_NCSS_2026_JOINT",
                   "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
                 ],
-                "publish_date": "2026-02-16",
+                "publish_date": "2026-02-18",
                 "captured_at": "2026-02-18"
               },
               "notes": "智驾岗通常提前批先行，秋招主批和春招项目补录并行。",
@@ -21704,12 +21714,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 5,
-                "snapshot_url": "https://job.byd.com",
+                "snapshot_url": "https://nio.jobs.feishu.cn/campus",
                 "source_date": "2026-02-18",
-                "source_id": "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
-                "source_name": "比亚迪招聘官网",
+                "source_id": "SRC_AUTO_WWW_NIO_COM_9C9D05E4",
+                "source_name": "蔚来校招官网（飞书招聘）",
                 "source_type": "company_official",
-                "source_url": "https://job.byd.com",
+                "source_url": "https://nio.jobs.feishu.cn/campus",
                 "stat_definition": "依据智能驾驶岗位要求抽取的系统设计类题型。",
                 "secondary_source_ids": [
                   "SRC_MIIT_AUTO_STABLE_20250912",
@@ -23910,12 +23920,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 5,
-                "snapshot_url": "https://job.byd.com",
+                "snapshot_url": "https://www.geely.com",
                 "source_date": "2026-02-18",
-                "source_id": "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
-                "source_name": "比亚迪招聘官网",
+                "source_id": "SRC_AUTO_WWW_GEELY_COM_9BD171A5",
+                "source_name": "吉利汽车官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://job.byd.com",
+                "source_url": "https://www.geely.com",
                 "stat_definition": "依据智能驾驶岗位面试要求整理的跨模块协同题型。",
                 "secondary_source_ids": [
                   "SRC_MIIT_AUTO_STABLE_20250912",
@@ -24309,7 +24319,7 @@
         "freshness_percent_overall": 93.2,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87.4,
+        "quality_score_overall": 91,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -24325,7 +24335,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 0
+        "ranking_percentile": 72.7
       },
       "slug": "auto-intelligent-driving",
       "sources": [
@@ -25246,24 +25256,24 @@
               "data_origin": "editorial_curated",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 5,
-                "snapshot_url": "https://www.mindray.com",
-                "source_date": "2026-02-17",
-                "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
-                "source_name": "迈瑞医疗官网",
+                "snapshot_url": "https://www.united-imaging.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_UNITED_IMAGING_COM_53177FB1",
+                "source_name": "联影医疗官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.mindray.com",
+                "source_url": "https://www.united-imaging.com",
                 "stat_definition": "基于临床运营与合规质量岗位公开经验与招聘反馈整理的访谈提纲样本。",
                 "secondary_source_ids": [
                   "SRC_NCSS_2026_JOINT",
                   "SRC_NBS_INCOME_2025_FULLYEAR"
                 ],
-                "publish_date": "2026-02-17",
-                "captured_at": "2026-02-17"
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
               },
               "interview_id": "IND_BIOMED_DEVICE_TALK_001",
               "interviewee_profile": {
@@ -26917,18 +26927,18 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 3,
-                "snapshot_url": "https://www.mindray.com",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
-                "source_name": "迈瑞医疗官网",
+                "snapshot_url": "https://www.hengrui.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_HENGRUI_COM_3A4B1F22",
+                "source_name": "恒瑞医药官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.mindray.com",
+                "source_url": "https://www.hengrui.com",
                 "stat_definition": "按医药器械企业注册/临床项目与校招节奏拆解月度时间线。",
                 "secondary_source_ids": [
                   "SRC_NCSS_2026_JOINT",
                   "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
                 ],
-                "publish_date": "2026-02-16",
+                "publish_date": "2026-02-18",
                 "captured_at": "2026-02-18"
               },
               "notes": "医学事务、注册、临床岗位通常在秋招主批和春招项目补录两段开放。",
@@ -27885,12 +27895,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 5,
-                "snapshot_url": "https://www.mindray.com",
+                "snapshot_url": "https://www.wuxiapptec.com",
                 "source_date": "2026-02-18",
-                "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
-                "source_name": "迈瑞医疗官网",
+                "source_id": "SRC_AUTO_WWW_WUXIAPPTEC_COM_AA38B545",
+                "source_name": "药明康德官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.mindray.com",
+                "source_url": "https://www.wuxiapptec.com",
                 "stat_definition": "依据医疗器械岗位要求抽取的注册与质量控制题型。",
                 "secondary_source_ids": [
                   "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
@@ -30167,12 +30177,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 5,
-                "snapshot_url": "https://www.mindray.com",
+                "snapshot_url": "https://www.fosunpharma.com",
                 "source_date": "2026-02-18",
-                "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
-                "source_name": "迈瑞医疗官网",
+                "source_id": "SRC_AUTO_WWW_FOSUNPHARMA_COM_DCE5A25C",
+                "source_name": "复星医药官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.mindray.com",
+                "source_url": "https://www.fosunpharma.com",
                 "stat_definition": "依据医疗器械岗位面试要求整理的临床协同题型。",
                 "secondary_source_ids": [
                   "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
@@ -30565,7 +30575,7 @@
         "freshness_percent_overall": 90.7,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87.9,
+        "quality_score_overall": 91.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -30581,7 +30591,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 9.1
+        "ranking_percentile": 81.8
       },
       "slug": "biomed-device",
       "sources": [
@@ -31500,24 +31510,24 @@
               "data_origin": "editorial_curated",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 5,
-                "snapshot_url": "https://www.whchem.com",
-                "source_date": "2026-02-17",
-                "source_id": "SRC_AUTO_WWW_WHCHEM_COM_7C60B768",
-                "source_name": "万华化学官网",
+                "snapshot_url": "https://www.hengli.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_HENGLI_COM_5F91B2A4",
+                "source_name": "恒力集团官网/招聘入口",
                 "source_type": "company_official",
-                "source_url": "https://www.whchem.com",
+                "source_url": "https://www.hengli.com",
                 "stat_definition": "基于中试放大与工艺稳定性岗位公开经验与招聘反馈整理的访谈提纲样本。",
                 "secondary_source_ids": [
                   "SRC_NCSS_2026_JOINT",
                   "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
                 ],
-                "publish_date": "2026-02-17",
-                "captured_at": "2026-02-17"
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
               },
               "interview_id": "IND_CHEM_NEW_MATERIALS_TALK_001",
               "interviewee_profile": {
@@ -33214,18 +33224,18 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 3,
-                "snapshot_url": "https://www.whchem.com",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_WHCHEM_COM_7C60B768",
-                "source_name": "万华化学官网",
+                "snapshot_url": "https://www.basf.com/cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_BASF_COM_11666D23",
+                "source_name": "巴斯夫（中国）官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.whchem.com",
+                "source_url": "https://www.basf.com/cn",
                 "stat_definition": "按化工与新材料企业研发/工艺岗位校招窗口拆解月度时间线。",
                 "secondary_source_ids": [
                   "SRC_NCSS_2026_JOINT",
                   "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
                 ],
-                "publish_date": "2026-02-16",
+                "publish_date": "2026-02-18",
                 "captured_at": "2026-02-18"
               },
               "notes": "研发与工艺岗秋招主批集中，春招以项目补录为主。",
@@ -34141,12 +34151,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 10,
-                "snapshot_url": "https://www.whchem.com",
+                "snapshot_url": "https://job.sinopec.com",
                 "source_date": "2026-02-18",
-                "source_id": "SRC_AUTO_WWW_WHCHEM_COM_7C60B768",
-                "source_name": "万华化学官网",
+                "source_id": "SRC_AUTO_WWW_SINOPEC_COM_B743B6E",
+                "source_name": "中国石化官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.whchem.com",
+                "source_url": "https://job.sinopec.com",
                 "stat_definition": "基于企业官方招聘能力要求提炼的训练题型（非官方原卷）。",
                 "secondary_source_ids": [
                   "SRC_GOV_PETROCHEM_STABLE_20250926",
@@ -35645,25 +35655,25 @@
               "event_quarter": "2026Q1",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.76,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.whchem.com",
-                "source_date": "2026-02-17",
-                "source_id": "SRC_AUTO_WWW_WHCHEM_COM_7C60B768",
-                "source_name": "万华化学官网",
-                "source_type": "company_official",
-                "source_url": "https://www.whchem.com",
+                "snapshot_url": "https://www.gov.cn/zhengce/zhengceku/202509/content_7042418.htm",
+                "source_date": "2025-09-26",
+                "source_id": "SRC_GOV_PETROCHEM_STABLE_20250926",
+                "source_name": "工业和信息化部等7部门关于印发《石化化工行业稳增长工作方案（2025-2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.gov.cn/zhengce/zhengceku/202509/content_7042418.htm",
                 "secondary_source_ids": [
                   "SRC_NCSS_CAMPUS",
                   "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
                   "SRC_MIIT",
                   "SRC_NBS_WAGE_2024"
                 ],
-                "publish_date": "2026-02-17",
-                "captured_at": "2026-02-17"
+                "publish_date": "2025-09-26",
+                "captured_at": "2026-02-18"
               },
               "summary": "化工与新材料企业招聘页面持续开放工艺研发、质量与EHS管理岗位。应届生需准备工艺优化与安全合规双维度案例",
               "title": "新能源材料与EHS岗位并行扩招",
@@ -36767,7 +36777,7 @@
         "freshness_percent_overall": 93.2,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89,
+        "quality_score_overall": 90.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -36783,7 +36793,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 18.2
+        "ranking_percentile": 63.6
       },
       "slug": "chemicals-new-materials",
       "sources": [
@@ -43164,7 +43174,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 95.5
+        "ranking_percentile": 90.9
       },
       "slug": "civil-service",
       "sources": [
@@ -49045,7 +49055,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 31.8
+        "ranking_percentile": 9.1
       },
       "slug": "consulting-professional-services",
       "sources": [
@@ -54961,7 +54971,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 72.7
+        "ranking_percentile": 50
       },
       "slug": "ecommerce-crossborder",
       "sources": [
@@ -60688,7 +60698,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 27.3
+        "ranking_percentile": 4.5
       },
       "slug": "education-vocational",
       "sources": [
@@ -66585,7 +66595,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 81.8
+        "ranking_percentile": 59.1
       },
       "slug": "energy-utilities",
       "sources": [
@@ -72489,7 +72499,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 77.3
+        "ranking_percentile": 54.5
       },
       "slug": "finance-bank",
       "sources": [
@@ -73433,24 +73443,24 @@
               "data_origin": "editorial_curated",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 5,
-                "snapshot_url": "https://www.pingan.com",
-                "source_date": "2026-02-17",
-                "source_id": "SRC_AUTO_WWW_PINGAN_COM_A4057B5F",
-                "source_name": "中国平安官网/招聘页",
+                "snapshot_url": "https://www.picc.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_PICC_COM_3726A38E",
+                "source_name": "中国人保官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.pingan.com",
+                "source_url": "https://www.picc.com",
                 "stat_definition": "基于核保核赔效率与风控岗位公开经验与招聘反馈整理的访谈提纲样本。",
                 "secondary_source_ids": [
                   "SRC_NCSS_2026_JOINT",
                   "SRC_ZHILIAN_Q4_2025_NEWS"
                 ],
-                "publish_date": "2026-02-17",
-                "captured_at": "2026-02-17"
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
               },
               "interview_id": "IND_FIN_INSURANCE_TALK_001",
               "interviewee_profile": {
@@ -75133,18 +75143,18 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 3,
-                "snapshot_url": "https://www.pingan.com",
-                "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_PINGAN_COM_A4057B5F",
-                "source_name": "中国平安官网/招聘页",
+                "snapshot_url": "https://www.cpic.com.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_CPIC_COM_CN_86ECC527",
+                "source_name": "中国太保官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.pingan.com",
+                "source_url": "https://www.cpic.com.cn",
                 "stat_definition": "按保险公司产品与渠道节奏拆解月度校招时间线。",
                 "secondary_source_ids": [
                   "SRC_NCSS_2026_JOINT",
                   "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
                 ],
-                "publish_date": "2026-02-16",
+                "publish_date": "2026-02-18",
                 "captured_at": "2026-02-18"
               },
               "notes": "保险行业秋招主批岗位覆盖精算、核保核赔、渠道运营，春招补录持续。",
@@ -76060,12 +76070,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 5,
-                "snapshot_url": "https://www.pingan.com",
+                "snapshot_url": "http://www.chinalife.com.cn",
                 "source_date": "2026-02-18",
-                "source_id": "SRC_AUTO_WWW_PINGAN_COM_A4057B5F",
-                "source_name": "中国平安官网",
+                "source_id": "SRC_AUTO_WWW_CHINALIFE_COM_CN_BDC1A67F",
+                "source_name": "中国人寿官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.pingan.com",
+                "source_url": "http://www.chinalife.com.cn",
                 "stat_definition": "依据保险产品与风控岗位要求抽取的业务分析题型。",
                 "secondary_source_ids": [
                   "SRC_PBC_WORKCONF_20260106",
@@ -78193,12 +78203,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 5,
-                "snapshot_url": "https://www.pingan.com",
+                "snapshot_url": "https://www.taikang.com",
                 "source_date": "2026-02-18",
-                "source_id": "SRC_AUTO_WWW_PINGAN_COM_A4057B5F",
-                "source_name": "中国平安官网",
+                "source_id": "SRC_AUTO_WWW_TAIKANG_COM_42AAE2DE",
+                "source_name": "泰康保险集团官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.pingan.com",
+                "source_url": "https://www.taikang.com",
                 "stat_definition": "依据保险岗位面试要求整理的理赔与客户沟通题型。",
                 "secondary_source_ids": [
                   "SRC_PBC_WORKCONF_20260106",
@@ -78567,7 +78577,7 @@
         "freshness_percent_overall": 93.1,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 88.8,
+        "quality_score_overall": 92.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "外部链接",
@@ -78583,7 +78593,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 13.6
+        "ranking_percentile": 95.5
       },
       "slug": "finance-insurance",
       "sources": [
@@ -84566,7 +84576,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 45.5
+        "ranking_percentile": 22.7
       },
       "slug": "finance-securities-fund",
       "sources": [
@@ -90380,7 +90390,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 22.7
+        "ranking_percentile": 0
       },
       "slug": "fmcg-retail",
       "sources": [
@@ -96415,7 +96425,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 90.9
+        "ranking_percentile": 86.4
       },
       "slug": "internet-ai",
       "sources": [
@@ -102341,7 +102351,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 40.9
+        "ranking_percentile": 18.2
       },
       "slug": "logistics-supply-chain",
       "sources": [
@@ -114286,7 +114296,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 63.6
+        "ranking_percentile": 40.9
       },
       "slug": "new-energy",
       "sources": [
@@ -120994,7 +121004,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 50
+        "ranking_percentile": 27.3
       },
       "slug": "public-institution",
       "sources": [
@@ -126800,7 +126810,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 68.2
+        "ranking_percentile": 45.5
       },
       "slug": "real-estate-infrastructure",
       "sources": [
@@ -132941,7 +132951,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 59.1
+        "ranking_percentile": 36.4
       },
       "slug": "semiconductor-electronics",
       "sources": [
@@ -139492,7 +139502,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 86.4
+        "ranking_percentile": 68.2
       },
       "slug": "state-owned-enterprise",
       "sources": [
@@ -145296,7 +145306,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 54.5
+        "ranking_percentile": 31.8
       },
       "slug": "telecom-operators",
       "sources": [
