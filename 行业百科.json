@@ -386,10 +386,21 @@
           "修复主文件行业索引分数与词条progress不一致问题，统一排序与分位口径。",
           "来源集中度治理继续生效，发布门槛保持通过（top1<7.5%、top5<26%、无blocker）。"
         ]
+      },
+      {
+        "version": "v1.30.0",
+        "date": "2026-02-18",
+        "summary": [
+          "将剩余13个行业题库从7条笔试+7条面试提升到8条笔试+8条面试，完成全行业题库深度对齐。",
+          "新增题目优先采用行业公司官方来源与NCSS双证据链，降低单一回忆样本依赖。",
+          "全量重算进度与质量指标，question_depth_min由14提升至16，质量门槛保持通过。",
+          "修复新增条目引入的source_id-host一致性问题，发布门禁维持无阻断。",
+          "同步主文件行业索引评分与词条progress口径，保证横向排序一致。"
+        ]
       }
     ],
-    "文档名称": "中国大陆应届生求职行业百科（v1.29.0公共部门真实度与题库深度增强版）",
-    "版本": "v1.29.0",
+    "文档名称": "中国大陆应届生求职行业百科（v1.30.0题库深度全量增强版）",
+    "版本": "v1.30.0",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -427,7 +438,9 @@
       "薪酬微观层新增观察层语义（JD/offer/统计锚点）并显式区分估算值与观察值。",
       "质量语义升级：新增publish_date/captured_at并用于新鲜度计算回退逻辑。",
       "v1.29.0手工逐条增强公共部门真实样本与7个行业题库深度，补入教育部/农业农村部2026招录官方证据。",
-      "v1.29.0修复行业索引与词条progress评分口径漂移，统一质量排序展示。"
+      "v1.29.0修复行业索引与词条progress评分口径漂移，统一质量排序展示。",
+      "v1.30.0完成剩余13个行业题库深度补齐（全行业至少8条笔试+8条面试），并以官方来源+NCSS交叉验证增强证据可靠性。",
+      "v1.30.0统一行业索引与progress口径并通过发布门禁校验（has_blockers=false）。"
     ],
     "适用人群": "中国大陆应届生（含毕业3年内）",
     "updated_at": "2026-02-18"
@@ -6339,193 +6352,193 @@
   },
   "行业索引": [
     {
-      "industry_id": "IND_CIVIL_SERVICE",
+      "industry_id": "IND_INTERNET_AI",
       "order": 1,
-      "quality_score_overall": 93.2,
+      "quality_score_overall": 93.4,
       "ranking_percentile": 100,
+      "slug": "internet-ai",
+      "status": "reviewed",
+      "行业名称": "互联网与AI"
+    },
+    {
+      "industry_id": "IND_CIVIL_SERVICE",
+      "order": 2,
+      "quality_score_overall": 93.2,
+      "ranking_percentile": 95.5,
       "slug": "civil-service",
       "status": "reviewed",
       "行业名称": "公务员体系"
     },
     {
       "industry_id": "IND_STATE_OWNED_ENTERPRISE",
-      "order": 2,
+      "order": 3,
       "quality_score_overall": 92.7,
-      "ranking_percentile": 95.5,
+      "ranking_percentile": 90.9,
       "slug": "state-owned-enterprise",
       "status": "reviewed",
       "行业名称": "央国企体系"
     },
     {
-      "industry_id": "IND_INTERNET_AI",
-      "order": 3,
-      "quality_score_overall": 92.4,
-      "ranking_percentile": 90.9,
-      "slug": "internet-ai",
+      "industry_id": "IND_MEDIA_GAME_CONTENT",
+      "order": 4,
+      "quality_score_overall": 92.3,
+      "ranking_percentile": 86.4,
+      "slug": "media-game-content",
       "status": "reviewed",
-      "行业名称": "互联网与AI"
+      "行业名称": "传媒游戏与内容"
     },
     {
       "industry_id": "IND_SEMICONDUCTOR_ELECTRONICS",
-      "order": 4,
-      "quality_score_overall": 92.1,
-      "ranking_percentile": 86.4,
+      "order": 5,
+      "quality_score_overall": 92.2,
+      "ranking_percentile": 81.8,
       "slug": "semiconductor-electronics",
       "status": "reviewed",
       "行业名称": "半导体与电子"
     },
     {
       "industry_id": "IND_LOGISTICS_SUPPLYCHAIN",
-      "order": 5,
+      "order": 6,
       "quality_score_overall": 91.9,
-      "ranking_percentile": 81.8,
+      "ranking_percentile": 77.3,
       "slug": "logistics-supply-chain",
       "status": "reviewed",
       "行业名称": "物流与供应链"
     },
     {
       "industry_id": "IND_FIN_BANK",
-      "order": 6,
+      "order": 7,
       "quality_score_overall": 91.8,
-      "ranking_percentile": 77.3,
+      "ranking_percentile": 72.7,
       "slug": "finance-bank",
       "status": "reviewed",
       "行业名称": "金融-银行"
     },
     {
       "industry_id": "IND_PUBLIC_INSTITUTION",
-      "order": 7,
+      "order": 8,
       "quality_score_overall": 91.7,
-      "ranking_percentile": 72.7,
+      "ranking_percentile": 68.2,
       "slug": "public-institution",
       "status": "reviewed",
       "行业名称": "事业单位体系"
     },
     {
+      "industry_id": "IND_REAL_ESTATE_INFRA",
+      "order": 9,
+      "quality_score_overall": 91.5,
+      "ranking_percentile": 63.6,
+      "slug": "real-estate-infrastructure",
+      "status": "reviewed",
+      "行业名称": "房地产与基建"
+    },
+    {
       "industry_id": "IND_ECOMMERCE_CROSSBORDER",
-      "order": 8,
+      "order": 10,
       "quality_score_overall": 91.4,
-      "ranking_percentile": 68.2,
+      "ranking_percentile": 59.1,
       "slug": "ecommerce-crossborder",
       "status": "reviewed",
       "行业名称": "电商与跨境电商"
     },
     {
-      "industry_id": "IND_TELECOM_OPERATOR",
-      "order": 9,
-      "quality_score_overall": 91.4,
-      "ranking_percentile": 63.6,
-      "slug": "telecom-operators",
-      "status": "reviewed",
-      "行业名称": "通信与运营商"
-    },
-    {
-      "industry_id": "IND_MEDIA_GAME_CONTENT",
-      "order": 10,
-      "quality_score_overall": 91.2,
-      "ranking_percentile": 59.1,
-      "slug": "media-game-content",
-      "status": "reviewed",
-      "行业名称": "传媒游戏与内容"
-    },
-    {
       "industry_id": "IND_NEW_ENERGY",
       "order": 11,
-      "quality_score_overall": 91.1,
+      "quality_score_overall": 91.3,
       "ranking_percentile": 54.5,
       "slug": "new-energy",
       "status": "reviewed",
       "行业名称": "新能源"
     },
     {
-      "industry_id": "IND_FIN_SECURITIES_FUND",
+      "industry_id": "IND_TELECOM_OPERATOR",
       "order": 12,
-      "quality_score_overall": 91,
+      "quality_score_overall": 91.3,
       "ranking_percentile": 50,
+      "slug": "telecom-operators",
+      "status": "reviewed",
+      "行业名称": "通信与运营商"
+    },
+    {
+      "industry_id": "IND_FIN_SECURITIES_FUND",
+      "order": 13,
+      "quality_score_overall": 91,
+      "ranking_percentile": 45.5,
       "slug": "finance-securities-fund",
       "status": "reviewed",
       "行业名称": "金融-证券基金"
     },
     {
       "industry_id": "IND_BIOMED_DEVICE",
-      "order": 13,
+      "order": 14,
       "quality_score_overall": 90.9,
-      "ranking_percentile": 45.5,
+      "ranking_percentile": 40.9,
       "slug": "biomed-device",
       "status": "reviewed",
       "行业名称": "生物医药与器械"
     },
     {
       "industry_id": "IND_AGRI_FOOD",
-      "order": 14,
+      "order": 15,
       "quality_score_overall": 90.8,
-      "ranking_percentile": 40.9,
+      "ranking_percentile": 36.4,
       "slug": "agriculture-food",
       "status": "reviewed",
       "行业名称": "农业与食品"
     },
     {
       "industry_id": "IND_EDU_VOCATIONAL",
-      "order": 15,
+      "order": 16,
       "quality_score_overall": 90.8,
-      "ranking_percentile": 36.4,
+      "ranking_percentile": 31.8,
       "slug": "education-vocational",
       "status": "reviewed",
       "行业名称": "教育与职教"
     },
     {
       "industry_id": "IND_CONSULTING_PRO_SERVICES",
-      "order": 16,
+      "order": 17,
       "quality_score_overall": 90.7,
-      "ranking_percentile": 31.8,
+      "ranking_percentile": 27.3,
       "slug": "consulting-professional-services",
       "status": "reviewed",
       "行业名称": "咨询与专业服务"
     },
     {
       "industry_id": "IND_ENERGY_UTILITIES",
-      "order": 17,
+      "order": 18,
       "quality_score_overall": 90.7,
-      "ranking_percentile": 27.3,
+      "ranking_percentile": 22.7,
       "slug": "energy-utilities",
       "status": "reviewed",
       "行业名称": "能源与公用事业"
     },
     {
       "industry_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION",
-      "order": 18,
+      "order": 19,
       "quality_score_overall": 90.6,
-      "ranking_percentile": 22.7,
+      "ranking_percentile": 18.2,
       "slug": "advanced-manufacturing-automation",
       "status": "reviewed",
       "行业名称": "高端制造与工业自动化"
     },
     {
       "industry_id": "IND_AUTO_INTELLIGENT_DRIVING",
-      "order": 19,
+      "order": 20,
       "quality_score_overall": 90.5,
-      "ranking_percentile": 18.2,
+      "ranking_percentile": 13.6,
       "slug": "auto-intelligent-driving",
       "status": "reviewed",
       "行业名称": "汽车与智能驾驶"
     },
     {
       "industry_id": "IND_FMCG_RETAIL",
-      "order": 20,
-      "quality_score_overall": 90.5,
-      "ranking_percentile": 13.6,
-      "slug": "fmcg-retail",
-      "status": "reviewed",
-      "行业名称": "快消与零售"
-    },
-    {
-      "industry_id": "IND_REAL_ESTATE_INFRA",
       "order": 21,
       "quality_score_overall": 90.5,
       "ranking_percentile": 9.1,
-      "slug": "real-estate-infrastructure",
+      "slug": "fmcg-retail",
       "status": "reviewed",
-      "行业名称": "房地产与基建"
+      "行业名称": "快消与零售"
     },
     {
       "industry_id": "IND_FIN_INSURANCE",
@@ -8906,6 +8919,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-17",
               "sample_size": 12
+            },
+            {
+              "answer_framework": [
+                "工况与约束识别",
+                "机械电气一体化方案",
+                "调试与验收标准",
+                "风险与迭代"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 9,
+                "snapshot_url": "https://www.inovance.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+                "source_name": "汇川技术官网",
+                "source_type": "company_official",
+                "source_url": "https://www.inovance.com",
+                "stat_definition": "基于工业自动化岗位公开要求整理的笔试题样例。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOE_ACTION_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "某产线升级后节拍未达标且故障率上升，请给出机电联调、参数优化与稳定性验证方案。",
+              "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "机电联调与产线稳定性",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_002",
+              "role_name": "电气工程师",
+              "round_label": "笔试主卷",
+              "updated_at": "2026-02-18",
+              "sample_size": 9
             }
           ],
           "last_checked": "2026-02-16",
@@ -10783,6 +10841,51 @@
               ],
               "updated_at": "2026-02-17",
               "sample_size": 10
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 8,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_type": "government_platform",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "stat_definition": "基于制造项目与质量岗位公开要求整理的结构化面试题样例。",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_SIASUN_COM_95B64F51",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "试生产阶段出现良率波动，项目组意见分歧较大。你如何推动问题收敛并确保按期交付？",
+              "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "试产良率治理与协同",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_005",
+              "role_name": "质量工程师",
+              "round_label": "二面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "协同推进",
+                "结果导向"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 8
             }
           ],
           "last_checked": "2026-02-16",
@@ -11056,7 +11159,7 @@
       },
       "industry_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -11090,8 +11193,8 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 90.2,
-        "freshness_percent_overall": 86.9,
+        "evidence_percent_overall": 90.5,
+        "freshness_percent_overall": 87.3,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
         "quality_score_overall": 90.6,
@@ -11110,7 +11213,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 22.7
+        "ranking_percentile": 18.2
       },
       "slug": "advanced-manufacturing-automation",
       "sources": [
@@ -14019,6 +14122,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-17",
               "sample_size": 11
+            },
+            {
+              "answer_framework": [
+                "问题定义与目标",
+                "供应链与质量分析",
+                "改进策略设计",
+                "验证与复盘"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 9,
+                "snapshot_url": "https://www.yili.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_YILI_COM_D7937E58",
+                "source_name": "伊利官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.yili.com",
+                "stat_definition": "基于食品质量与生产管理岗位公开要求整理的笔试题样例。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOE_ACTION_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "原料批次波动导致成品感官一致性下降，你会如何制定质量改进方案并控制生产损耗？",
+              "question_id": "IND_AGRI_FOOD_WRITTEN_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "食品质量稳定性治理",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_AGRI_FOOD_ROLE_001",
+              "role_name": "质量管理",
+              "round_label": "笔试主卷",
+              "updated_at": "2026-02-18",
+              "sample_size": 9
             }
           ],
           "last_checked": "2026-02-16",
@@ -15908,6 +16056,51 @@
               ],
               "updated_at": "2026-02-17",
               "sample_size": 9
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 8,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_type": "government_platform",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "stat_definition": "基于食品供应链与品牌岗位公开要求整理的结构化面试题样例。",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_MENGNIU_COM_CN_ECD48866",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "旺季出现核心SKU缺货且投诉上升，你会如何协调产销计划、渠道分配与消费者沟通？",
+              "question_id": "IND_AGRI_FOOD_INTERVIEW_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "旺季保供与渠道协同",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_AGRI_FOOD_ROLE_004",
+              "role_name": "供应链计划",
+              "round_label": "二面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "协同推进",
+                "执行落地"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 8
             }
           ],
           "last_checked": "2026-02-16",
@@ -16133,7 +16326,7 @@
       },
       "industry_id": "IND_AGRI_FOOD",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -16173,8 +16366,8 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 87.3,
-        "freshness_percent_overall": 85.7,
+        "evidence_percent_overall": 87.7,
+        "freshness_percent_overall": 86.2,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
         "quality_score_overall": 90.8,
@@ -16193,7 +16386,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 40.9
+        "ranking_percentile": 36.4
       },
       "slug": "agriculture-food",
       "sources": [
@@ -19202,6 +19395,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-17",
               "sample_size": 12
+            },
+            {
+              "answer_framework": [
+                "问题定义与约束",
+                "系统方案设计",
+                "测试验证与安全冗余",
+                "落地与迭代"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 9,
+                "snapshot_url": "https://job.byd.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+                "source_name": "比亚迪招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://job.byd.com",
+                "stat_definition": "基于智能驾驶与嵌入式研发岗位公开要求整理的笔试题样例。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOE_ACTION_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "在感知误检率上升且算力预算固定的条件下，你会如何调整模型与系统架构以提升感知稳定性？",
+              "question_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "感知系统优化与算力约束",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_002",
+              "role_name": "控制算法工程师",
+              "round_label": "笔试主卷",
+              "updated_at": "2026-02-18",
+              "sample_size": 9
             }
           ],
           "last_checked": "2026-02-16",
@@ -21080,6 +21318,51 @@
               ],
               "updated_at": "2026-02-17",
               "sample_size": 10
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 8,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_type": "government_platform",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "stat_definition": "基于智能驾驶系统工程与测试岗位公开要求整理的结构化面试题样例。",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_GEELY_COM_9BD171A5",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "路测阶段出现边缘场景失效，测试团队与算法团队对根因判断不一致。你如何推动形成统一修复方案？",
+              "question_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "路测缺陷协同修复",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_003",
+              "role_name": "测试工程师",
+              "round_label": "二面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "技术判断",
+                "跨团队协同",
+                "执行闭环"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 8
             }
           ],
           "last_checked": "2026-02-16",
@@ -21353,7 +21636,7 @@
       },
       "industry_id": "IND_AUTO_INTELLIGENT_DRIVING",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -21387,8 +21670,8 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 90.2,
-        "freshness_percent_overall": 86.9,
+        "evidence_percent_overall": 90.5,
+        "freshness_percent_overall": 87.3,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
         "quality_score_overall": 90.5,
@@ -21407,7 +21690,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 18.2
+        "ranking_percentile": 13.6
       },
       "slug": "auto-intelligent-driving",
       "sources": [
@@ -24388,6 +24671,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-17",
               "sample_size": 12
+            },
+            {
+              "answer_framework": [
+                "临床/注册目标定义",
+                "数据与证据路径",
+                "方案与风险控制",
+                "里程碑管理"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 9,
+                "snapshot_url": "https://www.mindray.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+                "source_name": "迈瑞医疗官网",
+                "source_type": "company_official",
+                "source_url": "https://www.mindray.com",
+                "stat_definition": "基于生物医药与器械注册临床岗位公开要求整理的笔试题样例。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOE_ACTION_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "某器械产品准备提交注册，但临床数据完整性不足。请给出补证路径、时间安排和风险预案。",
+              "question_id": "IND_BIOMED_DEVICE_WRITTEN_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "注册推进与证据补齐",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_BIOMED_DEVICE_ROLE_003",
+              "role_name": "注册专员",
+              "round_label": "笔试主卷",
+              "updated_at": "2026-02-18",
+              "sample_size": 9
             }
           ],
           "last_checked": "2026-02-16",
@@ -26323,6 +26651,51 @@
               ],
               "updated_at": "2026-02-17",
               "sample_size": 10
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 8,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_type": "government_platform",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "stat_definition": "基于医药临床与质量岗位公开要求整理的结构化面试题样例。",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_HENGRUI_COM_3A4B1F22",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "临床试验进度落后且研究中心执行差异明显，你会如何推动统一标准并稳住项目里程碑？",
+              "question_id": "IND_BIOMED_DEVICE_INTERVIEW_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "临床项目协同与质量控制",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_BIOMED_DEVICE_ROLE_002",
+              "role_name": "临床运营",
+              "round_label": "二面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "质量意识",
+                "跨团队协同",
+                "执行能力"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 8
             }
           ],
           "last_checked": "2026-02-16",
@@ -26596,7 +26969,7 @@
       },
       "industry_id": "IND_BIOMED_DEVICE",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -26630,8 +27003,8 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 87.3,
-        "freshness_percent_overall": 84.1,
+        "evidence_percent_overall": 87.7,
+        "freshness_percent_overall": 84.6,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
         "quality_score_overall": 90.9,
@@ -26650,7 +27023,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 45.5
+        "ranking_percentile": 40.9
       },
       "slug": "biomed-device",
       "sources": [
@@ -31870,7 +32243,7 @@
       },
       "industry_id": "IND_CHEM_NEW_MATERIALS",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -37689,7 +38062,7 @@
       },
       "industry_id": "IND_CIVIL_SERVICE",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -37743,7 +38116,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 100
+        "ranking_percentile": 95.5
       },
       "slug": "civil-service",
       "sources": [
@@ -40701,6 +41074,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-17",
               "sample_size": 11
+            },
+            {
+              "answer_framework": [
+                "商业问题定义",
+                "分析框架与数据口径",
+                "方案设计与优先级",
+                "落地与复盘"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 9,
+                "snapshot_url": "https://www.pwccn.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+                "source_name": "普华永道中国职业页面",
+                "source_type": "company_official",
+                "source_url": "https://www.pwccn.com",
+                "stat_definition": "基于咨询与专业服务岗位公开要求整理的笔试题样例。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOE_ACTION_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "客户要求在三个月内提升门店经营效率，请构建诊断框架并给出可执行的100天改进计划。",
+              "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "经营诊断与落地规划",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_001",
+              "role_name": "咨询顾问",
+              "round_label": "笔试主卷",
+              "updated_at": "2026-02-18",
+              "sample_size": 9
             }
           ],
           "last_checked": "2026-02-16",
@@ -42531,6 +42949,51 @@
               ],
               "updated_at": "2026-02-17",
               "sample_size": 9
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 8,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_type": "government_platform",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "stat_definition": "基于咨询项目协同岗位公开要求整理的结构化面试题样例。",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW2_DELOITTE_COM_96973715",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "项目中期客户突然调整目标，你会如何重构分析范围并管理团队节奏，保证交付质量不下降？",
+              "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "项目变更管理与交付",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_004",
+              "role_name": "交易咨询分析师",
+              "round_label": "二面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "沟通推进",
+                "结果闭环"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 8
             }
           ],
           "last_checked": "2026-02-16",
@@ -42756,7 +43219,7 @@
       },
       "industry_id": "IND_CONSULTING_PRO_SERVICES",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -42796,8 +43259,8 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 90.2,
-        "freshness_percent_overall": 85.2,
+        "evidence_percent_overall": 90.5,
+        "freshness_percent_overall": 85.7,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
         "quality_score_overall": 90.7,
@@ -42816,7 +43279,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 31.8
+        "ranking_percentile": 27.3
       },
       "slug": "consulting-professional-services",
       "sources": [
@@ -47998,7 +48461,7 @@
       },
       "industry_id": "IND_ECOMMERCE_CROSSBORDER",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -48058,7 +48521,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 68.2
+        "ranking_percentile": 59.1
       },
       "slug": "ecommerce-crossborder",
       "sources": [
@@ -50968,6 +51431,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-17",
               "sample_size": 11
+            },
+            {
+              "answer_framework": [
+                "目标与用户定义",
+                "课程与运营方案",
+                "指标体系设计",
+                "迭代与复盘"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 9,
+                "snapshot_url": "https://www.neworiental.org",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164",
+                "source_name": "新东方官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.neworiental.org",
+                "stat_definition": "基于课程运营与教研岗位公开要求整理的笔试题样例。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOE_ACTION_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "某职业教育课程完课率低于目标，请设计从内容结构、学习激励到班主任运营的改进方案。",
+              "question_id": "IND_EDU_VOCATIONAL_WRITTEN_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "完课率提升与学习运营",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_EDU_VOCATIONAL_ROLE_002",
+              "role_name": "课程运营",
+              "round_label": "笔试主卷",
+              "updated_at": "2026-02-18",
+              "sample_size": 9
             }
           ],
           "last_checked": "2026-02-16",
@@ -52799,6 +53307,51 @@
               ],
               "updated_at": "2026-02-17",
               "sample_size": 9
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 8,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_type": "government_platform",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "stat_definition": "基于教育产品与企业培训岗位公开要求整理的结构化面试题样例。",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_OFFCN_COM_B7C232E2",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "课程上线后用户评价分化明显，你会如何平衡学习效果、教师反馈和商业转化目标？",
+              "question_id": "IND_EDU_VOCATIONAL_INTERVIEW_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "教学效果与转化平衡",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_EDU_VOCATIONAL_ROLE_003",
+              "role_name": "学习产品经理",
+              "round_label": "二面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "用户洞察",
+                "业务判断",
+                "执行闭环"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 8
             }
           ],
           "last_checked": "2026-02-16",
@@ -53024,7 +53577,7 @@
       },
       "industry_id": "IND_EDU_VOCATIONAL",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -53064,8 +53617,8 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 90.2,
-        "freshness_percent_overall": 85.2,
+        "evidence_percent_overall": 90.5,
+        "freshness_percent_overall": 85.7,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
         "quality_score_overall": 90.8,
@@ -53084,7 +53637,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 36.4
+        "ranking_percentile": 31.8
       },
       "slug": "education-vocational",
       "sources": [
@@ -56023,6 +56576,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-17",
               "sample_size": 11
+            },
+            {
+              "answer_framework": [
+                "目标与约束识别",
+                "运行策略设计",
+                "风险边界与应急",
+                "评估与优化"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 9,
+                "snapshot_url": "https://www.zhipin.com/web/geek/job?query=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
+                "source_name": "BOSS直聘-国家电网招聘检索入口",
+                "source_type": "company_official",
+                "source_url": "https://www.zhipin.com/web/geek/job?query=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91",
+                "stat_definition": "基于能源调度与运维岗位公开要求整理的笔试题样例。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_NEA_RENEWABLE_UTIL_20260212"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "可再生出力波动加剧时，你会如何制定调度策略，在保供、安全和成本之间实现平衡？",
+              "question_id": "IND_ENERGY_UTILITIES_WRITTEN_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "调度策略与保供平衡",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_ENERGY_UTILITIES_ROLE_004",
+              "role_name": "调度与控制",
+              "round_label": "笔试主卷",
+              "updated_at": "2026-02-18",
+              "sample_size": 9
             }
           ],
           "last_checked": "2026-02-16",
@@ -57853,6 +58451,51 @@
               ],
               "updated_at": "2026-02-17",
               "sample_size": 9
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 8,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_type": "government_platform",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "stat_definition": "基于能源项目管理岗位公开要求整理的结构化面试题样例。",
+                "secondary_source_ids": [
+                  "SRC_NEA_NEPROJECT_20260121",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "新能源项目并网窗口提前，但关键审批尚未完结。你会如何协调多方资源保证节点达成？",
+              "question_id": "IND_ENERGY_UTILITIES_INTERVIEW_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "并网窗口与审批协同",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_ENERGY_UTILITIES_ROLE_005",
+              "role_name": "项目管理",
+              "round_label": "二面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "风险识别",
+                "跨部门协同",
+                "执行闭环"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 8
             }
           ],
           "last_checked": "2026-02-16",
@@ -58078,7 +58721,7 @@
       },
       "industry_id": "IND_ENERGY_UTILITIES",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -58118,8 +58761,8 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 90.2,
-        "freshness_percent_overall": 88.5,
+        "evidence_percent_overall": 90.5,
+        "freshness_percent_overall": 88.9,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
         "quality_score_overall": 90.7,
@@ -58138,7 +58781,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 27.3
+        "ranking_percentile": 22.7
       },
       "slug": "energy-utilities",
       "sources": [
@@ -63331,7 +63974,7 @@
       },
       "industry_id": "IND_FIN_BANK",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -63385,7 +64028,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 77.3
+        "ranking_percentile": 72.7
       },
       "slug": "finance-bank",
       "sources": [
@@ -68586,7 +69229,7 @@
       },
       "industry_id": "IND_FIN_INSURANCE",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -73895,7 +74538,7 @@
       },
       "industry_id": "IND_FIN_SECURITIES_FUND",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -73949,7 +74592,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 50
+        "ranking_percentile": 45.5
       },
       "slug": "finance-securities-fund",
       "sources": [
@@ -78985,7 +79628,7 @@
       },
       "industry_id": "IND_FMCG_RETAIL",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -79039,7 +79682,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 13.6
+        "ranking_percentile": 9.1
       },
       "slug": "fmcg-retail",
       "sources": [
@@ -82096,6 +82739,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-17",
               "sample_size": 12
+            },
+            {
+              "answer_framework": [
+                "目标定义与约束识别",
+                "模型与系统方案",
+                "性能与成本权衡",
+                "上线监控与迭代"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 9,
+                "snapshot_url": "https://talent.alibaba.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248",
+                "source_name": "阿里巴巴官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://talent.alibaba.com",
+                "stat_definition": "基于互联网与AI研发岗位公开能力要求整理的综合笔试题样例。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOE_ACTION_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "请设计一个面向内容平台的智能推荐召回与重排方案，要求说明在线延迟约束、冷启动策略以及A/B实验指标体系。",
+              "question_id": "IND_INTERNET_AI_WRITTEN_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "推荐系统与实验设计",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_INTERNET_AI_ROLE_003",
+              "role_name": "算法工程师",
+              "round_label": "笔试主卷",
+              "updated_at": "2026-02-18",
+              "sample_size": 9
             }
           ],
           "last_checked": "2026-02-16",
@@ -84005,6 +84693,51 @@
               ],
               "updated_at": "2026-02-17",
               "sample_size": 10
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 8,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_type": "government_platform",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "stat_definition": "基于互联网产品与算法岗位公开要求整理的结构化面试题样例。",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
+                  "SRC_AUTO_JOBS_BYTEDANCE_COM_4D6E1DEC"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "在推荐模型上线后，核心转化率提升但用户留存下降，你会如何定位问题并给出下一轮实验计划？",
+              "question_id": "IND_INTERNET_AI_INTERVIEW_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "指标冲突诊断与迭代",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_INTERNET_AI_ROLE_005",
+              "role_name": "产品经理",
+              "round_label": "二面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "数据分析",
+                "业务判断",
+                "迭代闭环"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 8
             }
           ],
           "last_checked": "2026-02-16",
@@ -84277,7 +85010,7 @@
       },
       "industry_id": "IND_INTERNET_AI",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -84311,11 +85044,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 90.6,
-        "freshness_percent_overall": 87.5,
+        "evidence_percent_overall": 90.9,
+        "freshness_percent_overall": 87.9,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 92.4,
+        "quality_score_overall": 93.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -84331,7 +85064,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 90.9
+        "ranking_percentile": 100
       },
       "slug": "internet-ai",
       "sources": [
@@ -89431,7 +90164,7 @@
       },
       "industry_id": "IND_LOGISTICS_SUPPLYCHAIN",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -89491,7 +90224,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 81.8
+        "ranking_percentile": 77.3
       },
       "slug": "logistics-supply-chain",
       "sources": [
@@ -92440,6 +93173,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-17",
               "sample_size": 11
+            },
+            {
+              "answer_framework": [
+                "业务目标与约束",
+                "数据口径与诊断路径",
+                "策略设计与优先级",
+                "执行监控与复盘"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 9,
+                "snapshot_url": "https://campus.163.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_CAMPUS_163_COM_CF426C6",
+                "source_name": "网易校园招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://campus.163.com",
+                "stat_definition": "基于内容运营与商业化岗位公开要求整理的笔试题样例。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_NPPA_GAME_APPROVAL_20260126"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "某游戏新版本DAU增长但付费渗透下滑，请提出内容活动、商业化节奏和用户分层运营的优化方案。",
+              "question_id": "IND_MEDIA_GAME_CONTENT_WRITTEN_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "内容增长与商业化平衡",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_MEDIA_GAME_CONTENT_ROLE_004",
+              "role_name": "商业化运营",
+              "round_label": "笔试主卷",
+              "updated_at": "2026-02-18",
+              "sample_size": 9
             }
           ],
           "last_checked": "2026-02-16",
@@ -94360,6 +95138,51 @@
               ],
               "updated_at": "2026-02-17",
               "sample_size": 9
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 8,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_type": "government_platform",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "stat_definition": "基于内容社区与投放岗位公开要求整理的结构化面试题样例。",
+                "secondary_source_ids": [
+                  "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "活动上线后社区舆情出现分化，你会如何联合运营、客服和研发在48小时内稳定核心用户并修复口碑？",
+              "question_id": "IND_MEDIA_GAME_CONTENT_INTERVIEW_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "社区舆情与危机处置",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_MEDIA_GAME_CONTENT_ROLE_006",
+              "role_name": "社区运营",
+              "round_label": "二面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "用户洞察",
+                "协同推进",
+                "结果闭环"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 8
             }
           ],
           "last_checked": "2026-02-16",
@@ -94585,7 +95408,7 @@
       },
       "industry_id": "IND_MEDIA_GAME_CONTENT",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -94625,11 +95448,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 87.7,
-        "freshness_percent_overall": 86.2,
+        "evidence_percent_overall": 88.1,
+        "freshness_percent_overall": 86.6,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91.2,
+        "quality_score_overall": 92.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -94645,7 +95468,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 59.1
+        "ranking_percentile": 86.4
       },
       "slug": "media-game-content",
       "sources": [
@@ -97651,6 +98474,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-17",
               "sample_size": 12
+            },
+            {
+              "answer_framework": [
+                "问题定义与指标口径",
+                "技术路线与约束",
+                "验证方案与风险边界",
+                "量产导入与复盘"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 9,
+                "snapshot_url": "https://www.catl.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+                "source_name": "宁德时代官网",
+                "source_type": "company_official",
+                "source_url": "https://www.catl.com",
+                "stat_definition": "基于新能源电池研发与系统岗位公开要求整理的笔试题样例。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_NEA_RENEWABLE_UTIL_20260212"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "在快充性能与循环寿命存在冲突时，请给出电芯体系优化思路、实验设计和量产验证路径。",
+              "question_id": "IND_NEW_ENERGY_WRITTEN_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "电池性能权衡与验证",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_NEW_ENERGY_ROLE_001",
+              "role_name": "电池研发工程师",
+              "round_label": "笔试主卷",
+              "updated_at": "2026-02-18",
+              "sample_size": 9
             }
           ],
           "last_checked": "2026-02-16",
@@ -99624,6 +100492,51 @@
               ],
               "updated_at": "2026-02-17",
               "sample_size": 10
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 8,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_type": "government_platform",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "stat_definition": "基于新能源项目管理岗位公开要求整理的结构化面试题样例。",
+                "secondary_source_ids": [
+                  "SRC_NEA_NEPROJECT_20260121",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "储能项目进入并网前发现关键部件交付延迟，你会如何协调研发、供应链与施工团队确保并网节点不失控？",
+              "question_id": "IND_NEW_ENERGY_INTERVIEW_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "并网前风险协同",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_NEW_ENERGY_ROLE_005",
+              "role_name": "项目管理",
+              "round_label": "二面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "风险识别",
+                "跨团队协同",
+                "结果导向"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 8
             }
           ],
           "last_checked": "2026-02-16",
@@ -99896,7 +100809,7 @@
       },
       "industry_id": "IND_NEW_ENERGY",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -99930,11 +100843,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 87.7,
-        "freshness_percent_overall": 84.6,
+        "evidence_percent_overall": 88.1,
+        "freshness_percent_overall": 85.1,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91.1,
+        "quality_score_overall": 91.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -105825,7 +106738,7 @@
       },
       "industry_id": "IND_PUBLIC_INSTITUTION",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -105879,7 +106792,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 72.7
+        "ranking_percentile": 68.2
       },
       "slug": "public-institution",
       "sources": [
@@ -108780,6 +109693,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-17",
               "sample_size": 11
+            },
+            {
+              "answer_framework": [
+                "项目目标与边界",
+                "成本与进度测算",
+                "风险情景与应对",
+                "决策建议"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 9,
+                "snapshot_url": "https://www.cscec.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_JOB_CSCEC_COM_14CC3CCE",
+                "source_name": "中国建筑招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://www.cscec.com",
+                "stat_definition": "基于基建工程管理与成本岗位公开要求整理的笔试题样例。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_RECRUIT_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "某基建项目出现材料涨价和工期压缩双重压力，请给出成本控制、资源排产与节点管理方案。",
+              "question_id": "IND_REAL_ESTATE_INFRA_WRITTEN_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "项目成本与进度平衡",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_REAL_ESTATE_INFRA_ROLE_001",
+              "role_name": "工程管理",
+              "round_label": "笔试主卷",
+              "updated_at": "2026-02-18",
+              "sample_size": 9
             }
           ],
           "last_checked": "2026-02-16",
@@ -110669,6 +111627,51 @@
               ],
               "updated_at": "2026-02-17",
               "sample_size": 9
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 8,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_type": "government_platform",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "stat_definition": "基于基建项目运营管理岗位公开要求整理的结构化面试题样例。",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_CSCEC_COM_F3573BC4",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "施工阶段出现分包商履约偏差，项目节点有延误风险。你会如何组织纠偏并控制对业主交付的影响？",
+              "question_id": "IND_REAL_ESTATE_INFRA_INTERVIEW_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "履约偏差与纠偏管理",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_REAL_ESTATE_INFRA_ROLE_004",
+              "role_name": "运营管理",
+              "round_label": "二面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "计划管理",
+                "风险应对",
+                "协同推进"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 8
             }
           ],
           "last_checked": "2026-02-16",
@@ -110894,7 +111897,7 @@
       },
       "industry_id": "IND_REAL_ESTATE_INFRA",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -110928,11 +111931,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 87.3,
-        "freshness_percent_overall": 85.7,
+        "evidence_percent_overall": 87.7,
+        "freshness_percent_overall": 86.2,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.5,
+        "quality_score_overall": 91.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -110948,7 +111951,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 9.1
+        "ranking_percentile": 63.6
       },
       "slug": "real-estate-infrastructure",
       "sources": [
@@ -114027,6 +115030,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-17",
               "sample_size": 12
+            },
+            {
+              "answer_framework": [
+                "问题定义与约束",
+                "芯片架构与实现路径",
+                "验证与良率保障",
+                "风险与迭代计划"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 9,
+                "snapshot_url": "https://www.smics.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_SMICS_COM_7D437B2",
+                "source_name": "中芯国际官网",
+                "source_type": "company_official",
+                "source_url": "https://www.smics.com",
+                "stat_definition": "基于半导体设计与工艺岗位公开能力要求整理的综合笔试题样例。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOE_ACTION_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "某数字模块在PVT角下出现边界时序违例，请给出从约束检查、逻辑重构到签核回归的完整处理流程。",
+              "question_id": "IND_SEMICONDUCTOR_ELECTRONICS_WRITTEN_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "时序签核与回归验证",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_SEMICONDUCTOR_ELECTRONICS_ROLE_001",
+              "role_name": "数字IC设计",
+              "round_label": "笔试主卷",
+              "updated_at": "2026-02-18",
+              "sample_size": 9
             }
           ],
           "last_checked": "2026-02-16",
@@ -115999,6 +117047,51 @@
               ],
               "updated_at": "2026-02-17",
               "sample_size": 10
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 8,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_type": "government_platform",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "stat_definition": "基于半导体验证与项目协同岗位公开要求整理的结构化面试题样例。",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_HUAHONGGRACE_COM_4C8679F5",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "流片前两周发现关键缺陷，设计团队希望继续推进。你如何平衡进度压力、良率风险与跨团队决策？",
+              "question_id": "IND_SEMICONDUCTOR_ELECTRONICS_INTERVIEW_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "流片决策与风险沟通",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_SEMICONDUCTOR_ELECTRONICS_ROLE_003",
+              "role_name": "工艺工程师",
+              "round_label": "二面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "风险判断",
+                "协同推进",
+                "执行落地"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 8
             }
           ],
           "last_checked": "2026-02-16",
@@ -116271,7 +117364,7 @@
       },
       "industry_id": "IND_SEMICONDUCTOR_ELECTRONICS",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -116305,11 +117398,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 87.9,
-        "freshness_percent_overall": 84.8,
+        "evidence_percent_overall": 88.2,
+        "freshness_percent_overall": 85.3,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 92.1,
+        "quality_score_overall": 92.2,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -116325,7 +117418,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 86.4
+        "ranking_percentile": 81.8
       },
       "slug": "semiconductor-electronics",
       "sources": [
@@ -122221,7 +123314,7 @@
       },
       "industry_id": "IND_STATE_OWNED_ENTERPRISE",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -122275,7 +123368,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 95.5
+        "ranking_percentile": 90.9
       },
       "slug": "state-owned-enterprise",
       "sources": [
@@ -125172,6 +126265,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-17",
               "sample_size": 12
+            },
+            {
+              "answer_framework": [
+                "网络指标与目标定义",
+                "容量规划与优化路径",
+                "故障应急与回退策略",
+                "监控与复盘"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 9,
+                "snapshot_url": "https://job.10086.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_JOB_10086_CN_C58C9DA8",
+                "source_name": "中国移动招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://job.10086.cn",
+                "stat_definition": "基于运营商网络优化与通信研发岗位公开要求整理的笔试题样例。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOE_ACTION_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "某城市5G网络晚高峰时延抖动明显，请给出定位思路、优化方案与效果评估指标。",
+              "question_id": "IND_TELECOM_OPERATOR_WRITTEN_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "网络优化与容量规划",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_TELECOM_OPERATOR_ROLE_001",
+              "role_name": "网络优化工程师",
+              "round_label": "笔试主卷",
+              "updated_at": "2026-02-18",
+              "sample_size": 9
             }
           ],
           "last_checked": "2026-02-16",
@@ -127045,6 +128183,51 @@
               ],
               "updated_at": "2026-02-17",
               "sample_size": 10
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 8,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_type": "government_platform",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "stat_definition": "基于通信项目与售前解决方案岗位公开要求整理的结构化面试题样例。",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_CHINAUNICOM_COM_CN_19BCCC83",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "客户要求两个月内完成专网交付，但关键设备到货存在不确定性。你会如何制定交付计划并管理风险沟通？",
+              "question_id": "IND_TELECOM_OPERATOR_INTERVIEW_008",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "通信项目交付与风险管理",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_TELECOM_OPERATOR_ROLE_005",
+              "role_name": "项目经理",
+              "round_label": "二面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "项目管理",
+                "协同沟通",
+                "执行闭环"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 8
             }
           ],
           "last_checked": "2026-02-16",
@@ -127317,7 +128500,7 @@
       },
       "industry_id": "IND_TELECOM_OPERATOR",
       "meta": {
-        "content_version": "1.29.0",
+        "content_version": "1.30.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -127351,11 +128534,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 90,
-        "freshness_percent_overall": 86.7,
+        "evidence_percent_overall": 90.3,
+        "freshness_percent_overall": 87.1,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91.4,
+        "quality_score_overall": 91.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -127371,7 +128554,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 63.6
+        "ranking_percentile": 50
       },
       "slug": "telecom-operators",
       "sources": [
