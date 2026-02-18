@@ -446,10 +446,19 @@
           "逐行业手工补充7条城市薪酬观测样本（成都/武汉/西安），并减少对应城市缺口待填位。",
           "公共部门条目新增官方考试大纲/公告映射题，提升可追溯性与训练可执行性。"
         ]
+      },
+      {
+        "version": "v1.35.0",
+        "date": "2026-02-18",
+        "summary": [
+          "NIO来源切换为可稳定访问的官方校招入口（飞书招聘），并同步词条证据链URL。",
+          "为5个高波动行业（互联网AI/跨境电商/新能源/银行/智能驾驶）逐条新增争议结论第三条，采用2025Q4-2026Q1官方政策或监管来源。",
+          "为上述5个行业逐条新增可执行月度投递日历，补充提前批/主批/签约/春招补录节点与二级证据链。"
+        ]
       }
     ],
-    "文档名称": "中国大陆应届生求职行业百科（v1.33.0区域样本与可解释性增强版）",
-    "版本": "v1.34.1",
+    "文档名称": "中国大陆应届生求职行业百科（v1.35.0时效与可执行日历增强版）",
+    "版本": "v1.35.0",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -493,7 +502,8 @@
       "v1.31.0补齐全行业月度时间线到“至少2条”，并保持来源门禁通过（has_blockers=false）。",
       "v1.32.0全行业新增2026Q1事件信号并统一双证据链，提升时效与差异化。",
       "v1.32.0新增评分口径与信息源规范文档，支持后续按扣分项持续优化。",
-      "v1.33.0强化区域样本覆盖与公共部门口径说明，并补5个行业区域薪酬实采样本。"
+      "v1.33.0强化区域样本覆盖与公共部门口径说明，并补5个行业区域薪酬实采样本。",
+      "v1.35.0完成高波动行业争议结论与投递日历增量，并修复NIO官方来源可访问性。"
     ],
     "适用人群": "中国大陆应届生（含毕业3年内）",
     "updated_at": "2026-02-18"
@@ -1668,15 +1678,15 @@
       "access_check": "checked",
       "accessed_at": "2026-02-18",
       "credibility": "medium",
-      "http_status": 567,
+      "http_status": 200,
       "last_checked": "2026-02-18",
-      "manual_verification_note": "站点存在反爬策略，建议在浏览器人工核验具体岗位页。",
-      "manual_verification_required": true,
-      "snapshot_url": "https://www.nio.com/careers",
+      "manual_verification_note": "已切换至可稳定访问的官方校招入口。",
+      "manual_verification_required": false,
+      "snapshot_url": "https://nio.jobs.feishu.cn/campus",
       "source_id": "SRC_AUTO_WWW_NIO_COM_9C9D05E4",
-      "source_name": "蔚来官网/招聘入口",
+      "source_name": "蔚来校招官网（飞书招聘）",
       "source_type": "company_official",
-      "source_url": "https://www.nio.com/careers",
+      "source_url": "https://nio.jobs.feishu.cn/campus",
       "typical_update_cycle": "quarterly"
     },
     {
@@ -1827,7 +1837,7 @@
       "credibility": "medium",
       "http_status": 412,
       "last_checked": "2026-02-18",
-      "manual_verification_note": "招聘子站存在访问策略限制，建议人工核验校招公告页。",
+      "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。",
       "manual_verification_required": true,
       "snapshot_url": "https://www.sgcc.com.cn",
       "source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
@@ -2153,7 +2163,7 @@
       "credibility": "medium",
       "http_status": 412,
       "last_checked": "2026-02-18",
-      "manual_verification_note": "备用入口需人工核验具体岗位页。",
+      "manual_verification_note": "备用入口同样受反爬限制，建议上传sgcc.com.cn浏览器Cookie后人工核验岗位页。",
       "manual_verification_required": true,
       "snapshot_url": "https://www.sgcc.com.cn",
       "source_id": "SRC_AUTO_ZHAOPIN_SGCC_COM_CN_A38CA114",
@@ -18483,6 +18493,40 @@
                 "系统工程方向更贴近整车落地和跨模块协同。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做功能安全可能算法迭代与数据闭环经验不足。",
+                "只做端到端算法可能量产合规与安全流程认知不完整。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议先在一个方向做深，再通过跨模块项目补齐“安全合规+算法工程”能力，提升长期迁移性。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2025/art_76f6af8d52cb4f0cb0f8fbabddc85241.html",
+                "source_date": "2025-09-12",
+                "source_id": "SRC_MIIT_AUTO_STABLE_20250912",
+                "source_name": "工业和信息化部等八部门关于印发《汽车行业稳增长工作方案（2025—2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2025/art_76f6af8d52cb4f0cb0f8fbabddc85241.html",
+                "stat_definition": "结合汽车稳增长工作方案与智能驾驶岗位结构形成的决策型争议议题。",
+                "publish_date": "2025-09-12",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "智能驾驶首岗应优先“量产车功能安全”还是“端到端算法迭代”？",
+              "issue_id": "IND_AUTO_INTELLIGENT_DRIVING_DEBATE_003",
+              "pro_points": [
+                "功能安全方向更利于沉淀量产导向的工程规范与合规能力。",
+                "端到端算法方向更利于形成数据驱动迭代与模型优化能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "接管里程、误检率、量产缺陷率"
             }
           ],
           "last_checked": "2026-02-17",
@@ -19015,16 +19059,16 @@
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
                 "confidence": 0.78,
-                "http_status": 567,
+                "http_status": 200,
                 "manual_verification_note": "站点存在反爬策略，建议在浏览器人工核验具体岗位页。",
-                "manual_verification_required": true,
+                "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.nio.com/careers",
+                "snapshot_url": "https://nio.jobs.feishu.cn/campus",
                 "source_date": "2026-02-16",
                 "source_id": "SRC_AUTO_WWW_NIO_COM_9C9D05E4",
-                "source_name": "蔚来官网/招聘入口",
+                "source_name": "蔚来校招官网（飞书招聘）",
                 "source_type": "company_official",
-                "source_url": "https://www.nio.com/careers",
+                "source_url": "https://nio.jobs.feishu.cn/campus",
                 "stat_definition": "基于官网公开岗位与校招信息入口可访问性判定",
                 "publish_date": "2026-02-16",
                 "captured_at": "2026-02-18"
@@ -19699,19 +19743,19 @@
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
                 "confidence": 0.74,
-                "http_status": 567,
-                "manual_verification_required": true,
+                "http_status": 200,
+                "manual_verification_required": false,
                 "sample_size": 6,
                 "secondary_source_ids": [
                   "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
                   "SRC_AUTO_WWW_SAICMOTOR_COM_9D6FC2F8"
                 ],
-                "snapshot_url": "https://www.nio.com/careers",
+                "snapshot_url": "https://nio.jobs.feishu.cn/campus",
                 "source_date": "2026-02-17",
                 "source_id": "SRC_AUTO_WWW_NIO_COM_9C9D05E4",
-                "source_name": "蔚来官网/招聘入口",
+                "source_name": "蔚来校招官网（飞书招聘）",
                 "source_type": "company_official",
-                "source_url": "https://www.nio.com/careers",
+                "source_url": "https://nio.jobs.feishu.cn/campus",
                 "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
                 "publish_date": "2026-02-17",
                 "captured_at": "2026-02-18"
@@ -19830,8 +19874,13 @@
                   "上线或交付记录"
                 ],
                 "source_id": "SRC_AUTO_WWW_NIO_COM_9C9D05E4",
-                "source_url": "https://www.nio.com/careers",
-                "updated_at": "2026-02-18"
+                "source_url": "https://nio.jobs.feishu.cn/campus",
+                "updated_at": "2026-02-18",
+                "source_name": "蔚来校招官网（飞书招聘）",
+                "snapshot_url": "https://nio.jobs.feishu.cn/campus",
+                "http_status": 200,
+                "manual_verification_required": false,
+                "access_check": "checked"
               }
             },
             {
@@ -20303,6 +20352,61 @@
                 }
               ],
               "timeline_id": "IND_AUTO_INTELLIGENT_DRIVING_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://job.byd.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+                "source_name": "比亚迪招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://job.byd.com",
+                "stat_definition": "按智能驾驶企业批次公告拆解月度网申、测评与工程面试窗口。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "补充智能驾驶行业月度投递日历，强调算法与工程岗位批次差异。",
+              "stages": [
+                {
+                  "stage": "提前批与暑期实习转正",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "感知、规控与车端软件岗位提前开放。"
+                },
+                {
+                  "stage": "秋招主批网申与测评",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "在线测评、编程与专业笔试集中进行。"
+                },
+                {
+                  "stage": "工程面与定岗",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "围绕量产项目进行多轮工程面试与定岗。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "新车型项目启动带动工程与算法补录需求。"
+                }
+              ],
+              "timeline_id": "IND_AUTO_INTELLIGENT_DRIVING_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -23593,11 +23697,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 91,
-        "freshness_percent_overall": 88.1,
+        "evidence_percent_overall": 91.3,
+        "freshness_percent_overall": 88.4,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89,
+        "quality_score_overall": 88.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -23613,7 +23717,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 9.1
+        "ranking_percentile": 4.5
       },
       "slug": "auto-intelligent-driving",
       "sources": [
@@ -23872,15 +23976,15 @@
         },
         {
           "source_id": "SRC_AUTO_WWW_NIO_COM_9C9D05E4",
-          "source_name": "蔚来官网/招聘入口",
+          "source_name": "蔚来校招官网（飞书招聘）",
           "source_type": "company_official",
-          "source_url": "https://www.nio.com/careers",
-          "snapshot_url": "https://www.nio.com/careers",
+          "source_url": "https://nio.jobs.feishu.cn/campus",
+          "snapshot_url": "https://nio.jobs.feishu.cn/campus",
           "source_date": "2026-02-17",
           "accessed_at": "2026-02-18",
           "access_check": "checked",
-          "http_status": 567,
-          "manual_verification_required": true,
+          "http_status": 200,
+          "manual_verification_required": false,
           "confidence": 0.72,
           "usage": "结构化映射补充"
         },
@@ -41871,7 +41975,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 90.9
+        "ranking_percentile": 86.4
       },
       "slug": "civil-service",
       "sources": [
@@ -48480,6 +48584,40 @@
                 "供应链履约岗位更能建立经营基本盘，对长期运营稳定性价值更高。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "单做平台招商可能缺少私域与品牌资产沉淀。",
+                "单做独立站增长可能在履约、支付和合规协同上压力更大。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议先选一个可快速拿结果的主战场，再把另一侧能力纳入季度能力清单，避免路径单一化。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_518fcaf90e674b959d3a5a0e8b74fc0f.html",
+                "source_date": "2026-01-23",
+                "source_id": "SRC_MOFCOM_ECOMMERCE_20260123",
+                "source_name": "商务部电子商务司负责人介绍2025年我国电子商务发展情况",
+                "source_type": "government_policy",
+                "source_url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_518fcaf90e674b959d3a5a0e8b74fc0f.html",
+                "stat_definition": "结合商务部电商发展数据与跨境岗位结构形成的决策型争议议题。",
+                "publish_date": "2026-01-23",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "跨境电商首岗应优先“平台招商运营”还是“独立站增长”？",
+              "issue_id": "IND_ECOMMERCE_CROSSBORDER_DEBATE_003",
+              "pro_points": [
+                "平台招商岗位更易快速接触成熟流量体系和运营节奏。",
+                "独立站岗位更利于沉淀品牌资产与全链路增长能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "投放ROI、履约时效、复购率"
             }
           ],
           "last_checked": "2026-02-17",
@@ -50249,6 +50387,61 @@
                 }
               ],
               "timeline_id": "IND_ECOMMERCE_CROSSBORDER_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://careers.shein.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_CAREERS_SHEIN_COM_46BBBFCE",
+                "source_name": "SHEIN官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://careers.shein.com",
+                "stat_definition": "按跨境电商企业校招批次拆解月度网申、测评与面试窗口。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "补充跨境行业月度投递节奏，便于安排大促前后的岗位窗口。",
+              "stages": [
+                {
+                  "stage": "提前批与语言岗位预热",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "运营、选品、海外市场与小语种岗位提前释放。"
+                },
+                {
+                  "stage": "秋招主批网申",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "主批岗位集中开放，在线测评和业务笔试并行。"
+                },
+                {
+                  "stage": "业务面与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "围绕增长、履约、利润三指标完成多轮面试。"
+                },
+                {
+                  "stage": "春招补录与海外岗补位",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "结合业务扩张节奏二次开放岗位。"
+                }
+              ],
+              "timeline_id": "IND_ECOMMERCE_CROSSBORDER_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -53495,11 +53688,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
-        "evidence_percent_overall": 88.4,
-        "freshness_percent_overall": 85.5,
+        "evidence_percent_overall": 88.7,
+        "freshness_percent_overall": 85.9,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.7,
+        "quality_score_overall": 90,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -60098,7 +60291,8 @@
                   "SRC_ZHILIAN_Q4_2025_NEWS"
                 ],
                 "publish_date": "2026-02-17",
-                "captured_at": "2026-02-18"
+                "captured_at": "2026-02-18",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。"
               },
               "interview_id": "IND_ENERGY_UTILITIES_TALK_001",
               "interviewee_profile": {
@@ -60345,7 +60539,7 @@
                 "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 412,
-                "manual_verification_note": "招聘子站存在访问策略限制，建议人工核验校招公告页。",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。",
                 "manual_verification_required": true,
                 "sample_size": 1,
                 "snapshot_url": "https://www.sgcc.com.cn",
@@ -60627,7 +60821,7 @@
                 "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 412,
-                "manual_verification_note": "招聘子站存在访问策略限制，建议人工核验校招公告页。",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。",
                 "manual_verification_required": true,
                 "sample_size": 1,
                 "snapshot_url": "https://www.sgcc.com.cn",
@@ -60745,7 +60939,8 @@
                 "source_url": "https://www.sgcc.com.cn",
                 "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
                 "publish_date": "2026-02-17",
-                "captured_at": "2026-02-18"
+                "captured_at": "2026-02-18",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。"
               },
               "hard_skills": [
                 "电力系统基础",
@@ -60861,7 +61056,8 @@
                 ],
                 "source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
                 "source_url": "https://www.sgcc.com.cn",
-                "updated_at": "2026-02-18"
+                "updated_at": "2026-02-18",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。"
               }
             },
             {
@@ -61465,7 +61661,8 @@
                 "source_url": "https://www.sgcc.com.cn",
                 "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
                 "publish_date": "2026-02-17",
-                "captured_at": "2026-02-18"
+                "captured_at": "2026-02-18",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。"
               },
               "hard_skills": [
                 "电力系统基础",
@@ -61581,7 +61778,8 @@
                 ],
                 "source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
                 "source_url": "https://www.sgcc.com.cn",
-                "updated_at": "2026-02-18"
+                "updated_at": "2026-02-18",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。"
               }
             }
           ],
@@ -61628,7 +61826,8 @@
                 ],
                 "source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
                 "source_url": "https://www.sgcc.com.cn",
-                "updated_at": "2026-02-18"
+                "updated_at": "2026-02-18",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。"
               },
               {
                 "sample_id": "IND_ENERGY_UTILITIES_ROLE_002_STAR_PUBLIC_2026",
@@ -61733,7 +61932,8 @@
                   "SRC_NEA_NEPROJECT_20260121"
                 ],
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-18"
+                "captured_at": "2026-02-18",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。"
               },
               "notes": "能源行业秋招主批与春季项目补录并重，岗位集中在调度、运维、项目管理。",
               "stages": [
@@ -62531,7 +62731,8 @@
                   "SRC_NEA_RENEWABLE_UTIL_20260212"
                 ],
                 "publish_date": "2026-02-18",
-                "captured_at": "2026-02-18"
+                "captured_at": "2026-02-18",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。"
               },
               "is_template": false,
               "needs_real_question": false,
@@ -62563,7 +62764,7 @@
                 "confidence": 0.78,
                 "http_status": 412,
                 "manual_verification_required": true,
-                "manual_verification_note": "国家电网招聘子站存在访问策略限制，建议人工核验对应岗位页。",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。",
                 "sample_size": 10,
                 "snapshot_url": "https://www.sgcc.com.cn",
                 "source_date": "2026-02-18",
@@ -63988,7 +64189,8 @@
                   "SRC_MOE_ACTION_2026"
                 ],
                 "publish_date": "2026-02-17",
-                "captured_at": "2026-02-18"
+                "captured_at": "2026-02-18",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。"
               },
               "summary": "能源企业招聘页面持续发布电网调度、新能源运维与设备检修岗位。准备需覆盖安全规程、调度逻辑和故障处置流程",
               "title": "电网与新能源并网岗位继续扩招",
@@ -64103,7 +64305,8 @@
                 "source_type": "company_official",
                 "source_url": "https://www.sgcc.com.cn",
                 "publish_date": "2026-02-17",
-                "captured_at": "2026-02-18"
+                "captured_at": "2026-02-18",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。"
               },
               "summary": "建议简历每个项目补充可核验指标（效率、规模、转化、成本）。",
               "title": "能源与公用事业校招JD更强调项目结果与量化证据",
@@ -65008,7 +65211,8 @@
           "source_name": "国家电网官网/招聘入口（备用）",
           "source_type": "company_official",
           "source_url": "https://www.sgcc.com.cn",
-          "usage": "公司清单首批锚点数据"
+          "usage": "公司清单首批锚点数据",
+          "manual_verification_note": "备用入口同样受反爬限制，建议上传sgcc.com.cn浏览器Cookie后人工核验岗位页。"
         },
         {
           "access_check": "checked",
@@ -65218,7 +65422,8 @@
           "http_status": 412,
           "manual_verification_required": true,
           "confidence": 0.72,
-          "usage": "结构化映射补充"
+          "usage": "结构化映射补充",
+          "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。"
         },
         {
           "source_id": "SRC_AUTO_WWW_CSG_CN_5D2CDD95",
@@ -65783,6 +65988,40 @@
                 "零售业务反馈周期更短，便于快速形成经营闭环能力。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做核心系统开发，业务指标感知可能偏弱。",
+                "只做风控建模，工程实现与系统可靠性积累可能不足。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议先选能稳定交付成果的主方向，再通过轮岗项目补齐“业务理解+工程能力”闭环。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+                "source_date": "2026-01-06",
+                "source_id": "SRC_PBC_WORKCONF_20260106",
+                "source_name": "2026年中国人民银行工作会议召开",
+                "source_type": "government_policy",
+                "source_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+                "stat_definition": "结合央行工作会议导向与银行科技岗位结构形成的决策型争议议题。",
+                "publish_date": "2026-01-06",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "银行科技岗应优先“核心系统开发”还是“数据风控建模”？",
+              "issue_id": "IND_FIN_BANK_DEBATE_003",
+              "pro_points": [
+                "核心系统开发路径更利于沉淀高可用与交易稳定性工程能力。",
+                "数据风控建模路径更利于形成业务指标驱动和风险识别能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "系统可用性、模型AUC、不良率"
             }
           ],
           "last_checked": "2026-02-17",
@@ -67611,6 +67850,61 @@
                 }
               ],
               "timeline_id": "IND_FIN_BANK_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.icbc.com.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B",
+                "source_name": "中国工商银行官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.icbc.com.cn",
+                "stat_definition": "按国有大行与股份行校招节奏拆解月度网申、笔试和面试节点。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "新增银行行业月度投递日历，强调秋招主批与春招补录时间差。",
+              "stages": [
+                {
+                  "stage": "提前批与暑期实习转正",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "金融科技、风控、管培等岗位提前开放。"
+                },
+                {
+                  "stage": "秋招主批网申与笔试",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "统一笔试与线上测评集中进行。"
+                },
+                {
+                  "stage": "面试与体检签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "无领导、小组面与专业面并行，滚动签约。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "区域分行、子公司与科技条线二次补录。"
+                }
+              ],
+              "timeline_id": "IND_FIN_BANK_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -70783,11 +71077,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.8,
-        "evidence_percent_overall": 90.8,
-        "freshness_percent_overall": 87.7,
+        "evidence_percent_overall": 91,
+        "freshness_percent_overall": 88.1,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91,
+        "quality_score_overall": 90.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -70803,7 +71097,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 77.3
+        "ranking_percentile": 68.2
       },
       "slug": "finance-bank",
       "sources": [
@@ -76615,7 +76909,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 40.9
+        "ranking_percentile": 36.4
       },
       "slug": "finance-insurance",
       "sources": [
@@ -88258,7 +88552,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 4.5
+        "ranking_percentile": 9.1
       },
       "slug": "fmcg-retail",
       "sources": [
@@ -89046,6 +89340,40 @@
                 "中型团队职责更广，能更快获得业务全链路经验。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做模型训练可能与业务交付场景脱节，短期产出感较弱。",
+                "只做应用工程可能技术深度沉淀不足，长期壁垒偏弱。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "应届阶段建议优先选能持续产出结果的赛道，并通过项目刻意补齐另一侧能力，形成“模型能力+业务落地”双线成长。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.miit.gov.cn/jgsj/xgj/gzdt/art/2026/art_57bbd1d6ebb9433094295a8cb02f3184.html",
+                "source_date": "2026-01-07",
+                "source_id": "SRC_MIIT_IIAI_ACTION_20260107",
+                "source_name": "工信部解读《工业互联网和人工智能融合赋能行动方案》",
+                "source_type": "government_policy",
+                "source_url": "https://www.miit.gov.cn/jgsj/xgj/gzdt/art/2026/art_57bbd1d6ebb9433094295a8cb02f3184.html",
+                "stat_definition": "结合工信部融合赋能行动导向与互联网AI岗位结构形成的决策型争议议题。",
+                "publish_date": "2026-01-07",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "生成式AI岗位应优先“模型训练优化”还是“应用工程落地”？",
+              "issue_id": "IND_INTERNET_AI_DEBATE_003",
+              "pro_points": [
+                "模型训练优化岗位更利于积累算法、数据与算力协同能力。",
+                "应用工程落地岗位更容易形成可量化业务成果与跨团队协作能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "推理成本、上线周期、业务留存"
             }
           ],
           "last_checked": "2026-02-17",
@@ -90922,6 +91250,61 @@
                 }
               ],
               "timeline_id": "IND_INTERNET_AI_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.83,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://jobs.bytedance.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_JOBS_BYTEDANCE_COM_4D6E1DEC",
+                "source_name": "字节跳动官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://jobs.bytedance.com",
+                "stat_definition": "按互联网与AI企业批次公告拆解月度投递、面试与签约窗口。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "新增可执行月度投递日历，区分提前批、主批与春招补录。",
+              "stages": [
+                {
+                  "stage": "提前批与实习转正",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "算法、后端、推荐等核心岗优先释放。"
+                },
+                {
+                  "stage": "秋招主批网申与测评",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "集中完成在线测评、笔试与初面。"
+                },
+                {
+                  "stage": "技术面与签约窗口",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "多轮技术面与HR面并行，Offer滚动发放。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "业务增编和离职补位岗位集中开放。"
+                }
+              ],
+              "timeline_id": "IND_INTERNET_AI_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -94196,11 +94579,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 91.2,
-        "freshness_percent_overall": 88.2,
+        "evidence_percent_overall": 91.4,
+        "freshness_percent_overall": 88.6,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91.7,
+        "quality_score_overall": 92,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -94216,7 +94599,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 86.4
+        "ranking_percentile": 90.9
       },
       "slug": "internet-ai",
       "sources": [
@@ -106660,6 +107043,40 @@
                 "量产路径更贴近交付与成本，业务价值反馈快。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做发电侧运维，技术深度和产品理解可能受限。",
+                "只做储能系统集成，早期项目周期长、交付压力更高。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "优先选择你能稳定交付结果的主路径，同时通过跨项目协作补齐电网侧与系统侧认知。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
+                "source_date": "2026-02-12",
+                "source_id": "SRC_NEA_RENEWABLE_UTIL_20260212",
+                "source_name": "国家能源局：2025年全国可再生能源利用率达到95%以上",
+                "source_type": "government_dataset",
+                "source_url": "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
+                "stat_definition": "结合国家能源局利用率数据与新能源岗位结构形成的决策型争议议题。",
+                "publish_date": "2026-02-12",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "新能源就业应优先“发电侧运维”还是“储能系统集成”？",
+              "issue_id": "IND_NEW_ENERGY_DEBATE_003",
+              "pro_points": [
+                "发电侧运维岗位反馈周期短，便于建立设备与现场问题闭环能力。",
+                "储能系统集成岗位更利于形成“电化学+电力电子+项目交付”复合能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "可再生能源利用率、并网稳定性、储能系统可用率"
             }
           ],
           "last_checked": "2026-02-17",
@@ -108477,6 +108894,61 @@
                 }
               ],
               "timeline_id": "IND_NEW_ENERGY_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.84,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
+                "source_date": "2026-02-12",
+                "source_id": "SRC_NEA_RENEWABLE_UTIL_20260212",
+                "source_name": "国家能源局：2025年全国可再生能源利用率达到95%以上",
+                "source_type": "government_dataset",
+                "source_url": "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
+                "stat_definition": "按新能源企业招聘节奏和监管数据更新窗口拆解月度投递节点。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-12",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "新增新能源行业月度投递日历，突出研发、工程与运维三条主线。",
+              "stages": [
+                {
+                  "stage": "提前批与实习转正",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "电池研发、BMS、功率电子与系统测试岗位先行。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "校招主批发布，测评与专业面集中开展。"
+                },
+                {
+                  "stage": "交付类岗位签约窗口",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "制造、质量、项目交付与现场运维岗位密集签约。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "扩产、项目开工带动工程与运维补录需求。"
+                }
+              ],
+              "timeline_id": "IND_NEW_ENERGY_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -111837,11 +112309,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 88.4,
-        "freshness_percent_overall": 85.5,
+        "evidence_percent_overall": 88.7,
+        "freshness_percent_overall": 85.9,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.6,
+        "quality_score_overall": 89.9,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -111857,7 +112329,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 36.4
+        "ranking_percentile": 40.9
       },
       "slug": "new-energy",
       "sources": [
@@ -124077,7 +124549,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 72.7
+        "ranking_percentile": 77.3
       },
       "slug": "real-estate-infrastructure",
       "sources": [
@@ -130141,7 +130613,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 68.2
+        "ranking_percentile": 72.7
       },
       "slug": "semiconductor-electronics",
       "sources": [
@@ -131480,7 +131952,7 @@
                 "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 412,
-                "manual_verification_note": "招聘子站存在访问策略限制，建议人工核验校招公告页。",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。",
                 "manual_verification_required": true,
                 "sample_size": 1,
                 "snapshot_url": "https://www.sgcc.com.cn",
@@ -131739,7 +132211,7 @@
                 "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 412,
-                "manual_verification_note": "招聘子站存在访问策略限制，建议人工核验校招公告页。",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。",
                 "manual_verification_required": true,
                 "sample_size": 1,
                 "snapshot_url": "https://www.sgcc.com.cn",
@@ -131977,7 +132449,8 @@
                 "source_url": "https://www.sgcc.com.cn",
                 "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
                 "publish_date": "2026-02-17",
-                "captured_at": "2026-02-18"
+                "captured_at": "2026-02-18",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。"
               },
               "hard_skills": [
                 "政策理解",
@@ -132094,7 +132567,8 @@
                 ],
                 "source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
                 "source_url": "https://www.sgcc.com.cn",
-                "updated_at": "2026-02-18"
+                "updated_at": "2026-02-18",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。"
               }
             },
             {
@@ -132600,7 +133074,8 @@
                 ],
                 "source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
                 "source_url": "https://www.sgcc.com.cn",
-                "updated_at": "2026-02-18"
+                "updated_at": "2026-02-18",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。"
               }
             ],
             "personalization_guideline": {
@@ -133045,7 +133520,8 @@
                   "SRC_NBS_INCOME_2025_FULLYEAR"
                 ],
                 "publish_date": "2026-02-17",
-                "captured_at": "2026-02-18"
+                "captured_at": "2026-02-18",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。"
               },
               "result": "形成可复用的改进清单并完成一轮闭环，后续按月复盘并持续校正。",
               "scenario": "校招渠道广覆盖但笔面通过率不稳定，转化漏斗波动。",
@@ -133622,7 +134098,8 @@
                 "source_url": "https://www.sgcc.com.cn",
                 "stat_definition": "来自公开题库的回忆题干样本（按岗位标签整理）。",
                 "publish_date": "2026-02-18",
-                "captured_at": "2026-02-18"
+                "captured_at": "2026-02-18",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。"
               },
               "is_template": false,
               "needs_real_question": false,
@@ -136002,7 +136479,8 @@
                 "source_url": "https://www.sgcc.com.cn",
                 "stat_definition": "来自公开题库的回忆面试题样本（按岗位标签整理）。",
                 "publish_date": "2026-02-18",
-                "captured_at": "2026-02-18"
+                "captured_at": "2026-02-18",
+                "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。"
               },
               "is_template": false,
               "needs_real_question": false,
@@ -136736,7 +137214,8 @@
           "http_status": 412,
           "manual_verification_required": true,
           "confidence": 0.72,
-          "usage": "结构化映射补充"
+          "usage": "结构化映射补充",
+          "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。"
         },
         {
           "source_id": "SRC_BOSS",
