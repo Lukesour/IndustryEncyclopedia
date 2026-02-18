@@ -414,6 +414,105 @@ EVENT_LOG_COVERAGE_JSON="$(jq --arg recent_cutoff "${RECENT_CUTOFF}" '
 ]
 ' "${DATA_PATH}")"
 
+# Evidence consistency gates (new).
+POLICY_TITLE_SOURCE_MISMATCH_JSON="$(jq '
+[
+  ."行业词条"[]
+  | .industry_id as $industry_id
+  | .dynamic["政策变化日志"].items[]?
+  | select((.title // "") | test("国家统计局"))
+  | select(((.evidence.source_name // "") | test("国家统计局") | not) or ((.evidence.source_type // "") != "government_dataset"))
+  | {
+      industry_id: $industry_id,
+      log_id: (.log_id // null),
+      title: (.title // null),
+      source_id: (.evidence.source_id // null),
+      source_name: (.evidence.source_name // null),
+      source_type: (.evidence.source_type // null)
+    }
+]
+' "${DATA_PATH}")"
+POLICY_TITLE_SOURCE_MISMATCH_COUNT="$(jq 'length' <<<"${POLICY_TITLE_SOURCE_MISMATCH_JSON}")"
+
+POLICY_DATE_SOURCE_MISMATCH_JSON="$(jq '
+[
+  ."行业词条"[]
+  | .industry_id as $industry_id
+  | .dynamic["政策变化日志"].items[]?
+  | select((.date // "") != "" and (.evidence.source_date // "") != "" and (.date != .evidence.source_date))
+  | {
+      industry_id: $industry_id,
+      log_id: (.log_id // null),
+      date: (.date // null),
+      source_date: (.evidence.source_date // null),
+      source_id: (.evidence.source_id // null)
+    }
+]
+' "${DATA_PATH}")"
+POLICY_DATE_SOURCE_MISMATCH_COUNT="$(jq 'length' <<<"${POLICY_DATE_SOURCE_MISMATCH_JSON}")"
+
+STATS_DATA_PERIOD_MISSING_JSON="$(jq '
+[
+  ."行业词条"[]
+  | .industry_id as $industry_id
+  | .dynamic
+  | to_entries[]
+  | .key as $collection
+  | .value.items[]?
+  | select(has("evidence") and (.evidence | type == "object"))
+  | select(
+      (.evidence.source_type // "") == "government_dataset"
+      or (.evidence.source_type // "") == "commercial_platform"
+      or (.evidence.source_type // "") == "general_platform"
+    )
+  | select(((.evidence.data_period // "") | tostring | length) == 0)
+  | {
+      industry_id: $industry_id,
+      collection: $collection,
+      item_id: (.snapshot_id // .question_id // .event_id // .log_id // .company_id // .link_id // .interview_id // .case_id // null),
+      source_id: (.evidence.source_id // null)
+    }
+]
+' "${DATA_PATH}")"
+STATS_DATA_PERIOD_MISSING_COUNT="$(jq 'length' <<<"${STATS_DATA_PERIOD_MISSING_JSON}")"
+
+DECISION_SALARY_SOURCE_INVALID_JSON="$(jq '
+(reduce ."来源注册表"[] as $s ({}; .[$s.source_id] = $s.source_type)) as $type_map
+| [
+    ."行业词条"[]
+    | .industry_id as $industry_id
+    | .static["决策输出"].decision_cards.evidence_chain.salary_source_id as $salary_source_id
+    | ($type_map[$salary_source_id] // "unknown") as $source_type
+    | select($source_type != "government_dataset" and $source_type != "commercial_platform" and $source_type != "general_platform")
+    | {
+        industry_id: $industry_id,
+        salary_source_id: $salary_source_id,
+        source_type: $source_type
+      }
+  ]
+' "${DATA_PATH}")"
+DECISION_SALARY_SOURCE_INVALID_COUNT="$(jq 'length' <<<"${DECISION_SALARY_SOURCE_INVALID_JSON}")"
+
+DECISION_EVIDENCE_NON200_JSON="$(jq '
+(reduce ."来源注册表"[] as $s ({}; .[$s.source_id] = $s.http_status)) as $status_map
+| [
+    ."行业词条"[] as $entry
+    | [
+        {source_role: "timeline_source_id", source_id: ($entry.static["决策输出"].decision_cards.evidence_chain.timeline_source_id // null)},
+        {source_role: "policy_source_id", source_id: ($entry.static["决策输出"].decision_cards.evidence_chain.policy_source_id // null)},
+        {source_role: "salary_source_id", source_id: ($entry.static["决策输出"].decision_cards.evidence_chain.salary_source_id // null)}
+      ][]
+    | select(.source_id != null and (($status_map[.source_id] // 200) != 200))
+    | {
+        industry_id: $entry.industry_id,
+        source_role,
+        source_id,
+        http_status: ($status_map[.source_id] // null)
+      }
+  ]
+' "${DATA_PATH}")"
+DECISION_EVIDENCE_NON200_COUNT="$(jq 'length' <<<"${DECISION_EVIDENCE_NON200_JSON}")"
+
 # New explainable gate metrics.
 P0_SLOT_TOTAL="$(jq '[."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P0")]|length' "${DATA_PATH}")"
 P0_PENDING_TOTAL="$(jq '[."行业词条"[]|.dynamic|to_entries[]|.value.manual_fill_slots[]?|select(.priority=="P0")|select((.status // "pending")|startswith("pending"))]|length' "${DATA_PATH}")"
@@ -445,6 +544,11 @@ GATE_EVENT_MIN_COUNT="$(jq '."治理配置"."发布硬门槛".event_log_min_coun
 GATE_EVENT_RECENT_MIN="$(jq '."治理配置"."发布硬门槛".event_recent_180d_min_count // 1' "${DATA_PATH}")"
 GATE_SOURCE_TOP1_MAX="$(jq '."治理配置"."发布硬门槛".source_concentration_top1_max_percent // 100' "${DATA_PATH}")"
 GATE_SOURCE_TOP5_MAX="$(jq '."治理配置"."发布硬门槛".source_concentration_top5_max_percent // 100' "${DATA_PATH}")"
+GATE_POLICY_TITLE_SOURCE_MISMATCH_MAX="$(jq '."治理配置"."发布硬门槛".policy_title_source_mismatch_max_hits // 0' "${DATA_PATH}")"
+GATE_POLICY_DATE_SOURCE_MISMATCH_MAX="$(jq '."治理配置"."发布硬门槛".policy_date_source_mismatch_max_hits // 0' "${DATA_PATH}")"
+GATE_STATS_DATA_PERIOD_MISSING_MAX="$(jq '."治理配置"."发布硬门槛".stats_data_period_missing_max_hits // 0' "${DATA_PATH}")"
+GATE_DECISION_SALARY_SOURCE_INVALID_MAX="$(jq '."治理配置"."发布硬门槛".decision_salary_source_invalid_max_hits // 0' "${DATA_PATH}")"
+GATE_DECISION_EVIDENCE_NON200_MAX="$(jq '."治理配置"."发布硬门槛".decision_evidence_non200_max_hits // 0' "${DATA_PATH}")"
 
 SOURCE_TOP1_SHARE="$(jq '
 ([."行业词条"[]|.dynamic|to_entries[]|.value.items[]?|(.evidence.source_id // .source_id // empty)]) as $refs
@@ -510,6 +614,11 @@ if awk -v a="${DECISION_EVIDENCE_LOWSAMPLE_COUNT}" -v b="${GATE_DECISION_EVIDENC
 if awk -v a="${EVENT_LOG_ISSUE_COUNT}" 'BEGIN{exit !(a > 0)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${SOURCE_TOP1_SHARE}" -v b="${GATE_SOURCE_TOP1_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${SOURCE_TOP5_SHARE}" -v b="${GATE_SOURCE_TOP5_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${POLICY_TITLE_SOURCE_MISMATCH_COUNT}" -v b="${GATE_POLICY_TITLE_SOURCE_MISMATCH_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${POLICY_DATE_SOURCE_MISMATCH_COUNT}" -v b="${GATE_POLICY_DATE_SOURCE_MISMATCH_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${STATS_DATA_PERIOD_MISSING_COUNT}" -v b="${GATE_STATS_DATA_PERIOD_MISSING_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${DECISION_SALARY_SOURCE_INVALID_COUNT}" -v b="${GATE_DECISION_SALARY_SOURCE_INVALID_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${DECISION_EVIDENCE_NON200_COUNT}" -v b="${GATE_DECISION_EVIDENCE_NON200_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${P0_COMPLETION_PERCENT}" -v b="${GATE_P0_MIN}" 'BEGIN{exit !(a < b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${TEMPLATE_RATIO_PERCENT}" -v b="${GATE_TEMPLATE_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${SOURCE_HTTP_200_RATIO}" -v b="${GATE_SOURCE_MIN}" 'BEGIN{exit !(a < b)}'; then HAS_BLOCKERS=1; fi
@@ -529,6 +638,11 @@ DECISION_EVIDENCE_ISSUE="$(jq -n --argjson actual "${DECISION_EVIDENCE_LOWSAMPLE
 EVENT_LOG_ISSUE="$(jq -n --argjson actual "${EVENT_LOG_ISSUE_COUNT}" --argjson min_total "${GATE_EVENT_MIN_COUNT}" --argjson min_recent "${GATE_EVENT_RECENT_MIN}" '{actual_hits:$actual, min_event_total:$min_total, min_recent_180d:$min_recent}')"
 SOURCE_TOP1_ISSUE="$(jq -n --argjson actual "${SOURCE_TOP1_SHARE}" --argjson threshold "${GATE_SOURCE_TOP1_MAX}" '{actual_percent:$actual, threshold_percent:$threshold}')"
 SOURCE_TOP5_ISSUE="$(jq -n --argjson actual "${SOURCE_TOP5_SHARE}" --argjson threshold "${GATE_SOURCE_TOP5_MAX}" '{actual_percent:$actual, threshold_percent:$threshold}')"
+POLICY_TITLE_SOURCE_MISMATCH_ISSUE="$(jq -n --argjson actual "${POLICY_TITLE_SOURCE_MISMATCH_COUNT}" --argjson threshold "${GATE_POLICY_TITLE_SOURCE_MISMATCH_MAX}" '{actual_hits:$actual, threshold_hits:$threshold}')"
+POLICY_DATE_SOURCE_MISMATCH_ISSUE="$(jq -n --argjson actual "${POLICY_DATE_SOURCE_MISMATCH_COUNT}" --argjson threshold "${GATE_POLICY_DATE_SOURCE_MISMATCH_MAX}" '{actual_hits:$actual, threshold_hits:$threshold}')"
+STATS_DATA_PERIOD_MISSING_ISSUE="$(jq -n --argjson actual "${STATS_DATA_PERIOD_MISSING_COUNT}" --argjson threshold "${GATE_STATS_DATA_PERIOD_MISSING_MAX}" '{actual_hits:$actual, threshold_hits:$threshold}')"
+DECISION_SALARY_SOURCE_INVALID_ISSUE="$(jq -n --argjson actual "${DECISION_SALARY_SOURCE_INVALID_COUNT}" --argjson threshold "${GATE_DECISION_SALARY_SOURCE_INVALID_MAX}" '{actual_hits:$actual, threshold_hits:$threshold}')"
+DECISION_EVIDENCE_NON200_ISSUE="$(jq -n --argjson actual "${DECISION_EVIDENCE_NON200_COUNT}" --argjson threshold "${GATE_DECISION_EVIDENCE_NON200_MAX}" '{actual_hits:$actual, threshold_hits:$threshold}')"
 
 jq -n \
   --arg generated_at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
@@ -561,6 +675,16 @@ jq -n \
   --argjson source_top1_max "${GATE_SOURCE_TOP1_MAX}" \
   --argjson source_top5_share "${SOURCE_TOP5_SHARE}" \
   --argjson source_top5_max "${GATE_SOURCE_TOP5_MAX}" \
+  --argjson policy_title_source_mismatch_count "${POLICY_TITLE_SOURCE_MISMATCH_COUNT}" \
+  --argjson policy_title_source_mismatch_max "${GATE_POLICY_TITLE_SOURCE_MISMATCH_MAX}" \
+  --argjson policy_date_source_mismatch_count "${POLICY_DATE_SOURCE_MISMATCH_COUNT}" \
+  --argjson policy_date_source_mismatch_max "${GATE_POLICY_DATE_SOURCE_MISMATCH_MAX}" \
+  --argjson stats_data_period_missing_count "${STATS_DATA_PERIOD_MISSING_COUNT}" \
+  --argjson stats_data_period_missing_max "${GATE_STATS_DATA_PERIOD_MISSING_MAX}" \
+  --argjson decision_salary_source_invalid_count "${DECISION_SALARY_SOURCE_INVALID_COUNT}" \
+  --argjson decision_salary_source_invalid_max "${GATE_DECISION_SALARY_SOURCE_INVALID_MAX}" \
+  --argjson decision_evidence_non200_count "${DECISION_EVIDENCE_NON200_COUNT}" \
+  --argjson decision_evidence_non200_max "${GATE_DECISION_EVIDENCE_NON200_MAX}" \
   --argjson p0_completion_percent "${P0_COMPLETION_PERCENT}" \
   --argjson p0_completion_min "${GATE_P0_MIN}" \
   --argjson template_ratio_percent "${TEMPLATE_RATIO_PERCENT}" \
@@ -583,6 +707,11 @@ jq -n \
   --argjson question_role_issues "${QUESTION_ROLE_ISSUES}" \
   --argjson decision_evidence_lowsample_issues "${DECISION_EVIDENCE_LOWSAMPLE_JSON}" \
   --argjson event_log_issues "${EVENT_LOG_ISSUES}" \
+  --argjson policy_title_source_mismatch_issues "${POLICY_TITLE_SOURCE_MISMATCH_JSON}" \
+  --argjson policy_date_source_mismatch_issues "${POLICY_DATE_SOURCE_MISMATCH_JSON}" \
+  --argjson stats_data_period_missing_issues "${STATS_DATA_PERIOD_MISSING_JSON}" \
+  --argjson decision_salary_source_invalid_issues "${DECISION_SALARY_SOURCE_INVALID_JSON}" \
+  --argjson decision_evidence_non200_issues "${DECISION_EVIDENCE_NON200_JSON}" \
   --argjson p0_completion_issue "${P0_COMPLETION_ISSUE}" \
   --argjson template_ratio_issue "${TEMPLATE_RATIO_ISSUE}" \
   --argjson source_http_issue "${SOURCE_HTTP_ISSUE}" \
@@ -597,6 +726,11 @@ jq -n \
   --argjson event_log_issue "${EVENT_LOG_ISSUE}" \
   --argjson source_top1_issue "${SOURCE_TOP1_ISSUE}" \
   --argjson source_top5_issue "${SOURCE_TOP5_ISSUE}" \
+  --argjson policy_title_source_mismatch_issue "${POLICY_TITLE_SOURCE_MISMATCH_ISSUE}" \
+  --argjson policy_date_source_mismatch_issue "${POLICY_DATE_SOURCE_MISMATCH_ISSUE}" \
+  --argjson stats_data_period_missing_issue "${STATS_DATA_PERIOD_MISSING_ISSUE}" \
+  --argjson decision_salary_source_invalid_issue "${DECISION_SALARY_SOURCE_INVALID_ISSUE}" \
+  --argjson decision_evidence_non200_issue "${DECISION_EVIDENCE_NON200_ISSUE}" \
   '{
     generated_at: $generated_at,
     data_file: $data_file,
@@ -626,6 +760,16 @@ jq -n \
       event_log_coverage_hits: $event_log_issue_count,
       event_log_min_count: $event_log_min_count,
       event_recent_180d_min_count: $event_recent_min_count,
+      policy_title_source_mismatch_hits: $policy_title_source_mismatch_count,
+      policy_title_source_mismatch_max_hits: $policy_title_source_mismatch_max,
+      policy_date_source_mismatch_hits: $policy_date_source_mismatch_count,
+      policy_date_source_mismatch_max_hits: $policy_date_source_mismatch_max,
+      stats_data_period_missing_hits: $stats_data_period_missing_count,
+      stats_data_period_missing_max_hits: $stats_data_period_missing_max,
+      decision_salary_source_invalid_hits: $decision_salary_source_invalid_count,
+      decision_salary_source_invalid_max_hits: $decision_salary_source_invalid_max,
+      decision_evidence_non200_hits: $decision_evidence_non200_count,
+      decision_evidence_non200_max_hits: $decision_evidence_non200_max,
       source_concentration_top1_percent: $source_top1_share,
       source_concentration_top1_max_percent: $source_top1_max,
       source_concentration_top5_percent: $source_top5_share,
@@ -653,6 +797,11 @@ jq -n \
       question_role_coverage_records: $question_role_issues,
       decision_evidence_lowsample_records: $decision_evidence_lowsample_issues,
       event_log_coverage_records: $event_log_issues,
+      policy_title_source_mismatch_records: $policy_title_source_mismatch_issues,
+      policy_date_source_mismatch_records: $policy_date_source_mismatch_issues,
+      stats_data_period_missing_records: $stats_data_period_missing_issues,
+      decision_salary_source_invalid_records: $decision_salary_source_invalid_issues,
+      decision_evidence_non200_records: $decision_evidence_non200_issues,
       p0_completion_threshold: $p0_completion_issue,
       template_ratio_threshold: $template_ratio_issue,
       source_http_200_threshold: $source_http_issue,
@@ -666,7 +815,12 @@ jq -n \
       decision_evidence_lowsample_threshold: $decision_evidence_issue,
       event_log_coverage_threshold: $event_log_issue,
       source_concentration_top1_threshold: $source_top1_issue,
-      source_concentration_top5_threshold: $source_top5_issue
+      source_concentration_top5_threshold: $source_top5_issue,
+      policy_title_source_mismatch_threshold: $policy_title_source_mismatch_issue,
+      policy_date_source_mismatch_threshold: $policy_date_source_mismatch_issue,
+      stats_data_period_missing_threshold: $stats_data_period_missing_issue,
+      decision_salary_source_invalid_threshold: $decision_salary_source_invalid_issue,
+      decision_evidence_non200_threshold: $decision_evidence_non200_issue
     }
   }' > "${GATE_PATH}"
 
