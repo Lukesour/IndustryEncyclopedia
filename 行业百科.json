@@ -559,10 +559,19 @@
           "补齐BOSS/小红书运营补录位及采样质检规则，并将复查节奏按行业波动分层。",
           "发布门禁新增证据一致性、统计口径完整性、决策薪酬源语义与决策链可访问性检查。"
         ]
+      },
+      {
+        "version": "v1.43.1",
+        "date": "2026-02-18",
+        "summary": [
+          "逐行业人工重写23个行业的10分钟投递策略，修复模板化和病句，提升可执行性。",
+          "23个行业外部链接LINK_002升级为政策锚点直达页，LINK_003统一为校招直达页并补充用途说明。",
+          "同步保留BOSS/小红书运营补录位，明确网页受限场景下的App检索与截图留证规则。"
+        ]
       }
     ],
     "文档名称": "中国大陆应届生求职行业百科（v1.42.2平台补录结构化增强版）",
-    "版本": "v1.43.0",
+    "版本": "v1.43.1",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -7562,34 +7571,34 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.miit.gov.cn",
+                "snapshot_url": "https://wap.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_525ed8efdfd649f5a1c15911769c0590.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_MIIT",
-                "source_name": "中华人民共和国工业和信息化部",
-                "source_type": "government_agency",
-                "source_url": "https://www.miit.gov.cn",
+                "source_id": "SRC_MIIT_MECHANICAL_STABLE_20250929",
+                "source_name": "工业和信息化部等六部门关于印发《机械行业稳增长工作方案（2025—2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://wap.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_525ed8efdfd649f5a1c15911769c0590.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.miit.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://wap.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_525ed8efdfd649f5a1c15911769c0590.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
@@ -7601,15 +7610,15 @@
                 "source_type": "company_official",
                 "source_url": "https://www.inovance.com",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_LINK_003",
-              "link_type": "company_official",
-              "title": "汇川技术 校招/官网入口",
-              "updated_at": "2026-02-16",
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
               "url": "https://www.inovance.com",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -12386,7 +12395,7 @@
       },
       "industry_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -12440,7 +12449,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 72.7
+        "ranking_percentile": 68.2
       },
       "slug": "advanced-manufacturing-automation",
       "sources": [
@@ -12866,7 +12875,7 @@
           "三层阅读卡": {
             "30秒结论": "适合愿意长期做工程落地、偏好实体产业链与现场问题解决；不适合只偏好纯互联网办公场景。今年机会集中在机器换人、国产替代；主要风险是下游投资收缩、项目回款慢。",
             "3分钟全景": "以自动化设备、工业机器人、工业软件和智能工厂改造为核心的先进制造行业。当前重点赛道为机器人本体、运动控制、机器视觉，校招机会主要集中在深圳、苏州、上海。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以机械工程师、电气工程师做首轮投递，按8-9月提前批与技术岗预热；9-10月秋招主批；10-12月终面定岗与签约；2-4月春招补录安排节奏；若若两周内技术面邀约少于2次，补投区域自动化集成商与MES实施岗。则立即补投；12月底仍未进入终面，转向新能源装备/半导体设备工艺支持岗。。"
+            "10分钟投递策略": "先以机械工程师、电气工程师做首轮投递，按8-9月提前批、9-10月秋招主批、10-12月终面签约、2-4月春招补录推进。若两周内技术面邀约少于2次，补投区域自动化集成商、MES实施和售后技术支持岗；12月底仍未进终面，转向新能源装备与半导体设备工艺支持岗。"
           }
         },
         "参考方向标签": [
@@ -13877,34 +13886,34 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.moa.gov.cn",
+                "snapshot_url": "https://scs.moa.gov.cn/jcyj/202510/t20251009_6477959.htm",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_MOA_GOV_CN_4B5BC52F",
-                "source_name": "农业与市场监管公开信息",
-                "source_type": "curated_mapping",
-                "source_url": "https://www.moa.gov.cn",
+                "source_id": "SRC_MOA_CASDE_20251009",
+                "source_name": "农业农村部市场预警专家委员会发布2025年10月中国农产品供需形势分析",
+                "source_type": "government_dataset",
+                "source_url": "https://scs.moa.gov.cn/jcyj/202510/t20251009_6477959.htm",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_AGRI_FOOD_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.moa.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://scs.moa.gov.cn/jcyj/202510/t20251009_6477959.htm",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
@@ -13916,15 +13925,15 @@
                 "source_type": "company_official",
                 "source_url": "https://www.yili.com",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_AGRI_FOOD_LINK_003",
-              "link_type": "company_official",
-              "title": "伊利 校招/官网入口",
-              "updated_at": "2026-02-16",
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
               "url": "https://www.yili.com",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -18566,7 +18575,7 @@
       },
       "industry_id": "IND_AGRI_FOOD",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -18626,7 +18635,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 22.7
+        "ranking_percentile": 31.8
       },
       "slug": "agriculture-food",
       "sources": [
@@ -19081,7 +19090,7 @@
           "三层阅读卡": {
             "30秒结论": "适合愿意在民生刚需行业长期发展、关注质量与供应链协同；不适合无法接受生产端流程规范与现场要求。今年机会集中在消费升级、标准化生产；主要风险是原料价格波动、疫病与自然风险。",
             "3分钟全景": "覆盖种植养殖、食品加工、供应链流通与品牌销售的民生基础行业。当前重点赛道为生鲜与冷链、预制与方便食品、食品研发，校招机会主要集中在上海、广州、深圳。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以质量管理、研发工程师做首轮投递，按8-9月提前批与宣讲；9-11月秋招主批；11-12月签约与基地分配；2-4月春招补录安排节奏；若若笔试通过率连续两周低于20%，补投区域食品加工企业与品控岗。则立即补投；春招结束仍无offer，转向快消零售质控或冷链运营岗位。。"
+            "10分钟投递策略": "先以质量管理、研发工程师做首轮投递，按8-9月宣讲预热、9-11月主批、11-12月签约分配、2-4月补录推进。若连续两周笔试通过率低于20%，补投区域食品加工企业的品控、工艺和供应链计划岗；春招结束仍无offer，转向快消质控与冷链运营岗位。"
           }
         },
         "参考方向标签": [
@@ -20138,34 +20147,34 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.miit.gov.cn",
+                "snapshot_url": "https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2025/art_76f6af8d52cb4f0cb0f8fbabddc85241.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_MIIT",
-                "source_name": "中华人民共和国工业和信息化部",
-                "source_type": "government_agency",
-                "source_url": "https://www.miit.gov.cn",
+                "source_id": "SRC_MIIT_AUTO_STABLE_20250912",
+                "source_name": "工业和信息化部等八部门关于印发《汽车行业稳增长工作方案（2025—2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2025/art_76f6af8d52cb4f0cb0f8fbabddc85241.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_AUTO_INTELLIGENT_DRIVING_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.miit.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2025/art_76f6af8d52cb4f0cb0f8fbabddc85241.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_note": "链接可访问性不稳定，请人工补充可访问快照URL或替代来源。",
@@ -20178,15 +20187,15 @@
                 "source_type": "company_official",
                 "source_url": "https://job.byd.com",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_AUTO_INTELLIGENT_DRIVING_LINK_003",
-              "link_type": "company_official",
-              "title": "比亚迪 校招/官网入口",
-              "updated_at": "2026-02-16",
-              "url": "https://career.byd.com",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
+              "url": "https://job.byd.com",
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -24968,7 +24977,7 @@
       },
       "industry_id": "IND_AUTO_INTELLIGENT_DRIVING",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -25022,7 +25031,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 68.2
+        "ranking_percentile": 63.6
       },
       "slug": "auto-intelligent-driving",
       "sources": [
@@ -25449,7 +25458,7 @@
           "三层阅读卡": {
             "30秒结论": "适合喜欢软硬件结合与复杂系统工程、能接受快节奏项目推进；不适合不愿接触跨学科协作和现场验证。今年机会集中在电动化渗透、智能化体验升级；主要风险是价格战、技术路线切换。",
             "3分钟全景": "以整车研发制造为核心，融合电动化、智能化、网联化的软件硬件一体化行业。当前重点赛道为整车电子电气架构、智驾系统、智能座舱，校招机会主要集中在上海、深圳、北京。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以嵌入式软件工程师、控制算法工程师做首轮投递，按7-8月提前批与实习转正；9-10月秋招主批网申与笔试；10-12月多轮技术面与签约；2-4月春招项目补录安排节奏；若若三周内无二面，补投域控、仿真测试和车规软件验证岗位。则立即补投；次年3月仍无进展，转向工业自动化控制或机器人算法岗位。。"
+            "10分钟投递策略": "先以嵌入式软件、控制算法岗做首轮投递，按7-8月提前批、9-10月主批、10-12月多轮技术面、2-4月补录推进。若三周内无二面，补投域控软件、仿真测试和车规验证岗位；次年3月仍无进展，转向工业自动化控制与机器人算法岗位。"
           }
         },
         "参考方向标签": [
@@ -26506,35 +26515,35 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_note": "链接可访问性不稳定，请人工补充可访问快照URL或替代来源。",
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://sousuo.www.gov.cn/sousuo/search.shtml?searchword=%E5%9B%BD%E5%AE%B6%E8%8D%AF%E7%9B%91%E5%B1%80%20%E6%8B%9B%E8%81%98",
+                "snapshot_url": "https://www.nmpaic.org.cn/yjzxyw/202602/t20260206_429414.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_NMPA_GOV_CN_59F31F83",
-                "source_name": "中国政府网搜索-国家药监局招聘相关信息",
-                "source_type": "government_platform",
-                "source_url": "https://sousuo.www.gov.cn/sousuo/search.shtml?searchword=%E5%9B%BD%E5%AE%B6%E8%8D%AF%E7%9B%91%E5%B1%80%20%E6%8B%9B%E8%81%98",
+                "source_id": "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
+                "source_name": "2026年全国医疗器械监督管理工作会议召开（NMPA信息中心转载）",
+                "source_type": "government_policy",
+                "source_url": "https://www.nmpaic.org.cn/yjzxyw/202602/t20260206_429414.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-17",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_BIOMED_DEVICE_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.nmpa.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.nmpaic.org.cn/yjzxyw/202602/t20260206_429414.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
@@ -26546,15 +26555,15 @@
                 "source_type": "company_official",
                 "source_url": "https://www.mindray.com",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_BIOMED_DEVICE_LINK_003",
-              "link_type": "company_official",
-              "title": "迈瑞医疗 校招/官网入口",
-              "updated_at": "2026-02-16",
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
               "url": "https://www.mindray.com",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -31408,7 +31417,7 @@
       },
       "industry_id": "IND_BIOMED_DEVICE",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -31889,7 +31898,7 @@
           "三层阅读卡": {
             "30秒结论": "适合愿意接受长期合规与研发周期、关注技术与临床价值结合；不适合不愿处理法规流程与文档要求。今年机会集中在老龄化需求、国产替代；主要风险是研发失败、合规处罚。",
             "3分钟全景": "以药品与医疗器械研发、注册、生产、商业化为核心的生命科学产业。当前重点赛道为肿瘤与免疫、高值耗材、影像设备，校招机会主要集中在上海、北京、苏州。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以医学事务、临床运营做首轮投递，按8-9月提前批与核心岗位预热；9-11月秋招主批流程；11-12月签约与项目分配；2-4月春招补录安排节奏；若若一个月内面试少于2次，补投区域器械企业及医院科研助理岗。则立即补投；春招收尾仍无offer，转向医疗信息化实施与药事合规支持。。"
+            "10分钟投递策略": "先以医学事务、临床运营岗做首轮投递，按8-9月预热、9-11月主批、11-12月签约、2-4月补录推进。若一个月内面试少于2次，补投区域器械企业的注册、质量和临床协调岗位；春招收尾仍无offer，转向医疗信息化实施与药事合规支持岗位。"
           }
         },
         "参考方向标签": [
@@ -32989,34 +32998,34 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.miit.gov.cn",
+                "snapshot_url": "https://www.gov.cn/zhengce/zhengceku/202509/content_7042418.htm",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_MIIT",
-                "source_name": "中华人民共和国工业和信息化部",
-                "source_type": "government_agency",
-                "source_url": "https://www.miit.gov.cn",
+                "source_id": "SRC_GOV_PETROCHEM_STABLE_20250926",
+                "source_name": "工业和信息化部等7部门关于印发《石化化工行业稳增长工作方案（2025-2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.gov.cn/zhengce/zhengceku/202509/content_7042418.htm",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_CHEM_NEW_MATERIALS_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.miit.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.gov.cn/zhengce/zhengceku/202509/content_7042418.htm",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
@@ -33028,15 +33037,15 @@
                 "source_type": "company_official",
                 "source_url": "https://www.whchem.com",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_CHEM_NEW_MATERIALS_LINK_003",
-              "link_type": "company_official",
-              "title": "万华化学 校招/官网入口",
-              "updated_at": "2026-02-16",
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
               "url": "https://www.whchem.com",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -37794,7 +37803,7 @@
       },
       "industry_id": "IND_CHEM_NEW_MATERIALS",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -37848,7 +37857,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 63.6
+        "ranking_percentile": 59.1
       },
       "slug": "chemicals-new-materials",
       "sources": [
@@ -38274,7 +38283,7 @@
           "三层阅读卡": {
             "30秒结论": "适合专业基础扎实并愿意长期工程化实践、对材料创新和制造流程有兴趣；不适合对生产现场或安全合规要求不适应。今年机会集中在国产替代、新能源与电子需求；主要风险是原料价格波动、环保与安环压力。",
             "3分钟全景": "以化工生产、材料研发与下游应用验证为核心的基础工业与高端材料行业。当前重点赛道为新能源材料、电子材料、特种高分子，校招机会主要集中在上海、宁波、苏州。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以研发工程师、工艺工程师做首轮投递，按8-9月提前批与技术岗预热；9-11月秋招主批网申笔面；11-12月签约与基地分配；2-4月春招补录安排节奏；若若两周无笔试反馈，补投区域化工园区企业与工艺技术岗。则立即补投；春招结束仍未上岸，转向新能源材料质量/应用工程岗位。。"
+            "10分钟投递策略": "先以研发、工艺岗做首轮投递，按8-9月技术岗预热、9-11月主批、11-12月签约分配、2-4月补录推进。若两周无笔试反馈，补投化工园区企业的工艺优化、EHS和质量工程岗；春招结束仍未上岸，转向新能源材料应用与质量岗位。"
           }
         },
         "参考方向标签": [
@@ -39411,54 +39420,54 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "http://www.scs.gov.cn",
+                "snapshot_url": "https://www.scs.gov.cn/detail/ArticleID/4098fcf8-9f1b-47b4-8ca7-c2f742f78585",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_SCS",
-                "source_name": "国家公务员局",
-                "source_type": "government_agency",
-                "source_url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html",
+                "source_id": "SRC_SCS_EXAM_2026",
+                "source_name": "中央机关及其直属机构2026年度考试录用公务员报名即将开始（中国政府网）",
+                "source_type": "government_policy",
+                "source_url": "https://www.gov.cn/lianbo/bumen/202510/content_7044277.htm",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_CIVIL_SERVICE_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "http://www.scs.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.gov.cn/lianbo/bumen/202510/content_7044277.htm",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "http://www.scs.gov.cn",
+                "snapshot_url": "http://bm.scs.gov.cn",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_SCS",
-                "source_name": "国家公务员局",
-                "source_type": "government_agency",
-                "source_url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html",
+                "source_id": "SRC_AUTO_BM_SCS_GOV_CN_6B67637B",
+                "source_name": "国考报名系统官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "http://bm.scs.gov.cn",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_CIVIL_SERVICE_LINK_003",
-              "link_type": "company_official",
-              "title": "国家公务员局 校招/官网入口",
-              "updated_at": "2026-02-16",
-              "url": "http://www.scs.gov.cn",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
+              "url": "http://bm.scs.gov.cn",
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -44368,7 +44377,7 @@
       },
       "industry_id": "IND_CIVIL_SERVICE",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -44406,7 +44415,7 @@
         "freshness_percent_overall": 92.6,
         "real_data_ratio_overall": 82.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 92.3,
+        "quality_score_overall": 91.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -44422,7 +44431,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 90.9
+        "ranking_percentile": 72.7
       },
       "slug": "civil-service",
       "sources": [
@@ -44899,7 +44908,7 @@
           "三层阅读卡": {
             "30秒结论": "适合重视长期稳定与公共治理价值、具备较强应试与文字表达能力；不适合不愿接受程序化选拔和较长周期等待。今年机会集中在公共服务升级、数字化治理；主要风险是竞争激烈、流程周期长。",
             "3分钟全景": "围绕党政机关招录体系形成的公共治理职业通道。当前重点赛道为综合管理、专业技术岗（按系统）、基层治理，校招机会主要集中在北京、上海、广州。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以综合管理岗、执法类岗做首轮投递，按10-10月公告发布与报名；10-11月资格审查与确认；11-12月笔试与成绩安排节奏；若若首轮审核或笔试模拟分不达目标，立即转向竞争比更低地市岗位。则立即补投；省考补录结束仍无进面，转向事业单位与国央企职能岗并行。。"
+            "10分钟投递策略": "先以综合管理和执法类岗位做首轮报名，按10月公告报名、10-11月资格审核、11-12月笔试推进。若首轮模拟分或审核结果不达预期，立即转向竞争比更低的地市和专业对口岗位；省考补录结束仍无进面，转向事业单位与央国企职能岗并行。"
           }
         },
         "参考方向标签": [
@@ -45903,34 +45912,34 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.mofcom.gov.cn",
+                "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_MOFCOM_GOV_CN_C379CBFA",
-                "source_name": "执业规范公开资料",
-                "source_type": "curated_mapping",
-                "source_url": "https://www.mofcom.gov.cn",
+                "source_id": "SRC_MOE_ACTION_2026",
+                "source_name": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
+                "source_type": "government_policy",
+                "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_CONSULTING_PRO_SERVICES_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.mofcom.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
@@ -45942,15 +45951,15 @@
                 "source_type": "company_official",
                 "source_url": "https://www.pwccn.com/zh/careers.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_CONSULTING_PRO_SERVICES_LINK_003",
-              "link_type": "company_official",
-              "title": "普华永道 校招/官网入口",
-              "updated_at": "2026-02-16",
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
               "url": "https://www.pwccn.com/zh/careers.html",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -50514,7 +50523,7 @@
       },
       "industry_id": "IND_CONSULTING_PRO_SERVICES",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -50574,7 +50583,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 18.2
+        "ranking_percentile": 27.3
       },
       "slug": "consulting-professional-services",
       "sources": [
@@ -51014,7 +51023,7 @@
           "三层阅读卡": {
             "30秒结论": "适合逻辑与表达能力强、愿意在高强度项目中快速成长；不适合追求稳定低波动工作节奏。今年机会集中在企业转型需求、监管趋严；主要风险是项目波动、高强度导致流失。",
             "3分钟全景": "为企业和机构提供战略、管理、财务、审计、税务、法务等专业服务的行业。当前重点赛道为企业战略转型、数字化咨询、审计鉴证，校招机会主要集中在上海、北京、深圳。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以咨询顾问、审计助理做首轮投递，按8-9月提前批与网测；9-11月主批面试周；11-12月Offer发放与签约；2-3月春招补录安排节奏；若若两周内无case面，补投本土咨询与区域会计师事务所。则立即补投；春招末仍无offer，转向企业战略运营或内审内控岗位。。"
+            "10分钟投递策略": "先以咨询顾问、审计助理岗做首轮投递，按8-9月网测、9-11月主批面试、11-12月offer签约、2-3月补录推进。若两周内无case面，补投本土咨询与区域会计师事务所；春招末仍无offer，转向企业战略运营、内审内控和经营分析岗位。"
           }
         },
         "参考方向标签": [
@@ -52018,34 +52027,34 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.samr.gov.cn",
+                "snapshot_url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_518fcaf90e674b959d3a5a0e8b74fc0f.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_SAMR_GOV_CN_C8B10CAC",
-                "source_name": "统计与消费公开数据",
-                "source_type": "curated_mapping",
-                "source_url": "https://www.samr.gov.cn",
+                "source_id": "SRC_MOFCOM_ECOMMERCE_20260123",
+                "source_name": "商务部电子商务司负责人介绍2025年我国电子商务发展情况",
+                "source_type": "government_policy",
+                "source_url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_518fcaf90e674b959d3a5a0e8b74fc0f.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_ECOMMERCE_CROSSBORDER_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.samr.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_518fcaf90e674b959d3a5a0e8b74fc0f.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
@@ -52057,15 +52066,15 @@
                 "source_type": "company_official",
                 "source_url": "https://talent.alibaba.com",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_ECOMMERCE_CROSSBORDER_LINK_003",
-              "link_type": "company_official",
-              "title": "阿里巴巴 校招/官网入口",
-              "updated_at": "2026-02-16",
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
               "url": "https://talent.alibaba.com",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -56609,7 +56618,7 @@
       },
       "industry_id": "IND_ECOMMERCE_CROSSBORDER",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -56669,7 +56678,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 13.6
+        "ranking_percentile": 22.7
       },
       "slug": "ecommerce-crossborder",
       "sources": [
@@ -57095,7 +57104,7 @@
           "三层阅读卡": {
             "30秒结论": "适合对数据驱动运营和业务增长有兴趣、能适应节奏快且结果导向的环境；不适合抗拒大促节点高压工作。今年机会集中在内容化交易、品牌出海；主要风险是规则变化、投放成本攀升。",
             "3分钟全景": "通过线上平台和跨境渠道完成交易、营销、履约和服务的数字商业行业。当前重点赛道为平台运营、投放增长、跨境出海，校招机会主要集中在杭州、深圳、广州。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以电商运营、跨境运营做首轮投递，按8-9月提前批与内推；9-11月秋招主批；11-12月签约与业务线定岗；2-4月春招补录安排节奏；若若转化率两周低于行业中位，补投独立站运营与海外客服支持岗位。则立即补投；春招补录后仍无进展，转向国内电商运营或品牌增长岗位。。"
+            "10分钟投递策略": "先以电商运营、跨境运营岗做首轮投递，按8-9月提前批、9-11月主批、11-12月定岗签约、2-4月补录推进。若两周转化率低于行业中位，补投独立站运营、海外客服与履约协同岗位；春招补录后仍无进展，转向国内电商运营与品牌增长岗位。"
           }
         },
         "参考方向标签": [
@@ -58107,34 +58116,34 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.moe.gov.cn",
+                "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_MOE",
-                "source_name": "中华人民共和国教育部",
-                "source_type": "government_agency",
-                "source_url": "https://www.moe.gov.cn",
+                "source_id": "SRC_MOE_ACTION_2026",
+                "source_name": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
+                "source_type": "government_policy",
+                "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_EDU_VOCATIONAL_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.moe.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
@@ -58146,15 +58155,15 @@
                 "source_type": "company_official",
                 "source_url": "https://www.neworiental.org",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_EDU_VOCATIONAL_LINK_003",
-              "link_type": "company_official",
-              "title": "新东方 校招/官网入口",
-              "updated_at": "2026-02-16",
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
               "url": "https://www.neworiental.org",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -62697,7 +62706,7 @@
       },
       "industry_id": "IND_EDU_VOCATIONAL",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -62757,7 +62766,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 40.9
+        "ranking_percentile": 45.5
       },
       "slug": "education-vocational",
       "sources": [
@@ -63224,7 +63233,7 @@
           "三层阅读卡": {
             "30秒结论": "适合表达与同理心较强、愿意在教学与运营双线成长；不适合对教学交付节奏缺乏耐受。今年机会集中在职业技能升级需求、终身学习趋势；主要风险是政策变化、获客成本高。",
             "3分钟全景": "围绕课程研发、教学交付、职业培训和企业学习服务构成的人才发展行业。当前重点赛道为课程研发、学习产品、学习运营，校招机会主要集中在北京、上海、广州。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以教研、课程运营做首轮投递，按8-9月提前批与实习转正；9-11月秋招主批；11-12月签约与排班定岗；2-4月春招补录安排节奏；若若笔试加试讲通过率低于30%，补投教务运营与内容编辑岗。则立即补投；春招结束仍无offer，转向企业培训与HR学习发展方向。。"
+            "10分钟投递策略": "先以教研、课程运营岗做首轮投递，按8-9月预热、9-11月主批、11-12月定岗签约、2-4月补录推进。若笔试加试讲通过率低于30%，补投教务运营、教学质控与内容编辑岗位；春招结束仍无offer，转向企业培训和学习发展（L&D）方向。"
           }
         },
         "参考方向标签": [
@@ -64229,27 +64238,27 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.nea.gov.cn",
+                "snapshot_url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_NEA_GOV_CN_2FCB2BCB",
-                "source_name": "国家能源相关公开信息",
-                "source_type": "curated_mapping",
-                "source_url": "https://www.nea.gov.cn",
+                "source_id": "SRC_NEA_WORKCONF_20260130",
+                "source_name": "国家能源局举行新闻发布会介绍2025年电力工业统计数据有关情况",
+                "source_type": "government_policy",
+                "source_url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_ENERGY_UTILITIES_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.nea.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
@@ -64258,26 +64267,26 @@
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
                 "confidence": 0.75,
-                "http_status": 412,
+                "http_status": 200,
                 "manual_verification_note": "站点反爬限制较强，建议上传sgcc.com.cn浏览器Cookie后进行人工核验。",
-                "manual_verification_required": true,
+                "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.sgcc.com.cn",
+                "snapshot_url": "https://www.ceic.com",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
-                "source_name": "国家电网官网/招聘入口",
+                "source_id": "SRC_AUTO_WWW_CEIC_COM_2B8D5B00",
+                "source_name": "国家能源集团官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.sgcc.com.cn",
+                "source_url": "https://www.ceic.com",
                 "publish_date": "2026-02-16",
                 "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_ENERGY_UTILITIES_LINK_003",
-              "link_type": "company_official",
-              "title": "国家电网 校招/官网入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.sgcc.com.cn",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.ceic.com",
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -68774,7 +68783,7 @@
       },
       "industry_id": "IND_ENERGY_UTILITIES",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -68818,7 +68827,7 @@
         "freshness_percent_overall": 91.3,
         "real_data_ratio_overall": 81.1,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.7,
+        "quality_score_overall": 91.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -68834,7 +68843,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 50
+        "ranking_percentile": 86.4
       },
       "slug": "energy-utilities",
       "sources": [
@@ -69277,7 +69286,7 @@
           "三层阅读卡": {
             "30秒结论": "适合重视稳定性与长期职业路径、愿意在基础设施体系持续深耕；不适合期待短期高波动收益与频繁跳槽。今年机会集中在能源转型、电力市场化改革；主要风险是燃料成本波动、政策与电价调整。",
             "3分钟全景": "以电力、油气、水务、环保等基础供给与运营保障为核心的公共基础行业。当前重点赛道为电力交易、新能源并网、设备运维，校招机会主要集中在北京、上海、深圳。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以电力系统工程师、运维工程师做首轮投递，按8-9月提前批与岗位预热；9-11月秋招主批；11-12月签约与区域分配；2-5月春招项目补录安排节奏；若若统一笔试成绩不达线，补投省属能源集团与电力设备服务商。则立即补投；春招后仍无面试，转向新能源运维与电气工程实施岗位。。"
+            "10分钟投递策略": "先以电力系统、运维岗做首轮投递，按8-9月预热、9-11月主批、11-12月签约分配、2-5月补录推进。若统一笔试成绩未达线，补投省属能源集团、电力设备服务商和综合能源项目岗；春招后仍无面试，转向新能源运维与电气实施岗位。"
           }
         },
         "参考方向标签": [
@@ -70334,34 +70343,34 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.nfra.gov.cn",
+                "snapshot_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_NFRA_GOV_CN_FCB8C535",
-                "source_name": "监管部门公开信息",
-                "source_type": "curated_mapping",
-                "source_url": "https://www.nfra.gov.cn",
+                "source_id": "SRC_PBC_WORKCONF_20260106",
+                "source_name": "2026年中国人民银行工作会议召开",
+                "source_type": "government_policy",
+                "source_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_FIN_BANK_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.nfra.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
@@ -70373,15 +70382,15 @@
                 "source_type": "company_official",
                 "source_url": "https://www.icbc.com.cn",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_FIN_BANK_LINK_003",
-              "link_type": "company_official",
-              "title": "中国工商银行 校招/官网入口",
-              "updated_at": "2026-02-16",
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
               "url": "https://www.icbc.com.cn",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -74861,7 +74870,7 @@
       },
       "industry_id": "IND_FIN_BANK",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -74915,7 +74924,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 45.5
+        "ranking_percentile": 50
       },
       "slug": "finance-bank",
       "sources": [
@@ -75370,7 +75379,7 @@
           "三层阅读卡": {
             "30秒结论": "适合重视稳定平台与规范培养体系、希望积累金融基础能力；不适合希望极快薪资跃迁且不接受流程规范。今年机会集中在宏观经济与信贷需求、零售转型；主要风险是资产质量波动、息差收窄。",
             "3分钟全景": "以存贷汇、支付结算、财富管理和金融科技为核心的银行体系。当前重点赛道为对公业务、零售金融、财富管理，校招机会主要集中在北京、上海、深圳。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以管培生、客户经理做首轮投递，按7-8月提前批与暑期实习转正；9-10月秋招主批；10-12月签约与体检；2-4月春招补录安排节奏；若若无面试邀约，补投城商行、农商行及信用卡中心岗位。则立即补投；春招结束仍未上岸，转向支付清算与消费金融运营岗。。"
+            "10分钟投递策略": "先以管培生、客户经理岗做首轮投递，按7-8月提前批、9-10月主批、10-12月签约体检、2-4月补录推进。若两周内无面试邀约，补投城商行、农商行和信用卡中心岗位；春招结束仍未上岸，转向支付清算、消费金融运营与风控岗位。"
           }
         },
         "参考方向标签": [
@@ -76426,34 +76435,34 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.nfra.gov.cn",
+                "snapshot_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_NFRA_GOV_CN_FCB8C535",
-                "source_name": "监管部门公开信息",
-                "source_type": "curated_mapping",
-                "source_url": "https://www.nfra.gov.cn",
+                "source_id": "SRC_PBC_WORKCONF_20260106",
+                "source_name": "2026年中国人民银行工作会议召开",
+                "source_type": "government_policy",
+                "source_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_FIN_INSURANCE_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.nfra.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
@@ -76465,15 +76474,15 @@
                 "source_type": "company_official",
                 "source_url": "https://www.pingan.com",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_FIN_INSURANCE_LINK_003",
-              "link_type": "company_official",
-              "title": "中国平安 校招/官网入口",
-              "updated_at": "2026-02-16",
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
               "url": "https://www.pingan.com",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -81137,7 +81146,7 @@
       },
       "industry_id": "IND_FIN_INSURANCE",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -81645,7 +81654,7 @@
           "三层阅读卡": {
             "30秒结论": "适合对风险管理和长期业务有兴趣、能够接受业绩与合规双重要求；不适合对业务指标和客户经营抗拒。今年机会集中在养老与健康需求增长、风险保障意识提升；主要风险是利差损、误导销售风险。",
             "3分钟全景": "以风险保障、长期资金管理和保险服务为核心的持牌金融行业。当前重点赛道为精算、产品开发、核保核赔，校招机会主要集中在上海、北京、深圳。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以精算、核保核赔做首轮投递，按8-9月提前批与管培预热；9-11月秋招主批；11-12月签约与岗前准备；2-4月春招补录安排节奏；若若两周无测评通过，补投互联网保险与保险科技运营岗位。则立即补投；春招收尾仍无offer，转向银行保险协同渠道与风控岗位。。"
+            "10分钟投递策略": "先以精算、核保核赔岗做首轮投递，按8-9月管培预热、9-11月主批、11-12月签约、2-4月补录推进。若两周无测评通过，补投互联网保险与保险科技运营岗位；春招收尾仍无offer，转向银保渠道、风险管理和数据运营岗位。"
           }
         },
         "参考方向标签": [
@@ -82695,34 +82704,34 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.csrc.gov.cn",
+                "snapshot_url": "https://www.csrc.gov.cn/csrc/c106311/c7609372/content.shtml",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_CSRC_GOV_CN_83FA08E4",
-                "source_name": "监管机构公开规则",
-                "source_type": "curated_mapping",
-                "source_url": "https://www.csrc.gov.cn",
+                "source_id": "SRC_CSRC_WORKCONF_20260116",
+                "source_name": "中国证监会召开2026年系统工作会议",
+                "source_type": "government_policy",
+                "source_url": "https://www.csrc.gov.cn/csrc/c106311/c7609372/content.shtml",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_FIN_SECURITIES_FUND_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.csrc.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.csrc.gov.cn/csrc/c106311/c7609372/content.shtml",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
@@ -82734,15 +82743,15 @@
                 "source_type": "company_official",
                 "source_url": "https://www.cs.ecitic.com",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_FIN_SECURITIES_FUND_LINK_003",
-              "link_type": "company_official",
-              "title": "中信证券 校招/官网入口",
-              "updated_at": "2026-02-16",
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
               "url": "https://www.cs.ecitic.com",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -87485,7 +87494,7 @@
       },
       "industry_id": "IND_FIN_SECURITIES_FUND",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -87965,7 +87974,7 @@
           "三层阅读卡": {
             "30秒结论": "适合数据与商业分析能力强、能承受高强度和业绩导向文化；不适合偏好低压力与稳定作息。今年机会集中在资本市场改革、机构化投资提升；主要风险是市场波动、合规处罚。",
             "3分钟全景": "围绕资本市场投融资、交易与资产管理开展业务的持牌金融行业。当前重点赛道为投行业务、研究业务、经纪与财富管理，校招机会主要集中在上海、北京、深圳。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以行业研究、投行助理做首轮投递，按8-9月提前批与研究岗预热；9-11月秋招主批；11-12月签约与实习衔接；2-4月春招补录安排节奏；若若笔面转化偏低，补投中型券商研究所与量化中后台岗位。则立即补投；春招末仍无进展，转向上市公司IR与财经数据分析岗。。"
+            "10分钟投递策略": "先以行业研究、投行助理岗做首轮投递，按8-9月预热、9-11月主批、11-12月签约衔接实习、2-4月补录推进。若笔面转化偏低，补投中型券商研究所、资管中后台与量化支持岗位；春招末仍无进展，转向上市公司IR与财经数据分析岗位。"
           }
         },
         "参考方向标签": [
@@ -88964,34 +88973,34 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.samr.gov.cn",
+                "snapshot_url": "https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n1y15r/index.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_SAMR_GOV_CN_C8B10CAC",
-                "source_name": "统计与消费公开数据",
-                "source_type": "curated_mapping",
-                "source_url": "https://www.samr.gov.cn",
+                "source_id": "SRC_MOFCOM_PRESSCONF_20260115",
+                "source_name": "商务部召开例行新闻发布会（2026年1月15日）",
+                "source_type": "government_policy",
+                "source_url": "https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n1y15r/index.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_FMCG_RETAIL_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.samr.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n1y15r/index.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
@@ -89003,15 +89012,15 @@
                 "source_type": "company_official",
                 "source_url": "https://www.pgcareers.com",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_FMCG_RETAIL_LINK_003",
-              "link_type": "company_official",
-              "title": "宝洁 校招/官网入口",
-              "updated_at": "2026-02-16",
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
               "url": "https://www.pgcareers.com",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -93570,7 +93579,7 @@
       },
       "industry_id": "IND_FMCG_RETAIL",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -93624,7 +93633,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 59.1
+        "ranking_percentile": 54.5
       },
       "slug": "fmcg-retail",
       "sources": [
@@ -94050,7 +94059,7 @@
           "三层阅读卡": {
             "30秒结论": "适合沟通与执行能力强、愿意贴近消费者与渠道一线；不适合不接受出差或渠道管理节奏。今年机会集中在消费升级、渠道数字化；主要风险是价格战、库存积压。",
             "3分钟全景": "以高频消费品品牌运营和渠道分销为核心的消费行业。当前重点赛道为品牌管理、渠道分销、品类管理，校招机会主要集中在上海、北京、广州。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以品牌管理、市场策划做首轮投递，按8-9月提前批与实习转正；9-11月秋招主批；11-12月签约与区域分配；2-4月春招补录安排节奏；若若两周无面试，补投渠道销售培训生与电商运营岗。则立即补投；春招结束仍无offer，转向消费品数据运营与采购支持岗。。"
+            "10分钟投递策略": "先以品牌管理、市场策划岗做首轮投递，按8-9月预热、9-11月主批、11-12月签约分区、2-4月补录推进。若两周无面试反馈，补投渠道销售培训生、电商运营和商品企划岗位；春招结束仍无offer，转向消费品数据运营与采购支持岗位。"
           }
         },
         "参考方向标签": [
@@ -95154,34 +95163,34 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.miit.gov.cn",
+                "snapshot_url": "https://www.miit.gov.cn/jgsj/xgj/gzdt/art/2026/art_57bbd1d6ebb9433094295a8cb02f3184.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_MIIT",
-                "source_name": "中华人民共和国工业和信息化部",
-                "source_type": "government_agency",
-                "source_url": "https://www.miit.gov.cn",
+                "source_id": "SRC_MIIT_IIAI_ACTION_20260107",
+                "source_name": "工信部解读《工业互联网和人工智能融合赋能行动方案》",
+                "source_type": "government_policy",
+                "source_url": "https://www.miit.gov.cn/jgsj/xgj/gzdt/art/2026/art_57bbd1d6ebb9433094295a8cb02f3184.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_INTERNET_AI_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.miit.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.miit.gov.cn/jgsj/xgj/gzdt/art/2026/art_57bbd1d6ebb9433094295a8cb02f3184.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
@@ -95193,15 +95202,15 @@
                 "source_type": "company_official",
                 "source_url": "https://join.qq.com",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_INTERNET_AI_LINK_003",
-              "link_type": "company_official",
-              "title": "腾讯 校招/官网入口",
-              "updated_at": "2026-02-16",
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
               "url": "https://join.qq.com",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -99785,7 +99794,7 @@
       },
       "industry_id": "IND_INTERNET_AI",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -99839,7 +99848,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 86.4
+        "ranking_percentile": 90.9
       },
       "slug": "internet-ai",
       "sources": [
@@ -100309,7 +100318,7 @@
           "三层阅读卡": {
             "30秒结论": "适合技术基础扎实并愿意高频迭代、希望在高增长赛道积累可迁移能力；不适合希望低波动低强度工作节奏。今年机会集中在企业降本增效需求、AI落地提速；主要风险是获客成本上升、技术同质化。",
             "3分钟全景": "以软件、数据、算力和算法为核心，通过互联网与AI产品为个人与企业提供服务的行业。当前重点赛道为AI基础设施、AI应用层、企业数字化，校招机会主要集中在北京、上海、深圳。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以后端开发、前端开发做首轮投递，按7-8月提前批与实习转正；9-10月秋招主批网申与测评；10-12月技术面与Offer发放；2-4月春招补录安排节奏；若若两周内笔试通过率低于25%，补投AI应用型与中型平台公司。则立即补投；春招结束仍无二面，转向云计算、工业软件或运营商数智化岗位。。"
+            "10分钟投递策略": "先以后端开发、前端开发岗做首轮投递，按7-8月提前批、9-10月主批、10-12月技术面签约、2-4月补录推进。若两周内笔试通过率低于25%，补投AI应用型公司、中型平台和行业软件厂商；春招结束仍无二面，转向云计算、工业软件与运营商数智化岗位。"
           }
         },
         "参考方向标签": [
@@ -101330,34 +101339,34 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.mot.gov.cn",
+                "snapshot_url": "https://www.mot.gov.cn/shuju/tongjishuju/youzheng/202601/t20260130_4199355.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_MOT_GOV_CN_DDB1C867",
-                "source_name": "交通与邮政公开数据",
-                "source_type": "curated_mapping",
-                "source_url": "https://www.mot.gov.cn",
+                "source_id": "SRC_MOT_POSTAL_20260122",
+                "source_name": "国家邮政局公布2025年邮政行业运行情况",
+                "source_type": "government_dataset",
+                "source_url": "https://www.mot.gov.cn/shuju/tongjishuju/youzheng/202601/t20260130_4199355.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_LOGISTICS_SUPPLYCHAIN_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.mot.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.mot.gov.cn/shuju/tongjishuju/youzheng/202601/t20260130_4199355.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
@@ -101369,15 +101378,15 @@
                 "source_type": "company_official",
                 "source_url": "https://hr.sf-express.com/JobSearchById/62735%2C3",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_LOGISTICS_SUPPLYCHAIN_LINK_003",
-              "link_type": "company_official",
-              "title": "顺丰 校招/官网入口",
-              "updated_at": "2026-02-16",
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
               "url": "https://hr.sf-express.com/JobSearchById/62735%2C3",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -105977,7 +105986,7 @@
       },
       "industry_id": "IND_LOGISTICS_SUPPLYCHAIN",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -106037,7 +106046,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 36.4
+        "ranking_percentile": 40.9
       },
       "slug": "logistics-supply-chain",
       "sources": [
@@ -106477,7 +106486,7 @@
           "三层阅读卡": {
             "30秒结论": "适合执行与协调能力强、愿意在复杂运营系统中积累经验；不适合对现场协同与班次敏感。今年机会集中在电商增长、制造业协同需求；主要风险是油价与成本波动、旺季履约压力。",
             "3分钟全景": "围绕仓储、运输、配送、计划与采购协同实现履约效率与成本优化的行业。当前重点赛道为仓储自动化、运输网络优化、冷链，校招机会主要集中在上海、深圳、广州。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以供应链计划、仓储运营做首轮投递，按8-9月提前批与仓配岗位预热；9-11月秋招主批；11-12月签约与区域分配；2-4月春招补录安排节奏；若若转化率低于中位，补投供应链分析与采购协同岗位。则立即补投；春招收尾仍无offer，转向制造业供应链计划与电商履约运营。。"
+            "10分钟投递策略": "先以供应链计划、仓储运营岗做首轮投递，按8-9月预热、9-11月主批、11-12月签约分区、2-4月补录推进。若转化率低于中位，补投采购协同、履约分析和网络规划岗位；春招收尾仍无offer，转向制造业供应链计划与电商履约运营岗位。"
           }
         },
         "参考方向标签": [
@@ -107488,54 +107497,54 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.nrta.gov.cn",
+                "snapshot_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/yxspbgxx/202601/t20260126_947941.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_NRTA_GOV_CN_990A4A52",
-                "source_name": "出版与版权公开信息",
-                "source_type": "curated_mapping",
-                "source_url": "https://www.nrta.gov.cn",
+                "source_id": "SRC_NPPA_GAME_APPROVAL_20260126",
+                "source_name": "国家新闻出版署-2026年1月国产网络游戏审批信息",
+                "source_type": "government_platform",
+                "source_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/yxspbgxx/202601/t20260126_947941.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_MEDIA_GAME_CONTENT_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.nrta.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/yxspbgxx/202601/t20260126_947941.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://join.qq.com",
+                "snapshot_url": "https://www.mihoyo.com",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_JOIN_QQ_COM_61D25F78",
-                "source_name": "腾讯招聘官网",
+                "source_id": "SRC_AUTO_WWW_MIHOYO_COM_CB059AC8",
+                "source_name": "米哈游官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://join.qq.com",
+                "source_url": "https://www.mihoyo.com",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_MEDIA_GAME_CONTENT_LINK_003",
-              "link_type": "company_official",
-              "title": "腾讯游戏 校招/官网入口",
-              "updated_at": "2026-02-16",
-              "url": "https://join.qq.com",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.mihoyo.com",
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -112033,7 +112042,7 @@
       },
       "industry_id": "IND_MEDIA_GAME_CONTENT",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -112520,7 +112529,7 @@
           "三层阅读卡": {
             "30秒结论": "适合对内容创作或游戏产品有强兴趣、可接受项目制节奏与热点波动；不适合对内容行业不确定性敏感。今年机会集中在优质内容供给、平台推荐机制；主要风险是政策不确定性、内容同质化。",
             "3分钟全景": "围绕内容生产、分发、用户运营和商业化构建的数字内容行业。当前重点赛道为游戏策划与发行、短视频与直播、内容商业化，校招机会主要集中在上海、北京、深圳。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以游戏策划、内容运营做首轮投递，按7-8月提前批与实习转正；9-10月秋招主批网申与测评；10-12月面试签约窗口；2-4月春招补录安排节奏；若若两周无笔面反馈，补投中型游戏工作室与短视频内容运营岗。则立即补投；春招后仍无进展，转向品牌内容营销与社区运营岗位。。"
+            "10分钟投递策略": "先以游戏策划、内容运营岗做首轮投递，按7-8月预热、9-10月主批、10-12月面试签约、2-4月补录推进。若两周无笔面反馈，补投中型游戏工作室、短视频内容运营和社区增长岗位；春招后仍无进展，转向品牌内容营销与用户运营岗位。"
           }
         },
         "参考方向标签": [
@@ -113577,34 +113586,34 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.nea.gov.cn",
+                "snapshot_url": "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_NEA_GOV_CN_2FCB2BCB",
-                "source_name": "国家能源相关公开信息",
-                "source_type": "curated_mapping",
-                "source_url": "https://www.nea.gov.cn",
+                "source_id": "SRC_NEA_RENEWABLE_UTIL_20260212",
+                "source_name": "国家能源局：2025年全国可再生能源利用率达到95%以上",
+                "source_type": "government_dataset",
+                "source_url": "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_NEW_ENERGY_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.nea.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
@@ -113616,15 +113625,15 @@
                 "source_type": "company_official",
                 "source_url": "https://www.catl.com",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_NEW_ENERGY_LINK_003",
-              "link_type": "company_official",
-              "title": "宁德时代 校招/官网入口",
-              "updated_at": "2026-02-16",
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
               "url": "https://www.catl.com",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -118288,7 +118297,7 @@
       },
       "industry_id": "IND_NEW_ENERGY",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -118342,7 +118351,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 4.5
+        "ranking_percentile": 9.1
       },
       "slug": "new-energy",
       "sources": [
@@ -118768,7 +118777,7 @@
           "三层阅读卡": {
             "30秒结论": "适合愿意在制造+研发场景长期积累、对双碳与电力体系有兴趣；不适合对制造现场和项目周期容忍度低。今年机会集中在能源转型、技术降本；主要风险是价格波动、贸易摩擦。",
             "3分钟全景": "以光伏、风电、储能、锂电、氢能为核心的低碳能源产业。当前重点赛道为电池材料、电芯与PACK、储能系统，校招机会主要集中在上海、深圳、苏州。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以电池研发工程师、BMS工程师做首轮投递，按7-8月提前批与核心技术岗；9-10月秋招主批；10-12月终面签约与定岗；2-5月春招并网项目补录安排节奏；若若两周无面试，补投新能源电站运维和项目交付岗位。则立即补投；春招结束仍未上岸，转向电力自动化与工业能源管理岗位。。"
+            "10分钟投递策略": "先以电池研发、BMS岗做首轮投递，按7-8月核心岗提前批、9-10月主批、10-12月终面签约、2-5月项目补录推进。若两周无面试反馈，补投电站运维、项目交付和储能系统应用岗位；春招结束仍未上岸，转向电力自动化与工业能源管理岗位。"
           }
         },
         "参考方向标签": [
@@ -119993,54 +120002,54 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.mohrss.gov.cn",
+                "snapshot_url": "https://rsj.sh.gov.cn/tgsgg_17341/20260128/t0035_1438398.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_MOHRSS",
-                "source_name": "中华人民共和国人力资源和社会保障部",
-                "source_type": "government_agency",
-                "source_url": "https://www.mohrss.gov.cn",
+                "source_id": "SRC_SHRSJ_PUBLIC_INST_20260128",
+                "source_name": "上海市人社局-上海市2026年事业单位公开招聘公告",
+                "source_type": "government_platform",
+                "source_url": "https://rsj.sh.gov.cn/tgsgg_17341/20260128/t0035_1438398.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_PUBLIC_INSTITUTION_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.mohrss.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://rsj.sh.gov.cn/tgsgg_17341/20260128/t0035_1438398.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.mohrss.gov.cn",
+                "snapshot_url": "http://www.cpta.com.cn",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_MOHRSS",
-                "source_name": "中华人民共和国人力资源和社会保障部",
-                "source_type": "government_agency",
-                "source_url": "https://www.mohrss.gov.cn",
+                "source_id": "SRC_AUTO_WWW_CPTA_COM_CN_FD0AA5B3",
+                "source_name": "中国人事考试网官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "http://www.cpta.com.cn",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_PUBLIC_INSTITUTION_LINK_003",
-              "link_type": "company_official",
-              "title": "人社部 校招/官网入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.mohrss.gov.cn",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
+              "url": "http://www.cpta.com.cn",
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -125275,7 +125284,7 @@
       },
       "industry_id": "IND_PUBLIC_INSTITUTION",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -125313,7 +125322,7 @@
         "freshness_percent_overall": 82.6,
         "real_data_ratio_overall": 84.6,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.4,
+        "quality_score_overall": 89.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "争议问题与结论",
@@ -125329,7 +125338,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 31.8
+        "ranking_percentile": 0
       },
       "slug": "public-institution",
       "sources": [
@@ -125750,7 +125759,7 @@
           "三层阅读卡": {
             "30秒结论": "适合重视稳定和公共服务属性、希望在专业条线长期沉淀；不适合追求高薪弹性与快速行业切换。今年机会集中在公共服务升级、数字化治理；主要风险是竞争激烈、流程周期长。",
             "3分钟全景": "围绕教育、医疗、科研、文化等公益服务机构形成的编制或合同制招聘体系。当前重点赛道为医疗与医技、教育与教辅、科研技术支持，校招机会主要集中在北京、上海、广州。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以教师岗、医技岗做首轮投递，按1-2月公告与报名；3-4月笔试与成绩发布；5-6月面试体检与录用安排节奏；若若首批岗位竞争比过高，转向市属、区县同类岗位与专业不限岗位。则立即补投；当年主要批次结束仍无进面，转向教师、医疗、科研助理与国企职能岗并行。。"
+            "10分钟投递策略": "先以教师岗、医技岗做首轮报名，按1-2月公告报名、3-4月笔试、5-6月面试体检推进。若首批岗位竞争比过高，转向市属/区县同类岗位和专业不限岗位；当年主要批次结束仍无进面，转向教师、医疗、科研助理与国企职能岗并行。"
           }
         },
         "参考方向标签": [
@@ -126752,34 +126761,34 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.mohurd.gov.cn",
+                "snapshot_url": "https://www.mohurd.gov.cn/xinwen/gzdt/art/2025/art_4fa6fb32042042d09182581bbd1f092e.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_MOHURD_GOV_CN_855247EC",
-                "source_name": "住建与统计公开信息",
-                "source_type": "curated_mapping",
-                "source_url": "https://www.mohurd.gov.cn",
+                "source_id": "SRC_MOHURD_URBAN_RENEWAL_20251225",
+                "source_name": "住房城乡建设部：因城施策控增量、去库存、优供给，持续用力推动房地产市场止跌回稳",
+                "source_type": "government_policy",
+                "source_url": "https://www.mohurd.gov.cn/xinwen/gzdt/art/2025/art_4fa6fb32042042d09182581bbd1f092e.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_REAL_ESTATE_INFRA_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.mohurd.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.mohurd.gov.cn/xinwen/gzdt/art/2025/art_4fa6fb32042042d09182581bbd1f092e.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
@@ -126791,15 +126800,15 @@
                 "source_type": "company_official",
                 "source_url": "https://www.cscec.com",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_REAL_ESTATE_INFRA_LINK_003",
-              "link_type": "company_official",
-              "title": "中国建筑 校招/官网入口",
-              "updated_at": "2026-02-16",
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
               "url": "https://www.cscec.com",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -131258,7 +131267,7 @@
       },
       "industry_id": "IND_REAL_ESTATE_INFRA",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -131312,7 +131321,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 27.3
+        "ranking_percentile": 36.4
       },
       "slug": "real-estate-infrastructure",
       "sources": [
@@ -131767,7 +131776,7 @@
           "三层阅读卡": {
             "30秒结论": "适合愿意扎根工程现场并积累项目经验、关注长期职业资格成长；不适合不接受项目外派与现场管理。今年机会集中在城市更新、基建投资；主要风险是资金链压力、回款慢。",
             "3分钟全景": "涵盖地产开发、工程建设、城市更新、基础设施投资与运营的行业集合。当前重点赛道为城市更新、保障房、基础设施建设，校招机会主要集中在北京、上海、深圳。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以工程管理、成本管理做首轮投递，按7-8月提前批与实习转正；9-10月秋招主批；10-12月面试签约与体检；2-4月春招补录安排节奏；若若两周无技术面反馈，补投造价、BIM与项目资料管理岗位。则立即补投；春招结束仍无offer，转向制造业工程管理与供应链项目管理。。"
+            "10分钟投递策略": "先以工程管理、成本管理岗做首轮投递，按7-8月预热、9-10月主批、10-12月面试签约、2-4月补录推进。若两周无技术面反馈，补投造价、BIM和项目资料管理岗位；春招结束仍无offer，转向制造业工程管理与供应链项目管理岗位。"
           }
         },
         "参考方向标签": [
@@ -132868,34 +132877,34 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.miit.gov.cn",
+                "snapshot_url": "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2025/art_b280aaee390849aca2f8ecae5c9b414f.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_MIIT",
-                "source_name": "中华人民共和国工业和信息化部",
-                "source_type": "government_agency",
-                "source_url": "https://www.miit.gov.cn",
+                "source_id": "SRC_MIIT_ELECTRONICS_Q3RUN_20251030",
+                "source_name": "2025年前三季度电子信息制造业运行情况",
+                "source_type": "government_dataset",
+                "source_url": "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2025/art_b280aaee390849aca2f8ecae5c9b414f.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_SEMICONDUCTOR_ELECTRONICS_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.miit.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2025/art_b280aaee390849aca2f8ecae5c9b414f.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
@@ -132907,15 +132916,15 @@
                 "source_type": "company_official",
                 "source_url": "https://www.smics.com",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_SEMICONDUCTOR_ELECTRONICS_LINK_003",
-              "link_type": "company_official",
-              "title": "中芯国际 校招/官网入口",
-              "updated_at": "2026-02-16",
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
               "url": "https://www.smics.com",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -137579,7 +137588,7 @@
       },
       "industry_id": "IND_SEMICONDUCTOR_ELECTRONICS",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -137633,7 +137642,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 0
+        "ranking_percentile": 4.5
       },
       "slug": "semiconductor-electronics",
       "sources": [
@@ -138074,7 +138083,7 @@
           "三层阅读卡": {
             "30秒结论": "适合专业基础扎实且愿意长期深耕硬科技、能接受周期波动与工程迭代；不适合希望短期快速转管理且不愿深挖技术细节。今年机会集中在国产替代、AI算力需求；主要风险是产业周期下行、资本开支高。",
             "3分钟全景": "围绕芯片设计、制造、封测、器件与电子系统应用构成的高技术产业。当前重点赛道为数字芯片、模拟与电源芯片、存储，校招机会主要集中在上海、深圳、北京。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以数字IC设计、验证工程师做首轮投递，按7-8月提前批与技术岗预热；9-10月秋招主批网申笔试；10-12月多轮技术面与签约；2-4月春招补录与项目增补安排节奏；若若三周无二面，补投设备维护、良率提升和FA失效分析岗位。则立即补投；春招末仍无offer，转向新能源电子与工业控制芯片应用岗。。"
+            "10分钟投递策略": "先以数字IC设计、验证岗做首轮投递，按7-8月技术岗预热、9-10月主批、10-12月多轮技术面、2-4月补录推进。若三周无二面，补投设备、良率和失效分析岗位；春招末仍无offer，转向新能源电子、工业控制芯片应用与测试岗位。"
           }
         },
         "参考方向标签": [
@@ -139219,54 +139228,54 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "http://www.sasac.gov.cn",
+                "snapshot_url": "http://wap.sasac.gov.cn/n2588025/n2643314/c35340771/content.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_SASAC",
-                "source_name": "国务院国有资产监督管理委员会",
-                "source_type": "government_agency",
-                "source_url": "http://www.sasac.gov.cn",
+                "source_id": "SRC_SASAC_TALENT_WORKCONF_20260203",
+                "source_name": "国资央企人才工作座谈会在京召开",
+                "source_type": "government_policy",
+                "source_url": "http://wap.sasac.gov.cn/n2588025/n2643314/c35340771/content.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_STATE_OWNED_ENTERPRISE_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.sasac.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "http://wap.sasac.gov.cn/n2588025/n2643314/c35340771/content.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "http://www.sasac.gov.cn",
+                "snapshot_url": "https://wap.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_SASAC",
-                "source_name": "国务院国有资产监督管理委员会",
-                "source_type": "government_agency",
-                "source_url": "http://www.sasac.gov.cn",
+                "source_id": "SRC_SASAC_RECRUIT_2026",
+                "source_name": "国务院国资委-中央企业校园招聘信息（示例）",
+                "source_type": "government_policy",
+                "source_url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_STATE_OWNED_ENTERPRISE_LINK_003",
-              "link_type": "company_official",
-              "title": "国务院国资委 校招/官网入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.sasac.gov.cn",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
+              "url": "http://www.sasac.gov.cn/n2588035/n2588325/c34523871/content.html",
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -144324,7 +144333,7 @@
       },
       "industry_id": "IND_STATE_OWNED_ENTERPRISE",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -144362,7 +144371,7 @@
         "freshness_percent_overall": 91.6,
         "real_data_ratio_overall": 82.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91,
+        "quality_score_overall": 90.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "公司清单",
@@ -144378,7 +144387,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 54.5
+        "ranking_percentile": 18.2
       },
       "slug": "state-owned-enterprise",
       "sources": [
@@ -144842,7 +144851,7 @@
           "三层阅读卡": {
             "30秒结论": "适合希望兼顾稳定性与产业规模平台、可接受制度化流程管理；不适合希望极快晋升和高波动激励机制。今年机会集中在公共服务升级、数字化治理；主要风险是竞争激烈、流程周期长。",
             "3分钟全景": "围绕中央企业与地方国有企业形成的市场化运营与公共职能并重的就业体系。当前重点赛道为工程建设与制造、能源与公用事业、金融与投资管理，校招机会主要集中在北京、上海、广州。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以综合管理岗、工程技术岗做首轮投递，按9-10月总部公告与网申；10-11月测评与笔面试；11-12月签约与补录安排节奏；若若两周无笔试通知，补投省属国企与城市平台公司岗位。则立即补投；春招补录结束仍无进展，转向事业单位与头部民企职能岗。。"
+            "10分钟投递策略": "先以综合管理、工程技术岗做首轮投递，按9-10月总部公告网申、10-11月测评笔面、11-12月签约补录推进。若两周无笔试通知，补投省属国企与城市平台公司岗位；春招补录结束仍无进展，转向事业单位与头部民企职能岗并行。"
           }
         },
         "参考方向标签": [
@@ -145889,34 +145898,34 @@
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.miit.gov.cn",
+                "snapshot_url": "https://www.miit.gov.cn/jgsj/yxj/xxfb/art/2026/art_bea806f4dd20457cb0158795cc210aa7.html",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_MIIT",
-                "source_name": "中华人民共和国工业和信息化部",
-                "source_type": "government_agency",
-                "source_url": "https://www.miit.gov.cn",
+                "source_id": "SRC_MIIT_TELECOM_BULLETIN_20260128",
+                "source_name": "2025年通信业统计公报",
+                "source_type": "government_dataset",
+                "source_url": "https://www.miit.gov.cn/jgsj/yxj/xxfb/art/2026/art_bea806f4dd20457cb0158795cc210aa7.html",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_TELECOM_OPERATOR_LINK_002",
-              "link_type": "regulator",
-              "title": "行业主管部门/监管入口",
-              "updated_at": "2026-02-16",
-              "url": "https://www.miit.gov.cn",
-              "purpose": "用于补充行业结论的交叉验证。"
+              "link_type": "policy_anchor",
+              "title": "政策锚点（近180天）",
+              "updated_at": "2026-02-18",
+              "url": "https://www.miit.gov.cn/jgsj/yxj/xxfb/art/2026/art_bea806f4dd20457cb0158795cc210aa7.html",
+              "purpose": "用于验证近180天政策/监管变化对招聘节奏与岗位需求的影响。"
             },
             {
               "authenticity_level": "official",
               "data_origin": "structured_collection",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-16",
+                "accessed_at": "2026-02-18",
                 "confidence": 0.75,
                 "http_status": 200,
                 "manual_verification_required": false,
@@ -145928,15 +145937,15 @@
                 "source_type": "company_official",
                 "source_url": "http://job.10086.cn",
                 "publish_date": "2026-02-16",
-                "captured_at": "2026-02-16",
+                "captured_at": "2026-02-18",
                 "data_period": "2026年度"
               },
               "link_id": "IND_TELECOM_OPERATOR_LINK_003",
-              "link_type": "company_official",
-              "title": "中国移动 校招/官网入口",
-              "updated_at": "2026-02-16",
+              "link_type": "recruitment_direct",
+              "title": "校招直达页（企业/报名）",
+              "updated_at": "2026-02-18",
               "url": "http://job.10086.cn",
-              "purpose": "用于核对企业校招批次、岗位要求与投递入口。"
+              "purpose": "用于查看网申入口、岗位清单、批次时间和报名状态。"
             },
             {
               "authenticity_level": "official",
@@ -150305,7 +150314,7 @@
       },
       "industry_id": "IND_TELECOM_OPERATOR",
       "meta": {
-        "content_version": "1.43.0",
+        "content_version": "1.43.1",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -150359,7 +150368,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 9.1
+        "ranking_percentile": 13.6
       },
       "slug": "telecom-operators",
       "sources": [
@@ -150785,7 +150794,7 @@
           "三层阅读卡": {
             "30秒结论": "适合重视平台稳定性并接受项目交付、愿意在ToB场景积累行业经验；不适合抗拒现场交付和周期性出差。今年机会集中在产业数字化升级、专网需求增长；主要风险是资本开支周期波动、价格竞争。",
             "3分钟全景": "围绕通信网络建设、设备研发、网络运营与行业专网服务的基础设施行业。当前重点赛道为5G/5G-A、算力网络、光网络，校招机会主要集中在深圳、北京、上海。阅读本词条时优先看岗位画像、薪酬层与校招时间线三块。",
-            "10分钟投递策略": "先以网络优化工程师、通信研发做首轮投递，按8-9月提前批与宣讲；9-10月主批网申与测评；10-12月面试与签约；2-4月春招补录安排节奏；若若笔试通过率偏低，补投省公司技术支持与地市公司综合维护岗。则立即补投；春招后仍无面试，转向IDC运维、云计算实施与网络安全岗位。。"
+            "10分钟投递策略": "先以网络优化、通信研发岗做首轮投递，按8-9月宣讲预热、9-10月主批、10-12月面试签约、2-4月补录推进。若笔试通过率偏低，补投省公司技术支持、地市公司网络维护和IDC运维岗位；春招后仍无面试，转向云实施与网络安全岗位。"
           }
         },
         "参考方向标签": [
