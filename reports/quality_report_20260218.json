@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-02-18T03:42:26Z",
-  "data_file": "/Users/suan/Desktop/留学/资料/行业百科/行业百科.json",
+  "generated_at": "2026-02-18T04:11:11Z",
+  "data_file": "行业百科.json",
   "document": {
-    "version": "v1.33.0",
+    "version": "v1.34.0",
     "release_date": "2026-02-18",
     "entries": 23
   },
@@ -20,17 +20,17 @@
   ],
   "progress_avg": {
     "coverage": 90.49999999999999,
-    "evidence": 90.11304347826085,
+    "evidence": 90.15652173913043,
     "real_data_ratio": 73.84347826086957,
-    "quality": 90.22173913043478,
+    "quality": 90.26086956521739,
     "manual_fill_completion": 100
   },
   "progress_dispersion": {
-    "quality_score_stddev": 1.3996759009139377,
+    "quality_score_stddev": 1.3544577385786032,
     "real_data_ratio_stddev": 0.5747030136298527,
-    "evidence_stddev": 1.257431594760106,
-    "freshness_stddev": 2.2577151908063464,
-    "quality_score_min": 87.5,
+    "evidence_stddev": 1.2836178785850025,
+    "freshness_stddev": 2.284682287955989,
+    "quality_score_min": 87.7,
     "quality_score_max": 93.3
   },
   "quality_differentiation_v2": {
@@ -46,7 +46,7 @@
     "salary_observed_tier_coverage_stddev": 0.48804226784007926,
     "salary_observed_tier_coverage_min": 2,
     "salary_observed_tier_coverage_max": 3,
-    "question_depth_stddev": 3.4842340016781175,
+    "question_depth_stddev": 3.4129742446591935,
     "question_depth_min": 16,
     "question_depth_max": 27,
     "written_role_coverage_stddev": 0.2817713347133852,
@@ -66,27 +66,27 @@
     "decision_evidence_sample_size_max": 15
   },
   "content_realness": {
-    "written_total": 201,
+    "written_total": 206,
     "written_need_real": 0,
-    "written_real_ready": 201,
-    "interview_total": 198,
+    "written_real_ready": 206,
+    "interview_total": 203,
     "interview_need_real": 0,
-    "interview_real_ready": 198
+    "interview_real_ready": 203
   },
   "template_quality": {
     "template_items": 0,
-    "items_total": 1566,
+    "items_total": 1576,
     "template_ratio_percent": 0
   },
   "source_concentration": {
-    "total_refs": 1566,
-    "top1_share_percent": 6.577266922094508,
-    "top5_share_percent": 24.32950191570881
+    "total_refs": 1576,
+    "top1_share_percent": 6.535532994923858,
+    "top5_share_percent": 24.1751269035533
   },
   "freshness_detail": {
-    "source_date_records": 2425,
+    "source_date_records": 2435,
     "effective_date_method": "publish_date_first_fallback_source_date",
-    "within_180_days_percent": 82.43298969072166,
+    "within_180_days_percent": 82.50513347022587,
     "older_than_365_days_count": 0
   },
   "salary_layers": {
@@ -112,21 +112,21 @@
     "sources_with_id": 554,
     "sources_with_snapshot": 554,
     "sources_checked": 554,
-    "sources_http_200": 554,
-    "sources_need_manual_verification": 0
+    "sources_http_200": 548,
+    "sources_need_manual_verification": 6
   },
   "source_registry_quality": {
     "registry_total": 199,
-    "registry_http_200": 199,
-    "registry_manual_verification": 0,
+    "registry_http_200": 194,
+    "registry_manual_verification": 5,
     "registry_source_type_dist": [
       {
         "type": "commercial_platform",
-        "count": 10
+        "count": 3
       },
       {
         "type": "company_official",
-        "count": 99
+        "count": 106
       },
       {
         "type": "curated_mapping",
@@ -179,8 +179,8 @@
   },
   "personalization": {
     "slots_total": 132,
-    "pending_total": 132,
-    "completion_percent": 0
+    "pending_total": 0,
+    "completion_percent": 100
   },
   "decision_metrics": {
     "entries_with_decision_fields": 23,
@@ -283,7 +283,11 @@
     "decision_reliability_tier_dist": [
       {
         "tier": "A",
-        "count": 23
+        "count": 13
+      },
+      {
+        "tier": "B",
+        "count": 10
       }
     ],
     "conversion_fields_filled": 23,

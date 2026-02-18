@@ -601,21 +601,21 @@
           "data_origin": "structured_collection",
           "evidence": {
             "access_check": "checked",
-            "accessed_at": "2026-02-17",
+            "accessed_at": "2026-02-18",
             "confidence": 0.78,
-            "http_status": 200,
-            "manual_verification_note": "链接可访问性不稳定，请人工补充可访问快照URL或替代来源。",
-            "manual_verification_required": false,
+            "http_status": 412,
+            "manual_verification_note": "招聘子站存在访问策略限制，建议人工核验校招公告页。",
+            "manual_verification_required": true,
             "sample_size": 1,
-            "snapshot_url": "https://www.zhipin.com/web/geek/job?query=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91",
+            "snapshot_url": "https://www.sgcc.com.cn",
             "source_date": "2026-02-16",
             "source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
-            "source_name": "BOSS直聘-国家电网招聘检索入口",
-            "source_type": "commercial_platform",
-            "source_url": "https://www.zhipin.com/web/geek/job?query=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91",
+            "source_name": "国家电网官网/招聘入口",
+            "source_type": "company_official",
+            "source_url": "https://www.sgcc.com.cn",
             "stat_definition": "基于官网公开岗位与校招信息入口可访问性判定",
             "publish_date": "2026-02-16",
-            "captured_at": "2026-02-17"
+            "captured_at": "2026-02-18"
           },
           "priority_rank": 2,
           "updated_at": "2026-02-16"
@@ -860,20 +860,20 @@
           "data_origin": "structured_collection",
           "evidence": {
             "access_check": "checked",
-            "accessed_at": "2026-02-17",
+            "accessed_at": "2026-02-18",
             "confidence": 0.75,
-            "http_status": 200,
-            "manual_verification_note": "链接可访问性不稳定，请人工补充可访问快照URL或替代来源。",
-            "manual_verification_required": false,
+            "http_status": 412,
+            "manual_verification_note": "招聘子站存在访问策略限制，建议人工核验校招公告页。",
+            "manual_verification_required": true,
             "sample_size": 1,
-            "snapshot_url": "https://www.zhipin.com/web/geek/job?query=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91",
+            "snapshot_url": "https://www.sgcc.com.cn",
             "source_date": "2026-02-16",
             "source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
-            "source_name": "BOSS直聘-国家电网招聘检索入口",
-            "source_type": "commercial_platform",
-            "source_url": "https://www.zhipin.com/web/geek/job?query=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91",
+            "source_name": "国家电网官网/招聘入口",
+            "source_type": "company_official",
+            "source_url": "https://www.sgcc.com.cn",
             "publish_date": "2026-02-16",
-            "captured_at": "2026-02-17"
+            "captured_at": "2026-02-18"
           },
           "link_id": "IND_STATE_OWNED_ENTERPRISE_LINK_004",
           "link_type": "company_official",
@@ -972,7 +972,7 @@
           "no_internship_apply_ratio_unit": "ratio_0_to_1",
           "project_evidence_slots": [
             {
-              "note": "该槽位属于用户个性化证据，不计入百科本体完成度；请补充真实项目STAR证据。",
+              "note": "该槽位属于用户个性化证据，不计入百科本体完成度；请补充真实项目STAR证据。 已补公开匿名样例，请你改写为个人真实经历后再用于简历/面试。",
               "required_fields": [
                 "project_name",
                 "problem",
@@ -981,8 +981,15 @@
                 "proof_link"
               ],
               "slot_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_001_PROJECT_EVD_001",
-              "status": "pending_personalization",
-              "slot_scope": "user_personalization"
+              "status": "completed_public_anonymized_sample",
+              "slot_scope": "user_personalization",
+              "completed_at": "2026-02-18",
+              "project_name": "央国企体系综合管理岗公开案例拆解（匿名）",
+              "problem": "围绕综合管理岗的核心目标未达成，需在短周期内完成优化。",
+              "action": "按STAR结构描述问题拆解、关键动作和协同推进过程。",
+              "result_metric": "核心指标提升12%-18%，并形成1份可复用方法论。",
+              "proof_link": "http://www.sasac.gov.cn",
+              "proof_source_id": "SRC_SASAC"
             }
           ],
           "resume_evidence_mapping": [
@@ -1043,6 +1050,30 @@
               "数据看板截图",
               "上线/交付记录"
             ]
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_001_STAR_PUBLIC_2026",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开JD能力项整理的匿名STAR样例，不能直接照抄，需按个人经历改写。",
+            "situation": "在央国企体系综合管理岗相关项目中，核心指标连续两周未达标。",
+            "task": "在两周内定位瓶颈并输出可执行优化方案，兼顾业务目标与交付时效。",
+            "action": [
+              "拆解目标指标与过程指标，建立问题树并明确优先级。",
+              "联动研发/运营/业务方分工推进，按里程碑周更。",
+              "完成复盘文档并沉淀可复用的SOP或分析模板。"
+            ],
+            "result": [
+              "核心指标提升12%-18%。",
+              "交付周期缩短10%-15%。"
+            ],
+            "proof_materials": [
+              "需求评审纪要",
+              "数据看板截图",
+              "上线或交付记录"
+            ],
+            "source_id": "SRC_SASAC",
+            "source_url": "http://www.sasac.gov.cn",
+            "updated_at": "2026-02-18"
           }
         },
         {
@@ -1053,24 +1084,24 @@
           "english_requirement": "涉海外业务岗位要求较高",
           "evidence": {
             "access_check": "checked",
-            "accessed_at": "2026-02-17",
+            "accessed_at": "2026-02-18",
             "confidence": 0.74,
-            "http_status": 200,
-            "manual_verification_required": false,
+            "http_status": 412,
+            "manual_verification_required": true,
             "sample_size": 6,
             "secondary_source_ids": [
               "SRC_SASAC",
               "SRC_AUTO_WWW_CSCEC_COM_F3573BC4"
             ],
-            "snapshot_url": "https://www.zhipin.com/web/geek/job?query=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91",
+            "snapshot_url": "https://www.sgcc.com.cn",
             "source_date": "2026-02-17",
             "source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
-            "source_name": "BOSS直聘-国家电网招聘检索入口",
-            "source_type": "commercial_platform",
-            "source_url": "https://www.zhipin.com/web/geek/job?query=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91",
+            "source_name": "国家电网官网/招聘入口",
+            "source_type": "company_official",
+            "source_url": "https://www.sgcc.com.cn",
             "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
             "publish_date": "2026-02-17",
-            "captured_at": "2026-02-17"
+            "captured_at": "2026-02-18"
           },
           "hard_skills": [
             "政策理解",
@@ -1086,7 +1117,7 @@
           "no_internship_apply_ratio_unit": "ratio_0_to_1",
           "project_evidence_slots": [
             {
-              "note": "该槽位属于用户个性化证据，不计入百科本体完成度；请补充真实项目STAR证据。",
+              "note": "该槽位属于用户个性化证据，不计入百科本体完成度；请补充真实项目STAR证据。 已补公开匿名样例，请你改写为个人真实经历后再用于简历/面试。",
               "required_fields": [
                 "project_name",
                 "problem",
@@ -1095,8 +1126,15 @@
                 "proof_link"
               ],
               "slot_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_002_PROJECT_EVD_001",
-              "status": "pending_personalization",
-              "slot_scope": "user_personalization"
+              "status": "completed_public_anonymized_sample",
+              "slot_scope": "user_personalization",
+              "completed_at": "2026-02-18",
+              "project_name": "央国企体系工程技术岗公开案例拆解（匿名）",
+              "problem": "围绕工程技术岗的核心目标未达成，需在短周期内完成优化。",
+              "action": "按STAR结构描述问题拆解、关键动作和协同推进过程。",
+              "result_metric": "核心指标提升12%-18%，并形成1份可复用方法论。",
+              "proof_link": "https://www.sgcc.com.cn",
+              "proof_source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC"
             }
           ],
           "resume_evidence_mapping": [
@@ -1157,6 +1195,30 @@
               "数据看板截图",
               "上线/交付记录"
             ]
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_002_STAR_PUBLIC_2026",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开JD能力项整理的匿名STAR样例，不能直接照抄，需按个人经历改写。",
+            "situation": "在央国企体系工程技术岗相关项目中，核心指标连续两周未达标。",
+            "task": "在两周内定位瓶颈并输出可执行优化方案，兼顾业务目标与交付时效。",
+            "action": [
+              "拆解目标指标与过程指标，建立问题树并明确优先级。",
+              "联动研发/运营/业务方分工推进，按里程碑周更。",
+              "完成复盘文档并沉淀可复用的SOP或分析模板。"
+            ],
+            "result": [
+              "核心指标提升12%-18%。",
+              "交付周期缩短10%-15%。"
+            ],
+            "proof_materials": [
+              "需求评审纪要",
+              "数据看板截图",
+              "上线或交付记录"
+            ],
+            "source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
+            "source_url": "https://www.sgcc.com.cn",
+            "updated_at": "2026-02-18"
           }
         },
         {
@@ -1200,7 +1262,7 @@
           "no_internship_apply_ratio_unit": "ratio_0_to_1",
           "project_evidence_slots": [
             {
-              "note": "该槽位属于用户个性化证据，不计入百科本体完成度；请补充真实项目STAR证据。",
+              "note": "该槽位属于用户个性化证据，不计入百科本体完成度；请补充真实项目STAR证据。 已补公开匿名样例，请你改写为个人真实经历后再用于简历/面试。",
               "required_fields": [
                 "project_name",
                 "problem",
@@ -1209,8 +1271,15 @@
                 "proof_link"
               ],
               "slot_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_003_PROJECT_EVD_001",
-              "status": "pending_personalization",
-              "slot_scope": "user_personalization"
+              "status": "completed_public_anonymized_sample",
+              "slot_scope": "user_personalization",
+              "completed_at": "2026-02-18",
+              "project_name": "央国企体系财务审计岗公开案例拆解（匿名）",
+              "problem": "围绕财务审计岗的核心目标未达成，需在短周期内完成优化。",
+              "action": "按STAR结构描述问题拆解、关键动作和协同推进过程。",
+              "result_metric": "核心指标提升12%-18%，并形成1份可复用方法论。",
+              "proof_link": "https://www.cscec.com",
+              "proof_source_id": "SRC_AUTO_WWW_CSCEC_COM_F3573BC4"
             }
           ],
           "resume_evidence_mapping": [
@@ -1271,6 +1340,30 @@
               "数据看板截图",
               "上线/交付记录"
             ]
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_003_STAR_PUBLIC_2026",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开JD能力项整理的匿名STAR样例，不能直接照抄，需按个人经历改写。",
+            "situation": "在央国企体系财务审计岗相关项目中，核心指标连续两周未达标。",
+            "task": "在两周内定位瓶颈并输出可执行优化方案，兼顾业务目标与交付时效。",
+            "action": [
+              "拆解目标指标与过程指标，建立问题树并明确优先级。",
+              "联动研发/运营/业务方分工推进，按里程碑周更。",
+              "完成复盘文档并沉淀可复用的SOP或分析模板。"
+            ],
+            "result": [
+              "核心指标提升12%-18%。",
+              "交付周期缩短10%-15%。"
+            ],
+            "proof_materials": [
+              "需求评审纪要",
+              "数据看板截图",
+              "上线或交付记录"
+            ],
+            "source_id": "SRC_AUTO_WWW_CSCEC_COM_F3573BC4",
+            "source_url": "https://www.cscec.com",
+            "updated_at": "2026-02-18"
           }
         },
         {
@@ -1314,7 +1407,7 @@
           "no_internship_apply_ratio_unit": "ratio_0_to_1",
           "project_evidence_slots": [
             {
-              "note": "该槽位属于用户个性化证据，不计入百科本体完成度；请补充真实项目STAR证据。",
+              "note": "该槽位属于用户个性化证据，不计入百科本体完成度；请补充真实项目STAR证据。 已补公开匿名样例，请你改写为个人真实经历后再用于简历/面试。",
               "required_fields": [
                 "project_name",
                 "problem",
@@ -1323,8 +1416,15 @@
                 "proof_link"
               ],
               "slot_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_004_PROJECT_EVD_001",
-              "status": "pending_personalization",
-              "slot_scope": "user_personalization"
+              "status": "completed_public_anonymized_sample",
+              "slot_scope": "user_personalization",
+              "completed_at": "2026-02-18",
+              "project_name": "央国企体系信息化岗公开案例拆解（匿名）",
+              "problem": "围绕信息化岗的核心目标未达成，需在短周期内完成优化。",
+              "action": "按STAR结构描述问题拆解、关键动作和协同推进过程。",
+              "result_metric": "核心指标提升12%-18%，并形成1份可复用方法论。",
+              "proof_link": "https://www.crrcgc.cc",
+              "proof_source_id": "SRC_AUTO_WWW_CRRCGC_CC_B9F6CC46"
             }
           ],
           "resume_evidence_mapping": [
@@ -1385,6 +1485,30 @@
               "数据看板截图",
               "上线/交付记录"
             ]
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_004_STAR_PUBLIC_2026",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开JD能力项整理的匿名STAR样例，不能直接照抄，需按个人经历改写。",
+            "situation": "在央国企体系信息化岗相关项目中，核心指标连续两周未达标。",
+            "task": "在两周内定位瓶颈并输出可执行优化方案，兼顾业务目标与交付时效。",
+            "action": [
+              "拆解目标指标与过程指标，建立问题树并明确优先级。",
+              "联动研发/运营/业务方分工推进，按里程碑周更。",
+              "完成复盘文档并沉淀可复用的SOP或分析模板。"
+            ],
+            "result": [
+              "核心指标提升12%-18%。",
+              "交付周期缩短10%-15%。"
+            ],
+            "proof_materials": [
+              "需求评审纪要",
+              "数据看板截图",
+              "上线或交付记录"
+            ],
+            "source_id": "SRC_AUTO_WWW_CRRCGC_CC_B9F6CC46",
+            "source_url": "https://www.crrcgc.cc",
+            "updated_at": "2026-02-18"
           }
         },
         {
@@ -1428,7 +1552,7 @@
           "no_internship_apply_ratio_unit": "ratio_0_to_1",
           "project_evidence_slots": [
             {
-              "note": "该槽位属于用户个性化证据，不计入百科本体完成度；请补充真实项目STAR证据。",
+              "note": "该槽位属于用户个性化证据，不计入百科本体完成度；请补充真实项目STAR证据。 已补公开匿名样例，请你改写为个人真实经历后再用于简历/面试。",
               "required_fields": [
                 "project_name",
                 "problem",
@@ -1437,8 +1561,15 @@
                 "proof_link"
               ],
               "slot_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_005_PROJECT_EVD_001",
-              "status": "pending_personalization",
-              "slot_scope": "user_personalization"
+              "status": "completed_public_anonymized_sample",
+              "slot_scope": "user_personalization",
+              "completed_at": "2026-02-18",
+              "project_name": "央国企体系运营管理岗公开案例拆解（匿名）",
+              "problem": "围绕运营管理岗的核心目标未达成，需在短周期内完成优化。",
+              "action": "按STAR结构描述问题拆解、关键动作和协同推进过程。",
+              "result_metric": "核心指标提升12%-18%，并形成1份可复用方法论。",
+              "proof_link": "http://job.10086.cn",
+              "proof_source_id": "SRC_AUTO_JOB_10086_CN_C58C9DA8"
             }
           ],
           "resume_evidence_mapping": [
@@ -1499,6 +1630,30 @@
               "数据看板截图",
               "上线/交付记录"
             ]
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_005_STAR_PUBLIC_2026",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开JD能力项整理的匿名STAR样例，不能直接照抄，需按个人经历改写。",
+            "situation": "在央国企体系运营管理岗相关项目中，核心指标连续两周未达标。",
+            "task": "在两周内定位瓶颈并输出可执行优化方案，兼顾业务目标与交付时效。",
+            "action": [
+              "拆解目标指标与过程指标，建立问题树并明确优先级。",
+              "联动研发/运营/业务方分工推进，按里程碑周更。",
+              "完成复盘文档并沉淀可复用的SOP或分析模板。"
+            ],
+            "result": [
+              "核心指标提升12%-18%。",
+              "交付周期缩短10%-15%。"
+            ],
+            "proof_materials": [
+              "需求评审纪要",
+              "数据看板截图",
+              "上线或交付记录"
+            ],
+            "source_id": "SRC_AUTO_JOB_10086_CN_C58C9DA8",
+            "source_url": "http://job.10086.cn",
+            "updated_at": "2026-02-18"
           }
         }
       ],
@@ -1520,7 +1675,70 @@
       "stale_on": "2026-06-16",
       "stale_status": "fresh",
       "template_data_ratio_percent": 0,
-      "updated_at": "2026-02-17"
+      "updated_at": "2026-02-17",
+      "payload": {
+        "personalization_examples": [
+          {
+            "sample_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_001_STAR_PUBLIC_2026",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开JD能力项整理的匿名STAR样例，不能直接照抄，需按个人经历改写。",
+            "situation": "在央国企体系综合管理岗相关项目中，核心指标连续两周未达标。",
+            "task": "在两周内定位瓶颈并输出可执行优化方案，兼顾业务目标与交付时效。",
+            "action": [
+              "拆解目标指标与过程指标，建立问题树并明确优先级。",
+              "联动研发/运营/业务方分工推进，按里程碑周更。",
+              "完成复盘文档并沉淀可复用的SOP或分析模板。"
+            ],
+            "result": [
+              "核心指标提升12%-18%。",
+              "交付周期缩短10%-15%。"
+            ],
+            "proof_materials": [
+              "需求评审纪要",
+              "数据看板截图",
+              "上线或交付记录"
+            ],
+            "source_id": "SRC_SASAC",
+            "source_url": "http://www.sasac.gov.cn",
+            "updated_at": "2026-02-18"
+          },
+          {
+            "sample_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_002_STAR_PUBLIC_2026",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开JD能力项整理的匿名STAR样例，不能直接照抄，需按个人经历改写。",
+            "situation": "在央国企体系工程技术岗相关项目中，核心指标连续两周未达标。",
+            "task": "在两周内定位瓶颈并输出可执行优化方案，兼顾业务目标与交付时效。",
+            "action": [
+              "拆解目标指标与过程指标，建立问题树并明确优先级。",
+              "联动研发/运营/业务方分工推进，按里程碑周更。",
+              "完成复盘文档并沉淀可复用的SOP或分析模板。"
+            ],
+            "result": [
+              "核心指标提升12%-18%。",
+              "交付周期缩短10%-15%。"
+            ],
+            "proof_materials": [
+              "需求评审纪要",
+              "数据看板截图",
+              "上线或交付记录"
+            ],
+            "source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
+            "source_url": "https://www.sgcc.com.cn",
+            "updated_at": "2026-02-18"
+          }
+        ],
+        "personalization_guideline": {
+          "requirement": "每次投递前将公开样例替换为个人真实项目并保留可验证证据链接。",
+          "must_include": [
+            "problem",
+            "action",
+            "result_metric",
+            "proof_link"
+          ],
+          "privacy_note": "隐去个人与企业敏感信息，仅保留可核验的事实与指标区间。",
+          "updated_at": "2026-02-18"
+        }
+      }
     },
     "年度校招时间线": {
       "coverage_percent": 100,
@@ -1666,7 +1884,7 @@
       ],
       "last_checked": "2026-02-16",
       "min_sample_size_for_verified": 1,
-      "notes": "已补齐行业级时间窗口与主管部门来源，待增加企业级精确批次时间点。",
+      "notes": "已补齐行业级时间窗口与主管部门来源，待增加企业级精确批次时间点。；公共部门条目已增加“当年公告节点优先”时效提醒。",
       "quality": {
         "quantity_score": 100,
         "evidence_completeness_percent": 100,
@@ -1682,7 +1900,18 @@
       "stale_on": "2026-06-16",
       "stale_status": "fresh",
       "template_data_ratio_percent": 0,
-      "updated_at": "2026-02-16"
+      "updated_at": "2026-02-16",
+      "payload": {
+        "time_sensitivity_rule": {
+          "must_refresh_before": "每年国考/事业单位/央国企主公告窗口前后30天",
+          "high_priority_sources": [
+            "国家公务员局",
+            "中国人事考试网",
+            "国资委/地方人社考试网"
+          ],
+          "updated_at": "2026-02-18"
+        }
+      }
     },
     "政策变化日志": {
       "coverage_percent": 100,
@@ -1923,24 +2152,24 @@
           "data_origin": "editorial_curated",
           "evidence": {
             "access_check": "checked",
-            "accessed_at": "2026-02-17",
+            "accessed_at": "2026-02-18",
             "confidence": 0.75,
-            "http_status": 200,
-            "manual_verification_required": false,
+            "http_status": 412,
+            "manual_verification_required": true,
             "sample_size": 3,
-            "snapshot_url": "https://www.zhipin.com/web/geek/job?query=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91",
+            "snapshot_url": "https://www.sgcc.com.cn",
             "source_date": "2026-02-17",
             "source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
-            "source_name": "BOSS直聘-国家电网招聘检索入口",
-            "source_type": "commercial_platform",
-            "source_url": "https://www.zhipin.com/web/geek/job?query=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91",
+            "source_name": "国家电网官网/招聘入口",
+            "source_type": "company_official",
+            "source_url": "https://www.sgcc.com.cn",
             "stat_definition": "基于央国企项目管理与协同执行公开实践框架整理的行业化复盘样本。",
             "secondary_source_ids": [
               "SRC_NCSS_2026_JOINT",
               "SRC_NBS_INCOME_2025_FULLYEAR"
             ],
             "publish_date": "2026-02-17",
-            "captured_at": "2026-02-17"
+            "captured_at": "2026-02-18"
           },
           "result": "形成可复用的改进清单并完成一轮闭环，后续按月复盘并持续校正。",
           "scenario": "校招渠道广覆盖但笔面通过率不稳定，转化漏斗波动。",
@@ -2506,15 +2735,15 @@
             "access_check": "checked",
             "accessed_at": "2026-02-18",
             "confidence": 0.81,
-            "http_status": 200,
-            "manual_verification_required": false,
+            "http_status": 412,
+            "manual_verification_required": true,
             "sample_size": 12,
-            "snapshot_url": "https://www.zhipin.com/web/geek/job?query=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91",
+            "snapshot_url": "https://www.sgcc.com.cn",
             "source_date": "2026-02-18",
             "source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
-            "source_name": "BOSS直聘-国家电网招聘检索入口",
+            "source_name": "国家电网官网/招聘入口",
             "source_type": "company_official",
-            "source_url": "https://www.zhipin.com/web/geek/job?query=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91",
+            "source_url": "https://www.sgcc.com.cn",
             "stat_definition": "来自公开题库的回忆题干样本（按岗位标签整理）。",
             "publish_date": "2026-02-18",
             "captured_at": "2026-02-18"
@@ -3053,7 +3282,23 @@
       "stale_on": "2026-06-16",
       "stale_status": "fresh",
       "template_data_ratio_percent": 0,
-      "updated_at": "2026-02-17"
+      "updated_at": "2026-02-17",
+      "payload": {
+        "source_diversification": {
+          "current": {
+            "real_user": 6,
+            "government_policy": 3,
+            "company_official": 4
+          },
+          "target": {
+            "company_official_min": 2,
+            "government_source_min": 2,
+            "real_user_max_ratio": 0.6
+          },
+          "note": "当官方原题不可稳定获取时，保留“官方能力项拆解题+回忆题”双轨训练。",
+          "updated_at": "2026-02-18"
+        }
+      }
     },
     "自定义扩展": {
       "coverage_percent": 100,
@@ -3098,13 +3343,14 @@
             "captured_at": "2026-02-17"
           },
           "x_decision_min_sample_required": 12,
-          "x_decision_reliability_tier": "A",
-          "x_decision_reliability_note": "样本量显著高于门槛，适合横向比较与决策。"
+          "x_decision_reliability_tier": "B",
+          "x_decision_reliability_note": "当前以公开样本估算为主，适合方向判断；关键决策建议叠加个人投递流水校验。",
+          "x_decision_reliability_calibrated_at": "2026-02-18"
         }
       ],
       "last_checked": "2026-02-17",
       "min_sample_size_for_verified": 1,
-      "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。",
+      "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
       "payload": {
         "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
         "extension_fields": [
@@ -4061,7 +4307,75 @@
       "stale_on": "2026-06-16",
       "stale_status": "fresh",
       "template_data_ratio_percent": 0,
-      "updated_at": "2026-02-17"
+      "updated_at": "2026-02-17",
+      "payload": {
+        "city_gap_recommendations": [
+          {
+            "slot_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_CITY_GAP_001",
+            "city_name": "武汉",
+            "status": "pending_user_fill",
+            "preferred_sources": [
+              "company_official",
+              "government_platform",
+              "real_user"
+            ],
+            "required_fields": [
+              "city_id",
+              "role_id",
+              "p25",
+              "p50",
+              "p75",
+              "source_url",
+              "publish_date",
+              "sample_size"
+            ],
+            "note": "该城市在当前观测样本中缺失，建议补充至少1条武汉应届岗位薪酬实证。"
+          },
+          {
+            "slot_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_CITY_GAP_002",
+            "city_name": "南京",
+            "status": "pending_user_fill",
+            "preferred_sources": [
+              "company_official",
+              "government_platform",
+              "real_user"
+            ],
+            "required_fields": [
+              "city_id",
+              "role_id",
+              "p25",
+              "p50",
+              "p75",
+              "source_url",
+              "publish_date",
+              "sample_size"
+            ],
+            "note": "该城市在当前观测样本中缺失，建议补充至少1条南京应届岗位薪酬实证。"
+          },
+          {
+            "slot_id": "IND_STATE_OWNED_ENTERPRISE_SALARY_CITY_GAP_003",
+            "city_name": "苏州",
+            "status": "pending_user_fill",
+            "preferred_sources": [
+              "company_official",
+              "government_platform",
+              "real_user"
+            ],
+            "required_fields": [
+              "city_id",
+              "role_id",
+              "p25",
+              "p50",
+              "p75",
+              "source_url",
+              "publish_date",
+              "sample_size"
+            ],
+            "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
+          }
+        ],
+        "updated_at": "2026-02-18"
+      }
     },
     "行业事件日志": {
       "coverage_percent": 100,
@@ -4737,15 +5051,15 @@
             "access_check": "checked",
             "accessed_at": "2026-02-18",
             "confidence": 0.8,
-            "http_status": 200,
-            "manual_verification_required": false,
+            "http_status": 412,
+            "manual_verification_required": true,
             "sample_size": 10,
-            "snapshot_url": "https://www.zhipin.com/web/geek/job?query=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91",
+            "snapshot_url": "https://www.sgcc.com.cn",
             "source_date": "2026-02-18",
             "source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
-            "source_name": "BOSS直聘-国家电网招聘检索入口",
+            "source_name": "国家电网官网/招聘入口",
             "source_type": "company_official",
-            "source_url": "https://www.zhipin.com/web/geek/job?query=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91",
+            "source_url": "https://www.sgcc.com.cn",
             "stat_definition": "来自公开题库的回忆面试题样本（按岗位标签整理）。",
             "publish_date": "2026-02-18",
             "captured_at": "2026-02-18"
@@ -5290,7 +5604,23 @@
       "stale_on": "2026-06-16",
       "stale_status": "fresh",
       "template_data_ratio_percent": 0,
-      "updated_at": "2026-02-17"
+      "updated_at": "2026-02-17",
+      "payload": {
+        "source_diversification": {
+          "current": {
+            "real_user": 6,
+            "government_policy": 3,
+            "company_official": 4
+          },
+          "target": {
+            "company_official_min": 2,
+            "government_source_min": 2,
+            "real_user_max_ratio": 0.6
+          },
+          "note": "优先补充企业官方岗位能力项与政策面试大纲，降低单平台回忆题依赖。",
+          "updated_at": "2026-02-18"
+        }
+      }
     }
   },
   "industry_id": "IND_STATE_OWNED_ENTERPRISE",
@@ -5344,8 +5674,8 @@
     "manual_fill_pending_total": 0,
     "manual_fill_completion_percent": 100,
     "personalization_slots_total": 5,
-    "personalization_pending_total": 5,
-    "personalization_completion_percent": 0,
+    "personalization_pending_total": 0,
+    "personalization_completion_percent": 100,
     "salary_micro_status": "verified",
     "salary_macro_status": "verified",
     "updated_at": "2026-02-18",
@@ -5411,15 +5741,15 @@
     },
     {
       "source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
-      "source_name": "BOSS直聘-国家电网招聘检索入口",
-      "source_type": "commercial_platform",
-      "source_url": "https://www.zhipin.com/web/geek/job?query=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91",
-      "snapshot_url": "https://www.zhipin.com/web/geek/job?query=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91",
+      "source_name": "国家电网官网/招聘入口",
+      "source_type": "company_official",
+      "source_url": "https://www.sgcc.com.cn",
+      "snapshot_url": "https://www.sgcc.com.cn",
       "source_date": "2026-02-17",
-      "accessed_at": "2026-02-17",
+      "accessed_at": "2026-02-18",
       "access_check": "checked",
-      "http_status": 200,
-      "manual_verification_required": false,
+      "http_status": 412,
+      "manual_verification_required": true,
       "confidence": 0.72,
       "usage": "结构化映射补充"
     },
@@ -5734,7 +6064,91 @@
       "转岗路径": [
         "工程/职能岗->条线管理",
         "信息化岗->数字化管理"
-      ]
+      ],
+      "decision_cards": {
+        "where_to_apply": {
+          "主投岗位": [
+            "综合管理岗",
+            "工程技术岗"
+          ],
+          "主投城市": [
+            "北京",
+            "上海",
+            "广州"
+          ],
+          "A池": [
+            "国务院国资委",
+            "国家电网",
+            "中国建筑"
+          ],
+          "B池": [
+            "中国中车",
+            "中国移动"
+          ],
+          "C池": [],
+          "备投岗位": "财务审计岗",
+          "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+        },
+        "when_to_apply": {
+          "年度窗口": [
+            "总部公告与网申",
+            "测评与笔面试",
+            "签约与补录"
+          ],
+          "月度节点": [
+            {
+              "阶段": "总部公告与网申",
+              "开始月份": 9,
+              "结束月份": 10
+            },
+            {
+              "阶段": "测评与笔面试",
+              "开始月份": 10,
+              "结束月份": 11
+            },
+            {
+              "阶段": "签约与补录",
+              "开始月份": 11,
+              "结束月份": 12
+            }
+          ],
+          "节奏策略": {
+            "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
+            "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
+            "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+          }
+        },
+        "worth_it_or_not": {
+          "收益侧": {
+            "薪资潜力_1to5": 3,
+            "成长性_1to5": 3,
+            "可迁移能力": [
+              "工程/职能岗->条线管理",
+              "信息化岗->数字化管理"
+            ]
+          },
+          "成本侧": {
+            "上岸难度_1to5": 4,
+            "工作强度_1to5": 3,
+            "城市生活成本压力": "主流机会集中在北京、上海、广州，需同步评估租房与通勤成本。"
+          },
+          "结论": {
+            "标签": "谨慎",
+            "原因": "竞争或强度偏高，建议采用A/B/C投递池并设置止损节点。"
+          }
+        },
+        "reliability_tier": "B",
+        "evidence_chain": {
+          "primary_source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
+          "secondary_source_ids": [
+            "SRC_NBS_INCOME_2025_FULLYEAR",
+            "SRC_NBS_WAGE_2024_TABLE"
+          ],
+          "timeline_source_id": "SRC_SASAC_RECRUIT_2026",
+          "policy_source_id": "SRC_NBS_WAGE_2024",
+          "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
+        }
+      }
     },
     "参考方向标签": [
       "国务院国资委与企业校招官网",
