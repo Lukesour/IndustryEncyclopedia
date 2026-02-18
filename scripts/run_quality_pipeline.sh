@@ -372,7 +372,7 @@ QUESTION_ROLE_COVERAGE_JSON="$(jq '
       industry_id,
       industry_name: ."行业名称",
       role_total: $role_total,
-      required_role_coverage: (if $role_total < 5 then $role_total else 5 end),
+      required_role_coverage: $role_total,
       written_role_coverage: (.dynamic["笔试真题库"].items | map(.role_id) | unique | length),
       interview_role_coverage: (.dynamic["面试真题库"].items | map(.role_id) | unique | length)
     }
