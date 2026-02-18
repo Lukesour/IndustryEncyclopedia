@@ -407,10 +407,20 @@
           "新增时间线条目均挂载公司官方来源并保留NCSS/人社部二级交叉证据。",
           "全量重算progress与质量门禁，来源集中度与阻断门槛继续通过。"
         ]
+      },
+      {
+        "version": "v1.32.0",
+        "date": "2026-02-18",
+        "summary": [
+          "23个行业逐条新增2026Q1最新招聘信号事件，补齐事实+影响+行业指标+双证据链结构。",
+          "新增事件主证据统一采用已联网核验HTTP 200的企业官方招聘入口，降低模板化与旧证据占比。",
+          "全行业行业事件日志最小条目数由8提升到9，增强时效性与行业差异化。",
+          "新增评分口径与扣分明细文档、信息源抓取规范v1.32，提升可解释性与可持续采集能力。"
+        ]
       }
     ],
-    "文档名称": "中国大陆应届生求职行业百科（v1.31.0时间线月度增强版）",
-    "版本": "v1.31.0",
+    "文档名称": "中国大陆应届生求职行业百科（v1.32.0事件与证据增强版）",
+    "版本": "v1.32.0",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -451,7 +461,9 @@
       "v1.29.0修复行业索引与词条progress评分口径漂移，统一质量排序展示。",
       "v1.30.0完成剩余13个行业题库深度补齐（全行业至少8条笔试+8条面试），并以官方来源+NCSS交叉验证增强证据可靠性。",
       "v1.30.0统一行业索引与progress口径并通过发布门禁校验（has_blockers=false）。",
-      "v1.31.0补齐全行业月度时间线到“至少2条”，并保持来源门禁通过（has_blockers=false）。"
+      "v1.31.0补齐全行业月度时间线到“至少2条”，并保持来源门禁通过（has_blockers=false）。",
+      "v1.32.0全行业新增2026Q1事件信号并统一双证据链，提升时效与差异化。",
+      "v1.32.0新增评分口径与信息源规范文档，支持后续按扣分项持续优化。"
     ],
     "适用人群": "中国大陆应届生（含毕业3年内）",
     "updated_at": "2026-02-18"
@@ -6294,8 +6306,8 @@
       "salary_observed_company_tier_max_hits": 0,
       "source_concentration_top1_max_percent": 7.5,
       "source_concentration_top5_max_percent": 26,
-      "event_log_min_count": 8,
-      "event_recent_180d_min_count": 6
+      "event_log_min_count": 9,
+      "event_recent_180d_min_count": 8
     },
     "审核要求": "所有可发布记录必须具备可追溯source_id（映射到来源注册表）和可验证source_url；低可访问来源需添加人工补录槽位，并设置优先级与到期日。",
     "数据更新周期": "quarterly",
@@ -10285,6 +10297,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.inovance.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+                "source_name": "汇川技术官网",
+                "source_type": "company_official",
+                "source_url": "https://www.inovance.com",
+                "secondary_source_ids": [
+                  "SRC_MIIT_MECHANICAL_STABLE_20250929",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "高端制造春招继续聚焦运动控制、自动化软件和现场应用岗位。准备重点从理论能力转向交付场景中的调试与降本能力。",
+              "title": "高端制造春招延续自动化与控制工程岗位需求",
+              "updated_at": "2026-02-18",
+              "fact": "招聘官网持续开放控制算法、应用工程和设备调试岗位",
+              "impact": "候选人需要展示设备导入、一次调试通过和节拍优化案例",
+              "industry_indicator": "设备稼动率、一次调试通过率、交付周期",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+                "secondary_source_ids": [
+                  "SRC_MIIT_MECHANICAL_STABLE_20250929",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -11225,7 +11278,7 @@
       },
       "industry_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -11259,11 +11312,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 90.6,
-        "freshness_percent_overall": 87.5,
+        "evidence_percent_overall": 90.8,
+        "freshness_percent_overall": 87.7,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.8,
+        "quality_score_overall": 88.9,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -11279,7 +11332,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 27.3
+        "ranking_percentile": 13.6
       },
       "slug": "advanced-manufacturing-automation",
       "sources": [
@@ -15555,6 +15608,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_AGRI_FOOD_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.yili.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_JOB_YILI_COM_DBF6000A",
+                "source_name": "伊利招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://www.yili.com",
+                "secondary_source_ids": [
+                  "SRC_MOA_CASDE_20251009",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "农业与食品春招继续补录供应链、质量管理、渠道运营和生产管理岗位。准备需体现质量合规与终端动销协同能力。",
+              "title": "农业与食品春招持续补录质量与供应链岗位",
+              "updated_at": "2026-02-18",
+              "fact": "招聘入口持续开放生产、品控、供应链与渠道运营岗位",
+              "impact": "应届生需展示从原料到终端的质量与效率改进案例",
+              "industry_indicator": "动销率、库存周转天数、冷链履约率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_JOB_YILI_COM_DBF6000A",
+                "secondary_source_ids": [
+                  "SRC_MOA_CASDE_20251009",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_AGRI_FOOD_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -16447,7 +16541,7 @@
       },
       "industry_id": "IND_AGRI_FOOD",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -16487,11 +16581,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 87.9,
-        "freshness_percent_overall": 86.4,
+        "evidence_percent_overall": 88.1,
+        "freshness_percent_overall": 86.6,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90,
+        "quality_score_overall": 90.1,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -16507,7 +16601,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 36.4
+        "ranking_percentile": 63.6
       },
       "slug": "agriculture-food",
       "sources": [
@@ -20872,6 +20966,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_AUTO_INTELLIGENT_DRIVING_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://job.byd.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+                "source_name": "比亚迪招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://job.byd.com",
+                "secondary_source_ids": [
+                  "SRC_MIIT_AUTO_STABLE_20250912",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "智能驾驶行业春招持续释放三电系统、智能座舱与整车软件岗位。应届生准备需覆盖功能安全、测试闭环和量产交付场景。",
+              "title": "智能驾驶春招继续扩充三电与车载软件岗位",
+              "updated_at": "2026-02-18",
+              "fact": "招聘入口持续开放三电、智能座舱、整车电子与测试岗位",
+              "impact": "简历与面试需要体现从需求到量产验证的全链路能力",
+              "industry_indicator": "量产交付周期、缺陷闭环率、单车软件迭代速度",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+                "secondary_source_ids": [
+                  "SRC_MIIT_AUTO_STABLE_20250912",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_AUTO_INTELLIGENT_DRIVING_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -21812,7 +21947,7 @@
       },
       "industry_id": "IND_AUTO_INTELLIGENT_DRIVING",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -21846,11 +21981,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 90.6,
-        "freshness_percent_overall": 87.5,
+        "evidence_percent_overall": 90.8,
+        "freshness_percent_overall": 87.7,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.6,
+        "quality_score_overall": 88.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -21866,7 +22001,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 13.6
+        "ranking_percentile": 9.1
       },
       "slug": "auto-intelligent-driving",
       "sources": [
@@ -26260,6 +26395,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_BIOMED_DEVICE_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.mindray.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+                "source_name": "迈瑞医疗官网",
+                "source_type": "company_official",
+                "source_url": "https://www.mindray.com",
+                "secondary_source_ids": [
+                  "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "生物医药与器械春招继续投向注册、临床支持、制造质量和产品工程岗位。准备需突出合规意识与跨部门协作能力。",
+              "title": "生物医药与器械春招持续补录注册与质量岗位",
+              "updated_at": "2026-02-18",
+              "fact": "官网招聘持续开放注册事务、临床支持、质量与研发工程岗位",
+              "impact": "求职准备应提供合规流程参与与问题闭环的可量化证据",
+              "industry_indicator": "注册审评周期、不良事件率、产线良率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+                "secondary_source_ids": [
+                  "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_BIOMED_DEVICE_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -27200,7 +27376,7 @@
       },
       "industry_id": "IND_BIOMED_DEVICE",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -27234,11 +27410,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 87.9,
-        "freshness_percent_overall": 84.8,
+        "evidence_percent_overall": 88.1,
+        "freshness_percent_overall": 85.1,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.1,
+        "quality_score_overall": 89.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -27254,7 +27430,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 40.9
+        "ranking_percentile": 22.7
       },
       "slug": "biomed-device",
       "sources": [
@@ -31594,6 +31770,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_CHEM_NEW_MATERIALS_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.whchem.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_WHCHEM_COM_7C60B768",
+                "source_name": "万华化学官网",
+                "source_type": "company_official",
+                "source_url": "https://www.whchem.com",
+                "secondary_source_ids": [
+                  "SRC_MIIT",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "化工与新材料春招继续释放工艺优化、安环管理和应用开发岗位。准备应聚焦装置稳定运行与降本增效案例。",
+              "title": "化工与新材料春招延续工艺与安环岗位需求",
+              "updated_at": "2026-02-18",
+              "fact": "企业官网持续发布工艺、EHS与应用开发相关岗位",
+              "impact": "应届生需证明对工艺窗口、安环规范和协同交付的理解",
+              "industry_indicator": "装置开工率、价差、安环事故率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_WWW_WHCHEM_COM_7C60B768",
+                "secondary_source_ids": [
+                  "SRC_MIIT",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_CHEM_NEW_MATERIALS_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -32529,7 +32746,7 @@
       },
       "industry_id": "IND_CHEM_NEW_MATERIALS",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -32563,11 +32780,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 88.1,
-        "evidence_percent_overall": 90.6,
-        "freshness_percent_overall": 87.5,
+        "evidence_percent_overall": 90.8,
+        "freshness_percent_overall": 87.7,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 88.4,
+        "quality_score_overall": 87.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -37201,6 +37418,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_CIVIL_SERVICE_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "http://bm.scs.gov.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_BM_SCS_GOV_CN_6B67637B",
+                "source_name": "国考报名系统官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "http://bm.scs.gov.cn",
+                "secondary_source_ids": [
+                  "SRC_MOE_GK_20260115",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "公务员招录在春季阶段继续推进调剂、面试和资格复审节点。准备应从笔试转向结构化表达与岗位匹配证明。",
+              "title": "公务员招录进入面试与调剂关键窗口",
+              "updated_at": "2026-02-18",
+              "fact": "报名与公告系统持续更新调剂、面试及资格复审相关安排",
+              "impact": "备考重点应切换到面试表达、岗位认知和材料规范完整性",
+              "industry_indicator": "岗位竞争比、进面分数线、调剂成功率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_BM_SCS_GOV_CN_6B67637B",
+                "secondary_source_ids": [
+                  "SRC_MOE_GK_20260115",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_CIVIL_SERVICE_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -38348,7 +38606,7 @@
       },
       "industry_id": "IND_CIVIL_SERVICE",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -38382,11 +38640,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 97.6,
-        "evidence_percent_overall": 92.2,
-        "freshness_percent_overall": 89.6,
+        "evidence_percent_overall": 92.3,
+        "freshness_percent_overall": 89.7,
         "real_data_ratio_overall": 75,
         "template_ratio_overall": 0,
-        "quality_score_overall": 93.2,
+        "quality_score_overall": 93.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -42668,6 +42926,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_CONSULTING_PRO_SERVICES_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.pwccn.com/zh/careers.html",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+                "source_name": "普华永道中国职业页面",
+                "source_type": "company_official",
+                "source_url": "https://www.pwccn.com/zh/careers.html",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CAMPUS_2026_0129",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "咨询与专业服务春招持续释放审计、风险管理、数字化咨询和数据分析岗位。面试准备需强调结构化分析与客户沟通落地能力。",
+              "title": "咨询行业春招持续开放审计与数字化咨询岗位",
+              "updated_at": "2026-02-18",
+              "fact": "职业页面持续显示审计、税务、咨询与数据分析岗位需求",
+              "impact": "候选人需展示问题拆解、项目推进和表达呈现的综合能力",
+              "industry_indicator": "项目交付周期、人效利用率、项目毛利率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CAMPUS_2026_0129",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_CONSULTING_PRO_SERVICES_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -43560,7 +43859,7 @@
       },
       "industry_id": "IND_CONSULTING_PRO_SERVICES",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -43600,11 +43899,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 90.6,
-        "freshness_percent_overall": 85.9,
+        "evidence_percent_overall": 90.8,
+        "freshness_percent_overall": 86.2,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.8,
+        "quality_score_overall": 89,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -43620,7 +43919,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 22.7
+        "ranking_percentile": 18.2
       },
       "slug": "consulting-professional-services",
       "sources": [
@@ -47933,6 +48232,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_ECOMMERCE_CROSSBORDER_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://talent.alibaba.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248",
+                "source_name": "阿里巴巴官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://talent.alibaba.com",
+                "secondary_source_ids": [
+                  "SRC_MOFCOM_ECOMMERCE_20260123",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "电商与跨境行业春招继续补录商家运营、供应链计划和数据增长岗位。准备需覆盖平台机制理解与履约协同案例。",
+              "title": "电商与跨境春招持续释放运营与供应链岗位",
+              "updated_at": "2026-02-18",
+              "fact": "招聘页面持续开放商家运营、跨境供应链和增长分析岗位",
+              "impact": "面试更看重对平台规则、转化漏斗与履约效率的实战理解",
+              "industry_indicator": "GMV增速、转化率、履约时效",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248",
+                "secondary_source_ids": [
+                  "SRC_MOFCOM_ECOMMERCE_20260123",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_ECOMMERCE_CROSSBORDER_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -48857,7 +49197,7 @@
       },
       "industry_id": "IND_ECOMMERCE_CROSSBORDER",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -48897,11 +49237,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
-        "evidence_percent_overall": 88.2,
-        "freshness_percent_overall": 85.3,
+        "evidence_percent_overall": 88.4,
+        "freshness_percent_overall": 85.5,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.5,
+        "quality_score_overall": 89.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -48917,7 +49257,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 59.1
+        "ranking_percentile": 45.5
       },
       "slug": "ecommerce-crossborder",
       "sources": [
@@ -53136,6 +53476,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_EDU_VOCATIONAL_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://zhaopin.xdf.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3",
+                "source_name": "新东方招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://zhaopin.xdf.cn",
+                "secondary_source_ids": [
+                  "SRC_MOE_ACTION_2026",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "教育与职教春招继续补录教研、运营、产品和服务支持岗位。准备需结合学习成效与用户服务指标展示项目贡献。",
+              "title": "教育与职教春招持续补录教研与运营岗位",
+              "updated_at": "2026-02-18",
+              "fact": "招聘官网持续开放教研教学、运营、产品与服务岗位",
+              "impact": "候选人需用数据说明课程质量提升与用户续班转化效果",
+              "industry_indicator": "续班率、课消率、获客成本",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3",
+                "secondary_source_ids": [
+                  "SRC_MOE_ACTION_2026",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_EDU_VOCATIONAL_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -54028,7 +54409,7 @@
       },
       "industry_id": "IND_EDU_VOCATIONAL",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -54068,11 +54449,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 90.6,
-        "freshness_percent_overall": 85.9,
+        "evidence_percent_overall": 90.8,
+        "freshness_percent_overall": 86.2,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.9,
+        "quality_score_overall": 90.1,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -54088,7 +54469,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 31.8
+        "ranking_percentile": 59.1
       },
       "slug": "education-vocational",
       "sources": [
@@ -58335,6 +58716,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_ENERGY_UTILITIES_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.csg.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_CSG_CN_5D2CDD95",
+                "source_name": "南方电网官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.csg.cn",
+                "secondary_source_ids": [
+                  "SRC_NEA_WORKCONF_20260130",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "能源与公用事业春招继续开放电网运行、设备检修、调度与数字化岗位。准备重点在安全规范与运行效率双维度成果。",
+              "title": "能源与公用事业春招持续补录运行与检修岗位",
+              "updated_at": "2026-02-18",
+              "fact": "官网招聘持续发布电网运行、检修、调度与信息化岗位",
+              "impact": "面试更重视安全合规意识与设备运行优化案例",
+              "industry_indicator": "发电利用小时、线损率、检修闭环率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_WWW_CSG_CN_5D2CDD95",
+                "secondary_source_ids": [
+                  "SRC_NEA_WORKCONF_20260130",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_ENERGY_UTILITIES_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -59227,7 +59649,7 @@
       },
       "industry_id": "IND_ENERGY_UTILITIES",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -59267,11 +59689,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 90.6,
-        "freshness_percent_overall": 89.1,
+        "evidence_percent_overall": 90.8,
+        "freshness_percent_overall": 89.2,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.8,
+        "quality_score_overall": 90.1,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -59287,7 +59709,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 18.2
+        "ranking_percentile": 54.5
       },
       "slug": "energy-utilities",
       "sources": [
@@ -63623,6 +64045,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_FIN_BANK_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.icbc.com.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_JOB_ICBC_COM_CN_C743FA65",
+                "source_name": "中国工商银行招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://www.icbc.com.cn",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CAMPUS_2026_0129",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "银行春招继续释放零售金融、风险管理、金融科技与运营支持岗位。准备应强调风控意识、数据能力与客户服务协同。",
+              "title": "银行春招持续补录零售金融与风控科技岗位",
+              "updated_at": "2026-02-18",
+              "fact": "招聘官网持续发布金融科技、风险管理和业务运营相关岗位",
+              "impact": "面试更关注风控逻辑、数据分析与跨条线协作能力",
+              "industry_indicator": "净息差、不良率、AUM增长",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_JOB_ICBC_COM_CN_C743FA65",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CAMPUS_2026_0129",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_FIN_BANK_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -64535,7 +64998,7 @@
       },
       "industry_id": "IND_FIN_BANK",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -64569,11 +65032,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.8,
-        "evidence_percent_overall": 90.6,
-        "freshness_percent_overall": 87.5,
+        "evidence_percent_overall": 90.8,
+        "freshness_percent_overall": 87.7,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.9,
+        "quality_score_overall": 91,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -64589,7 +65052,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 68.2
+        "ranking_percentile": 77.3
       },
       "slug": "finance-bank",
       "sources": [
@@ -68933,6 +69396,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_FIN_INSURANCE_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://campus.pingan.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_CAMPUS_PINGAN_COM_FB993A73",
+                "source_name": "平安校园招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://campus.pingan.com",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CAMPUS_2026_0129",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "保险行业春招继续补录精算、理赔、产品运营与风控岗位。准备应展示业务指标理解与客户服务流程优化能力。",
+              "title": "保险春招持续补录精算理赔与风控岗位",
+              "updated_at": "2026-02-18",
+              "fact": "校园招聘入口持续发布精算、理赔、产品和风控相关岗位",
+              "impact": "面试更关注定价逻辑、赔付流程与用户体验改进思路",
+              "industry_indicator": "新单保费、13月继续率、赔付时效",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_CAMPUS_PINGAN_COM_FB993A73",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CAMPUS_2026_0129",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_FIN_INSURANCE_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -69845,7 +70349,7 @@
       },
       "industry_id": "IND_FIN_INSURANCE",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -69879,11 +70383,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.8,
-        "evidence_percent_overall": 90.6,
-        "freshness_percent_overall": 87.5,
+        "evidence_percent_overall": 90.8,
+        "freshness_percent_overall": 87.7,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.5,
+        "quality_score_overall": 89.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "外部链接",
@@ -69899,7 +70403,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 4.5
+        "ranking_percentile": 40.9
       },
       "slug": "finance-insurance",
       "sources": [
@@ -74261,6 +74765,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_FIN_SECURITIES_FUND_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.cs.ecitic.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_CS_ECITIC_COM_9B0A617",
+                "source_name": "中信证券官网",
+                "source_type": "company_official",
+                "source_url": "https://www.cs.ecitic.com",
+                "secondary_source_ids": [
+                  "SRC_CSRC_WORKCONF_20260116",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "证券与基金春招继续向投研、机构销售、风控合规和金融科技岗位延展。准备需突出研究深度与市场数据分析能力。",
+              "title": "证券与基金春招持续释放投研与风控岗位",
+              "updated_at": "2026-02-18",
+              "fact": "官网招聘持续开放投研、机构业务、风控与技术岗位",
+              "impact": "候选人需提供研究框架、数据分析和风险识别的实证案例",
+              "industry_indicator": "日均成交额、投行储备项目数、机构业务份额",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_WWW_CS_ECITIC_COM_9B0A617",
+                "secondary_source_ids": [
+                  "SRC_CSRC_WORKCONF_20260116",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_FIN_SECURITIES_FUND_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -75209,7 +75754,7 @@
       },
       "industry_id": "IND_FIN_SECURITIES_FUND",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -75243,11 +75788,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.8,
-        "evidence_percent_overall": 90.9,
-        "freshness_percent_overall": 87.9,
+        "evidence_percent_overall": 91,
+        "freshness_percent_overall": 88.1,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.2,
+        "quality_score_overall": 89.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -75263,7 +75808,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 45.5
+        "ranking_percentile": 27.3
       },
       "slug": "finance-securities-fund",
       "sources": [
@@ -79471,6 +80016,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_FMCG_RETAIL_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.pgcareers.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
+                "source_name": "宝洁职业官网",
+                "source_type": "company_official",
+                "source_url": "https://www.pgcareers.com",
+                "secondary_source_ids": [
+                  "SRC_MOFCOM_PRESSCONF_20260115",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "快消与零售春招继续补录品牌、渠道、供应链与电商运营岗位。准备需覆盖生意增长、库存健康和渠道执行能力。",
+              "title": "快消与零售春招持续释放品牌与渠道岗位",
+              "updated_at": "2026-02-18",
+              "fact": "职业页面持续开放品牌管理、渠道销售和供应链岗位",
+              "impact": "面试更重视生意指标分解与终端执行闭环能力",
+              "industry_indicator": "动销率、库存周转天数、铺货率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
+                "secondary_source_ids": [
+                  "SRC_MOFCOM_PRESSCONF_20260115",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_FMCG_RETAIL_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -80354,7 +80940,7 @@
       },
       "industry_id": "IND_FMCG_RETAIL",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -80388,11 +80974,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
-        "evidence_percent_overall": 90.6,
-        "freshness_percent_overall": 87.5,
+        "evidence_percent_overall": 90.8,
+        "freshness_percent_overall": 87.7,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.6,
+        "quality_score_overall": 88.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -80408,7 +80994,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 9.1
+        "ranking_percentile": 4.5
       },
       "slug": "fmcg-retail",
       "sources": [
@@ -84821,6 +85407,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_INTERNET_AI_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://join.qq.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                "source_name": "腾讯招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://join.qq.com",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "互联网与AI岗位在春招窗口持续发布，重点集中在模型应用工程、平台稳定性与增长分析。准备应覆盖业务指标拆解与系统成本优化证据。",
+              "title": "互联网与AI春招继续聚焦模型落地与增长岗位",
+              "updated_at": "2026-02-18",
+              "fact": "招聘官网持续开放模型应用工程、平台后端、增长分析等岗位",
+              "impact": "应届生准备需同时展示工程实现能力与业务结果转化能力",
+              "industry_indicator": "DAU、推理成本、服务可用性",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_INTERNET_AI_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -85791,7 +86418,7 @@
       },
       "industry_id": "IND_INTERNET_AI",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -85825,11 +86452,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 91,
-        "freshness_percent_overall": 88.1,
+        "evidence_percent_overall": 91.2,
+        "freshness_percent_overall": 88.2,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 92.6,
+        "quality_score_overall": 91.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -85845,7 +86472,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 90.9
+        "ranking_percentile": 81.8
       },
       "slug": "internet-ai",
       "sources": [
@@ -90117,6 +90744,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_LOGISTICS_SUPPLYCHAIN_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://hr.sf-express.com/JobSearchById/62735%2C3",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_HR_SF_EXPRESS_COM_418312D5",
+                "source_name": "顺丰招聘官网-岗位详情页",
+                "source_type": "company_official",
+                "source_url": "https://hr.sf-express.com/JobSearchById/62735%2C3",
+                "secondary_source_ids": [
+                  "SRC_MOT_POSTAL_20260122",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "物流与供应链春招继续补录运营计划、仓配调度、网络规划和数据分析岗位。准备需体现时效保障与成本优化协同能力。",
+              "title": "物流与供应链春招持续释放运营与调度岗位",
+              "updated_at": "2026-02-18",
+              "fact": "招聘页面持续开放运营管理、调度、网点规划与数据分析岗位",
+              "impact": "面试更关注时效达成、异常闭环和跨节点协同改进案例",
+              "industry_indicator": "时效达成率、单票成本、装载率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_HR_SF_EXPRESS_COM_418312D5",
+                "secondary_source_ids": [
+                  "SRC_MOT_POSTAL_20260122",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_LOGISTICS_SUPPLYCHAIN_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -91000,7 +91668,7 @@
       },
       "industry_id": "IND_LOGISTICS_SUPPLYCHAIN",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -91040,11 +91708,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
-        "evidence_percent_overall": 90.6,
-        "freshness_percent_overall": 87.5,
+        "evidence_percent_overall": 90.8,
+        "freshness_percent_overall": 87.7,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91,
+        "quality_score_overall": 90.1,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -91060,7 +91728,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 72.7
+        "ranking_percentile": 50
       },
       "slug": "logistics-supply-chain",
       "sources": [
@@ -95376,6 +96044,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_MEDIA_GAME_CONTENT_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://campus.163.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_CAMPUS_163_COM_CF426C6",
+                "source_name": "网易校园招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://campus.163.com",
+                "secondary_source_ids": [
+                  "SRC_NPPA_GAME_APPROVAL_20260126",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "内容与游戏行业春招继续释放策划、发行、数据运营和内容审核岗位。候选人需要提供“内容效果+商业化结果”双指标证明。",
+              "title": "内容与游戏春招持续补录策划与运营岗位",
+              "updated_at": "2026-02-18",
+              "fact": "校园招聘页面持续开放策划、发行、运营与内容岗位",
+              "impact": "面试更关注内容效果数据与商业化转化结果",
+              "industry_indicator": "DAU、完播率、广告填充率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_CAMPUS_163_COM_CF426C6",
+                "secondary_source_ids": [
+                  "SRC_NPPA_GAME_APPROVAL_20260126",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_MEDIA_GAME_CONTENT_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -96299,7 +97008,7 @@
       },
       "industry_id": "IND_MEDIA_GAME_CONTENT",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -96339,11 +97048,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 88.2,
-        "freshness_percent_overall": 86.8,
+        "evidence_percent_overall": 88.4,
+        "freshness_percent_overall": 87,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 92.3,
+        "quality_score_overall": 92.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -96359,7 +97068,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 86.4
+        "ranking_percentile": 90.9
       },
       "slug": "media-game-content",
       "sources": [
@@ -100779,6 +101488,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_NEW_ENERGY_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.catl.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+                "source_name": "宁德时代官网",
+                "source_type": "company_official",
+                "source_url": "https://www.catl.com",
+                "secondary_source_ids": [
+                  "SRC_NEA_RENEWABLE_UTIL_20260212",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "新能源春招继续向电池工艺、制造质量与供应链计划岗位倾斜。准备应强化成本拆解、质量闭环与跨工厂协同案例。",
+              "title": "新能源企业春招持续释放制造与工艺优化岗位",
+              "updated_at": "2026-02-18",
+              "fact": "官网招聘入口持续发布电池研发、工艺、制造质量与供应链岗位",
+              "impact": "应届生需提供可量化的良率提升与交付协同案例",
+              "industry_indicator": "产能利用率、单位Wh成本、交付周期",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+                "secondary_source_ids": [
+                  "SRC_NEA_RENEWABLE_UTIL_20260212",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_NEW_ENERGY_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -101755,7 +102505,7 @@
       },
       "industry_id": "IND_NEW_ENERGY",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -101789,11 +102539,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 88.2,
-        "freshness_percent_overall": 85.3,
+        "evidence_percent_overall": 88.4,
+        "freshness_percent_overall": 85.5,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.5,
+        "quality_score_overall": 89.6,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -101809,7 +102559,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 54.5
+        "ranking_percentile": 36.4
       },
       "slug": "new-energy",
       "sources": [
@@ -106495,6 +107245,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_PUBLIC_INSTITUTION_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "http://www.cpta.com.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_CPTA_COM_CN_FD0AA5B3",
+                "source_name": "中国人事考试网官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "http://www.cpta.com.cn",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CAMPUS_2026_0129",
+                  "SRC_MOE_ACTION_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "事业单位招录进入公告密集与考试组织阶段，教育、医疗、科研与综合管理岗位持续更新。准备应聚焦岗位能力匹配与材料规范化。",
+              "title": "事业单位招录进入公告密集与考试组织阶段",
+              "updated_at": "2026-02-18",
+              "fact": "考试与招聘入口持续更新事业单位岗位与考试安排信息",
+              "impact": "应届生需同步准备专业能力证明、资格材料与面试表达",
+              "industry_indicator": "岗位计划数、报名竞争比、进面比例",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_WWW_CPTA_COM_CN_FD0AA5B3",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CAMPUS_2026_0129",
+                  "SRC_MOE_ACTION_2026"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_PUBLIC_INSTITUTION_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -107684,7 +108475,7 @@
       },
       "industry_id": "IND_PUBLIC_INSTITUTION",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -107718,11 +108509,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 97.6,
-        "evidence_percent_overall": 90,
-        "freshness_percent_overall": 77.5,
+        "evidence_percent_overall": 90.1,
+        "freshness_percent_overall": 77.8,
         "real_data_ratio_overall": 75.3,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91.7,
+        "quality_score_overall": 91.9,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -107738,7 +108529,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 81.8
+        "ranking_percentile": 86.4
       },
       "slug": "public-institution",
       "sources": [
@@ -112006,6 +112797,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_REAL_ESTATE_INFRA_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.cscec.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_JOB_CSCEC_COM_14CC3CCE",
+                "source_name": "中国建筑招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://www.cscec.com",
+                "secondary_source_ids": [
+                  "SRC_MOHURD_URBAN_RENEWAL_20251225",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "地产与基建春招继续补录工程管理、成本合约、机电与项目计划岗位。准备需突出项目推进、多方协调与成本控制能力。",
+              "title": "地产与基建春招持续释放工程与成本岗位",
+              "updated_at": "2026-02-18",
+              "fact": "招聘官网持续开放工程技术、成本合约、机电与计划岗位",
+              "impact": "面试更强调项目现场经验、进度管理和风险预判能力",
+              "industry_indicator": "新签合同额、项目开工率、回款周期",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_JOB_CSCEC_COM_14CC3CCE",
+                "secondary_source_ids": [
+                  "SRC_MOHURD_URBAN_RENEWAL_20251225",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_REAL_ESTATE_INFRA_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -112898,7 +113730,7 @@
       },
       "industry_id": "IND_REAL_ESTATE_INFRA",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -112932,11 +113764,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 87.9,
-        "freshness_percent_overall": 86.4,
+        "evidence_percent_overall": 88.1,
+        "freshness_percent_overall": 86.6,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.7,
+        "quality_score_overall": 90.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -112952,7 +113784,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 63.6
+        "ranking_percentile": 72.7
       },
       "slug": "real-estate-infrastructure",
       "sources": [
@@ -117445,6 +118277,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_SEMICONDUCTOR_ELECTRONICS_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.smics.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_SMICS_COM_7D437B2",
+                "source_name": "中芯国际官网",
+                "source_type": "company_official",
+                "source_url": "https://www.smics.com",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MIIT_ELECTRONICS_Q3RUN_20251030"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "半导体春招仍以制程整合、设备工程与良率优化岗为核心。面试准备应强调工艺参数控制与跨班组协作实践。",
+              "title": "半导体企业春招延续工艺与设备工程岗位需求",
+              "updated_at": "2026-02-18",
+              "fact": "企业招聘入口持续开放制程、设备、测试与产品工程岗位",
+              "impact": "候选人需用量化案例证明良率提升与异常闭环能力",
+              "industry_indicator": "产能利用率、良率、交付周期",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_WWW_SMICS_COM_7D437B2",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MIIT_ELECTRONICS_Q3RUN_20251030"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_SEMICONDUCTOR_ELECTRONICS_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -118420,7 +119293,7 @@
       },
       "industry_id": "IND_SEMICONDUCTOR_ELECTRONICS",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -118454,11 +119327,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 88.4,
-        "freshness_percent_overall": 85.5,
+        "evidence_percent_overall": 88.6,
+        "freshness_percent_overall": 85.7,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91.3,
+        "quality_score_overall": 90.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -118474,7 +119347,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 77.3
+        "ranking_percentile": 68.2
       },
       "slug": "semiconductor-electronics",
       "sources": [
@@ -123186,6 +124059,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_STATE_OWNED_ENTERPRISE_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "http://job.10086.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_JOB_10086_CN_C58C9DA8",
+                "source_name": "中国移动招聘官网",
+                "source_type": "company_official",
+                "source_url": "http://job.10086.cn",
+                "secondary_source_ids": [
+                  "SRC_SASAC_TALENT_WORKCONF_20260203",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "央国企春招延续工程技术、信息化、经营管理与财务风控岗位补录。准备应强化流程规范、跨部门协同与长期稳定发展匹配度。",
+              "title": "央国企春招持续释放技术与经营管理岗位",
+              "updated_at": "2026-02-18",
+              "fact": "招聘官网持续更新技术、运营、财务和综合管理岗位",
+              "impact": "面试更重视组织协作能力、合规意识与岗位稳定性预期",
+              "industry_indicator": "计划完成率、录用转化率、到岗率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_JOB_10086_CN_C58C9DA8",
+                "secondary_source_ids": [
+                  "SRC_SASAC_TALENT_WORKCONF_20260203",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_STATE_OWNED_ENTERPRISE_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -124370,7 +125284,7 @@
       },
       "industry_id": "IND_STATE_OWNED_ENTERPRISE",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -124404,11 +125318,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 97.6,
-        "evidence_percent_overall": 91.1,
-        "freshness_percent_overall": 88.6,
+        "evidence_percent_overall": 91.3,
+        "freshness_percent_overall": 88.8,
         "real_data_ratio_overall": 75,
         "template_ratio_overall": 0,
-        "quality_score_overall": 92.7,
+        "quality_score_overall": 92.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "公司清单",
@@ -128677,6 +129591,47 @@
             {
               "authenticity_level": "observed",
               "data_origin": "official_event_tracking",
+              "event_id": "IND_TELECOM_OPERATOR_EVENT_2026Q1_FRESH_20260218",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "http://job.10086.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_JOB_10086_CN_C58C9DA8",
+                "source_name": "中国移动招聘官网",
+                "source_type": "company_official",
+                "source_url": "http://job.10086.cn",
+                "secondary_source_ids": [
+                  "SRC_MIIT_TELECOM_BULLETIN_20260128",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "运营商春招延续网络优化、云网融合与政企解决方案岗需求。准备重点从单点技术转向“网络+业务”综合交付能力。",
+              "title": "运营商春招聚焦云网融合与政企业务岗位",
+              "updated_at": "2026-02-18",
+              "fact": "招聘官网持续开放网络优化、云网平台和政企交付岗位",
+              "impact": "面试需呈现网络指标改善与行业场景落地的双证据",
+              "industry_indicator": "网络可用率、5G渗透率、政企业务收入",
+              "evidence_chain": {
+                "primary_source_id": "SRC_AUTO_JOB_10086_CN_C58C9DA8",
+                "secondary_source_ids": [
+                  "SRC_MIIT_TELECOM_BULLETIN_20260128",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "official_event_tracking",
               "event_id": "IND_TELECOM_OPERATOR_EVENT_2026Q1",
               "event_quarter": "2026Q1",
               "evidence": {
@@ -129611,7 +130566,7 @@
       },
       "industry_id": "IND_TELECOM_OPERATOR",
       "meta": {
-        "content_version": "1.31.0",
+        "content_version": "1.32.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -129645,11 +130600,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 90.5,
-        "freshness_percent_overall": 87.3,
+        "evidence_percent_overall": 90.6,
+        "freshness_percent_overall": 87.5,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.4,
+        "quality_score_overall": 89.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -129665,7 +130620,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 50
+        "ranking_percentile": 31.8
       },
       "slug": "telecom-operators",
       "sources": [
