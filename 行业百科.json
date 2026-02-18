@@ -455,10 +455,19 @@
           "为5个高波动行业（互联网AI/跨境电商/新能源/银行/智能驾驶）逐条新增争议结论第三条，采用2025Q4-2026Q1官方政策或监管来源。",
           "为上述5个行业逐条新增可执行月度投递日历，补充提前批/主批/签约/春招补录节点与二级证据链。"
         ]
+      },
+      {
+        "version": "v1.36.0",
+        "date": "2026-02-18",
+        "summary": [
+          "全行业23个词条统一补齐到3条争议问题与3条可执行月度时间线，强化‘去哪投/何时投/值不值投’决策深度。",
+          "新增18条官方争议结论与15条官方投递日历，全部绑定已注册source_id与证据链字段。",
+          "持续联网核验新增来源可达性，并保留国家电网反爬来源的人工核验与Cookie提示。"
+        ]
       }
     ],
-    "文档名称": "中国大陆应届生求职行业百科（v1.35.0时效与可执行日历增强版）",
-    "版本": "v1.35.0",
+    "文档名称": "中国大陆应届生求职行业百科（v1.36.0全行业决策深化版）",
+    "版本": "v1.36.0",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -503,7 +512,8 @@
       "v1.32.0全行业新增2026Q1事件信号并统一双证据链，提升时效与差异化。",
       "v1.32.0新增评分口径与信息源规范文档，支持后续按扣分项持续优化。",
       "v1.33.0强化区域样本覆盖与公共部门口径说明，并补5个行业区域薪酬实采样本。",
-      "v1.35.0完成高波动行业争议结论与投递日历增量，并修复NIO官方来源可访问性。"
+      "v1.35.0完成高波动行业争议结论与投递日历增量，并修复NIO官方来源可访问性。",
+      "v1.36.0完成23行业争议结论与时间线结构统一（3条/3条），并补充可执行月度投递节点。"
     ],
     "适用人群": "中国大陆应届生（含毕业3年内）",
     "updated_at": "2026-02-18"
@@ -6708,6 +6718,40 @@
                 "设备自动化路径更利于形成效率提升和降本能力。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做算法开发可能缺少对设备现场约束的理解。",
+                "只做现场应用可能技术深度积累不足。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议先选主路径，再通过产线联调项目补齐另一侧能力，形成“算法+交付”复合竞争力。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://wap.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_525ed8efdfd649f5a1c15911769c0590.html",
+                "source_date": "2025-09-29",
+                "source_id": "SRC_MIIT_MECHANICAL_STABLE_20250929",
+                "source_name": "工业和信息化部等六部门关于印发《机械行业稳增长工作方案（2025—2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://wap.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_525ed8efdfd649f5a1c15911769c0590.html",
+                "stat_definition": "结合机械行业稳增长政策与高端制造岗位结构形成的决策型争议议题。",
+                "publish_date": "2025-09-29",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "高端制造首岗应优先“控制算法开发”还是“现场应用工程”？",
+              "issue_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_DEBATE_003",
+              "pro_points": [
+                "控制算法路径更利于沉淀建模、调参与系统优化能力。",
+                "现场应用路径更利于快速形成设备导入与交付闭环能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "一次调试通过率、设备稼动率、交付周期"
             }
           ],
           "last_checked": "2026-02-17",
@@ -8524,6 +8568,61 @@
                 }
               ],
               "timeline_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.83,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.inovance.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+                "source_name": "汇川技术官网",
+                "source_type": "company_official",
+                "source_url": "https://www.inovance.com",
+                "stat_definition": "按高端制造企业批次招聘节奏拆解月度网申与面试窗口。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "补充高端制造行业可执行投递日历，区分研发与应用岗节奏。",
+              "stages": [
+                {
+                  "stage": "提前批与实习转正",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "控制算法、伺服驱动与软件岗位优先释放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "网申、测评和专业笔试集中进行。"
+                },
+                {
+                  "stage": "工程面与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "围绕项目交付案例开展多轮技术面与定岗。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "扩产项目带动应用工程与调试岗补录。"
+                }
+              ],
+              "timeline_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -11813,11 +11912,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 91,
-        "freshness_percent_overall": 88.1,
+        "evidence_percent_overall": 91.3,
+        "freshness_percent_overall": 88.4,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.1,
+        "quality_score_overall": 88.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -11833,7 +11932,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 18.2
+        "ranking_percentile": 9.1
       },
       "slug": "advanced-manufacturing-automation",
       "sources": [
@@ -12632,6 +12731,40 @@
                 "区域龙头岗位暴露面更广，通常能更快接触供应链、品控和生产协同全流程。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做品牌营销可能对供应链与成本结构理解不足。",
+                "只做供应链运营可能对消费者洞察与增长能力积累较慢。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议优先选择可稳定产出指标的主路径，并在季度项目中补齐另一侧能力。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://scs.moa.gov.cn/jcyj/202510/t20251009_6477959.htm",
+                "source_date": "2025-10-09",
+                "source_id": "SRC_MOA_CASDE_20251009",
+                "source_name": "农业农村部市场预警专家委员会发布2025年10月中国农产品供需形势分析",
+                "source_type": "government_policy",
+                "source_url": "https://scs.moa.gov.cn/jcyj/202510/t20251009_6477959.htm",
+                "stat_definition": "结合农产品供需形势与农业食品岗位结构形成的决策型争议议题。",
+                "publish_date": "2025-10-09",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "农业食品首岗应优先“品牌增长”还是“供应链运营”？",
+              "issue_id": "IND_AGRI_FOOD_DEBATE_003",
+              "pro_points": [
+                "品牌增长路径更有利于快速形成市场反馈与消费者洞察能力。",
+                "供应链运营路径更有利于沉淀成本控制和履约稳定能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "毛利率、履约时效、损耗率"
             }
           ],
           "last_checked": "2026-02-17",
@@ -14398,6 +14531,61 @@
                 }
               ],
               "timeline_id": "IND_AGRI_FOOD_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.yili.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_YILI_COM_D7937E58",
+                "source_name": "伊利官网",
+                "source_type": "company_official",
+                "source_url": "https://www.yili.com",
+                "stat_definition": "按农业食品龙头企业校招批次拆解月度投递节点。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "新增农业食品行业可执行投递日历，突出生产运营与营销岗位批次差异。",
+              "stages": [
+                {
+                  "stage": "提前批与管培预热",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "营销、供应链、品控与生产储备岗提前开放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "集中完成网申、测评与业务笔试。"
+                },
+                {
+                  "stage": "业务面与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "围绕渠道增长与产销协同进行多轮面试。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "区域业务扩张和季节性需求带来补录窗口。"
+                }
+              ],
+              "timeline_id": "IND_AGRI_FOOD_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -17651,11 +17839,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 88.4,
-        "freshness_percent_overall": 87,
+        "evidence_percent_overall": 88.7,
+        "freshness_percent_overall": 87.3,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.2,
+        "quality_score_overall": 89.6,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -17671,7 +17859,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 63.6
+        "ranking_percentile": 40.9
       },
       "slug": "agriculture-food",
       "sources": [
@@ -24513,6 +24701,40 @@
                 "注册合规路径更利于建立政策和证据体系能力。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做临床支持可能产品工程能力积累有限。",
+                "只做器械研发可能对医院场景与注册节奏理解不足。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议先选主路径，再通过跨部门项目补齐“研发-注册-临床”协同能力。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.nmpaic.org.cn/yjzxyw/202602/t20260206_429414.html",
+                "source_date": "2026-02-05",
+                "source_id": "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
+                "source_name": "2026年全国医疗器械监督管理工作会议召开（NMPA信息中心转载）",
+                "source_type": "government_policy",
+                "source_url": "https://www.nmpaic.org.cn/yjzxyw/202602/t20260206_429414.html",
+                "stat_definition": "结合医疗器械监管会议导向与生物医药器械岗位结构形成的决策型争议议题。",
+                "publish_date": "2026-02-05",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "生物医药器械首岗应优先“研发注册”还是“临床应用支持”？",
+              "issue_id": "IND_BIOMED_DEVICE_DEBATE_003",
+              "pro_points": [
+                "研发注册路径更利于沉淀技术壁垒和法规体系能力。",
+                "临床支持路径更利于快速形成场景化问题闭环与客户协作能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "注册周期、不良事件率、临床转化率"
             }
           ],
           "last_checked": "2026-02-17",
@@ -26331,6 +26553,61 @@
                 }
               ],
               "timeline_id": "IND_BIOMED_DEVICE_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.mindray.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+                "source_name": "迈瑞医疗官网",
+                "source_type": "company_official",
+                "source_url": "https://www.mindray.com",
+                "stat_definition": "按生物医药器械企业校招批次拆解月度网申与面试窗口。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "补充生物医药器械行业月度投递日历，覆盖研发、注册、临床支持三类岗位。",
+              "stages": [
+                {
+                  "stage": "提前批与实习转正",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "研发、算法、注册与临床支持岗位提前开放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "网申、测评和专业笔试集中推进。"
+                },
+                {
+                  "stage": "专业面与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "围绕项目经历、法规理解与临床场景开展面试。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "新品线扩充与区域业务带来补录需求。"
+                }
+              ],
+              "timeline_id": "IND_BIOMED_DEVICE_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -29696,11 +29973,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 88.4,
-        "freshness_percent_overall": 85.5,
+        "evidence_percent_overall": 88.7,
+        "freshness_percent_overall": 85.9,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.5,
+        "quality_score_overall": 88.9,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -29716,7 +29993,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 31.8
+        "ranking_percentile": 13.6
       },
       "slug": "biomed-device",
       "sources": [
@@ -30510,6 +30787,40 @@
                 "工艺应用路径更贴近量产与客户问题，落地反馈更快。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做研发可能缺少产线放大与工艺稳定性实践。",
+                "只做生产工艺可能新材料前沿技术积累不足。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议优先选能稳定输出成果的主方向，并通过中试/量产项目补齐另一侧能力。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.gov.cn/zhengce/zhengceku/202509/content_7042418.htm",
+                "source_date": "2025-09-26",
+                "source_id": "SRC_GOV_PETROCHEM_STABLE_20250926",
+                "source_name": "工业和信息化部等7部门关于印发《石化化工行业稳增长工作方案（2025-2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.gov.cn/zhengce/zhengceku/202509/content_7042418.htm",
+                "stat_definition": "结合石化化工稳增长政策与新材料岗位结构形成的决策型争议议题。",
+                "publish_date": "2025-09-26",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "化工新材料首岗应优先“配方研发”还是“工艺放大”？",
+              "issue_id": "IND_CHEM_NEW_MATERIALS_DEBATE_003",
+              "pro_points": [
+                "配方研发路径更利于积累材料机理和创新能力。",
+                "工艺放大路径更利于形成量产稳定性和成本优化能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "收率、良品率、单位能耗"
             }
           ],
           "last_checked": "2026-02-17",
@@ -32328,6 +32639,61 @@
                 }
               ],
               "timeline_id": "IND_CHEM_NEW_MATERIALS_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://job.sinopec.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_SINOPEC_COM_B743B6E",
+                "source_name": "中国石化招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://job.sinopec.com",
+                "stat_definition": "按化工新材料企业招聘节奏拆解月度投递与测评节点。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "新增化工新材料行业可执行投递日历，覆盖研发与工艺岗位分批窗口。",
+              "stages": [
+                {
+                  "stage": "提前批与实习转正",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "研发、工艺、质量与安全岗提前开放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "网申、测评、专业笔试集中进行。"
+                },
+                {
+                  "stage": "专业面与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "围绕实验、放大与安全管理案例开展面试。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "检修和新项目投产带来岗位补录。"
+                }
+              ],
+              "timeline_id": "IND_CHEM_NEW_MATERIALS_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -35596,11 +35962,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 88.1,
-        "evidence_percent_overall": 91,
-        "freshness_percent_overall": 88.1,
+        "evidence_percent_overall": 91.3,
+        "freshness_percent_overall": 88.4,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87.7,
+        "quality_score_overall": 88,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -36409,6 +36775,40 @@
                 "申论与面试能力决定最终竞争力和岗位适配度。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只看岗位层级可能忽视地区发展机会与竞争强度差异。",
+                "只看地区可能忽视岗位职责匹配和长期成长空间。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议以岗位职责匹配为主、地区偏好为辅，先确保上岸概率，再优化长期路径。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.gov.cn/lianbo/bumen/202510/content_7044277.htm",
+                "source_date": "2025-10-14",
+                "source_id": "SRC_SCS_EXAM_2026",
+                "source_name": "中央机关及其直属机构2026年度考试录用公务员报名即将开始（中国政府网）",
+                "source_type": "government_policy",
+                "source_url": "https://www.gov.cn/lianbo/bumen/202510/content_7044277.htm",
+                "stat_definition": "结合国考招录公告节奏与岗位竞争结构形成的决策型争议议题。",
+                "publish_date": "2025-10-14",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "公务员报考应优先“岗位匹配度”还是“地区偏好”？",
+              "issue_id": "IND_CIVIL_SERVICE_DEBATE_003",
+              "pro_points": [
+                "岗位匹配优先有利于提高笔面试表现和上岸概率。",
+                "地区偏好优先有利于长期生活稳定与职业持续性。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "竞争比、进面分差、岗位匹配度"
             }
           ],
           "last_checked": "2026-02-17",
@@ -41955,11 +42355,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 97.6,
-        "evidence_percent_overall": 92.5,
-        "freshness_percent_overall": 90,
+        "evidence_percent_overall": 92.6,
+        "freshness_percent_overall": 90.1,
         "real_data_ratio_overall": 75,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91.8,
+        "quality_score_overall": 92,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -41975,7 +42375,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 86.4
+        "ranking_percentile": 90.9
       },
       "slug": "civil-service",
       "sources": [
@@ -42809,6 +43209,40 @@
                 "通用方法论能跨项目迁移，适配更广的职业选择空间。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做研究支持可能客户前线沟通与项目推进经验不足。",
+                "只做客户执行可能方法论与结构化分析深度不够。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议应届阶段先选能稳定交付成果的路径，再通过项目角色轮换补齐研究与执行能力。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.74,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+                "source_date": "2026-01-07",
+                "source_id": "SRC_MOE_ACTION_2026",
+                "source_name": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
+                "source_type": "government_policy",
+                "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+                "stat_definition": "结合教育部就业行动导向与咨询行业岗位结构形成的决策型争议议题。",
+                "publish_date": "2026-01-07",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "咨询首岗应优先“研究分析”还是“客户执行”？",
+              "issue_id": "IND_CONSULTING_PRO_SERVICES_DEBATE_003",
+              "pro_points": [
+                "研究分析路径更利于建立结构化拆解与行业洞察能力。",
+                "客户执行路径更利于沉淀沟通协调和项目推进能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "项目交付周期、客户复购率、提案转化率"
             }
           ],
           "last_checked": "2026-02-17",
@@ -44584,6 +45018,61 @@
                 }
               ],
               "timeline_id": "IND_CONSULTING_PRO_SERVICES_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://jobs.mckinsey.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_MCKINSEY_COM_8ACFC93B",
+                "source_name": "麦肯锡官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://jobs.mckinsey.com",
+                "stat_definition": "按咨询公司校招批次拆解月度网申、笔试和Case面试节点。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "新增咨询行业可执行投递日历，突出笔试与Case面节点。",
+              "stages": [
+                {
+                  "stage": "提前批网申",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "研究分析、商业分析与数字化咨询岗提前开放。"
+                },
+                {
+                  "stage": "秋招主批测评与笔试",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "在线测评、逻辑笔试与英文能力评估集中进行。"
+                },
+                {
+                  "stage": "Case面与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "多轮Case面、合伙人面与定级签约。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "项目扩容与团队补位形成补录窗口。"
+                }
+              ],
+              "timeline_id": "IND_CONSULTING_PRO_SERVICES_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -47760,11 +48249,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 91,
-        "freshness_percent_overall": 86.6,
+        "evidence_percent_overall": 91.3,
+        "freshness_percent_overall": 87,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.1,
+        "quality_score_overall": 89.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -47780,7 +48269,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 13.6
+        "ranking_percentile": 31.8
       },
       "slug": "consulting-professional-services",
       "sources": [
@@ -53708,7 +54197,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 45.5
+        "ranking_percentile": 63.6
       },
       "slug": "ecommerce-crossborder",
       "sources": [
@@ -54504,6 +54993,40 @@
                 "运营路径更接近用户增长与商业结果，短期反馈快。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做教研可能市场转化与产品运营经验不足。",
+                "只做招生运营可能课程设计与教学质量能力积累较慢。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议先选一个能持续产生成果的主赛道，再通过跨岗位项目补齐教学与经营双能力。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+                "source_date": "2026-01-07",
+                "source_id": "SRC_MOE_ACTION_2026",
+                "source_name": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
+                "source_type": "government_policy",
+                "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+                "stat_definition": "结合教育部就业行动导向与教育职教岗位结构形成的决策型争议议题。",
+                "publish_date": "2026-01-07",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "教育职教首岗应优先“教研教学”还是“招生运营”？",
+              "issue_id": "IND_EDU_VOCATIONAL_DEBATE_003",
+              "pro_points": [
+                "教研教学路径更有利于沉淀课程能力和教学成果。",
+                "招生运营路径更有利于快速形成增长与转化能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "续班率、完课率、转化率"
             }
           ],
           "last_checked": "2026-02-17",
@@ -56275,6 +56798,61 @@
                 }
               ],
               "timeline_id": "IND_EDU_VOCATIONAL_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.neworiental.org",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164",
+                "source_name": "新东方官网",
+                "source_type": "company_official",
+                "source_url": "https://www.neworiental.org",
+                "stat_definition": "按教育职教企业招聘批次拆解月度投递节点。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "新增教育职教行业可执行投递日历，覆盖教研、教学、运营岗位。",
+              "stages": [
+                {
+                  "stage": "提前批与实习转正",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "教研、讲师与班主任岗提前开放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "网申、试讲与综合测评集中开展。"
+                },
+                {
+                  "stage": "试讲面与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "试讲、业务面和区域定岗并行。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "春季班扩招与区域补位形成补录窗口。"
+                }
+              ],
+              "timeline_id": "IND_EDU_VOCATIONAL_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -59340,11 +59918,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 90.8,
-        "freshness_percent_overall": 86.2,
+        "evidence_percent_overall": 91,
+        "freshness_percent_overall": 86.6,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.1,
+        "quality_score_overall": 89.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -59360,7 +59938,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 54.5
+        "ranking_percentile": 27.3
       },
       "slug": "education-vocational",
       "sources": [
@@ -60193,6 +60771,40 @@
                 "交易分析路径更接近市场化机制，利于形成经营视角。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做调度运行可能技术创新与数字化能力积累不足。",
+                "只做新能源项目可能对电网运行约束理解不完整。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议优先选择你能持续输出成果的主路径，再通过跨部门项目补齐“运行+建设”能力。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
+                "source_date": "2026-01-30",
+                "source_id": "SRC_NEA_WORKCONF_20260130",
+                "source_name": "国家能源局举行新闻发布会介绍2025年电力工业统计数据有关情况",
+                "source_type": "government_policy",
+                "source_url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
+                "stat_definition": "结合电力工业统计发布与能源公用事业岗位结构形成的决策型争议议题。",
+                "publish_date": "2026-01-30",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "能源公用事业首岗应优先“电网运行调度”还是“新能源工程项目”？",
+              "issue_id": "IND_ENERGY_UTILITIES_DEBATE_003",
+              "pro_points": [
+                "运行调度路径更有利于沉淀系统稳定与应急处置能力。",
+                "新能源项目路径更有利于积累工程交付和并网协同能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "供电可靠率、并网消纳率、故障恢复时长"
             }
           ],
           "last_checked": "2026-02-17",
@@ -61963,6 +62575,61 @@
                 }
               ],
               "timeline_id": "IND_ENERGY_UTILITIES_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.ctg.com.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_CTG_COM_CN_1F76DB69",
+                "source_name": "三峡集团官网",
+                "source_type": "company_official",
+                "source_url": "https://www.ctg.com.cn",
+                "stat_definition": "按能源公用事业企业招聘节奏拆解月度网申与面试节点。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "补充能源公用事业可执行投递日历，覆盖运行、工程与数字化岗位。",
+              "stages": [
+                {
+                  "stage": "提前批与储备岗预热",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "运行调度、工程技术与信息化岗位提前开放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "网申、测评与专业笔试集中进行。"
+                },
+                {
+                  "stage": "专业面与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "围绕安全生产与项目交付案例进行面试。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "工程开工与区域项目补位触发补录。"
+                }
+              ],
+              "timeline_id": "IND_ENERGY_UTILITIES_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -65161,11 +65828,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 91,
-        "freshness_percent_overall": 89.6,
+        "evidence_percent_overall": 91.3,
+        "freshness_percent_overall": 89.9,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.1,
+        "quality_score_overall": 90.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -65181,7 +65848,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 50
+        "ranking_percentile": 77.3
       },
       "slug": "energy-utilities",
       "sources": [
@@ -71097,7 +71764,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 68.2
+        "ranking_percentile": 72.7
       },
       "slug": "finance-bank",
       "sources": [
@@ -71916,6 +72583,40 @@
                 "渠道前线路径更接近客户与市场反馈，成长节奏更快。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做核保理赔可能对产品增长与渠道经营理解不足。",
+                "只做产品渠道可能风险识别与赔付逻辑积累不足。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议先选主路径建立稳定成果，再通过轮岗项目补齐“产品+风控”双能力。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+                "source_date": "2026-01-06",
+                "source_id": "SRC_PBC_WORKCONF_20260106",
+                "source_name": "2026年中国人民银行工作会议召开",
+                "source_type": "government_policy",
+                "source_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+                "stat_definition": "结合金融监管导向与保险行业岗位结构形成的决策型争议议题。",
+                "publish_date": "2026-01-06",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "保险首岗应优先“核保理赔”还是“产品渠道运营”？",
+              "issue_id": "IND_FIN_INSURANCE_DEBATE_003",
+              "pro_points": [
+                "核保理赔路径更利于形成风险识别与赔付管理能力。",
+                "产品渠道路径更利于积累增长、定价与客户经营能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "综合赔付率、续保率、新单保费增长"
             }
           ],
           "last_checked": "2026-02-17",
@@ -73738,6 +74439,61 @@
                 }
               ],
               "timeline_id": "IND_FIN_INSURANCE_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.pingan.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_PINGAN_COM_A4057B5F",
+                "source_name": "中国平安官网",
+                "source_type": "company_official",
+                "source_url": "https://www.pingan.com",
+                "stat_definition": "按保险公司校招批次拆解月度网申、测评与面试节点。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "新增保险行业可执行投递日历，覆盖核保、理赔、精算与产品岗位。",
+              "stages": [
+                {
+                  "stage": "提前批与实习转正",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "精算、核保、产品与科技岗位提前开放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "网申、测评与专业笔试集中开展。"
+                },
+                {
+                  "stage": "业务面与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "围绕产品与风控场景开展多轮面试。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "区域机构和新业务线补位形成补录窗口。"
+                }
+              ],
+              "timeline_id": "IND_FIN_INSURANCE_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -76889,11 +77645,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.8,
-        "evidence_percent_overall": 90.8,
-        "freshness_percent_overall": 87.7,
+        "evidence_percent_overall": 91,
+        "freshness_percent_overall": 88.1,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.7,
+        "quality_score_overall": 89,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "外部链接",
@@ -76909,7 +77665,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 36.4
+        "ranking_percentile": 18.2
       },
       "slug": "finance-insurance",
       "sources": [
@@ -77723,6 +78479,40 @@
                 "交易支持路径更贴近市场节奏，反馈速度更快。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做投研支持可能交易执行与客户转化经验不足。",
+                "只做经纪销售可能投研深度和资产配置能力积累较慢。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议先在主路径建立可量化成果，再通过跨岗项目补齐投研与交易/销售协同能力。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.csrc.gov.cn/csrc/c106311/c7609372/content.shtml",
+                "source_date": "2026-01-16",
+                "source_id": "SRC_CSRC_WORKCONF_20260116",
+                "source_name": "中国证监会召开2026年系统工作会议",
+                "source_type": "government_policy",
+                "source_url": "https://www.csrc.gov.cn/csrc/c106311/c7609372/content.shtml",
+                "stat_definition": "结合证监系统工作会议导向与证券基金岗位结构形成的决策型争议议题。",
+                "publish_date": "2026-01-16",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "证券基金首岗应优先“投研支持”还是“交易销售”？",
+              "issue_id": "IND_FIN_SECURITIES_FUND_DEBATE_003",
+              "pro_points": [
+                "投研支持路径更利于沉淀行业研究与估值框架能力。",
+                "交易销售路径更利于积累市场节奏判断与客户经营能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "投研命中率、客户资产留存率、交易转化率"
             }
           ],
           "last_checked": "2026-02-17",
@@ -79542,6 +80332,61 @@
                 }
               ],
               "timeline_id": "IND_FIN_SECURITIES_FUND_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://cicc.zhiye.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_CICC_COM_4BA29DE6",
+                "source_name": "中金公司招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://cicc.zhiye.com",
+                "stat_definition": "按券商与公募机构招聘批次拆解月度投递与面试节奏。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "新增证券基金行业可执行投递日历，覆盖投研、交易、销售与中后台岗位。",
+              "stages": [
+                {
+                  "stage": "提前批网申",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "投研、量化和交易支持岗位提前开放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "统一笔试、测评与初面集中开展。"
+                },
+                {
+                  "stage": "业务面与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "围绕投研框架、市场理解和客户场景进行多轮面试。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "业务线扩容与团队补位触发补录。"
+                }
+              ],
+              "timeline_id": "IND_FIN_SECURITIES_FUND_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -82795,11 +83640,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.8,
-        "evidence_percent_overall": 91,
-        "freshness_percent_overall": 88.1,
+        "evidence_percent_overall": 91.3,
+        "freshness_percent_overall": 88.4,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.4,
+        "quality_score_overall": 89.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -82815,7 +83660,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 22.7
+        "ranking_percentile": 45.5
       },
       "slug": "finance-securities-fund",
       "sources": [
@@ -83599,6 +84444,40 @@
                 "品牌市场更有利于沉淀消费者洞察和策略能力。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做品牌营销可能对渠道履约与供应协同理解不足。",
+                "只做渠道运营可能品牌建设与消费者洞察积累较慢。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议先选一个能持续交付结果的主方向，再通过跨部门项目补齐品牌与渠道能力。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n1y15r/index.html",
+                "source_date": "2026-01-15",
+                "source_id": "SRC_MOFCOM_PRESSCONF_20260115",
+                "source_name": "商务部召开例行新闻发布会（2026年1月15日）",
+                "source_type": "government_policy",
+                "source_url": "https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n1y15r/index.html",
+                "stat_definition": "结合消费与流通政策发布节奏与快消零售岗位结构形成的决策型争议议题。",
+                "publish_date": "2026-01-15",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "快消零售首岗应优先“品牌营销”还是“渠道运营”？",
+              "issue_id": "IND_FMCG_RETAIL_DEBATE_003",
+              "pro_points": [
+                "品牌营销路径更利于沉淀用户洞察与内容增长能力。",
+                "渠道运营路径更利于形成动销管理与供应协同能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "动销率、渠道覆盖率、复购率"
             }
           ],
           "last_checked": "2026-02-17",
@@ -85368,6 +86247,61 @@
                 }
               ],
               "timeline_id": "IND_FMCG_RETAIL_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://careers.unilever.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_UNILEVER_COM_E0E20109",
+                "source_name": "联合利华招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://careers.unilever.com",
+                "stat_definition": "按快消企业校招批次拆解月度投递与面试节点。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "新增快消零售行业可执行投递日历，覆盖品牌、渠道、供应链岗位。",
+              "stages": [
+                {
+                  "stage": "提前批与管理培训生预热",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "品牌、销售、供应链和管培岗提前开放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "网申、测评和小组面集中开展。"
+                },
+                {
+                  "stage": "业务面与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "围绕品牌案例和渠道管理场景进行多轮面试。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "区域市场扩张与新品节奏带来补录窗口。"
+                }
+              ],
+              "timeline_id": "IND_FMCG_RETAIL_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -88532,11 +89466,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
-        "evidence_percent_overall": 91,
-        "freshness_percent_overall": 88.1,
+        "evidence_percent_overall": 91.3,
+        "freshness_percent_overall": 88.4,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89,
+        "quality_score_overall": 89.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -88552,7 +89486,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 9.1
+        "ranking_percentile": 22.7
       },
       "slug": "fmcg-retail",
       "sources": [
@@ -94599,7 +95533,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 90.9
+        "ranking_percentile": 86.4
       },
       "slug": "internet-ai",
       "sources": [
@@ -95449,6 +96383,40 @@
                 "供应链计划更偏系统优化，利于长期策略能力沉淀。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做仓配执行可能对网络规划与成本建模积累不足。",
+                "只做网络规划可能一线运营落地经验不足。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议先在主路径形成可量化成果，再通过跨部门项目补齐规划与执行双能力。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.mot.gov.cn/shuju/tongjishuju/youzheng/202601/t20260130_4199355.html",
+                "source_date": "2026-01-22",
+                "source_id": "SRC_MOT_POSTAL_20260122",
+                "source_name": "国家邮政局公布2025年邮政行业运行情况",
+                "source_type": "government_policy",
+                "source_url": "https://www.mot.gov.cn/shuju/tongjishuju/youzheng/202601/t20260130_4199355.html",
+                "stat_definition": "结合邮政快递行业运行数据与物流岗位结构形成的决策型争议议题。",
+                "publish_date": "2026-01-22",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "物流供应链首岗应优先“仓配执行”还是“网络规划优化”？",
+              "issue_id": "IND_LOGISTICS_SUPPLYCHAIN_DEBATE_003",
+              "pro_points": [
+                "仓配执行路径更有利于快速形成一线运营闭环能力。",
+                "网络规划路径更有利于沉淀成本优化与系统建模能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "履约时效、单位成本、签收率"
             }
           ],
           "last_checked": "2026-02-17",
@@ -97220,6 +98188,61 @@
                 }
               ],
               "timeline_id": "IND_LOGISTICS_SUPPLYCHAIN_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://hr.sf-express.com/JobSearchById/62735%2C3",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_HR_SF_EXPRESS_COM_418312D5",
+                "source_name": "顺丰招聘官网-岗位页",
+                "source_type": "company_official",
+                "source_url": "https://hr.sf-express.com/JobSearchById/62735%2C3",
+                "stat_definition": "按物流企业招聘节奏拆解月度投递和面试窗口。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "新增物流供应链可执行投递日历，覆盖仓配、运输、规划岗位。",
+              "stages": [
+                {
+                  "stage": "提前批与储备岗预热",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "运营、供应链、产品与数据岗提前开放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "网申、测评、笔试与业务初面集中。"
+                },
+                {
+                  "stage": "业务面与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "围绕履约、成本与网络优化场景进行面试。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "旺季后组织调整与新项目触发补录。"
+                }
+              ],
+              "timeline_id": "IND_LOGISTICS_SUPPLYCHAIN_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -100428,11 +101451,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
-        "evidence_percent_overall": 91,
-        "freshness_percent_overall": 88.1,
+        "evidence_percent_overall": 91.3,
+        "freshness_percent_overall": 88.4,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.2,
+        "quality_score_overall": 89.6,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -100448,7 +101471,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 59.1
+        "ranking_percentile": 36.4
       },
       "slug": "logistics-supply-chain",
       "sources": [
@@ -101257,6 +102280,40 @@
                 "商业化运营更接近收入目标，短期结果反馈更直接。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做内容制作可能商业化与增长闭环经验不足。",
+                "只做商业化运营可能内容质量与创作能力积累不足。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议先选一个可持续产出的主路径，再通过跨项目协作补齐内容与商业化双能力。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/yxspbgxx/202601/t20260126_947941.html",
+                "source_date": "2026-01-26",
+                "source_id": "SRC_NPPA_GAME_APPROVAL_20260126",
+                "source_name": "国家新闻出版署-2026年1月国产网络游戏审批信息",
+                "source_type": "government_policy",
+                "source_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/yxspbgxx/202601/t20260126_947941.html",
+                "stat_definition": "结合游戏审批节奏与传媒内容岗位结构形成的决策型争议议题。",
+                "publish_date": "2026-01-26",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "传媒游戏首岗应优先“内容制作”还是“商业化运营”？",
+              "issue_id": "IND_MEDIA_GAME_CONTENT_DEBATE_003",
+              "pro_points": [
+                "内容制作路径更利于沉淀创作能力和作品质量控制能力。",
+                "商业化运营路径更利于积累增长转化与变现能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "内容完播率、付费率、DAU留存"
             }
           ],
           "last_checked": "2026-02-17",
@@ -103027,6 +104084,61 @@
                 }
               ],
               "timeline_id": "IND_MEDIA_GAME_CONTENT_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.bilibili.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_BILIBILI_COM_6263DF22",
+                "source_name": "哔哩哔哩官网",
+                "source_type": "company_official",
+                "source_url": "https://www.bilibili.com",
+                "stat_definition": "按传媒内容企业招聘批次拆解月度网申、笔试与面试窗口。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "新增传媒游戏行业可执行投递日历，覆盖内容、运营、商业化岗位。",
+              "stages": [
+                {
+                  "stage": "提前批与实习转正",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "内容策划、游戏策划、运营与算法岗提前开放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "网申、测评和笔试集中推进。"
+                },
+                {
+                  "stage": "业务面与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "围绕内容增长与商业化场景开展多轮面试。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "新项目立项与产品节奏变化带来补录窗口。"
+                }
+              ],
+              "timeline_id": "IND_MEDIA_GAME_CONTENT_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -106228,11 +107340,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 88.4,
-        "freshness_percent_overall": 87,
+        "evidence_percent_overall": 88.7,
+        "freshness_percent_overall": 87.3,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 92.5,
+        "quality_score_overall": 92.6,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -112329,7 +113441,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 40.9
+        "ranking_percentile": 59.1
       },
       "slug": "new-energy",
       "sources": [
@@ -113126,6 +114238,40 @@
                 "综合行政路径更容易锻炼统筹协同与公共沟通能力。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只看编制稳定可能忽视岗位工作强度与成长空间。",
+                "只看成长空间可能低估招聘周期与上岸难度。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议优先评估岗位职责和上岸可行性，再结合地区与稳定性进行二次筛选。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.83,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://rsj.sh.gov.cn/tgsgg_17341/20260128/t0035_1438398.html",
+                "source_date": "2026-01-28",
+                "source_id": "SRC_SHRSJ_PUBLIC_INST_20260128",
+                "source_name": "上海市人社局-上海市2026年事业单位公开招聘公告",
+                "source_type": "government_policy",
+                "source_url": "https://rsj.sh.gov.cn/tgsgg_17341/20260128/t0035_1438398.html",
+                "stat_definition": "结合事业单位公开招聘公告节奏与岗位结构形成的决策型争议议题。",
+                "publish_date": "2026-01-28",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "事业单位求职应优先“编制稳定”还是“岗位成长性”？",
+              "issue_id": "IND_PUBLIC_INSTITUTION_DEBATE_003",
+              "pro_points": [
+                "编制稳定优先有利于降低职业不确定性。",
+                "岗位成长优先有利于长期能力提升和职业迁移。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "招录竞争比、试用淘汰率、岗位流动性"
             }
           ],
           "last_checked": "2026-02-17",
@@ -118799,11 +119945,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 97.6,
-        "evidence_percent_overall": 90.4,
-        "freshness_percent_overall": 78.3,
+        "evidence_percent_overall": 90.5,
+        "freshness_percent_overall": 78.6,
         "real_data_ratio_overall": 75.3,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91.4,
+        "quality_score_overall": 90.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -119597,6 +120743,40 @@
                 "投拓运营更接近前端决策与商业评估，战略视角更强。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做设计管理可能一线施工与成本控制经验不足。",
+                "只做施工现场可能前期方案与项目统筹能力积累较慢。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议先在主路径做深，再通过项目轮岗补齐“设计-施工-交付”全链路能力。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.mohurd.gov.cn/xinwen/gzdt/art/2025/art_4fa6fb32042042d09182581bbd1f092e.html",
+                "source_date": "2025-12-25",
+                "source_id": "SRC_MOHURD_URBAN_RENEWAL_20251225",
+                "source_name": "住房城乡建设部：因城施策控增量、去库存、优供给，持续用力推动房地产市场止跌回稳",
+                "source_type": "government_policy",
+                "source_url": "https://www.mohurd.gov.cn/xinwen/gzdt/art/2025/art_4fa6fb32042042d09182581bbd1f092e.html",
+                "stat_definition": "结合住建部政策导向与地产基建岗位结构形成的决策型争议议题。",
+                "publish_date": "2025-12-25",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "地产基建首岗应优先“设计管理”还是“施工管理”？",
+              "issue_id": "IND_REAL_ESTATE_INFRA_DEBATE_003",
+              "pro_points": [
+                "设计管理路径更有利于沉淀方案统筹与前期决策能力。",
+                "施工管理路径更有利于快速建立现场交付与成本管控能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "项目交付率、成本偏差率、安全事故率"
             }
           ],
           "last_checked": "2026-02-17",
@@ -121370,6 +122550,61 @@
                 }
               ],
               "timeline_id": "IND_REAL_ESTATE_INFRA_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.cscec.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_CSCEC_COM_F3573BC4",
+                "source_name": "中国建筑官网",
+                "source_type": "company_official",
+                "source_url": "https://www.cscec.com",
+                "stat_definition": "按地产基建企业招聘节奏拆解月度投递和面试节点。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "新增地产基建行业可执行投递日历，覆盖设计、施工与商务岗位。",
+              "stages": [
+                {
+                  "stage": "提前批与储备岗预热",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "工程管理、设计与成本岗提前开放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "网申、测评与专业笔试集中。"
+                },
+                {
+                  "stage": "专业面与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "围绕项目管理、施工组织和商务管理开展面试。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "项目开工期和区域扩张形成补录窗口。"
+                }
+              ],
+              "timeline_id": "IND_REAL_ESTATE_INFRA_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -124529,11 +125764,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 88.1,
-        "freshness_percent_overall": 86.6,
+        "evidence_percent_overall": 88.4,
+        "freshness_percent_overall": 87,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.8,
+        "quality_score_overall": 90.1,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -124549,7 +125784,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 77.3
+        "ranking_percentile": 68.2
       },
       "slug": "real-estate-infrastructure",
       "sources": [
@@ -125372,6 +126607,40 @@
                 "验证路径能快速建立系统性问题定位能力，是很多团队核心入口。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做设计验证可能对工艺制造约束理解不足。",
+                "只做工艺制造可能芯片架构与前端设计能力积累较慢。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议先在主方向构建稳定成果，再通过跨环节项目补齐设计与制造协同能力。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2025/art_b280aaee390849aca2f8ecae5c9b414f.html",
+                "source_date": "2025-10-30",
+                "source_id": "SRC_MIIT_ELECTRONICS_Q3RUN_20251030",
+                "source_name": "2025年前三季度电子信息制造业运行情况",
+                "source_type": "government_policy",
+                "source_url": "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2025/art_b280aaee390849aca2f8ecae5c9b414f.html",
+                "stat_definition": "结合电子信息制造业运行数据与半导体岗位结构形成的决策型争议议题。",
+                "publish_date": "2025-10-30",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "半导体首岗应优先“芯片设计验证”还是“工艺制造工程”？",
+              "issue_id": "IND_SEMICONDUCTOR_ELECTRONICS_DEBATE_003",
+              "pro_points": [
+                "设计验证路径更有利于沉淀架构理解和电路分析能力。",
+                "工艺制造路径更有利于积累量产良率与制程优化能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "良率、功耗、流片周期"
             }
           ],
           "last_checked": "2026-02-17",
@@ -127234,6 +128503,61 @@
                 }
               ],
               "timeline_id": "IND_SEMICONDUCTOR_ELECTRONICS_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.smics.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_SMICS_COM_7D437B2",
+                "source_name": "中芯国际官网",
+                "source_type": "company_official",
+                "source_url": "https://www.smics.com",
+                "stat_definition": "按半导体企业批次招聘节奏拆解月度投递与面试窗口。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "新增半导体行业可执行投递日历，覆盖设计、验证、工艺和设备岗位。",
+              "stages": [
+                {
+                  "stage": "提前批与实习转正",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "设计、验证、工艺、设备工程岗提前释放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "网申、专业笔试与在线测评集中进行。"
+                },
+                {
+                  "stage": "技术面与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "围绕项目实操和工艺理解进行多轮面试。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "新产线与项目扩容带来补录需求。"
+                }
+              ],
+              "timeline_id": "IND_SEMICONDUCTOR_ELECTRONICS_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -130593,11 +131917,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 88.6,
-        "freshness_percent_overall": 85.7,
+        "evidence_percent_overall": 88.9,
+        "freshness_percent_overall": 86.1,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.5,
+        "quality_score_overall": 89.9,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -130613,7 +131937,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 72.7
+        "ranking_percentile": 54.5
       },
       "slug": "semiconductor-electronics",
       "sources": [
@@ -131431,6 +132755,40 @@
                 "一线项目更利于快速形成执行经验与问题解决能力。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只看平台稳定性可能忽视岗位职责匹配和成长效率。",
+                "只看短期成长可能低估长期组织资源与平台价值。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议先保证岗位职责与能力模型匹配，再在组织稳定性与成长节奏之间做权衡。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "http://wap.sasac.gov.cn/n2588025/n2643314/c35340771/content.html",
+                "source_date": "2026-02-03",
+                "source_id": "SRC_SASAC_TALENT_WORKCONF_20260203",
+                "source_name": "国资央企人才工作座谈会在京召开",
+                "source_type": "government_policy",
+                "source_url": "http://wap.sasac.gov.cn/n2588025/n2643314/c35340771/content.html",
+                "stat_definition": "结合国资央企人才工作导向与央国企岗位结构形成的决策型争议议题。",
+                "publish_date": "2026-02-03",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "央国企首岗应优先“平台稳定性”还是“岗位成长速度”？",
+              "issue_id": "IND_STATE_OWNED_ENTERPRISE_DEBATE_003",
+              "pro_points": [
+                "平台稳定优先有利于长期职业确定性和资源积累。",
+                "成长速度优先有利于早期能力跃迁和岗位竞争力提升。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "招聘竞争比、轮岗机会、晋升周期"
             }
           ],
           "last_checked": "2026-02-17",
@@ -137122,11 +138480,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 97.6,
-        "evidence_percent_overall": 91.5,
-        "freshness_percent_overall": 89,
+        "evidence_percent_overall": 91.6,
+        "freshness_percent_overall": 89.2,
         "real_data_ratio_overall": 75,
         "template_ratio_overall": 0,
-        "quality_score_overall": 93,
+        "quality_score_overall": 93.1,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "公司清单",
@@ -137964,6 +139322,40 @@
                 "政企方案路径更接近业务场景，沟通与商业能力成长更快。"
               ],
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "con_points": [
+                "只做网络运维可能产品与业务创新能力积累不足。",
+                "只做产品运营可能底层网络能力和系统稳定性理解不足。"
+              ],
+              "data_origin": "official_plus_editorial_synthesis",
+              "editorial_conclusion": "建议先选主方向建立稳定成果，再通过跨团队项目补齐网络与业务双能力。",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.miit.gov.cn/jgsj/yxj/xxfb/art/2026/art_bea806f4dd20457cb0158795cc210aa7.html",
+                "source_date": "2026-01-28",
+                "source_id": "SRC_MIIT_TELECOM_BULLETIN_20260128",
+                "source_name": "2025年通信业统计公报",
+                "source_type": "government_policy",
+                "source_url": "https://www.miit.gov.cn/jgsj/yxj/xxfb/art/2026/art_bea806f4dd20457cb0158795cc210aa7.html",
+                "stat_definition": "结合通信业统计公报与运营商岗位结构形成的决策型争议议题。",
+                "publish_date": "2026-01-28",
+                "captured_at": "2026-02-18"
+              },
+              "issue": "通信运营商首岗应优先“网络运维优化”还是“产品运营增长”？",
+              "issue_id": "IND_TELECOM_OPERATOR_DEBATE_003",
+              "pro_points": [
+                "网络运维路径更有利于沉淀稳定性与故障处理能力。",
+                "产品运营路径更有利于积累用户增长与商业化能力。"
+              ],
+              "updated_at": "2026-02-18",
+              "industry_specific_metric": "网络可用率、用户净增、ARPU"
             }
           ],
           "last_checked": "2026-02-17",
@@ -139636,6 +141028,61 @@
                 }
               ],
               "timeline_id": "IND_TELECOM_OPERATOR_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.chinatelecom.com.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_CHINATELECOM_COM_CN_3DC2C159",
+                "source_name": "中国电信官网",
+                "source_type": "company_official",
+                "source_url": "https://www.chinatelecom.com.cn",
+                "stat_definition": "按通信运营商招聘批次拆解月度网申、笔试和面试节点。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "新增通信运营商可执行投递日历，覆盖网络、产品、数据和客户运营岗位。",
+              "stages": [
+                {
+                  "stage": "提前批与实习转正",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "网络、云计算、数据与产品岗提前开放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "网申、测评、笔试集中进行。"
+                },
+                {
+                  "stage": "专业面与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "围绕网络优化与业务增长场景进行多轮面试。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "区域项目推进和团队补位带来补录。"
+                }
+              ],
+              "timeline_id": "IND_TELECOM_OPERATOR_TIMELINE_2026_ACTIONABLE",
               "updated_at": "2026-02-18",
               "year": 2026
             }
@@ -142849,11 +144296,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 90.6,
-        "freshness_percent_overall": 87.5,
+        "evidence_percent_overall": 90.9,
+        "freshness_percent_overall": 87.9,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.5,
+        "quality_score_overall": 89.9,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -142869,7 +144316,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 27.3
+        "ranking_percentile": 50
       },
       "slug": "telecom-operators",
       "sources": [
