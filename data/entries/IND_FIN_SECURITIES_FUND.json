@@ -1600,6 +1600,61 @@
           "timeline_id": "IND_FIN_SECURITIES_FUND_TIMELINE_2026",
           "updated_at": "2026-02-16",
           "year": 2026
+        },
+        {
+          "authenticity_level": "official",
+          "data_origin": "structured_collection",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-18",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 3,
+            "snapshot_url": "https://www.cs.ecitic.com",
+            "source_date": "2026-02-16",
+            "source_id": "SRC_AUTO_WWW_CS_ECITIC_COM_9B0A617",
+            "source_name": "中信证券官网",
+            "source_type": "company_official",
+            "source_url": "https://www.cs.ecitic.com",
+            "stat_definition": "按券商基金行业校招批次和业务线节奏拆解月度时间线。",
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-18"
+          },
+          "notes": "券商基金岗位多在秋招集中，研究和投行岗提前批占比高。",
+          "stages": [
+            {
+              "stage": "提前批与研究岗预热",
+              "start_month": 8,
+              "end_month": 9,
+              "notes": "研究、投行、量化岗位提前批启动。"
+            },
+            {
+              "stage": "秋招主批",
+              "start_month": 9,
+              "end_month": 11,
+              "notes": "网申、笔试、面试周密集进行。"
+            },
+            {
+              "stage": "签约与实习衔接",
+              "start_month": 11,
+              "end_month": 12,
+              "notes": "Offer发放并安排入职前实习。"
+            },
+            {
+              "stage": "春招补录",
+              "start_month": 2,
+              "end_month": 4,
+              "notes": "根据业务线人员流动情况补录岗位。"
+            }
+          ],
+          "timeline_id": "IND_FIN_SECURITIES_FUND_TIMELINE_2026_MONTHLY",
+          "updated_at": "2026-02-18",
+          "year": 2026
         }
       ],
       "last_checked": "2026-02-16",
@@ -4615,7 +4670,7 @@
   },
   "industry_id": "IND_FIN_SECURITIES_FUND",
   "meta": {
-    "content_version": "1.30.0",
+    "content_version": "1.31.0",
     "data_cycle": "quarterly",
     "data_freshness": {
       "freshness_status": "fresh",
@@ -4649,11 +4704,11 @@
     "confirmed_empty_collections": 0,
     "tracked_collections": 14,
     "coverage_percent_overall": 89.8,
-    "evidence_percent_overall": 90.8,
-    "freshness_percent_overall": 87.7,
+    "evidence_percent_overall": 90.9,
+    "freshness_percent_overall": 87.9,
     "real_data_ratio_overall": 73.7,
     "template_ratio_overall": 0,
-    "quality_score_overall": 91,
+    "quality_score_overall": 90.2,
     "verified_ratio_percent": 100,
     "weakest_collections": [
       "自定义扩展",

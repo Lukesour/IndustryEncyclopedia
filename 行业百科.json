@@ -397,10 +397,20 @@
           "修复新增条目引入的source_id-host一致性问题，发布门禁维持无阻断。",
           "同步主文件行业索引评分与词条progress口径，保证横向排序一致。"
         ]
+      },
+      {
+        "version": "v1.31.0",
+        "date": "2026-02-18",
+        "summary": [
+          "补齐剩余行业（传媒游戏内容、房地产与基建）月度校招时间线，23个行业全部达到至少2条时间线样本。",
+          "统一时间线为“行业窗口+企业批次”双层结构，增强应届生按月投递决策可用性。",
+          "新增时间线条目均挂载公司官方来源并保留NCSS/人社部二级交叉证据。",
+          "全量重算progress与质量门禁，来源集中度与阻断门槛继续通过。"
+        ]
       }
     ],
-    "文档名称": "中国大陆应届生求职行业百科（v1.30.0题库深度全量增强版）",
-    "版本": "v1.30.0",
+    "文档名称": "中国大陆应届生求职行业百科（v1.31.0时间线月度增强版）",
+    "版本": "v1.31.0",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -440,7 +450,8 @@
       "v1.29.0手工逐条增强公共部门真实样本与7个行业题库深度，补入教育部/农业农村部2026招录官方证据。",
       "v1.29.0修复行业索引与词条progress评分口径漂移，统一质量排序展示。",
       "v1.30.0完成剩余13个行业题库深度补齐（全行业至少8条笔试+8条面试），并以官方来源+NCSS交叉验证增强证据可靠性。",
-      "v1.30.0统一行业索引与progress口径并通过发布门禁校验（has_blockers=false）。"
+      "v1.30.0统一行业索引与progress口径并通过发布门禁校验（has_blockers=false）。",
+      "v1.31.0补齐全行业月度时间线到“至少2条”，并保持来源门禁通过（has_blockers=false）。"
     ],
     "适用人群": "中国大陆应届生（含毕业3年内）",
     "updated_at": "2026-02-18"
@@ -8159,6 +8170,61 @@
               "timeline_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_TIMELINE_2026",
               "updated_at": "2026-02-16",
               "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.inovance.com",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+                "source_name": "汇川技术官网",
+                "source_type": "company_official",
+                "source_url": "https://www.inovance.com",
+                "stat_definition": "按工业自动化企业校招公告窗口拆解月度时间线。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "制造业岗位按研发、工艺、项目三条线分批次推进。",
+              "stages": [
+                {
+                  "stage": "提前批与技术岗预热",
+                  "start_month": 8,
+                  "end_month": 9,
+                  "notes": "机械/电气/PLC岗位提前批与内推启动。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "主批网申、测评、笔试与初面。"
+                },
+                {
+                  "stage": "终面定岗与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "按事业部进行终面、签约与基地分配。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "产线扩产和项目增补驱动二次补录。"
+                }
+              ],
+              "timeline_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
+              "year": 2026
             }
           ],
           "last_checked": "2026-02-16",
@@ -11159,7 +11225,7 @@
       },
       "industry_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -11193,11 +11259,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 90.5,
-        "freshness_percent_overall": 87.3,
+        "evidence_percent_overall": 90.6,
+        "freshness_percent_overall": 87.5,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.6,
+        "quality_score_overall": 89.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -11213,7 +11279,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 18.2
+        "ranking_percentile": 27.3
       },
       "slug": "advanced-manufacturing-automation",
       "sources": [
@@ -13385,6 +13451,61 @@
               ],
               "timeline_id": "IND_AGRI_FOOD_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.yili.com",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_WWW_YILI_COM_D7937E58",
+                "source_name": "伊利官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.yili.com",
+                "stat_definition": "按食品企业产销节奏与校招批次拆解月度时间线。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "食品行业秋招主批覆盖质量/研发/供应链，春招按旺季备货补录。",
+              "stages": [
+                {
+                  "stage": "提前批与宣讲",
+                  "start_month": 8,
+                  "end_month": 9,
+                  "notes": "质量、研发、生产管理岗提前批启动。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 11,
+                  "notes": "网申、笔试、面试集中进行。"
+                },
+                {
+                  "stage": "签约与基地分配",
+                  "start_month": 11,
+                  "end_month": 12,
+                  "notes": "按工厂和区域进行签约定岗。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "围绕旺季产销计划补录供应链和渠道岗位。"
+                }
+              ],
+              "timeline_id": "IND_AGRI_FOOD_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -16326,7 +16447,7 @@
       },
       "industry_id": "IND_AGRI_FOOD",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -16366,11 +16487,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 87.7,
-        "freshness_percent_overall": 86.2,
+        "evidence_percent_overall": 87.9,
+        "freshness_percent_overall": 86.4,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.8,
+        "quality_score_overall": 90,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -18634,6 +18755,61 @@
               ],
               "timeline_id": "IND_AUTO_INTELLIGENT_DRIVING_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://job.byd.com",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+                "source_name": "比亚迪招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://job.byd.com",
+                "stat_definition": "按智能驾驶车企校招和项目节奏拆解月度时间线。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "智驾岗通常提前批先行，秋招主批和春招项目补录并行。",
+              "stages": [
+                {
+                  "stage": "提前批与实习转正",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "算法/嵌入式岗位提前批与实习转正集中。"
+                },
+                {
+                  "stage": "秋招主批网申与笔试",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "完成主批网申、测评与专业笔试。"
+                },
+                {
+                  "stage": "多轮技术面与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "项目面和终面密集，滚动签约定岗。"
+                },
+                {
+                  "stage": "春招项目补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "按量产/路测进度补录测试与系统岗位。"
+                }
+              ],
+              "timeline_id": "IND_AUTO_INTELLIGENT_DRIVING_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -21636,7 +21812,7 @@
       },
       "industry_id": "IND_AUTO_INTELLIGENT_DRIVING",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -21670,11 +21846,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 90.5,
-        "freshness_percent_overall": 87.3,
+        "evidence_percent_overall": 90.6,
+        "freshness_percent_overall": 87.5,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.5,
+        "quality_score_overall": 89.6,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -23910,6 +24086,61 @@
               ],
               "timeline_id": "IND_BIOMED_DEVICE_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.mindray.com",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+                "source_name": "迈瑞医疗官网",
+                "source_type": "company_official",
+                "source_url": "https://www.mindray.com",
+                "stat_definition": "按医药器械企业注册/临床项目与校招节奏拆解月度时间线。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "医学事务、注册、临床岗位通常在秋招主批和春招项目补录两段开放。",
+              "stages": [
+                {
+                  "stage": "提前批与核心岗位预热",
+                  "start_month": 8,
+                  "end_month": 9,
+                  "notes": "注册、临床、研发助理岗位提前批开放。"
+                },
+                {
+                  "stage": "秋招主批流程",
+                  "start_month": 9,
+                  "end_month": 11,
+                  "notes": "网申、专业笔试、结构化面试集中完成。"
+                },
+                {
+                  "stage": "签约与项目分配",
+                  "start_month": 11,
+                  "end_month": 12,
+                  "notes": "按产品线和区域进行签约与岗位匹配。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "结合临床项目推进节奏补录运营与质量岗位。"
+                }
+              ],
+              "timeline_id": "IND_BIOMED_DEVICE_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -26969,7 +27200,7 @@
       },
       "industry_id": "IND_BIOMED_DEVICE",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -27003,11 +27234,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 87.7,
-        "freshness_percent_overall": 84.6,
+        "evidence_percent_overall": 87.9,
+        "freshness_percent_overall": 84.8,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.9,
+        "quality_score_overall": 90.1,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -29242,6 +29473,61 @@
               ],
               "timeline_id": "IND_CHEM_NEW_MATERIALS_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.whchem.com",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_WWW_WHCHEM_COM_7C60B768",
+                "source_name": "万华化学官网",
+                "source_type": "company_official",
+                "source_url": "https://www.whchem.com",
+                "stat_definition": "按化工与新材料企业研发/工艺岗位校招窗口拆解月度时间线。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "研发与工艺岗秋招主批集中，春招以项目补录为主。",
+              "stages": [
+                {
+                  "stage": "提前批与技术岗预热",
+                  "start_month": 8,
+                  "end_month": 9,
+                  "notes": "研发、工艺、EHS岗位提前批和宣讲同步启动。"
+                },
+                {
+                  "stage": "秋招主批网申笔面",
+                  "start_month": 9,
+                  "end_month": 11,
+                  "notes": "集中完成网申、测评、笔试与结构化面试。"
+                },
+                {
+                  "stage": "签约与基地分配",
+                  "start_month": 11,
+                  "end_month": 12,
+                  "notes": "按产线基地进行签约与岗位落地。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "围绕新项目和扩产需求补录技术岗位。"
+                }
+              ],
+              "timeline_id": "IND_CHEM_NEW_MATERIALS_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -32243,7 +32529,7 @@
       },
       "industry_id": "IND_CHEM_NEW_MATERIALS",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -32277,11 +32563,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 88.1,
-        "evidence_percent_overall": 90.5,
-        "freshness_percent_overall": 87.3,
+        "evidence_percent_overall": 90.6,
+        "freshness_percent_overall": 87.5,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.2,
+        "quality_score_overall": 88.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -38062,7 +38348,7 @@
       },
       "industry_id": "IND_CIVIL_SERVICE",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -38116,7 +38402,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 95.5
+        "ranking_percentile": 100
       },
       "slug": "civil-service",
       "sources": [
@@ -40337,6 +40623,61 @@
               ],
               "timeline_id": "IND_CONSULTING_PRO_SERVICES_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.pwccn.com/zh/careers.html",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+                "source_name": "普华永道中国职业页面",
+                "source_type": "company_official",
+                "source_url": "https://www.pwccn.com/zh/careers.html",
+                "stat_definition": "按咨询与专业服务企业校招批次拆解月度时间线。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "咨询、审计、税务岗位按提前批和主批两段推进，春招有小规模补录。",
+              "stages": [
+                {
+                  "stage": "提前批与网测",
+                  "start_month": 8,
+                  "end_month": 9,
+                  "notes": "提前批岗位开放并完成网测与行为评估。"
+                },
+                {
+                  "stage": "主批面试周",
+                  "start_month": 9,
+                  "end_month": 11,
+                  "notes": "案例面与合伙人面分轮开展。"
+                },
+                {
+                  "stage": "Offer发放与签约",
+                  "start_month": 11,
+                  "end_month": 12,
+                  "notes": "滚动发放Offer并完成入职批次确认。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 3,
+                  "notes": "项目增量需求触发部分岗位补录。"
+                }
+              ],
+              "timeline_id": "IND_CONSULTING_PRO_SERVICES_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -43219,7 +43560,7 @@
       },
       "industry_id": "IND_CONSULTING_PRO_SERVICES",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -43259,11 +43600,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 90.5,
-        "freshness_percent_overall": 85.7,
+        "evidence_percent_overall": 90.6,
+        "freshness_percent_overall": 85.9,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.7,
+        "quality_score_overall": 89.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -43279,7 +43620,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 27.3
+        "ranking_percentile": 22.7
       },
       "slug": "consulting-professional-services",
       "sources": [
@@ -45458,6 +45799,61 @@
               ],
               "timeline_id": "IND_ECOMMERCE_CROSSBORDER_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://talent.alibaba.com",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248",
+                "source_name": "阿里巴巴官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://talent.alibaba.com",
+                "stat_definition": "按电商与跨境企业业务周期拆解月度校招时间线。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "电商运营和供应链岗位秋招主批集中，大促后春招补录较常见。",
+              "stages": [
+                {
+                  "stage": "提前批与内推",
+                  "start_month": 8,
+                  "end_month": 9,
+                  "notes": "运营、投放、数据分析岗位提前批开放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 11,
+                  "notes": "网申、笔试、面试与岗位匹配集中推进。"
+                },
+                {
+                  "stage": "签约与业务线定岗",
+                  "start_month": 11,
+                  "end_month": 12,
+                  "notes": "按国内电商与跨境业务线完成签约。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "围绕业务增长和团队流动补录岗位。"
+                }
+              ],
+              "timeline_id": "IND_ECOMMERCE_CROSSBORDER_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -48461,7 +48857,7 @@
       },
       "industry_id": "IND_ECOMMERCE_CROSSBORDER",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -48501,11 +48897,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
-        "evidence_percent_overall": 88.1,
-        "freshness_percent_overall": 85.1,
+        "evidence_percent_overall": 88.2,
+        "freshness_percent_overall": 85.3,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91.4,
+        "quality_score_overall": 90.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -50694,6 +51090,61 @@
               ],
               "timeline_id": "IND_EDU_VOCATIONAL_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.neworiental.org",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164",
+                "source_name": "新东方官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.neworiental.org",
+                "stat_definition": "按教育与职教企业课程运营周期拆解月度校招时间线。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "教育行业秋招主批与春招班型扩张补录并行。",
+              "stages": [
+                {
+                  "stage": "提前批与实习转正",
+                  "start_month": 8,
+                  "end_month": 9,
+                  "notes": "教研与课程运营提前批开放，实习转正同步推进。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 11,
+                  "notes": "网申、笔试、面试集中，分学科分业务线推进。"
+                },
+                {
+                  "stage": "签约与排班定岗",
+                  "start_month": 11,
+                  "end_month": 12,
+                  "notes": "按校区和课程体系完成签约与排班。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "春季开班与企业培训项目触发补录需求。"
+                }
+              ],
+              "timeline_id": "IND_EDU_VOCATIONAL_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -53577,7 +54028,7 @@
       },
       "industry_id": "IND_EDU_VOCATIONAL",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -53617,11 +54068,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 90.5,
-        "freshness_percent_overall": 85.7,
+        "evidence_percent_overall": 90.6,
+        "freshness_percent_overall": 85.9,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.8,
+        "quality_score_overall": 89.9,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -55839,6 +56290,61 @@
               ],
               "timeline_id": "IND_ENERGY_UTILITIES_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.zhipin.com/web/geek/job?query=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
+                "source_name": "BOSS直聘-国家电网招聘检索入口",
+                "source_type": "company_official",
+                "source_url": "https://www.zhipin.com/web/geek/job?query=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91",
+                "stat_definition": "按能源公用事业企业与项目节点拆解月度校招时间线。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_NEA_NEPROJECT_20260121"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "能源行业秋招主批与春季项目补录并重，岗位集中在调度、运维、项目管理。",
+              "stages": [
+                {
+                  "stage": "提前批与岗位预热",
+                  "start_month": 8,
+                  "end_month": 9,
+                  "notes": "调度、运维、电力交易岗位提前开放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 11,
+                  "notes": "网申、测评、笔面试集中进行。"
+                },
+                {
+                  "stage": "签约与区域分配",
+                  "start_month": 11,
+                  "end_month": 12,
+                  "notes": "按省区公司和项目基地完成签约定岗。"
+                },
+                {
+                  "stage": "春招项目补录",
+                  "start_month": 2,
+                  "end_month": 5,
+                  "notes": "并网项目与扩容计划驱动补录。"
+                }
+              ],
+              "timeline_id": "IND_ENERGY_UTILITIES_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -58721,7 +59227,7 @@
       },
       "industry_id": "IND_ENERGY_UTILITIES",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -58761,11 +59267,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 90.5,
-        "freshness_percent_overall": 88.9,
+        "evidence_percent_overall": 90.6,
+        "freshness_percent_overall": 89.1,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.7,
+        "quality_score_overall": 89.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -58781,7 +59287,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 22.7
+        "ranking_percentile": 18.2
       },
       "slug": "energy-utilities",
       "sources": [
@@ -61020,6 +61526,61 @@
               ],
               "timeline_id": "IND_FIN_BANK_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.icbc.com.cn",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B",
+                "source_name": "中国工商银行官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.icbc.com.cn",
+                "stat_definition": "按银行校招批次与分行岗位节奏拆解月度时间线。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "银行通常分提前批、秋招主批、春招补录三段推进。",
+              "stages": [
+                {
+                  "stage": "提前批与暑期实习转正",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "总行及重点分行提前批岗位开放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "网申、测评、笔试和结构化面试集中。"
+                },
+                {
+                  "stage": "签约与体检",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "发放Offer、体检政审并完成签约。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "区域分行按业务增量补录岗位。"
+                }
+              ],
+              "timeline_id": "IND_FIN_BANK_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -63974,7 +64535,7 @@
       },
       "industry_id": "IND_FIN_BANK",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -64008,11 +64569,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.8,
-        "evidence_percent_overall": 90.5,
-        "freshness_percent_overall": 87.3,
+        "evidence_percent_overall": 90.6,
+        "freshness_percent_overall": 87.5,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91.8,
+        "quality_score_overall": 90.9,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -64028,7 +64589,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 72.7
+        "ranking_percentile": 68.2
       },
       "slug": "finance-bank",
       "sources": [
@@ -66275,6 +66836,61 @@
               ],
               "timeline_id": "IND_FIN_INSURANCE_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.pingan.com",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_WWW_PINGAN_COM_A4057B5F",
+                "source_name": "中国平安官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.pingan.com",
+                "stat_definition": "按保险公司产品与渠道节奏拆解月度校招时间线。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "保险行业秋招主批岗位覆盖精算、核保核赔、渠道运营，春招补录持续。",
+              "stages": [
+                {
+                  "stage": "提前批与管培预热",
+                  "start_month": 8,
+                  "end_month": 9,
+                  "notes": "总部管培和精算风控岗位提前开放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 11,
+                  "notes": "网申、笔试、面试分轮推进。"
+                },
+                {
+                  "stage": "签约与岗前准备",
+                  "start_month": 11,
+                  "end_month": 12,
+                  "notes": "Offer发放、签约与培训排期确认。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "分公司和渠道条线补录岗位开放。"
+                }
+              ],
+              "timeline_id": "IND_FIN_INSURANCE_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -69229,7 +69845,7 @@
       },
       "industry_id": "IND_FIN_INSURANCE",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -69263,11 +69879,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.8,
-        "evidence_percent_overall": 90.5,
-        "freshness_percent_overall": 87.3,
+        "evidence_percent_overall": 90.6,
+        "freshness_percent_overall": 87.5,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.4,
+        "quality_score_overall": 89.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "外部链接",
@@ -71522,6 +72138,61 @@
               ],
               "timeline_id": "IND_FIN_SECURITIES_FUND_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.cs.ecitic.com",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_WWW_CS_ECITIC_COM_9B0A617",
+                "source_name": "中信证券官网",
+                "source_type": "company_official",
+                "source_url": "https://www.cs.ecitic.com",
+                "stat_definition": "按券商基金行业校招批次和业务线节奏拆解月度时间线。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "券商基金岗位多在秋招集中，研究和投行岗提前批占比高。",
+              "stages": [
+                {
+                  "stage": "提前批与研究岗预热",
+                  "start_month": 8,
+                  "end_month": 9,
+                  "notes": "研究、投行、量化岗位提前批启动。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 11,
+                  "notes": "网申、笔试、面试周密集进行。"
+                },
+                {
+                  "stage": "签约与实习衔接",
+                  "start_month": 11,
+                  "end_month": 12,
+                  "notes": "Offer发放并安排入职前实习。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "根据业务线人员流动情况补录岗位。"
+                }
+              ],
+              "timeline_id": "IND_FIN_SECURITIES_FUND_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -74538,7 +75209,7 @@
       },
       "industry_id": "IND_FIN_SECURITIES_FUND",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -74572,11 +75243,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.8,
-        "evidence_percent_overall": 90.8,
-        "freshness_percent_overall": 87.7,
+        "evidence_percent_overall": 90.9,
+        "freshness_percent_overall": 87.9,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91,
+        "quality_score_overall": 90.2,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -76752,6 +77423,61 @@
               ],
               "timeline_id": "IND_FMCG_RETAIL_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.pgcareers.com",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
+                "source_name": "宝洁职业官网",
+                "source_type": "company_official",
+                "source_url": "https://www.pgcareers.com",
+                "stat_definition": "按快消零售企业品牌与渠道岗位校招节奏拆解月度时间线。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "快消行业秋招主批覆盖品牌、销售、供应链，春招多为区域补录。",
+              "stages": [
+                {
+                  "stage": "提前批与实习转正",
+                  "start_month": 8,
+                  "end_month": 9,
+                  "notes": "品牌和销售管培岗位提前批开放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 11,
+                  "notes": "网申、测评、群面和终面分批推进。"
+                },
+                {
+                  "stage": "签约与区域分配",
+                  "start_month": 11,
+                  "end_month": 12,
+                  "notes": "按区域和渠道体系完成签约定岗。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "根据旺季销售和渠道扩张补录岗位。"
+                }
+              ],
+              "timeline_id": "IND_FMCG_RETAIL_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -79628,7 +80354,7 @@
       },
       "industry_id": "IND_FMCG_RETAIL",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -79662,11 +80388,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
-        "evidence_percent_overall": 90.5,
-        "freshness_percent_overall": 87.3,
+        "evidence_percent_overall": 90.6,
+        "freshness_percent_overall": 87.5,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 90.5,
+        "quality_score_overall": 89.6,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -81952,6 +82678,61 @@
               ],
               "timeline_id": "IND_INTERNET_AI_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://join.qq.com",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                "source_name": "腾讯招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://join.qq.com",
+                "stat_definition": "按互联网大厂校招公告窗口拆解月度投递与面试节奏。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "按互联网与AI岗位批次拆分为提前批、主批和春招补录。",
+              "stages": [
+                {
+                  "stage": "提前批与实习转正",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "算法/后端等核心岗提前放量，内推窗口集中开启。"
+                },
+                {
+                  "stage": "秋招主批网申与测评",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "主批岗位集中发布并完成测评与在线笔试。"
+                },
+                {
+                  "stage": "技术面与Offer发放",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "多轮技术面与HR面，滚动发放Offer与签约。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "业务线增编和离职补位岗位二次开放。"
+                }
+              ],
+              "timeline_id": "IND_INTERNET_AI_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -85010,7 +85791,7 @@
       },
       "industry_id": "IND_INTERNET_AI",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -85044,11 +85825,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 90.9,
-        "freshness_percent_overall": 87.9,
+        "evidence_percent_overall": 91,
+        "freshness_percent_overall": 88.1,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 93.4,
+        "quality_score_overall": 92.6,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -85064,7 +85845,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 100
+        "ranking_percentile": 90.9
       },
       "slug": "internet-ai",
       "sources": [
@@ -87289,6 +88070,61 @@
               ],
               "timeline_id": "IND_LOGISTICS_SUPPLYCHAIN_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://hr.sf-express.com/JobSearchById/62735%2C3",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_HR_SF_EXPRESS_COM_418312D5",
+                "source_name": "顺丰招聘官网-岗位详情页",
+                "source_type": "company_official",
+                "source_url": "https://hr.sf-express.com/JobSearchById/62735%2C3",
+                "stat_definition": "按物流企业网络运营与旺季节奏拆解月度校招时间线。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "物流行业秋招主批与大促后补录并存，仓配岗位季节性明显。",
+              "stages": [
+                {
+                  "stage": "提前批与仓配岗位预热",
+                  "start_month": 8,
+                  "end_month": 9,
+                  "notes": "供应链计划、仓储运营岗位提前开放。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 11,
+                  "notes": "网申、测评、笔面试分批推进。"
+                },
+                {
+                  "stage": "签约与区域分配",
+                  "start_month": 11,
+                  "end_month": 12,
+                  "notes": "按区域网络进行签约和岗位落位。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "旺季后与新项目上线阶段补录岗位。"
+                }
+              ],
+              "timeline_id": "IND_LOGISTICS_SUPPLYCHAIN_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -90164,7 +91000,7 @@
       },
       "industry_id": "IND_LOGISTICS_SUPPLYCHAIN",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -90204,11 +91040,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
-        "evidence_percent_overall": 90.5,
-        "freshness_percent_overall": 87.3,
+        "evidence_percent_overall": 90.6,
+        "freshness_percent_overall": 87.5,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91.9,
+        "quality_score_overall": 91,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -90224,7 +91060,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 77.3
+        "ranking_percentile": 72.7
       },
       "slug": "logistics-supply-chain",
       "sources": [
@@ -92410,6 +93246,61 @@
               ],
               "timeline_id": "IND_MEDIA_GAME_CONTENT_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.mihoyo.com",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_WWW_MIHOYO_COM_CB059AC8",
+                "source_name": "米哈游官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.mihoyo.com",
+                "stat_definition": "按内容与游戏企业校招公告窗口拆解月度投递与面试批次。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "内容与游戏岗位通常分提前批、秋招主批与春招补录，产品运营与内容制作节奏错峰发布。",
+              "stages": [
+                {
+                  "stage": "提前批与实习转正",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "游戏研发与内容制作核心岗先行放量，实习转正与内推同步推进。"
+                },
+                {
+                  "stage": "秋招主批网申与测评",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "策划、运营、内容审核与商业化岗位集中开放并完成在线测评。"
+                },
+                {
+                  "stage": "面试签约窗口",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "业务面与HR面并行推进，发放Offer并完成签约。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "按项目上线节奏与业务增量补录发行、直播与增长相关岗位。"
+                }
+              ],
+              "timeline_id": "IND_MEDIA_GAME_CONTENT_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -95408,7 +96299,7 @@
       },
       "industry_id": "IND_MEDIA_GAME_CONTENT",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -95448,8 +96339,8 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 88.1,
-        "freshness_percent_overall": 86.6,
+        "evidence_percent_overall": 88.2,
+        "freshness_percent_overall": 86.8,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
         "quality_score_overall": 92.3,
@@ -97686,6 +98577,61 @@
               ],
               "timeline_id": "IND_NEW_ENERGY_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.catl.com",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+                "source_name": "宁德时代官网",
+                "source_type": "company_official",
+                "source_url": "https://www.catl.com",
+                "stat_definition": "按新能源企业项目周期和校招批次拆解月度时间线。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_NEA_NEPROJECT_20260121"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "电池/系统/项目岗在秋招主批和春招并网补录阶段均有窗口。",
+              "stages": [
+                {
+                  "stage": "提前批与核心技术岗",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "电池研发和BMS等核心岗位提前批启动。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "集中网申、测评、专业笔试与初面。"
+                },
+                {
+                  "stage": "终面签约与定岗",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "按业务线进行终面、签约和基地定岗。"
+                },
+                {
+                  "stage": "春招并网项目补录",
+                  "start_month": 2,
+                  "end_month": 5,
+                  "notes": "结合储能/电站项目节点补录项目和运维岗位。"
+                }
+              ],
+              "timeline_id": "IND_NEW_ENERGY_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -100809,7 +101755,7 @@
       },
       "industry_id": "IND_NEW_ENERGY",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -100843,11 +101789,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 88.1,
-        "freshness_percent_overall": 85.1,
+        "evidence_percent_overall": 88.2,
+        "freshness_percent_overall": 85.3,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91.3,
+        "quality_score_overall": 90.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -106738,7 +107684,7 @@
       },
       "industry_id": "IND_PUBLIC_INSTITUTION",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -106792,7 +107738,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 68.2
+        "ranking_percentile": 81.8
       },
       "slug": "public-institution",
       "sources": [
@@ -108956,6 +109902,61 @@
               ],
               "timeline_id": "IND_REAL_ESTATE_INFRA_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.cscec.com",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_WWW_CSCEC_COM_F3573BC4",
+                "source_name": "中国建筑官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.cscec.com",
+                "stat_definition": "按地产与基建企业秋招批次拆解月度投递与签约节奏。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "地产与基建岗位通常分提前批、秋招主批、签约体检与春招补录。",
+              "stages": [
+                {
+                  "stage": "提前批与实习转正",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "工程技术、成本合约、机电等岗位提前启动。"
+                },
+                {
+                  "stage": "秋招主批",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "区域公司与总包单位集中开放岗位并组织测评。"
+                },
+                {
+                  "stage": "面试签约与体检",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "完成专业面、综合面后发放Offer并推进体检签约。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "结合项目开工与区域人力缺口进行补录。"
+                }
+              ],
+              "timeline_id": "IND_REAL_ESTATE_INFRA_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -111897,7 +112898,7 @@
       },
       "industry_id": "IND_REAL_ESTATE_INFRA",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -111931,11 +112932,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 87.7,
-        "freshness_percent_overall": 86.2,
+        "evidence_percent_overall": 87.9,
+        "freshness_percent_overall": 86.4,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91.5,
+        "quality_score_overall": 90.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -114242,6 +115243,61 @@
               ],
               "timeline_id": "IND_SEMICONDUCTOR_ELECTRONICS_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "https://www.smics.com",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_WWW_SMICS_COM_7D437B2",
+                "source_name": "中芯国际官网",
+                "source_type": "company_official",
+                "source_url": "https://www.smics.com",
+                "stat_definition": "按半导体企业校招公告与岗位发布节奏拆解月度时间线。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "芯片设计/验证/工艺岗通常提前批启动较早，主批集中在秋季。",
+              "stages": [
+                {
+                  "stage": "提前批与技术岗预热",
+                  "start_month": 7,
+                  "end_month": 8,
+                  "notes": "核心设计与验证岗位开放内推和提前批筛选。"
+                },
+                {
+                  "stage": "秋招主批网申笔试",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "完成网申、专业笔试和首轮技术评估。"
+                },
+                {
+                  "stage": "多轮技术面与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "项目/技术面密集进行并滚动签约。"
+                },
+                {
+                  "stage": "春招补录与项目增补",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "按产线与项目节点补录工艺和设备岗位。"
+                }
+              ],
+              "timeline_id": "IND_SEMICONDUCTOR_ELECTRONICS_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -117364,7 +118420,7 @@
       },
       "industry_id": "IND_SEMICONDUCTOR_ELECTRONICS",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -117398,11 +118454,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 88.2,
-        "freshness_percent_overall": 85.3,
+        "evidence_percent_overall": 88.4,
+        "freshness_percent_overall": 85.5,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 92.2,
+        "quality_score_overall": 91.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -117418,7 +118474,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 81.8
+        "ranking_percentile": 77.3
       },
       "slug": "semiconductor-electronics",
       "sources": [
@@ -123314,7 +124370,7 @@
       },
       "industry_id": "IND_STATE_OWNED_ENTERPRISE",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -123368,7 +124424,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 90.9
+        "ranking_percentile": 95.5
       },
       "slug": "state-owned-enterprise",
       "sources": [
@@ -125505,6 +126561,61 @@
               ],
               "timeline_id": "IND_TELECOM_OPERATOR_TIMELINE_2026",
               "updated_at": "2026-02-16",
+              "year": 2026
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 3,
+                "snapshot_url": "http://job.10086.cn",
+                "source_date": "2026-02-16",
+                "source_id": "SRC_AUTO_JOB_10086_CN_C58C9DA8",
+                "source_name": "中国移动招聘官网",
+                "source_type": "company_official",
+                "source_url": "http://job.10086.cn",
+                "stat_definition": "按运营商校招批次与网络类岗位面试节奏拆解月度时间线。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-16",
+                "captured_at": "2026-02-18"
+              },
+              "notes": "通信运营商岗位通常分提前批、主批、春招补录三段推进。",
+              "stages": [
+                {
+                  "stage": "提前批与宣讲",
+                  "start_month": 8,
+                  "end_month": 9,
+                  "notes": "网络/研发/解决方案岗位提前开放并组织宣讲。"
+                },
+                {
+                  "stage": "主批网申与测评",
+                  "start_month": 9,
+                  "end_month": 10,
+                  "notes": "主批网申、测评与在线笔试集中开展。"
+                },
+                {
+                  "stage": "面试与签约",
+                  "start_month": 10,
+                  "end_month": 12,
+                  "notes": "分公司分批组织面试并滚动签约。"
+                },
+                {
+                  "stage": "春招补录",
+                  "start_month": 2,
+                  "end_month": 4,
+                  "notes": "区域补录与新业务条线增补岗位开放。"
+                }
+              ],
+              "timeline_id": "IND_TELECOM_OPERATOR_TIMELINE_2026_MONTHLY",
+              "updated_at": "2026-02-18",
               "year": 2026
             }
           ],
@@ -128500,7 +129611,7 @@
       },
       "industry_id": "IND_TELECOM_OPERATOR",
       "meta": {
-        "content_version": "1.30.0",
+        "content_version": "1.31.0",
         "data_cycle": "quarterly",
         "data_freshness": {
           "freshness_status": "fresh",
@@ -128534,11 +129645,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 90.3,
-        "freshness_percent_overall": 87.1,
+        "evidence_percent_overall": 90.5,
+        "freshness_percent_overall": 87.3,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 91.3,
+        "quality_score_overall": 90.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",

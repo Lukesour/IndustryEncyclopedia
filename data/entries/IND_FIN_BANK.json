@@ -1609,6 +1609,61 @@
           "timeline_id": "IND_FIN_BANK_TIMELINE_2026",
           "updated_at": "2026-02-16",
           "year": 2026
+        },
+        {
+          "authenticity_level": "official",
+          "data_origin": "structured_collection",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-18",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 3,
+            "snapshot_url": "https://www.icbc.com.cn",
+            "source_date": "2026-02-16",
+            "source_id": "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B",
+            "source_name": "中国工商银行官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.icbc.com.cn",
+            "stat_definition": "按银行校招批次与分行岗位节奏拆解月度时间线。",
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-18"
+          },
+          "notes": "银行通常分提前批、秋招主批、春招补录三段推进。",
+          "stages": [
+            {
+              "stage": "提前批与暑期实习转正",
+              "start_month": 7,
+              "end_month": 8,
+              "notes": "总行及重点分行提前批岗位开放。"
+            },
+            {
+              "stage": "秋招主批",
+              "start_month": 9,
+              "end_month": 10,
+              "notes": "网申、测评、笔试和结构化面试集中。"
+            },
+            {
+              "stage": "签约与体检",
+              "start_month": 10,
+              "end_month": 12,
+              "notes": "发放Offer、体检政审并完成签约。"
+            },
+            {
+              "stage": "春招补录",
+              "start_month": 2,
+              "end_month": 4,
+              "notes": "区域分行按业务增量补录岗位。"
+            }
+          ],
+          "timeline_id": "IND_FIN_BANK_TIMELINE_2026_MONTHLY",
+          "updated_at": "2026-02-18",
+          "year": 2026
         }
       ],
       "last_checked": "2026-02-16",
@@ -4562,7 +4617,7 @@
   },
   "industry_id": "IND_FIN_BANK",
   "meta": {
-    "content_version": "1.30.0",
+    "content_version": "1.31.0",
     "data_cycle": "quarterly",
     "data_freshness": {
       "freshness_status": "fresh",
@@ -4596,11 +4651,11 @@
     "confirmed_empty_collections": 0,
     "tracked_collections": 14,
     "coverage_percent_overall": 89.8,
-    "evidence_percent_overall": 90.5,
-    "freshness_percent_overall": 87.3,
+    "evidence_percent_overall": 90.6,
+    "freshness_percent_overall": 87.5,
     "real_data_ratio_overall": 73.7,
     "template_ratio_overall": 0,
-    "quality_score_overall": 91.8,
+    "quality_score_overall": 90.9,
     "verified_ratio_percent": 100,
     "weakest_collections": [
       "自定义扩展",
@@ -4616,7 +4671,7 @@
     "salary_micro_status": "verified",
     "salary_macro_status": "verified",
     "updated_at": "2026-02-18",
-    "ranking_percentile": 72.7
+    "ranking_percentile": 68.2
   },
   "slug": "finance-bank",
   "sources": [
