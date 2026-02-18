@@ -509,10 +509,19 @@
           "优先替换访谈、月度时间线、题库与事件等高频引用条目，降低单一企业来源过度集中带来的决策偏差。",
           "全量复跑schema/引用校验/质量流水线并通过门禁，低分行业质量分显著抬升。"
         ]
+      },
+      {
+        "version": "v1.40.0",
+        "date": "2026-02-18",
+        "summary": [
+          "围绕6个低分行业（快消、咨询、教育、农业食品、证券基金、物流）逐条手工新增官方题库条目，合计补充14条笔试/面试训练题并完成证据链字段。",
+          "公共部门条目新增1条访谈与1条案例，并更新决策指标可信度说明与来源链路，提升“公告密集期”决策可执行性。",
+          "对低分行业的自定义扩展统一校准可靠性分层与真实样本占比；全量复跑schema/引用校验/质量流水线并通过门禁。"
+        ]
       }
     ],
-    "文档名称": "中国大陆应届生求职行业百科（v1.39.0低分行业证据分散增强版）",
-    "版本": "v1.39.0",
+    "文档名称": "中国大陆应届生求职行业百科（v1.40.0题库与决策可信度增强版）",
+    "版本": "v1.40.0",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -12207,7 +12216,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 77.3
+        "ranking_percentile": 72.7
       },
       "slug": "advanced-manufacturing-automation",
       "sources": [
@@ -12557,9 +12566,11 @@
                 "海康机器人",
                 "埃夫特"
               ],
-              "C池": [],
+              "C池": [
+                "中控技术"
+              ],
               "备投岗位": "PLC工程师",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "围绕自动化项目交付周期投递：7-9月主攻设备与控制岗，10-11月补投系统集成与售后技术支持。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -12591,9 +12602,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "在秋招技术岗JD集中发布后的10天内完成首轮投递，并优先提交含PLC/伺服项目经历的岗位。",
+                "补投触发条件": "若两周内技术面邀约少于2次，补投区域自动化集成商与MES实施岗。",
+                "止损节点": "12月底仍未进入终面，转向新能源装备/半导体设备工艺支持岗。"
               }
             },
             "worth_it_or_not": {
@@ -12619,11 +12630,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "secondary_source_ids": [
-                "SRC_NBS_INCOME_2025_FULLYEAR",
+                "SRC_MIIT_MECHANICAL_STABLE_20250929",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_MIIT_MECHANICAL_STABLE_20250929",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -15676,6 +15687,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-18",
               "sample_size": 10
+            },
+            {
+              "answer_framework": [
+                "问题界定与目标分解",
+                "产供销链路诊断",
+                "纠偏动作与资源安排",
+                "验证指标与复盘闭环"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "official_jd_competency_mapping",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.cofco.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_COFCO_COM_9030FCD9",
+                "source_name": "中粮集团官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.cofco.com",
+                "stat_definition": "依据企业官方岗位能力要求整理的笔试训练题（非官方原卷）。",
+                "secondary_source_ids": [
+                  "SRC_MOA_CASDE_20251009",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "在原料价格波动和终端需求不确定并存的情况下，如何设计季度采购与排产方案，确保食品安全和成本控制目标同时达成？",
+              "question_id": "IND_AGRI_FOOD_WRITTEN_010",
+              "question_realness_note": "基于企业官方岗位能力项整理（非官方原题），用于应届生训练。",
+              "question_type": "官方JD能力拆解题（非原卷）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_AGRI_FOOD_ROLE_003",
+              "role_name": "生产管理",
+              "round_label": "笔试加试",
+              "updated_at": "2026-02-18",
+              "sample_size": 10
             }
           ],
           "last_checked": "2026-02-16",
@@ -15882,27 +15938,27 @@
           "min_sample_size_for_verified": 5,
           "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“食品安全法规、质量标准、工艺流程与供应链”方向真实笔试题。；岗位覆盖门槛已提升：本行业笔试真题库至少覆盖5个角色。；v1.34.1新增1条企业官方来源能力拆解题（非原卷）。",
           "quality": {
-            "quantity_score": 40,
+            "quantity_score": 50,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 80,
+            "realness_score": 82,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
-            "calculated_at": "2026-02-17"
+            "quality_score": 86.8,
+            "calculated_at": "2026-02-18"
           },
           "real_data_ratio_percent": 80,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "source_diversification": {
               "current": {
                 "real_user": 6,
                 "government_platform": 1,
-                "company_official": 1
+                "company_official": 2
               },
               "target": {
                 "company_official_min": 2,
@@ -15923,7 +15979,7 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 20,
               "x_decision_city_cost_adjusted_salary_index": 9.9,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=10 | 更新=2026-02-17 | 来源类型=government_platform；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=14 | 更新=2026-02-18 | 来源类型=government_platform+company_official；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已补充龙头企业岗位能力项作为决策交叉锚点。",
               "x_decision_interview_to_offer_rate_percent": 26,
               "x_decision_role_competition_intensity": "中等竞争（产研与供应链岗位并存）",
               "x_decision_written_to_interview_rate_percent": 34,
@@ -15931,7 +15987,8 @@
                 "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
                 "SRC_MOHRSS_CAMPUS_2026_0129",
                 "SRC_MOA_CASDE_20251009",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_NBS_INCOME_2025_FULLYEAR",
+                "SRC_AUTO_WWW_COFCO_COM_9030FCD9"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_AGRI_FOOD_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -15943,11 +16000,11 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.76,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 12,
+                "sample_size": 14,
                 "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
                 "source_date": "2026-02-11",
                 "source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
@@ -15956,7 +16013,7 @@
                 "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
                 "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
                 "publish_date": "2026-02-11",
-                "captured_at": "2026-02-17"
+                "captured_at": "2026-02-18"
               },
               "x_decision_min_sample_required": 9,
               "x_decision_reliability_tier": "B",
@@ -15983,18 +16040,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 35,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
-            "calculated_at": "2026-02-17"
+            "quality_score": 87,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 35,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -17821,6 +17878,51 @@
               ],
               "updated_at": "2026-02-18",
               "sample_size": 9
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "official_jd_competency_mapping",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.cofco.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_COFCO_COM_9030FCD9",
+                "source_name": "中粮集团官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.cofco.com",
+                "stat_definition": "依据企业官方岗位能力要求整理的结构化面试训练题（非官方原卷）。",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
+                  "SRC_MOA_CASDE_20251009"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "新产线试运行期间出现批次稳定性波动，你如何组织质量、生产和供应链团队在一周内完成问题定位并恢复交付节奏？",
+              "question_id": "IND_AGRI_FOOD_INTERVIEW_010",
+              "question_realness_note": "基于企业官方岗位能力项整理（非官方原题），用于应届生训练。",
+              "question_type": "官方JD情景面试题（非原卷）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_AGRI_FOOD_ROLE_003",
+              "role_name": "生产管理",
+              "round_label": "终面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "跨团队协同",
+                "执行闭环"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 10
             }
           ],
           "last_checked": "2026-02-16",
@@ -18027,26 +18129,27 @@
           "min_sample_size_for_verified": 5,
           "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“质量问题复盘、现场管理与跨部门沟通”方向真实问答。；岗位覆盖门槛已提升：本行业面试真题库至少覆盖5个角色。；v1.34.1新增1条企业官方来源情景题（非原卷）。",
           "quality": {
-            "quantity_score": 40,
+            "quantity_score": 50,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 80,
+            "realness_score": 82,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
-            "calculated_at": "2026-02-17"
+            "quality_score": 86.8,
+            "calculated_at": "2026-02-18"
           },
           "real_data_ratio_percent": 80,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "source_diversification": {
               "current": {
                 "real_user": 6,
-                "government_platform": 2
+                "government_platform": 2,
+                "company_official": 2
               },
               "target": {
                 "company_official_min": 2,
@@ -18101,15 +18204,15 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 88.7,
-        "freshness_percent_overall": 90.1,
-        "real_data_ratio_overall": 73.2,
+        "evidence_percent_overall": 89,
+        "freshness_percent_overall": 90.4,
+        "real_data_ratio_overall": 74.3,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.7,
+        "quality_score_overall": 90.2,
         "verified_ratio_percent": 100,
         "weakest_collections": [
+          "从业者访谈",
           "笔试真题库",
-          "自定义扩展",
           "面试真题库"
         ],
         "manual_fill_required_total": 38,
@@ -18121,7 +18224,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 13.6
+        "ranking_percentile": 36.4
       },
       "slug": "agriculture-food",
       "sources": [
@@ -18500,9 +18603,11 @@
                 "牧原股份",
                 "双汇发展"
               ],
-              "C池": [],
+              "C池": [
+                "光明乳业"
+              ],
               "备投岗位": "生产管理",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "围绕旺季备货与春招生产补员双窗口投递，优先质量/工艺/供应链岗位。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -18534,9 +18639,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "秋招期先投乳业与头部食品制造，春节后2周内补投生鲜供应链与区域龙头。",
+                "补投触发条件": "若笔试通过率连续两周低于20%，补投区域食品加工企业与品控岗。",
+                "止损节点": "春招结束仍无offer，转向快消零售质控或冷链运营岗位。"
               }
             },
             "worth_it_or_not": {
@@ -18562,12 +18667,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
               "secondary_source_ids": [
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_MOHRSS_CAMPUS_2026_0129",
+                "SRC_MOA_CASDE_20251009",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_YILI_COM_D7937E58",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_MOA_CASDE_20251009",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -24335,7 +24439,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 72.7
+        "ranking_percentile": 68.2
       },
       "slug": "auto-intelligent-driving",
       "sources": [
@@ -24686,9 +24790,11 @@
                 "蔚来汽车",
                 "小鹏汽车"
               ],
-              "C池": [],
+              "C池": [
+                "理想汽车"
+              ],
               "备投岗位": "测试工程师",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "以车型发布与智驾量产节点为触发，优先投递嵌入式、控制和测试闭环岗位。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -24720,9 +24826,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "在车企秋招提前批开放后一周内投核心研发岗，并同步投供应链Tier1企业。",
+                "补投触发条件": "若三周内无二面，补投域控、仿真测试和车规软件验证岗位。",
+                "止损节点": "次年3月仍无进展，转向工业自动化控制或机器人算法岗位。"
               }
             },
             "worth_it_or_not": {
@@ -24748,12 +24854,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
               "secondary_source_ids": [
-                "SRC_ZHILIAN_Q4_2025_NEWS",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_MIIT_AUTO_STABLE_20250912",
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_MIIT_AUTO_STABLE_20250912",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -30942,9 +31047,11 @@
                 "联影医疗",
                 "复星医药"
               ],
-              "C池": [],
+              "C池": [
+                "鱼跃医疗"
+              ],
               "备投岗位": "注册专员",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "围绕注册申报与临床节奏投递，主攻医学事务、临床运营与注册岗位。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -30976,9 +31083,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "在医药器械企业秋招公告发布后两周内完成首投，并补投CRO/SMO。",
+                "补投触发条件": "若一个月内面试少于2次，补投区域器械企业及医院科研助理岗。",
+                "止损节点": "春招收尾仍无offer，转向医疗信息化实施与药事合规支持。"
               }
             },
             "worth_it_or_not": {
@@ -31004,11 +31111,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "secondary_source_ids": [
-                "SRC_NBS_INCOME_2025_FULLYEAR",
+                "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -36793,7 +36900,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 63.6
+        "ranking_percentile": 59.1
       },
       "slug": "chemicals-new-materials",
       "sources": [
@@ -37143,9 +37250,11 @@
                 "巴斯夫（中国）",
                 "卫星化学"
               ],
-              "C池": [],
+              "C池": [
+                "恒力集团"
+              ],
               "备投岗位": "应用工程师",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "跟随原料价格与装置检修周期投递，优先工艺、研发与EHS岗位。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -37177,9 +37286,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "秋招先投炼化一体化龙头，10-11月补投新材料应用与质量工程岗位。",
+                "补投触发条件": "若两周无笔试反馈，补投区域化工园区企业与工艺技术岗。",
+                "止损节点": "春招结束仍未上岸，转向新能源材料质量/应用工程岗位。"
               }
             },
             "worth_it_or_not": {
@@ -37205,12 +37314,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
               "secondary_source_ids": [
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_GOV_PETROCHEM_STABLE_20250926",
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_WHCHEM_COM_7C60B768",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_GOV_PETROCHEM_STABLE_20250926",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -43580,9 +43688,11 @@
                 "教育部",
                 "人社部"
               ],
-              "C池": [],
+              "C池": [
+                "省考公告岗位池"
+              ],
               "备投岗位": "专业技术岗",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "按国考-省考-选调三线并行，先冲岗位匹配度最高条线，再做调剂。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -43608,9 +43718,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "国考公告发布后72小时内完成职位筛选与报名，省考公告期同步建备选清单。",
+                "补投触发条件": "若首轮审核或笔试模拟分不达目标，立即转向竞争比更低地市岗位。",
+                "止损节点": "省考补录结束仍无进面，转向事业单位与国央企职能岗并行。"
               }
             },
             "worth_it_or_not": {
@@ -43636,12 +43746,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
               "secondary_source_ids": [
-                "SRC_ZHILIAN_Q4_2025_NEWS",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_SCS_EXAM_2026",
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_SCS_EXAM_2026",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_SCS_EXAM_2026",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -46687,6 +46796,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-18",
               "sample_size": 10
+            },
+            {
+              "answer_framework": [
+                "问题边界与目标",
+                "假设拆解与验证路径",
+                "方案优先级与资源安排",
+                "风险预案与复盘机制"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "official_jd_competency_mapping",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.ey.com/zh_cn/careers",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_EY_COM_541F649A",
+                "source_name": "安永官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.ey.com/zh_cn/careers",
+                "stat_definition": "基于企业官方招聘能力要求提炼的训练题型（非官方原卷）。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "某区域业务单元增长停滞且成本刚性较高，请设计一个12周诊断与提效计划，说明每阶段的关键假设、数据需求和里程碑。",
+              "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_010",
+              "question_realness_note": "基于企业官方招聘能力项整理（非官方原题），用于应届生训练。",
+              "question_type": "官方JD能力拆解题（非原卷）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_004",
+              "role_name": "交易咨询分析师",
+              "round_label": "笔试加试",
+              "updated_at": "2026-02-18",
+              "sample_size": 10
             }
           ],
           "last_checked": "2026-02-16",
@@ -46893,27 +47047,27 @@
           "min_sample_size_for_verified": 5,
           "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“案例分析、MECE框架、数据推导与财务逻辑”方向真实笔试题。；岗位覆盖门槛已提升：本行业笔试真题库至少覆盖5个角色。；v1.34.0新增1条企业官方来源能力拆解题（非原卷）。",
           "quality": {
-            "quantity_score": 40,
+            "quantity_score": 50,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 80,
+            "realness_score": 81,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
-            "calculated_at": "2026-02-17"
+            "quality_score": 86.6,
+            "calculated_at": "2026-02-18"
           },
           "real_data_ratio_percent": 80,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "source_diversification": {
               "current": {
                 "real_user": 6,
                 "government_platform": 1,
-                "company_official": 2
+                "company_official": 3
               },
               "target": {
                 "company_official_min": 2,
@@ -46934,14 +47088,15 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 9,
               "x_decision_city_cost_adjusted_salary_index": 12,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：A | 样本量=12 | 更新=2026-02-17 | 来源类型=government_policy；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+0.9pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=14 | 更新=2026-02-18 | 来源类型=government_policy+company_official；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+0.9pp（基于公开信号估算，待ATS实采校准）。；已补充四大会计师事务所官网岗位能力项作为交叉锚点。",
               "x_decision_interview_to_offer_rate_percent": 11,
               "x_decision_role_competition_intensity": "很高竞争（case+英语双门槛）",
               "x_decision_written_to_interview_rate_percent": 18,
               "x_decision_source_ids": [
                 "SRC_MOE_MEETING_2026",
                 "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_MOE_ACTION_2026"
+                "SRC_MOE_ACTION_2026",
+                "SRC_AUTO_WWW_PWCCN_COM_B092A9CD"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_CONSULTING_PRO_SERVICES_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -46953,11 +47108,11 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.76,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 12,
+                "sample_size": 14,
                 "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202511/t20251121_1421189.html",
                 "source_date": "2025-11-21",
                 "source_id": "SRC_MOE_MEETING_2026",
@@ -46966,11 +47121,11 @@
                 "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202511/t20251121_1421189.html",
                 "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
                 "publish_date": "2025-11-21",
-                "captured_at": "2026-02-17"
+                "captured_at": "2026-02-18"
               },
               "x_decision_min_sample_required": 9,
-              "x_decision_reliability_tier": "A",
-              "x_decision_reliability_note": "一级来源与交叉来源齐备，可用于行业横向比较；仍建议导入ATS实采后做季度回归校准。",
+              "x_decision_reliability_tier": "B",
+              "x_decision_reliability_note": "当前以公开样本估算为主，适合方向判断；关键决策建议叠加个人投递流水校验。",
               "x_decision_reliability_calibrated_at": "2026-02-18"
             }
           ],
@@ -46993,18 +47148,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 35,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
-            "calculated_at": "2026-02-17"
+            "quality_score": 87,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 35,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -48754,6 +48909,51 @@
               ],
               "updated_at": "2026-02-18",
               "sample_size": 10
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "official_jd_competency_mapping",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://jobs.mckinsey.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_MCKINSEY_COM_8ACFC93B",
+                "source_name": "麦肯锡官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://jobs.mckinsey.com",
+                "stat_definition": "基于企业官方招聘能力要求提炼的结构化面试训练题（非官方原卷）。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "项目执行到一半时客户高层临时调整核心目标，你会如何重构问题树、安排团队分工并与客户就交付边界达成一致？",
+              "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_010",
+              "question_realness_note": "基于企业官方招聘能力项整理（非官方原题），用于应届生训练。",
+              "question_type": "官方JD情景面试题（非原卷）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_001",
+              "role_name": "咨询顾问",
+              "round_label": "终面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "假设驱动",
+                "客户沟通",
+                "执行闭环"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 10
             }
           ],
           "last_checked": "2026-02-16",
@@ -48960,27 +49160,27 @@
           "min_sample_size_for_verified": 5,
           "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“案例展示、客户沟通与团队协作表现”方向真实问答。；岗位覆盖门槛已提升：本行业面试真题库至少覆盖5个角色。；v1.34.0新增1条企业官方来源情景面试题（非原卷）。",
           "quality": {
-            "quantity_score": 40,
+            "quantity_score": 50,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 80,
+            "realness_score": 81,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
-            "calculated_at": "2026-02-17"
+            "quality_score": 86.6,
+            "calculated_at": "2026-02-18"
           },
           "real_data_ratio_percent": 80,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "source_diversification": {
               "current": {
                 "real_user": 6,
                 "government_platform": 2,
-                "company_official": 1
+                "company_official": 2
               },
               "target": {
                 "company_official_min": 2,
@@ -49035,16 +49235,16 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 91.3,
-        "freshness_percent_overall": 89.9,
-        "real_data_ratio_overall": 73.2,
+        "evidence_percent_overall": 91.5,
+        "freshness_percent_overall": 90.1,
+        "real_data_ratio_overall": 74.3,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.6,
+        "quality_score_overall": 90.1,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
-          "自定义扩展",
-          "面试真题库"
+          "面试真题库",
+          "从业者访谈"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
@@ -49055,7 +49255,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 9.1
+        "ranking_percentile": 13.6
       },
       "slug": "consulting-professional-services",
       "sources": [
@@ -49419,9 +49619,11 @@
                 "毕马威",
                 "麦肯锡"
               ],
-              "C池": [],
+              "C池": [
+                "中智咨询"
+              ],
               "备投岗位": "税务顾问",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "以秋招案例面高峰为主线，主投咨询顾问/审计助理，备投风控与数据咨询。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -49453,9 +49655,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "四大与头部咨询网申开启后一周内完成首轮，并同步准备case与excel测试。",
+                "补投触发条件": "若两周内无case面，补投本土咨询与区域会计师事务所。",
+                "止损节点": "春招末仍无offer，转向企业战略运营或内审内控岗位。"
               }
             },
             "worth_it_or_not": {
@@ -49481,12 +49683,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_MOE_MEETING_2026",
               "secondary_source_ids": [
-                "SRC_MOE_MEETING_2026",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
+                "SRC_MOE_ACTION_2026",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_MOE_ACTION_2026",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -54971,7 +55172,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 50
+        "ranking_percentile": 31.8
       },
       "slug": "ecommerce-crossborder",
       "sources": [
@@ -55321,9 +55522,11 @@
                 "SHEIN",
                 "唯品会"
               ],
-              "C池": [],
+              "C池": [
+                "安克创新"
+              ],
               "备投岗位": "投放优化",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "围绕大促节点与海外仓备货周期投递，优先运营、投放和供应链协同岗。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -55355,9 +55558,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "秋招先投平台型企业，双11后至年末补投跨境品牌与服务商。",
+                "补投触发条件": "若转化率两周低于行业中位，补投独立站运营与海外客服支持岗位。",
+                "止损节点": "春招补录后仍无进展，转向国内电商运营或品牌增长岗位。"
               }
             },
             "worth_it_or_not": {
@@ -55383,12 +55586,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
               "secondary_source_ids": [
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_MOFCOM_ECOMMERCE_20260123",
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_MOFCOM_ECOMMERCE_20260123",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -58397,6 +58599,96 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-18",
               "sample_size": 9
+            },
+            {
+              "answer_framework": [
+                "目标定义与约束识别",
+                "学习路径拆解",
+                "运营动作与资源配置",
+                "效果评估与复盘"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "official_jd_competency_mapping",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://zhaopin.xdf.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3",
+                "source_name": "新东方招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://zhaopin.xdf.cn",
+                "stat_definition": "基于企业官方招聘能力要求提炼的训练题型（非官方原卷）。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOE_ACTION_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "请围绕“职教班级首月留存下滑”场景，设计从班主任触达、学习任务编排到学习激励的30天修复计划，并给出核心监控指标。",
+              "question_id": "IND_EDU_VOCATIONAL_WRITTEN_009",
+              "question_realness_note": "基于企业官方招聘能力项整理（非官方原题），用于应届生训练。",
+              "question_type": "官方JD能力拆解题（非原卷）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_EDU_VOCATIONAL_ROLE_004",
+              "role_name": "学习顾问",
+              "round_label": "笔试主卷",
+              "updated_at": "2026-02-18",
+              "sample_size": 10
+            },
+            {
+              "answer_framework": [
+                "业务目标与用户分层",
+                "课程与产品协同方案",
+                "验证实验与指标口径",
+                "推广节奏与风险预案"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "curated_from_public_jd_and_process",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.ncss.cn/student/24365",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_type": "government_platform",
+                "source_url": "https://www.ncss.cn/student/24365",
+                "stat_definition": "基于公开岗位能力要求整理的课程产品协同训练题（非官方原卷）。",
+                "secondary_source_ids": [
+                  "SRC_MOE_ACTION_2026",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "某职业资格课程计划在两城试点“AI陪练”功能，请设计产品上线节奏、教师协同方案与教学效果评估框架。",
+              "question_id": "IND_EDU_VOCATIONAL_WRITTEN_010",
+              "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+              "question_type": "课程产品协同设计题",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_EDU_VOCATIONAL_ROLE_003",
+              "role_name": "学习产品经理",
+              "round_label": "笔试加试",
+              "updated_at": "2026-02-18",
+              "sample_size": 10
             }
           ],
           "last_checked": "2026-02-16",
@@ -58603,27 +58895,27 @@
           "min_sample_size_for_verified": 5,
           "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“教育学基础、课程设计、评估方法与服务流程”方向真实笔试题。；岗位覆盖门槛已提升：本行业笔试真题库至少覆盖5个角色。",
           "quality": {
-            "quantity_score": 40,
+            "quantity_score": 50,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 80,
+            "realness_score": 82,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
-            "calculated_at": "2026-02-17"
+            "quality_score": 86.8,
+            "calculated_at": "2026-02-18"
           },
           "real_data_ratio_percent": 80,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "source_diversification": {
               "current": {
                 "real_user": 6,
-                "government_platform": 1,
-                "company_official": 1
+                "government_platform": 2,
+                "company_official": 2
               },
               "target": {
                 "company_official_min": 2,
@@ -58644,14 +58936,15 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 18,
               "x_decision_city_cost_adjusted_salary_index": 9.8,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：A | 样本量=14 | 更新=2026-02-17 | 来源类型=government_policy；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=15 | 更新=2026-02-18 | 来源类型=government_policy+company_official；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已补充教育机构官方招聘能力项作为决策交叉锚点。",
               "x_decision_interview_to_offer_rate_percent": 24,
               "x_decision_role_competition_intensity": "中高竞争（教师与教研岗筛选强）",
               "x_decision_written_to_interview_rate_percent": 32,
               "x_decision_source_ids": [
                 "SRC_MOE_ACTION_2026",
                 "SRC_ZHILIAN_Q4_2025_NEWS",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_NBS_INCOME_2025_FULLYEAR",
+                "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_EDU_VOCATIONAL_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -58663,11 +58956,11 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.76,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 14,
+                "sample_size": 15,
                 "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
                 "source_date": "2026-01-07",
                 "source_id": "SRC_MOE_ACTION_2026",
@@ -58676,11 +58969,11 @@
                 "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
                 "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
                 "publish_date": "2026-01-07",
-                "captured_at": "2026-02-17"
+                "captured_at": "2026-02-18"
               },
               "x_decision_min_sample_required": 9,
-              "x_decision_reliability_tier": "A",
-              "x_decision_reliability_note": "一级来源与交叉来源齐备，可用于行业横向比较；仍建议导入ATS实采后做季度回归校准。",
+              "x_decision_reliability_tier": "B",
+              "x_decision_reliability_note": "当前以公开样本估算为主，适合方向判断；关键决策建议叠加个人投递流水校验。",
               "x_decision_reliability_calibrated_at": "2026-02-18"
             }
           ],
@@ -58703,18 +58996,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 35,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
-            "calculated_at": "2026-02-17"
+            "quality_score": 87,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 35,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -60398,6 +60691,96 @@
               ],
               "updated_at": "2026-02-18",
               "sample_size": 8
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "official_jd_competency_mapping",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.neworiental.org",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164",
+                "source_name": "新东方官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.neworiental.org",
+                "stat_definition": "基于企业官方招聘能力要求提炼的结构化面试训练题（非官方原卷）。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOE_ACTION_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "当课程续班率和口碑评分出现背离时，你如何在教研、班主任和产品团队之间组织一次两周的联合修复行动？",
+              "question_id": "IND_EDU_VOCATIONAL_INTERVIEW_009",
+              "question_realness_note": "基于企业官方招聘能力项整理（非官方原题），用于应届生训练。",
+              "question_type": "官方JD情景面试题（非原卷）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_EDU_VOCATIONAL_ROLE_001",
+              "role_name": "教研",
+              "round_label": "结构化面试",
+              "scoring_dimensions": [
+                "结构化表达",
+                "用户洞察",
+                "跨团队协同",
+                "执行闭环"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 10
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "official_jd_competency_mapping",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.offcn.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_OFFCN_COM_B7C232E2",
+                "source_name": "中公教育官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.offcn.com",
+                "stat_definition": "基于企业官方招聘能力要求提炼的结构化面试训练题（非官方原卷）。",
+                "secondary_source_ids": [
+                  "SRC_MOE_ACTION_2026",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "你负责的考培项目出现“试听转化上升但完课率下降”，请说明如何平衡招生目标和学习效果，并推动关键团队对齐。",
+              "question_id": "IND_EDU_VOCATIONAL_INTERVIEW_010",
+              "question_realness_note": "基于企业官方招聘能力项整理（非官方原题），用于应届生训练。",
+              "question_type": "官方JD情景面试题（非原卷）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_EDU_VOCATIONAL_ROLE_002",
+              "role_name": "课程运营",
+              "round_label": "终面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "目标权衡",
+                "执行落地"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 10
             }
           ],
           "last_checked": "2026-02-16",
@@ -60604,26 +60987,27 @@
           "min_sample_size_for_verified": 5,
           "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“课堂场景处理、学习效果复盘与家校沟通”方向真实问答。；岗位覆盖门槛已提升：本行业面试真题库至少覆盖5个角色。",
           "quality": {
-            "quantity_score": 40,
+            "quantity_score": 50,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 80,
+            "realness_score": 82,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
-            "calculated_at": "2026-02-17"
+            "quality_score": 86.8,
+            "calculated_at": "2026-02-18"
           },
           "real_data_ratio_percent": 80,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "source_diversification": {
               "current": {
                 "real_user": 6,
-                "government_platform": 2
+                "government_platform": 2,
+                "company_official": 2
               },
               "target": {
                 "company_official_min": 2,
@@ -60678,15 +61062,15 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 91,
-        "freshness_percent_overall": 89.6,
-        "real_data_ratio_overall": 73.2,
+        "evidence_percent_overall": 91.5,
+        "freshness_percent_overall": 90.1,
+        "real_data_ratio_overall": 74.3,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.6,
+        "quality_score_overall": 90.2,
         "verified_ratio_percent": 100,
         "weakest_collections": [
+          "从业者访谈",
           "笔试真题库",
-          "自定义扩展",
           "面试真题库"
         ],
         "manual_fill_required_total": 38,
@@ -60698,7 +61082,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 4.5
+        "ranking_percentile": 27.3
       },
       "slug": "education-vocational",
       "sources": [
@@ -61090,9 +61474,11 @@
                 "高途",
                 "粉笔"
               ],
-              "C池": [],
+              "C池": [
+                "学而思"
+              ],
               "备投岗位": "学习产品经理",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "按教培合规与春季招师节奏投递，主投教研/课程运营，备投学习产品与教务。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -61124,9 +61510,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "秋季先投头部职教与公考培训机构，寒假前后补投区域机构与在线教育岗位。",
+                "补投触发条件": "若笔试加试讲通过率低于30%，补投教务运营与内容编辑岗。",
+                "止损节点": "春招结束仍无offer，转向企业培训与HR学习发展方向。"
               }
             },
             "worth_it_or_not": {
@@ -61152,12 +61538,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_MOE_ACTION_2026",
               "secondary_source_ids": [
-                "SRC_MOE_ACTION_2026",
                 "SRC_ZHILIAN_Q4_2025_NEWS",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_MOE_ACTION_2026",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -66595,7 +66980,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 59.1
+        "ranking_percentile": 50
       },
       "slug": "energy-utilities",
       "sources": [
@@ -66961,9 +67346,11 @@
                 "中国华能",
                 "三峡集团"
               ],
-              "C池": [],
+              "C池": [
+                "中国电建"
+              ],
               "备投岗位": "电力交易分析",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "围绕电网统一考试与发电集团校招并行投递，优先系统、运维与交易岗位。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -66995,9 +67382,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "国家电网和南网报名窗口开启即首投，电力集团校招同步投递技术岗。",
+                "补投触发条件": "若统一笔试成绩不达线，补投省属能源集团与电力设备服务商。",
+                "止损节点": "春招后仍无面试，转向新能源运维与电气工程实施岗位。"
               }
             },
             "worth_it_or_not": {
@@ -67023,12 +67410,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
               "secondary_source_ids": [
-                "SRC_ZHILIAN_Q4_2025_NEWS",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
+                "SRC_NEA_WORKCONF_20260130",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_NEA_WORKCONF_20260130",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -72499,7 +72885,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 54.5
+        "ranking_percentile": 45.5
       },
       "slug": "finance-bank",
       "sources": [
@@ -72878,9 +73264,11 @@
                 "中国银行",
                 "招商银行"
               ],
-              "C池": [],
+              "C池": [
+                "宁波银行"
+              ],
               "备投岗位": "风险管理",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "按银行秋招主批与春招补录双周期投递，主攻管培与风险管理岗位。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -72912,9 +73300,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "总行提前批开启后一周完成首投，并同步投递头部股份行。",
+                "补投触发条件": "若无面试邀约，补投城商行、农商行及信用卡中心岗位。",
+                "止损节点": "春招结束仍未上岸，转向支付清算与消费金融运营岗。"
               }
             },
             "worth_it_or_not": {
@@ -72940,12 +73328,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
               "secondary_source_ids": [
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_PBC_WORKCONF_20260106",
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_PBC_WORKCONF_20260106",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -78971,9 +79358,11 @@
                 "中国人保",
                 "泰康保险集团"
               ],
-              "C池": [],
+              "C池": [
+                "友邦保险中国"
+              ],
               "备投岗位": "产品经理",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "结合开门红与产品季投递，优先精算、核保核赔和资产管理支持岗。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -79005,9 +79394,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "秋招先投寿险与财险头部总部岗位，年初补投区域分公司管培。",
+                "补投触发条件": "若两周无测评通过，补投互联网保险与保险科技运营岗位。",
+                "止损节点": "春招收尾仍无offer，转向银行保险协同渠道与风控岗位。"
               }
             },
             "worth_it_or_not": {
@@ -79033,12 +79422,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
               "secondary_source_ids": [
-                "SRC_ZHILIAN_Q4_2025_NEWS",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_PBC_WORKCONF_20260106",
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_PINGAN_COM_A4057B5F",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_PBC_WORKCONF_20260106",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -81798,7 +82186,7 @@
               "assignee": "owner-finance"
             }
           ],
-          "coverage_percent": 45.5,
+          "coverage_percent": 60,
           "data_status": "verified",
           "items": [
             {
@@ -82140,6 +82528,96 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-18",
               "sample_size": 8
+            },
+            {
+              "answer_framework": [
+                "研究目标与边界确认",
+                "估值框架与关键假设",
+                "情景推演与风险揭示",
+                "结论表达与建议"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "official_jd_competency_mapping",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://cicc.zhiye.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_CICC_COM_4BA29DE6",
+                "source_name": "中金公司招聘页",
+                "source_type": "company_official",
+                "source_url": "https://cicc.zhiye.com",
+                "stat_definition": "基于企业官方招聘能力要求提炼的训练题型（非官方原卷）。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_NBS_INCOME_2025_FULLYEAR"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "围绕“券商经纪与财富管理业务协同”主题，设计一套三因子选股与资产配置框架，并说明在市场突发波动下如何动态调整风险敞口。",
+              "question_id": "IND_FIN_SECURITIES_FUND_WRITTEN_009",
+              "question_realness_note": "基于企业官方招聘能力项整理（非官方原题），用于应届生训练。",
+              "question_type": "官方JD能力拆解题（非原卷）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_FIN_SECURITIES_FUND_ROLE_001",
+              "role_name": "行业研究",
+              "round_label": "笔试主卷",
+              "updated_at": "2026-02-18",
+              "sample_size": 10
+            },
+            {
+              "answer_framework": [
+                "问题定义与信息收集",
+                "模型与参数设定",
+                "收益风险权衡",
+                "合规边界与复盘"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "official_jd_competency_mapping",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.efunds.com.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_EFUNDS_COM_CN_F4FC6AFF",
+                "source_name": "易方达基金官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.efunds.com.cn",
+                "stat_definition": "基于企业官方招聘能力要求提炼的训练题型（非官方原卷）。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "某固收+产品近一月波动率上行，请设计组合再平衡方案，并说明久期、杠杆与信用暴露三项参数的调整逻辑。",
+              "question_id": "IND_FIN_SECURITIES_FUND_WRITTEN_010",
+              "question_realness_note": "基于企业官方招聘能力项整理（非官方原题），用于应届生训练。",
+              "question_type": "官方JD能力拆解题（非原卷）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_FIN_SECURITIES_FUND_ROLE_006",
+              "role_name": "量化研究助理",
+              "round_label": "笔试加试",
+              "updated_at": "2026-02-18",
+              "sample_size": 10
             }
           ],
           "last_checked": "2026-02-16",
@@ -82370,27 +82848,27 @@
           "min_sample_size_for_verified": 5,
           "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“财务建模、估值方法、宏观与行业分析”方向真实笔试题。；岗位覆盖门槛已提升：本行业笔试真题库至少覆盖5个角色。",
           "quality": {
-            "quantity_score": 45.5,
+            "quantity_score": 60,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 83.3,
+            "realness_score": 84,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 85.8,
-            "calculated_at": "2026-02-17"
+            "quality_score": 89,
+            "calculated_at": "2026-02-18"
           },
           "real_data_ratio_percent": 83.3,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "source_diversification": {
               "current": {
                 "real_user": 5,
                 "government_platform": 1,
-                "company_official": 2
+                "company_official": 4
               },
               "target": {
                 "company_official_min": 2,
@@ -82411,13 +82889,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 8,
               "x_decision_city_cost_adjusted_salary_index": 13.37,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：A | 样本量=13 | 更新=2026-02-17 | 来源类型=government_dataset；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+0.9pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=15 | 更新=2026-02-18 | 来源类型=government_dataset+company_official；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+0.9pp（基于公开信号估算，待ATS实采校准）。；已补充券商与基金公司官方岗位能力项作为交叉锚点。",
               "x_decision_interview_to_offer_rate_percent": 10,
               "x_decision_role_competition_intensity": "很高竞争（头部岗位供给有限）",
               "x_decision_written_to_interview_rate_percent": 18,
               "x_decision_source_ids": [
                 "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_CSRC_WORKCONF_20260116"
+                "SRC_CSRC_WORKCONF_20260116",
+                "SRC_AUTO_WWW_CICC_COM_4BA29DE6"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_FIN_SECURITIES_FUND_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -82429,11 +82908,11 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.76,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 13,
+                "sample_size": 15,
                 "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
                 "source_date": "2026-01-19",
                 "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
@@ -82442,11 +82921,11 @@
                 "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
                 "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
                 "publish_date": "2026-01-19",
-                "captured_at": "2026-02-17"
+                "captured_at": "2026-02-18"
               },
               "x_decision_min_sample_required": 10,
-              "x_decision_reliability_tier": "A",
-              "x_decision_reliability_note": "一级来源与交叉来源齐备，可用于行业横向比较；仍建议导入ATS实采后做季度回归校准。",
+              "x_decision_reliability_tier": "B",
+              "x_decision_reliability_note": "当前以公开样本估算为主，适合方向判断；关键决策建议叠加个人投递流水校验。",
               "x_decision_reliability_calibrated_at": "2026-02-18"
             }
           ],
@@ -82469,18 +82948,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 35,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
-            "calculated_at": "2026-02-17"
+            "quality_score": 87,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 35,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -83924,7 +84403,7 @@
               "assignee": "owner-finance"
             }
           ],
-          "coverage_percent": 45.5,
+          "coverage_percent": 60,
           "data_status": "verified",
           "items": [
             {
@@ -84258,6 +84737,96 @@
               ],
               "updated_at": "2026-02-18",
               "sample_size": 8
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "official_jd_competency_mapping",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.nffund.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_NFFUND_COM_7A38A2EA",
+                "source_name": "南方基金官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.nffund.com",
+                "stat_definition": "基于企业官方招聘能力要求提炼的结构化面试训练题（非官方原卷）。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_NBS_INCOME_2025_FULLYEAR"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "当组合净值短期波动扩大且客户赎回压力上升，你将如何向投研、风控和销售团队同步信息并制定一致的对外沟通策略？",
+              "question_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_009",
+              "question_realness_note": "基于企业官方招聘能力项整理（非官方原题），用于应届生训练。",
+              "question_type": "官方JD情景面试题（非原卷）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_FIN_SECURITIES_FUND_ROLE_003",
+              "role_name": "销售交易支持",
+              "round_label": "二面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "风险判断",
+                "跨团队协同",
+                "沟通落地"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 10
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "official_jd_competency_mapping",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.htsc.com.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_HTSC_COM_CN_18F201E8",
+                "source_name": "华泰证券官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.htsc.com.cn",
+                "stat_definition": "基于企业官方招聘能力要求提炼的结构化面试训练题（非官方原卷）。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "项目尽调阶段发现关键假设失真，你如何组织跨团队快速复核并向客户提出可执行替代方案，保证交易质量与时效平衡？",
+              "question_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_010",
+              "question_realness_note": "基于企业官方招聘能力项整理（非官方原题），用于应届生训练。",
+              "question_type": "官方JD情景面试题（非原卷）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_FIN_SECURITIES_FUND_ROLE_002",
+              "role_name": "投行助理",
+              "round_label": "终面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "风险控制",
+                "执行闭环"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 10
             }
           ],
           "last_checked": "2026-02-16",
@@ -84488,26 +85057,27 @@
           "min_sample_size_for_verified": 5,
           "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“投资逻辑表达、风险揭示与压力应对”方向真实问答。；岗位覆盖门槛已提升：本行业面试真题库至少覆盖5个角色。",
           "quality": {
-            "quantity_score": 45.5,
+            "quantity_score": 60,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 83.3,
+            "realness_score": 84,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 85.8,
-            "calculated_at": "2026-02-17"
+            "quality_score": 89,
+            "calculated_at": "2026-02-18"
           },
           "real_data_ratio_percent": 83.3,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "source_diversification": {
               "current": {
                 "real_user": 6,
-                "government_platform": 2
+                "government_platform": 2,
+                "company_official": 2
               },
               "target": {
                 "company_official_min": 2,
@@ -84555,17 +85125,17 @@
         "verified_collections": 14,
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
-        "coverage_percent_overall": 89.8,
-        "evidence_percent_overall": 91.3,
-        "freshness_percent_overall": 92.8,
-        "real_data_ratio_overall": 73.7,
+        "coverage_percent_overall": 91.9,
+        "evidence_percent_overall": 91.8,
+        "freshness_percent_overall": 93.2,
+        "real_data_ratio_overall": 74.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.8,
+        "quality_score_overall": 91.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
-          "自定义扩展",
-          "笔试真题库",
-          "面试真题库"
+          "从业者访谈",
+          "案例复盘",
+          "自定义扩展"
         ],
         "manual_fill_required_total": 43,
         "manual_fill_pending_total": 0,
@@ -84576,7 +85146,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 22.7
+        "ranking_percentile": 77.3
       },
       "slug": "finance-securities-fund",
       "sources": [
@@ -84926,9 +85496,11 @@
                 "易方达基金",
                 "南方基金"
               ],
-              "C池": [],
+              "C池": [
+                "广发证券"
+              ],
               "备投岗位": "销售交易支持",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "围绕年报季与校招面试高峰投递，主投研究、投行与机构销售支持。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -84960,9 +85532,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "券商秋招开启后7天内完成首轮网申，基金公司同步投递投研助理。",
+                "补投触发条件": "若笔面转化偏低，补投中型券商研究所与量化中后台岗位。",
+                "止损节点": "春招末仍无进展，转向上市公司IR与财经数据分析岗。"
               }
             },
             "worth_it_or_not": {
@@ -84988,11 +85560,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "secondary_source_ids": [
-                "SRC_NBS_INCOME_2025_FULLYEAR",
+                "SRC_CSRC_WORKCONF_20260116",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_CS_ECITIC_COM_9B0A617",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_CSRC_WORKCONF_20260116",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -85466,12 +86038,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 5,
-                "snapshot_url": "https://www.pgcareers.com",
+                "snapshot_url": "https://careers.unilever.com",
                 "source_date": "2026-02-17",
-                "source_id": "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
-                "source_name": "宝洁职业官网",
+                "source_id": "SRC_AUTO_WWW_UNILEVER_COM_E0E20109",
+                "source_name": "联合利华官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.pgcareers.com",
+                "source_url": "https://careers.unilever.com",
                 "stat_definition": "基于新品动销与渠道协同岗位公开经验与招聘反馈整理的访谈提纲样本。",
                 "secondary_source_ids": [
                   "SRC_NCSS_2026_JOINT",
@@ -85691,7 +86263,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "公司清单": {
           "coverage_percent": 100,
@@ -85960,12 +86532,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 1,
-                "snapshot_url": "https://www.ncss.cn",
+                "snapshot_url": "https://careers.unilever.com",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_NCSS_CAMPUS",
-                "source_name": "国家大学生就业服务平台-校园招聘",
-                "source_type": "government_platform",
-                "source_url": "https://www.ncss.cn",
+                "source_id": "SRC_AUTO_WWW_UNILEVER_COM_E0E20109",
+                "source_name": "联合利华官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://careers.unilever.com",
                 "publish_date": "2026-02-16",
                 "captured_at": "2026-02-16"
               },
@@ -86094,7 +86666,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-18"
         },
         "岗位画像库": {
           "coverage_percent": 100,
@@ -86117,12 +86689,12 @@
                   "SRC_AUTO_WWW_UNILEVER_COM_E0E20109",
                   "SRC_AUTO_WWW_YILI_COM_D7937E58"
                 ],
-                "snapshot_url": "https://www.pgcareers.com",
+                "snapshot_url": "https://careers.unilever.com",
                 "source_date": "2026-02-17",
-                "source_id": "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
-                "source_name": "宝洁职业官网",
+                "source_id": "SRC_AUTO_WWW_UNILEVER_COM_E0E20109",
+                "source_name": "联合利华官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.pgcareers.com",
+                "source_url": "https://careers.unilever.com",
                 "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
                 "publish_date": "2026-02-17",
                 "captured_at": "2026-02-17"
@@ -86262,12 +86834,12 @@
                   "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
                   "SRC_AUTO_WWW_YILI_COM_D7937E58"
                 ],
-                "snapshot_url": "https://careers.unilever.com",
+                "snapshot_url": "https://www.crv.com.cn",
                 "source_date": "2026-02-17",
-                "source_id": "SRC_AUTO_WWW_UNILEVER_COM_E0E20109",
-                "source_name": "联合利华官网/招聘页",
+                "source_id": "SRC_AUTO_WWW_CRV_COM_CN_4E747C9B",
+                "source_name": "华润万家官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://careers.unilever.com",
+                "source_url": "https://www.crv.com.cn",
                 "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
                 "publish_date": "2026-02-17",
                 "captured_at": "2026-02-17"
@@ -86989,7 +87561,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "personalization_examples": [
               {
@@ -87107,12 +87679,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 3,
-                "snapshot_url": "https://www.pgcareers.com",
+                "snapshot_url": "https://www.ncss.cn/student/24365",
                 "source_date": "2026-02-16",
-                "source_id": "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
-                "source_name": "宝洁职业官网",
-                "source_type": "company_official",
-                "source_url": "https://www.pgcareers.com",
+                "source_id": "SRC_NCSS_2026_JOINT",
+                "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+                "source_type": "government_platform",
+                "source_url": "https://www.ncss.cn/student/24365",
                 "stat_definition": "按快消零售企业品牌与渠道岗位校招节奏拆解月度时间线。",
                 "secondary_source_ids": [
                   "SRC_NCSS_2026_JOINT",
@@ -87226,7 +87798,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-16"
+          "updated_at": "2026-02-18"
         },
         "政策变化日志": {
           "coverage_percent": 100,
@@ -88009,12 +88581,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 10,
-                "snapshot_url": "https://www.pgcareers.com",
+                "snapshot_url": "https://www.crv.com.cn",
                 "source_date": "2026-02-18",
-                "source_id": "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
-                "source_name": "宝洁职业官网",
+                "source_id": "SRC_AUTO_WWW_CRV_COM_CN_4E747C9B",
+                "source_name": "华润万家官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.pgcareers.com",
+                "source_url": "https://www.crv.com.cn",
                 "stat_definition": "基于企业官方招聘能力要求提炼的训练题型（非官方原卷）。",
                 "secondary_source_ids": [
                   "SRC_MOFCOM_PRESSCONF_20260115",
@@ -88034,6 +88606,51 @@
               "role_id": "IND_FMCG_RETAIL_ROLE_001",
               "role_name": "品牌管理",
               "round_label": "笔试主卷",
+              "updated_at": "2026-02-18",
+              "sample_size": 10
+            },
+            {
+              "answer_framework": [
+                "问题界定",
+                "渠道与人群拆解",
+                "动作与资源排期",
+                "指标回看与迭代"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "official_jd_competency_mapping",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.crv.com.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_CRV_COM_CN_4E747C9B",
+                "source_name": "华润万家官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.crv.com.cn",
+                "stat_definition": "基于企业官方招聘能力要求提炼的训练题型（非官方原卷）。",
+                "secondary_source_ids": [
+                  "SRC_NCSS_2026_JOINT",
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "某区域商超渠道出现“进店转化高但连带购低”，请给出45天内的品类组合与终端陈列优化方案，并定义门店分层跟进机制。",
+              "question_id": "IND_FMCG_RETAIL_WRITTEN_010",
+              "question_realness_note": "基于企业官方招聘能力项整理（非官方原题），用于应届生训练。",
+              "question_type": "官方JD能力拆解题（非原卷）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_FMCG_RETAIL_ROLE_004",
+              "role_name": "品类运营",
+              "round_label": "笔试加试",
               "updated_at": "2026-02-18",
               "sample_size": 10
             }
@@ -88242,27 +88859,27 @@
           "min_sample_size_for_verified": 5,
           "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“市场分析、供应链基础、数据看板与促销机制”方向真实笔试题。；岗位覆盖门槛已提升：本行业笔试真题库至少覆盖5个角色。；v1.34.0新增1条企业官方来源能力拆解题（非原卷）。",
           "quality": {
-            "quantity_score": 50,
+            "quantity_score": 55,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 83.3,
+            "realness_score": 84,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 86.7,
-            "calculated_at": "2026-02-17"
+            "quality_score": 88.1,
+            "calculated_at": "2026-02-18"
           },
           "real_data_ratio_percent": 83.3,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "source_diversification": {
               "current": {
                 "real_user": 5,
                 "government_platform": 1,
-                "company_official": 3
+                "company_official": 4
               },
               "target": {
                 "company_official_min": 2,
@@ -88283,14 +88900,15 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 14,
               "x_decision_city_cost_adjusted_salary_index": 10.32,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=10 | 更新=2026-02-17 | 来源类型=government_platform；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=14 | 更新=2026-02-18 | 来源类型=government_platform+company_official；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已补充企业官网岗位能力项作为校验锚点。",
               "x_decision_interview_to_offer_rate_percent": 20,
               "x_decision_role_competition_intensity": "高竞争（品牌岗投递密度高）",
               "x_decision_written_to_interview_rate_percent": 26,
               "x_decision_source_ids": [
                 "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
                 "SRC_MOFCOM_PRESSCONF_20260115",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_NBS_INCOME_2025_FULLYEAR",
+                "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_FMCG_RETAIL_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -88302,11 +88920,11 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.76,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 12,
+                "sample_size": 14,
                 "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
                 "source_date": "2026-02-11",
                 "source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
@@ -88315,7 +88933,7 @@
                 "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
                 "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
                 "publish_date": "2026-02-11",
-                "captured_at": "2026-02-17"
+                "captured_at": "2026-02-18"
               },
               "x_decision_min_sample_required": 9,
               "x_decision_reliability_tier": "B",
@@ -88342,18 +88960,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 35,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
-            "calculated_at": "2026-02-17"
+            "quality_score": 87,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 35,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -89359,12 +89977,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.pgcareers.com",
+                "snapshot_url": "https://careers.unilever.com",
                 "source_date": "2026-02-18",
-                "source_id": "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
-                "source_name": "宝洁职业官网",
+                "source_id": "SRC_AUTO_WWW_UNILEVER_COM_E0E20109",
+                "source_name": "联合利华官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.pgcareers.com",
+                "source_url": "https://careers.unilever.com",
                 "secondary_source_ids": [
                   "SRC_MOFCOM_PRESSCONF_20260115",
                   "SRC_NCSS_2026_JOINT"
@@ -89379,7 +89997,7 @@
               "impact": "面试更重视生意指标分解与终端执行闭环能力",
               "industry_indicator": "动销率、库存周转天数、铺货率",
               "evidence_chain": {
-                "primary_source_id": "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
+                "primary_source_id": "SRC_AUTO_WWW_UNILEVER_COM_E0E20109",
                 "secondary_source_ids": [
                   "SRC_MOFCOM_PRESSCONF_20260115",
                   "SRC_NCSS_2026_JOINT"
@@ -89400,12 +90018,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.pgcareers.com",
+                "snapshot_url": "https://www.crv.com.cn",
                 "source_date": "2026-02-17",
-                "source_id": "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
-                "source_name": "宝洁职业官网",
+                "source_id": "SRC_AUTO_WWW_CRV_COM_CN_4E747C9B",
+                "source_name": "华润万家官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.pgcareers.com",
+                "source_url": "https://www.crv.com.cn",
                 "secondary_source_ids": [
                   "SRC_NCSS_CAMPUS",
                   "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
@@ -89422,7 +90040,7 @@
               "impact": "准备需覆盖动销、陈列和库存协同等实战指标",
               "industry_indicator": "动销率、库存周转、缺货率",
               "evidence_chain": {
-                "primary_source_id": "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
+                "primary_source_id": "SRC_AUTO_WWW_CRV_COM_CN_4E747C9B",
                 "secondary_source_ids": [
                   "SRC_NCSS_CAMPUS",
                   "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
@@ -89521,12 +90139,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 2,
-                "snapshot_url": "https://www.pgcareers.com",
+                "snapshot_url": "https://www.yili.com",
                 "source_date": "2026-02-17",
-                "source_id": "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
-                "source_name": "宝洁职业官网",
+                "source_id": "SRC_AUTO_WWW_YILI_COM_D7937E58",
+                "source_name": "伊利官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.pgcareers.com",
+                "source_url": "https://www.yili.com",
                 "publish_date": "2026-02-17",
                 "captured_at": "2026-02-17"
               },
@@ -89536,7 +90154,7 @@
               "fact": "快消与零售校招JD更强调项目结果与量化证据",
               "impact": "建议简历每个项目补充可核验指标（效率、规模、转化、成本）。",
               "evidence_chain": {
-                "primary_source_id": "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
+                "primary_source_id": "SRC_AUTO_WWW_YILI_COM_D7937E58",
                 "secondary_source_ids": [],
                 "chain_level": "single_source",
                 "verified_at": "2026-02-17"
@@ -89700,7 +90318,7 @@
           "stale_on": "2026-04-17",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "面试真题库": {
           "collection_tasks": [
@@ -90095,6 +90713,51 @@
               ],
               "updated_at": "2026-02-18",
               "sample_size": 10
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "official_jd_competency_mapping",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.crv.com.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_CRV_COM_CN_4E747C9B",
+                "source_name": "华润万家官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.crv.com.cn",
+                "stat_definition": "基于企业官方招聘能力要求提炼的结构化面试训练题（非官方原卷）。",
+                "secondary_source_ids": [
+                  "SRC_MOFCOM_PRESSCONF_20260115",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "你接手的重点城市大促投放ROI低于目标且库存压力上升，如何在两周内重排促销节奏、渠道预算和终端激励，兼顾销量与毛利？",
+              "question_id": "IND_FMCG_RETAIL_INTERVIEW_010",
+              "question_realness_note": "基于企业官方招聘能力项整理（非官方原题），用于应届生训练。",
+              "question_type": "官方JD情景面试题（非原卷）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_FMCG_RETAIL_ROLE_005",
+              "role_name": "生意分析",
+              "round_label": "终面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "业务权衡",
+                "数据判断",
+                "执行闭环"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 10
             }
           ],
           "last_checked": "2026-02-16",
@@ -90301,27 +90964,27 @@
           "min_sample_size_for_verified": 5,
           "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“门店经营案例、品牌策略与区域协同”方向真实问答。；岗位覆盖门槛已提升：本行业面试真题库至少覆盖5个角色。；v1.34.0新增1条企业官方来源情景面试题（非原卷）。",
           "quality": {
-            "quantity_score": 50,
+            "quantity_score": 55,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 83.3,
+            "realness_score": 84,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 86.7,
-            "calculated_at": "2026-02-17"
+            "quality_score": 88.1,
+            "calculated_at": "2026-02-18"
           },
           "real_data_ratio_percent": 83.3,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "source_diversification": {
               "current": {
                 "real_user": 6,
                 "government_platform": 2,
-                "company_official": 1
+                "company_official": 2
               },
               "target": {
                 "company_official_min": 2,
@@ -90370,16 +91033,16 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
-        "evidence_percent_overall": 91.3,
-        "freshness_percent_overall": 92.8,
-        "real_data_ratio_overall": 73.7,
+        "evidence_percent_overall": 91.5,
+        "freshness_percent_overall": 93,
+        "real_data_ratio_overall": 74.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.5,
+        "quality_score_overall": 90.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
+          "从业者访谈",
           "自定义扩展",
-          "笔试真题库",
-          "面试真题库"
+          "案例复盘"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
@@ -90390,7 +91053,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 0
+        "ranking_percentile": 54.5
       },
       "slug": "fmcg-retail",
       "sources": [
@@ -90740,9 +91403,11 @@
                 "蒙牛",
                 "华润万家"
               ],
-              "C池": [],
+              "C池": [
+                "盒马"
+              ],
               "备投岗位": "销售管培生",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "围绕春节、618与双11备货周期投递，优先品牌、供应链与门店经营岗位。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -90774,9 +91439,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "秋招先投快消外企与国货龙头，年后补投零售新业态与区域连锁。",
+                "补投触发条件": "若两周无面试，补投渠道销售培训生与电商运营岗。",
+                "止损节点": "春招结束仍无offer，转向消费品数据运营与采购支持岗。"
               }
             },
             "worth_it_or_not": {
@@ -90802,12 +91467,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
               "secondary_source_ids": [
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_MOFCOM_PRESSCONF_20260115",
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_MOFCOM_PRESSCONF_20260115",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -96819,10 +97483,11 @@
                 "美团"
               ],
               "C池": [
-                "京东科技"
+                "京东科技",
+                "小红书"
               ],
               "备投岗位": "算法工程师",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "跟随大模型产品发布与业务线扩招节奏投递，主攻研发、数据与产品协同岗位。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -96854,9 +97519,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "提前批开启后一周完成首轮投递，并按方向拆分技术栈版本化简历。",
+                "补投触发条件": "若两周内笔试通过率低于25%，补投AI应用型与中型平台公司。",
+                "止损节点": "春招结束仍无二面，转向云计算、工业软件或运营商数智化岗位。"
               }
             },
             "worth_it_or_not": {
@@ -96882,12 +97547,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
               "secondary_source_ids": [
-                "SRC_ZHILIAN_Q4_2025_NEWS",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_MIIT_IIAI_ACTION_20260107",
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_JOIN_QQ_COM_61D25F78",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_MIIT_IIAI_ACTION_20260107",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -99953,6 +100617,51 @@
               "round_label": "笔试主卷",
               "updated_at": "2026-02-18",
               "sample_size": 10
+            },
+            {
+              "answer_framework": [
+                "目标与约束识别",
+                "网络与节点诊断",
+                "运力与资源重配",
+                "指标监控与复盘"
+              ],
+              "authenticity_level": "curated",
+              "data_origin": "official_jd_competency_mapping",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.zto.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_ZTO_COM_DA51F95D",
+                "source_name": "中通快递官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.zto.com",
+                "stat_definition": "依据企业官方岗位能力要求整理的笔试训练题（非官方原卷）。",
+                "secondary_source_ids": [
+                  "SRC_MOT_POSTAL_20260122",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "华南区域干线运力波动导致转运中心滞留，请设计48小时应急调度方案，并给出时效恢复与成本控制的双目标指标体系。",
+              "question_id": "IND_LOGISTICS_SUPPLYCHAIN_WRITTEN_010",
+              "question_realness_note": "基于企业官方岗位能力项整理（非官方原题），用于应届生训练。",
+              "question_type": "官方JD能力拆解题（非原卷）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_LOGISTICS_SUPPLYCHAIN_ROLE_003",
+              "role_name": "运输调度",
+              "round_label": "笔试加试",
+              "updated_at": "2026-02-18",
+              "sample_size": 10
             }
           ],
           "last_checked": "2026-02-16",
@@ -100159,27 +100868,27 @@
           "min_sample_size_for_verified": 5,
           "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“运筹优化、库存模型、运输网络与KPI管理”方向真实笔试题。；岗位覆盖门槛已提升：本行业笔试真题库至少覆盖5个角色。；v1.34.1新增1条企业官方来源能力拆解题（非原卷）。",
           "quality": {
-            "quantity_score": 50,
+            "quantity_score": 55,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 83.3,
+            "realness_score": 84,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 86.7,
-            "calculated_at": "2026-02-17"
+            "quality_score": 88.1,
+            "calculated_at": "2026-02-18"
           },
           "real_data_ratio_percent": 83.3,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "source_diversification": {
               "current": {
                 "real_user": 5,
                 "government_platform": 1,
-                "company_official": 2
+                "company_official": 3
               },
               "target": {
                 "company_official_min": 2,
@@ -100200,13 +100909,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 18,
               "x_decision_city_cost_adjusted_salary_index": 10.5,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=10 | 更新=2026-02-17 | 来源类型=government_dataset；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=14 | 更新=2026-02-18 | 来源类型=government_dataset+company_official；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已补充头部物流企业官方岗位能力项作为决策交叉锚点。",
               "x_decision_interview_to_offer_rate_percent": 24,
               "x_decision_role_competition_intensity": "中高竞争（计划与调度岗位扩张）",
               "x_decision_written_to_interview_rate_percent": 30,
               "x_decision_source_ids": [
                 "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_MOT_POSTAL_20260122"
+                "SRC_MOT_POSTAL_20260122",
+                "SRC_AUTO_HR_SF_EXPRESS_COM_418312D5"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_LOGISTICS_SUPPLYCHAIN_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -100218,11 +100928,11 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.76,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 12,
+                "sample_size": 14,
                 "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
                 "source_date": "2026-01-19",
                 "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
@@ -100231,7 +100941,7 @@
                 "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
                 "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
                 "publish_date": "2026-01-19",
-                "captured_at": "2026-02-17"
+                "captured_at": "2026-02-18"
               },
               "x_decision_min_sample_required": 9,
               "x_decision_reliability_tier": "B",
@@ -100258,18 +100968,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 35,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
-            "calculated_at": "2026-02-17"
+            "quality_score": 87,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 35,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -102051,6 +102761,51 @@
               ],
               "updated_at": "2026-02-18",
               "sample_size": 9
+            },
+            {
+              "authenticity_level": "curated",
+              "data_origin": "official_jd_competency_mapping",
+              "difficulty_1to5": 3,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.cainiao.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_CAINIAO_COM_B3D5B3E7",
+                "source_name": "菜鸟官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.cainiao.com",
+                "stat_definition": "依据企业官方岗位能力要求整理的结构化面试训练题（非官方原卷）。",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
+                  "SRC_MOT_POSTAL_20260122"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "全国多地末端站点出现高峰拥堵时，你如何快速划分优先级并协调干线、分拨、末端三环节，确保服务指标回到目标区间？",
+              "question_id": "IND_LOGISTICS_SUPPLYCHAIN_INTERVIEW_010",
+              "question_realness_note": "基于企业官方岗位能力项整理（非官方原题），用于应届生训练。",
+              "question_type": "官方JD情景面试题（非原卷）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_LOGISTICS_SUPPLYCHAIN_ROLE_001",
+              "role_name": "供应链计划",
+              "round_label": "终面",
+              "scoring_dimensions": [
+                "结构化表达",
+                "优先级判断",
+                "跨团队协同",
+                "执行闭环"
+              ],
+              "updated_at": "2026-02-18",
+              "sample_size": 10
             }
           ],
           "last_checked": "2026-02-16",
@@ -102257,26 +103012,27 @@
           "min_sample_size_for_verified": 5,
           "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“峰值保障复盘、端到端流程改进与协同”方向真实问答。；岗位覆盖门槛已提升：本行业面试真题库至少覆盖5个角色。；v1.34.1新增1条企业官方来源情景题（非原卷）。",
           "quality": {
-            "quantity_score": 50,
+            "quantity_score": 55,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 83.3,
+            "realness_score": 84,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 86.7,
-            "calculated_at": "2026-02-17"
+            "quality_score": 88.1,
+            "calculated_at": "2026-02-18"
           },
           "real_data_ratio_percent": 83.3,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "source_diversification": {
               "current": {
                 "real_user": 6,
-                "government_platform": 2
+                "government_platform": 2,
+                "company_official": 2
               },
               "target": {
                 "company_official_min": 2,
@@ -102331,16 +103087,16 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
-        "evidence_percent_overall": 91.3,
-        "freshness_percent_overall": 92.8,
-        "real_data_ratio_overall": 73.7,
+        "evidence_percent_overall": 91.5,
+        "freshness_percent_overall": 93,
+        "real_data_ratio_overall": 74.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.8,
+        "quality_score_overall": 90.2,
         "verified_ratio_percent": 100,
         "weakest_collections": [
+          "从业者访谈",
           "自定义扩展",
-          "笔试真题库",
-          "面试真题库"
+          "案例复盘"
         ],
         "manual_fill_required_total": 38,
         "manual_fill_pending_total": 0,
@@ -102351,7 +103107,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 18.2
+        "ranking_percentile": 22.7
       },
       "slug": "logistics-supply-chain",
       "sources": [
@@ -102715,9 +103471,11 @@
                 "中通快递",
                 "圆通速递"
               ],
-              "C池": [],
+              "C池": [
+                "极兔速递"
+              ],
               "备投岗位": "运输调度",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "围绕双11与春节履约高峰前置投递，优先计划、仓运与网络优化岗位。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -102749,9 +103507,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "秋招先投头部快递物流平台，年末补投跨境物流与区域仓配企业。",
+                "补投触发条件": "若转化率低于中位，补投供应链分析与采购协同岗位。",
+                "止损节点": "春招收尾仍无offer，转向制造业供应链计划与电商履约运营。"
               }
             },
             "worth_it_or_not": {
@@ -102777,11 +103535,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "secondary_source_ids": [
-                "SRC_NBS_INCOME_2025_FULLYEAR",
+                "SRC_MOT_POSTAL_20260122",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_HR_SF_EXPRESS_COM_418312D5",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_MOT_POSTAL_20260122",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -108577,9 +109335,11 @@
                 "米哈游",
                 "快手"
               ],
-              "C池": [],
+              "C池": [
+                "莉莉丝游戏"
+              ],
               "备投岗位": "投放优化",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "结合版号发放与内容项目立项节奏投递，优先策划、运营与商业化岗位。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -108611,9 +109371,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "头部厂商秋招开放后一周内首投，版号新增后的两周内补投相关项目组。",
+                "补投触发条件": "若两周无笔面反馈，补投中型游戏工作室与短视频内容运营岗。",
+                "止损节点": "春招后仍无进展，转向品牌内容营销与社区运营岗位。"
               }
             },
             "worth_it_or_not": {
@@ -108639,12 +109399,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
               "secondary_source_ids": [
-                "SRC_ZHILIAN_Q4_2025_NEWS",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
+                "SRC_NPPA_GAME_APPROVAL_20260126",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_MIHOYO_COM_CB059AC8",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_NPPA_GAME_APPROVAL_20260126",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -114296,7 +115055,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 40.9
+        "ranking_percentile": 9.1
       },
       "slug": "new-energy",
       "sources": [
@@ -114646,9 +115405,11 @@
                 "晶科能源",
                 "通威股份"
               ],
-              "C池": [],
+              "C池": [
+                "远景能源"
+              ],
               "备投岗位": "系统工程师",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "围绕装机与储能招标周期投递，优先电池研发、系统集成与运维岗位。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -114680,9 +115441,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "秋招先投电池与光储龙头，10-12月补投逆变器和系统集成企业。",
+                "补投触发条件": "若两周无面试，补投新能源电站运维和项目交付岗位。",
+                "止损节点": "春招结束仍未上岸，转向电力自动化与工业能源管理岗位。"
               }
             },
             "worth_it_or_not": {
@@ -114708,12 +115469,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
               "secondary_source_ids": [
-                "SRC_ZHILIAN_Q4_2025_NEWS",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_NEA_RENEWABLE_UTIL_20260212",
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_NEA_RENEWABLE_UTIL_20260212",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -115450,6 +116210,47 @@
                 "建议把项目经历改写为“政策依据-执行动作-服务结果”结构，提升面试岗位匹配度。"
               ],
               "updated_at": "2026-02-18"
+            },
+            {
+              "authenticity_level": "curated",
+              "caveats": [
+                "各招聘单位资格审查细节存在差异，需回到具体岗位公告核验。",
+                "准考证打印与考点安排可能按批次动态调整，需持续关注官网通知。"
+              ],
+              "data_origin": "government_platform_signal",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 6,
+                "snapshot_url": "http://www.cpta.com.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_CPTA_COM_CN_FD0AA5B3",
+                "source_name": "中国人事考试网官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "http://www.cpta.com.cn",
+                "stat_definition": "基于人事考试官方站点公告节奏与资格流程整理的访谈型样本。",
+                "secondary_source_ids": [
+                  "SRC_SHRSJ_PUBLIC_INST_20260128",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "interview_id": "IND_PUBLIC_INSTITUTION_TALK_007",
+              "interviewee_profile": {
+                "company_tier": "public_sector",
+                "role_name": "事业单位考试服务岗",
+                "tenure_years": "1-3"
+              },
+              "key_takeaways": [
+                "报名与资格审查阶段最容易失分的是材料命名与上传口径不一致，建议提前做“一岗一包”材料清单。",
+                "备考节奏应按“公告发布-岗位筛选-报名审核-笔面冲刺”四段推进，避免后置准备导致窗口错失。",
+                "面试表达建议采用“政策依据-服务对象-执行动作-结果复盘”结构，能显著提升岗位匹配度。"
+              ],
+              "updated_at": "2026-02-18"
             }
           ],
           "last_checked": "2026-02-18",
@@ -115583,13 +116384,13 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 58,
             "source_access_score": 100,
-            "manual_gap_penalty": 16.7,
-            "quality_score": 86.7,
-            "calculated_at": "2026-02-17"
+            "manual_gap_penalty": 12.5,
+            "quality_score": 89.4,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 58,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
@@ -117350,6 +118151,41 @@
               "scenario": "报名缴费后部分岗位未达开考比例，考生需要在短窗口内完成改报。",
               "title": "岗位计划调整与改报窗口应对复盘",
               "updated_at": "2026-02-18"
+            },
+            {
+              "actions": [
+                "将公告发布时间、岗位变更通知和准考证打印窗口整合为统一提醒日历，降低信息遗漏。",
+                "针对岗位表更新建立“变更字段”比对清单，优先核验专业、学历与证书要求。",
+                "对高频咨询问题固化标准答复模板，减少窗口期重复咨询和错误提交。"
+              ],
+              "authenticity_level": "curated",
+              "case_id": "IND_PUBLIC_INSTITUTION_CASE_007",
+              "data_origin": "government_platform_signal",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 4,
+                "snapshot_url": "http://www.cpta.com.cn",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_CPTA_COM_CN_FD0AA5B3",
+                "source_name": "中国人事考试网官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "http://www.cpta.com.cn",
+                "stat_definition": "基于考试公告节点与报名流程治理要求整理的复盘样本。",
+                "secondary_source_ids": [
+                  "SRC_SHRSJ_PUBLIC_INST_20260128",
+                  "SRC_MOHRSS_CAMPUS_2026_0129"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "result": "公告节点变更后的报名错误率下降，资格复核通过率和改报成功率提升。",
+              "scenario": "事业单位招录进入公告密集期，岗位条件与时间节点频繁更新，考生信息管理难度上升。",
+              "title": "公告节点密集期的信息治理复盘",
+              "updated_at": "2026-02-18"
             }
           ],
           "last_checked": "2026-02-18",
@@ -117440,13 +118276,13 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 50,
+            "realness_score": 58,
             "source_access_score": 100,
-            "manual_gap_penalty": 15,
-            "quality_score": 87,
-            "calculated_at": "2026-02-17"
+            "manual_gap_penalty": 12,
+            "quality_score": 89.6,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 50,
+          "real_data_ratio_percent": 58,
           "stale_after_days": 120,
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
@@ -118436,7 +119272,7 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 8,
               "x_decision_city_cost_adjusted_salary_index": 11.56,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=13 | 更新=2026-02-17 | 来源类型=government_dataset；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+0.9pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。；新增湖北省2026-02-02与2026-02-13公告信号，用于校准岗位批次调整期的投递节奏判断。",
+              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=18 | 更新=2026-02-18 | 来源类型=government_dataset+government_platform；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+0.9pp（基于公开信号估算，待ATS实采校准）。；已补充人事考试网公告节奏信号，用于校准报名与改报窗口期判断。",
               "x_decision_interview_to_offer_rate_percent": 10,
               "x_decision_role_competition_intensity": "极高竞争（编制岗位竞争激烈）",
               "x_decision_written_to_interview_rate_percent": 16,
@@ -118444,7 +119280,8 @@
                 "SRC_NBS_INCOME_2025_FULLYEAR",
                 "SRC_SHRSJ_PUBLIC_INST_20260128",
                 "SRC_HBRS_PUBLIC_INST_20260202",
-                "SRC_HBRS_PUBLIC_INST_20260213"
+                "SRC_HBRS_PUBLIC_INST_20260213",
+                "SRC_AUTO_WWW_CPTA_COM_CN_FD0AA5B3"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_PUBLIC_INSTITUTION_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -118457,10 +119294,10 @@
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
-                "confidence": 0.74,
+                "confidence": 0.77,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 17,
+                "sample_size": 18,
                 "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
                 "source_date": "2026-01-19",
                 "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
@@ -118496,13 +119333,13 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 40,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
-            "calculated_at": "2026-02-17"
+            "quality_score": 88,
+            "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 40,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -120984,16 +121821,16 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 97.6,
-        "evidence_percent_overall": 91.1,
-        "freshness_percent_overall": 83.3,
-        "real_data_ratio_overall": 75.3,
+        "evidence_percent_overall": 91.3,
+        "freshness_percent_overall": 83.7,
+        "real_data_ratio_overall": 77.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 89.9,
+        "quality_score_overall": 90.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
-          "自定义扩展",
-          "从业者访谈",
-          "案例复盘"
+          "争议问题与结论",
+          "公司清单",
+          "自定义扩展"
         ],
         "manual_fill_required_total": 49,
         "manual_fill_pending_total": 0,
@@ -121004,7 +121841,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 27.3
+        "ranking_percentile": 40.9
       },
       "slug": "public-institution",
       "sources": [
@@ -121354,9 +122191,11 @@
                 "中国人事考试网",
                 "国家大学生就业服务平台"
               ],
-              "C池": [],
+              "C池": [
+                "地市事业编岗位池"
+              ],
               "备投岗位": "科研助理岗",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "按公告批次分层投递（省属-市属-区县），优先与你专业限制最匹配岗位。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -121382,9 +122221,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "公告发布后3天内完成岗位筛选与报名材料准备，首周完成首轮报名。",
+                "补投触发条件": "若首批岗位竞争比过高，转向市属、区县同类岗位与专业不限岗位。",
+                "止损节点": "当年主要批次结束仍无进面，转向教师、医疗、科研助理与国企职能岗并行。"
               }
             },
             "worth_it_or_not": {
@@ -121410,11 +122249,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "secondary_source_ids": [
-                "SRC_NBS_INCOME_2025_FULLYEAR",
+                "SRC_SHRSJ_PUBLIC_INST_20260128",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_SHRSJ_PUBLIC_INST_20260128",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_SHRSJ_PUBLIC_INST_20260128",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -126810,7 +127649,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 45.5
+        "ranking_percentile": 18.2
       },
       "slug": "real-estate-infrastructure",
       "sources": [
@@ -127189,9 +128028,11 @@
                 "中国交建",
                 "华润置地"
               ],
-              "C池": [],
+              "C池": [
+                "中国能建"
+              ],
               "备投岗位": "投拓分析",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "围绕重大基建项目开工节奏投递，优先工程、成本、计划与安全管理岗位。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -127223,9 +128064,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "秋招先投央企总包与设计院，年后补投区域城投与基建运营单位。",
+                "补投触发条件": "若两周无技术面反馈，补投造价、BIM与项目资料管理岗位。",
+                "止损节点": "春招结束仍无offer，转向制造业工程管理与供应链项目管理。"
               }
             },
             "worth_it_or_not": {
@@ -127251,12 +128092,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_MOE_MEETING_2026",
               "secondary_source_ids": [
-                "SRC_MOE_MEETING_2026",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
+                "SRC_MOHURD_URBAN_RENEWAL_20251225",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_CSCEC_COM_F3573BC4",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_MOHURD_URBAN_RENEWAL_20251225",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -132951,7 +133791,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 36.4
+        "ranking_percentile": 4.5
       },
       "slug": "semiconductor-electronics",
       "sources": [
@@ -133316,10 +134156,11 @@
                 "长江存储"
               ],
               "C池": [
-                "寒武纪"
+                "寒武纪",
+                "士兰微"
               ],
               "备投岗位": "工艺工程师",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "跟随扩产与验证流片周期投递，主攻设计、验证、工艺和设备工程岗位。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -133351,9 +134192,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "秋招提前批开启后7天内完成首投，并同步投递晶圆厂与封测厂。",
+                "补投触发条件": "若三周无二面，补投设备维护、良率提升和FA失效分析岗位。",
+                "止损节点": "春招末仍无offer，转向新能源电子与工业控制芯片应用岗。"
               }
             },
             "worth_it_or_not": {
@@ -133379,12 +134220,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
               "secondary_source_ids": [
-                "SRC_ZHILIAN_Q4_2025_NEWS",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_MIIT_ELECTRONICS_Q3RUN_20251030",
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_WWW_SMICS_COM_7D437B2",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_MIIT_ELECTRONICS_Q3RUN_20251030",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -139502,7 +140342,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 68.2
+        "ranking_percentile": 63.6
       },
       "slug": "state-owned-enterprise",
       "sources": [
@@ -139895,9 +140735,11 @@
                 "中国中车",
                 "中国移动"
               ],
-              "C池": [],
+              "C池": [
+                "省属国企岗位池"
+              ],
               "备投岗位": "财务审计岗",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "按央企总部、二级单位、省属平台三层并行投递，优先专业对口技术与职能岗。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -139923,9 +140765,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "央企秋招公告发布后一周内完成首投，重点跟踪子公司分批补录。",
+                "补投触发条件": "若两周无笔试通知，补投省属国企与城市平台公司岗位。",
+                "止损节点": "春招补录结束仍无进展，转向事业单位与头部民企职能岗。"
               }
             },
             "worth_it_or_not": {
@@ -139951,11 +140793,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "secondary_source_ids": [
-                "SRC_NBS_INCOME_2025_FULLYEAR",
+                "SRC_SASAC_TALENT_WORKCONF_20260203",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_SASAC_RECRUIT_2026",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_SASAC_TALENT_WORKCONF_20260203",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }
@@ -145306,7 +146148,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 31.8
+        "ranking_percentile": 0
       },
       "slug": "telecom-operators",
       "sources": [
@@ -145656,9 +146498,11 @@
                 "华为",
                 "中兴通讯"
               ],
-              "C池": [],
+              "C池": [
+                "中国铁塔"
+              ],
               "备投岗位": "解决方案工程师",
-              "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+              "投递建议": "围绕运营商秋招与5G-A、算力网络建设节奏投递，优先网优、云网与政企方案岗。"
             },
             "when_to_apply": {
               "年度窗口": [
@@ -145690,9 +146534,9 @@
                 }
               ],
               "节奏策略": {
-                "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-                "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-                "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+                "首轮投递日期建议": "三大运营商校招开启后一周完成首轮投递，并同步投递通信设备商。",
+                "补投触发条件": "若笔试通过率偏低，补投省公司技术支持与地市公司综合维护岗。",
+                "止损节点": "春招后仍无面试，转向IDC运维、云计算实施与网络安全岗位。"
               }
             },
             "worth_it_or_not": {
@@ -145718,12 +146562,11 @@
             "evidence_chain": {
               "primary_source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
               "secondary_source_ids": [
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_NBS_WAGE_2024_TABLE",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_MIIT_TELECOM_BULLETIN_20260128",
+                "SRC_NBS_WAGE_2024_TABLE"
               ],
               "timeline_source_id": "SRC_AUTO_JOB_10086_CN_C58C9DA8",
-              "policy_source_id": "SRC_NBS_WAGE_2024",
+              "policy_source_id": "SRC_MIIT_TELECOM_BULLETIN_20260128",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
           }

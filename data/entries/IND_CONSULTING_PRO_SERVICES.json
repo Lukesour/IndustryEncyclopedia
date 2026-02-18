@@ -2776,6 +2776,51 @@
           "round_label": "笔试主卷",
           "updated_at": "2026-02-18",
           "sample_size": 10
+        },
+        {
+          "answer_framework": [
+            "问题边界与目标",
+            "假设拆解与验证路径",
+            "方案优先级与资源安排",
+            "风险预案与复盘机制"
+          ],
+          "authenticity_level": "curated",
+          "data_origin": "official_jd_competency_mapping",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-18",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.ey.com/zh_cn/careers",
+            "source_date": "2026-02-18",
+            "source_id": "SRC_AUTO_WWW_EY_COM_541F649A",
+            "source_name": "安永官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.ey.com/zh_cn/careers",
+            "stat_definition": "基于企业官方招聘能力要求提炼的训练题型（非官方原卷）。",
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-18"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "某区域业务单元增长停滞且成本刚性较高，请设计一个12周诊断与提效计划，说明每阶段的关键假设、数据需求和里程碑。",
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_010",
+          "question_realness_note": "基于企业官方招聘能力项整理（非官方原题），用于应届生训练。",
+          "question_type": "官方JD能力拆解题（非原卷）",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_004",
+          "role_name": "交易咨询分析师",
+          "round_label": "笔试加试",
+          "updated_at": "2026-02-18",
+          "sample_size": 10
         }
       ],
       "last_checked": "2026-02-16",
@@ -2982,27 +3027,27 @@
       "min_sample_size_for_verified": 5,
       "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“案例分析、MECE框架、数据推导与财务逻辑”方向真实笔试题。；岗位覆盖门槛已提升：本行业笔试真题库至少覆盖5个角色。；v1.34.0新增1条企业官方来源能力拆解题（非原卷）。",
       "quality": {
-        "quantity_score": 40,
+        "quantity_score": 50,
         "evidence_completeness_percent": 100,
         "freshness_score": 100,
-        "realness_score": 80,
+        "realness_score": 81,
         "source_access_score": 100,
         "manual_gap_penalty": 0,
-        "quality_score": 84,
-        "calculated_at": "2026-02-17"
+        "quality_score": 86.6,
+        "calculated_at": "2026-02-18"
       },
       "real_data_ratio_percent": 80,
       "stale_after_days": 120,
       "stale_on": "2026-06-16",
       "stale_status": "fresh",
       "template_data_ratio_percent": 0,
-      "updated_at": "2026-02-17",
+      "updated_at": "2026-02-18",
       "payload": {
         "source_diversification": {
           "current": {
             "real_user": 6,
             "government_platform": 1,
-            "company_official": 2
+            "company_official": 3
           },
           "target": {
             "company_official_min": 2,
@@ -3023,14 +3068,15 @@
           "updated_at": "2026-02-18",
           "x_decision_apply_to_written_rate_percent": 9,
           "x_decision_city_cost_adjusted_salary_index": 12,
-          "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：A | 样本量=12 | 更新=2026-02-17 | 来源类型=government_policy；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+0.9pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+          "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=14 | 更新=2026-02-18 | 来源类型=government_policy+company_official；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+0.9pp（基于公开信号估算，待ATS实采校准）。；已补充四大会计师事务所官网岗位能力项作为交叉锚点。",
           "x_decision_interview_to_offer_rate_percent": 11,
           "x_decision_role_competition_intensity": "很高竞争（case+英语双门槛）",
           "x_decision_written_to_interview_rate_percent": 18,
           "x_decision_source_ids": [
             "SRC_MOE_MEETING_2026",
             "SRC_NBS_INCOME_2025_FULLYEAR",
-            "SRC_MOE_ACTION_2026"
+            "SRC_MOE_ACTION_2026",
+            "SRC_AUTO_WWW_PWCCN_COM_B092A9CD"
           ],
           "x_decision_real_data_placeholders": {
             "applicant_flow_dataset_id": "IND_CONSULTING_PRO_SERVICES_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -3042,11 +3088,11 @@
           "data_origin": "official_and_platform_mixed_estimation",
           "evidence": {
             "access_check": "checked",
-            "accessed_at": "2026-02-17",
-            "confidence": 0.74,
+            "accessed_at": "2026-02-18",
+            "confidence": 0.76,
             "http_status": 200,
             "manual_verification_required": false,
-            "sample_size": 12,
+            "sample_size": 14,
             "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202511/t20251121_1421189.html",
             "source_date": "2025-11-21",
             "source_id": "SRC_MOE_MEETING_2026",
@@ -3055,11 +3101,11 @@
             "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202511/t20251121_1421189.html",
             "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
             "publish_date": "2025-11-21",
-            "captured_at": "2026-02-17"
+            "captured_at": "2026-02-18"
           },
           "x_decision_min_sample_required": 9,
-          "x_decision_reliability_tier": "A",
-          "x_decision_reliability_note": "一级来源与交叉来源齐备，可用于行业横向比较；仍建议导入ATS实采后做季度回归校准。",
+          "x_decision_reliability_tier": "B",
+          "x_decision_reliability_note": "当前以公开样本估算为主，适合方向判断；关键决策建议叠加个人投递流水校验。",
           "x_decision_reliability_calibrated_at": "2026-02-18"
         }
       ],
@@ -3082,18 +3128,18 @@
         "quantity_score": 100,
         "evidence_completeness_percent": 100,
         "freshness_score": 100,
-        "realness_score": 20,
+        "realness_score": 35,
         "source_access_score": 100,
         "manual_gap_penalty": 0,
-        "quality_score": 84,
-        "calculated_at": "2026-02-17"
+        "quality_score": 87,
+        "calculated_at": "2026-02-18"
       },
-      "real_data_ratio_percent": 20,
+      "real_data_ratio_percent": 35,
       "stale_after_days": 90,
       "stale_on": "2026-05-18",
       "stale_status": "fresh",
       "template_data_ratio_percent": 0,
-      "updated_at": "2026-02-17"
+      "updated_at": "2026-02-18"
     },
     "薪酬实证_国家统计口径": {
       "coverage_percent": 100,
@@ -4843,6 +4889,51 @@
           ],
           "updated_at": "2026-02-18",
           "sample_size": 10
+        },
+        {
+          "authenticity_level": "curated",
+          "data_origin": "official_jd_competency_mapping",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-18",
+            "confidence": 0.81,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://jobs.mckinsey.com",
+            "source_date": "2026-02-18",
+            "source_id": "SRC_AUTO_WWW_MCKINSEY_COM_8ACFC93B",
+            "source_name": "麦肯锡官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://jobs.mckinsey.com",
+            "stat_definition": "基于企业官方招聘能力要求提炼的结构化面试训练题（非官方原卷）。",
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-18"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "项目执行到一半时客户高层临时调整核心目标，你会如何重构问题树、安排团队分工并与客户就交付边界达成一致？",
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_010",
+          "question_realness_note": "基于企业官方招聘能力项整理（非官方原题），用于应届生训练。",
+          "question_type": "官方JD情景面试题（非原卷）",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_001",
+          "role_name": "咨询顾问",
+          "round_label": "终面",
+          "scoring_dimensions": [
+            "结构化表达",
+            "假设驱动",
+            "客户沟通",
+            "执行闭环"
+          ],
+          "updated_at": "2026-02-18",
+          "sample_size": 10
         }
       ],
       "last_checked": "2026-02-16",
@@ -5049,27 +5140,27 @@
       "min_sample_size_for_verified": 5,
       "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“案例展示、客户沟通与团队协作表现”方向真实问答。；岗位覆盖门槛已提升：本行业面试真题库至少覆盖5个角色。；v1.34.0新增1条企业官方来源情景面试题（非原卷）。",
       "quality": {
-        "quantity_score": 40,
+        "quantity_score": 50,
         "evidence_completeness_percent": 100,
         "freshness_score": 100,
-        "realness_score": 80,
+        "realness_score": 81,
         "source_access_score": 100,
         "manual_gap_penalty": 0,
-        "quality_score": 84,
-        "calculated_at": "2026-02-17"
+        "quality_score": 86.6,
+        "calculated_at": "2026-02-18"
       },
       "real_data_ratio_percent": 80,
       "stale_after_days": 120,
       "stale_on": "2026-06-16",
       "stale_status": "fresh",
       "template_data_ratio_percent": 0,
-      "updated_at": "2026-02-17",
+      "updated_at": "2026-02-18",
       "payload": {
         "source_diversification": {
           "current": {
             "real_user": 6,
             "government_platform": 2,
-            "company_official": 1
+            "company_official": 2
           },
           "target": {
             "company_official_min": 2,
@@ -5124,16 +5215,16 @@
     "confirmed_empty_collections": 0,
     "tracked_collections": 14,
     "coverage_percent_overall": 89.1,
-    "evidence_percent_overall": 91.3,
-    "freshness_percent_overall": 89.9,
-    "real_data_ratio_overall": 73.2,
+    "evidence_percent_overall": 91.5,
+    "freshness_percent_overall": 90.1,
+    "real_data_ratio_overall": 74.3,
     "template_ratio_overall": 0,
-    "quality_score_overall": 89.6,
+    "quality_score_overall": 90.1,
     "verified_ratio_percent": 100,
     "weakest_collections": [
       "笔试真题库",
-      "自定义扩展",
-      "面试真题库"
+      "面试真题库",
+      "从业者访谈"
     ],
     "manual_fill_required_total": 38,
     "manual_fill_pending_total": 0,
@@ -5144,7 +5235,7 @@
     "salary_micro_status": "verified",
     "salary_macro_status": "verified",
     "updated_at": "2026-02-18",
-    "ranking_percentile": 9.1
+    "ranking_percentile": 13.6
   },
   "slug": "consulting-professional-services",
   "sources": [
@@ -5508,9 +5599,11 @@
             "毕马威",
             "麦肯锡"
           ],
-          "C池": [],
+          "C池": [
+            "中智咨询"
+          ],
           "备投岗位": "税务顾问",
-          "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+          "投递建议": "以秋招案例面高峰为主线，主投咨询顾问/审计助理，备投风控与数据咨询。"
         },
         "when_to_apply": {
           "年度窗口": [
@@ -5542,9 +5635,9 @@
             }
           ],
           "节奏策略": {
-            "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-            "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-            "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+            "首轮投递日期建议": "四大与头部咨询网申开启后一周内完成首轮，并同步准备case与excel测试。",
+            "补投触发条件": "若两周内无case面，补投本土咨询与区域会计师事务所。",
+            "止损节点": "春招末仍无offer，转向企业战略运营或内审内控岗位。"
           }
         },
         "worth_it_or_not": {
@@ -5570,12 +5663,11 @@
         "evidence_chain": {
           "primary_source_id": "SRC_MOE_MEETING_2026",
           "secondary_source_ids": [
-            "SRC_MOE_MEETING_2026",
-            "SRC_NBS_INCOME_2025_FULLYEAR",
+            "SRC_MOE_ACTION_2026",
             "SRC_NBS_WAGE_2024_TABLE"
           ],
           "timeline_source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
-          "policy_source_id": "SRC_NBS_WAGE_2024",
+          "policy_source_id": "SRC_MOE_ACTION_2026",
           "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
         }
       }

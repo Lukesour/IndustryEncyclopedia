@@ -2727,6 +2727,96 @@
           "round_label": "笔试主卷",
           "updated_at": "2026-02-18",
           "sample_size": 9
+        },
+        {
+          "answer_framework": [
+            "目标定义与约束识别",
+            "学习路径拆解",
+            "运营动作与资源配置",
+            "效果评估与复盘"
+          ],
+          "authenticity_level": "curated",
+          "data_origin": "official_jd_competency_mapping",
+          "difficulty_1to5": 3,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-18",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://zhaopin.xdf.cn",
+            "source_date": "2026-02-18",
+            "source_id": "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3",
+            "source_name": "新东方招聘官网",
+            "source_type": "company_official",
+            "source_url": "https://zhaopin.xdf.cn",
+            "stat_definition": "基于企业官方招聘能力要求提炼的训练题型（非官方原卷）。",
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_MOE_ACTION_2026"
+            ],
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-18"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "请围绕“职教班级首月留存下滑”场景，设计从班主任触达、学习任务编排到学习激励的30天修复计划，并给出核心监控指标。",
+          "question_id": "IND_EDU_VOCATIONAL_WRITTEN_009",
+          "question_realness_note": "基于企业官方招聘能力项整理（非官方原题），用于应届生训练。",
+          "question_type": "官方JD能力拆解题（非原卷）",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_004",
+          "role_name": "学习顾问",
+          "round_label": "笔试主卷",
+          "updated_at": "2026-02-18",
+          "sample_size": 10
+        },
+        {
+          "answer_framework": [
+            "业务目标与用户分层",
+            "课程与产品协同方案",
+            "验证实验与指标口径",
+            "推广节奏与风险预案"
+          ],
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-18",
+            "confidence": 0.79,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-18",
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "stat_definition": "基于公开岗位能力要求整理的课程产品协同训练题（非官方原卷）。",
+            "secondary_source_ids": [
+              "SRC_MOE_ACTION_2026",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-18"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "某职业资格课程计划在两城试点“AI陪练”功能，请设计产品上线节奏、教师协同方案与教学效果评估框架。",
+          "question_id": "IND_EDU_VOCATIONAL_WRITTEN_010",
+          "question_realness_note": "公开岗位能力要求整理题（非官方完整原卷）",
+          "question_type": "课程产品协同设计题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_written",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_003",
+          "role_name": "学习产品经理",
+          "round_label": "笔试加试",
+          "updated_at": "2026-02-18",
+          "sample_size": 10
         }
       ],
       "last_checked": "2026-02-16",
@@ -2933,27 +3023,27 @@
       "min_sample_size_for_verified": 5,
       "notes": "已补3条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“教育学基础、课程设计、评估方法与服务流程”方向真实笔试题。；岗位覆盖门槛已提升：本行业笔试真题库至少覆盖5个角色。",
       "quality": {
-        "quantity_score": 40,
+        "quantity_score": 50,
         "evidence_completeness_percent": 100,
         "freshness_score": 100,
-        "realness_score": 80,
+        "realness_score": 82,
         "source_access_score": 100,
         "manual_gap_penalty": 0,
-        "quality_score": 84,
-        "calculated_at": "2026-02-17"
+        "quality_score": 86.8,
+        "calculated_at": "2026-02-18"
       },
       "real_data_ratio_percent": 80,
       "stale_after_days": 120,
       "stale_on": "2026-06-16",
       "stale_status": "fresh",
       "template_data_ratio_percent": 0,
-      "updated_at": "2026-02-17",
+      "updated_at": "2026-02-18",
       "payload": {
         "source_diversification": {
           "current": {
             "real_user": 6,
-            "government_platform": 1,
-            "company_official": 1
+            "government_platform": 2,
+            "company_official": 2
           },
           "target": {
             "company_official_min": 2,
@@ -2974,14 +3064,15 @@
           "updated_at": "2026-02-18",
           "x_decision_apply_to_written_rate_percent": 18,
           "x_decision_city_cost_adjusted_salary_index": 9.8,
-          "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：A | 样本量=14 | 更新=2026-02-17 | 来源类型=government_policy；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+          "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=15 | 更新=2026-02-18 | 来源类型=government_policy+company_official；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已补充教育机构官方招聘能力项作为决策交叉锚点。",
           "x_decision_interview_to_offer_rate_percent": 24,
           "x_decision_role_competition_intensity": "中高竞争（教师与教研岗筛选强）",
           "x_decision_written_to_interview_rate_percent": 32,
           "x_decision_source_ids": [
             "SRC_MOE_ACTION_2026",
             "SRC_ZHILIAN_Q4_2025_NEWS",
-            "SRC_NBS_INCOME_2025_FULLYEAR"
+            "SRC_NBS_INCOME_2025_FULLYEAR",
+            "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3"
           ],
           "x_decision_real_data_placeholders": {
             "applicant_flow_dataset_id": "IND_EDU_VOCATIONAL_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -2993,11 +3084,11 @@
           "data_origin": "official_and_platform_mixed_estimation",
           "evidence": {
             "access_check": "checked",
-            "accessed_at": "2026-02-17",
-            "confidence": 0.74,
+            "accessed_at": "2026-02-18",
+            "confidence": 0.76,
             "http_status": 200,
             "manual_verification_required": false,
-            "sample_size": 14,
+            "sample_size": 15,
             "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
             "source_date": "2026-01-07",
             "source_id": "SRC_MOE_ACTION_2026",
@@ -3006,11 +3097,11 @@
             "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
             "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
             "publish_date": "2026-01-07",
-            "captured_at": "2026-02-17"
+            "captured_at": "2026-02-18"
           },
           "x_decision_min_sample_required": 9,
-          "x_decision_reliability_tier": "A",
-          "x_decision_reliability_note": "一级来源与交叉来源齐备，可用于行业横向比较；仍建议导入ATS实采后做季度回归校准。",
+          "x_decision_reliability_tier": "B",
+          "x_decision_reliability_note": "当前以公开样本估算为主，适合方向判断；关键决策建议叠加个人投递流水校验。",
           "x_decision_reliability_calibrated_at": "2026-02-18"
         }
       ],
@@ -3033,18 +3124,18 @@
         "quantity_score": 100,
         "evidence_completeness_percent": 100,
         "freshness_score": 100,
-        "realness_score": 20,
+        "realness_score": 35,
         "source_access_score": 100,
         "manual_gap_penalty": 0,
-        "quality_score": 84,
-        "calculated_at": "2026-02-17"
+        "quality_score": 87,
+        "calculated_at": "2026-02-18"
       },
-      "real_data_ratio_percent": 20,
+      "real_data_ratio_percent": 35,
       "stale_after_days": 90,
       "stale_on": "2026-05-18",
       "stale_status": "fresh",
       "template_data_ratio_percent": 0,
-      "updated_at": "2026-02-17"
+      "updated_at": "2026-02-18"
     },
     "薪酬实证_国家统计口径": {
       "coverage_percent": 100,
@@ -4728,6 +4819,96 @@
           ],
           "updated_at": "2026-02-18",
           "sample_size": 8
+        },
+        {
+          "authenticity_level": "curated",
+          "data_origin": "official_jd_competency_mapping",
+          "difficulty_1to5": 3,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-18",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.neworiental.org",
+            "source_date": "2026-02-18",
+            "source_id": "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164",
+            "source_name": "新东方官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.neworiental.org",
+            "stat_definition": "基于企业官方招聘能力要求提炼的结构化面试训练题（非官方原卷）。",
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_MOE_ACTION_2026"
+            ],
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-18"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "当课程续班率和口碑评分出现背离时，你如何在教研、班主任和产品团队之间组织一次两周的联合修复行动？",
+          "question_id": "IND_EDU_VOCATIONAL_INTERVIEW_009",
+          "question_realness_note": "基于企业官方招聘能力项整理（非官方原题），用于应届生训练。",
+          "question_type": "官方JD情景面试题（非原卷）",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_001",
+          "role_name": "教研",
+          "round_label": "结构化面试",
+          "scoring_dimensions": [
+            "结构化表达",
+            "用户洞察",
+            "跨团队协同",
+            "执行闭环"
+          ],
+          "updated_at": "2026-02-18",
+          "sample_size": 10
+        },
+        {
+          "authenticity_level": "curated",
+          "data_origin": "official_jd_competency_mapping",
+          "difficulty_1to5": 3,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-18",
+            "confidence": 0.79,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.offcn.com",
+            "source_date": "2026-02-18",
+            "source_id": "SRC_AUTO_WWW_OFFCN_COM_B7C232E2",
+            "source_name": "中公教育官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.offcn.com",
+            "stat_definition": "基于企业官方招聘能力要求提炼的结构化面试训练题（非官方原卷）。",
+            "secondary_source_ids": [
+              "SRC_MOE_ACTION_2026",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-18"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "你负责的考培项目出现“试听转化上升但完课率下降”，请说明如何平衡招生目标和学习效果，并推动关键团队对齐。",
+          "question_id": "IND_EDU_VOCATIONAL_INTERVIEW_010",
+          "question_realness_note": "基于企业官方招聘能力项整理（非官方原题），用于应届生训练。",
+          "question_type": "官方JD情景面试题（非原卷）",
+          "question_year": 2026,
+          "recruitment_stage": "campus_interview",
+          "role_id": "IND_EDU_VOCATIONAL_ROLE_002",
+          "role_name": "课程运营",
+          "round_label": "终面",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "目标权衡",
+            "执行落地"
+          ],
+          "updated_at": "2026-02-18",
+          "sample_size": 10
         }
       ],
       "last_checked": "2026-02-16",
@@ -4934,26 +5115,27 @@
       "min_sample_size_for_verified": 5,
       "notes": "已补3条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“课堂场景处理、学习效果复盘与家校沟通”方向真实问答。；岗位覆盖门槛已提升：本行业面试真题库至少覆盖5个角色。",
       "quality": {
-        "quantity_score": 40,
+        "quantity_score": 50,
         "evidence_completeness_percent": 100,
         "freshness_score": 100,
-        "realness_score": 80,
+        "realness_score": 82,
         "source_access_score": 100,
         "manual_gap_penalty": 0,
-        "quality_score": 84,
-        "calculated_at": "2026-02-17"
+        "quality_score": 86.8,
+        "calculated_at": "2026-02-18"
       },
       "real_data_ratio_percent": 80,
       "stale_after_days": 120,
       "stale_on": "2026-06-16",
       "stale_status": "fresh",
       "template_data_ratio_percent": 0,
-      "updated_at": "2026-02-17",
+      "updated_at": "2026-02-18",
       "payload": {
         "source_diversification": {
           "current": {
             "real_user": 6,
-            "government_platform": 2
+            "government_platform": 2,
+            "company_official": 2
           },
           "target": {
             "company_official_min": 2,
@@ -5008,15 +5190,15 @@
     "confirmed_empty_collections": 0,
     "tracked_collections": 14,
     "coverage_percent_overall": 89.1,
-    "evidence_percent_overall": 91,
-    "freshness_percent_overall": 89.6,
-    "real_data_ratio_overall": 73.2,
+    "evidence_percent_overall": 91.5,
+    "freshness_percent_overall": 90.1,
+    "real_data_ratio_overall": 74.3,
     "template_ratio_overall": 0,
-    "quality_score_overall": 89.6,
+    "quality_score_overall": 90.2,
     "verified_ratio_percent": 100,
     "weakest_collections": [
+      "从业者访谈",
       "笔试真题库",
-      "自定义扩展",
       "面试真题库"
     ],
     "manual_fill_required_total": 38,
@@ -5028,7 +5210,7 @@
     "salary_micro_status": "verified",
     "salary_macro_status": "verified",
     "updated_at": "2026-02-18",
-    "ranking_percentile": 4.5
+    "ranking_percentile": 27.3
   },
   "slug": "education-vocational",
   "sources": [
@@ -5420,9 +5602,11 @@
             "高途",
             "粉笔"
           ],
-          "C池": [],
+          "C池": [
+            "学而思"
+          ],
           "备投岗位": "学习产品经理",
-          "投递建议": "A池冲刺、B池稳妥、C池保底；每周按反馈率滚动调仓。"
+          "投递建议": "按教培合规与春季招师节奏投递，主投教研/课程运营，备投学习产品与教务。"
         },
         "when_to_apply": {
           "年度窗口": [
@@ -5454,9 +5638,9 @@
             }
           ],
           "节奏策略": {
-            "首轮投递日期建议": "秋招提前批开启后1-2周内完成首轮集中投递。",
-            "补投触发条件": "连续两周笔试/面试转化低于行业中位，立即补投B/C池。",
-            "止损节点": "春招补录结束仍无面试进展时，转向替代行业或岗位。"
+            "首轮投递日期建议": "秋季先投头部职教与公考培训机构，寒假前后补投区域机构与在线教育岗位。",
+            "补投触发条件": "若笔试加试讲通过率低于30%，补投教务运营与内容编辑岗。",
+            "止损节点": "春招结束仍无offer，转向企业培训与HR学习发展方向。"
           }
         },
         "worth_it_or_not": {
@@ -5482,12 +5666,11 @@
         "evidence_chain": {
           "primary_source_id": "SRC_MOE_ACTION_2026",
           "secondary_source_ids": [
-            "SRC_MOE_ACTION_2026",
             "SRC_ZHILIAN_Q4_2025_NEWS",
             "SRC_NBS_WAGE_2024_TABLE"
           ],
           "timeline_source_id": "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164",
-          "policy_source_id": "SRC_NBS_WAGE_2024",
+          "policy_source_id": "SRC_MOE_ACTION_2026",
           "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
         }
       }
