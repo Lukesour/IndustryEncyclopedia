@@ -3204,7 +3204,26 @@
           "x_decision_real_data_placeholders": {
             "applicant_flow_dataset_id": "IND_FIN_INSURANCE_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
             "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-            "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+            "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+            "ops_platform_priority": [
+              "BOSS直聘",
+              "企业官网",
+              "小红书"
+            ],
+            "ops_boss_search_query": "应届生 保险 精算 核保 理赔",
+            "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20保险%20精算%20核保%20理赔",
+            "ops_xiaohongshu_search_query": "保险 校招 offer 薪资 面经",
+            "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=保险%20校招%20offer%20薪资%20面经",
+            "ops_backfill_required_fields": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "薪资区间",
+              "发布时间",
+              "来源链接",
+              "样本量"
+            ],
+            "ops_backfill_min_samples_per_role_city": 20
           },
           "x_decision_estimation_method": "insurance_claim_and_product_mix_blended_v2",
           "authenticity_level": "curated",
@@ -4165,7 +4184,7 @@
       "stale_on": "2026-06-16",
       "stale_status": "fresh",
       "template_data_ratio_percent": 0,
-      "updated_at": "2026-02-17",
+      "updated_at": "2026-02-18",
       "payload": {
         "city_gap_recommendations": [
           {
@@ -4253,7 +4272,50 @@
             "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
           }
         ],
-        "updated_at": "2026-02-18"
+        "updated_at": "2026-02-18",
+        "platform_backfill_guidance": [
+          {
+            "platform_id": "BOSS",
+            "access_status": "reachable_web_200",
+            "search_query": "应届生 保险 精算 核保 理赔",
+            "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20保险%20精算%20核保%20理赔",
+            "required_fields": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "薪资区间",
+              "发布时间",
+              "岗位URL",
+              "样本量"
+            ],
+            "operator_steps": [
+              "按关键词检索并筛选应届生/校招",
+              "同城同岗抽样至少20条",
+              "统一换算年化P25/P50/P75后回填"
+            ],
+            "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+          },
+          {
+            "platform_id": "XIAOHONGSHU",
+            "access_status": "web_limited_404_or_login",
+            "search_query": "保险 校招 offer 薪资 面经",
+            "search_url": "https://www.xiaohongshu.com/search_result/?keyword=保险%20校招%20offer%20薪资%20面经",
+            "required_fields": [
+              "岗位名称",
+              "城市",
+              "薪资描述",
+              "发帖时间",
+              "帖子链接或截图ID",
+              "样本量"
+            ],
+            "operator_steps": [
+              "优先用App端检索近90天内容",
+              "保留原帖截图与发布时间",
+              "标注为回忆样本并降权使用"
+            ],
+            "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+          }
+        ]
       }
     },
     "行业事件日志": {

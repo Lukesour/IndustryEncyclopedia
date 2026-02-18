@@ -538,10 +538,20 @@
           "逐条将访谈/案例中官方来源样本从curated/company_official规范为official，并统一data_origin语义。",
           "新增平台样本补录手册并完成主文件/分文件同步与质量流水线复跑。"
         ]
+      },
+      {
+        "version": "v1.42.2",
+        "date": "2026-02-18",
+        "summary": [
+          "23个行业逐条新增平台样本补录结构化指引（BOSS+小红书）并写入薪酬快照payload。",
+          "23个行业逐条新增自定义扩展运营检索占位字段（搜索词、搜索链接、必填字段、最小样本量）。",
+          "保留小红书网页端受限场景，明确App端检索+截图补录流程，不强行灌入不可验证数据。",
+          "主文件与分拆词条同步并复跑schema/引用校验/质量门禁。"
+        ]
       }
     ],
-    "文档名称": "中国大陆应届生求职行业百科（v1.42.1多源决策增强版）",
-    "版本": "v1.42.1",
+    "文档名称": "中国大陆应届生求职行业百科（v1.42.2平台补录结构化增强版）",
+    "版本": "v1.42.2",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -593,7 +603,8 @@
       "v1.37.1对5个低分行业逐条补官方题库与入口来源，增强题库深度与公司样本差异化。",
       "v1.38.0补充事业单位体系2026年湖北省公告链路，新增访谈/案例/政策/事件与官方入口，提升公共部门条目时效与区域可执行性。",
       "v1.39.0对5个低分行业逐条做证据锚点分散化（20条），显著降低来源集中度并提升行业决策稳定性。",
-      "v1.42.1将决策薪酬源改为行业实证来源，并补齐BOSS/小红书运营检索与字段补录规范。"
+      "v1.42.1将决策薪酬源改为行业实证来源，并补齐BOSS/小红书运营检索与字段补录规范。",
+      "v1.42.2将BOSS/小红书运营补录规则结构化入库到23个行业词条，提升后续实证补录执行性。"
     ],
     "适用人群": "中国大陆应届生（含毕业3年内）",
     "updated_at": "2026-02-18"
@@ -9996,7 +10007,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 工业自动化 电气工程师 PLC",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20工业自动化%20电气工程师%20PLC",
+                "ops_xiaohongshu_search_query": "工业自动化 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=工业自动化%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "manufacturing_capex_and_delivery_blended_v2",
               "authenticity_level": "curated",
@@ -10957,7 +10987,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -11045,7 +11075,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条南京应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 工业自动化 电气工程师 PLC",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20工业自动化%20电气工程师%20PLC",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "工业自动化 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=工业自动化%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -16018,7 +16091,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_AGRI_FOOD_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 食品研发 质检 供应链",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20食品研发%20质检%20供应链",
+                "ops_xiaohongshu_search_query": "农业 食品 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=农业%20食品%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "supply_chain_and_seasonality_blended_v2",
               "authenticity_level": "curated",
@@ -17077,7 +17169,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -17144,7 +17236,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 食品研发 质检 供应链",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20食品研发%20质检%20供应链",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "农业 食品 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=农业%20食品%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -22227,7 +22362,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_AUTO_INTELLIGENT_DRIVING_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 智能驾驶 算法 车控 测试",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20智能驾驶%20算法%20车控%20测试",
+                "ops_xiaohongshu_search_query": "智能驾驶 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=智能驾驶%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "auto_supplychain_and_model_delivery_blended_v2",
               "authenticity_level": "curated",
@@ -23188,7 +23342,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -23276,7 +23430,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 智能驾驶 算法 车控 测试",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20智能驾驶%20算法%20车控%20测试",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "智能驾驶 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=智能驾驶%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -28414,7 +28611,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_BIOMED_DEVICE_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 医疗器械 临床注册 研发",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20医疗器械%20临床注册%20研发",
+                "ops_xiaohongshu_search_query": "生物医药 器械 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=生物医药%20器械%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "clinical_registration_and_pipeline_blended_v2",
               "authenticity_level": "curated",
@@ -29473,7 +29689,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -29540,7 +29756,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条南京应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 医疗器械 临床注册 研发",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20医疗器械%20临床注册%20研发",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "生物医药 器械 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=生物医药%20器械%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -34724,7 +34983,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_CHEM_NEW_MATERIALS_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 化工 新材料 工艺 研发",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20化工%20新材料%20工艺%20研发",
+                "ops_xiaohongshu_search_query": "化工 新材料 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=化工%20新材料%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "materials_price_cycle_blended_v2",
               "authenticity_level": "curated",
@@ -35685,7 +35963,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -35752,7 +36030,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条南京应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 化工 新材料 工艺 研发",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20化工%20新材料%20工艺%20研发",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "化工 新材料 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=化工%20新材料%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -40949,7 +41270,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_CIVIL_SERVICE_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "公务员 应届 国考 省考 职位",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=公务员%20应届%20国考%20省考%20职位",
+                "ops_xiaohongshu_search_query": "公务员 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=公务员%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "public_exam_quota_competition_blended_v2",
               "authenticity_level": "curated",
@@ -41974,7 +42314,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -42020,7 +42360,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "公务员 应届 国考 省考 职位",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=公务员%20应届%20国考%20省考%20职位",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "公务员 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=公务员%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -47154,7 +47537,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_CONSULTING_PRO_SERVICES_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 咨询 审计 税务 风险",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20咨询%20审计%20税务%20风险",
+                "ops_xiaohongshu_search_query": "咨询 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=咨询%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "professional_service_pipeline_blended_v2",
               "authenticity_level": "curated",
@@ -48115,7 +48517,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -48203,7 +48605,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 咨询 审计 税务 风险",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20咨询%20审计%20税务%20风险",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "咨询 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=咨询%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -53036,7 +53481,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_ECOMMERCE_CROSSBORDER_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 跨境电商 运营 投放 供应链",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20跨境电商%20运营%20投放%20供应链",
+                "ops_xiaohongshu_search_query": "跨境电商 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=跨境电商%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "platform_traffic_conversion_blended_v2",
               "authenticity_level": "curated",
@@ -54095,7 +54559,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -54183,7 +54647,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 跨境电商 运营 投放 供应链",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20跨境电商%20运营%20投放%20供应链",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "跨境电商 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=跨境电商%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -59011,7 +59518,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_EDU_VOCATIONAL_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 教培 教研 班主任 运营",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20教培%20教研%20班主任%20运营",
+                "ops_xiaohongshu_search_query": "教育 职教 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=教育%20职教%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "education_policy_and_conversion_blended_v2",
               "authenticity_level": "curated",
@@ -59972,7 +60498,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -60039,7 +60565,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 教培 教研 班主任 运营",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20教培%20教研%20班主任%20运营",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "教育 职教 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=教育%20职教%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -64918,7 +65487,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_ENERGY_UTILITIES_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 电力 能源 运维 调度",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20电力%20能源%20运维%20调度",
+                "ops_xiaohongshu_search_query": "能源 电力 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=能源%20电力%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "utility_dispatch_and_policy_blended_v2",
               "authenticity_level": "curated",
@@ -65920,7 +66508,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -65987,7 +66575,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 电力 能源 运维 调度",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20电力%20能源%20运维%20调度",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "能源 电力 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=能源%20电力%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -70860,7 +71491,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_FIN_BANK_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 银行 管培 风控 运营",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20银行%20管培%20风控%20运营",
+                "ops_xiaohongshu_search_query": "银行 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=银行%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "banking_credit_cycle_risk_blended_v2",
               "authenticity_level": "curated",
@@ -71821,7 +72471,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -71930,7 +72580,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 银行 管培 风控 运营",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20银行%20管培%20风控%20运营",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "银行 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=银行%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -76891,7 +77584,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_FIN_INSURANCE_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 保险 精算 核保 理赔",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20保险%20精算%20核保%20理赔",
+                "ops_xiaohongshu_search_query": "保险 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=保险%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "insurance_claim_and_product_mix_blended_v2",
               "authenticity_level": "curated",
@@ -77852,7 +78564,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -77940,7 +78652,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 保险 精算 核保 理赔",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20保险%20精算%20核保%20理赔",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "保险 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=保险%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -82985,7 +83740,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_FIN_SECURITIES_FUND_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 证券 基金 研究 投行",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20证券%20基金%20研究%20投行",
+                "ops_xiaohongshu_search_query": "证券 基金 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=证券%20基金%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "capital_market_volatility_blended_v2",
               "authenticity_level": "curated",
@@ -83986,7 +84760,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -84074,7 +84848,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 证券 基金 研究 投行",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20证券%20基金%20研究%20投行",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "证券 基金 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=证券%20基金%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -89001,7 +89818,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_FMCG_RETAIL_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 快消 品牌 销售 管培",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20快消%20品牌%20销售%20管培",
+                "ops_xiaohongshu_search_query": "快消 零售 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=快消%20零售%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "consumer_channel_turnover_blended_v2",
               "authenticity_level": "curated",
@@ -89962,7 +90798,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -90050,7 +90886,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 快消 品牌 销售 管培",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20快消%20品牌%20销售%20管培",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "快消 零售 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=快消%20零售%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -95027,7 +95906,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_INTERNET_AI_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 互联网 后端 算法 产品",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20互联网%20后端%20算法%20产品",
+                "ops_xiaohongshu_search_query": "互联网 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=互联网%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "digital_hiring_signal_city_role_blended_v2",
               "authenticity_level": "curated",
@@ -96028,7 +96926,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -96095,7 +96993,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 互联网 后端 算法 产品",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20互联网%20后端%20算法%20产品",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "互联网 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=互联网%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -101019,7 +101960,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_LOGISTICS_SUPPLYCHAIN_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 物流 供应链 仓配 运营",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20物流%20供应链%20仓配%20运营",
+                "ops_xiaohongshu_search_query": "物流 供应链 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=物流%20供应链%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "fulfillment_efficiency_and_cost_blended_v2",
               "authenticity_level": "curated",
@@ -102020,7 +102980,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -102108,7 +103068,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 物流 供应链 仓配 运营",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20物流%20供应链%20仓配%20运营",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "物流 供应链 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=物流%20供应链%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -106936,7 +107939,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_MEDIA_GAME_CONTENT_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 游戏 内容 运营 策划",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20游戏%20内容%20运营%20策划",
+                "ops_xiaohongshu_search_query": "游戏 内容 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=游戏%20内容%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "content_monetization_cycle_blended_v2",
               "authenticity_level": "curated",
@@ -107956,7 +108978,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -108044,7 +109066,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 游戏 内容 运营 策划",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20游戏%20内容%20运营%20策划",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "游戏 内容 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=游戏%20内容%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -112925,7 +113990,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_NEW_ENERGY_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 新能源 电池 光伏 储能",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20新能源%20电池%20光伏%20储能",
+                "ops_xiaohongshu_search_query": "新能源 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=新能源%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "newenergy_capacity_and_order_blended_v2",
               "authenticity_level": "curated",
@@ -113984,7 +115068,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -114072,7 +115156,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条南京应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 新能源 电池 光伏 储能",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20新能源%20电池%20光伏%20储能",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "新能源 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=新能源%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -119400,7 +120527,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_PUBLIC_INSTITUTION_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "事业单位 应届 教师 医院 科研",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=事业单位%20应届%20教师%20医院%20科研",
+                "ops_xiaohongshu_search_query": "事业单位 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=事业单位%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "institution_post_quota_competition_blended_v2",
               "authenticity_level": "curated",
@@ -120501,7 +121647,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -120568,7 +121714,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "事业单位 应届 教师 医院 科研",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=事业单位%20应届%20教师%20医院%20科研",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "事业单位 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=事业单位%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -125633,7 +126822,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_REAL_ESTATE_INFRA_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 基建 房地产 工程 成本",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20基建%20房地产%20工程%20成本",
+                "ops_xiaohongshu_search_query": "房地产 基建 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=房地产%20基建%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "project_cycle_and_cashflow_blended_v2",
               "authenticity_level": "curated",
@@ -126652,7 +127860,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -126761,7 +127969,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 基建 房地产 工程 成本",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20基建%20房地产%20工程%20成本",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "房地产 基建 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=房地产%20基建%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -131677,7 +132928,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_SEMICONDUCTOR_ELECTRONICS_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 半导体 工艺 设备 IC设计",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20半导体%20工艺%20设备%20IC设计",
+                "ops_xiaohongshu_search_query": "半导体 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=半导体%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "hardtech_talent_cycle_blended_v2",
               "authenticity_level": "curated",
@@ -132736,7 +134006,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -132824,7 +134094,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条南京应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 半导体 工艺 设备 IC设计",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20半导体%20工艺%20设备%20IC设计",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "半导体 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=半导体%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -138049,7 +139362,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_STATE_OWNED_ENTERPRISE_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "央国企 应届 管培 工程 技术",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=央国企%20应届%20管培%20工程%20技术",
+                "ops_xiaohongshu_search_query": "央国企 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=央国企%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "soe_recruitment_plan_and_assessment_blended_v2",
               "authenticity_level": "curated",
@@ -139081,7 +140413,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -139127,7 +140459,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "央国企 应届 管培 工程 技术",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=央国企%20应届%20管培%20工程%20技术",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "央国企 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=央国企%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
@@ -144166,7 +145541,26 @@
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_TELECOM_OPERATOR_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
                 "observed_period": "2026Q2（待你导入真实流水后自动回填）",
-                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验"
+                "city_samples_min": "目标>=3城，待你导入ATS导出数据后校验",
+                "ops_platform_priority": [
+                  "BOSS直聘",
+                  "企业官网",
+                  "小红书"
+                ],
+                "ops_boss_search_query": "应届生 运营商 网络 通信 云网",
+                "ops_boss_search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20运营商%20网络%20通信%20云网",
+                "ops_xiaohongshu_search_query": "通信 运营商 校招 offer 薪资 面经",
+                "ops_xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=通信%20运营商%20校招%20offer%20薪资%20面经",
+                "ops_backfill_required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "来源链接",
+                  "样本量"
+                ],
+                "ops_backfill_min_samples_per_role_city": 20
               },
               "x_decision_estimation_method": "infra_network_demand_blended_v2",
               "authenticity_level": "curated",
@@ -145127,7 +146521,7 @@
           "stale_on": "2026-06-16",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17",
+          "updated_at": "2026-02-18",
           "payload": {
             "city_gap_recommendations": [
               {
@@ -145236,7 +146630,50 @@
                 "note": "该城市在当前观测样本中缺失，建议补充至少1条苏州应届岗位薪酬实证。"
               }
             ],
-            "updated_at": "2026-02-18"
+            "updated_at": "2026-02-18",
+            "platform_backfill_guidance": [
+              {
+                "platform_id": "BOSS",
+                "access_status": "reachable_web_200",
+                "search_query": "应届生 运营商 网络 通信 云网",
+                "search_url": "https://www.zhipin.com/web/geek/job?query=应届生%20运营商%20网络%20通信%20云网",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "薪资区间",
+                  "发布时间",
+                  "岗位URL",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "按关键词检索并筛选应届生/校招",
+                  "同城同岗抽样至少20条",
+                  "统一换算年化P25/P50/P75后回填"
+                ],
+                "risk_note": "岗位薪资口径需统一为年化总包区间，异常高值需二次核验。"
+              },
+              {
+                "platform_id": "XIAOHONGSHU",
+                "access_status": "web_limited_404_or_login",
+                "search_query": "通信 运营商 校招 offer 薪资 面经",
+                "search_url": "https://www.xiaohongshu.com/search_result/?keyword=通信%20运营商%20校招%20offer%20薪资%20面经",
+                "required_fields": [
+                  "岗位名称",
+                  "城市",
+                  "薪资描述",
+                  "发帖时间",
+                  "帖子链接或截图ID",
+                  "样本量"
+                ],
+                "operator_steps": [
+                  "优先用App端检索近90天内容",
+                  "保留原帖截图与发布时间",
+                  "标注为回忆样本并降权使用"
+                ],
+                "risk_note": "网页端常见404或风控拦截，需走人工截图补录流程。"
+              }
+            ]
           }
         },
         "行业事件日志": {
