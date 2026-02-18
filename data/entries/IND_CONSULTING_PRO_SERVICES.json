@@ -3068,14 +3068,13 @@
           "updated_at": "2026-02-18",
           "x_decision_apply_to_written_rate_percent": 9,
           "x_decision_city_cost_adjusted_salary_index": 12,
-          "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=14 | 更新=2026-02-18 | 来源类型=government_policy+company_official；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+0.9pp（基于公开信号估算，待ATS实采校准）。；已补充四大会计师事务所官网岗位能力项作为交叉锚点。",
+          "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
           "x_decision_interview_to_offer_rate_percent": 11,
           "x_decision_role_competition_intensity": "很高竞争（case+英语双门槛）",
           "x_decision_written_to_interview_rate_percent": 18,
           "x_decision_source_ids": [
-            "SRC_MOE_MEETING_2026",
-            "SRC_NBS_INCOME_2025_FULLYEAR",
             "SRC_MOE_ACTION_2026",
+            "SRC_NBS_WAGE_2024_TABLE",
             "SRC_AUTO_WWW_PWCCN_COM_B092A9CD"
           ],
           "x_decision_real_data_placeholders": {
@@ -3089,19 +3088,23 @@
           "evidence": {
             "access_check": "checked",
             "accessed_at": "2026-02-18",
-            "confidence": 0.76,
+            "confidence": 0.78,
             "http_status": 200,
             "manual_verification_required": false,
-            "sample_size": 14,
-            "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202511/t20251121_1421189.html",
-            "source_date": "2025-11-21",
-            "source_id": "SRC_MOE_MEETING_2026",
-            "source_name": "2026届全国普通高校毕业生就业创业工作会召开（教育部）",
+            "sample_size": 15,
+            "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
+            "source_date": "2026-02-12",
+            "source_id": "SRC_MOE_ACTION_2026",
+            "source_name": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
             "source_type": "government_policy",
-            "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202511/t20251121_1421189.html",
-            "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-            "publish_date": "2025-11-21",
-            "captured_at": "2026-02-18"
+            "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+            "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+            "publish_date": "2026-02-12",
+            "captured_at": "2026-02-18",
+            "secondary_source_ids": [
+              "SRC_NBS_WAGE_2024_TABLE",
+              "SRC_AUTO_WWW_PWCCN_COM_B092A9CD"
+            ]
           },
           "x_decision_min_sample_required": 9,
           "x_decision_reliability_tier": "B",
@@ -3111,7 +3114,7 @@
       ],
       "last_checked": "2026-02-17",
       "min_sample_size_for_verified": 1,
-      "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+      "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
       "payload": {
         "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
         "extension_fields": [
@@ -3128,13 +3131,13 @@
         "quantity_score": 100,
         "evidence_completeness_percent": 100,
         "freshness_score": 100,
-        "realness_score": 35,
+        "realness_score": 45,
         "source_access_score": 100,
         "manual_gap_penalty": 0,
-        "quality_score": 87,
+        "quality_score": 90,
         "calculated_at": "2026-02-18"
       },
-      "real_data_ratio_percent": 35,
+      "real_data_ratio_percent": 45,
       "stale_after_days": 90,
       "stale_on": "2026-05-18",
       "stale_status": "fresh",

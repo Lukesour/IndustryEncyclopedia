@@ -9973,13 +9973,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 20,
               "x_decision_city_cost_adjusted_salary_index": 11.45,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=10 | 更新=2026-02-17 | 来源类型=government_dataset；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 26,
               "x_decision_role_competition_intensity": "中等竞争（工程岗位需求稳定）",
               "x_decision_written_to_interview_rate_percent": 34,
               "x_decision_source_ids": [
-                "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_MIIT_MECHANICAL_STABLE_20250929"
+                "SRC_MIIT_MECHANICAL_STABLE_20250929",
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_AUTO_WWW_INOVANCE_COM_3C75604F"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -9991,20 +9992,24 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 12,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-                "source_date": "2026-01-19",
-                "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-                "source_name": "国家统计局-2025年全国居民人均可支配收入情况",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-01-19",
-                "captured_at": "2026-02-17"
+                "sample_size": 15,
+                "snapshot_url": "https://wap.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_525ed8efdfd649f5a1c15911769c0590.html",
+                "source_date": "2025-09-29",
+                "source_id": "SRC_MIIT_MECHANICAL_STABLE_20250929",
+                "source_name": "工业和信息化部等六部门关于印发《机械行业稳增长工作方案（2025—2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://wap.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_525ed8efdfd649f5a1c15911769c0590.html",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2025-09-29",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_WWW_INOVANCE_COM_3C75604F"
+                ]
               },
               "x_decision_min_sample_required": 9,
               "x_decision_reliability_tier": "B",
@@ -10014,7 +10019,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -10031,18 +10036,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 30,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
+            "quality_score": 87,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 30,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -15989,16 +15994,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 20,
               "x_decision_city_cost_adjusted_salary_index": 9.9,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=14 | 更新=2026-02-18 | 来源类型=government_platform+company_official；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已补充龙头企业岗位能力项作为决策交叉锚点。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 26,
               "x_decision_role_competition_intensity": "中等竞争（产研与供应链岗位并存）",
               "x_decision_written_to_interview_rate_percent": 34,
               "x_decision_source_ids": [
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "SRC_MOHRSS_CAMPUS_2026_0129",
                 "SRC_MOA_CASDE_20251009",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_AUTO_WWW_COFCO_COM_9030FCD9"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_AUTO_WWW_YILI_COM_D7937E58"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_AGRI_FOOD_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -16011,19 +16014,23 @@
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
-                "confidence": 0.76,
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 14,
-                "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
-                "source_date": "2026-02-11",
-                "source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "source_name": "中国公共招聘网-春风行动持续发力 精准服务送岗到家（2026）",
-                "source_type": "government_platform",
-                "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-02-11",
-                "captured_at": "2026-02-18"
+                "sample_size": 15,
+                "snapshot_url": "https://scs.moa.gov.cn/jcyj/202510/t20251009_6477959.htm",
+                "source_date": "2025-10-09",
+                "source_id": "SRC_MOA_CASDE_20251009",
+                "source_name": "农业农村部市场预警专家委员会发布2025年10月中国农产品供需形势分析",
+                "source_type": "government_dataset",
+                "source_url": "https://scs.moa.gov.cn/jcyj/202510/t20251009_6477959.htm",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2025-10-09",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_WWW_YILI_COM_D7937E58"
+                ]
               },
               "x_decision_min_sample_required": 9,
               "x_decision_reliability_tier": "B",
@@ -16033,7 +16040,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -16050,13 +16057,13 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 35,
+            "realness_score": 45,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 87,
+            "quality_score": 90,
             "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 35,
+          "real_data_ratio_percent": 45,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -22195,14 +22202,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 16,
               "x_decision_city_cost_adjusted_salary_index": 12.25,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：A | 样本量=12 | 更新=2026-02-17 | 来源类型=editorial；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 22,
               "x_decision_role_competition_intensity": "高竞争（技术栈复合要求高）",
               "x_decision_written_to_interview_rate_percent": 28,
               "x_decision_source_ids": [
-                "SRC_ZHILIAN_Q4_2025_NEWS",
                 "SRC_MIIT_AUTO_STABLE_20250912",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_AUTO_CAREER_BYD_COM_C93FDB3E"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_AUTO_INTELLIGENT_DRIVING_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -22214,20 +22221,24 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 12,
-                "snapshot_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
-                "source_date": "2026-01-22",
-                "source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
-                "source_name": "新浪财经-智联招聘2025年四季度就业市场景气指数解读",
-                "source_type": "editorial",
-                "source_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-01-22",
-                "captured_at": "2026-02-17"
+                "sample_size": 15,
+                "snapshot_url": "https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2025/art_76f6af8d52cb4f0cb0f8fbabddc85241.html",
+                "source_date": "2025-09-12",
+                "source_id": "SRC_MIIT_AUTO_STABLE_20250912",
+                "source_name": "工业和信息化部等八部门关于印发《汽车行业稳增长工作方案（2025—2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.miit.gov.cn/jgsj/zbys/wjfb/art/2025/art_76f6af8d52cb4f0cb0f8fbabddc85241.html",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2025-09-12",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_CAREER_BYD_COM_C93FDB3E"
+                ]
               },
               "x_decision_min_sample_required": 9,
               "x_decision_reliability_tier": "A",
@@ -22237,7 +22248,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -22254,18 +22265,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 30,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
+            "quality_score": 87,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 30,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -28377,13 +28388,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 14,
               "x_decision_city_cost_adjusted_salary_index": 11.1,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=10 | 更新=2026-02-17 | 来源类型=government_dataset；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+1.0pp、面试-offer约+0.4pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 18,
               "x_decision_role_competition_intensity": "高竞争（准入门槛高且岗位集中）",
               "x_decision_written_to_interview_rate_percent": 26,
               "x_decision_source_ids": [
-                "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_NMPAIC_DEVICE_WORKCONF_20260205"
+                "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_BIOMED_DEVICE_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -28395,20 +28407,24 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 12,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-                "source_date": "2026-01-19",
-                "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-                "source_name": "国家统计局-2025年全国居民人均可支配收入情况",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-01-19",
-                "captured_at": "2026-02-17"
+                "sample_size": 15,
+                "snapshot_url": "https://www.nmpaic.org.cn/yjzxyw/202602/t20260206_429414.html",
+                "source_date": "2026-02-05",
+                "source_id": "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
+                "source_name": "2026年全国医疗器械监督管理工作会议召开（NMPA信息中心转载）",
+                "source_type": "government_policy",
+                "source_url": "https://www.nmpaic.org.cn/yjzxyw/202602/t20260206_429414.html",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2026-02-05",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59"
+                ]
               },
               "x_decision_min_sample_required": 9,
               "x_decision_reliability_tier": "B",
@@ -28418,7 +28434,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -28435,18 +28451,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 30,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
+            "quality_score": 87,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 30,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -34681,14 +34697,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 20,
               "x_decision_city_cost_adjusted_salary_index": 11.1,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=10 | 更新=2026-02-17 | 来源类型=government_platform；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 25,
               "x_decision_role_competition_intensity": "中等竞争（工艺与研发并行）",
               "x_decision_written_to_interview_rate_percent": 34,
               "x_decision_source_ids": [
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
                 "SRC_GOV_PETROCHEM_STABLE_20250926",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_AUTO_WWW_WHCHEM_COM_7C60B768"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_CHEM_NEW_MATERIALS_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -34700,20 +34716,24 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 12,
-                "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
-                "source_date": "2026-02-11",
-                "source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "source_name": "中国公共招聘网-春风行动持续发力 精准服务送岗到家（2026）",
-                "source_type": "government_platform",
-                "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-02-11",
-                "captured_at": "2026-02-17"
+                "sample_size": 15,
+                "snapshot_url": "https://www.gov.cn/zhengce/zhengceku/202509/content_7042418.htm",
+                "source_date": "2025-09-26",
+                "source_id": "SRC_GOV_PETROCHEM_STABLE_20250926",
+                "source_name": "工业和信息化部等7部门关于印发《石化化工行业稳增长工作方案（2025-2026年）》的通知",
+                "source_type": "government_policy",
+                "source_url": "https://www.gov.cn/zhengce/zhengceku/202509/content_7042418.htm",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2025-09-26",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_WWW_WHCHEM_COM_7C60B768"
+                ]
               },
               "x_decision_min_sample_required": 9,
               "x_decision_reliability_tier": "B",
@@ -34723,7 +34743,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -34740,18 +34760,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 30,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
+            "quality_score": 87,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 30,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -40900,14 +40920,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 6,
               "x_decision_city_cost_adjusted_salary_index": 9.62,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=13 | 更新=2026-02-17 | 来源类型=editorial；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+0.9pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 8,
               "x_decision_role_competition_intensity": "极高竞争（招录比高）",
               "x_decision_written_to_interview_rate_percent": 14,
               "x_decision_source_ids": [
-                "SRC_ZHILIAN_Q4_2025_NEWS",
                 "SRC_SCS_EXAM_2026",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_AUTO_BM_SCS_GOV_CN_6B67637B"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_CIVIL_SERVICE_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -40919,20 +40939,24 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 15,
-                "snapshot_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
-                "source_date": "2026-01-22",
-                "source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
-                "source_name": "新浪财经-智联招聘2025年四季度就业市场景气指数解读",
-                "source_type": "editorial",
-                "source_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-01-22",
-                "captured_at": "2026-02-17"
+                "snapshot_url": "https://www.scs.gov.cn/detail/ArticleID/4098fcf8-9f1b-47b4-8ca7-c2f742f78585",
+                "source_date": "2025-10-14",
+                "source_id": "SRC_SCS_EXAM_2026",
+                "source_name": "中央机关及其直属机构2026年度考试录用公务员报名即将开始（中国政府网）",
+                "source_type": "government_policy",
+                "source_url": "https://www.gov.cn/lianbo/bumen/202510/content_7044277.htm",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2025-10-14",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_BM_SCS_GOV_CN_6B67637B"
+                ]
               },
               "x_decision_min_sample_required": 12,
               "x_decision_reliability_tier": "B",
@@ -40942,7 +40966,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -40959,18 +40983,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 30,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
+            "quality_score": 87,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 30,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -43759,7 +43783,7 @@
                 "SRC_SCS_EXAM_2026",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
-              "timeline_source_id": "SRC_SCS_EXAM_2026",
+              "timeline_source_id": "SRC_AUTO_BM_SCS_GOV_CN_6B67637B",
               "policy_source_id": "SRC_SCS_EXAM_2026",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
@@ -47098,14 +47122,13 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 9,
               "x_decision_city_cost_adjusted_salary_index": 12,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=14 | 更新=2026-02-18 | 来源类型=government_policy+company_official；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+0.9pp（基于公开信号估算，待ATS实采校准）。；已补充四大会计师事务所官网岗位能力项作为交叉锚点。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 11,
               "x_decision_role_competition_intensity": "很高竞争（case+英语双门槛）",
               "x_decision_written_to_interview_rate_percent": 18,
               "x_decision_source_ids": [
-                "SRC_MOE_MEETING_2026",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
                 "SRC_MOE_ACTION_2026",
+                "SRC_NBS_WAGE_2024_TABLE",
                 "SRC_AUTO_WWW_PWCCN_COM_B092A9CD"
               ],
               "x_decision_real_data_placeholders": {
@@ -47119,19 +47142,23 @@
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
-                "confidence": 0.76,
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 14,
-                "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202511/t20251121_1421189.html",
-                "source_date": "2025-11-21",
-                "source_id": "SRC_MOE_MEETING_2026",
-                "source_name": "2026届全国普通高校毕业生就业创业工作会召开（教育部）",
+                "sample_size": 15,
+                "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
+                "source_date": "2026-02-12",
+                "source_id": "SRC_MOE_ACTION_2026",
+                "source_name": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
                 "source_type": "government_policy",
-                "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202511/t20251121_1421189.html",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2025-11-21",
-                "captured_at": "2026-02-18"
+                "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2026-02-12",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_WWW_PWCCN_COM_B092A9CD"
+                ]
               },
               "x_decision_min_sample_required": 9,
               "x_decision_reliability_tier": "B",
@@ -47141,7 +47168,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -47158,13 +47185,13 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 35,
+            "realness_score": 45,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 87,
+            "quality_score": 90,
             "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 35,
+          "real_data_ratio_percent": 45,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -52976,14 +53003,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 12,
               "x_decision_city_cost_adjusted_salary_index": 10.8,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：A | 样本量=13 | 更新=2026-02-17 | 来源类型=government_platform；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+0.9pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 16,
               "x_decision_role_competition_intensity": "高竞争（运营岗投递集中）",
               "x_decision_written_to_interview_rate_percent": 22,
               "x_decision_source_ids": [
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
                 "SRC_MOFCOM_ECOMMERCE_20260123",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_ECOMMERCE_CROSSBORDER_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -52995,20 +53022,24 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 13,
-                "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
-                "source_date": "2026-02-11",
-                "source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "source_name": "中国公共招聘网-春风行动持续发力 精准服务送岗到家（2026）",
-                "source_type": "government_platform",
-                "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-02-11",
-                "captured_at": "2026-02-17"
+                "sample_size": 15,
+                "snapshot_url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_518fcaf90e674b959d3a5a0e8b74fc0f.html",
+                "source_date": "2026-01-23",
+                "source_id": "SRC_MOFCOM_ECOMMERCE_20260123",
+                "source_name": "商务部电子商务司负责人介绍2025年我国电子商务发展情况",
+                "source_type": "government_policy",
+                "source_url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_518fcaf90e674b959d3a5a0e8b74fc0f.html",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2026-01-23",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248"
+                ]
               },
               "x_decision_min_sample_required": 10,
               "x_decision_reliability_tier": "A",
@@ -53018,7 +53049,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -53035,18 +53066,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 30,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
+            "quality_score": 87,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 30,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -58946,15 +58977,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 18,
               "x_decision_city_cost_adjusted_salary_index": 9.8,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=15 | 更新=2026-02-18 | 来源类型=government_policy+company_official；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已补充教育机构官方招聘能力项作为决策交叉锚点。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 24,
               "x_decision_role_competition_intensity": "中高竞争（教师与教研岗筛选强）",
               "x_decision_written_to_interview_rate_percent": 32,
               "x_decision_source_ids": [
                 "SRC_MOE_ACTION_2026",
-                "SRC_ZHILIAN_Q4_2025_NEWS",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_AUTO_ZHAOPIN_XDF_CN_E8FB65C3"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_EDU_VOCATIONAL_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -58967,19 +58997,23 @@
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
-                "confidence": 0.76,
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 15,
-                "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
-                "source_date": "2026-01-07",
+                "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202602/t20260212_1193012.html",
+                "source_date": "2026-02-12",
                 "source_id": "SRC_MOE_ACTION_2026",
                 "source_name": "教育部部署开展2026届高校毕业生“寒假促就业暖心行动”",
                 "source_type": "government_policy",
                 "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202601/t20260107_1425856.html",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-01-07",
-                "captured_at": "2026-02-18"
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2026-02-12",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_WWW_NEWORIENTAL_ORG_6AEB8164"
+                ]
               },
               "x_decision_min_sample_required": 9,
               "x_decision_reliability_tier": "B",
@@ -58989,7 +59023,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -59006,13 +59040,13 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 35,
+            "realness_score": 45,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 87,
+            "quality_score": 90,
             "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 35,
+          "real_data_ratio_percent": 45,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -64849,14 +64883,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 22,
               "x_decision_city_cost_adjusted_salary_index": 11.8,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=10 | 更新=2026-02-17 | 来源类型=editorial；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 28,
               "x_decision_role_competition_intensity": "中等竞争（央国企招聘节奏稳定）",
               "x_decision_written_to_interview_rate_percent": 36,
               "x_decision_source_ids": [
-                "SRC_ZHILIAN_Q4_2025_NEWS",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_NEA_WORKCONF_20260130"
+                "SRC_NEA_WORKCONF_20260130",
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_ENERGY_UTILITIES_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -64868,20 +64902,24 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 12,
-                "snapshot_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
-                "source_date": "2026-01-22",
-                "source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
-                "source_name": "新浪财经-智联招聘2025年四季度就业市场景气指数解读",
-                "source_type": "editorial",
-                "source_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-01-22",
-                "captured_at": "2026-02-17"
+                "sample_size": 15,
+                "snapshot_url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
+                "source_date": "2026-01-30",
+                "source_id": "SRC_NEA_WORKCONF_20260130",
+                "source_name": "国家能源局举行新闻发布会介绍2025年电力工业统计数据有关情况",
+                "source_type": "government_policy",
+                "source_url": "https://www.nea.gov.cn/20260130/28665be63fba446ebf958f7ac2f54797/c.html",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2026-01-30",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC"
+                ]
               },
               "x_decision_min_sample_required": 9,
               "x_decision_reliability_tier": "B",
@@ -64891,7 +64929,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -64908,18 +64946,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 30,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
+            "quality_score": 87,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 30,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -70784,14 +70822,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 10,
               "x_decision_city_cost_adjusted_salary_index": 11.79,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：A | 样本量=13 | 更新=2026-02-17 | 来源类型=government_platform；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+0.9pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 12,
               "x_decision_role_competition_intensity": "高竞争（校招集中、筛选严格）",
               "x_decision_written_to_interview_rate_percent": 22,
               "x_decision_source_ids": [
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
                 "SRC_PBC_WORKCONF_20260106",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_FIN_BANK_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -70803,20 +70841,24 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 13,
-                "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
-                "source_date": "2026-02-11",
-                "source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "source_name": "中国公共招聘网-春风行动持续发力 精准服务送岗到家（2026）",
-                "source_type": "government_platform",
-                "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-02-11",
-                "captured_at": "2026-02-17"
+                "sample_size": 15,
+                "snapshot_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+                "source_date": "2026-01-06",
+                "source_id": "SRC_PBC_WORKCONF_20260106",
+                "source_name": "2026年中国人民银行工作会议召开",
+                "source_type": "government_policy",
+                "source_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2026-01-06",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B"
+                ]
               },
               "x_decision_min_sample_required": 10,
               "x_decision_reliability_tier": "A",
@@ -70826,7 +70868,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -70843,18 +70885,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 30,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
+            "quality_score": 87,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 30,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -76810,14 +76852,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 12,
               "x_decision_city_cost_adjusted_salary_index": 11.68,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：A | 样本量=13 | 更新=2026-02-17 | 来源类型=editorial；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+0.9pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 16,
               "x_decision_role_competition_intensity": "高竞争（业务与合规并重）",
               "x_decision_written_to_interview_rate_percent": 24,
               "x_decision_source_ids": [
-                "SRC_ZHILIAN_Q4_2025_NEWS",
                 "SRC_PBC_WORKCONF_20260106",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_AUTO_WWW_PINGAN_COM_A4057B5F"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_FIN_INSURANCE_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -76829,20 +76871,24 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 13,
-                "snapshot_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
-                "source_date": "2026-01-22",
-                "source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
-                "source_name": "新浪财经-智联招聘2025年四季度就业市场景气指数解读",
-                "source_type": "editorial",
-                "source_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-01-22",
-                "captured_at": "2026-02-17"
+                "sample_size": 15,
+                "snapshot_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+                "source_date": "2026-01-06",
+                "source_id": "SRC_PBC_WORKCONF_20260106",
+                "source_name": "2026年中国人民银行工作会议召开",
+                "source_type": "government_policy",
+                "source_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026010617203861687/index.html",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2026-01-06",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_WWW_PINGAN_COM_A4057B5F"
+                ]
               },
               "x_decision_min_sample_required": 10,
               "x_decision_reliability_tier": "A",
@@ -76852,7 +76898,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -76869,18 +76915,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 30,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
+            "quality_score": 87,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 30,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -82899,14 +82945,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 8,
               "x_decision_city_cost_adjusted_salary_index": 13.37,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=15 | 更新=2026-02-18 | 来源类型=government_dataset+company_official；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+0.9pp（基于公开信号估算，待ATS实采校准）。；已补充券商与基金公司官方岗位能力项作为交叉锚点。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 10,
               "x_decision_role_competition_intensity": "很高竞争（头部岗位供给有限）",
               "x_decision_written_to_interview_rate_percent": 18,
               "x_decision_source_ids": [
-                "SRC_NBS_INCOME_2025_FULLYEAR",
                 "SRC_CSRC_WORKCONF_20260116",
-                "SRC_AUTO_WWW_CICC_COM_4BA29DE6"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_AUTO_WWW_CS_ECITIC_COM_9B0A617"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_FIN_SECURITIES_FUND_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -82919,19 +82965,23 @@
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
-                "confidence": 0.76,
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 15,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-                "source_date": "2026-01-19",
-                "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-                "source_name": "国家统计局-2025年全国居民人均可支配收入情况",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-01-19",
-                "captured_at": "2026-02-18"
+                "snapshot_url": "https://www.csrc.gov.cn/csrc/c106311/c7609372/content.shtml",
+                "source_date": "2026-01-16",
+                "source_id": "SRC_CSRC_WORKCONF_20260116",
+                "source_name": "中国证监会召开2026年系统工作会议",
+                "source_type": "government_policy",
+                "source_url": "https://www.csrc.gov.cn/csrc/c106311/c7609372/content.shtml",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2026-01-16",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_WWW_CS_ECITIC_COM_9B0A617"
+                ]
               },
               "x_decision_min_sample_required": 10,
               "x_decision_reliability_tier": "B",
@@ -82941,7 +82991,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -82958,13 +83008,13 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 35,
+            "realness_score": 45,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 87,
+            "quality_score": 90,
             "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 35,
+          "real_data_ratio_percent": 45,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -88910,14 +88960,13 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 14,
               "x_decision_city_cost_adjusted_salary_index": 10.32,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=14 | 更新=2026-02-18 | 来源类型=government_platform+company_official；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已补充企业官网岗位能力项作为校验锚点。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 20,
               "x_decision_role_competition_intensity": "高竞争（品牌岗投递密度高）",
               "x_decision_written_to_interview_rate_percent": 26,
               "x_decision_source_ids": [
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
                 "SRC_MOFCOM_PRESSCONF_20260115",
-                "SRC_NBS_INCOME_2025_FULLYEAR",
+                "SRC_NBS_WAGE_2024_TABLE",
                 "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839"
               ],
               "x_decision_real_data_placeholders": {
@@ -88931,19 +88980,23 @@
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
-                "confidence": 0.76,
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 14,
-                "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
-                "source_date": "2026-02-11",
-                "source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "source_name": "中国公共招聘网-春风行动持续发力 精准服务送岗到家（2026）",
-                "source_type": "government_platform",
-                "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-02-11",
-                "captured_at": "2026-02-18"
+                "sample_size": 15,
+                "snapshot_url": "https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n1y15r/index.html",
+                "source_date": "2026-01-15",
+                "source_id": "SRC_MOFCOM_PRESSCONF_20260115",
+                "source_name": "商务部召开例行新闻发布会（2026年1月15日）",
+                "source_type": "government_policy",
+                "source_url": "https://www.mofcom.gov.cn/xwfbzt/2026/swbzklxxwfbh2026n1y15r/index.html",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2026-01-15",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_WWW_PGCAREERS_COM_7D7C2839"
+                ]
               },
               "x_decision_min_sample_required": 9,
               "x_decision_reliability_tier": "B",
@@ -88953,7 +89006,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -88970,13 +89023,13 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 35,
+            "realness_score": 45,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 87,
+            "quality_score": 90,
             "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 35,
+          "real_data_ratio_percent": 45,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -94932,14 +94985,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 14,
               "x_decision_city_cost_adjusted_salary_index": 22.36,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：A | 样本量=13 | 更新=2026-02-17 | 来源类型=editorial；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 18,
               "x_decision_role_competition_intensity": "高竞争（供给增速快但投递密度高）",
               "x_decision_written_to_interview_rate_percent": 24,
               "x_decision_source_ids": [
-                "SRC_ZHILIAN_Q4_2025_NEWS",
                 "SRC_MIIT_IIAI_ACTION_20260107",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_AUTO_JOIN_QQ_COM_61D25F78"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_INTERNET_AI_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -94951,20 +95004,24 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 13,
-                "snapshot_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
-                "source_date": "2026-01-22",
-                "source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
-                "source_name": "新浪财经-智联招聘2025年四季度就业市场景气指数解读",
-                "source_type": "editorial",
-                "source_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-01-22",
-                "captured_at": "2026-02-17"
+                "sample_size": 15,
+                "snapshot_url": "https://www.miit.gov.cn/jgsj/xgj/gzdt/art/2026/art_57bbd1d6ebb9433094295a8cb02f3184.html",
+                "source_date": "2026-01-07",
+                "source_id": "SRC_MIIT_IIAI_ACTION_20260107",
+                "source_name": "工信部解读《工业互联网和人工智能融合赋能行动方案》",
+                "source_type": "government_policy",
+                "source_url": "https://www.miit.gov.cn/jgsj/xgj/gzdt/art/2026/art_57bbd1d6ebb9433094295a8cb02f3184.html",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2026-01-07",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_JOIN_QQ_COM_61D25F78"
+                ]
               },
               "x_decision_min_sample_required": 10,
               "x_decision_reliability_tier": "A",
@@ -94974,7 +95031,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -94991,18 +95048,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 30,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
+            "quality_score": 87,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 30,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -100919,13 +100976,13 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 18,
               "x_decision_city_cost_adjusted_salary_index": 10.5,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=14 | 更新=2026-02-18 | 来源类型=government_dataset+company_official；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已补充头部物流企业官方岗位能力项作为决策交叉锚点。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 24,
               "x_decision_role_competition_intensity": "中高竞争（计划与调度岗位扩张）",
               "x_decision_written_to_interview_rate_percent": 30,
               "x_decision_source_ids": [
-                "SRC_NBS_INCOME_2025_FULLYEAR",
                 "SRC_MOT_POSTAL_20260122",
+                "SRC_NBS_WAGE_2024_TABLE",
                 "SRC_AUTO_HR_SF_EXPRESS_COM_418312D5"
               ],
               "x_decision_real_data_placeholders": {
@@ -100939,19 +100996,23 @@
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
-                "confidence": 0.76,
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 14,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-                "source_date": "2026-01-19",
-                "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-                "source_name": "国家统计局-2025年全国居民人均可支配收入情况",
+                "sample_size": 15,
+                "snapshot_url": "https://www.mot.gov.cn/shuju/tongjishuju/youzheng/202601/t20260130_4199355.html",
+                "source_date": "2026-01-22",
+                "source_id": "SRC_MOT_POSTAL_20260122",
+                "source_name": "国家邮政局公布2025年邮政行业运行情况",
                 "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-01-19",
-                "captured_at": "2026-02-18"
+                "source_url": "https://www.mot.gov.cn/shuju/tongjishuju/youzheng/202601/t20260130_4199355.html",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2026-01-22",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_HR_SF_EXPRESS_COM_418312D5"
+                ]
               },
               "x_decision_min_sample_required": 9,
               "x_decision_reliability_tier": "B",
@@ -100961,7 +101022,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -100978,13 +101039,13 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 35,
+            "realness_score": 45,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 87,
+            "quality_score": 90,
             "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 35,
+          "real_data_ratio_percent": 45,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -106830,15 +106891,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 10,
               "x_decision_city_cost_adjusted_salary_index": 10,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：A | 样本量=12 | 更新=2026-02-17 | 来源类型=editorial；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+0.9pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 14,
               "x_decision_role_competition_intensity": "很高竞争（内容岗供给拥挤）",
               "x_decision_written_to_interview_rate_percent": 20,
               "x_decision_source_ids": [
-                "SRC_ZHILIAN_Q4_2025_NEWS",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
                 "SRC_NPPA_GAME_APPROVAL_20260126",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_AUTO_WWW_MIHOYO_COM_CB059AC8"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_MEDIA_GAME_CONTENT_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -106850,20 +106910,24 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 12,
-                "snapshot_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
-                "source_date": "2026-01-22",
-                "source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
-                "source_name": "新浪财经-智联招聘2025年四季度就业市场景气指数解读",
-                "source_type": "editorial",
-                "source_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-01-22",
-                "captured_at": "2026-02-17"
+                "sample_size": 15,
+                "snapshot_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/yxspbgxx/202601/t20260126_947941.html",
+                "source_date": "2026-01-26",
+                "source_id": "SRC_NPPA_GAME_APPROVAL_20260126",
+                "source_name": "国家新闻出版署-2026年1月国产网络游戏审批信息",
+                "source_type": "government_platform",
+                "source_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/yxspbgxx/202601/t20260126_947941.html",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2026-01-26",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_WWW_MIHOYO_COM_CB059AC8"
+                ]
               },
               "x_decision_min_sample_required": 9,
               "x_decision_reliability_tier": "A",
@@ -106873,7 +106937,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -106890,18 +106954,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 30,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
+            "quality_score": 87,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 30,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -112813,14 +112877,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 18,
               "x_decision_city_cost_adjusted_salary_index": 11.8,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：A | 样本量=12 | 更新=2026-02-17 | 来源类型=editorial；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 24,
               "x_decision_role_competition_intensity": "中高竞争（扩招与淘汰并存）",
               "x_decision_written_to_interview_rate_percent": 32,
               "x_decision_source_ids": [
-                "SRC_ZHILIAN_Q4_2025_NEWS",
                 "SRC_NEA_RENEWABLE_UTIL_20260212",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_AUTO_WWW_CATL_COM_551E6E0C"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_NEW_ENERGY_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -112832,20 +112896,24 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 12,
-                "snapshot_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
-                "source_date": "2026-01-22",
-                "source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
-                "source_name": "新浪财经-智联招聘2025年四季度就业市场景气指数解读",
-                "source_type": "editorial",
-                "source_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-01-22",
-                "captured_at": "2026-02-17"
+                "sample_size": 15,
+                "snapshot_url": "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
+                "source_date": "2026-02-12",
+                "source_id": "SRC_NEA_RENEWABLE_UTIL_20260212",
+                "source_name": "国家能源局：2025年全国可再生能源利用率达到95%以上",
+                "source_type": "government_dataset",
+                "source_url": "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2026-02-12",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_WWW_CATL_COM_551E6E0C"
+                ]
               },
               "x_decision_min_sample_required": 9,
               "x_decision_reliability_tier": "A",
@@ -112855,7 +112923,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -112872,18 +112940,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 30,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
+            "quality_score": 87,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 30,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -119282,15 +119350,13 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 8,
               "x_decision_city_cost_adjusted_salary_index": 11.56,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=18 | 更新=2026-02-18 | 来源类型=government_dataset+government_platform；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+0.9pp（基于公开信号估算，待ATS实采校准）。；已补充人事考试网公告节奏信号，用于校准报名与改报窗口期判断。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 10,
               "x_decision_role_competition_intensity": "极高竞争（编制岗位竞争激烈）",
               "x_decision_written_to_interview_rate_percent": 16,
               "x_decision_source_ids": [
-                "SRC_NBS_INCOME_2025_FULLYEAR",
                 "SRC_SHRSJ_PUBLIC_INST_20260128",
-                "SRC_HBRS_PUBLIC_INST_20260202",
-                "SRC_HBRS_PUBLIC_INST_20260213",
+                "SRC_NBS_WAGE_2024_TABLE",
                 "SRC_AUTO_WWW_CPTA_COM_CN_FD0AA5B3"
               ],
               "x_decision_real_data_placeholders": {
@@ -119304,19 +119370,23 @@
               "evidence": {
                 "access_check": "checked",
                 "accessed_at": "2026-02-18",
-                "confidence": 0.77,
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 18,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-                "source_date": "2026-01-19",
-                "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-                "source_name": "国家统计局-2025年全国居民人均可支配收入情况",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-01-19",
-                "captured_at": "2026-02-18"
+                "snapshot_url": "https://rsj.sh.gov.cn/tgsgg_17341/20260128/t0035_1438398.html",
+                "source_date": "2026-01-28",
+                "source_id": "SRC_SHRSJ_PUBLIC_INST_20260128",
+                "source_name": "上海市人社局-上海市2026年事业单位公开招聘公告",
+                "source_type": "government_platform",
+                "source_url": "https://rsj.sh.gov.cn/tgsgg_17341/20260128/t0035_1438398.html",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2026-01-28",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_WWW_CPTA_COM_CN_FD0AA5B3"
+                ]
               },
               "x_decision_min_sample_required": 12,
               "x_decision_reliability_tier": "B",
@@ -119326,7 +119396,7 @@
           ],
           "last_checked": "2026-02-18",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -119343,13 +119413,13 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 40,
+            "realness_score": 50,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 88,
+            "quality_score": 91,
             "calculated_at": "2026-02-18"
           },
-          "real_data_ratio_percent": 40,
+          "real_data_ratio_percent": 50,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
@@ -122262,7 +122332,7 @@
                 "SRC_SHRSJ_PUBLIC_INST_20260128",
                 "SRC_NBS_WAGE_2024_TABLE"
               ],
-              "timeline_source_id": "SRC_SHRSJ_PUBLIC_INST_20260128",
+              "timeline_source_id": "SRC_AUTO_WWW_CPTA_COM_CN_FD0AA5B3",
               "policy_source_id": "SRC_SHRSJ_PUBLIC_INST_20260128",
               "salary_source_id": "SRC_NBS_WAGE_2024_TABLE"
             }
@@ -125510,15 +125580,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 16,
               "x_decision_city_cost_adjusted_salary_index": 10.6,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：A | 样本量=13 | 更新=2026-02-17 | 来源类型=government_policy；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 20,
               "x_decision_role_competition_intensity": "中高竞争（投资与工程岗位分化）",
               "x_decision_written_to_interview_rate_percent": 28,
               "x_decision_source_ids": [
-                "SRC_MOE_MEETING_2026",
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
                 "SRC_MOHURD_URBAN_RENEWAL_20251225",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_AUTO_WWW_CSCEC_COM_F3573BC4"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_REAL_ESTATE_INFRA_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -125530,20 +125599,24 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 13,
-                "snapshot_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202511/t20251121_1421189.html",
-                "source_date": "2025-11-21",
-                "source_id": "SRC_MOE_MEETING_2026",
-                "source_name": "2026届全国普通高校毕业生就业创业工作会召开（教育部）",
+                "sample_size": 15,
+                "snapshot_url": "https://www.mohurd.gov.cn/xinwen/gzdt/art/2025/art_4fa6fb32042042d09182581bbd1f092e.html",
+                "source_date": "2025-12-25",
+                "source_id": "SRC_MOHURD_URBAN_RENEWAL_20251225",
+                "source_name": "住房城乡建设部：因城施策控增量、去库存、优供给，持续用力推动房地产市场止跌回稳",
                 "source_type": "government_policy",
-                "source_url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/moe_1485/202511/t20251121_1421189.html",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2025-11-21",
-                "captured_at": "2026-02-17"
+                "source_url": "https://www.mohurd.gov.cn/xinwen/gzdt/art/2025/art_4fa6fb32042042d09182581bbd1f092e.html",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2025-12-25",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_WWW_CSCEC_COM_F3573BC4"
+                ]
               },
               "x_decision_min_sample_required": 9,
               "x_decision_reliability_tier": "A",
@@ -125553,7 +125626,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -125570,18 +125643,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 30,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
+            "quality_score": 87,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 30,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -131550,14 +131623,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 18,
               "x_decision_city_cost_adjusted_salary_index": 23.02,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：A | 样本量=12 | 更新=2026-02-17 | 来源类型=editorial；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 20,
               "x_decision_role_competition_intensity": "中高竞争（岗位门槛高、人才供给偏紧）",
               "x_decision_written_to_interview_rate_percent": 30,
               "x_decision_source_ids": [
-                "SRC_ZHILIAN_Q4_2025_NEWS",
                 "SRC_MIIT_ELECTRONICS_Q3RUN_20251030",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_AUTO_WWW_SMICS_COM_7D437B2"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_SEMICONDUCTOR_ELECTRONICS_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -131569,20 +131642,24 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 12,
-                "snapshot_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
-                "source_date": "2026-01-22",
-                "source_id": "SRC_ZHILIAN_Q4_2025_NEWS",
-                "source_name": "新浪财经-智联招聘2025年四季度就业市场景气指数解读",
-                "source_type": "editorial",
-                "source_url": "https://finance.sina.com.cn/roll/2026-01-22/doc-inhicwve2906996.shtml",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-01-22",
-                "captured_at": "2026-02-17"
+                "sample_size": 15,
+                "snapshot_url": "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2025/art_b280aaee390849aca2f8ecae5c9b414f.html",
+                "source_date": "2025-10-30",
+                "source_id": "SRC_MIIT_ELECTRONICS_Q3RUN_20251030",
+                "source_name": "2025年前三季度电子信息制造业运行情况",
+                "source_type": "government_dataset",
+                "source_url": "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2025/art_b280aaee390849aca2f8ecae5c9b414f.html",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2025-10-30",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_WWW_SMICS_COM_7D437B2"
+                ]
               },
               "x_decision_min_sample_required": 9,
               "x_decision_reliability_tier": "A",
@@ -131592,7 +131669,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -131609,18 +131686,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 30,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
+            "quality_score": 87,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 30,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -137916,13 +137993,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 12,
               "x_decision_city_cost_adjusted_salary_index": 8.76,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：B | 样本量=13 | 更新=2026-02-17 | 来源类型=government_dataset；趋势口径：近1季投递-笔试约+0.8pp、笔试-面试约+0.6pp、面试-offer约+0.4pp；同比面试-offer约+0.9pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 16,
               "x_decision_role_competition_intensity": "高竞争（稳定预期导致投递集中）",
               "x_decision_written_to_interview_rate_percent": 24,
               "x_decision_source_ids": [
-                "SRC_NBS_INCOME_2025_FULLYEAR",
-                "SRC_SASAC_TALENT_WORKCONF_20260203"
+                "SRC_SASAC_TALENT_WORKCONF_20260203",
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_SASAC_RECRUIT_2026"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_STATE_OWNED_ENTERPRISE_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -137934,20 +138012,24 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 15,
-                "snapshot_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-                "source_date": "2026-01-19",
-                "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-                "source_name": "国家统计局-2025年全国居民人均可支配收入情况",
-                "source_type": "government_dataset",
-                "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-01-19",
-                "captured_at": "2026-02-17"
+                "snapshot_url": "http://wap.sasac.gov.cn/n2588025/n2643314/c35340771/content.html",
+                "source_date": "2026-02-03",
+                "source_id": "SRC_SASAC_TALENT_WORKCONF_20260203",
+                "source_name": "国资央企人才工作座谈会在京召开",
+                "source_type": "government_policy",
+                "source_url": "http://wap.sasac.gov.cn/n2588025/n2643314/c35340771/content.html",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2026-02-03",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_SASAC_RECRUIT_2026"
+                ]
               },
               "x_decision_min_sample_required": 12,
               "x_decision_reliability_tier": "B",
@@ -137957,7 +138039,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -137974,18 +138056,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 30,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
+            "quality_score": 87,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 30,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
@@ -144025,14 +144107,14 @@
               "updated_at": "2026-02-18",
               "x_decision_apply_to_written_rate_percent": 20,
               "x_decision_city_cost_adjusted_salary_index": 11.85,
-              "x_decision_data_gap_note": "当前转化率为公开信号估算，待你导入真实投递流水后进行季度回归校准。；当前采用行业分层估算方法，后续以真实ATS流水做季度回归。；可信度标签：A | 样本量=12 | 更新=2026-02-17 | 来源类型=government_platform；趋势口径：近1季投递-笔试约+1.2pp、笔试-面试约+1.0pp、面试-offer约+0.7pp；同比面试-offer约+1.5pp（基于公开信号估算，待ATS实采校准）。；已将过期统计锚点替换为近180天行业官方来源。",
+              "x_decision_data_gap_note": "已引入行业政策源+企业时间线源+薪酬统计源三源交叉；ATS漏斗与真实offer样本需你后续补录（USER_FILL_ATS_DATASET_ID / USER_FILL_OFFER_SAMPLE）。",
               "x_decision_interview_to_offer_rate_percent": 28,
               "x_decision_role_competition_intensity": "中等竞争（岗位稳定、流程标准化）",
               "x_decision_written_to_interview_rate_percent": 35,
               "x_decision_source_ids": [
-                "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
                 "SRC_MIIT_TELECOM_BULLETIN_20260128",
-                "SRC_NBS_INCOME_2025_FULLYEAR"
+                "SRC_NBS_WAGE_2024_TABLE",
+                "SRC_AUTO_JOB_10086_CN_C58C9DA8"
               ],
               "x_decision_real_data_placeholders": {
                 "applicant_flow_dataset_id": "IND_TELECOM_OPERATOR_ATS_PIPELINE_2026Q2_PENDING_IMPORT",
@@ -144044,20 +144126,24 @@
               "data_origin": "official_and_platform_mixed_estimation",
               "evidence": {
                 "access_check": "checked",
-                "accessed_at": "2026-02-17",
-                "confidence": 0.74,
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
                 "http_status": 200,
                 "manual_verification_required": false,
-                "sample_size": 12,
-                "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
-                "source_date": "2026-02-11",
-                "source_id": "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
-                "source_name": "中国公共招聘网-春风行动持续发力 精准服务送岗到家（2026）",
-                "source_type": "government_platform",
-                "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-02-11/491693.shtml",
-                "stat_definition": "基于统计局/人社部/市场景气公开信号校准决策指标，并预留ATS真实流水导入位。",
-                "publish_date": "2026-02-11",
-                "captured_at": "2026-02-17"
+                "sample_size": 15,
+                "snapshot_url": "https://www.miit.gov.cn/jgsj/yxj/xxfb/art/2026/art_bea806f4dd20457cb0158795cc210aa7.html",
+                "source_date": "2026-01-28",
+                "source_id": "SRC_MIIT_TELECOM_BULLETIN_20260128",
+                "source_name": "2025年通信业统计公报",
+                "source_type": "government_dataset",
+                "source_url": "https://www.miit.gov.cn/jgsj/yxj/xxfb/art/2026/art_bea806f4dd20457cb0158795cc210aa7.html",
+                "stat_definition": "基于行业政策、企业校招时间线与统计薪酬口径三源交叉构建决策指标；ATS实采漏斗与offer样本待后续补录。",
+                "publish_date": "2026-01-28",
+                "captured_at": "2026-02-18",
+                "secondary_source_ids": [
+                  "SRC_NBS_WAGE_2024_TABLE",
+                  "SRC_AUTO_JOB_10086_CN_C58C9DA8"
+                ]
               },
               "x_decision_min_sample_required": 9,
               "x_decision_reliability_tier": "A",
@@ -144067,7 +144153,7 @@
           ],
           "last_checked": "2026-02-17",
           "min_sample_size_for_verified": 1,
-          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。",
+          "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。",
           "payload": {
             "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
             "extension_fields": [
@@ -144084,18 +144170,18 @@
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
             "freshness_score": 100,
-            "realness_score": 20,
+            "realness_score": 30,
             "source_access_score": 100,
             "manual_gap_penalty": 0,
-            "quality_score": 84,
+            "quality_score": 87,
             "calculated_at": "2026-02-17"
           },
-          "real_data_ratio_percent": 20,
+          "real_data_ratio_percent": 30,
           "stale_after_days": 90,
           "stale_on": "2026-05-18",
           "stale_status": "fresh",
           "template_data_ratio_percent": 0,
-          "updated_at": "2026-02-17"
+          "updated_at": "2026-02-18"
         },
         "薪酬实证_国家统计口径": {
           "coverage_percent": 100,
