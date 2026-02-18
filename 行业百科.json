@@ -1,7 +1,7 @@
 {
   "文档元数据": {
     "schema_ref": "./行业百科.schema.json",
-    "发布日期": "2026-02-17",
+    "发布日期": "2026-02-18",
     "变更记录": [
       {
         "date": "2026-02-16",
@@ -364,10 +364,21 @@
           "新增条目统一补齐事实/影响/行业指标/evidence_chain，并维持dual_source证据链规范。",
           "重跑质量流水线，事件密度从min=7提升到min=8，来源集中度进一步下降。"
         ]
+      },
+      {
+        "version": "v1.28.0",
+        "date": "2026-02-18",
+        "summary": [
+          "评分口径升级：综合分新增题库深度分与来源集中/时效惩罚，提升行业分区分度。",
+          "发布硬门槛收紧：来源集中度top1<=7.5%、top5<=26%，事件日志下限提升为8条且近180天下限提升到6条。",
+          "联网新增8个官方来源（商务部/网信办/工信部/能源局/证监会/新闻出版署）并完成HTTP 200核验。",
+          "逐行业补充高波动行业政策与事件条目，新增记录统一包含事实/影响/指标/evidence_chain。",
+          "新增《应届生决策卡模板v1.28.0》，沉淀去哪投/何时投/值不值投的统一输出结构。"
+        ]
       }
     ],
-    "文档名称": "中国大陆应届生求职行业百科（v1.27.0官方来源扩展版）",
-    "版本": "v1.27.0",
+    "文档名称": "中国大陆应届生求职行业百科（v1.28.0决策可用性与区分度增强版）",
+    "版本": "v1.28.0",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -399,12 +410,14 @@
       "v1.25.0全行业事件日志升级为“事实+影响+证据链”结构，并上调真实度门槛。",
       "v1.26.0补齐三大低新鲜度行业的访谈/案例/事件增量，并升级为行业专有指标+双来源证据链。",
       "v1.27.0补齐剩余12个行业的政策/事件扩展条目，新增10个官方来源并统一到全行业P=7、E=8密度。",
+      "v1.28.0升级综合评分公式并引入来源集中与时效惩罚，发布门槛收紧到top1<=7.5%、top5<=26%。",
+      "v1.28.0逐条补充高波动行业的新增政策与事件，并新增应届生决策卡统一模板文档。",
       "岗位画像库新增高分回答示例、失分点与STAR证据模板，个性化待填位独立标识。",
       "薪酬微观层新增观察层语义（JD/offer/统计锚点）并显式区分估算值与观察值。",
       "质量语义升级：新增publish_date/captured_at并用于新鲜度计算回退逻辑。"
     ],
     "适用人群": "中国大陆应届生（含毕业3年内）",
-    "updated_at": "2026-02-17"
+    "updated_at": "2026-02-18"
   },
   "来源注册表": [
     {
@@ -3091,6 +3104,104 @@
       "source_type": "government_dataset",
       "source_url": "https://www.miit.gov.cn/jgsj/yxj/xxfb/art/2026/art_bea806f4dd20457cb0158795cc210aa7.html",
       "typical_update_cycle": "annual"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-18",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-18",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_518fcaf90e674b959d3a5a0e8b74fc0f.html",
+      "source_id": "SRC_MOFCOM_ECOMMERCE_20260123",
+      "source_name": "商务部电子商务司负责人介绍2025年我国电子商务发展情况",
+      "source_type": "government_policy",
+      "source_url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_518fcaf90e674b959d3a5a0e8b74fc0f.html",
+      "typical_update_cycle": "quarterly_or_event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-18",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-18",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/yxspbgxx/202601/t20260126_947941.html",
+      "source_id": "SRC_NPPA_GAME_APPROVAL_20260126",
+      "source_name": "国家新闻出版署-2026年1月国产网络游戏审批信息",
+      "source_type": "government_platform",
+      "source_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/yxspbgxx/202601/t20260126_947941.html",
+      "typical_update_cycle": "monthly_or_event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-18",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-18",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
+      "source_id": "SRC_NEA_RENEWABLE_UTIL_20260212",
+      "source_name": "国家能源局：2025年全国可再生能源利用率达到95%以上",
+      "source_type": "government_dataset",
+      "source_url": "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
+      "typical_update_cycle": "event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-18",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-18",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.miit.gov.cn/jgsj/xgj/gzdt/art/2026/art_57bbd1d6ebb9433094295a8cb02f3184.html",
+      "source_id": "SRC_MIIT_IIAI_ACTION_20260107",
+      "source_name": "工信部解读《工业互联网和人工智能融合赋能行动方案》",
+      "source_type": "government_policy",
+      "source_url": "https://www.miit.gov.cn/jgsj/xgj/gzdt/art/2026/art_57bbd1d6ebb9433094295a8cb02f3184.html",
+      "typical_update_cycle": "event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-18",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-18",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.csrc.gov.cn/csrc/c101954/c7608135/content.shtml",
+      "source_id": "SRC_CSRC_CRYPTO_GUIDE_20260109",
+      "source_name": "证监会发布证券期货业信息系统密码技术应用指引（第2号公告）",
+      "source_type": "government_policy",
+      "source_url": "https://www.csrc.gov.cn/csrc/c101954/c7608135/content.shtml",
+      "typical_update_cycle": "event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-18",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-18",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.nea.gov.cn/20260203/63c4d0afe6b94250a62e8792cdb28e3b/c.html",
+      "source_id": "SRC_NEA_NEPROJECT_20260121",
+      "source_name": "国家能源局：2025年全国能源重点项目完成投资额超3万亿元",
+      "source_type": "government_dataset",
+      "source_url": "https://www.nea.gov.cn/20260203/63c4d0afe6b94250a62e8792cdb28e3b/c.html",
+      "typical_update_cycle": "event_driven"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-18",
+      "credibility": "high",
+      "http_status": 200,
+      "last_checked": "2026-02-18",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2025/art_b280aaee390849aca2f8ecae5c9b414f.html",
+      "source_id": "SRC_MIIT_ELECTRONICS_Q3RUN_20251030",
+      "source_name": "2025年前三季度电子信息制造业运行情况",
+      "source_type": "government_dataset",
+      "source_url": "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2025/art_b280aaee390849aca2f8ecae5c9b414f.html",
+      "typical_update_cycle": "quarterly"
     }
   ],
   "枚举字典": {
@@ -6116,10 +6227,10 @@
       "salary_observed_inprogress_max": 0,
       "salary_observed_lowsample_max": 0,
       "salary_observed_company_tier_max_hits": 0,
-      "source_concentration_top1_max_percent": 8,
-      "source_concentration_top5_max_percent": 30,
-      "event_log_min_count": 6,
-      "event_recent_180d_min_count": 4
+      "source_concentration_top1_max_percent": 7.5,
+      "source_concentration_top5_max_percent": 26,
+      "event_log_min_count": 8,
+      "event_recent_180d_min_count": 6
     },
     "审核要求": "所有可发布记录必须具备可追溯source_id（映射到来源注册表）和可验证source_url；低可访问来源需添加人工补录槽位，并设置优先级与到期日。",
     "数据更新周期": "quarterly",
@@ -10942,7 +11053,7 @@
         "freshness_percent_overall": 86.9,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.3,
+        "quality_score_overall": 90.6,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -10957,8 +11068,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 40.9
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 54.5
       },
       "slug": "advanced-manufacturing-automation",
       "sources": [
@@ -16025,7 +16136,7 @@
         "freshness_percent_overall": 85.7,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.2,
+        "quality_score_overall": 90.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -16040,8 +16151,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 31.8
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 72.7
       },
       "slug": "agriculture-food",
       "sources": [
@@ -21239,7 +21350,7 @@
         "freshness_percent_overall": 86.9,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.2,
+        "quality_score_overall": 90.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -21254,8 +21365,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 27.3
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 50
       },
       "slug": "auto-intelligent-driving",
       "sources": [
@@ -26482,7 +26593,7 @@
         "freshness_percent_overall": 84.1,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.4,
+        "quality_score_overall": 90.9,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -26497,8 +26608,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 81.8
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 77.3
       },
       "slug": "biomed-device",
       "sources": [
@@ -31584,7 +31695,7 @@
         "freshness_percent_overall": 86.4,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 93.6,
+        "quality_score_overall": 87.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -31599,8 +31710,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 0
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 13.6
       },
       "slug": "chemicals-new-materials",
       "sources": [
@@ -37153,7 +37264,7 @@
         "freshness_percent_overall": 88.7,
         "real_data_ratio_overall": 75,
         "template_ratio_overall": 0,
-        "quality_score_overall": 95.1,
+        "quality_score_overall": 87,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -37168,8 +37279,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 100
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 4.5
       },
       "slug": "civil-service",
       "sources": [
@@ -42170,7 +42281,7 @@
         "freshness_percent_overall": 85.2,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.4,
+        "quality_score_overall": 90.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -42185,8 +42296,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 77.3
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 63.6
       },
       "slug": "consulting-professional-services",
       "sources": [
@@ -44577,6 +44688,33 @@
               "scope": "全国",
               "title": "商务部发布2025年1-8月我国电子商务发展情况",
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2026-01-23",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.85,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_518fcaf90e674b959d3a5a0e8b74fc0f.html",
+                "source_date": "2026-01-23",
+                "source_id": "SRC_MOFCOM_ECOMMERCE_20260123",
+                "source_name": "商务部电子商务司负责人介绍2025年我国电子商务发展情况",
+                "source_type": "government_policy",
+                "source_url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_518fcaf90e674b959d3a5a0e8b74fc0f.html",
+                "stat_definition": "商务部年度电商发展口径，反映跨境业务规模、结构与岗位能力偏好变化。",
+                "publish_date": "2026-01-23",
+                "captured_at": "2026-02-18"
+              },
+              "impact": "跨境电商岗位更强调供应链协同、履约体验和平台合规经营能力。",
+              "log_id": "IND_ECOMMERCE_CROSSBORDER_POLICY_20260123_MOFCOM",
+              "scope": "全国",
+              "title": "商务部发布2025年我国电子商务发展情况",
+              "updated_at": "2026-02-18"
             }
           ],
           "last_checked": "2026-02-16",
@@ -46620,6 +46758,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_ECOMMERCE_CROSSBORDER_EVENT_2026Q1_EXT_07",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_518fcaf90e674b959d3a5a0e8b74fc0f.html",
+                "source_date": "2026-01-23",
+                "source_id": "SRC_MOFCOM_ECOMMERCE_20260123",
+                "source_name": "商务部电子商务司负责人介绍2025年我国电子商务发展情况",
+                "source_type": "government_policy",
+                "source_url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_518fcaf90e674b959d3a5a0e8b74fc0f.html",
+                "publish_date": "2026-01-23",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "商务部更新年度电商发展口径后，跨境岗位评价进一步转向“效率、体验、合规”并重。",
+              "title": "电商年度口径更新，跨境岗位向经营质量导向升级",
+              "updated_at": "2026-02-18",
+              "fact": "电商发展数据显示规模增长与结构升级并行，企业招聘同步强调全链路运营能力。",
+              "impact": "应届生应准备围绕履约时效、退货治理和违规防控的量化案例。",
+              "industry_indicator": "跨境订单履约时效、退款率、店铺违规率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_MOFCOM_ECOMMERCE_20260123",
+                "secondary_source_ids": [
+                  "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -47173,11 +47347,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 90.5,
-        "evidence_percent_overall": 86.9,
-        "freshness_percent_overall": 83.6,
+        "evidence_percent_overall": 87.3,
+        "freshness_percent_overall": 84.1,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.5,
+        "quality_score_overall": 89.9,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -47192,8 +47366,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 90.9
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 40.9
       },
       "slug": "ecommerce-crossborder",
       "sources": [
@@ -52203,7 +52377,7 @@
         "freshness_percent_overall": 85.2,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.5,
+        "quality_score_overall": 90.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -52218,8 +52392,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 86.4
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 68.2
       },
       "slug": "education-vocational",
       "sources": [
@@ -57257,7 +57431,7 @@
         "freshness_percent_overall": 88.5,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.4,
+        "quality_score_overall": 90.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -57272,8 +57446,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 72.7
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 59.1
       },
       "slug": "energy-utilities",
       "sources": [
@@ -62332,7 +62506,7 @@
         "freshness_percent_overall": 86.4,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.4,
+        "quality_score_overall": 89.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -62347,8 +62521,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 68.2
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 27.3
       },
       "slug": "finance-bank",
       "sources": [
@@ -67415,7 +67589,7 @@
         "freshness_percent_overall": 86.4,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 93.9,
+        "quality_score_overall": 89,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "外部链接",
@@ -67430,8 +67604,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 9.1
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 18.2
       },
       "slug": "finance-insurance",
       "sources": [
@@ -69882,6 +70056,33 @@
               "scope": "全国",
               "title": "证监会召开2026年系统工作会议部署年度监管重点",
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2026-01-09",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.84,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.csrc.gov.cn/csrc/c101954/c7608135/content.shtml",
+                "source_date": "2026-01-09",
+                "source_id": "SRC_CSRC_CRYPTO_GUIDE_20260109",
+                "source_name": "证监会发布证券期货业信息系统密码技术应用指引（第2号公告）",
+                "source_type": "government_policy",
+                "source_url": "https://www.csrc.gov.cn/csrc/c101954/c7608135/content.shtml",
+                "stat_definition": "信息系统与密码技术指引强化金融机构技术合规要求，影响证券基金科技与风控岗能力模型。",
+                "publish_date": "2026-01-09",
+                "captured_at": "2026-02-18"
+              },
+              "impact": "证券基金岗位对技术合规、数据安全和系统治理能力要求同步提高。",
+              "log_id": "IND_FIN_SECURITIES_FUND_POLICY_20260109_CSRC",
+              "scope": "全国",
+              "title": "证监会发布证券期货业信息系统技术应用指引",
+              "updated_at": "2026-02-18"
             }
           ],
           "last_checked": "2026-02-16",
@@ -71914,6 +72115,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_FIN_SECURITIES_FUND_EVENT_2026Q1_EXT_07",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.csrc.gov.cn/csrc/c101954/c7608135/content.shtml",
+                "source_date": "2026-01-09",
+                "source_id": "SRC_CSRC_CRYPTO_GUIDE_20260109",
+                "source_name": "证监会发布证券期货业信息系统密码技术应用指引（第2号公告）",
+                "source_type": "government_policy",
+                "source_url": "https://www.csrc.gov.cn/csrc/c101954/c7608135/content.shtml",
+                "publish_date": "2026-01-09",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "技术合规指引发布后，证券基金招聘对“研究能力+技术合规+系统安全”复合能力要求显著提高。",
+              "title": "监管技术规则更新，证券基金岗位向“研究+科技合规”升级",
+              "updated_at": "2026-02-18",
+              "fact": "监管公告强化信息系统与密码应用规范，机构招聘同步提高技术治理门槛。",
+              "impact": "应届生需准备覆盖数据安全、风控边界和系统稳定性的综合案例。",
+              "industry_indicator": "系统可用性、合规事件率、风控响应时长",
+              "evidence_chain": {
+                "primary_source_id": "SRC_CSRC_CRYPTO_GUIDE_20260109",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_CS_ECITIC_COM_9B0A617"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -72485,11 +72722,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.8,
-        "evidence_percent_overall": 89.8,
-        "freshness_percent_overall": 86.4,
+        "evidence_percent_overall": 90.2,
+        "freshness_percent_overall": 86.9,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.4,
+        "quality_score_overall": 89.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -72504,8 +72741,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 63.6
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 36.4
       },
       "slug": "finance-securities-fund",
       "sources": [
@@ -77407,7 +77644,7 @@
         "freshness_percent_overall": 86.4,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.1,
+        "quality_score_overall": 89.2,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -77422,8 +77659,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 18.2
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 22.7
       },
       "slug": "fmcg-retail",
       "sources": [
@@ -79905,6 +80142,33 @@
               "scope": "全国",
               "title": "网信办发布生成式AI备案信息公告",
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2026-01-07",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.84,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.miit.gov.cn/jgsj/xgj/gzdt/art/2026/art_57bbd1d6ebb9433094295a8cb02f3184.html",
+                "source_date": "2026-01-07",
+                "source_id": "SRC_MIIT_IIAI_ACTION_20260107",
+                "source_name": "工信部解读《工业互联网和人工智能融合赋能行动方案》",
+                "source_type": "government_policy",
+                "source_url": "https://www.miit.gov.cn/jgsj/xgj/gzdt/art/2026/art_57bbd1d6ebb9433094295a8cb02f3184.html",
+                "stat_definition": "工信部对工业互联网与人工智能融合方案的解读，反映AI产业化岗位能力需求变化。",
+                "publish_date": "2026-01-07",
+                "captured_at": "2026-02-18"
+              },
+              "impact": "AI岗位从模型开发进一步扩展到工业场景落地与跨系统协同能力。",
+              "log_id": "IND_INTERNET_AI_POLICY_20260107_MIIT",
+              "scope": "全国",
+              "title": "工信部发布工业互联网与人工智能融合赋能方案解读",
+              "updated_at": "2026-02-18"
             }
           ],
           "last_checked": "2026-02-16",
@@ -81997,6 +82261,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_INTERNET_AI_EVENT_2026Q1_EXT_07",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.miit.gov.cn/jgsj/xgj/gzdt/art/2026/art_57bbd1d6ebb9433094295a8cb02f3184.html",
+                "source_date": "2026-01-07",
+                "source_id": "SRC_MIIT_IIAI_ACTION_20260107",
+                "source_name": "工信部解读《工业互联网和人工智能融合赋能行动方案》",
+                "source_type": "government_policy",
+                "source_url": "https://www.miit.gov.cn/jgsj/xgj/gzdt/art/2026/art_57bbd1d6ebb9433094295a8cb02f3184.html",
+                "publish_date": "2026-01-07",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "工业互联网与AI融合方向明确后，互联网AI招聘从算法单点能力转向“模型+场景+工程交付”复合能力。",
+              "title": "工业AI融合方向明确，互联网AI岗位向场景落地能力升级",
+              "updated_at": "2026-02-18",
+              "fact": "政策解读强调AI赋能实体经济与工业场景协同，岗位能力模型同步演进。",
+              "impact": "应届生需补充“模型能力-业务指标-部署运维”一体化项目证据。",
+              "industry_indicator": "模型上线周期、推理成本、工业场景转化率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_MIIT_IIAI_ACTION_20260107",
+                "secondary_source_ids": [
+                  "SRC_AUTO_JOBS_BYTEDANCE_COM_4D6E1DEC"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -82632,11 +82932,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 90.3,
-        "freshness_percent_overall": 87.1,
+        "evidence_percent_overall": 90.6,
+        "freshness_percent_overall": 87.5,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.9,
+        "quality_score_overall": 92.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -82651,8 +82951,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 95.5
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 100
       },
       "slug": "internet-ai",
       "sources": [
@@ -87624,7 +87924,7 @@
         "freshness_percent_overall": 86.4,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.4,
+        "quality_score_overall": 89.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -87639,8 +87939,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 59.1
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 31.8
       },
       "slug": "logistics-supply-chain",
       "sources": [
@@ -90038,6 +90338,33 @@
               "scope": "全国",
               "title": "广电总局发布2026年度电视剧引导扶持项目申报通知",
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2026-01-26",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.83,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/yxspbgxx/202601/t20260126_947941.html",
+                "source_date": "2026-01-26",
+                "source_id": "SRC_NPPA_GAME_APPROVAL_20260126",
+                "source_name": "国家新闻出版署-2026年1月国产网络游戏审批信息",
+                "source_type": "government_platform",
+                "source_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/yxspbgxx/202601/t20260126_947941.html",
+                "stat_definition": "游戏版号审批节奏直接影响内容产能与发行侧岗位需求节奏。",
+                "publish_date": "2026-01-26",
+                "captured_at": "2026-02-18"
+              },
+              "impact": "游戏内容岗位更强调项目排期、合规审核和上线运营协同能力。",
+              "log_id": "IND_MEDIA_GAME_CONTENT_POLICY_20260126_NPPA",
+              "scope": "全国",
+              "title": "新闻出版署公布2026年1月国产网络游戏审批信息",
+              "updated_at": "2026-02-18"
             }
           ],
           "last_checked": "2026-02-16",
@@ -92117,6 +92444,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_MEDIA_GAME_CONTENT_EVENT_2026Q1_EXT_07",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/yxspbgxx/202601/t20260126_947941.html",
+                "source_date": "2026-01-26",
+                "source_id": "SRC_NPPA_GAME_APPROVAL_20260126",
+                "source_name": "国家新闻出版署-2026年1月国产网络游戏审批信息",
+                "source_type": "government_platform",
+                "source_url": "https://www.nppa.gov.cn/bsfw/jggs/yxspjg/yxspbgxx/202601/t20260126_947941.html",
+                "publish_date": "2026-01-26",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "版号审批节奏更新后，游戏内容岗位能力模型向“立项效率+合规审核+上线运营”三维融合。",
+              "title": "版号审批节奏更新，游戏岗位向项目全链路能力升级",
+              "updated_at": "2026-02-18",
+              "fact": "国产网络游戏审批信息更新影响项目排期与发行窗口，岗位需求随之调整。",
+              "impact": "应届生需准备从立项、审核到上线复盘的端到端内容项目案例。",
+              "industry_indicator": "版号获取周期、上线转化率、内容合规通过率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_NPPA_GAME_APPROVAL_20260126",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_BILIBILI_COM_6263DF22"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -92711,11 +93074,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.1,
-        "evidence_percent_overall": 87.3,
-        "freshness_percent_overall": 85.7,
+        "evidence_percent_overall": 87.7,
+        "freshness_percent_overall": 86.2,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.4,
+        "quality_score_overall": 91.2,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -92730,8 +93093,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 54.5
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 86.4
       },
       "slug": "media-game-content",
       "sources": [
@@ -95161,6 +95524,33 @@
               "scope": "全国",
               "title": "国家能源局发布2025年电力工业统计数据相关情况",
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2026-02-12",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.85,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
+                "source_date": "2026-02-12",
+                "source_id": "SRC_NEA_RENEWABLE_UTIL_20260212",
+                "source_name": "国家能源局：2025年全国可再生能源利用率达到95%以上",
+                "source_type": "government_dataset",
+                "source_url": "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
+                "stat_definition": "新能源利用率数据直接反映并网消纳质量与项目运营能力需求。",
+                "publish_date": "2026-02-12",
+                "captured_at": "2026-02-18"
+              },
+              "impact": "新能源岗位更强调并网消纳、交易协同和运行优化能力。",
+              "log_id": "IND_NEW_ENERGY_POLICY_20260212_NEA",
+              "scope": "全国",
+              "title": "国家能源局发布可再生能源利用率数据",
+              "updated_at": "2026-02-18"
             }
           ],
           "last_checked": "2026-02-16",
@@ -97317,6 +97707,43 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_NEW_ENERGY_EVENT_2026Q1_EXT_07",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.83,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
+                "source_date": "2026-02-12",
+                "source_id": "SRC_NEA_RENEWABLE_UTIL_20260212",
+                "source_name": "国家能源局：2025年全国可再生能源利用率达到95%以上",
+                "source_type": "government_dataset",
+                "source_url": "https://www.nea.gov.cn/20260212/742b8c6a078347b0b39de676c05c5d58/c.html",
+                "publish_date": "2026-02-12",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "新能源利用率指标更新后，企业岗位从“建设导向”进一步转向“消纳效率+运营质量”导向。",
+              "title": "新能源利用率提升，岗位能力模型向运营效率升级",
+              "updated_at": "2026-02-18",
+              "fact": "可再生能源利用率持续提升，行业招聘更强调并网消纳和运行优化能力。",
+              "impact": "应届生应准备发电预测、消纳优化和故障处置的可量化案例。",
+              "industry_indicator": "新能源利用率、弃风弃光率、并网通过率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_NEA_RENEWABLE_UTIL_20260212",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+                  "SRC_NEA_NEPROJECT_20260121"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -97952,11 +98379,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 87.3,
-        "freshness_percent_overall": 84.1,
+        "evidence_percent_overall": 87.7,
+        "freshness_percent_overall": 84.6,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.4,
+        "quality_score_overall": 91.1,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -97971,8 +98398,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 50
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 81.8
       },
       "slug": "new-energy",
       "sources": [
@@ -103641,7 +104068,7 @@
         "freshness_percent_overall": 75.7,
         "real_data_ratio_overall": 75.3,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.2,
+        "quality_score_overall": 84.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -103656,8 +104083,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 22.7
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 0
       },
       "slug": "public-institution",
       "sources": [
@@ -108696,7 +109123,7 @@
         "freshness_percent_overall": 85.7,
         "real_data_ratio_overall": 73.2,
         "template_ratio_overall": 0,
-        "quality_score_overall": 93.8,
+        "quality_score_overall": 90.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -108711,8 +109138,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 4.5
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 45.5
       },
       "slug": "real-estate-infrastructure",
       "sources": [
@@ -111215,6 +111642,33 @@
               "scope": "全国",
               "title": "工信部印发电子信息制造业2025-2026年稳增长行动方案",
               "updated_at": "2026-02-17"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "date": "2025-10-30",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.83,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2025/art_b280aaee390849aca2f8ecae5c9b414f.html",
+                "source_date": "2025-10-30",
+                "source_id": "SRC_MIIT_ELECTRONICS_Q3RUN_20251030",
+                "source_name": "2025年前三季度电子信息制造业运行情况",
+                "source_type": "government_dataset",
+                "source_url": "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2025/art_b280aaee390849aca2f8ecae5c9b414f.html",
+                "stat_definition": "电子信息制造业季度运行数据反映产业链景气和半导体相关岗位需求变化。",
+                "publish_date": "2025-10-30",
+                "captured_at": "2026-02-18"
+              },
+              "impact": "半导体岗位更强调量产爬坡、良率改善和供应链协同能力。",
+              "log_id": "IND_SEMICONDUCTOR_ELECTRONICS_POLICY_20251030_MIIT",
+              "scope": "全国",
+              "title": "工信部发布2025年前三季度电子信息制造业运行情况",
+              "updated_at": "2026-02-18"
             }
           ],
           "last_checked": "2026-02-16",
@@ -113371,6 +113825,42 @@
                 "chain_level": "dual_source",
                 "verified_at": "2026-02-17"
               }
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "official_event_tracking",
+              "event_id": "IND_SEMICONDUCTOR_ELECTRONICS_EVENT_2026Q1_EXT_07",
+              "event_quarter": "2026Q1",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 2,
+                "snapshot_url": "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2025/art_b280aaee390849aca2f8ecae5c9b414f.html",
+                "source_date": "2025-10-30",
+                "source_id": "SRC_MIIT_ELECTRONICS_Q3RUN_20251030",
+                "source_name": "2025年前三季度电子信息制造业运行情况",
+                "source_type": "government_dataset",
+                "source_url": "https://www.miit.gov.cn/gxsj/tjfx/dzxx/art/2025/art_b280aaee390849aca2f8ecae5c9b414f.html",
+                "publish_date": "2025-10-30",
+                "captured_at": "2026-02-18"
+              },
+              "summary": "电子信息制造业季度运行数据更新后，半导体岗位能力模型进一步向“良率提升+交付协同”聚焦。",
+              "title": "电子制造运行数据更新，半导体岗位向量产优化能力升级",
+              "updated_at": "2026-02-18",
+              "fact": "运行数据反映产业链景气分化，企业招聘更看重良率爬坡与交付稳定能力。",
+              "impact": "应届生应准备覆盖验证、流片到量产优化的完整工程案例。",
+              "industry_indicator": "量产良率、库存周转天数、交付达成率",
+              "evidence_chain": {
+                "primary_source_id": "SRC_MIIT_ELECTRONICS_Q3RUN_20251030",
+                "secondary_source_ids": [
+                  "SRC_AUTO_WWW_SMICS_COM_7D437B2"
+                ],
+                "chain_level": "dual_source",
+                "verified_at": "2026-02-18"
+              }
             }
           ],
           "last_checked": "2026-02-17",
@@ -114006,11 +114496,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 87.5,
-        "freshness_percent_overall": 84.4,
+        "evidence_percent_overall": 87.9,
+        "freshness_percent_overall": 84.8,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.3,
+        "quality_score_overall": 92.1,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -114025,8 +114515,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 36.4
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 95.5
       },
       "slug": "semiconductor-electronics",
       "sources": [
@@ -119710,7 +120200,7 @@
         "freshness_percent_overall": 87.7,
         "real_data_ratio_overall": 75,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.4,
+        "quality_score_overall": 87.6,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "公司清单",
@@ -119725,8 +120215,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 45.5
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 9.1
       },
       "slug": "state-owned-enterprise",
       "sources": [
@@ -124792,7 +125282,7 @@
         "freshness_percent_overall": 86.7,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 94.1,
+        "quality_score_overall": 91.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -124807,8 +125297,8 @@
         "personalization_completion_percent": 0,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-17",
-        "ranking_percentile": 13.6
+        "updated_at": "2026-02-18",
+        "ranking_percentile": 90.9
       },
       "slug": "telecom-operators",
       "sources": [

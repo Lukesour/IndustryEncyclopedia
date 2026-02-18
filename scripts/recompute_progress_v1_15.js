@@ -39,7 +39,7 @@ function getPublishDate(item) {
 }
 
 const entries = data['行业词条'] || [];
-const nowTs = Date.parse('2026-02-17T00:00:00Z');
+const nowTs = Date.parse('2026-02-18T00:00:00Z');
 
 for (const entry of entries) {
   const dynamic = entry.dynamic || {};
@@ -148,6 +148,10 @@ for (const entry of entries) {
     )
     : 0;
 
+  const questionDepth = writtenItems.length + interviewItems.length;
+  const questionDepthTarget = 18;
+  const questionDepthScore = ratioScore(Math.min(questionDepth, questionDepthTarget), questionDepthTarget);
+
   const eventItems = Array.isArray(dynamic['行业事件日志']?.items) ? dynamic['行业事件日志'].items : [];
   const eventTotalTarget = Math.max(2, toNum(data?.['治理配置']?.['发布硬门槛']?.event_log_min_count, 6));
   const eventRecentTarget = Math.max(1, toNum(data?.['治理配置']?.['发布硬门槛']?.event_recent_180d_min_count, 4));
@@ -208,18 +212,25 @@ for (const entry of entries) {
     ? round1(((personalizationTotal - personalizationPending) * 100) / personalizationTotal)
     : 100;
 
-  // v1.25: 新增来源独立性权重，并以publish_date优先计算新鲜度，提升分数可解释性。
-  const qualityScoreOverall = round1(
-    baseQualityScore * 0.42
-    + salaryCoverageScore * 0.14
+  // v1.28: 在v1.25基础上加入题库深度与惩罚项（时效/来源集中/深度不足），提升行业区分度与可解释性。
+  const stalePenalty = Math.max(0, (85 - freshnessLiveScore) * 0.12);
+  const sourceConcentrationPenalty = Math.max(0, (top1SharePercent - 6.5) * 0.6);
+  const depthPenalty = Math.max(0, (70 - questionDepthScore) * 0.08);
+  const qualityRawScore =
+    baseQualityScore * 0.34
+    + salaryCoverageScore * 0.13
     + questionRoleCoverageScore * 0.1
-    + decisionEvidenceScore * 0.1
-    + eventDensityScore * 0.05
-    + sourceDiversityScore * 0.05
+    + questionDepthScore * 0.07
+    + decisionEvidenceScore * 0.11
+    + eventDensityScore * 0.06
+    + sourceDiversityScore * 0.06
     + sourceIndependenceScore * 0.05
-    + evidenceStrengthScore * 0.05
-    + freshnessLiveScore * 0.04,
-  );
+    + evidenceStrengthScore * 0.04
+    + freshnessLiveScore * 0.04
+    - stalePenalty
+    - sourceConcentrationPenalty
+    - depthPenalty;
+  const qualityScoreOverall = round1(Math.max(0, Math.min(100, qualityRawScore)));
 
   entry.progress = {
     todo_collections: todo,
@@ -243,7 +254,7 @@ for (const entry of entries) {
     personalization_completion_percent: personalizationCompletion,
     salary_micro_status: dynamic['薪酬快照_按城市_按公司层级_按岗位']?.data_status || 'not_collected',
     salary_macro_status: dynamic['薪酬实证_国家统计口径']?.data_status || 'not_collected',
-    updated_at: '2026-02-17',
+    updated_at: '2026-02-18',
     ranking_percentile: 0,
   };
 }
