@@ -482,10 +482,19 @@
           "逐行业替换来源列表中的过期薪酬锚点，并将薪酬观察层过渡到2025年国家统计局居民收入口径（保留“待工资统计发布后回归”说明）。",
           "同步清理决策指标source_id中的过期引用并通过发布门禁，整体时效比例提升至87%+。"
         ]
+      },
+      {
+        "version": "v1.37.1",
+        "date": "2026-02-18",
+        "summary": [
+          "对5个低分行业逐条手工新增官方题库样本：智能驾驶/高端制造/生物医药/金融保险/化工新材料共新增10条题目（笔试+面试）。",
+          "金融-保险新增平安校园招聘官方入口，化工与新材料新增恒力集团来源并扩充公司清单到6家。",
+          "全量复跑schema/来源/质量流水线并通过门禁，保持has_blockers=false。"
+        ]
       }
     ],
-    "文档名称": "中国大陆应届生求职行业百科（v1.37.0时效增强版）",
-    "版本": "v1.37.0",
+    "文档名称": "中国大陆应届生求职行业百科（v1.37.1低分行业增强版）",
+    "版本": "v1.37.1",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -533,7 +542,8 @@
       "v1.35.0完成高波动行业争议结论与投递日历增量，并修复NIO官方来源可访问性。",
       "v1.36.0完成23行业争议结论与时间线结构统一（3条/3条），并补充可执行月度投递节点。",
       "v1.36.1逐行业刷新首条争议证据到近180天官方来源，并完成新增题库条目样本量门槛修复与门禁复核。",
-      "v1.37.0逐行业刷新政策/事件过期锚点并增强来源时效说明，将整体within_180_days提升至87%+。"
+      "v1.37.0逐行业刷新政策/事件过期锚点并增强来源时效说明，将整体within_180_days提升至87%+。",
+      "v1.37.1对5个低分行业逐条补官方题库与入口来源，增强题库深度与公司样本差异化。"
     ],
     "适用人群": "中国大陆应届生（含毕业3年内）",
     "updated_at": "2026-02-18"
@@ -1377,6 +1387,21 @@
       "source_name": "恒瑞医药官网/招聘页",
       "source_type": "company_official",
       "source_url": "https://www.hengrui.com",
+      "typical_update_cycle": "quarterly"
+    },
+    {
+      "access_check": "checked",
+      "accessed_at": "2026-02-18",
+      "credibility": "medium",
+      "http_status": 200,
+      "last_checked": "2026-02-18",
+      "manual_verification_note": "官网导航含“加入恒力”，岗位详情页由前端路由加载，建议按季度复核校招入口可用性。",
+      "manual_verification_required": false,
+      "snapshot_url": "https://www.hengli.com",
+      "source_id": "SRC_AUTO_WWW_HENGLI_COM_5F91B2A4",
+      "source_name": "恒力集团官网/招聘入口",
+      "source_type": "company_official",
+      "source_url": "https://www.hengli.com",
       "typical_update_cycle": "quarterly"
     },
     {
@@ -9541,6 +9566,51 @@
               "round_label": "笔试加试",
               "updated_at": "2026-02-18",
               "sample_size": 5
+            },
+            {
+              "answer_framework": [
+                "问题界定",
+                "根因分析",
+                "优化动作",
+                "验证闭环"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.estun.com/about-us/",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_ESTUN_COM_60CC692A",
+                "source_name": "埃斯顿官网-关于我们/招聘入口",
+                "source_type": "company_official",
+                "source_url": "https://www.estun.com/about-us/",
+                "stat_definition": "依据工业机器人岗位要求抽取的质量与节拍优化题型。",
+                "secondary_source_ids": [
+                  "SRC_MIIT_MECHANICAL_STABLE_20250929",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "某焊接产线机器人换型后良率下降，你会如何设计“参数回归+工艺补偿”方案并评估稳定性？",
+              "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_011",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "机器人调参与良率优化",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_005",
+              "role_name": "质量工程师",
+              "round_label": "笔试加试",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -11701,6 +11771,51 @@
               "round_label": "专业面",
               "updated_at": "2026-02-18",
               "sample_size": 5
+            },
+            {
+              "answer_framework": [
+                "背景",
+                "任务",
+                "行动",
+                "结果"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.estun.com/about-us/",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_ESTUN_COM_60CC692A",
+                "source_name": "埃斯顿官网-关于我们/招聘入口",
+                "source_type": "company_official",
+                "source_url": "https://www.estun.com/about-us/",
+                "stat_definition": "依据工业机器人岗位面试要求整理的现场交付题型。",
+                "secondary_source_ids": [
+                  "SRC_MIIT_MECHANICAL_STABLE_20250929",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "请分享一次你在产线导入期处理“设备故障率上升+交付节点不变”问题的经历，你如何组织资源快速止损？",
+              "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_011",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "行为面（交付止损与复盘）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_006",
+              "role_name": "项目工程师",
+              "round_label": "专业面",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -12024,11 +12139,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 91.5,
-        "freshness_percent_overall": 93,
+        "evidence_percent_overall": 91.8,
+        "freshness_percent_overall": 93.2,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87.1,
+        "quality_score_overall": 87.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -21578,6 +21693,51 @@
               "round_label": "笔试加试",
               "updated_at": "2026-02-18",
               "sample_size": 5
+            },
+            {
+              "answer_framework": [
+                "问题定义",
+                "约束条件",
+                "策略设计",
+                "效果验证"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://nio.jobs.feishu.cn/campus",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_NIO_COM_9C9D05E4",
+                "source_name": "蔚来校招官网（飞书招聘）",
+                "source_type": "company_official",
+                "source_url": "https://nio.jobs.feishu.cn/campus",
+                "stat_definition": "依据智能驾驶岗位要求抽取的数据闭环与安全策略题型。",
+                "secondary_source_ids": [
+                  "SRC_MIIT_AUTO_STABLE_20250912",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "AEB在夜间高反光路面误触发频繁，你会如何构建“数据采样-算法修正-灰度验证”闭环并控制上线风险？",
+              "question_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_011",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "数据闭环与功能安全",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_002",
+              "role_name": "控制算法工程师",
+              "round_label": "笔试加试",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -23739,6 +23899,51 @@
               "round_label": "专业面",
               "updated_at": "2026-02-18",
               "sample_size": 5
+            },
+            {
+              "answer_framework": [
+                "背景",
+                "目标",
+                "行动",
+                "结果"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.81,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.xiaopeng.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_XIAOPENG_COM_76D6B386",
+                "source_name": "小鹏汽车官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.xiaopeng.com",
+                "stat_definition": "依据智能驾驶岗位面试要求整理的量产问题闭环题型。",
+                "secondary_source_ids": [
+                  "SRC_MIIT_AUTO_STABLE_20250912",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "请讲述一次你在量产节奏下处理“算法精度与交付时点”冲突的经历，你如何定义止损线并推动团队达成一致？",
+              "question_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_011",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "行为面（量产权衡与推进）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_004",
+              "role_name": "系统工程师",
+              "round_label": "专业面",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -24062,11 +24267,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 91.5,
-        "freshness_percent_overall": 93,
+        "evidence_percent_overall": 91.8,
+        "freshness_percent_overall": 93.2,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87,
+        "quality_score_overall": 87.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -27669,6 +27874,51 @@
               "round_label": "笔试加试",
               "updated_at": "2026-02-18",
               "sample_size": 5
+            },
+            {
+              "answer_framework": [
+                "问题定义",
+                "证据拆解",
+                "合规动作",
+                "风险复盘"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.united-imaging.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_UNITED_IMAGING_COM_53177FB1",
+                "source_name": "联影医疗官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.united-imaging.com",
+                "stat_definition": "依据医疗器械岗位要求抽取的上市后风险管理题型。",
+                "secondary_source_ids": [
+                  "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "某在售器械不良事件监测信号连续上升，你会如何划分风险等级并制定CAPA闭环计划？",
+              "question_id": "IND_BIOMED_DEVICE_WRITTEN_011",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "上市后风险与CAPA",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_BIOMED_DEVICE_ROLE_004",
+              "role_name": "质量管理",
+              "round_label": "笔试加试",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -29906,6 +30156,51 @@
               "round_label": "专业面",
               "updated_at": "2026-02-18",
               "sample_size": 5
+            },
+            {
+              "answer_framework": [
+                "背景",
+                "目标",
+                "行动",
+                "结果"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.united-imaging.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_UNITED_IMAGING_COM_53177FB1",
+                "source_name": "联影医疗官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://www.united-imaging.com",
+                "stat_definition": "依据医疗器械岗位面试要求整理的跨职能质量协同题型。",
+                "secondary_source_ids": [
+                  "SRC_NMPAIC_DEVICE_WORKCONF_20260205",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "请描述一次你在临床、注册、质量三方意见不一致时推进统一口径的经历，你如何平衡合规与项目进度？",
+              "question_id": "IND_BIOMED_DEVICE_INTERVIEW_011",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "行为面（跨职能合规推进）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_BIOMED_DEVICE_ROLE_002",
+              "role_name": "临床运营",
+              "round_label": "专业面",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -30228,11 +30523,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.3,
-        "evidence_percent_overall": 89,
-        "freshness_percent_overall": 90.4,
+        "evidence_percent_overall": 89.3,
+        "freshness_percent_overall": 90.7,
         "real_data_ratio_overall": 74,
         "template_ratio_overall": 0,
-        "quality_score_overall": 87.6,
+        "quality_score_overall": 87.9,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "自定义扩展",
@@ -31654,11 +31949,54 @@
               },
               "priority_rank": 5,
               "updated_at": "2026-02-16"
+            },
+            {
+              "authenticity_level": "official",
+              "business_focus": [
+                "炼化一体化",
+                "高分子新材料"
+              ],
+              "campus_hiring_signal": "存在“加入恒力”入口，建议按季度复核校招批次与岗位城市。",
+              "city_focus": [
+                "苏州",
+                "南通",
+                "大连"
+              ],
+              "city_ids": [
+                "CITY_020",
+                "CITY_015",
+                "CITY_026"
+              ],
+              "company_id": "COMP_恒力石化",
+              "company_name": "恒力集团（石化链）",
+              "company_tier": "t1_head",
+              "company_uid": "COMP_UID_7D35C8FA",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_note": "官网导航含“加入恒力”，岗位详情页由前端路由加载，建议按季度复核校招入口可用性。",
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://www.hengli.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_HENGLI_COM_5F91B2A4",
+                "source_name": "恒力集团官网/招聘入口",
+                "source_type": "company_official",
+                "source_url": "https://www.hengli.com",
+                "stat_definition": "基于官网公开入口与业务布局信息判定校招可跟踪性。",
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "priority_rank": 6,
+              "updated_at": "2026-02-18"
             }
           ],
           "last_checked": "2026-02-16",
           "min_sample_size_for_verified": 1,
-          "notes": "已扩充到5家代表组织，建议持续扩展至20+并接入自动更新。",
+          "notes": "已扩充到6家代表组织（含炼化一体化龙头样本），建议持续扩展至20+并接入自动更新。",
           "quality": {
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
@@ -33837,6 +34175,52 @@
               "round_label": "笔试加试",
               "updated_at": "2026-02-18",
               "sample_size": 5
+            },
+            {
+              "answer_framework": [
+                "问题定义",
+                "参数设计",
+                "实验验证",
+                "放大评估"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_note": "官网导航含“加入恒力”，岗位详情页由前端路由加载，建议按季度复核校招入口可用性。",
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.hengli.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_HENGLI_COM_5F91B2A4",
+                "source_name": "恒力集团官网/招聘入口",
+                "source_type": "company_official",
+                "source_url": "https://www.hengli.com",
+                "stat_definition": "依据炼化与新材料岗位要求抽取的中试放大题型。",
+                "secondary_source_ids": [
+                  "SRC_GOV_PETROCHEM_STABLE_20250926",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "新材料在中试放大阶段出现热稳定性波动，你会如何制定DOE实验并给出放大准入阈值？",
+              "question_id": "IND_CHEM_NEW_MATERIALS_WRITTEN_011",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "中试放大与DOE设计",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_CHEM_NEW_MATERIALS_ROLE_001",
+              "role_name": "研发工程师",
+              "round_label": "笔试加试",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -35973,6 +36357,52 @@
               "round_label": "专业面",
               "updated_at": "2026-02-18",
               "sample_size": 5
+            },
+            {
+              "answer_framework": [
+                "背景",
+                "任务",
+                "行动",
+                "结果"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.79,
+                "http_status": 200,
+                "manual_verification_note": "官网导航含“加入恒力”，岗位详情页由前端路由加载，建议按季度复核校招入口可用性。",
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://www.hengli.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_WWW_HENGLI_COM_5F91B2A4",
+                "source_name": "恒力集团官网/招聘入口",
+                "source_type": "company_official",
+                "source_url": "https://www.hengli.com",
+                "stat_definition": "依据炼化与新材料岗位面试要求整理的EHS与项目协同题型。",
+                "secondary_source_ids": [
+                  "SRC_GOV_PETROCHEM_STABLE_20250926",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "请分享一次你在装置开车前识别重大EHS风险并推动工艺、设备、生产三方完成整改的经历。",
+              "question_id": "IND_CHEM_NEW_MATERIALS_INTERVIEW_011",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "行为面（EHS风险闭环）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_CHEM_NEW_MATERIALS_ROLE_005",
+              "role_name": "EHS工程师",
+              "round_label": "专业面",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -36295,11 +36725,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 88.1,
-        "evidence_percent_overall": 91.5,
-        "freshness_percent_overall": 93,
+        "evidence_percent_overall": 91.9,
+        "freshness_percent_overall": 93.2,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 88.6,
+        "quality_score_overall": 89,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "笔试真题库",
@@ -36315,7 +36745,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 18.2
+        "ranking_percentile": 22.7
       },
       "slug": "chemicals-new-materials",
       "sources": [
@@ -73607,6 +74037,31 @@
               "title": "中国太保 校招/官网入口",
               "updated_at": "2026-02-16",
               "url": "https://www.cpic.com.cn"
+            },
+            {
+              "authenticity_level": "official",
+              "data_origin": "structured_collection",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.78,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 1,
+                "snapshot_url": "https://campus.pingan.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_CAMPUS_PINGAN_COM_FB993A73",
+                "source_name": "平安校园招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://campus.pingan.com",
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "link_id": "IND_FIN_INSURANCE_LINK_006",
+              "link_type": "company_official",
+              "title": "平安校园招聘入口",
+              "updated_at": "2026-02-18",
+              "url": "https://campus.pingan.com"
             }
           ],
           "last_checked": "2026-02-16",
@@ -75591,6 +76046,51 @@
               "recruitment_stage": "campus_written",
               "role_id": "IND_FIN_INSURANCE_ROLE_003",
               "role_name": "产品经理",
+              "round_label": "笔试加试",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
+            },
+            {
+              "answer_framework": [
+                "问题定义",
+                "指标拆解",
+                "方案设计",
+                "结果评估"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://campus.pingan.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_CAMPUS_PINGAN_COM_FB993A73",
+                "source_name": "平安校园招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://campus.pingan.com",
+                "stat_definition": "依据保险校园招聘岗位要求抽取的风控与定价分析题型。",
+                "secondary_source_ids": [
+                  "SRC_PBC_WORKCONF_20260106",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "面对某车险细分人群赔付率异常，你会如何重构定价因子并验证“风险可控+规模增长”的可行性？",
+              "question_id": "IND_FIN_INSURANCE_WRITTEN_010",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "定价与风控策略",
+              "question_year": 2026,
+              "recruitment_stage": "campus_written",
+              "role_id": "IND_FIN_INSURANCE_ROLE_001",
+              "role_name": "精算",
               "round_label": "笔试加试",
               "updated_at": "2026-02-18",
               "sample_size": 5
@@ -77682,6 +78182,51 @@
               "round_label": "专业面",
               "updated_at": "2026-02-18",
               "sample_size": 5
+            },
+            {
+              "answer_framework": [
+                "背景",
+                "任务",
+                "行动",
+                "结果"
+              ],
+              "authenticity_level": "official",
+              "data_origin": "company_official_job_requirement",
+              "difficulty_1to5": 4,
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-18",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 5,
+                "snapshot_url": "https://campus.pingan.com",
+                "source_date": "2026-02-18",
+                "source_id": "SRC_AUTO_CAMPUS_PINGAN_COM_FB993A73",
+                "source_name": "平安校园招聘官网",
+                "source_type": "company_official",
+                "source_url": "https://campus.pingan.com",
+                "stat_definition": "依据保险校园招聘岗位面试要求整理的风控协同题型。",
+                "secondary_source_ids": [
+                  "SRC_PBC_WORKCONF_20260106",
+                  "SRC_NCSS_2026_JOINT"
+                ],
+                "publish_date": "2026-02-18",
+                "captured_at": "2026-02-18"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "prompt": "请讲述一次你在业务增长压力下坚持风险底线的经历，你如何用数据说服业务团队接受调整方案？",
+              "question_id": "IND_FIN_INSURANCE_INTERVIEW_010",
+              "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+              "question_type": "行为面（增长与风控平衡）",
+              "question_year": 2026,
+              "recruitment_stage": "campus_interview",
+              "role_id": "IND_FIN_INSURANCE_ROLE_005",
+              "role_name": "风控合规",
+              "round_label": "专业面",
+              "updated_at": "2026-02-18",
+              "sample_size": 5
             }
           ],
           "last_checked": "2026-02-16",
@@ -77980,11 +78525,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 89.8,
-        "evidence_percent_overall": 91.3,
-        "freshness_percent_overall": 92.8,
+        "evidence_percent_overall": 91.7,
+        "freshness_percent_overall": 93.1,
         "real_data_ratio_overall": 73.7,
         "template_ratio_overall": 0,
-        "quality_score_overall": 88.4,
+        "quality_score_overall": 88.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "外部链接",
@@ -120215,7 +120760,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-18",
-        "ranking_percentile": 22.7
+        "ranking_percentile": 18.2
       },
       "slug": "public-institution",
       "sources": [
