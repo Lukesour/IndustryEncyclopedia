@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-19T11:44:23Z",
+  "generated_at": "2026-02-19T11:49:03Z",
   "data_file": "行业百科.json",
   "document": {
     "version": "v1.57.0",
@@ -61,8 +61,8 @@
     "event_recent_180d_stddev": 0.5865538070970452,
     "event_recent_180d_min": 8,
     "event_recent_180d_max": 10,
-    "decision_evidence_sample_size_stddev": 0.9619948790796318,
-    "decision_evidence_sample_size_min": 12,
+    "decision_evidence_sample_size_stddev": 0.9961980543827771,
+    "decision_evidence_sample_size_min": 10,
     "decision_evidence_sample_size_max": 18
   },
   "content_realness": {
@@ -75,18 +75,18 @@
   },
   "template_quality": {
     "template_items": 0,
-    "items_total": 5161,
+    "items_total": 5165,
     "template_ratio_percent": 0
   },
   "source_concentration": {
-    "total_refs": 5161,
-    "top1_share_percent": 5.832203061422205,
-    "top5_share_percent": 21.042433636892074
+    "total_refs": 5165,
+    "top1_share_percent": 5.827686350435624,
+    "top5_share_percent": 21.026137463697967
   },
   "freshness_detail": {
-    "source_date_records": 6004,
+    "source_date_records": 6008,
     "effective_date_method": "publish_date_first_fallback_source_date",
-    "within_180_days_percent": 94.23717521652232,
+    "within_180_days_percent": 94.2410119840213,
     "older_than_365_days_count": 0
   },
   "salary_layers": {
@@ -184,7 +184,7 @@
   },
   "decision_metrics": {
     "entries_with_decision_fields": 23,
-    "decision_items_total": 257,
+    "decision_items_total": 261,
     "decision_estimation_methods_dist": [
       {
         "method": "auto_supplychain_and_model_delivery_blended_v2",
@@ -295,13 +295,13 @@
       },
       {
         "tier": "NA",
-        "count": 50
+        "count": 54
       }
     ],
     "conversion_fields_filled": 23,
     "city_cost_salary_filled": 23,
     "competition_fields_filled": 23,
-    "decision_items_with_evidence": 257,
+    "decision_items_with_evidence": 261,
     "decision_placeholder_pending_items": 0
   },
   "depth_targets_v145": {
@@ -333,7 +333,7 @@
         "interview_avg": 3.5543478260869565
       },
       "source_url_depth": {
-        "depth_ge2_percent": 52.05753096284459
+        "depth_ge2_percent": 52.89421157684631
       }
     }
   },
@@ -356,7 +356,7 @@
     }
   },
   "encyclopedia_depth_v155": {
-    "generated_at": "2026-02-19T11:44:28Z",
+    "generated_at": "2026-02-19T11:49:07Z",
     "depth_version": "v1.55.0",
     "gate_mode": "report_only",
     "enabled": true,
@@ -369,7 +369,7 @@
     "actual": {
       "high_growth_landing_percent": 100,
       "core_role_four_stage_percent": 36.231884057971016,
-      "role_profile_deep_link_percent": 16.57608695652174,
+      "role_profile_deep_link_percent": 27.445652173913043,
       "platform_verification_pending_percent": 0,
       "expansion_candidate_landing_percent": 25
     },
@@ -386,8 +386,8 @@
         "role_total": 16,
         "role_pending_platform_count": 0,
         "role_pending_platform_percent": 0,
-        "role_deep_link_count": 6,
-        "role_deep_link_percent": 37.5,
+        "role_deep_link_count": 16,
+        "role_deep_link_percent": 100,
         "expansion_candidate_total": 12,
         "expansion_candidate_landed": 6,
         "expansion_candidate_landing_percent": 50
@@ -494,8 +494,8 @@
         "role_total": 16,
         "role_pending_platform_count": 0,
         "role_pending_platform_percent": 0,
-        "role_deep_link_count": 6,
-        "role_deep_link_percent": 37.5,
+        "role_deep_link_count": 16,
+        "role_deep_link_percent": 100,
         "expansion_candidate_total": 12,
         "expansion_candidate_landed": 1,
         "expansion_candidate_landing_percent": 8.333333333333334
@@ -566,8 +566,8 @@
         "role_total": 16,
         "role_pending_platform_count": 0,
         "role_pending_platform_percent": 0,
-        "role_deep_link_count": 6,
-        "role_deep_link_percent": 37.5,
+        "role_deep_link_count": 16,
+        "role_deep_link_percent": 100,
         "expansion_candidate_total": 12,
         "expansion_candidate_landed": 3,
         "expansion_candidate_landing_percent": 25
@@ -584,8 +584,8 @@
         "role_total": 16,
         "role_pending_platform_count": 0,
         "role_pending_platform_percent": 0,
-        "role_deep_link_count": 6,
-        "role_deep_link_percent": 37.5,
+        "role_deep_link_count": 16,
+        "role_deep_link_percent": 100,
         "expansion_candidate_total": 12,
         "expansion_candidate_landed": 3,
         "expansion_candidate_landing_percent": 25
@@ -791,24 +791,6 @@
     ],
     "gaps_by_industry": [
       {
-        "industry_id": "IND_INTERNET_AI",
-        "industry": "互联网与AI",
-        "high_growth_total": 12,
-        "high_growth_landed": 12,
-        "high_growth_landing_percent": 100,
-        "core_role_total": 6,
-        "core_role_full4_count": 6,
-        "core_role_full4_percent": 100,
-        "role_total": 16,
-        "role_pending_platform_count": 0,
-        "role_pending_platform_percent": 0,
-        "role_deep_link_count": 6,
-        "role_deep_link_percent": 37.5,
-        "expansion_candidate_total": 12,
-        "expansion_candidate_landed": 6,
-        "expansion_candidate_landing_percent": 50
-      },
-      {
         "industry_id": "IND_CIVIL_SERVICE",
         "industry": "公务员体系",
         "high_growth_total": 8,
@@ -899,24 +881,6 @@
         "expansion_candidate_landing_percent": 25
       },
       {
-        "industry_id": "IND_FIN_BANK",
-        "industry": "金融-银行",
-        "high_growth_total": 10,
-        "high_growth_landed": 10,
-        "high_growth_landing_percent": 100,
-        "core_role_total": 6,
-        "core_role_full4_count": 6,
-        "core_role_full4_percent": 100,
-        "role_total": 16,
-        "role_pending_platform_count": 0,
-        "role_pending_platform_percent": 0,
-        "role_deep_link_count": 6,
-        "role_deep_link_percent": 37.5,
-        "expansion_candidate_total": 12,
-        "expansion_candidate_landed": 1,
-        "expansion_candidate_landing_percent": 8.333333333333334
-      },
-      {
         "industry_id": "IND_PUBLIC_INSTITUTION",
         "industry": "事业单位体系",
         "high_growth_total": 8,
@@ -969,42 +933,6 @@
         "expansion_candidate_total": 12,
         "expansion_candidate_landed": 2,
         "expansion_candidate_landing_percent": 16.666666666666668
-      },
-      {
-        "industry_id": "IND_NEW_ENERGY",
-        "industry": "新能源",
-        "high_growth_total": 12,
-        "high_growth_landed": 12,
-        "high_growth_landing_percent": 100,
-        "core_role_total": 6,
-        "core_role_full4_count": 6,
-        "core_role_full4_percent": 100,
-        "role_total": 16,
-        "role_pending_platform_count": 0,
-        "role_pending_platform_percent": 0,
-        "role_deep_link_count": 6,
-        "role_deep_link_percent": 37.5,
-        "expansion_candidate_total": 12,
-        "expansion_candidate_landed": 3,
-        "expansion_candidate_landing_percent": 25
-      },
-      {
-        "industry_id": "IND_TELECOM_OPERATOR",
-        "industry": "通信与运营商",
-        "high_growth_total": 12,
-        "high_growth_landed": 12,
-        "high_growth_landing_percent": 100,
-        "core_role_total": 6,
-        "core_role_full4_count": 6,
-        "core_role_full4_percent": 100,
-        "role_total": 16,
-        "role_pending_platform_count": 0,
-        "role_pending_platform_percent": 0,
-        "role_deep_link_count": 6,
-        "role_deep_link_percent": 37.5,
-        "expansion_candidate_total": 12,
-        "expansion_candidate_landed": 3,
-        "expansion_candidate_landing_percent": 25
       },
       {
         "industry_id": "IND_FIN_SECURITIES_FUND",
