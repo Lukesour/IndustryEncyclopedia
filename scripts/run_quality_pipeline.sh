@@ -1356,6 +1356,15 @@ jq -n \
 
 cp "${GATE_PATH}" "${LATEST_GATE_PATH}"
 
+# v1.58 overlay: mapping integrity, deep-link quality, prompt de-dup and decision-module depth.
+V158_OVERLAY_SCRIPT="${ROOT_DIR}/scripts/apply_v158_quality_overlay.sh"
+if [[ -f "${V158_OVERLAY_SCRIPT}" ]]; then
+  OVERLAY_BLOCKERS="$("${V158_OVERLAY_SCRIPT}" "${DATA_PATH}" "${REPORT_PATH}" "${GATE_PATH}" "${LATEST_PATH}" "${LATEST_GATE_PATH}" || true)"
+  if [[ "${OVERLAY_BLOCKERS}" == "1" ]]; then
+    HAS_BLOCKERS=1
+  fi
+fi
+
 echo "Quality pipeline completed"
 echo "- report: ${REPORT_PATH}"
 echo "- latest: ${LATEST_PATH}"
