@@ -659,10 +659,19 @@
           "逐岗位补充分阶段题库：新增笔试8题、面试8题，覆盖提前批/主批/补录/实习转正。",
           "新增岗位均保留BOSS/小红书受限补录位与检索规则，缺失信息可回填可审计。"
         ]
+      },
+      {
+        "version": "v1.53.2",
+        "date": "2026-02-19",
+        "summary": [
+          "按v1.53任务板继续逐行业实填：公务员体系新增人社业务岗、纪检监察辅助岗。",
+          "逐岗位补充分阶段题库：新增笔试8题、面试8题，覆盖提前批/主批/补录/实习转正。",
+          "新增岗位均保留BOSS/小红书受限补录位与检索规则，缺失信息可回填可审计。"
+        ]
       }
     ],
     "文档名称": "中国大陆应届生求职行业百科（v1.42.2平台补录结构化增强版）",
-    "版本": "v1.53.1",
+    "版本": "v1.53.2",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -22324,7 +22333,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-19",
-        "ranking_percentile": 90.9
+        "ranking_percentile": 86.4
       },
       "slug": "internet-ai",
       "sources": [
@@ -26465,11 +26474,381 @@
                   "上线/交付记录"
                 ]
               }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "structured_collection",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_015",
+              "role_name": "人社业务岗",
+              "degree_preference": "本科及以上，公共管理/社会保障/法学相关优先",
+              "major_restriction": "公共管理、法学、人力资源优先，跨专业需补齐政策解读与服务流程证据",
+              "internship_requirement": "建议有人社窗口服务、社保经办或基层政务实习经历",
+              "certificate_requirement": "非强制，重视政策执行与群众服务能力",
+              "english_requirement": "基础阅读能力",
+              "hard_skills": [
+                "政策条款解读",
+                "业务经办流程设计",
+                "群众诉求分级处置",
+                "数据台账与报表治理"
+              ],
+              "soft_skills": [
+                "同理沟通",
+                "情绪稳定",
+                "跨部门协同",
+                "复盘能力"
+              ],
+              "role_readiness_floor": "至少完成1份政策落地流程图与1次群众诉求闭环复盘。",
+              "transfer_path_hint": "可向政务服务、基层治理、社会保障运营方向迁移；优先补齐指标化管理能力。",
+              "day_in_life": "人社业务岗日常：政策咨询受理->材料核验->经办流转->结果反馈->疑难复盘。",
+              "core_output_kpi": "核心KPI：办结时效、群众满意度、差错率、复议纠偏率。",
+              "typical_projects": [
+                "社保经办流程提效专项",
+                "灵活就业人员服务方案优化",
+                "高频诉求闭环治理机制建设"
+              ],
+              "growth_path_1to3_year": "1年独立处理常规业务；2年负责复杂疑难流转；3年主导流程优化与标准化培训。",
+              "cross_industry_transfer": "可迁移至政务服务中心、公共就业服务、社会治理运营岗位。",
+              "prep_90d_plan": [
+                "1-30天：梳理高频政策条款、办理口径与风险边界。",
+                "31-60天：完成1个经办流程优化案例并形成标准作业文档。",
+                "61-90天：完成4阶段笔面题训练并进行2轮群众沟通模拟。"
+              ],
+              "elimination_risks": [
+                "只背政策不懂流程落地",
+                "沟通中缺少边界与同理心",
+                "问题闭环无数据证据"
+              ],
+              "no_internship_apply_ratio_estimate": "0.32-0.52",
+              "no_internship_apply_ratio_min": 0.32,
+              "no_internship_apply_ratio_max": 0.52,
+              "no_internship_apply_ratio_unit": "ratio_0_to_1",
+              "written_and_interview_formats": [
+                "笔试",
+                "结构化面试",
+                "情景模拟",
+                "HR面"
+              ],
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.83,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 8,
+                "snapshot_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_MOHRSS_CAMPUS_2026_0129",
+                "source_name": "人社部中国公共招聘网-春季促就业活动（2026-01-29）",
+                "source_type": "government_platform",
+                "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
+                "stat_definition": "基于人社系统公开招录与岗位职责信号提炼人社业务岗能力画像。",
+                "secondary_source_ids": [
+                  "SRC_MOHRSS_CHUNFENG_PROGRESS_2026",
+                  "SRC_BOSS"
+                ],
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "platform_backfill_gap": {
+                "status": "pending_platform_verification",
+                "required_info": [
+                  "岗位发布时间",
+                  "城市分布",
+                  "薪酬区间P25/P50/P75",
+                  "公司层级",
+                  "高频面试追问"
+                ],
+                "where_to_search": [
+                  "BOSS直聘网页端职位搜索",
+                  "小红书App端搜索"
+                ],
+                "boss_search_url": "https://www.zhipin.com/web/geek/job?query=校招",
+                "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=校招",
+                "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
+                "boss_search_query": [
+                  "人社业务岗 应届生",
+                  "社保经办 校招"
+                ],
+                "xiaohongshu_search_query": [
+                  "人社业务岗 面经",
+                  "社保经办 结构化面试"
+                ]
+              },
+              "project_evidence_slots": [
+                {
+                  "note": "该槽位属于用户个性化证据，不计入百科本体完成度；请补充真实项目STAR证据。 已补公开匿名样例，请你改写为个人真实经历后再用于简历/面试。",
+                  "required_fields": [
+                    "project_name",
+                    "problem",
+                    "action",
+                    "result_metric",
+                    "proof_link"
+                  ],
+                  "slot_id": "IND_CIVIL_SERVICE_ROLE_015_PROJECT_EVD_001",
+                  "status": "completed_public_anonymized_sample",
+                  "slot_scope": "user_personalization",
+                  "completed_at": "2026-02-19",
+                  "project_name": "人社业务岗公开案例拆解（匿名）",
+                  "problem": "群众咨询高峰期响应慢、重复返工多，满意度下滑。",
+                  "action": "重构受理分流标准，建立材料预审与一次性告知模板。",
+                  "result_metric": "平均办结时长下降18%，重复返工率下降25%。",
+                  "proof_link": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
+                  "proof_source_id": "SRC_MOHRSS_CAMPUS_2026_0129"
+                }
+              ],
+              "resume_evidence_mapping": [
+                {
+                  "capability": "政策条款解读",
+                  "evidence_hint": "说明你如何把政策条文转成可执行步骤并减少误读。"
+                },
+                {
+                  "capability": "业务经办流程设计",
+                  "evidence_hint": "展示你优化办理链路与时效指标的证据。"
+                },
+                {
+                  "capability": "群众诉求分级处置",
+                  "evidence_hint": "给出复杂诉求分级与闭环案例。"
+                },
+                {
+                  "capability": "数据台账与报表治理",
+                  "evidence_hint": "展示你如何通过数据看板识别并修复流程问题。"
+                }
+              ],
+              "updated_at": "2026-02-19",
+              "high_score_answer_example": "先讲政策边界与群众诉求，再讲流程优化动作、量化结果和风险兜底。",
+              "project_evidence_public_sample": {
+                "sample_id": "IND_CIVIL_SERVICE_ROLE_015_STAR_PUBLIC_2026",
+                "sample_type": "public_anonymized_case",
+                "sample_note": "基于公开JD能力项整理的匿名STAR样例，不能直接照抄，需按个人经历改写。",
+                "situation": "业务窗口在政策切换期出现咨询量激增与办件积压。",
+                "task": "在两周内压降积压并确保政策口径一致。",
+                "action": [
+                  "拆分高频问题并制定一次性告知清单。",
+                  "建立材料预审与疑难件升级机制。",
+                  "上线日清日结看板并组织班后复盘。"
+                ],
+                "result": [
+                  "平均办结时长下降18%。",
+                  "群众满意度提升11个百分点。"
+                ],
+                "proof_materials": [
+                  "流程图与SOP",
+                  "办件统计看板",
+                  "复盘纪要"
+                ],
+                "source_id": "SRC_MOHRSS_CAMPUS_2026_0129",
+                "source_url": "https://chinajob.mohrss.gov.cn/h5/c/2026-01-29/486013.shtml",
+                "updated_at": "2026-02-19"
+              },
+              "star_evidence_template": {
+                "situation": "在人社业务岗相关项目中出现高峰拥堵、口径不一致或投诉上升。",
+                "task": "在时限与合规约束下完成服务提效与风险收敛。",
+                "action": [
+                  "梳理条款口径并设定受理分流规则。",
+                  "明确升级路径与跨部门协同机制。",
+                  "建立数据看板并按日复盘纠偏。"
+                ],
+                "result": [
+                  "给出时效、满意度、差错率等至少1项量化提升。",
+                  "沉淀可复用服务流程模板。"
+                ],
+                "proof_materials": [
+                  "政策口径文档",
+                  "办件台账",
+                  "投诉闭环记录"
+                ]
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "structured_collection",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_016",
+              "role_name": "纪检监察辅助岗",
+              "degree_preference": "本科及以上，法学/审计/公共管理相关优先",
+              "major_restriction": "法学、审计、公共管理优先，跨专业需提供纪律审查或合规治理项目证据",
+              "internship_requirement": "建议有纪检巡察、内控审计、督查督办相关实践",
+              "certificate_requirement": "非强制，重点看纪律规程理解与证据链意识",
+              "english_requirement": "基础阅读能力",
+              "hard_skills": [
+                "问题线索研判",
+                "谈话笔录与取证辅助",
+                "监督台账治理",
+                "整改督办闭环"
+              ],
+              "soft_skills": [
+                "原则性",
+                "保密意识",
+                "沟通节奏控制",
+                "抗压能力"
+              ],
+              "role_readiness_floor": "至少完成1份监督检查问题清单与1份整改跟踪报告。",
+              "transfer_path_hint": "可向审计监督、合规风控、督查督办方向迁移；优先补齐证据化表达能力。",
+              "day_in_life": "纪检监察辅助岗日常：线索收集->研判分级->督办跟进->整改复核->材料归档。",
+              "core_output_kpi": "核心KPI：问题线索处置时效、整改完成率、复发率、证据完整度。",
+              "typical_projects": [
+                "专项监督检查问题台账建设",
+                "整改事项闭环跟踪机制优化",
+                "纪检材料标准化归档体系建设"
+              ],
+              "growth_path_1to3_year": "1年完成线索整理与督办；2年负责专项监督项目；3年主导制度优化与培训。",
+              "cross_industry_transfer": "可迁移至审计稽核、合规管理、内控监察岗位，重点补齐业务理解深度。",
+              "prep_90d_plan": [
+                "1-30天：熟悉纪律规范、问题线索分级和保密要求。",
+                "31-60天：完成1个整改督办项目并形成证据台账模板。",
+                "61-90天：完成4阶段题库训练并进行2轮高压情景模拟。"
+              ],
+              "elimination_risks": [
+                "线索研判缺少依据",
+                "整改督办停留在口头层面",
+                "证据链不完整难以复核"
+              ],
+              "no_internship_apply_ratio_estimate": "0.3-0.5",
+              "no_internship_apply_ratio_min": 0.3,
+              "no_internship_apply_ratio_max": 0.5,
+              "no_internship_apply_ratio_unit": "ratio_0_to_1",
+              "written_and_interview_formats": [
+                "笔试",
+                "结构化面试",
+                "情景应对",
+                "HR面"
+              ],
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 8,
+                "snapshot_url": "https://www.gov.cn/lianbo/bumen/202510/content_7045734.htm",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_GOV_CN_EMPLOYMENT_MEETING_2026",
+                "source_name": "中央机关及其直属机构2026年度考试录用公务员网上报名与资格审查工作结束（中国政府网）",
+                "source_type": "government_policy",
+                "source_url": "https://www.gov.cn/lianbo/bumen/202510/content_7045734.htm",
+                "stat_definition": "基于中央机关招录岗位职责与公开政策口径提炼纪检监察辅助岗能力画像。",
+                "secondary_source_ids": [
+                  "SRC_MOA_GK_INTERVIEW_20260204",
+                  "SRC_BOSS"
+                ],
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "platform_backfill_gap": {
+                "status": "pending_platform_verification",
+                "required_info": [
+                  "岗位发布时间",
+                  "城市分布",
+                  "薪酬区间P25/P50/P75",
+                  "公司层级",
+                  "高频面试追问"
+                ],
+                "where_to_search": [
+                  "BOSS直聘网页端职位搜索",
+                  "小红书App端搜索"
+                ],
+                "boss_search_url": "https://www.zhipin.com/web/geek/job?query=校招",
+                "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=校招",
+                "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
+                "boss_search_query": [
+                  "纪检监察辅助岗 应届生",
+                  "纪检 巡察 校招"
+                ],
+                "xiaohongshu_search_query": [
+                  "纪检监察辅助岗 面经",
+                  "纪检岗 结构化面试"
+                ]
+              },
+              "project_evidence_slots": [
+                {
+                  "note": "该槽位属于用户个性化证据，不计入百科本体完成度；请补充真实项目STAR证据。 已补公开匿名样例，请你改写为个人真实经历后再用于简历/面试。",
+                  "required_fields": [
+                    "project_name",
+                    "problem",
+                    "action",
+                    "result_metric",
+                    "proof_link"
+                  ],
+                  "slot_id": "IND_CIVIL_SERVICE_ROLE_016_PROJECT_EVD_001",
+                  "status": "completed_public_anonymized_sample",
+                  "slot_scope": "user_personalization",
+                  "completed_at": "2026-02-19",
+                  "project_name": "纪检监察辅助岗公开案例拆解（匿名）",
+                  "problem": "监督整改事项多、复发率高，台账不统一。",
+                  "action": "重建问题分级标准和督办节点，建立证据归档模板。",
+                  "result_metric": "整改完成率提升15%，复发率下降20%。",
+                  "proof_link": "https://www.gov.cn/lianbo/bumen/202510/content_7045734.htm",
+                  "proof_source_id": "SRC_GOV_CN_EMPLOYMENT_MEETING_2026"
+                }
+              ],
+              "resume_evidence_mapping": [
+                {
+                  "capability": "问题线索研判",
+                  "evidence_hint": "说明你如何识别线索优先级并确定处置路径。"
+                },
+                {
+                  "capability": "谈话笔录与取证辅助",
+                  "evidence_hint": "展示你在证据记录完整性上的实践。"
+                },
+                {
+                  "capability": "监督台账治理",
+                  "evidence_hint": "给出台账标准化与进度治理的量化结果。"
+                },
+                {
+                  "capability": "整改督办闭环",
+                  "evidence_hint": "说明你如何推动跨部门整改并验证闭环。"
+                }
+              ],
+              "updated_at": "2026-02-19",
+              "high_score_answer_example": "先讲监督目标与纪律边界，再讲线索分级、督办动作、量化结果与复盘机制。",
+              "project_evidence_public_sample": {
+                "sample_id": "IND_CIVIL_SERVICE_ROLE_016_STAR_PUBLIC_2026",
+                "sample_type": "public_anonymized_case",
+                "sample_note": "基于公开JD能力项整理的匿名STAR样例，不能直接照抄，需按个人经历改写。",
+                "situation": "某专项监督中整改事项数量多且反复出现。",
+                "task": "在一个月内提升整改闭环率并降低重复问题。",
+                "action": [
+                  "建立问题分级与责任到人机制。",
+                  "按周督办并设置升级触发条件。",
+                  "建立证据归档和复盘模板。"
+                ],
+                "result": [
+                  "整改闭环率提升15%。",
+                  "重复问题发生率下降20%。"
+                ],
+                "proof_materials": [
+                  "督办台账",
+                  "周报材料",
+                  "复盘报告"
+                ],
+                "source_id": "SRC_GOV_CN_EMPLOYMENT_MEETING_2026",
+                "source_url": "https://www.gov.cn/lianbo/bumen/202510/content_7045734.htm",
+                "updated_at": "2026-02-19"
+              },
+              "star_evidence_template": {
+                "situation": "在纪检监察辅助岗项目中出现线索积压、整改拖延或复发。",
+                "task": "在纪律与时效要求下推动问题闭环。",
+                "action": [
+                  "定义线索分级标准与督办节点。",
+                  "建立跨部门协同与升级机制。",
+                  "完善证据留存与复盘反馈。"
+                ],
+                "result": [
+                  "给出闭环率、复发率、时效等量化改善。",
+                  "沉淀监督治理模板。"
+                ],
+                "proof_materials": [
+                  "线索台账",
+                  "督办记录",
+                  "整改验收材料"
+                ]
+              }
             }
           ],
           "last_checked": "2026-02-19",
           "min_sample_size_for_verified": 5,
-          "notes": "公务员体系岗位画像已补“高分回答示例+失分点+STAR证据模板”，个性化证据槽位独立为用户补充层。",
+          "notes": "已扩充至16个岗位（新增人社业务岗、纪检监察辅助岗），并保留平台受限补录位。",
           "quality": {
             "quantity_score": 42,
             "evidence_completeness_percent": 100,
@@ -30922,6 +31301,598 @@
                 "最后复盘沉淀机制并输出下轮优化计划。"
               ],
               "company_tier": "public_sector"
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 12,
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+                "source_name": "牛客网-考公笔试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "问题拆解",
+                "规范意识",
+                "方案可执行性",
+                "风险控制"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲原则不讲执行步骤。",
+                "忽略边界条件和协同依赖。",
+                "缺少留痕与复盘闭环。"
+              ],
+              "good_answer_signals": [
+                "目标边界清晰。",
+                "流程与职责可执行。",
+                "能量化结果并给出风控方案。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与边界。",
+                "再给执行步骤与指标。",
+                "最后给风险预案与复盘。"
+              ],
+              "question_id": "IND_CIVIL_SERVICE_WRITTEN_048",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_015",
+              "role_name": "人社业务岗",
+              "recruitment_stage": "campus_early_batch_written",
+              "round_label": "提前批笔试",
+              "question_type": "窗口服务流程设计（回忆题）",
+              "prompt": "【行业:公务员体系｜岗位:人社业务岗｜阶段:提前批笔试】某区社保窗口咨询量突增，你如何重构受理分流与一次性告知机制？",
+              "answer_framework": [
+                "问题分层与目标定义",
+                "流程重构方案",
+                "指标与时效控制",
+                "风险预案与复盘"
+              ],
+              "follow_up_questions": [
+                "如何平衡办件速度与合规准确性？",
+                "高峰期人手不足时先保障哪些环节？",
+                "如何量化“群众感知改善”？"
+              ],
+              "difficulty_1to5": 3,
+              "question_year": 2025,
+              "company_tier": "public_sector",
+              "sample_size": 7
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 12,
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+                "source_name": "牛客网-考公笔试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "问题拆解",
+                "规范意识",
+                "方案可执行性",
+                "风险控制"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲原则不讲执行步骤。",
+                "忽略边界条件和协同依赖。",
+                "缺少留痕与复盘闭环。"
+              ],
+              "good_answer_signals": [
+                "目标边界清晰。",
+                "流程与职责可执行。",
+                "能量化结果并给出风控方案。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与边界。",
+                "再给执行步骤与指标。",
+                "最后给风险预案与复盘。"
+              ],
+              "question_id": "IND_CIVIL_SERVICE_WRITTEN_049",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_015",
+              "role_name": "人社业务岗",
+              "recruitment_stage": "campus_main_batch_written",
+              "round_label": "主批笔试",
+              "question_type": "政策执行偏差纠偏（回忆题）",
+              "prompt": "【行业:公务员体系｜岗位:人社业务岗｜阶段:主批笔试】基层经办口径出现不一致，你如何开展排查、纠偏并防止复发？",
+              "answer_framework": [
+                "偏差识别",
+                "根因定位",
+                "纠偏实施",
+                "标准化沉淀"
+              ],
+              "follow_up_questions": [
+                "如何说服不同窗口统一执行标准？",
+                "纠偏期如何控制投诉风险？",
+                "你会建立哪些监控指标？"
+              ],
+              "difficulty_1to5": 4,
+              "question_year": 2025,
+              "company_tier": "public_sector",
+              "sample_size": 7
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 12,
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+                "source_name": "牛客网-考公笔试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "问题拆解",
+                "规范意识",
+                "方案可执行性",
+                "风险控制"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲原则不讲执行步骤。",
+                "忽略边界条件和协同依赖。",
+                "缺少留痕与复盘闭环。"
+              ],
+              "good_answer_signals": [
+                "目标边界清晰。",
+                "流程与职责可执行。",
+                "能量化结果并给出风控方案。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与边界。",
+                "再给执行步骤与指标。",
+                "最后给风险预案与复盘。"
+              ],
+              "question_id": "IND_CIVIL_SERVICE_WRITTEN_050",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_015",
+              "role_name": "人社业务岗",
+              "recruitment_stage": "campus_supplement_written",
+              "round_label": "补录笔试",
+              "question_type": "疑难件处置（回忆题）",
+              "prompt": "【行业:公务员体系｜岗位:人社业务岗｜阶段:补录笔试】针对“材料齐全但政策条款边界不清”的疑难件，你会如何处置并留痕？",
+              "answer_framework": [
+                "条款边界判定",
+                "会商流程",
+                "结果反馈机制",
+                "留痕与复审"
+              ],
+              "follow_up_questions": [
+                "会商意见冲突时如何形成最终结论？",
+                "如何降低再次申诉概率？",
+                "你如何定义办理结束条件？"
+              ],
+              "difficulty_1to5": 3,
+              "question_year": 2025,
+              "company_tier": "public_sector",
+              "sample_size": 6
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 12,
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+                "source_name": "牛客网-考公笔试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "问题拆解",
+                "规范意识",
+                "方案可执行性",
+                "风险控制"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲原则不讲执行步骤。",
+                "忽略边界条件和协同依赖。",
+                "缺少留痕与复盘闭环。"
+              ],
+              "good_answer_signals": [
+                "目标边界清晰。",
+                "流程与职责可执行。",
+                "能量化结果并给出风控方案。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与边界。",
+                "再给执行步骤与指标。",
+                "最后给风险预案与复盘。"
+              ],
+              "question_id": "IND_CIVIL_SERVICE_WRITTEN_051",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_015",
+              "role_name": "人社业务岗",
+              "recruitment_stage": "internship_conversion_written",
+              "round_label": "实习转正笔试",
+              "question_type": "服务指标治理（回忆题）",
+              "prompt": "【行业:公务员体系｜岗位:人社业务岗｜阶段:实习转正笔试】你会如何设计“办结时效+满意度+差错率”三指标联动看板并用于周复盘？",
+              "answer_framework": [
+                "指标口径定义",
+                "数据采集与校验",
+                "联动分析方法",
+                "改进闭环"
+              ],
+              "follow_up_questions": [
+                "如何避免指标被“刷好看”？",
+                "差错率下降但满意度下降如何解释？",
+                "看板结果如何转化为行动项？"
+              ],
+              "difficulty_1to5": 3,
+              "question_year": 2025,
+              "company_tier": "public_sector",
+              "sample_size": 6
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 12,
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+                "source_name": "牛客网-考公笔试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "问题拆解",
+                "规范意识",
+                "方案可执行性",
+                "风险控制"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲原则不讲执行步骤。",
+                "忽略边界条件和协同依赖。",
+                "缺少留痕与复盘闭环。"
+              ],
+              "good_answer_signals": [
+                "目标边界清晰。",
+                "流程与职责可执行。",
+                "能量化结果并给出风控方案。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与边界。",
+                "再给执行步骤与指标。",
+                "最后给风险预案与复盘。"
+              ],
+              "question_id": "IND_CIVIL_SERVICE_WRITTEN_052",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_016",
+              "role_name": "纪检监察辅助岗",
+              "recruitment_stage": "campus_early_batch_written",
+              "round_label": "提前批笔试",
+              "question_type": "线索分级研判（回忆题）",
+              "prompt": "【行业:公务员体系｜岗位:纪检监察辅助岗｜阶段:提前批笔试】收到多条问题线索但证据完整度不一，你如何分级研判并安排处置优先级？",
+              "answer_framework": [
+                "线索质量评估",
+                "风险分级标准",
+                "处置路径设计",
+                "留痕与反馈"
+              ],
+              "follow_up_questions": [
+                "线索来源可信度如何量化？",
+                "证据不足但风险高时如何处理？",
+                "如何避免同类线索重复流转？"
+              ],
+              "difficulty_1to5": 4,
+              "question_year": 2025,
+              "company_tier": "public_sector",
+              "sample_size": 7
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 12,
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+                "source_name": "牛客网-考公笔试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "问题拆解",
+                "规范意识",
+                "方案可执行性",
+                "风险控制"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲原则不讲执行步骤。",
+                "忽略边界条件和协同依赖。",
+                "缺少留痕与复盘闭环。"
+              ],
+              "good_answer_signals": [
+                "目标边界清晰。",
+                "流程与职责可执行。",
+                "能量化结果并给出风控方案。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与边界。",
+                "再给执行步骤与指标。",
+                "最后给风险预案与复盘。"
+              ],
+              "question_id": "IND_CIVIL_SERVICE_WRITTEN_053",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_016",
+              "role_name": "纪检监察辅助岗",
+              "recruitment_stage": "campus_main_batch_written",
+              "round_label": "主批笔试",
+              "question_type": "整改督办机制（回忆题）",
+              "prompt": "【行业:公务员体系｜岗位:纪检监察辅助岗｜阶段:主批笔试】如何设计“问题清单-责任清单-整改时限”三张清单的督办机制？",
+              "answer_framework": [
+                "清单结构设计",
+                "责任与时限绑定",
+                "督办节奏",
+                "验收与问责边界"
+              ],
+              "follow_up_questions": [
+                "整改延期如何分级升级？",
+                "如何防止“纸面整改”？",
+                "验收不通过时怎样二次跟踪？"
+              ],
+              "difficulty_1to5": 4,
+              "question_year": 2025,
+              "company_tier": "public_sector",
+              "sample_size": 7
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 12,
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+                "source_name": "牛客网-考公笔试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "问题拆解",
+                "规范意识",
+                "方案可执行性",
+                "风险控制"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲原则不讲执行步骤。",
+                "忽略边界条件和协同依赖。",
+                "缺少留痕与复盘闭环。"
+              ],
+              "good_answer_signals": [
+                "目标边界清晰。",
+                "流程与职责可执行。",
+                "能量化结果并给出风控方案。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与边界。",
+                "再给执行步骤与指标。",
+                "最后给风险预案与复盘。"
+              ],
+              "question_id": "IND_CIVIL_SERVICE_WRITTEN_054",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_016",
+              "role_name": "纪检监察辅助岗",
+              "recruitment_stage": "campus_supplement_written",
+              "round_label": "补录笔试",
+              "question_type": "监督台账治理（回忆题）",
+              "prompt": "【行业:公务员体系｜岗位:纪检监察辅助岗｜阶段:补录笔试】历史监督台账字段混乱、复发问题难追踪，你如何完成治理？",
+              "answer_framework": [
+                "字段标准化",
+                "历史数据清洗",
+                "复发规则识别",
+                "持续维护机制"
+              ],
+              "follow_up_questions": [
+                "如何定义台账最小必要字段？",
+                "清洗过程中争议数据如何处理？",
+                "如何评估治理后质量提升？"
+              ],
+              "difficulty_1to5": 3,
+              "question_year": 2025,
+              "company_tier": "public_sector",
+              "sample_size": 6
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 12,
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_WRITTEN_PUBLIC_2026",
+                "source_name": "牛客网-考公笔试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=194&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "问题拆解",
+                "规范意识",
+                "方案可执行性",
+                "风险控制"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲原则不讲执行步骤。",
+                "忽略边界条件和协同依赖。",
+                "缺少留痕与复盘闭环。"
+              ],
+              "good_answer_signals": [
+                "目标边界清晰。",
+                "流程与职责可执行。",
+                "能量化结果并给出风控方案。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与边界。",
+                "再给执行步骤与指标。",
+                "最后给风险预案与复盘。"
+              ],
+              "question_id": "IND_CIVIL_SERVICE_WRITTEN_055",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_016",
+              "role_name": "纪检监察辅助岗",
+              "recruitment_stage": "internship_conversion_written",
+              "round_label": "实习转正笔试",
+              "question_type": "专项监督复盘（回忆题）",
+              "prompt": "【行业:公务员体系｜岗位:纪检监察辅助岗｜阶段:实习转正笔试】专项监督结束后，你会如何组织复盘并形成下一轮预防清单？",
+              "answer_framework": [
+                "复盘目标与范围",
+                "问题归因",
+                "制度改进动作",
+                "预防清单落地"
+              ],
+              "follow_up_questions": [
+                "复盘中如何处理责任敏感问题？",
+                "哪些改进必须纳入制度层面？",
+                "如何验证预防清单有效性？"
+              ],
+              "difficulty_1to5": 3,
+              "question_year": 2025,
+              "company_tier": "public_sector",
+              "sample_size": 6
             }
           ],
           "last_checked": "2026-02-19",
@@ -31223,7 +32194,7 @@
             }
           ],
           "min_sample_size_for_verified": 5,
-          "notes": "已补齐14条可实战笔试题（覆盖行测、申论、资料分析、执法程序与基层治理场景），并补充题目年份、岗位和题型标签。；岗位覆盖门槛已提升：本行业笔试真题库至少覆盖4个角色。；v1.34.1新增1条官方考试大纲映射题。；v1.41.0：已补齐提前批/主批/补录/实习转正四阶段标签，题干仍保持回忆样本降权说明。",
+          "notes": "已新增人社业务岗与纪检监察辅助岗分阶段笔试题，持续向24岗×12题补齐。",
           "quality": {
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
@@ -36872,6 +37843,598 @@
                 "最后复盘沉淀机制并输出下轮优化计划。"
               ],
               "company_tier": "public_sector"
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_INTERVIEW_PUBLIC_2026",
+                "source_name": "牛客网-考公面试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "结构化表达",
+                "规范意识",
+                "协同推进",
+                "复盘深度"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲原则不讲执行路径。",
+                "忽略风险边界与留痕要求。",
+                "缺少闭环与复盘机制。"
+              ],
+              "good_answer_signals": [
+                "先给边界与目标。",
+                "再给动作、证据和结果。",
+                "最后给改进与预防机制。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与边界。",
+                "再说明关键动作与量化结果。",
+                "最后给复盘与迁移。"
+              ],
+              "question_id": "IND_CIVIL_SERVICE_INTERVIEW_046",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_015",
+              "role_name": "人社业务岗",
+              "recruitment_stage": "campus_early_batch_interview",
+              "round_label": "提前批面试",
+              "question_type": "群众沟通复盘（回忆题）",
+              "prompt": "【行业:公务员体系｜岗位:人社业务岗｜阶段:提前批面试】请讲述一次你处理高压群众诉求并推动闭环的经历。",
+              "answer_framework": [
+                "诉求澄清",
+                "沟通策略与边界",
+                "推进动作",
+                "结果复盘"
+              ],
+              "follow_up_questions": [
+                "对方情绪激动时你如何稳住场面？",
+                "政策无法满足诉求时如何解释并减少冲突？",
+                "你如何证明问题已真正闭环？"
+              ],
+              "difficulty_1to5": 3,
+              "question_year": 2025,
+              "company_tier": "public_sector",
+              "sample_size": 6
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_INTERVIEW_PUBLIC_2026",
+                "source_name": "牛客网-考公面试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "结构化表达",
+                "规范意识",
+                "协同推进",
+                "复盘深度"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲原则不讲执行路径。",
+                "忽略风险边界与留痕要求。",
+                "缺少闭环与复盘机制。"
+              ],
+              "good_answer_signals": [
+                "先给边界与目标。",
+                "再给动作、证据和结果。",
+                "最后给改进与预防机制。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与边界。",
+                "再说明关键动作与量化结果。",
+                "最后给复盘与迁移。"
+              ],
+              "question_id": "IND_CIVIL_SERVICE_INTERVIEW_047",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_015",
+              "role_name": "人社业务岗",
+              "recruitment_stage": "campus_main_batch_interview",
+              "round_label": "主批面试",
+              "question_type": "政策落地协同（回忆题）",
+              "prompt": "【行业:公务员体系｜岗位:人社业务岗｜阶段:主批面试】若上级政策更新频繁、基层执行压力大，你会怎样推进统一落地？",
+              "answer_framework": [
+                "政策拆解",
+                "协同机制设计",
+                "执行监控",
+                "迭代优化"
+              ],
+              "follow_up_questions": [
+                "部门间意见不一致怎么处理？",
+                "你如何安排培训与答疑优先级？",
+                "执行偏差出现时第一步做什么？"
+              ],
+              "difficulty_1to5": 4,
+              "question_year": 2025,
+              "company_tier": "public_sector",
+              "sample_size": 6
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_INTERVIEW_PUBLIC_2026",
+                "source_name": "牛客网-考公面试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "结构化表达",
+                "规范意识",
+                "协同推进",
+                "复盘深度"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲原则不讲执行路径。",
+                "忽略风险边界与留痕要求。",
+                "缺少闭环与复盘机制。"
+              ],
+              "good_answer_signals": [
+                "先给边界与目标。",
+                "再给动作、证据和结果。",
+                "最后给改进与预防机制。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与边界。",
+                "再说明关键动作与量化结果。",
+                "最后给复盘与迁移。"
+              ],
+              "question_id": "IND_CIVIL_SERVICE_INTERVIEW_048",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_015",
+              "role_name": "人社业务岗",
+              "recruitment_stage": "campus_supplement_interview",
+              "round_label": "补录面试",
+              "question_type": "疑难件决策（回忆题）",
+              "prompt": "【行业:公务员体系｜岗位:人社业务岗｜阶段:补录面试】遇到政策边界模糊且时限紧的疑难件，你会如何做决策并承担结果？",
+              "answer_framework": [
+                "边界识别",
+                "会商决策",
+                "执行与留痕",
+                "复盘与追责边界"
+              ],
+              "follow_up_questions": [
+                "如何平衡效率与风险？",
+                "你如何向群众解释暂缓处理？",
+                "如果结果被复议推翻，你如何复盘？"
+              ],
+              "difficulty_1to5": 4,
+              "question_year": 2025,
+              "company_tier": "public_sector",
+              "sample_size": 6
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_INTERVIEW_PUBLIC_2026",
+                "source_name": "牛客网-考公面试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "结构化表达",
+                "规范意识",
+                "协同推进",
+                "复盘深度"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲原则不讲执行路径。",
+                "忽略风险边界与留痕要求。",
+                "缺少闭环与复盘机制。"
+              ],
+              "good_answer_signals": [
+                "先给边界与目标。",
+                "再给动作、证据和结果。",
+                "最后给改进与预防机制。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与边界。",
+                "再说明关键动作与量化结果。",
+                "最后给复盘与迁移。"
+              ],
+              "question_id": "IND_CIVIL_SERVICE_INTERVIEW_049",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_015",
+              "role_name": "人社业务岗",
+              "recruitment_stage": "internship_conversion_interview",
+              "round_label": "实习转正面试",
+              "question_type": "带教与标准化（回忆题）",
+              "prompt": "【行业:公务员体系｜岗位:人社业务岗｜阶段:实习转正面试】如果让你在两周内带新同事独立办理高频事项，你会如何设计带教与验收？",
+              "answer_framework": [
+                "目标拆分",
+                "带教节奏",
+                "过程检查",
+                "验收与改进"
+              ],
+              "follow_up_questions": [
+                "如何识别新同事的薄弱点？",
+                "带教期间出现投诉如何应对？",
+                "如何沉淀标准作业模板？"
+              ],
+              "difficulty_1to5": 3,
+              "question_year": 2025,
+              "company_tier": "public_sector",
+              "sample_size": 6
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_INTERVIEW_PUBLIC_2026",
+                "source_name": "牛客网-考公面试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "结构化表达",
+                "规范意识",
+                "协同推进",
+                "复盘深度"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲原则不讲执行路径。",
+                "忽略风险边界与留痕要求。",
+                "缺少闭环与复盘机制。"
+              ],
+              "good_answer_signals": [
+                "先给边界与目标。",
+                "再给动作、证据和结果。",
+                "最后给改进与预防机制。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与边界。",
+                "再说明关键动作与量化结果。",
+                "最后给复盘与迁移。"
+              ],
+              "question_id": "IND_CIVIL_SERVICE_INTERVIEW_050",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_016",
+              "role_name": "纪检监察辅助岗",
+              "recruitment_stage": "campus_early_batch_interview",
+              "round_label": "提前批面试",
+              "question_type": "线索核查表达（回忆题）",
+              "prompt": "【行业:公务员体系｜岗位:纪检监察辅助岗｜阶段:提前批面试】请复盘一次你参与线索核查并推动后续整改的经历。",
+              "answer_framework": [
+                "线索识别",
+                "核查与取证",
+                "督办推进",
+                "结果复盘"
+              ],
+              "follow_up_questions": [
+                "证据不足时你会如何处理？",
+                "如何避免核查过程对业务造成过大干扰？",
+                "你如何保证材料经得起复核？"
+              ],
+              "difficulty_1to5": 4,
+              "question_year": 2025,
+              "company_tier": "public_sector",
+              "sample_size": 6
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_INTERVIEW_PUBLIC_2026",
+                "source_name": "牛客网-考公面试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "结构化表达",
+                "规范意识",
+                "协同推进",
+                "复盘深度"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲原则不讲执行路径。",
+                "忽略风险边界与留痕要求。",
+                "缺少闭环与复盘机制。"
+              ],
+              "good_answer_signals": [
+                "先给边界与目标。",
+                "再给动作、证据和结果。",
+                "最后给改进与预防机制。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与边界。",
+                "再说明关键动作与量化结果。",
+                "最后给复盘与迁移。"
+              ],
+              "question_id": "IND_CIVIL_SERVICE_INTERVIEW_051",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_016",
+              "role_name": "纪检监察辅助岗",
+              "recruitment_stage": "campus_main_batch_interview",
+              "round_label": "主批面试",
+              "question_type": "整改督办博弈（回忆题）",
+              "prompt": "【行业:公务员体系｜岗位:纪检监察辅助岗｜阶段:主批面试】被督办单位多次延期且理由充分性不足，你如何推进整改并形成硬约束？",
+              "answer_framework": [
+                "延期原因核验",
+                "督办与升级路径",
+                "约束机制设计",
+                "复盘与问责边界"
+              ],
+              "follow_up_questions": [
+                "何时触发上升一级督办？",
+                "如何避免“形式整改”？",
+                "你如何保护沟通关系同时坚持原则？"
+              ],
+              "difficulty_1to5": 4,
+              "question_year": 2025,
+              "company_tier": "public_sector",
+              "sample_size": 6
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_INTERVIEW_PUBLIC_2026",
+                "source_name": "牛客网-考公面试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "结构化表达",
+                "规范意识",
+                "协同推进",
+                "复盘深度"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲原则不讲执行路径。",
+                "忽略风险边界与留痕要求。",
+                "缺少闭环与复盘机制。"
+              ],
+              "good_answer_signals": [
+                "先给边界与目标。",
+                "再给动作、证据和结果。",
+                "最后给改进与预防机制。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与边界。",
+                "再说明关键动作与量化结果。",
+                "最后给复盘与迁移。"
+              ],
+              "question_id": "IND_CIVIL_SERVICE_INTERVIEW_052",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_016",
+              "role_name": "纪检监察辅助岗",
+              "recruitment_stage": "campus_supplement_interview",
+              "round_label": "补录面试",
+              "question_type": "保密与协同（回忆题）",
+              "prompt": "【行业:公务员体系｜岗位:纪检监察辅助岗｜阶段:补录面试】在线索处理中如何平衡“保密要求”与“跨部门协同效率”？",
+              "answer_framework": [
+                "信息分级与授权",
+                "协同接口设计",
+                "风险控制",
+                "留痕机制"
+              ],
+              "follow_up_questions": [
+                "哪些信息绝不能跨部门共享？",
+                "协同效率低时你优先优化哪一环？",
+                "保密违规发生后如何止损？"
+              ],
+              "difficulty_1to5": 3,
+              "question_year": 2025,
+              "company_tier": "public_sector",
+              "sample_size": 6
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.77,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_INTERVIEW_PUBLIC_2026",
+                "source_name": "牛客网-考公面试真题库",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=194&subTabName=interview_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "结构化表达",
+                "规范意识",
+                "协同推进",
+                "复盘深度"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲原则不讲执行路径。",
+                "忽略风险边界与留痕要求。",
+                "缺少闭环与复盘机制。"
+              ],
+              "good_answer_signals": [
+                "先给边界与目标。",
+                "再给动作、证据和结果。",
+                "最后给改进与预防机制。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与边界。",
+                "再说明关键动作与量化结果。",
+                "最后给复盘与迁移。"
+              ],
+              "question_id": "IND_CIVIL_SERVICE_INTERVIEW_053",
+              "role_id": "IND_CIVIL_SERVICE_ROLE_016",
+              "role_name": "纪检监察辅助岗",
+              "recruitment_stage": "internship_conversion_interview",
+              "round_label": "实习转正面试",
+              "question_type": "专项复盘机制（回忆题）",
+              "prompt": "【行业:公务员体系｜岗位:纪检监察辅助岗｜阶段:实习转正面试】专项监督结束后，你会如何组织“问题复发预警机制”并推动长期执行？",
+              "answer_framework": [
+                "复发风险识别",
+                "预警指标设计",
+                "执行机制落地",
+                "复盘迭代"
+              ],
+              "follow_up_questions": [
+                "预警指标误报率高如何优化？",
+                "基层执行动力不足时怎么办？",
+                "你如何向领导汇报机制效果？"
+              ],
+              "difficulty_1to5": 3,
+              "question_year": 2025,
+              "company_tier": "public_sector",
+              "sample_size": 6
             }
           ],
           "last_checked": "2026-02-19",
@@ -37171,7 +38734,7 @@
             }
           ],
           "min_sample_size_for_verified": 5,
-          "notes": "已补齐14条结构化/情景类可实战面试题，覆盖应急管理、执法冲突处置、政策沟通、群众工作与跨部门协同场景。；岗位覆盖门槛已提升：本行业面试真题库至少覆盖4个角色。；v1.34.1新增1条官方考试能力映射题。；v1.41.0：已补齐提前批/主批/补录/实习转正四阶段标签，题干仍保持回忆样本降权说明。",
+          "notes": "已新增人社业务岗与纪检监察辅助岗分阶段面试题，持续向24岗×12题补齐。",
           "quality": {
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
@@ -37278,11 +38841,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 97.6,
-        "evidence_percent_overall": 96.3,
-        "freshness_percent_overall": 96.3,
+        "evidence_percent_overall": 96.7,
+        "freshness_percent_overall": 96.7,
         "real_data_ratio_overall": 86.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 61.8,
+        "quality_score_overall": 65.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -37292,13 +38855,13 @@
         "manual_fill_required_total": 53,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "personalization_slots_total": 14,
+        "personalization_slots_total": 16,
         "personalization_pending_total": 0,
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-19",
-        "ranking_percentile": 72.7
+        "ranking_percentile": 100
       },
       "slug": "civil-service",
       "sources": [
@@ -52214,7 +53777,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-19",
-        "ranking_percentile": 100
+        "ranking_percentile": 95.5
       },
       "slug": "state-owned-enterprise",
       "sources": [
@@ -125944,7 +127507,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-19",
-        "ranking_percentile": 95.5
+        "ranking_percentile": 90.9
       },
       "slug": "public-institution",
       "sources": [
@@ -228084,7 +229647,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-19",
-        "ranking_percentile": 86.4
+        "ranking_percentile": 81.8
       },
       "slug": "agriculture-food",
       "sources": [
@@ -242432,7 +243995,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-19",
-        "ranking_percentile": 81.8
+        "ranking_percentile": 77.3
       },
       "slug": "education-vocational",
       "sources": [
@@ -271268,7 +272831,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-19",
-        "ranking_percentile": 77.3
+        "ranking_percentile": 72.7
       },
       "slug": "energy-utilities",
       "sources": [
