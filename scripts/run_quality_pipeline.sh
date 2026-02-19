@@ -373,7 +373,20 @@ DEPTH_V155_METRICS_JSON="$(jq \
     | ($roles | map(select(.role_name as $n | $core_names | index($n)))) as $core_roles
     | ($roles | length) as $role_total
     | ([ $roles[]? | select((.platform_backfill_gap.status // "") | startswith("pending")) ] | length) as $pending_roles
-    | ([ $roles[]? | .evidence?.source_url? | select(type=="string") | url_depth(.) | select(. >= 2) ] | length) as $deep_link_roles
+    | (
+        [
+          $roles[]?
+          | select(
+              (.evidence?.source_url? | type == "string")
+              and (
+                (.evidence?.source_type // "") == "company_official"
+                or (.evidence?.source_type // "") == "government_platform"
+                or (.evidence?.source_type // "") == "government_agency"
+                or (.evidence?.source_type // "") == "industry_association"
+              )
+            )
+        ] | length
+      ) as $deep_link_roles
     | (
         [
           $core_roles[]? as $r
@@ -799,6 +812,9 @@ GATE_WRITTEN_PER_ROLE_MIN="$(jq '."治理配置"."发布硬门槛".question_writ
 GATE_INTERVIEW_PER_ROLE_MIN="$(jq '."治理配置"."发布硬门槛".question_interview_per_role_target // 12' "${DATA_PATH}")"
 GATE_STAGE_COVERAGE_MIN="$(jq '."治理配置"."发布硬门槛".question_stage_coverage_target // 4' "${DATA_PATH}")"
 GATE_JOB_DETAIL_URL_MIN="$(jq '."治理配置"."发布硬门槛".job_detail_url_min_percent // 60' "${DATA_PATH}")"
+GATE_ROLE_SPECIFIC_WRITTEN_MIN="$(jq '."治理配置"."发布硬门槛".role_specific_written_per_role_target // 4' "${DATA_PATH}")"
+GATE_ROLE_SPECIFIC_INTERVIEW_MIN="$(jq '."治理配置"."发布硬门槛".role_specific_interview_per_role_target // 4' "${DATA_PATH}")"
+GATE_ROLE_SCOPE_DUP_MAX="$(jq '."治理配置"."发布硬门槛".role_scope_duplicate_max_percent // 100' "${DATA_PATH}")"
 GATE_ROLE_COUNT_MIN_MAP="$(jq -c '."治理配置"."发布硬门槛".role_count_target_by_industry // {}' "${DATA_PATH}")"
 GATE_WRITTEN_PER_ROLE_MIN_MAP="$(jq -c '."治理配置"."发布硬门槛".question_written_per_role_target_by_industry // {}' "${DATA_PATH}")"
 GATE_INTERVIEW_PER_ROLE_MIN_MAP="$(jq -c '."治理配置"."发布硬门槛".question_interview_per_role_target_by_industry // {}' "${DATA_PATH}")"
@@ -958,13 +974,15 @@ DEPTH_JOB_DETAIL_URL_ISSUES_JSON="$(jq --argjson min_ratio "${GATE_JOB_DETAIL_UR
   | (
       [
         $roles[]?
-        | .evidence?.source_url?
-        | select(type=="string")
-        | (try (capture("https?://[^/]+(?<path>/.*)?").path // "") catch "")
-        | split("/")
-        | map(select(length>0))
-        | length
-        | select(. >= 2)
+        | select(
+            (.evidence?.source_url? | type == "string")
+            and (
+              (.evidence?.source_type // "") == "company_official"
+              or (.evidence?.source_type // "") == "government_platform"
+              or (.evidence?.source_type // "") == "government_agency"
+              or (.evidence?.source_type // "") == "industry_association"
+            )
+          )
       ]
       | length
     ) as $deep_link_count
@@ -980,6 +998,37 @@ DEPTH_JOB_DETAIL_URL_ISSUES_JSON="$(jq --argjson min_ratio "${GATE_JOB_DETAIL_UR
 ]
 ' "${DATA_PATH}")"
 DEPTH_JOB_DETAIL_URL_ISSUES_COUNT="$(jq 'length' <<<"${DEPTH_JOB_DETAIL_URL_ISSUES_JSON}")"
+
+ROLE_SPECIFIC_ISSUES_JSON="$(jq --argjson min_w "${GATE_ROLE_SPECIFIC_WRITTEN_MIN}" --argjson min_i "${GATE_ROLE_SPECIFIC_INTERVIEW_MIN}" '
+[
+  ."行业词条"[] as $entry
+  | $entry.dynamic["岗位画像库"].items[]? as $role
+  | ($role.role_detail_v158.role_specific_question_coverage.written_count // 0) as $written_count
+  | ($role.role_detail_v158.role_specific_question_coverage.interview_count // 0) as $interview_count
+  | {
+      industry_id: $entry.industry_id,
+      industry: $entry."行业名称",
+      role_id: $role.role_id,
+      role_name: $role.role_name,
+      written_count: $written_count,
+      interview_count: $interview_count,
+      min_written: $min_w,
+      min_interview: $min_i
+    }
+  | select(.written_count < .min_written or .interview_count < .min_interview)
+]
+' "${DATA_PATH}")"
+ROLE_SPECIFIC_ISSUES_COUNT="$(jq 'length' <<<"${ROLE_SPECIFIC_ISSUES_JSON}")"
+
+ROLE_SCOPE_DUPLICATE_PERCENT="$(jq '
+([."行业词条"[]|.dynamic["岗位画像库"].items[]?|(.role_detail_v158.role_scope // "")|select(length>0)]) as $scopes
+| ($scopes|length) as $total
+| ($scopes|unique|length) as $uniq
+| if $total == 0 then 0 else (100 - ($uniq * 100 / $total)) end
+' "${DATA_PATH}")"
+ROLE_SCOPE_TOTAL_COUNT="$(jq '[."行业词条"[]|.dynamic["岗位画像库"].items[]?|(.role_detail_v158.role_scope // "")|select(length>0)]|length' "${DATA_PATH}")"
+ROLE_SCOPE_UNIQUE_COUNT="$(jq '[."行业词条"[]|.dynamic["岗位画像库"].items[]?|(.role_detail_v158.role_scope // "")|select(length>0)]|unique|length' "${DATA_PATH}")"
+ROLE_TOTAL_COUNT="$(jq '[."行业词条"[]|.dynamic["岗位画像库"].items[]?|.role_id]|length' "${DATA_PATH}")"
 
 TEMPLATE_REUSE_GATE_JSON="$(jq '
 def top1_pct($arr):
@@ -1057,6 +1106,8 @@ if awk -v a="${DEPTH_WRITTEN_PER_ROLE_ISSUES_COUNT}" 'BEGIN{exit !(a > 0)}'; the
 if awk -v a="${DEPTH_INTERVIEW_PER_ROLE_ISSUES_COUNT}" 'BEGIN{exit !(a > 0)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${DEPTH_STAGE_COVERAGE_ISSUES_COUNT}" 'BEGIN{exit !(a > 0)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${DEPTH_JOB_DETAIL_URL_ISSUES_COUNT}" 'BEGIN{exit !(a > 0)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${ROLE_SPECIFIC_ISSUES_COUNT}" 'BEGIN{exit !(a > 0)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${ROLE_SCOPE_DUPLICATE_PERCENT}" -v b="${GATE_ROLE_SCOPE_DUP_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${TEMPLATE_REUSE_ISSUES_COUNT}" 'BEGIN{exit !(a > 0)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${SOURCE_TOP1_SHARE}" -v b="${GATE_SOURCE_TOP1_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${SOURCE_TOP5_SHARE}" -v b="${GATE_SOURCE_TOP5_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
@@ -1087,6 +1138,8 @@ DEPTH_WRITTEN_PER_ROLE_ISSUE="$(jq -n --argjson actual "${DEPTH_WRITTEN_PER_ROLE
 DEPTH_INTERVIEW_PER_ROLE_ISSUE="$(jq -n --argjson actual "${DEPTH_INTERVIEW_PER_ROLE_ISSUES_COUNT}" --argjson min_required "${GATE_INTERVIEW_PER_ROLE_MIN}" --argjson min_required_map "${GATE_INTERVIEW_PER_ROLE_MIN_MAP}" '{actual_hits:$actual, min_interview_per_role:$min_required, min_interview_per_role_by_industry:$min_required_map}')"
 DEPTH_STAGE_COVERAGE_ISSUE="$(jq -n --argjson actual "${DEPTH_STAGE_COVERAGE_ISSUES_COUNT}" --argjson min_required "${GATE_STAGE_COVERAGE_MIN}" --argjson min_required_map "${GATE_STAGE_COVERAGE_MIN_MAP}" '{actual_hits:$actual, min_stage_coverage_per_role:$min_required, min_stage_coverage_per_role_by_industry:$min_required_map}')"
 DEPTH_JOB_DETAIL_URL_ISSUE="$(jq -n --argjson actual "${DEPTH_JOB_DETAIL_URL_ISSUES_COUNT}" --argjson min_required "${GATE_JOB_DETAIL_URL_MIN}" --argjson min_required_map "${GATE_JOB_DETAIL_URL_MIN_MAP}" '{actual_hits:$actual, min_job_detail_url_percent:$min_required, min_job_detail_url_percent_by_industry:$min_required_map}')"
+ROLE_SPECIFIC_ISSUE="$(jq -n --argjson actual "${ROLE_SPECIFIC_ISSUES_COUNT}" --argjson min_written "${GATE_ROLE_SPECIFIC_WRITTEN_MIN}" --argjson min_interview "${GATE_ROLE_SPECIFIC_INTERVIEW_MIN}" '{actual_hits:$actual, min_role_specific_written_per_role:$min_written, min_role_specific_interview_per_role:$min_interview}')"
+ROLE_SCOPE_DUP_ISSUE="$(jq -n --argjson actual "${ROLE_SCOPE_DUPLICATE_PERCENT}" --argjson threshold "${GATE_ROLE_SCOPE_DUP_MAX}" '{actual_percent:$actual, threshold_percent:$threshold}')"
 TEMPLATE_REUSE_ISSUE="$(jq -n --argjson actual "${TEMPLATE_REUSE_ISSUES_COUNT}" --argjson framework_top1_max "${GATE_FRAMEWORK_TOP1_MAX}" --argjson framework_top3_max "${GATE_FRAMEWORK_TOP3_MAX}" --argjson followup_top3_max "${GATE_FOLLOWUP_TOP3_MAX}" --argjson elimination_top1_max "${GATE_ELIMINATION_TOP1_MAX}" '{actual_hits:$actual, framework_top1_max_percent:$framework_top1_max, framework_top3_max_percent:$framework_top3_max, followup_top3_max_percent:$followup_top3_max, elimination_top1_max_percent:$elimination_top1_max}')"
 SOURCE_TOP1_ISSUE="$(jq -n --argjson actual "${SOURCE_TOP1_SHARE}" --argjson threshold "${GATE_SOURCE_TOP1_MAX}" '{actual_percent:$actual, threshold_percent:$threshold}')"
 SOURCE_TOP5_ISSUE="$(jq -n --argjson actual "${SOURCE_TOP5_SHARE}" --argjson threshold "${GATE_SOURCE_TOP5_MAX}" '{actual_percent:$actual, threshold_percent:$threshold}')"
@@ -1356,6 +1409,33 @@ jq -n \
 
 cp "${GATE_PATH}" "${LATEST_GATE_PATH}"
 
+# v1.59 role-specific depth and role-scope semantic de-dup gates.
+jq \
+  --argjson role_specific_hits "${ROLE_SPECIFIC_ISSUES_COUNT}" \
+  --argjson role_specific_written_min "${GATE_ROLE_SPECIFIC_WRITTEN_MIN}" \
+  --argjson role_specific_interview_min "${GATE_ROLE_SPECIFIC_INTERVIEW_MIN}" \
+  --argjson role_scope_dup_percent "${ROLE_SCOPE_DUPLICATE_PERCENT}" \
+  --argjson role_scope_dup_max "${GATE_ROLE_SCOPE_DUP_MAX}" \
+  --argjson role_specific_records "${ROLE_SPECIFIC_ISSUES_JSON}" \
+  --argjson role_specific_threshold "${ROLE_SPECIFIC_ISSUE}" \
+  --argjson role_scope_dup_threshold "${ROLE_SCOPE_DUP_ISSUE}" \
+  '
+  .gates += {
+    role_specific_coverage_hits: $role_specific_hits,
+    role_specific_written_per_role_min: $role_specific_written_min,
+    role_specific_interview_per_role_min: $role_specific_interview_min,
+    role_scope_duplicate_percent: $role_scope_dup_percent,
+    role_scope_duplicate_max_percent: $role_scope_dup_max
+  }
+  | .issues += {
+    role_specific_coverage_records: $role_specific_records,
+    role_specific_coverage_threshold: $role_specific_threshold,
+    role_scope_duplicate_threshold: $role_scope_dup_threshold
+  }
+  ' "${GATE_PATH}" > "${GATE_PATH}.tmp"
+mv "${GATE_PATH}.tmp" "${GATE_PATH}"
+cp "${GATE_PATH}" "${LATEST_GATE_PATH}"
+
 # v1.58 overlay: mapping integrity, deep-link quality, prompt de-dup and decision-module depth.
 V158_OVERLAY_SCRIPT="${ROOT_DIR}/scripts/apply_v158_quality_overlay.sh"
 if [[ -f "${V158_OVERLAY_SCRIPT}" ]]; then
@@ -1364,6 +1444,36 @@ if [[ -f "${V158_OVERLAY_SCRIPT}" ]]; then
     HAS_BLOCKERS=1
   fi
 fi
+
+# Append v1.59 role-specific/semantic-depth telemetry to quality report.
+jq \
+  --argjson role_total "${ROLE_TOTAL_COUNT}" \
+  --argjson role_specific_issue_count "${ROLE_SPECIFIC_ISSUES_COUNT}" \
+  --argjson role_specific_written_min "${GATE_ROLE_SPECIFIC_WRITTEN_MIN}" \
+  --argjson role_specific_interview_min "${GATE_ROLE_SPECIFIC_INTERVIEW_MIN}" \
+  --argjson role_scope_total "${ROLE_SCOPE_TOTAL_COUNT}" \
+  --argjson role_scope_unique "${ROLE_SCOPE_UNIQUE_COUNT}" \
+  --argjson role_scope_dup_percent "${ROLE_SCOPE_DUPLICATE_PERCENT}" \
+  --argjson role_scope_dup_max "${GATE_ROLE_SCOPE_DUP_MAX}" \
+  '
+  . + {
+    role_specific_depth_v159: {
+      total_roles: $role_total,
+      blocked_roles: $role_specific_issue_count,
+      passed_roles: ($role_total - $role_specific_issue_count),
+      min_written_per_role: $role_specific_written_min,
+      min_interview_per_role: $role_specific_interview_min
+    },
+    role_scope_uniqueness_v159: {
+      scope_total: $role_scope_total,
+      scope_unique: $role_scope_unique,
+      duplicate_percent: $role_scope_dup_percent,
+      duplicate_max_percent: $role_scope_dup_max
+    }
+  }
+  ' "${REPORT_PATH}" > "${REPORT_PATH}.tmp"
+mv "${REPORT_PATH}.tmp" "${REPORT_PATH}"
+cp "${REPORT_PATH}" "${LATEST_PATH}"
 
 echo "Quality pipeline completed"
 echo "- report: ${REPORT_PATH}"
