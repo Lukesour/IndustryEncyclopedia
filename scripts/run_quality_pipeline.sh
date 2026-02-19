@@ -463,6 +463,12 @@ cp "${REPORT_PATH}" "${LATEST_PATH}"
 printf '%s\n' "${DEPTH_V155_METRICS_JSON}" > "${DEPTH_GAP_PATH}"
 cp "${DEPTH_GAP_PATH}" "${LATEST_DEPTH_GAP_PATH}"
 
+# v1.57 next-batch special: core-role 4-stage coverage + role deep-link rate.
+SPECIAL_V157_SCRIPT="${ROOT_DIR}/scripts/generate_core4_deeplink_special_v157.js"
+if [[ -f "${SPECIAL_V157_SCRIPT}" ]]; then
+  node "${SPECIAL_V157_SCRIPT}" "${DATA_PATH}" "${DATE_TAG}"
+fi
+
 # Hard release gates.
 PLACEHOLDER_COUNT="$( (rg -n -e 'pending\\.example\\.com' -e '待补内部链接' -e '示范复盘结构' -e '待补统计口径' "${DATA_PATH}" || true) | wc -l | tr -d ' ' )"
 

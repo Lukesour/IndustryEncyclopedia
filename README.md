@@ -3,7 +3,7 @@
 本仓库包含针对中国大陆应届生求职市场的行业百科数据与校验脚本。
 
 ## 主要文件
-- `行业百科.json`：主数据文件（当前版本 `v1.56.0`）
+- `行业百科.json`：主数据文件（当前版本 `v1.57.0`）
 - `行业百科.schema.json`：JSON Schema
 - `reports/`：质量报告与来源核验报告
 - `scripts/`：校验与质量流水线脚本
@@ -15,6 +15,7 @@
 - `docs/应届生决策卡模板_v1.28.0.md`：行业横向比较的三卡模板（去哪投/何时投/值不值投）
 - `docs/平台样本补录指引_v1.42.1.md`：BOSS/小红书等平台样本补录字段、检索词与质检规范
 - `docs/平台可达性与补录执行_v1.55.0.md`：v1.55平台可达性实测结果、补录顺序与缺口位处理规则
+- `docs/核心岗4阶段覆盖与岗位深链率专项_v1.57.0.md`：v1.57下一批次专项执行规则（核心岗4阶段+岗位深链率）
 - `reports/全量扩容执行清单_v1.45.0.md`：23行业逐行业扩容清单（岗位、题库、缺口与检索入口）
 - `reports/全量扩容执行清单_v1.45.0.json`：结构化扩容清单，可直接分配执行
 - `reports/23行业信息缺口与检索卡_v1.47.0.md`：23行业逐行业平台可达性、缺口字段与补录步骤
@@ -26,8 +27,13 @@
 - `reports/23行业逐个填写任务板_v1.54.0.md`：v1.54行业差异化门禁口径下的逐行业回填任务板
 - `reports/23行业信息缺口与检索卡_v1.54.0.md`：按v1.54重算的23行业缺口与检索卡
 - `reports/depth_gap_latest.json`：v1.55百科深度门槛报告（高增长岗落地率、核心岗4阶段、岗位深链、平台待验证占比）
+- `reports/core4_deeplink_special_latest.json`：v1.57下一批次专项缺口报告（核心岗4阶段覆盖+岗位深链率）
+- `reports/core4_deeplink_special_latest.md`：v1.57专项可执行任务卡（含待补字段、检索方式、检索入口）
 
 ## 本次更新要点（2026-02-19）
+- 主数据升级到 `v1.57.0`，将“核心岗4阶段覆盖”和“岗位深链率”登记为下一批次专项治理配置。
+- 质量流水线新增专项输出：`core4_deeplink_special_latest.json/.md`，自动给出行业缺口、待补字段和检索路径。
+- 新增专项执行文档，统一平台受限时的`pending`槽位规则（需要什么信息、如何搜索、从哪里搜索）。
 - 主数据升级到 `v1.56.0`，按23行业扩展包逐行业补齐高增长细分岗位深度卡（岗位职责边界、技能栈、成长台阶、转岗去向、不适配信号）。
 - 笔试/面试题库新增高增长岗扩展题：笔试 `+235`、面试 `+236`，覆盖行业差异化高增长岗（8-12个/行业）。
 - 每行业新增 `细分岗位深度扩展_v156` 模块，并统一写入平台受限缺口位：需要什么信息、如何搜索、从哪里搜索、如何留证。
@@ -40,7 +46,7 @@ bash scripts/validate_industry_encyclopedia.sh 行业百科.schema.json 行业�
 bash scripts/validate_industry_references.sh 行业百科.json
 node scripts/recompute_progress_v1_15.js 行业百科.json
 bash scripts/run_quality_pipeline.sh 行业百科.json
-node scripts/rebuild_main_from_entries_v1_56.js
+node scripts/rebuild_main_from_entries_v1_57.js
 bash scripts/split_industry_files.sh 行业百科.json data
 ```
 
