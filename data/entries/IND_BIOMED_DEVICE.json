@@ -495,23 +495,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "boss_query": [
                 "应届生 生物医药与器械 校招 面经 访谈 岗位经验",
-                "生物医药与器械 校招 校招 面经 访谈 岗位经验"
+                "生物医药与器械 校招 校招 面经 访谈 岗位经验",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 面经 访谈 岗位经验",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -542,23 +562,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "boss_query": [
                 "应届生 生物医药与器械 校招 面经 访谈 岗位经验",
-                "生物医药与器械 校招 校招 面经 访谈 岗位经验"
+                "生物医药与器械 校招 校招 面经 访谈 岗位经验",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 面经 访谈 岗位经验",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -589,23 +629,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "boss_query": [
                 "应届生 生物医药与器械 校招 面经 访谈 岗位经验",
-                "生物医药与器械 校招 校招 面经 访谈 岗位经验"
+                "生物医药与器械 校招 校招 面经 访谈 岗位经验",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 面经 访谈 岗位经验",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -636,23 +696,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "boss_query": [
                 "应届生 生物医药与器械 校招 面经 访谈 岗位经验",
-                "生物医药与器械 校招 校招 面经 访谈 岗位经验"
+                "生物医药与器械 校招 校招 面经 访谈 岗位经验",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 面经 访谈 岗位经验",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -683,23 +763,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "boss_query": [
                 "应届生 生物医药与器械 校招 面经 访谈 岗位经验",
-                "生物医药与器械 校招 校招 面经 访谈 岗位经验"
+                "生物医药与器械 校招 校招 面经 访谈 岗位经验",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 面经 访谈 岗位经验",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -1011,23 +1111,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "boss_query": [
                 "应届生 生物医药与器械 校招 公司 招聘 岗位",
-                "生物医药与器械 校招 校招 公司 招聘 岗位"
+                "生物医药与器械 校招 校招 公司 招聘 岗位",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 公司 招聘 岗位",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -1059,23 +1179,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "boss_query": [
                 "应届生 生物医药与器械 校招 公司 招聘 岗位",
-                "生物医药与器械 校招 校招 公司 招聘 岗位"
+                "生物医药与器械 校招 校招 公司 招聘 岗位",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 公司 招聘 岗位",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -1107,23 +1247,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "boss_query": [
                 "应届生 生物医药与器械 校招 公司 招聘 岗位",
-                "生物医药与器械 校招 校招 公司 招聘 岗位"
+                "生物医药与器械 校招 校招 公司 招聘 岗位",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 公司 招聘 岗位",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -1155,23 +1315,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "boss_query": [
                 "应届生 生物医药与器械 校招 公司 招聘 岗位",
-                "生物医药与器械 校招 校招 公司 招聘 岗位"
+                "生物医药与器械 校招 校招 公司 招聘 岗位",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 公司 招聘 岗位",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -1203,23 +1383,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "boss_query": [
                 "应届生 生物医药与器械 校招 公司 招聘 岗位",
-                "生物医药与器械 校招 校招 公司 招聘 岗位"
+                "生物医药与器械 校招 校招 公司 招聘 岗位",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 公司 招聘 岗位",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -1251,23 +1451,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "boss_query": [
                 "应届生 生物医药与器械 校招 公司 招聘 岗位",
-                "生物医药与器械 校招 校招 公司 招聘 岗位"
+                "生物医药与器械 校招 校招 公司 招聘 岗位",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 公司 招聘 岗位",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -1299,23 +1519,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "boss_query": [
                 "应届生 生物医药与器械 校招 公司 招聘 岗位",
-                "生物医药与器械 校招 校招 公司 招聘 岗位"
+                "生物医药与器械 校招 校招 公司 招聘 岗位",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 公司 招聘 岗位",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -4547,6 +4787,30 @@
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
             "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_BIOMED_DEVICE_ROLE_HGX_001_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在生物医药与器械临床监查员CRA相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过专业知识定位问题并用证据分析推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "updated_at": "2026-02-19"
           }
         },
         {
@@ -4712,6 +4976,30 @@
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
+            "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_BIOMED_DEVICE_ROLE_HGX_002_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在生物医药与器械注册事务专员相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过结构化分析定位问题并用数据处理推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
             "updated_at": "2026-02-19"
           }
         },
@@ -4879,6 +5167,30 @@
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
             "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_BIOMED_DEVICE_ROLE_HGX_003_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在生物医药与器械医学联络专员MSL相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过结构化分析定位问题并用数据处理推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_url": "https://www.mindray.com",
+            "updated_at": "2026-02-19"
           }
         },
         {
@@ -5044,6 +5356,30 @@
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
+            "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_BIOMED_DEVICE_ROLE_HGX_004_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在生物医药与器械质量体系工程师相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过编程能力定位问题并用系统设计推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_url": "https://www.ncss.cn/student/24365",
             "updated_at": "2026-02-19"
           }
         },
@@ -5211,6 +5547,30 @@
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
             "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_BIOMED_DEVICE_ROLE_HGX_005_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在生物医药与器械工艺开发工程师相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过编程能力定位问题并用系统设计推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "updated_at": "2026-02-19"
           }
         },
         {
@@ -5376,6 +5736,30 @@
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
+            "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_BIOMED_DEVICE_ROLE_HGX_006_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在生物医药与器械生物统计分析师相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过数理统计定位问题并用Python/SQL推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_url": "https://www.mindray.com",
             "updated_at": "2026-02-19"
           }
         },
@@ -5543,6 +5927,30 @@
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
             "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_BIOMED_DEVICE_ROLE_HGX_008_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在生物医药与器械市场准入岗相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过结构化分析定位问题并用数据处理推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "updated_at": "2026-02-19"
           }
         },
         {
@@ -5708,6 +6116,30 @@
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
+            "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_BIOMED_DEVICE_ROLE_HGX_009_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在生物医药与器械医学编辑岗相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过结构化分析定位问题并用数据处理推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_url": "https://www.mindray.com",
             "updated_at": "2026-02-19"
           }
         },
@@ -5875,6 +6307,30 @@
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
             "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_BIOMED_DEVICE_ROLE_HGX_010_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在生物医药与器械器械售后工程师相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过编程能力定位问题并用系统设计推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "updated_at": "2026-02-19"
           }
         },
         {
@@ -6041,6 +6497,30 @@
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
             "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_BIOMED_DEVICE_ROLE_HGX_011_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在生物医药与器械试剂研发工程师相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过编程能力定位问题并用系统设计推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "updated_at": "2026-02-19"
           }
         },
         {
@@ -6206,6 +6686,30 @@
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
+            "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_BIOMED_DEVICE_ROLE_HGX_012_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在生物医药与器械生产验证工程师相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过编程能力定位问题并用系统设计推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_url": "https://www.mindray.com",
             "updated_at": "2026-02-19"
           }
         }
@@ -6400,7 +6904,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 面试 题目",
+                "生物医药与器械 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ]
+            }
+          }
         },
         {
           "slot_id": "IND_BIOMED_DEVICE_ROLE_HGX_002_PROFILE_FILL_V158_001",
@@ -6424,7 +6971,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 面试 题目",
+                "生物医药与器械 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ]
+            }
+          }
         },
         {
           "slot_id": "IND_BIOMED_DEVICE_ROLE_HGX_003_PROFILE_FILL_V158_001",
@@ -6448,7 +7038,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 面试 题目",
+                "生物医药与器械 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ]
+            }
+          }
         },
         {
           "slot_id": "IND_BIOMED_DEVICE_ROLE_HGX_004_PROFILE_FILL_V158_001",
@@ -6472,7 +7105,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 面试 题目",
+                "生物医药与器械 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ]
+            }
+          }
         },
         {
           "slot_id": "IND_BIOMED_DEVICE_ROLE_HGX_005_PROFILE_FILL_V158_001",
@@ -6496,7 +7172,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 面试 题目",
+                "生物医药与器械 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ]
+            }
+          }
         },
         {
           "slot_id": "IND_BIOMED_DEVICE_ROLE_HGX_006_PROFILE_FILL_V158_001",
@@ -6520,7 +7239,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 面试 题目",
+                "生物医药与器械 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ]
+            }
+          }
         },
         {
           "slot_id": "IND_BIOMED_DEVICE_ROLE_HGX_008_PROFILE_FILL_V158_001",
@@ -6544,7 +7306,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 面试 题目",
+                "生物医药与器械 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ]
+            }
+          }
         },
         {
           "slot_id": "IND_BIOMED_DEVICE_ROLE_HGX_009_PROFILE_FILL_V158_001",
@@ -6568,7 +7373,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 面试 题目",
+                "生物医药与器械 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ]
+            }
+          }
         },
         {
           "slot_id": "IND_BIOMED_DEVICE_ROLE_HGX_010_PROFILE_FILL_V158_001",
@@ -6592,7 +7440,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 面试 题目",
+                "生物医药与器械 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ]
+            }
+          }
         },
         {
           "slot_id": "IND_BIOMED_DEVICE_ROLE_HGX_011_PROFILE_FILL_V158_001",
@@ -6616,7 +7507,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 面试 题目",
+                "生物医药与器械 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ]
+            }
+          }
         },
         {
           "slot_id": "IND_BIOMED_DEVICE_ROLE_HGX_012_PROFILE_FILL_V158_001",
@@ -6640,7 +7574,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 面试 题目",
+                "生物医药与器械 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ]
+            }
+          }
         }
       ],
       "collection_tasks": [
@@ -6856,23 +7833,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E6%8F%90%E5%89%8D%E6%89%B9%20%E4%B8%BB%E6%89%B9%20%E8%A1%A5%E5%BD%95%20%E6%97%B6%E9%97%B4%E7%BA%BF",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E6%8F%90%E5%89%8D%E6%89%B9%20%E4%B8%BB%E6%89%B9%20%E8%A1%A5%E5%BD%95%20%E6%97%B6%E9%97%B4%E7%BA%BF",
               "boss_query": [
                 "应届生 生物医药与器械 校招 提前批 主批 补录 时间线",
-                "生物医药与器械 校招 校招 提前批 主批 补录 时间线"
+                "生物医药与器械 校招 校招 提前批 主批 补录 时间线",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 提前批 主批 补录 时间线",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -6903,23 +7900,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E6%8F%90%E5%89%8D%E6%89%B9%20%E4%B8%BB%E6%89%B9%20%E8%A1%A5%E5%BD%95%20%E6%97%B6%E9%97%B4%E7%BA%BF",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E6%8F%90%E5%89%8D%E6%89%B9%20%E4%B8%BB%E6%89%B9%20%E8%A1%A5%E5%BD%95%20%E6%97%B6%E9%97%B4%E7%BA%BF",
               "boss_query": [
                 "应届生 生物医药与器械 校招 提前批 主批 补录 时间线",
-                "生物医药与器械 校招 校招 提前批 主批 补录 时间线"
+                "生物医药与器械 校招 校招 提前批 主批 补录 时间线",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 提前批 主批 补录 时间线",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -6950,23 +7967,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E6%8F%90%E5%89%8D%E6%89%B9%20%E4%B8%BB%E6%89%B9%20%E8%A1%A5%E5%BD%95%20%E6%97%B6%E9%97%B4%E7%BA%BF",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E6%8F%90%E5%89%8D%E6%89%B9%20%E4%B8%BB%E6%89%B9%20%E8%A1%A5%E5%BD%95%20%E6%97%B6%E9%97%B4%E7%BA%BF",
               "boss_query": [
                 "应届生 生物医药与器械 校招 提前批 主批 补录 时间线",
-                "生物医药与器械 校招 校招 提前批 主批 补录 时间线"
+                "生物医药与器械 校招 校招 提前批 主批 补录 时间线",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 提前批 主批 补录 时间线",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -7453,23 +8490,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "boss_query": [
                 "应届生 生物医药与器械 校招 项目 复盘 案例",
-                "生物医药与器械 校招 校招 项目 复盘 案例"
+                "生物医药与器械 校招 校招 项目 复盘 案例",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 项目 复盘 案例",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -7502,23 +8559,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "boss_query": [
                 "应届生 生物医药与器械 校招 项目 复盘 案例",
-                "生物医药与器械 校招 校招 项目 复盘 案例"
+                "生物医药与器械 校招 校招 项目 复盘 案例",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 项目 复盘 案例",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -7551,23 +8628,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "boss_query": [
                 "应届生 生物医药与器械 校招 项目 复盘 案例",
-                "生物医药与器械 校招 校招 项目 复盘 案例"
+                "生物医药与器械 校招 校招 项目 复盘 案例",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 项目 复盘 案例",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -7600,23 +8697,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "boss_query": [
                 "应届生 生物医药与器械 校招 项目 复盘 案例",
-                "生物医药与器械 校招 校招 项目 复盘 案例"
+                "生物医药与器械 校招 校招 项目 复盘 案例",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 项目 复盘 案例",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -7649,23 +8766,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "boss_query": [
                 "应届生 生物医药与器械 校招 项目 复盘 案例",
-                "生物医药与器械 校招 校招 项目 复盘 案例"
+                "生物医药与器械 校招 校招 项目 复盘 案例",
+                "应届生 生物医药与器械 校招 岗位 城市",
+                "生物医药与器械 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "生物医药与器械 校招 校招 项目 复盘 案例",
-                "生物医药与器械 面经 offer"
+                "生物医药与器械 面经 offer",
+                "生物医药与器械 校招 面经",
+                "生物医药与器械 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -13859,6 +14996,1634 @@
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
           "company_tier": "t1_head"
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_054",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_001",
+          "role_name": "临床监查员CRA",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "临床监查员CRA场景分析题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:临床监查员CRA｜阶段:主批笔试】围绕“临床监查员CRA流程优化专项”设计一版可落地方案，说明如何用专业知识与证据分析完成目标拆解、里程碑推进与结果验收，并补充“业务目标与执行闭环”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "专业知识诊断与方案拆解",
+            "证据分析执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排临床监查员CRA优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于专业知识快速切换到备选方案？",
+            "你如何定义临床监查员CRA岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合专业知识与证据分析提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_055",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_001",
+          "role_name": "临床监查员CRA",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "临床监查员CRA策略优化题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:临床监查员CRA｜阶段:补录笔试】给定一个临床监查员CRA关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾专业知识与证据分析并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "专业知识诊断与方案拆解",
+            "证据分析执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排临床监查员CRA优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于专业知识快速切换到备选方案？",
+            "你如何定义临床监查员CRA岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合专业知识与证据分析提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_056",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_002",
+          "role_name": "注册事务专员",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "注册事务专员场景分析题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:注册事务专员｜阶段:主批笔试】围绕“注册事务专员流程优化专项”设计一版可落地方案，说明如何用结构化分析与数据处理完成目标拆解、里程碑推进与结果验收，并补充“研究证据与结论可解释性”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "结构化分析诊断与方案拆解",
+            "数据处理执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排注册事务专员优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于结构化分析快速切换到备选方案？",
+            "你如何定义注册事务专员岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合结构化分析与数据处理提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_057",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_002",
+          "role_name": "注册事务专员",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "注册事务专员策略优化题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:注册事务专员｜阶段:补录笔试】给定一个注册事务专员关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾结构化分析与数据处理并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "结构化分析诊断与方案拆解",
+            "数据处理执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排注册事务专员优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于结构化分析快速切换到备选方案？",
+            "你如何定义注册事务专员岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合结构化分析与数据处理提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_058",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_003",
+          "role_name": "医学联络专员MSL",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "医学联络专员MSL场景分析题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:医学联络专员MSL｜阶段:主批笔试】围绕“医学联络专员MSL流程优化专项”设计一版可落地方案，说明如何用结构化分析与数据处理完成目标拆解、里程碑推进与结果验收，并补充“研究证据与结论可解释性”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "结构化分析诊断与方案拆解",
+            "数据处理执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排医学联络专员MSL优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于结构化分析快速切换到备选方案？",
+            "你如何定义医学联络专员MSL岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合结构化分析与数据处理提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com",
+            "snapshot_url": "https://www.mindray.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.8,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_059",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_003",
+          "role_name": "医学联络专员MSL",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "医学联络专员MSL策略优化题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:医学联络专员MSL｜阶段:补录笔试】给定一个医学联络专员MSL关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾结构化分析与数据处理并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "结构化分析诊断与方案拆解",
+            "数据处理执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排医学联络专员MSL优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于结构化分析快速切换到备选方案？",
+            "你如何定义医学联络专员MSL岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合结构化分析与数据处理提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com",
+            "snapshot_url": "https://www.mindray.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.8,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_060",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_004",
+          "role_name": "质量体系工程师",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "质量体系工程师场景分析题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:质量体系工程师｜阶段:主批笔试】围绕“质量体系工程师流程优化专项”设计一版可落地方案，说明如何用编程能力与系统设计完成目标拆解、里程碑推进与结果验收，并补充“交付质量与稳定性保障”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "编程能力诊断与方案拆解",
+            "系统设计执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排质量体系工程师优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于编程能力快速切换到备选方案？",
+            "你如何定义质量体系工程师岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合编程能力与系统设计提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_061",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_004",
+          "role_name": "质量体系工程师",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "质量体系工程师策略优化题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:质量体系工程师｜阶段:补录笔试】给定一个质量体系工程师关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾编程能力与系统设计并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "编程能力诊断与方案拆解",
+            "系统设计执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排质量体系工程师优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于编程能力快速切换到备选方案？",
+            "你如何定义质量体系工程师岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合编程能力与系统设计提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_062",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_005",
+          "role_name": "工艺开发工程师",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "工艺开发工程师场景分析题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:工艺开发工程师｜阶段:主批笔试】围绕“工艺开发工程师流程优化专项”设计一版可落地方案，说明如何用编程能力与系统设计完成目标拆解、里程碑推进与结果验收，并补充“交付质量与稳定性保障”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "编程能力诊断与方案拆解",
+            "系统设计执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排工艺开发工程师优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于编程能力快速切换到备选方案？",
+            "你如何定义工艺开发工程师岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合编程能力与系统设计提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_063",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_005",
+          "role_name": "工艺开发工程师",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "工艺开发工程师策略优化题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:工艺开发工程师｜阶段:补录笔试】给定一个工艺开发工程师关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾编程能力与系统设计并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "编程能力诊断与方案拆解",
+            "系统设计执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排工艺开发工程师优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于编程能力快速切换到备选方案？",
+            "你如何定义工艺开发工程师岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合编程能力与系统设计提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_064",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_006",
+          "role_name": "生物统计分析师",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "生物统计分析师场景分析题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:生物统计分析师｜阶段:主批笔试】围绕“生物统计分析师流程优化专项”设计一版可落地方案，说明如何用数理统计与Python/SQL完成目标拆解、里程碑推进与结果验收，并补充“模型效果与数据质量权衡”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "数理统计诊断与方案拆解",
+            "Python/SQL执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排生物统计分析师优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于数理统计快速切换到备选方案？",
+            "你如何定义生物统计分析师岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合数理统计与Python/SQL提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com",
+            "snapshot_url": "https://www.mindray.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.8,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_065",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_006",
+          "role_name": "生物统计分析师",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "生物统计分析师策略优化题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:生物统计分析师｜阶段:补录笔试】给定一个生物统计分析师关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾数理统计与Python/SQL并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "数理统计诊断与方案拆解",
+            "Python/SQL执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排生物统计分析师优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于数理统计快速切换到备选方案？",
+            "你如何定义生物统计分析师岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合数理统计与Python/SQL提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com",
+            "snapshot_url": "https://www.mindray.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.8,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_066",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_008",
+          "role_name": "市场准入岗",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "市场准入岗场景分析题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:市场准入岗｜阶段:主批笔试】围绕“市场准入岗流程优化专项”设计一版可落地方案，说明如何用结构化分析与数据处理完成目标拆解、里程碑推进与结果验收，并补充“业务目标与客户价值对齐”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "结构化分析诊断与方案拆解",
+            "数据处理执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排市场准入岗优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于结构化分析快速切换到备选方案？",
+            "你如何定义市场准入岗岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合结构化分析与数据处理提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_067",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_008",
+          "role_name": "市场准入岗",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "市场准入岗策略优化题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:市场准入岗｜阶段:补录笔试】给定一个市场准入岗关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾结构化分析与数据处理并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "结构化分析诊断与方案拆解",
+            "数据处理执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排市场准入岗优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于结构化分析快速切换到备选方案？",
+            "你如何定义市场准入岗岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合结构化分析与数据处理提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_068",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_009",
+          "role_name": "医学编辑岗",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "医学编辑岗场景分析题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:医学编辑岗｜阶段:主批笔试】围绕“医学编辑岗流程优化专项”设计一版可落地方案，说明如何用结构化分析与数据处理完成目标拆解、里程碑推进与结果验收，并补充“业务目标与执行闭环”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "结构化分析诊断与方案拆解",
+            "数据处理执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排医学编辑岗优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于结构化分析快速切换到备选方案？",
+            "你如何定义医学编辑岗岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合结构化分析与数据处理提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com",
+            "snapshot_url": "https://www.mindray.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.8,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_069",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_009",
+          "role_name": "医学编辑岗",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "医学编辑岗策略优化题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:医学编辑岗｜阶段:补录笔试】给定一个医学编辑岗关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾结构化分析与数据处理并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "结构化分析诊断与方案拆解",
+            "数据处理执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排医学编辑岗优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于结构化分析快速切换到备选方案？",
+            "你如何定义医学编辑岗岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合结构化分析与数据处理提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com",
+            "snapshot_url": "https://www.mindray.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.8,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_070",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_010",
+          "role_name": "器械售后工程师",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "器械售后工程师场景分析题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:器械售后工程师｜阶段:主批笔试】围绕“器械售后工程师流程优化专项”设计一版可落地方案，说明如何用编程能力与系统设计完成目标拆解、里程碑推进与结果验收，并补充“交付质量与稳定性保障”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "编程能力诊断与方案拆解",
+            "系统设计执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排器械售后工程师优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于编程能力快速切换到备选方案？",
+            "你如何定义器械售后工程师岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合编程能力与系统设计提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_071",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_010",
+          "role_name": "器械售后工程师",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "器械售后工程师策略优化题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:器械售后工程师｜阶段:补录笔试】给定一个器械售后工程师关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾编程能力与系统设计并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "编程能力诊断与方案拆解",
+            "系统设计执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排器械售后工程师优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于编程能力快速切换到备选方案？",
+            "你如何定义器械售后工程师岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合编程能力与系统设计提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_072",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_011",
+          "role_name": "试剂研发工程师",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "试剂研发工程师场景分析题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:试剂研发工程师｜阶段:主批笔试】围绕“试剂研发工程师流程优化专项”设计一版可落地方案，说明如何用编程能力与系统设计完成目标拆解、里程碑推进与结果验收，并补充“交付质量与稳定性保障”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "编程能力诊断与方案拆解",
+            "系统设计执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排试剂研发工程师优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于编程能力快速切换到备选方案？",
+            "你如何定义试剂研发工程师岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合编程能力与系统设计提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_073",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_011",
+          "role_name": "试剂研发工程师",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "试剂研发工程师策略优化题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:试剂研发工程师｜阶段:补录笔试】给定一个试剂研发工程师关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾编程能力与系统设计并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "编程能力诊断与方案拆解",
+            "系统设计执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排试剂研发工程师优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于编程能力快速切换到备选方案？",
+            "你如何定义试剂研发工程师岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合编程能力与系统设计提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_074",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_012",
+          "role_name": "生产验证工程师",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "生产验证工程师场景分析题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:生产验证工程师｜阶段:主批笔试】围绕“生产验证工程师流程优化专项”设计一版可落地方案，说明如何用编程能力与系统设计完成目标拆解、里程碑推进与结果验收，并补充“交付质量与稳定性保障”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "编程能力诊断与方案拆解",
+            "系统设计执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排生产验证工程师优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于编程能力快速切换到备选方案？",
+            "你如何定义生产验证工程师岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合编程能力与系统设计提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com",
+            "snapshot_url": "https://www.mindray.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.8,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_075",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_012",
+          "role_name": "生产验证工程师",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "生产验证工程师策略优化题（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:生产验证工程师｜阶段:补录笔试】给定一个生产验证工程师关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾编程能力与系统设计并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "编程能力诊断与方案拆解",
+            "系统设计执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排生产验证工程师优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于编程能力快速切换到备选方案？",
+            "你如何定义生产验证工程师岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合编程能力与系统设计提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com",
+            "snapshot_url": "https://www.mindray.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.8,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
         }
       ],
       "last_checked": "2026-02-19",
@@ -23571,6 +26336,1634 @@
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
           "company_tier": "t1_head"
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_055",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_001",
+          "role_name": "临床监查员CRA",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "临床监查员CRA行为+业务面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:临床监查员CRA｜阶段:主批一面】讲一次你在“临床监查员CRA流程优化专项”中推动跨团队协作的经历，重点说明你如何用专业知识识别核心矛盾、用证据分析落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "专业知识诊断与决策依据",
+            "证据分析执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对临床监查员CRA目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做临床监查员CRA方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用专业知识/证据分析推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_056",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_001",
+          "role_name": "临床监查员CRA",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "临床监查员CRA稳定性与匹配度面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:临床监查员CRA｜阶段:实习转正/HR面】如果入职后发现临床监查员CRA工作内容与预期不一致，你会如何在90天内补齐专业知识/证据分析短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "专业知识诊断与决策依据",
+            "证据分析执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对临床监查员CRA目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做临床监查员CRA方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用专业知识/证据分析推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_057",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_002",
+          "role_name": "注册事务专员",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "注册事务专员行为+业务面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:注册事务专员｜阶段:主批一面】讲一次你在“注册事务专员流程优化专项”中推动跨团队协作的经历，重点说明你如何用结构化分析识别核心矛盾、用数据处理落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "结构化分析诊断与决策依据",
+            "数据处理执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对注册事务专员目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做注册事务专员方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用结构化分析/数据处理推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_058",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_002",
+          "role_name": "注册事务专员",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "注册事务专员稳定性与匹配度面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:注册事务专员｜阶段:实习转正/HR面】如果入职后发现注册事务专员工作内容与预期不一致，你会如何在90天内补齐结构化分析/数据处理短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "结构化分析诊断与决策依据",
+            "数据处理执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对注册事务专员目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做注册事务专员方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用结构化分析/数据处理推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_059",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_003",
+          "role_name": "医学联络专员MSL",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "医学联络专员MSL行为+业务面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:医学联络专员MSL｜阶段:主批一面】讲一次你在“医学联络专员MSL流程优化专项”中推动跨团队协作的经历，重点说明你如何用结构化分析识别核心矛盾、用数据处理落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "结构化分析诊断与决策依据",
+            "数据处理执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对医学联络专员MSL目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做医学联络专员MSL方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用结构化分析/数据处理推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com",
+            "snapshot_url": "https://www.mindray.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.8,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_060",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_003",
+          "role_name": "医学联络专员MSL",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "医学联络专员MSL稳定性与匹配度面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:医学联络专员MSL｜阶段:实习转正/HR面】如果入职后发现医学联络专员MSL工作内容与预期不一致，你会如何在90天内补齐结构化分析/数据处理短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "结构化分析诊断与决策依据",
+            "数据处理执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对医学联络专员MSL目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做医学联络专员MSL方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用结构化分析/数据处理推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com",
+            "snapshot_url": "https://www.mindray.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.8,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_061",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_004",
+          "role_name": "质量体系工程师",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "质量体系工程师行为+业务面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:质量体系工程师｜阶段:主批一面】讲一次你在“质量体系工程师流程优化专项”中推动跨团队协作的经历，重点说明你如何用编程能力识别核心矛盾、用系统设计落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "编程能力诊断与决策依据",
+            "系统设计执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对质量体系工程师目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做质量体系工程师方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用编程能力/系统设计推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_062",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_004",
+          "role_name": "质量体系工程师",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "质量体系工程师稳定性与匹配度面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:质量体系工程师｜阶段:实习转正/HR面】如果入职后发现质量体系工程师工作内容与预期不一致，你会如何在90天内补齐编程能力/系统设计短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "编程能力诊断与决策依据",
+            "系统设计执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对质量体系工程师目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做质量体系工程师方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用编程能力/系统设计推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_063",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_005",
+          "role_name": "工艺开发工程师",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "工艺开发工程师行为+业务面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:工艺开发工程师｜阶段:主批一面】讲一次你在“工艺开发工程师流程优化专项”中推动跨团队协作的经历，重点说明你如何用编程能力识别核心矛盾、用系统设计落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "编程能力诊断与决策依据",
+            "系统设计执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对工艺开发工程师目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做工艺开发工程师方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用编程能力/系统设计推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_064",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_005",
+          "role_name": "工艺开发工程师",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "工艺开发工程师稳定性与匹配度面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:工艺开发工程师｜阶段:实习转正/HR面】如果入职后发现工艺开发工程师工作内容与预期不一致，你会如何在90天内补齐编程能力/系统设计短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "编程能力诊断与决策依据",
+            "系统设计执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对工艺开发工程师目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做工艺开发工程师方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用编程能力/系统设计推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_065",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_006",
+          "role_name": "生物统计分析师",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "生物统计分析师行为+业务面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:生物统计分析师｜阶段:主批一面】讲一次你在“生物统计分析师流程优化专项”中推动跨团队协作的经历，重点说明你如何用数理统计识别核心矛盾、用Python/SQL落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "数理统计诊断与决策依据",
+            "Python/SQL执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对生物统计分析师目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做生物统计分析师方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用数理统计/Python/SQL推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com",
+            "snapshot_url": "https://www.mindray.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.8,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_066",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_006",
+          "role_name": "生物统计分析师",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "生物统计分析师稳定性与匹配度面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:生物统计分析师｜阶段:实习转正/HR面】如果入职后发现生物统计分析师工作内容与预期不一致，你会如何在90天内补齐数理统计/Python/SQL短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "数理统计诊断与决策依据",
+            "Python/SQL执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对生物统计分析师目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做生物统计分析师方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用数理统计/Python/SQL推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com",
+            "snapshot_url": "https://www.mindray.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.8,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_067",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_008",
+          "role_name": "市场准入岗",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "市场准入岗行为+业务面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:市场准入岗｜阶段:主批一面】讲一次你在“市场准入岗流程优化专项”中推动跨团队协作的经历，重点说明你如何用结构化分析识别核心矛盾、用数据处理落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "结构化分析诊断与决策依据",
+            "数据处理执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对市场准入岗目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做市场准入岗方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用结构化分析/数据处理推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_068",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_008",
+          "role_name": "市场准入岗",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "市场准入岗稳定性与匹配度面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:市场准入岗｜阶段:实习转正/HR面】如果入职后发现市场准入岗工作内容与预期不一致，你会如何在90天内补齐结构化分析/数据处理短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "结构化分析诊断与决策依据",
+            "数据处理执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对市场准入岗目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做市场准入岗方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用结构化分析/数据处理推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_069",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_009",
+          "role_name": "医学编辑岗",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "医学编辑岗行为+业务面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:医学编辑岗｜阶段:主批一面】讲一次你在“医学编辑岗流程优化专项”中推动跨团队协作的经历，重点说明你如何用结构化分析识别核心矛盾、用数据处理落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "结构化分析诊断与决策依据",
+            "数据处理执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对医学编辑岗目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做医学编辑岗方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用结构化分析/数据处理推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com",
+            "snapshot_url": "https://www.mindray.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.8,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_070",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_009",
+          "role_name": "医学编辑岗",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "医学编辑岗稳定性与匹配度面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:医学编辑岗｜阶段:实习转正/HR面】如果入职后发现医学编辑岗工作内容与预期不一致，你会如何在90天内补齐结构化分析/数据处理短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "结构化分析诊断与决策依据",
+            "数据处理执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对医学编辑岗目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做医学编辑岗方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用结构化分析/数据处理推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com",
+            "snapshot_url": "https://www.mindray.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.8,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_071",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_010",
+          "role_name": "器械售后工程师",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "器械售后工程师行为+业务面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:器械售后工程师｜阶段:主批一面】讲一次你在“器械售后工程师流程优化专项”中推动跨团队协作的经历，重点说明你如何用编程能力识别核心矛盾、用系统设计落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "编程能力诊断与决策依据",
+            "系统设计执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对器械售后工程师目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做器械售后工程师方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用编程能力/系统设计推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_072",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_010",
+          "role_name": "器械售后工程师",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "器械售后工程师稳定性与匹配度面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:器械售后工程师｜阶段:实习转正/HR面】如果入职后发现器械售后工程师工作内容与预期不一致，你会如何在90天内补齐编程能力/系统设计短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "编程能力诊断与决策依据",
+            "系统设计执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对器械售后工程师目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做器械售后工程师方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用编程能力/系统设计推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_073",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_011",
+          "role_name": "试剂研发工程师",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "试剂研发工程师行为+业务面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:试剂研发工程师｜阶段:主批一面】讲一次你在“试剂研发工程师流程优化专项”中推动跨团队协作的经历，重点说明你如何用编程能力识别核心矛盾、用系统设计落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "编程能力诊断与决策依据",
+            "系统设计执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对试剂研发工程师目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做试剂研发工程师方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用编程能力/系统设计推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_074",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_011",
+          "role_name": "试剂研发工程师",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "试剂研发工程师稳定性与匹配度面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:试剂研发工程师｜阶段:实习转正/HR面】如果入职后发现试剂研发工程师工作内容与预期不一致，你会如何在90天内补齐编程能力/系统设计短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "编程能力诊断与决策依据",
+            "系统设计执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对试剂研发工程师目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做试剂研发工程师方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用编程能力/系统设计推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_075",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_012",
+          "role_name": "生产验证工程师",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "生产验证工程师行为+业务面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:生产验证工程师｜阶段:主批一面】讲一次你在“生产验证工程师流程优化专项”中推动跨团队协作的经历，重点说明你如何用编程能力识别核心矛盾、用系统设计落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "编程能力诊断与决策依据",
+            "系统设计执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对生产验证工程师目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做生产验证工程师方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用编程能力/系统设计推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com",
+            "snapshot_url": "https://www.mindray.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.8,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_076",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_012",
+          "role_name": "生产验证工程师",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "生产验证工程师稳定性与匹配度面（补充）",
+          "prompt": "【行业:生物医药与器械｜岗位:生产验证工程师｜阶段:实习转正/HR面】如果入职后发现生产验证工程师工作内容与预期不一致，你会如何在90天内补齐编程能力/系统设计短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "编程能力诊断与决策依据",
+            "系统设计执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对生产验证工程师目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做生产验证工程师方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用编程能力/系统设计推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com",
+            "snapshot_url": "https://www.mindray.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.8,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
         }
       ],
       "last_checked": "2026-02-19",

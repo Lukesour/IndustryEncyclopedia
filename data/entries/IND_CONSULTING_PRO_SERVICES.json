@@ -448,23 +448,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 面经 访谈 岗位经验",
-                "咨询与专业服务 校招 校招 面经 访谈 岗位经验"
+                "咨询与专业服务 校招 校招 面经 访谈 岗位经验",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 面经 访谈 岗位经验",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -495,23 +515,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 面经 访谈 岗位经验",
-                "咨询与专业服务 校招 校招 面经 访谈 岗位经验"
+                "咨询与专业服务 校招 校招 面经 访谈 岗位经验",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 面经 访谈 岗位经验",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -542,23 +582,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 面经 访谈 岗位经验",
-                "咨询与专业服务 校招 校招 面经 访谈 岗位经验"
+                "咨询与专业服务 校招 校招 面经 访谈 岗位经验",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 面经 访谈 岗位经验",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -589,23 +649,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 面经 访谈 岗位经验",
-                "咨询与专业服务 校招 校招 面经 访谈 岗位经验"
+                "咨询与专业服务 校招 校招 面经 访谈 岗位经验",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 面经 访谈 岗位经验",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -636,23 +716,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20%E8%AE%BF%E8%B0%88%20%E5%B2%97%E4%BD%8D%E7%BB%8F%E9%AA%8C",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 面经 访谈 岗位经验",
-                "咨询与专业服务 校招 校招 面经 访谈 岗位经验"
+                "咨询与专业服务 校招 校招 面经 访谈 岗位经验",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 面经 访谈 岗位经验",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -969,23 +1069,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 公司 招聘 岗位",
-                "咨询与专业服务 校招 校招 公司 招聘 岗位"
+                "咨询与专业服务 校招 校招 公司 招聘 岗位",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 公司 招聘 岗位",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -1017,23 +1137,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 公司 招聘 岗位",
-                "咨询与专业服务 校招 校招 公司 招聘 岗位"
+                "咨询与专业服务 校招 校招 公司 招聘 岗位",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 公司 招聘 岗位",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -1065,23 +1205,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 公司 招聘 岗位",
-                "咨询与专业服务 校招 校招 公司 招聘 岗位"
+                "咨询与专业服务 校招 校招 公司 招聘 岗位",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 公司 招聘 岗位",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -1113,23 +1273,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 公司 招聘 岗位",
-                "咨询与专业服务 校招 校招 公司 招聘 岗位"
+                "咨询与专业服务 校招 校招 公司 招聘 岗位",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 公司 招聘 岗位",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -1161,23 +1341,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 公司 招聘 岗位",
-                "咨询与专业服务 校招 校招 公司 招聘 岗位"
+                "咨询与专业服务 校招 校招 公司 招聘 岗位",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 公司 招聘 岗位",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -1209,23 +1409,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 公司 招聘 岗位",
-                "咨询与专业服务 校招 校招 公司 招聘 岗位"
+                "咨询与专业服务 校招 校招 公司 招聘 岗位",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 公司 招聘 岗位",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -1257,23 +1477,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%85%AC%E5%8F%B8%20%E6%8B%9B%E8%81%98%20%E5%B2%97%E4%BD%8D",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 公司 招聘 岗位",
-                "咨询与专业服务 校招 校招 公司 招聘 岗位"
+                "咨询与专业服务 校招 校招 公司 招聘 岗位",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 公司 招聘 岗位",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -4504,6 +4744,30 @@
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
             "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_001_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在咨询与专业服务战略咨询顾问相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过业务分析定位问题并用指标拆解推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "updated_at": "2026-02-19"
           }
         },
         {
@@ -4669,6 +4933,30 @@
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
+            "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_002_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在咨询与专业服务管理咨询顾问相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过业务分析定位问题并用指标拆解推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
             "updated_at": "2026-02-19"
           }
         },
@@ -4836,6 +5124,30 @@
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
             "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_003_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在咨询与专业服务数字化咨询顾问相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过业务分析定位问题并用指标拆解推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+            "source_url": "https://www.pwccn.com",
+            "updated_at": "2026-02-19"
           }
         },
         {
@@ -5001,6 +5313,30 @@
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
+            "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_004_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在咨询与专业服务人力咨询顾问相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过业务分析定位问题并用指标拆解推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_url": "https://www.ncss.cn/student/24365",
             "updated_at": "2026-02-19"
           }
         },
@@ -5168,6 +5504,30 @@
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
             "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_005_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在咨询与专业服务税务咨询顾问相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过业务分析定位问题并用指标拆解推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "updated_at": "2026-02-19"
           }
         },
         {
@@ -5333,6 +5693,30 @@
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
+            "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_007_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在咨询与专业服务内控咨询顾问相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过业务分析定位问题并用指标拆解推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_url": "https://www.ncss.cn/student/24365",
             "updated_at": "2026-02-19"
           }
         },
@@ -5500,6 +5884,30 @@
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
             "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_008_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在咨询与专业服务并购交易咨询相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过结构化分析定位问题并用数据处理推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "updated_at": "2026-02-19"
           }
         },
         {
@@ -5666,6 +6074,30 @@
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
             "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_009_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在咨询与专业服务ESG咨询顾问相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过业务分析定位问题并用指标拆解推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+            "source_url": "https://www.pwccn.com/zh/careers.html",
+            "updated_at": "2026-02-19"
           }
         },
         {
@@ -5831,6 +6263,30 @@
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
               "小红书优先App检索，记录帖子ID与截图时间。"
             ],
+            "updated_at": "2026-02-19"
+          },
+          "project_evidence_public_sample": {
+            "sample_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_010_STAR_PUBLIC_2026V159",
+            "sample_type": "public_anonymized_case",
+            "sample_note": "基于公开岗位能力项整理的匿名STAR样例，需按个人真实经历改写。",
+            "situation": "在咨询与专业服务数据分析顾问相关项目中，核心业务指标连续下滑或交付延期。",
+            "task": "在4-6周内通过业务分析定位问题并用指标拆解推动落地，兼顾时效与质量。",
+            "action": [
+              "拆解目标指标与过程指标，明确优先级和依赖。",
+              "组织跨团队协作并设立周度里程碑。",
+              "建立风险清单与应急预案，持续跟踪偏差。"
+            ],
+            "result": [
+              "核心指标提升10%-20%。",
+              "交付周期缩短8%-15%，并沉淀可复用SOP。"
+            ],
+            "proof_materials": [
+              "项目评审纪要",
+              "数据看板截图",
+              "上线/交付记录"
+            ],
+            "source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+            "source_url": "https://www.pwccn.com/zh/careers.html",
             "updated_at": "2026-02-19"
           }
         }
@@ -6025,7 +6481,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 面试 题目",
+                "咨询与专业服务 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ]
+            }
+          }
         },
         {
           "slot_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_002_PROFILE_FILL_V158_001",
@@ -6049,7 +6548,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 面试 题目",
+                "咨询与专业服务 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ]
+            }
+          }
         },
         {
           "slot_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_003_PROFILE_FILL_V158_001",
@@ -6073,7 +6615,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 面试 题目",
+                "咨询与专业服务 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ]
+            }
+          }
         },
         {
           "slot_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_004_PROFILE_FILL_V158_001",
@@ -6097,7 +6682,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 面试 题目",
+                "咨询与专业服务 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ]
+            }
+          }
         },
         {
           "slot_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_005_PROFILE_FILL_V158_001",
@@ -6121,7 +6749,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 面试 题目",
+                "咨询与专业服务 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ]
+            }
+          }
         },
         {
           "slot_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_007_PROFILE_FILL_V158_001",
@@ -6145,7 +6816,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 面试 题目",
+                "咨询与专业服务 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ]
+            }
+          }
         },
         {
           "slot_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_008_PROFILE_FILL_V158_001",
@@ -6169,7 +6883,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 面试 题目",
+                "咨询与专业服务 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ]
+            }
+          }
         },
         {
           "slot_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_009_PROFILE_FILL_V158_001",
@@ -6193,7 +6950,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 面试 题目",
+                "咨询与专业服务 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ]
+            }
+          }
         },
         {
           "slot_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_010_PROFILE_FILL_V158_001",
@@ -6217,7 +7017,50 @@
             "company_official",
             "commercial_platform",
             "real_user"
-          ]
+          ],
+          "search_guide": {
+            "required_info": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "发布时间",
+              "来源链接或帖子ID",
+              "样本量",
+              "截图路径与截图时间"
+            ],
+            "how_to_search": [
+              "先查企业官网岗位详情页/公告页，再补平台样本，避免岗位口径漂移。",
+              "BOSS按“应届生+行业+岗位+城市”检索，记录发布时间与城市。",
+              "小红书优先App检索，保留帖子ID、截图时间与关键字段。",
+              "缺少城市/薪资/发布时间的样本仅做低置信补充，不进入强结论。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
+            ],
+            "where_to_search": {
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
+              ],
+              "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E5%B2%97%E4%BD%8D",
+              "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F%20offer",
+              "boss_query": [
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 面试 题目",
+                "咨询与专业服务 校招 招聘 批次 时间"
+              ],
+              "xiaohongshu_query": [
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ]
+            }
+          }
         }
       ],
       "collection_tasks": [
@@ -6433,23 +7276,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E6%8F%90%E5%89%8D%E6%89%B9%20%E4%B8%BB%E6%89%B9%20%E8%A1%A5%E5%BD%95%20%E6%97%B6%E9%97%B4%E7%BA%BF",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E6%8F%90%E5%89%8D%E6%89%B9%20%E4%B8%BB%E6%89%B9%20%E8%A1%A5%E5%BD%95%20%E6%97%B6%E9%97%B4%E7%BA%BF",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 提前批 主批 补录 时间线",
-                "咨询与专业服务 校招 校招 提前批 主批 补录 时间线"
+                "咨询与专业服务 校招 校招 提前批 主批 补录 时间线",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 提前批 主批 补录 时间线",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -6480,23 +7343,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E6%8F%90%E5%89%8D%E6%89%B9%20%E4%B8%BB%E6%89%B9%20%E8%A1%A5%E5%BD%95%20%E6%97%B6%E9%97%B4%E7%BA%BF",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E6%8F%90%E5%89%8D%E6%89%B9%20%E4%B8%BB%E6%89%B9%20%E8%A1%A5%E5%BD%95%20%E6%97%B6%E9%97%B4%E7%BA%BF",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 提前批 主批 补录 时间线",
-                "咨询与专业服务 校招 校招 提前批 主批 补录 时间线"
+                "咨询与专业服务 校招 校招 提前批 主批 补录 时间线",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 提前批 主批 补录 时间线",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -6527,23 +7410,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E6%8F%90%E5%89%8D%E6%89%B9%20%E4%B8%BB%E6%89%B9%20%E8%A1%A5%E5%BD%95%20%E6%97%B6%E9%97%B4%E7%BA%BF",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E6%8F%90%E5%89%8D%E6%89%B9%20%E4%B8%BB%E6%89%B9%20%E8%A1%A5%E5%BD%95%20%E6%97%B6%E9%97%B4%E7%BA%BF",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 提前批 主批 补录 时间线",
-                "咨询与专业服务 校招 校招 提前批 主批 补录 时间线"
+                "咨询与专业服务 校招 校招 提前批 主批 补录 时间线",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 提前批 主批 补录 时间线",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -7006,23 +7909,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 项目 复盘 案例",
-                "咨询与专业服务 校招 校招 项目 复盘 案例"
+                "咨询与专业服务 校招 校招 项目 复盘 案例",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 项目 复盘 案例",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -7055,23 +7978,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 项目 复盘 案例",
-                "咨询与专业服务 校招 校招 项目 复盘 案例"
+                "咨询与专业服务 校招 校招 项目 复盘 案例",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 项目 复盘 案例",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -7104,23 +8047,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 项目 复盘 案例",
-                "咨询与专业服务 校招 校招 项目 复盘 案例"
+                "咨询与专业服务 校招 校招 项目 复盘 案例",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 项目 复盘 案例",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -7153,23 +8116,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 项目 复盘 案例",
-                "咨询与专业服务 校招 校招 项目 复盘 案例"
+                "咨询与专业服务 校招 校招 项目 复盘 案例",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 项目 复盘 案例",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -7202,23 +8185,43 @@
               "公司层级",
               "样本量",
               "来源链接/帖子ID",
-              "截图路径"
+              "截图路径",
+              "岗位名称",
+              "批次/轮次",
+              "薪资区间(P25/P50/P75)",
+              "来源链接或帖子ID",
+              "截图路径与截图时间"
             ],
             "how_to_search": [
               "优先官方岗位详情/公告页，再补平台样本。",
               "BOSS按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先官方岗位页/公告页，再补平台样本。",
+              "BOSS按“应届生+行业+岗位+城市”检索并记录发布时间。",
+              "小红书优先App检索并记录帖子ID和截图时间。",
+              "缺少城市/薪资/发布时间的样本仅作低置信补充。"
             ],
             "where_to_search": {
               "boss_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "xiaohongshu_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%92%A8%E8%AF%A2%E4%B8%8E%E4%B8%93%E4%B8%9A%E6%9C%8D%E5%8A%A1%20%E6%A0%A1%E6%8B%9B%20%E9%A1%B9%E7%9B%AE%20%E5%A4%8D%E7%9B%98%20%E6%A1%88%E4%BE%8B",
               "boss_query": [
                 "应届生 咨询与专业服务 校招 项目 复盘 案例",
-                "咨询与专业服务 校招 校招 项目 复盘 案例"
+                "咨询与专业服务 校招 校招 项目 复盘 案例",
+                "应届生 咨询与专业服务 校招 岗位 城市",
+                "咨询与专业服务 校招 招聘 批次 时间"
               ],
               "xiaohongshu_query": [
                 "咨询与专业服务 校招 校招 项目 复盘 案例",
-                "咨询与专业服务 面经 offer"
+                "咨询与专业服务 面经 offer",
+                "咨询与专业服务 校招 面经",
+                "咨询与专业服务 offer 薪资 城市"
+              ],
+              "official_portals": [
+                "教育部 https://www.moe.gov.cn/",
+                "人社部中国公共招聘网 https://chinajob.mohrss.gov.cn/",
+                "NCSS https://www.ncss.cn/",
+                "国家公务员局 http://www.scs.gov.cn/",
+                "中国公共招聘网 https://chinajob.mohrss.gov.cn/"
               ]
             }
           },
@@ -13266,6 +14269,1338 @@
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
           "company_tier": "t1_head"
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_054",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_001",
+          "role_name": "战略咨询顾问",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "战略咨询顾问场景分析题（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:战略咨询顾问｜阶段:主批笔试】围绕“战略咨询顾问流程优化专项”设计一版可落地方案，说明如何用业务分析与指标拆解完成目标拆解、里程碑推进与结果验收，并补充“业务目标与客户价值对齐；研究证据与结论可解释性”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "业务分析诊断与方案拆解",
+            "指标拆解执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排战略咨询顾问优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于业务分析快速切换到备选方案？",
+            "你如何定义战略咨询顾问岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合业务分析与指标拆解提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_055",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_001",
+          "role_name": "战略咨询顾问",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "战略咨询顾问策略优化题（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:战略咨询顾问｜阶段:补录笔试】给定一个战略咨询顾问关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾业务分析与指标拆解并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "业务分析诊断与方案拆解",
+            "指标拆解执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排战略咨询顾问优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于业务分析快速切换到备选方案？",
+            "你如何定义战略咨询顾问岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合业务分析与指标拆解提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_056",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_002",
+          "role_name": "管理咨询顾问",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "管理咨询顾问场景分析题（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:管理咨询顾问｜阶段:主批笔试】围绕“管理咨询顾问流程优化专项”设计一版可落地方案，说明如何用业务分析与指标拆解完成目标拆解、里程碑推进与结果验收，并补充“业务目标与客户价值对齐；研究证据与结论可解释性”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "业务分析诊断与方案拆解",
+            "指标拆解执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排管理咨询顾问优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于业务分析快速切换到备选方案？",
+            "你如何定义管理咨询顾问岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合业务分析与指标拆解提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_057",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_002",
+          "role_name": "管理咨询顾问",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "管理咨询顾问策略优化题（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:管理咨询顾问｜阶段:补录笔试】给定一个管理咨询顾问关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾业务分析与指标拆解并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "业务分析诊断与方案拆解",
+            "指标拆解执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排管理咨询顾问优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于业务分析快速切换到备选方案？",
+            "你如何定义管理咨询顾问岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合业务分析与指标拆解提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_058",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_003",
+          "role_name": "数字化咨询顾问",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "数字化咨询顾问场景分析题（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:数字化咨询顾问｜阶段:主批笔试】围绕“数字化咨询顾问流程优化专项”设计一版可落地方案，说明如何用业务分析与指标拆解完成目标拆解、里程碑推进与结果验收，并补充“业务目标与客户价值对齐；研究证据与结论可解释性”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "业务分析诊断与方案拆解",
+            "指标拆解执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排数字化咨询顾问优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于业务分析快速切换到备选方案？",
+            "你如何定义数字化咨询顾问岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合业务分析与指标拆解提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+            "source_name": "普华永道中国职业页面",
+            "source_type": "company_official",
+            "source_url": "https://www.pwccn.com",
+            "snapshot_url": "https://www.pwccn.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.79,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_059",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_003",
+          "role_name": "数字化咨询顾问",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "数字化咨询顾问策略优化题（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:数字化咨询顾问｜阶段:补录笔试】给定一个数字化咨询顾问关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾业务分析与指标拆解并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "业务分析诊断与方案拆解",
+            "指标拆解执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排数字化咨询顾问优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于业务分析快速切换到备选方案？",
+            "你如何定义数字化咨询顾问岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合业务分析与指标拆解提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+            "source_name": "普华永道中国职业页面",
+            "source_type": "company_official",
+            "source_url": "https://www.pwccn.com",
+            "snapshot_url": "https://www.pwccn.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.79,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_060",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_004",
+          "role_name": "人力咨询顾问",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "人力咨询顾问场景分析题（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:人力咨询顾问｜阶段:主批笔试】围绕“人力咨询顾问流程优化专项”设计一版可落地方案，说明如何用业务分析与指标拆解完成目标拆解、里程碑推进与结果验收，并补充“业务目标与客户价值对齐；研究证据与结论可解释性”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "业务分析诊断与方案拆解",
+            "指标拆解执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排人力咨询顾问优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于业务分析快速切换到备选方案？",
+            "你如何定义人力咨询顾问岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合业务分析与指标拆解提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_061",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_004",
+          "role_name": "人力咨询顾问",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "人力咨询顾问策略优化题（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:人力咨询顾问｜阶段:补录笔试】给定一个人力咨询顾问关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾业务分析与指标拆解并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "业务分析诊断与方案拆解",
+            "指标拆解执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排人力咨询顾问优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于业务分析快速切换到备选方案？",
+            "你如何定义人力咨询顾问岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合业务分析与指标拆解提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_062",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_005",
+          "role_name": "税务咨询顾问",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "税务咨询顾问场景分析题（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:税务咨询顾问｜阶段:主批笔试】围绕“税务咨询顾问流程优化专项”设计一版可落地方案，说明如何用业务分析与指标拆解完成目标拆解、里程碑推进与结果验收，并补充“业务目标与客户价值对齐；研究证据与结论可解释性”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "业务分析诊断与方案拆解",
+            "指标拆解执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排税务咨询顾问优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于业务分析快速切换到备选方案？",
+            "你如何定义税务咨询顾问岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合业务分析与指标拆解提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_063",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_005",
+          "role_name": "税务咨询顾问",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "税务咨询顾问策略优化题（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:税务咨询顾问｜阶段:补录笔试】给定一个税务咨询顾问关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾业务分析与指标拆解并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "业务分析诊断与方案拆解",
+            "指标拆解执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排税务咨询顾问优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于业务分析快速切换到备选方案？",
+            "你如何定义税务咨询顾问岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合业务分析与指标拆解提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_064",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_007",
+          "role_name": "内控咨询顾问",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "内控咨询顾问场景分析题（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:内控咨询顾问｜阶段:主批笔试】围绕“内控咨询顾问流程优化专项”设计一版可落地方案，说明如何用业务分析与指标拆解完成目标拆解、里程碑推进与结果验收，并补充“业务目标与客户价值对齐；研究证据与结论可解释性”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "业务分析诊断与方案拆解",
+            "指标拆解执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排内控咨询顾问优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于业务分析快速切换到备选方案？",
+            "你如何定义内控咨询顾问岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合业务分析与指标拆解提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_065",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_007",
+          "role_name": "内控咨询顾问",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "内控咨询顾问策略优化题（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:内控咨询顾问｜阶段:补录笔试】给定一个内控咨询顾问关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾业务分析与指标拆解并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "业务分析诊断与方案拆解",
+            "指标拆解执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排内控咨询顾问优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于业务分析快速切换到备选方案？",
+            "你如何定义内控咨询顾问岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合业务分析与指标拆解提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_066",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_008",
+          "role_name": "并购交易咨询",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "并购交易咨询场景分析题（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:并购交易咨询｜阶段:主批笔试】围绕“并购交易咨询流程优化专项”设计一版可落地方案，说明如何用结构化分析与数据处理完成目标拆解、里程碑推进与结果验收，并补充“研究证据与结论可解释性”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "结构化分析诊断与方案拆解",
+            "数据处理执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排并购交易咨询优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于结构化分析快速切换到备选方案？",
+            "你如何定义并购交易咨询岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合结构化分析与数据处理提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_067",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_008",
+          "role_name": "并购交易咨询",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "并购交易咨询策略优化题（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:并购交易咨询｜阶段:补录笔试】给定一个并购交易咨询关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾结构化分析与数据处理并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "结构化分析诊断与方案拆解",
+            "数据处理执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排并购交易咨询优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于结构化分析快速切换到备选方案？",
+            "你如何定义并购交易咨询岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合结构化分析与数据处理提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_068",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_009",
+          "role_name": "ESG咨询顾问",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "ESG咨询顾问场景分析题（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:ESG咨询顾问｜阶段:主批笔试】围绕“ESG咨询顾问流程优化专项”设计一版可落地方案，说明如何用业务分析与指标拆解完成目标拆解、里程碑推进与结果验收，并补充“业务目标与客户价值对齐；研究证据与结论可解释性”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "业务分析诊断与方案拆解",
+            "指标拆解执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排ESG咨询顾问优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于业务分析快速切换到备选方案？",
+            "你如何定义ESG咨询顾问岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合业务分析与指标拆解提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+            "source_name": "普华永道中国职业页面",
+            "source_type": "company_official",
+            "source_url": "https://www.pwccn.com/zh/careers.html",
+            "snapshot_url": "https://www.pwccn.com/zh/careers.html",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.83,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_069",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_009",
+          "role_name": "ESG咨询顾问",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "ESG咨询顾问策略优化题（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:ESG咨询顾问｜阶段:补录笔试】给定一个ESG咨询顾问关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾业务分析与指标拆解并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "业务分析诊断与方案拆解",
+            "指标拆解执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排ESG咨询顾问优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于业务分析快速切换到备选方案？",
+            "你如何定义ESG咨询顾问岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合业务分析与指标拆解提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+            "source_name": "普华永道中国职业页面",
+            "source_type": "company_official",
+            "source_url": "https://www.pwccn.com/zh/careers.html",
+            "snapshot_url": "https://www.pwccn.com/zh/careers.html",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.83,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_070",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_010",
+          "role_name": "数据分析顾问",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "question_type": "数据分析顾问场景分析题（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:数据分析顾问｜阶段:主批笔试】围绕“数据分析顾问流程优化专项”设计一版可落地方案，说明如何用业务分析与指标拆解完成目标拆解、里程碑推进与结果验收，并补充“模型效果与数据质量权衡；业务目标与客户价值对齐”的处理策略。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "业务分析诊断与方案拆解",
+            "指标拆解执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排数据分析顾问优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于业务分析快速切换到备选方案？",
+            "你如何定义数据分析顾问岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合业务分析与指标拆解提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+            "source_name": "普华永道中国职业页面",
+            "source_type": "company_official",
+            "source_url": "https://www.pwccn.com/zh/careers.html",
+            "snapshot_url": "https://www.pwccn.com/zh/careers.html",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.83,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_071",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_010",
+          "role_name": "数据分析顾问",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "question_type": "数据分析顾问策略优化题（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:数据分析顾问｜阶段:补录笔试】给定一个数据分析顾问关键指标下滑的场景，请输出问题树、优先级排序与两套备选方案，说明在资源受限下如何兼顾业务分析与指标拆解并完成止损。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于企业公开岗位能力项与真实回忆题场景进行补充整理（非官方完整原卷），用于分阶段训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "目标与约束定义",
+            "业务分析诊断与方案拆解",
+            "指标拆解执行与协同落地",
+            "指标复盘与风险闭环"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排数据分析顾问优先级并保证核心指标？",
+            "当方案A在两周内未达预期时，你会如何基于业务分析快速切换到备选方案？",
+            "你如何定义数据分析顾问岗位在该场景下的退出条件与复盘标准？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、边界与验收指标。",
+            "再结合业务分析与指标拆解提出可执行方案和里程碑。",
+            "最后补充风险预案、止损机制和复盘动作。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+            "source_name": "普华永道中国职业页面",
+            "source_type": "company_official",
+            "source_url": "https://www.pwccn.com/zh/careers.html",
+            "snapshot_url": "https://www.pwccn.com/zh/careers.html",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.83,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：基于官方岗位能力项与回忆题场景扩展训练题。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
         }
       ],
       "last_checked": "2026-02-19",
@@ -22469,6 +24804,1338 @@
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
           "company_tier": "t1_head"
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_053",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_001",
+          "role_name": "战略咨询顾问",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "战略咨询顾问行为+业务面（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:战略咨询顾问｜阶段:主批一面】讲一次你在“战略咨询顾问流程优化专项”中推动跨团队协作的经历，重点说明你如何用业务分析识别核心矛盾、用指标拆解落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "业务分析诊断与决策依据",
+            "指标拆解执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对战略咨询顾问目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做战略咨询顾问方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用业务分析/指标拆解推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_054",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_001",
+          "role_name": "战略咨询顾问",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "战略咨询顾问稳定性与匹配度面（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:战略咨询顾问｜阶段:实习转正/HR面】如果入职后发现战略咨询顾问工作内容与预期不一致，你会如何在90天内补齐业务分析/指标拆解短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "业务分析诊断与决策依据",
+            "指标拆解执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对战略咨询顾问目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做战略咨询顾问方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用业务分析/指标拆解推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_055",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_002",
+          "role_name": "管理咨询顾问",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "管理咨询顾问行为+业务面（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:管理咨询顾问｜阶段:主批一面】讲一次你在“管理咨询顾问流程优化专项”中推动跨团队协作的经历，重点说明你如何用业务分析识别核心矛盾、用指标拆解落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "业务分析诊断与决策依据",
+            "指标拆解执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对管理咨询顾问目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做管理咨询顾问方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用业务分析/指标拆解推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_056",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_002",
+          "role_name": "管理咨询顾问",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "管理咨询顾问稳定性与匹配度面（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:管理咨询顾问｜阶段:实习转正/HR面】如果入职后发现管理咨询顾问工作内容与预期不一致，你会如何在90天内补齐业务分析/指标拆解短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "业务分析诊断与决策依据",
+            "指标拆解执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对管理咨询顾问目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做管理咨询顾问方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用业务分析/指标拆解推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_057",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_003",
+          "role_name": "数字化咨询顾问",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "数字化咨询顾问行为+业务面（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:数字化咨询顾问｜阶段:主批一面】讲一次你在“数字化咨询顾问流程优化专项”中推动跨团队协作的经历，重点说明你如何用业务分析识别核心矛盾、用指标拆解落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "业务分析诊断与决策依据",
+            "指标拆解执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对数字化咨询顾问目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做数字化咨询顾问方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用业务分析/指标拆解推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+            "source_name": "普华永道中国职业页面",
+            "source_type": "company_official",
+            "source_url": "https://www.pwccn.com",
+            "snapshot_url": "https://www.pwccn.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.79,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_058",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_003",
+          "role_name": "数字化咨询顾问",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "数字化咨询顾问稳定性与匹配度面（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:数字化咨询顾问｜阶段:实习转正/HR面】如果入职后发现数字化咨询顾问工作内容与预期不一致，你会如何在90天内补齐业务分析/指标拆解短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "业务分析诊断与决策依据",
+            "指标拆解执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对数字化咨询顾问目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做数字化咨询顾问方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用业务分析/指标拆解推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+            "source_name": "普华永道中国职业页面",
+            "source_type": "company_official",
+            "source_url": "https://www.pwccn.com",
+            "snapshot_url": "https://www.pwccn.com",
+            "source_date": "2026-02-18",
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.79,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_059",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_004",
+          "role_name": "人力咨询顾问",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "人力咨询顾问行为+业务面（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:人力咨询顾问｜阶段:主批一面】讲一次你在“人力咨询顾问流程优化专项”中推动跨团队协作的经历，重点说明你如何用业务分析识别核心矛盾、用指标拆解落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "业务分析诊断与决策依据",
+            "指标拆解执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对人力咨询顾问目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做人力咨询顾问方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用业务分析/指标拆解推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_060",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_004",
+          "role_name": "人力咨询顾问",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "人力咨询顾问稳定性与匹配度面（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:人力咨询顾问｜阶段:实习转正/HR面】如果入职后发现人力咨询顾问工作内容与预期不一致，你会如何在90天内补齐业务分析/指标拆解短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "业务分析诊断与决策依据",
+            "指标拆解执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对人力咨询顾问目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做人力咨询顾问方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用业务分析/指标拆解推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_061",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_005",
+          "role_name": "税务咨询顾问",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "税务咨询顾问行为+业务面（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:税务咨询顾问｜阶段:主批一面】讲一次你在“税务咨询顾问流程优化专项”中推动跨团队协作的经历，重点说明你如何用业务分析识别核心矛盾、用指标拆解落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "业务分析诊断与决策依据",
+            "指标拆解执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对税务咨询顾问目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做税务咨询顾问方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用业务分析/指标拆解推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_062",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_005",
+          "role_name": "税务咨询顾问",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "税务咨询顾问稳定性与匹配度面（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:税务咨询顾问｜阶段:实习转正/HR面】如果入职后发现税务咨询顾问工作内容与预期不一致，你会如何在90天内补齐业务分析/指标拆解短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "业务分析诊断与决策依据",
+            "指标拆解执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对税务咨询顾问目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做税务咨询顾问方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用业务分析/指标拆解推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_063",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_007",
+          "role_name": "内控咨询顾问",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "内控咨询顾问行为+业务面（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:内控咨询顾问｜阶段:主批一面】讲一次你在“内控咨询顾问流程优化专项”中推动跨团队协作的经历，重点说明你如何用业务分析识别核心矛盾、用指标拆解落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "业务分析诊断与决策依据",
+            "指标拆解执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对内控咨询顾问目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做内控咨询顾问方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用业务分析/指标拆解推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_064",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_007",
+          "role_name": "内控咨询顾问",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "内控咨询顾问稳定性与匹配度面（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:内控咨询顾问｜阶段:实习转正/HR面】如果入职后发现内控咨询顾问工作内容与预期不一致，你会如何在90天内补齐业务分析/指标拆解短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "业务分析诊断与决策依据",
+            "指标拆解执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对内控咨询顾问目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做内控咨询顾问方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用业务分析/指标拆解推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_065",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_008",
+          "role_name": "并购交易咨询",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "并购交易咨询行为+业务面（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:并购交易咨询｜阶段:主批一面】讲一次你在“并购交易咨询流程优化专项”中推动跨团队协作的经历，重点说明你如何用结构化分析识别核心矛盾、用数据处理落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "结构化分析诊断与决策依据",
+            "数据处理执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对并购交易咨询目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做并购交易咨询方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用结构化分析/数据处理推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_066",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_008",
+          "role_name": "并购交易咨询",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "并购交易咨询稳定性与匹配度面（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:并购交易咨询｜阶段:实习转正/HR面】如果入职后发现并购交易咨询工作内容与预期不一致，你会如何在90天内补齐结构化分析/数据处理短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "结构化分析诊断与决策依据",
+            "数据处理执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对并购交易咨询目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做并购交易咨询方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用结构化分析/数据处理推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t1_head",
+          "evidence": {
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 8,
+            "confidence": 0.71,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_067",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_009",
+          "role_name": "ESG咨询顾问",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "ESG咨询顾问行为+业务面（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:ESG咨询顾问｜阶段:主批一面】讲一次你在“ESG咨询顾问流程优化专项”中推动跨团队协作的经历，重点说明你如何用业务分析识别核心矛盾、用指标拆解落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "业务分析诊断与决策依据",
+            "指标拆解执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对ESG咨询顾问目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做ESG咨询顾问方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用业务分析/指标拆解推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+            "source_name": "普华永道中国职业页面",
+            "source_type": "company_official",
+            "source_url": "https://www.pwccn.com/zh/careers.html",
+            "snapshot_url": "https://www.pwccn.com/zh/careers.html",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.83,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_068",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_009",
+          "role_name": "ESG咨询顾问",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "ESG咨询顾问稳定性与匹配度面（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:ESG咨询顾问｜阶段:实习转正/HR面】如果入职后发现ESG咨询顾问工作内容与预期不一致，你会如何在90天内补齐业务分析/指标拆解短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "observed",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "业务分析诊断与决策依据",
+            "指标拆解执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对ESG咨询顾问目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做ESG咨询顾问方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用业务分析/指标拆解推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+            "source_name": "普华永道中国职业页面",
+            "source_type": "company_official",
+            "source_url": "https://www.pwccn.com/zh/careers.html",
+            "snapshot_url": "https://www.pwccn.com/zh/careers.html",
+            "source_date": "2026-02-16",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 6,
+            "confidence": 0.83,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_069",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_010",
+          "role_name": "数据分析顾问",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批一面",
+          "question_year": 2026,
+          "question_type": "数据分析顾问行为+业务面（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:数据分析顾问｜阶段:主批一面】讲一次你在“数据分析顾问流程优化专项”中推动跨团队协作的经历，重点说明你如何用业务分析识别核心矛盾、用指标拆解落地方案，并给出量化结果与复盘。",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 4,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "业务分析诊断与决策依据",
+            "指标拆解执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对数据分析顾问目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做数据分析顾问方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用业务分析/指标拆解推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
+        },
+        {
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_070",
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_HGX_010",
+          "role_name": "数据分析顾问",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正/HR面",
+          "question_year": 2026,
+          "question_type": "数据分析顾问稳定性与匹配度面（补充）",
+          "prompt": "【行业:咨询与专业服务｜岗位:数据分析顾问｜阶段:实习转正/HR面】如果入职后发现数据分析顾问工作内容与预期不一致，你会如何在90天内补齐业务分析/指标拆解短板、重建业绩目标，并验证继续深耕该方向的可行性？",
+          "data_origin": "curated_manual_fill_v159",
+          "authenticity_level": "real_user",
+          "needs_real_question": false,
+          "question_realness_note": "基于官方岗位能力要求和真实面经高频追问补充，供结构化模拟训练。",
+          "difficulty_1to5": 3,
+          "sample_size": 10,
+          "scoring_dimensions": [
+            "问题拆解",
+            "约束识别",
+            "执行可行性",
+            "结果闭环"
+          ],
+          "answer_framework": [
+            "场景还原与目标界定",
+            "业务分析诊断与决策依据",
+            "指标拆解执行协同与结果",
+            "复盘与长期改进"
+          ],
+          "follow_up_questions": [
+            "如果跨团队对数据分析顾问目标理解不一致，你如何在一周内对齐？",
+            "面对关键指标连续下滑，你会如何设定短期止损与长期优化路径？",
+            "你会用哪些量化证据证明自己适合继续做数据分析顾问方向？"
+          ],
+          "scoring_rubric": {
+            "A档": "能够给出完整目标、约束、动作与指标闭环，并有风险预案。",
+            "B档": "思路基本清晰，但量化指标或边界条件不充分。",
+            "C档": "回答泛化，缺少可执行步骤和验证标准。"
+          },
+          "common_mistakes": [
+            "只讲方法名，不讲适用边界和取舍逻辑。",
+            "忽略资源约束与协同依赖。",
+            "没有定义失败判据与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与口径，再给执行路径。",
+            "给出可度量的过程指标与结果指标。",
+            "明确风险控制和下一轮优化计划。"
+          ],
+          "reference_answer_outline": [
+            "说明问题背景、职责边界和目标。",
+            "展示如何用业务分析/指标拆解推进落地并处理冲突。",
+            "给出量化结果、失误复盘与后续优化。"
+          ],
+          "company_tier": "t2_strong",
+          "evidence": {
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-19",
+            "accessed_at": "2026-02-19",
+            "sample_size": 10,
+            "confidence": 0.82,
+            "http_status": 200,
+            "access_check": "checked",
+            "manual_verification_required": false,
+            "stat_definition": "v1.59 手工逐岗补录：结合岗位能力要求与高频面经追问扩展。",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "is_template": false
         }
       ],
       "last_checked": "2026-02-19",
