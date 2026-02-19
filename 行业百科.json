@@ -640,10 +640,20 @@
           "5行业各新增2个细分岗位，并逐岗位新增4阶段笔试/面试题各1条（每行业+8+8）。",
           "新增岗位同步保留BOSS/小红书平台受限补录位（检索词、必填字段、截图规则）。"
         ]
+      },
+      {
+        "version": "v1.53.0",
+        "date": "2026-02-19",
+        "summary": [
+          "发布硬门槛升级为深度硬门禁：岗位规模、每岗题量、阶段覆盖、岗位深链接与模板复用全部纳入阻断。",
+          "评分脚本与目标口径对齐：移除题库覆盖5岗封顶与18题深度封顶，改为读取治理配置深度目标。",
+          "质量流水线新增template_reuse_v145指标与深度缺口记录，quality_gate输出可直接用于扩容排期。",
+          "修复主文件与分拆词条口径漂移，统一以主文件版本为准进行分拆同步。"
+        ]
       }
     ],
     "文档名称": "中国大陆应届生求职行业百科（v1.42.2平台补录结构化增强版）",
-    "版本": "v1.52.0",
+    "版本": "v1.53.0",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -6579,7 +6589,7 @@
       "decision_evidence_lowsample_max_hits": 0,
       "p0_completion_min_percent": 95,
       "question_role_coverage_max_hits": 0,
-      "question_role_coverage_min": 5,
+      "question_role_coverage_min": 14,
       "real_question_min_percent": 95,
       "rule_note": "任一硬门槛不满足时，发布状态不得设为published。",
       "salary_observed_coverage_max_hits": 0,
@@ -6604,7 +6614,10 @@
       "question_followup_top3_max_percent": 35,
       "question_answer_framework_top1_max_percent": 40,
       "job_detail_url_min_percent": 60,
-      "rule_note_v145": "v1.45新增深度目标用于扩容执行与验收看板；当前硬拦截仍以已配置发布门槛为准。"
+      "rule_note_v145": "v1.53起深度目标改为硬拦截：24岗、每岗12笔+12面、4阶段覆盖、岗位深链接与去模板化不达标即阻断发布。",
+      "question_answer_framework_top3_max_percent": 60,
+      "elimination_risks_top1_max_percent": 35,
+      "depth_hard_gate_enabled": true
     },
     "审核要求": "所有可发布记录必须具备可追溯source_id（映射到来源注册表）和可验证source_url；低可访问来源需添加人工补录槽位，并设置优先级与到期日。",
     "数据更新周期": "quarterly",
@@ -20700,7 +20713,7 @@
         "freshness_percent_overall": 96.2,
         "real_data_ratio_overall": 86.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 76,
+        "quality_score_overall": 58.6,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -20715,7 +20728,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 54.5
       },
       "slug": "internet-ai",
@@ -35674,7 +35687,7 @@
         "freshness_percent_overall": 96.3,
         "real_data_ratio_overall": 86.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 79.2,
+        "quality_score_overall": 61.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -35689,7 +35702,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 77.3
       },
       "slug": "civil-service",
@@ -50590,7 +50603,7 @@
         "freshness_percent_overall": 95.7,
         "real_data_ratio_overall": 86.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 81,
+        "quality_score_overall": 63.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -50605,7 +50618,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 100
       },
       "slug": "state-owned-enterprise",
@@ -65112,7 +65125,7 @@
         "freshness_percent_overall": 95,
         "real_data_ratio_overall": 86.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 76.7,
+        "quality_score_overall": 59.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -65127,7 +65140,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 59.1
       },
       "slug": "media-game-content",
@@ -79858,7 +79871,7 @@
         "freshness_percent_overall": 95,
         "real_data_ratio_overall": 86.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 75.1,
+        "quality_score_overall": 57.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -79873,7 +79886,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 50
       },
       "slug": "semiconductor-electronics",
@@ -94370,7 +94383,7 @@
         "freshness_percent_overall": 96.2,
         "real_data_ratio_overall": 87.5,
         "template_ratio_overall": 0,
-        "quality_score_overall": 72,
+        "quality_score_overall": 54.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -94385,8 +94398,8 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
-        "ranking_percentile": 18.2
+        "updated_at": "2026-02-19",
+        "ranking_percentile": 13.6
       },
       "slug": "logistics-supply-chain",
       "sources": [
@@ -108905,7 +108918,7 @@
         "freshness_percent_overall": 96.1,
         "real_data_ratio_overall": 86.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 78.1,
+        "quality_score_overall": 60.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -108920,7 +108933,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 72.7
       },
       "slug": "finance-bank",
@@ -124320,7 +124333,7 @@
         "freshness_percent_overall": 90.8,
         "real_data_ratio_overall": 88.1,
         "template_ratio_overall": 0,
-        "quality_score_overall": 80.8,
+        "quality_score_overall": 63.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -124335,7 +124348,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 95.5
       },
       "slug": "public-institution",
@@ -138755,7 +138768,7 @@
         "freshness_percent_overall": 94.9,
         "real_data_ratio_overall": 86.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 77.6,
+        "quality_score_overall": 60.3,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -138770,7 +138783,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 63.6
       },
       "slug": "real-estate-infrastructure",
@@ -153321,7 +153334,7 @@
         "freshness_percent_overall": 95,
         "real_data_ratio_overall": 86.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 71.9,
+        "quality_score_overall": 54.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -153336,7 +153349,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 9.1
       },
       "slug": "ecommerce-crossborder",
@@ -168022,7 +168035,7 @@
         "freshness_percent_overall": 95,
         "real_data_ratio_overall": 86.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 71.9,
+        "quality_score_overall": 54.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -168037,7 +168050,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 4.5
       },
       "slug": "new-energy",
@@ -182525,7 +182538,7 @@
         "freshness_percent_overall": 96.1,
         "real_data_ratio_overall": 86.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 71.5,
+        "quality_score_overall": 54.1,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -182540,7 +182553,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 0
       },
       "slug": "telecom-operators",
@@ -197162,7 +197175,7 @@
         "freshness_percent_overall": 96.2,
         "real_data_ratio_overall": 87.5,
         "template_ratio_overall": 0,
-        "quality_score_overall": 72.8,
+        "quality_score_overall": 55.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -197177,7 +197190,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 22.7
       },
       "slug": "finance-securities-fund",
@@ -211967,7 +211980,7 @@
         "freshness_percent_overall": 95,
         "real_data_ratio_overall": 86.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 73.2,
+        "quality_score_overall": 56,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -211982,8 +211995,8 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
-        "ranking_percentile": 31.8
+        "updated_at": "2026-02-19",
+        "ranking_percentile": 36.4
       },
       "slug": "biomed-device",
       "sources": [
@@ -226460,7 +226473,7 @@
         "freshness_percent_overall": 94.9,
         "real_data_ratio_overall": 87.5,
         "template_ratio_overall": 0,
-        "quality_score_overall": 79.7,
+        "quality_score_overall": 62.5,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -226475,7 +226488,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 90.9
       },
       "slug": "agriculture-food",
@@ -240808,7 +240821,7 @@
         "freshness_percent_overall": 94.8,
         "real_data_ratio_overall": 87.5,
         "template_ratio_overall": 0,
-        "quality_score_overall": 79.5,
+        "quality_score_overall": 62.1,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -240823,7 +240836,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 86.4
       },
       "slug": "education-vocational",
@@ -255269,7 +255282,7 @@
         "freshness_percent_overall": 94.9,
         "real_data_ratio_overall": 87.5,
         "template_ratio_overall": 0,
-        "quality_score_overall": 72,
+        "quality_score_overall": 54.8,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -255284,8 +255297,8 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
-        "ranking_percentile": 13.6
+        "updated_at": "2026-02-19",
+        "ranking_percentile": 18.2
       },
       "slug": "consulting-professional-services",
       "sources": [
@@ -269644,7 +269657,7 @@
         "freshness_percent_overall": 96.1,
         "real_data_ratio_overall": 86.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 79.4,
+        "quality_score_overall": 62.1,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -269659,7 +269672,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 81.8
       },
       "slug": "energy-utilities",
@@ -284159,7 +284172,7 @@
         "freshness_percent_overall": 96.1,
         "real_data_ratio_overall": 86.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 73.4,
+        "quality_score_overall": 56,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -284174,8 +284187,8 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
-        "ranking_percentile": 36.4
+        "updated_at": "2026-02-19",
+        "ranking_percentile": 31.8
       },
       "slug": "advanced-manufacturing-automation",
       "sources": [
@@ -298753,7 +298766,7 @@
         "freshness_percent_overall": 96.2,
         "real_data_ratio_overall": 86.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 73.1,
+        "quality_score_overall": 55.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -298768,7 +298781,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 27.3
       },
       "slug": "auto-intelligent-driving",
@@ -313161,7 +313174,7 @@
         "freshness_percent_overall": 96.2,
         "real_data_ratio_overall": 87.5,
         "template_ratio_overall": 0,
-        "quality_score_overall": 74.6,
+        "quality_score_overall": 57.4,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -313176,7 +313189,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 45.5
       },
       "slug": "fmcg-retail",
@@ -327718,7 +327731,7 @@
         "freshness_percent_overall": 96.2,
         "real_data_ratio_overall": 86.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 78,
+        "quality_score_overall": 60.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -327733,7 +327746,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 68.2
       },
       "slug": "finance-insurance",
@@ -342343,7 +342356,7 @@
         "freshness_percent_overall": 96.2,
         "real_data_ratio_overall": 86.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 73.9,
+        "quality_score_overall": 56.7,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -342358,7 +342371,7 @@
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
-        "updated_at": "2026-02-18",
+        "updated_at": "2026-02-19",
         "ranking_percentile": 40.9
       },
       "slug": "chemicals-new-materials",

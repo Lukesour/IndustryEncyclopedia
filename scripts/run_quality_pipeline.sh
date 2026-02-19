@@ -288,6 +288,44 @@ jq --argjson depth_metrics "${DEPTH_METRICS_JSON}" '. + {depth_targets_v145: $de
 mv "${REPORT_PATH}.tmp" "${REPORT_PATH}"
 cp "${REPORT_PATH}" "${LATEST_PATH}"
 
+TEMPLATE_REUSE_METRICS_JSON="$(jq '
+  def top1_pct($arr):
+    if ($arr|length)==0 then 0
+    else ((($arr|group_by(.)|map(length)|max)//0) * 100 / ($arr|length))
+    end;
+  def top3_pct($arr):
+    if ($arr|length)==0 then 0
+    else ((($arr|group_by(.)|map(length)|sort|reverse|.[0:3]|add)//0) * 100 / ($arr|length))
+    end;
+  ([."行业词条"[]|.dynamic["笔试真题库"].items[]?|((.answer_framework // [])|@json)]) as $w_framework
+  | ([."行业词条"[]|.dynamic["面试真题库"].items[]?|((.answer_framework // [])|@json)]) as $i_framework
+  | ([."行业词条"[]|.dynamic["笔试真题库"].items[]?|(.follow_up_questions[]? // empty)]) as $w_followup
+  | ([."行业词条"[]|.dynamic["面试真题库"].items[]?|(.follow_up_questions[]? // empty)]) as $i_followup
+  | ([."行业词条"[]|.dynamic["岗位画像库"].items[]?|((.elimination_risks // [])|@json)]) as $r_elimination
+  | {
+      answer_framework: {
+        written_top1_percent: top1_pct($w_framework),
+        written_top3_percent: top3_pct($w_framework),
+        interview_top1_percent: top1_pct($i_framework),
+        interview_top3_percent: top3_pct($i_framework)
+      },
+      follow_up_questions: {
+        written_top1_percent: top1_pct($w_followup),
+        written_top3_percent: top3_pct($w_followup),
+        interview_top1_percent: top1_pct($i_followup),
+        interview_top3_percent: top3_pct($i_followup)
+      },
+      elimination_risks: {
+        role_profile_top1_percent: top1_pct($r_elimination),
+        role_profile_top3_percent: top3_pct($r_elimination)
+      }
+    }
+' "${DATA_PATH}")"
+
+jq --argjson template_reuse "${TEMPLATE_REUSE_METRICS_JSON}" '. + {template_reuse_v145: $template_reuse}' "${REPORT_PATH}" > "${REPORT_PATH}.tmp"
+mv "${REPORT_PATH}.tmp" "${REPORT_PATH}"
+cp "${REPORT_PATH}" "${LATEST_PATH}"
+
 # Hard release gates.
 PLACEHOLDER_COUNT="$( (rg -n -e 'pending\\.example\\.com' -e '待补内部链接' -e '示范复盘结构' -e '待补统计口径' "${DATA_PATH}" || true) | wc -l | tr -d ' ' )"
 
@@ -613,6 +651,15 @@ GATE_P0_MIN="$(jq '."治理配置"."发布硬门槛".p0_completion_min_percent /
 GATE_TEMPLATE_MAX="$(jq '."治理配置"."发布硬门槛".template_ratio_max_percent // 35' "${DATA_PATH}")"
 GATE_SOURCE_MIN="$(jq '."治理配置"."发布硬门槛".source_http_200_min_percent // 90' "${DATA_PATH}")"
 GATE_REAL_Q_MIN="$(jq '."治理配置"."发布硬门槛".real_question_min_percent // 25' "${DATA_PATH}")"
+GATE_ROLE_COUNT_MIN="$(jq '."治理配置"."发布硬门槛".role_count_target_per_industry // 24' "${DATA_PATH}")"
+GATE_WRITTEN_PER_ROLE_MIN="$(jq '."治理配置"."发布硬门槛".question_written_per_role_target // 12' "${DATA_PATH}")"
+GATE_INTERVIEW_PER_ROLE_MIN="$(jq '."治理配置"."发布硬门槛".question_interview_per_role_target // 12' "${DATA_PATH}")"
+GATE_STAGE_COVERAGE_MIN="$(jq '."治理配置"."发布硬门槛".question_stage_coverage_target // 4' "${DATA_PATH}")"
+GATE_JOB_DETAIL_URL_MIN="$(jq '."治理配置"."发布硬门槛".job_detail_url_min_percent // 60' "${DATA_PATH}")"
+GATE_FRAMEWORK_TOP1_MAX="$(jq '."治理配置"."发布硬门槛".question_answer_framework_top1_max_percent // 40' "${DATA_PATH}")"
+GATE_FRAMEWORK_TOP3_MAX="$(jq '."治理配置"."发布硬门槛".question_answer_framework_top3_max_percent // 60' "${DATA_PATH}")"
+GATE_FOLLOWUP_TOP3_MAX="$(jq '."治理配置"."发布硬门槛".question_followup_top3_max_percent // 35' "${DATA_PATH}")"
+GATE_ELIMINATION_TOP1_MAX="$(jq '."治理配置"."发布硬门槛".elimination_risks_top1_max_percent // 35' "${DATA_PATH}")"
 GATE_DECISION_PLACEHOLDER_MAX="$(jq '."治理配置"."发布硬门槛".decision_placeholder_max_hits // 0' "${DATA_PATH}")"
 GATE_SALARY_OBS_INPROGRESS_MAX="$(jq '."治理配置"."发布硬门槛".salary_observed_inprogress_max // 0' "${DATA_PATH}")"
 GATE_SALARY_OBS_LOWSAMPLE_MAX="$(jq '."治理配置"."发布硬门槛".salary_observed_lowsample_max // 0' "${DATA_PATH}")"
@@ -678,6 +725,163 @@ EVENT_LOG_ISSUES="$(jq --argjson min_total "${GATE_EVENT_MIN_COUNT}" --argjson m
 ' <<<"${EVENT_LOG_COVERAGE_JSON}")"
 EVENT_LOG_ISSUE_COUNT="$(jq 'length' <<<"${EVENT_LOG_ISSUES}")"
 
+DEPTH_ROLE_ISSUES_JSON="$(jq --argjson min_role "${GATE_ROLE_COUNT_MIN}" '
+[
+  ."行业词条"[]
+  | {
+      industry_id,
+      industry: ."行业名称",
+      role_count: (.dynamic["岗位画像库"].items | length),
+      min_required: $min_role
+    }
+  | select(.role_count < .min_required)
+]
+' "${DATA_PATH}")"
+DEPTH_ROLE_ISSUES_COUNT="$(jq 'length' <<<"${DEPTH_ROLE_ISSUES_JSON}")"
+
+DEPTH_WRITTEN_PER_ROLE_ISSUES_JSON="$(jq --argjson min_density "${GATE_WRITTEN_PER_ROLE_MIN}" '
+[
+  ."行业词条"[]
+  | (.dynamic["岗位画像库"].items | length) as $roles
+  | (.dynamic["笔试真题库"].items | length) as $written
+  | {
+      industry_id,
+      industry: ."行业名称",
+      role_count: $roles,
+      written_count: $written,
+      written_per_role: (if $roles == 0 then 0 else ($written / $roles) end),
+      min_required: $min_density
+    }
+  | select(.written_per_role < .min_required)
+]
+' "${DATA_PATH}")"
+DEPTH_WRITTEN_PER_ROLE_ISSUES_COUNT="$(jq 'length' <<<"${DEPTH_WRITTEN_PER_ROLE_ISSUES_JSON}")"
+
+DEPTH_INTERVIEW_PER_ROLE_ISSUES_JSON="$(jq --argjson min_density "${GATE_INTERVIEW_PER_ROLE_MIN}" '
+[
+  ."行业词条"[]
+  | (.dynamic["岗位画像库"].items | length) as $roles
+  | (.dynamic["面试真题库"].items | length) as $interview
+  | {
+      industry_id,
+      industry: ."行业名称",
+      role_count: $roles,
+      interview_count: $interview,
+      interview_per_role: (if $roles == 0 then 0 else ($interview / $roles) end),
+      min_required: $min_density
+    }
+  | select(.interview_per_role < .min_required)
+]
+' "${DATA_PATH}")"
+DEPTH_INTERVIEW_PER_ROLE_ISSUES_COUNT="$(jq 'length' <<<"${DEPTH_INTERVIEW_PER_ROLE_ISSUES_JSON}")"
+
+DEPTH_STAGE_COVERAGE_ISSUES_JSON="$(jq --argjson min_stage "${GATE_STAGE_COVERAGE_MIN}" '
+[
+  ."行业词条"[] as $entry
+  | $entry.dynamic["岗位画像库"].items[]? as $role
+  | ([ $entry.dynamic["笔试真题库"].items[]? | select(.role_id == $role.role_id) | .recruitment_stage ] | unique | length) as $written_stage_coverage
+  | ([ $entry.dynamic["面试真题库"].items[]? | select(.role_id == $role.role_id) | .recruitment_stage ] | unique | length) as $interview_stage_coverage
+  | {
+      industry_id: $entry.industry_id,
+      industry: $entry."行业名称",
+      role_id: $role.role_id,
+      role_name: $role.role_name,
+      written_stage_coverage,
+      interview_stage_coverage,
+      min_required: $min_stage
+    }
+  | select(.written_stage_coverage < .min_required or .interview_stage_coverage < .min_required)
+]
+' "${DATA_PATH}")"
+DEPTH_STAGE_COVERAGE_ISSUES_COUNT="$(jq 'length' <<<"${DEPTH_STAGE_COVERAGE_ISSUES_JSON}")"
+
+DEPTH_JOB_DETAIL_URL_ISSUES_JSON="$(jq --argjson min_ratio "${GATE_JOB_DETAIL_URL_MIN}" '
+[
+  ."行业词条"[] as $entry
+  | ($entry.dynamic["岗位画像库"].items // []) as $roles
+  | ($roles | length) as $role_total
+  | (
+      [
+        $roles[]?
+        | .evidence?.source_url?
+        | select(type=="string")
+        | (try (capture("https?://[^/]+(?<path>/.*)?").path // "") catch "")
+        | split("/")
+        | map(select(length>0))
+        | length
+        | select(. >= 2)
+      ]
+      | length
+    ) as $deep_link_count
+  | {
+      industry_id: $entry.industry_id,
+      industry: $entry."行业名称",
+      role_total: $role_total,
+      deep_link_count: $deep_link_count,
+      deep_link_percent: (if $role_total == 0 then 0 else ($deep_link_count * 100 / $role_total) end),
+      min_required_percent: $min_ratio
+    }
+  | select(.deep_link_percent < .min_required_percent)
+]
+' "${DATA_PATH}")"
+DEPTH_JOB_DETAIL_URL_ISSUES_COUNT="$(jq 'length' <<<"${DEPTH_JOB_DETAIL_URL_ISSUES_JSON}")"
+
+TEMPLATE_REUSE_GATE_JSON="$(jq '
+def top1_pct($arr):
+  if ($arr|length)==0 then 0
+  else ((($arr|group_by(.)|map(length)|max)//0) * 100 / ($arr|length))
+  end;
+def top3_pct($arr):
+  if ($arr|length)==0 then 0
+  else ((($arr|group_by(.)|map(length)|sort|reverse|.[0:3]|add)//0) * 100 / ($arr|length))
+  end;
+([."行业词条"[]|.dynamic["笔试真题库"].items[]?|((.answer_framework // [])|@json)]) as $w_framework
+| ([."行业词条"[]|.dynamic["面试真题库"].items[]?|((.answer_framework // [])|@json)]) as $i_framework
+| ([."行业词条"[]|.dynamic["笔试真题库"].items[]?|(.follow_up_questions[]? // empty)]) as $w_followup
+| ([."行业词条"[]|.dynamic["面试真题库"].items[]?|(.follow_up_questions[]? // empty)]) as $i_followup
+| ([."行业词条"[]|.dynamic["岗位画像库"].items[]?|((.elimination_risks // [])|@json)]) as $r_elimination
+| {
+    framework_written_top1: top1_pct($w_framework),
+    framework_written_top3: top3_pct($w_framework),
+    framework_interview_top1: top1_pct($i_framework),
+    framework_interview_top3: top3_pct($i_framework),
+    followup_written_top3: top3_pct($w_followup),
+    followup_interview_top3: top3_pct($i_followup),
+    elimination_top1: top1_pct($r_elimination)
+  }
+' "${DATA_PATH}")"
+
+FRAMEWORK_WRITTEN_TOP1="$(jq '.framework_written_top1' <<<"${TEMPLATE_REUSE_GATE_JSON}")"
+FRAMEWORK_WRITTEN_TOP3="$(jq '.framework_written_top3' <<<"${TEMPLATE_REUSE_GATE_JSON}")"
+FRAMEWORK_INTERVIEW_TOP1="$(jq '.framework_interview_top1' <<<"${TEMPLATE_REUSE_GATE_JSON}")"
+FRAMEWORK_INTERVIEW_TOP3="$(jq '.framework_interview_top3' <<<"${TEMPLATE_REUSE_GATE_JSON}")"
+FOLLOWUP_WRITTEN_TOP3="$(jq '.followup_written_top3' <<<"${TEMPLATE_REUSE_GATE_JSON}")"
+FOLLOWUP_INTERVIEW_TOP3="$(jq '.followup_interview_top3' <<<"${TEMPLATE_REUSE_GATE_JSON}")"
+ELIMINATION_TOP1="$(jq '.elimination_top1' <<<"${TEMPLATE_REUSE_GATE_JSON}")"
+
+TEMPLATE_REUSE_ISSUES_JSON="$(jq -n \
+  --argjson fw_w_top1 "${FRAMEWORK_WRITTEN_TOP1}" \
+  --argjson fw_w_top3 "${FRAMEWORK_WRITTEN_TOP3}" \
+  --argjson fw_i_top1 "${FRAMEWORK_INTERVIEW_TOP1}" \
+  --argjson fw_i_top3 "${FRAMEWORK_INTERVIEW_TOP3}" \
+  --argjson fu_w_top3 "${FOLLOWUP_WRITTEN_TOP3}" \
+  --argjson fu_i_top3 "${FOLLOWUP_INTERVIEW_TOP3}" \
+  --argjson elim_top1 "${ELIMINATION_TOP1}" \
+  --argjson fw_top1_max "${GATE_FRAMEWORK_TOP1_MAX}" \
+  --argjson fw_top3_max "${GATE_FRAMEWORK_TOP3_MAX}" \
+  --argjson fu_top3_max "${GATE_FOLLOWUP_TOP3_MAX}" \
+  --argjson elim_top1_max "${GATE_ELIMINATION_TOP1_MAX}" \
+  '[
+    {metric: "answer_framework_written_top1_percent", actual_percent: $fw_w_top1, threshold_percent: $fw_top1_max, violated: ($fw_w_top1 > $fw_top1_max)},
+    {metric: "answer_framework_written_top3_percent", actual_percent: $fw_w_top3, threshold_percent: $fw_top3_max, violated: ($fw_w_top3 > $fw_top3_max)},
+    {metric: "answer_framework_interview_top1_percent", actual_percent: $fw_i_top1, threshold_percent: $fw_top1_max, violated: ($fw_i_top1 > $fw_top1_max)},
+    {metric: "answer_framework_interview_top3_percent", actual_percent: $fw_i_top3, threshold_percent: $fw_top3_max, violated: ($fw_i_top3 > $fw_top3_max)},
+    {metric: "follow_up_written_top3_percent", actual_percent: $fu_w_top3, threshold_percent: $fu_top3_max, violated: ($fu_w_top3 > $fu_top3_max)},
+    {metric: "follow_up_interview_top3_percent", actual_percent: $fu_i_top3, threshold_percent: $fu_top3_max, violated: ($fu_i_top3 > $fu_top3_max)},
+    {metric: "elimination_risks_top1_percent", actual_percent: $elim_top1, threshold_percent: $elim_top1_max, violated: ($elim_top1 > $elim_top1_max)}
+  ] | map(select(.violated) | del(.violated))')"
+TEMPLATE_REUSE_ISSUES_COUNT="$(jq 'length' <<<"${TEMPLATE_REUSE_ISSUES_JSON}")"
+
 HAS_BLOCKERS=0
 if [[ "${PLACEHOLDER_COUNT}" -gt 0 ]]; then HAS_BLOCKERS=1; fi
 if [[ "${DUP_SOURCE_COUNT}" -gt 0 ]]; then HAS_BLOCKERS=1; fi
@@ -693,6 +897,12 @@ if awk -v a="${SALARY_OBS_TIER_COUNT}" -v b="${GATE_SALARY_OBS_TIER_MAX}" 'BEGIN
 if awk -v a="${QUESTION_ROLE_COUNT}" -v b="${GATE_QUESTION_ROLE_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${DECISION_EVIDENCE_LOWSAMPLE_COUNT}" -v b="${GATE_DECISION_EVIDENCE_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${EVENT_LOG_ISSUE_COUNT}" 'BEGIN{exit !(a > 0)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${DEPTH_ROLE_ISSUES_COUNT}" 'BEGIN{exit !(a > 0)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${DEPTH_WRITTEN_PER_ROLE_ISSUES_COUNT}" 'BEGIN{exit !(a > 0)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${DEPTH_INTERVIEW_PER_ROLE_ISSUES_COUNT}" 'BEGIN{exit !(a > 0)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${DEPTH_STAGE_COVERAGE_ISSUES_COUNT}" 'BEGIN{exit !(a > 0)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${DEPTH_JOB_DETAIL_URL_ISSUES_COUNT}" 'BEGIN{exit !(a > 0)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${TEMPLATE_REUSE_ISSUES_COUNT}" 'BEGIN{exit !(a > 0)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${SOURCE_TOP1_SHARE}" -v b="${GATE_SOURCE_TOP1_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${SOURCE_TOP5_SHARE}" -v b="${GATE_SOURCE_TOP5_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${POLICY_TITLE_SOURCE_MISMATCH_COUNT}" -v b="${GATE_POLICY_TITLE_SOURCE_MISMATCH_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
@@ -717,6 +927,12 @@ SALARY_OBS_TIER_ISSUE="$(jq -n --argjson actual "${SALARY_OBS_TIER_COUNT}" --arg
 QUESTION_ROLE_ISSUE="$(jq -n --argjson actual "${QUESTION_ROLE_COUNT}" --argjson threshold "${GATE_QUESTION_ROLE_MAX}" --argjson min_required "${GATE_QUESTION_ROLE_MIN}" '{actual_hits:$actual, threshold_hits:$threshold, min_role_coverage:$min_required}')"
 DECISION_EVIDENCE_ISSUE="$(jq -n --argjson actual "${DECISION_EVIDENCE_LOWSAMPLE_COUNT}" --argjson threshold "${GATE_DECISION_EVIDENCE_MAX}" '{actual_hits:$actual, threshold_hits:$threshold}')"
 EVENT_LOG_ISSUE="$(jq -n --argjson actual "${EVENT_LOG_ISSUE_COUNT}" --argjson min_total "${GATE_EVENT_MIN_COUNT}" --argjson min_recent "${GATE_EVENT_RECENT_MIN}" '{actual_hits:$actual, min_event_total:$min_total, min_recent_180d:$min_recent}')"
+DEPTH_ROLE_ISSUE="$(jq -n --argjson actual "${DEPTH_ROLE_ISSUES_COUNT}" --argjson min_required "${GATE_ROLE_COUNT_MIN}" '{actual_hits:$actual, min_roles_per_industry:$min_required}')"
+DEPTH_WRITTEN_PER_ROLE_ISSUE="$(jq -n --argjson actual "${DEPTH_WRITTEN_PER_ROLE_ISSUES_COUNT}" --argjson min_required "${GATE_WRITTEN_PER_ROLE_MIN}" '{actual_hits:$actual, min_written_per_role:$min_required}')"
+DEPTH_INTERVIEW_PER_ROLE_ISSUE="$(jq -n --argjson actual "${DEPTH_INTERVIEW_PER_ROLE_ISSUES_COUNT}" --argjson min_required "${GATE_INTERVIEW_PER_ROLE_MIN}" '{actual_hits:$actual, min_interview_per_role:$min_required}')"
+DEPTH_STAGE_COVERAGE_ISSUE="$(jq -n --argjson actual "${DEPTH_STAGE_COVERAGE_ISSUES_COUNT}" --argjson min_required "${GATE_STAGE_COVERAGE_MIN}" '{actual_hits:$actual, min_stage_coverage_per_role:$min_required}')"
+DEPTH_JOB_DETAIL_URL_ISSUE="$(jq -n --argjson actual "${DEPTH_JOB_DETAIL_URL_ISSUES_COUNT}" --argjson min_required "${GATE_JOB_DETAIL_URL_MIN}" '{actual_hits:$actual, min_job_detail_url_percent:$min_required}')"
+TEMPLATE_REUSE_ISSUE="$(jq -n --argjson actual "${TEMPLATE_REUSE_ISSUES_COUNT}" --argjson framework_top1_max "${GATE_FRAMEWORK_TOP1_MAX}" --argjson framework_top3_max "${GATE_FRAMEWORK_TOP3_MAX}" --argjson followup_top3_max "${GATE_FOLLOWUP_TOP3_MAX}" --argjson elimination_top1_max "${GATE_ELIMINATION_TOP1_MAX}" '{actual_hits:$actual, framework_top1_max_percent:$framework_top1_max, framework_top3_max_percent:$framework_top3_max, followup_top3_max_percent:$followup_top3_max, elimination_top1_max_percent:$elimination_top1_max}')"
 SOURCE_TOP1_ISSUE="$(jq -n --argjson actual "${SOURCE_TOP1_SHARE}" --argjson threshold "${GATE_SOURCE_TOP1_MAX}" '{actual_percent:$actual, threshold_percent:$threshold}')"
 SOURCE_TOP5_ISSUE="$(jq -n --argjson actual "${SOURCE_TOP5_SHARE}" --argjson threshold "${GATE_SOURCE_TOP5_MAX}" '{actual_percent:$actual, threshold_percent:$threshold}')"
 POLICY_TITLE_SOURCE_MISMATCH_ISSUE="$(jq -n --argjson actual "${POLICY_TITLE_SOURCE_MISMATCH_COUNT}" --argjson threshold "${GATE_POLICY_TITLE_SOURCE_MISMATCH_MAX}" '{actual_hits:$actual, threshold_hits:$threshold}')"
@@ -752,6 +968,28 @@ jq -n \
   --argjson event_log_issue_count "${EVENT_LOG_ISSUE_COUNT}" \
   --argjson event_log_min_count "${GATE_EVENT_MIN_COUNT}" \
   --argjson event_recent_min_count "${GATE_EVENT_RECENT_MIN}" \
+  --argjson depth_role_issues_count "${DEPTH_ROLE_ISSUES_COUNT}" \
+  --argjson depth_role_min "${GATE_ROLE_COUNT_MIN}" \
+  --argjson depth_written_per_role_issues_count "${DEPTH_WRITTEN_PER_ROLE_ISSUES_COUNT}" \
+  --argjson depth_written_per_role_min "${GATE_WRITTEN_PER_ROLE_MIN}" \
+  --argjson depth_interview_per_role_issues_count "${DEPTH_INTERVIEW_PER_ROLE_ISSUES_COUNT}" \
+  --argjson depth_interview_per_role_min "${GATE_INTERVIEW_PER_ROLE_MIN}" \
+  --argjson depth_stage_coverage_issues_count "${DEPTH_STAGE_COVERAGE_ISSUES_COUNT}" \
+  --argjson depth_stage_coverage_min "${GATE_STAGE_COVERAGE_MIN}" \
+  --argjson depth_job_detail_url_issues_count "${DEPTH_JOB_DETAIL_URL_ISSUES_COUNT}" \
+  --argjson depth_job_detail_url_min "${GATE_JOB_DETAIL_URL_MIN}" \
+  --argjson framework_written_top1_percent "${FRAMEWORK_WRITTEN_TOP1}" \
+  --argjson framework_written_top3_percent "${FRAMEWORK_WRITTEN_TOP3}" \
+  --argjson framework_interview_top1_percent "${FRAMEWORK_INTERVIEW_TOP1}" \
+  --argjson framework_interview_top3_percent "${FRAMEWORK_INTERVIEW_TOP3}" \
+  --argjson followup_written_top3_percent "${FOLLOWUP_WRITTEN_TOP3}" \
+  --argjson followup_interview_top3_percent "${FOLLOWUP_INTERVIEW_TOP3}" \
+  --argjson elimination_top1_percent "${ELIMINATION_TOP1}" \
+  --argjson framework_top1_max "${GATE_FRAMEWORK_TOP1_MAX}" \
+  --argjson framework_top3_max "${GATE_FRAMEWORK_TOP3_MAX}" \
+  --argjson followup_top3_max "${GATE_FOLLOWUP_TOP3_MAX}" \
+  --argjson elimination_top1_max "${GATE_ELIMINATION_TOP1_MAX}" \
+  --argjson template_reuse_issues_count "${TEMPLATE_REUSE_ISSUES_COUNT}" \
   --argjson source_top1_share "${SOURCE_TOP1_SHARE}" \
   --argjson source_top1_max "${GATE_SOURCE_TOP1_MAX}" \
   --argjson source_top5_share "${SOURCE_TOP5_SHARE}" \
@@ -788,6 +1026,12 @@ jq -n \
   --argjson question_role_issues "${QUESTION_ROLE_ISSUES}" \
   --argjson decision_evidence_lowsample_issues "${DECISION_EVIDENCE_LOWSAMPLE_JSON}" \
   --argjson event_log_issues "${EVENT_LOG_ISSUES}" \
+  --argjson depth_role_issues "${DEPTH_ROLE_ISSUES_JSON}" \
+  --argjson depth_written_per_role_issues "${DEPTH_WRITTEN_PER_ROLE_ISSUES_JSON}" \
+  --argjson depth_interview_per_role_issues "${DEPTH_INTERVIEW_PER_ROLE_ISSUES_JSON}" \
+  --argjson depth_stage_coverage_issues "${DEPTH_STAGE_COVERAGE_ISSUES_JSON}" \
+  --argjson depth_job_detail_url_issues "${DEPTH_JOB_DETAIL_URL_ISSUES_JSON}" \
+  --argjson template_reuse_issues "${TEMPLATE_REUSE_ISSUES_JSON}" \
   --argjson policy_title_source_mismatch_issues "${POLICY_TITLE_SOURCE_MISMATCH_JSON}" \
   --argjson policy_date_source_mismatch_issues "${POLICY_DATE_SOURCE_MISMATCH_JSON}" \
   --argjson stats_data_period_missing_issues "${STATS_DATA_PERIOD_MISSING_JSON}" \
@@ -805,6 +1049,12 @@ jq -n \
   --argjson question_role_issue "${QUESTION_ROLE_ISSUE}" \
   --argjson decision_evidence_issue "${DECISION_EVIDENCE_ISSUE}" \
   --argjson event_log_issue "${EVENT_LOG_ISSUE}" \
+  --argjson depth_role_issue "${DEPTH_ROLE_ISSUE}" \
+  --argjson depth_written_per_role_issue "${DEPTH_WRITTEN_PER_ROLE_ISSUE}" \
+  --argjson depth_interview_per_role_issue "${DEPTH_INTERVIEW_PER_ROLE_ISSUE}" \
+  --argjson depth_stage_coverage_issue "${DEPTH_STAGE_COVERAGE_ISSUE}" \
+  --argjson depth_job_detail_url_issue "${DEPTH_JOB_DETAIL_URL_ISSUE}" \
+  --argjson template_reuse_issue "${TEMPLATE_REUSE_ISSUE}" \
   --argjson source_top1_issue "${SOURCE_TOP1_ISSUE}" \
   --argjson source_top5_issue "${SOURCE_TOP5_ISSUE}" \
   --argjson policy_title_source_mismatch_issue "${POLICY_TITLE_SOURCE_MISMATCH_ISSUE}" \
@@ -841,6 +1091,28 @@ jq -n \
       event_log_coverage_hits: $event_log_issue_count,
       event_log_min_count: $event_log_min_count,
       event_recent_180d_min_count: $event_recent_min_count,
+      role_count_coverage_hits: $depth_role_issues_count,
+      role_count_target_per_industry: $depth_role_min,
+      written_per_role_hits: $depth_written_per_role_issues_count,
+      written_per_role_min: $depth_written_per_role_min,
+      interview_per_role_hits: $depth_interview_per_role_issues_count,
+      interview_per_role_min: $depth_interview_per_role_min,
+      stage_coverage_per_role_hits: $depth_stage_coverage_issues_count,
+      stage_coverage_per_role_min: $depth_stage_coverage_min,
+      job_detail_url_depth_hits: $depth_job_detail_url_issues_count,
+      job_detail_url_min_percent: $depth_job_detail_url_min,
+      answer_framework_written_top1_percent: $framework_written_top1_percent,
+      answer_framework_written_top3_percent: $framework_written_top3_percent,
+      answer_framework_interview_top1_percent: $framework_interview_top1_percent,
+      answer_framework_interview_top3_percent: $framework_interview_top3_percent,
+      follow_up_written_top3_percent: $followup_written_top3_percent,
+      follow_up_interview_top3_percent: $followup_interview_top3_percent,
+      elimination_risks_top1_percent: $elimination_top1_percent,
+      answer_framework_top1_max_percent: $framework_top1_max,
+      answer_framework_top3_max_percent: $framework_top3_max,
+      follow_up_top3_max_percent: $followup_top3_max,
+      elimination_risks_top1_max_percent: $elimination_top1_max,
+      template_reuse_hits: $template_reuse_issues_count,
       policy_title_source_mismatch_hits: $policy_title_source_mismatch_count,
       policy_title_source_mismatch_max_hits: $policy_title_source_mismatch_max,
       policy_date_source_mismatch_hits: $policy_date_source_mismatch_count,
@@ -878,6 +1150,12 @@ jq -n \
       question_role_coverage_records: $question_role_issues,
       decision_evidence_lowsample_records: $decision_evidence_lowsample_issues,
       event_log_coverage_records: $event_log_issues,
+      role_count_coverage_records: $depth_role_issues,
+      written_per_role_records: $depth_written_per_role_issues,
+      interview_per_role_records: $depth_interview_per_role_issues,
+      stage_coverage_per_role_records: $depth_stage_coverage_issues,
+      job_detail_url_depth_records: $depth_job_detail_url_issues,
+      template_reuse_records: $template_reuse_issues,
       policy_title_source_mismatch_records: $policy_title_source_mismatch_issues,
       policy_date_source_mismatch_records: $policy_date_source_mismatch_issues,
       stats_data_period_missing_records: $stats_data_period_missing_issues,
@@ -895,6 +1173,12 @@ jq -n \
       question_role_coverage_threshold: $question_role_issue,
       decision_evidence_lowsample_threshold: $decision_evidence_issue,
       event_log_coverage_threshold: $event_log_issue,
+      role_count_coverage_threshold: $depth_role_issue,
+      written_per_role_threshold: $depth_written_per_role_issue,
+      interview_per_role_threshold: $depth_interview_per_role_issue,
+      stage_coverage_per_role_threshold: $depth_stage_coverage_issue,
+      job_detail_url_depth_threshold: $depth_job_detail_url_issue,
+      template_reuse_threshold: $template_reuse_issue,
       source_concentration_top1_threshold: $source_top1_issue,
       source_concentration_top5_threshold: $source_top5_issue,
       policy_title_source_mismatch_threshold: $policy_title_source_mismatch_issue,

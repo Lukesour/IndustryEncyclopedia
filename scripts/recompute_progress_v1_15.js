@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = process.argv[2] || '行业百科.json';
 const raw = fs.readFileSync(path, 'utf8');
 const data = JSON.parse(raw);
+const gateConfig = data?.['治理配置']?.['发布硬门槛'] || {};
 
 function toNum(value, fallback = 0) {
   const n = Number(value);
@@ -39,7 +40,12 @@ function getPublishDate(item) {
 }
 
 const entries = data['行业词条'] || [];
-const nowTs = Date.parse('2026-02-18T00:00:00Z');
+const nowTs = Date.parse('2026-02-19T00:00:00Z');
+
+const roleTargetPerIndustry = Math.max(1, toNum(gateConfig.role_count_target_per_industry, 24));
+const writtenPerRoleTarget = Math.max(1, toNum(gateConfig.question_written_per_role_target, 12));
+const interviewPerRoleTarget = Math.max(1, toNum(gateConfig.question_interview_per_role_target, 12));
+const stageCoverageTarget = Math.max(1, toNum(gateConfig.question_stage_coverage_target, 4));
 
 for (const entry of entries) {
   const dynamic = entry.dynamic || {};
@@ -127,7 +133,8 @@ for (const entry of entries) {
   const writtenItems = Array.isArray(dynamic['笔试真题库']?.items) ? dynamic['笔试真题库'].items : [];
   const interviewItems = Array.isArray(dynamic['面试真题库']?.items) ? dynamic['面试真题库'].items : [];
   const roleTotal = Array.isArray(dynamic['岗位画像库']?.items) ? dynamic['岗位画像库'].items.length : 0;
-  const questionRoleTarget = Math.max(1, Math.min(5, roleTotal || 5));
+  const questionRoleTarget = Math.max(1, roleTotal || roleTargetPerIndustry);
+  const roleScaleScore = ratioScore(Math.min(roleTotal, roleTargetPerIndustry), roleTargetPerIndustry);
   const writtenRoleCoverage = new Set(writtenItems.map((x) => x?.role_id).filter(Boolean)).size;
   const interviewRoleCoverage = new Set(interviewItems.map((x) => x?.role_id).filter(Boolean)).size;
   const questionRoleCoverageScore = round1(
@@ -136,6 +143,31 @@ for (const entry of entries) {
       + ratioScore(Math.min(interviewRoleCoverage, questionRoleTarget), questionRoleTarget)
     ) / 2,
   );
+
+  const roleIds = Array.isArray(dynamic['岗位画像库']?.items)
+    ? dynamic['岗位画像库'].items.map((x) => x?.role_id).filter(Boolean)
+    : [];
+  const roleStageCoverageScores = roleIds.map((rid) => {
+    const writtenStageCoverage = new Set(
+      writtenItems
+        .filter((x) => x?.role_id === rid)
+        .map((x) => x?.recruitment_stage)
+        .filter(Boolean),
+    ).size;
+    const interviewStageCoverage = new Set(
+      interviewItems
+        .filter((x) => x?.role_id === rid)
+        .map((x) => x?.recruitment_stage)
+        .filter(Boolean),
+    ).size;
+    return (
+      ratioScore(Math.min(writtenStageCoverage, stageCoverageTarget), stageCoverageTarget)
+      + ratioScore(Math.min(interviewStageCoverage, stageCoverageTarget), stageCoverageTarget)
+    ) / 2;
+  });
+  const questionStageCoverageScore = roleStageCoverageScores.length > 0
+    ? round1(roleStageCoverageScores.reduce((acc, x) => acc + x, 0) / roleStageCoverageScores.length)
+    : 0;
 
   const decisionItems = Array.isArray(dynamic['自定义扩展']?.items) ? dynamic['自定义扩展'].items : [];
   const decisionEvidenceScore = decisionItems.length > 0
@@ -149,7 +181,7 @@ for (const entry of entries) {
     : 0;
 
   const questionDepth = writtenItems.length + interviewItems.length;
-  const questionDepthTarget = 18;
+  const questionDepthTarget = roleTargetPerIndustry * (writtenPerRoleTarget + interviewPerRoleTarget);
   const questionDepthScore = ratioScore(Math.min(questionDepth, questionDepthTarget), questionDepthTarget);
 
   const eventItems = Array.isArray(dynamic['行业事件日志']?.items) ? dynamic['行业事件日志'].items : [];
@@ -215,15 +247,17 @@ for (const entry of entries) {
   // v1.28: 在v1.25基础上加入题库深度与惩罚项（时效/来源集中/深度不足），提升行业区分度与可解释性。
   const stalePenalty = Math.max(0, (85 - freshnessLiveScore) * 0.12);
   const sourceConcentrationPenalty = Math.max(0, (top1SharePercent - 6.5) * 0.6);
-  const depthPenalty = Math.max(0, (70 - questionDepthScore) * 0.08);
+  const depthPenalty = Math.max(0, (80 - questionDepthScore) * 0.12);
   const qualityRawScore =
-    baseQualityScore * 0.34
-    + salaryCoverageScore * 0.13
-    + questionRoleCoverageScore * 0.1
-    + questionDepthScore * 0.07
-    + decisionEvidenceScore * 0.11
+    baseQualityScore * 0.27
+    + salaryCoverageScore * 0.11
+    + roleScaleScore * 0.08
+    + questionRoleCoverageScore * 0.08
+    + questionDepthScore * 0.08
+    + questionStageCoverageScore * 0.06
+    + decisionEvidenceScore * 0.1
     + eventDensityScore * 0.06
-    + sourceDiversityScore * 0.06
+    + sourceDiversityScore * 0.05
     + sourceIndependenceScore * 0.05
     + evidenceStrengthScore * 0.04
     + freshnessLiveScore * 0.04
@@ -254,7 +288,7 @@ for (const entry of entries) {
     personalization_completion_percent: personalizationCompletion,
     salary_micro_status: dynamic['薪酬快照_按城市_按公司层级_按岗位']?.data_status || 'not_collected',
     salary_macro_status: dynamic['薪酬实证_国家统计口径']?.data_status || 'not_collected',
-    updated_at: '2026-02-18',
+    updated_at: '2026-02-19',
     ranking_percentile: 0,
   };
 }
