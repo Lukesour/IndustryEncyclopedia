@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-19T09:57:17Z",
+  "generated_at": "2026-02-19T11:44:23Z",
   "data_file": "行业百科.json",
   "document": {
     "version": "v1.57.0",
@@ -46,9 +46,9 @@
     "salary_observed_tier_coverage_stddev": 0.48804226784007926,
     "salary_observed_tier_coverage_min": 2,
     "salary_observed_tier_coverage_max": 3,
-    "question_depth_stddev": 2.6346534621814115,
+    "question_depth_stddev": 4.763201731738861,
     "question_depth_min": 144,
-    "question_depth_max": 155,
+    "question_depth_max": 162,
     "written_role_coverage_stddev": 1.8333190123746097,
     "written_role_coverage_min": 20,
     "written_role_coverage_max": 27,
@@ -61,32 +61,32 @@
     "event_recent_180d_stddev": 0.5865538070970452,
     "event_recent_180d_min": 8,
     "event_recent_180d_max": 10,
-    "decision_evidence_sample_size_stddev": 0.9186471437903523,
+    "decision_evidence_sample_size_stddev": 0.9619948790796318,
     "decision_evidence_sample_size_min": 12,
     "decision_evidence_sample_size_max": 18
   },
   "content_realness": {
-    "written_total": 1723,
+    "written_total": 1741,
     "written_need_real": 0,
-    "written_real_ready": 1723,
-    "interview_total": 1714,
+    "written_real_ready": 1741,
+    "interview_total": 1730,
     "interview_need_real": 0,
-    "interview_real_ready": 1714
+    "interview_real_ready": 1730
   },
   "template_quality": {
     "template_items": 0,
-    "items_total": 5123,
+    "items_total": 5161,
     "template_ratio_percent": 0
   },
   "source_concentration": {
-    "total_refs": 5123,
-    "top1_share_percent": 5.8754635955494825,
-    "top5_share_percent": 21.12043724380246
+    "total_refs": 5161,
+    "top1_share_percent": 5.832203061422205,
+    "top5_share_percent": 21.042433636892074
   },
   "freshness_detail": {
-    "source_date_records": 5966,
+    "source_date_records": 6004,
     "effective_date_method": "publish_date_first_fallback_source_date",
-    "within_180_days_percent": 94.20046932618169,
+    "within_180_days_percent": 94.23717521652232,
     "older_than_365_days_count": 0
   },
   "salary_layers": {
@@ -184,7 +184,7 @@
   },
   "decision_metrics": {
     "entries_with_decision_fields": 23,
-    "decision_items_total": 253,
+    "decision_items_total": 257,
     "decision_estimation_methods_dist": [
       {
         "method": "auto_supplychain_and_model_delivery_blended_v2",
@@ -295,13 +295,13 @@
       },
       {
         "tier": "NA",
-        "count": 46
+        "count": 50
       }
     ],
     "conversion_fields_filled": 23,
     "city_cost_salary_filled": 23,
     "competition_fields_filled": 23,
-    "decision_items_with_evidence": 253,
+    "decision_items_with_evidence": 257,
     "decision_placeholder_pending_items": 0
   },
   "depth_targets_v145": {
@@ -319,36 +319,36 @@
         "max": 16
       },
       "written_per_role": {
-        "avg": 4.682065217391305,
+        "avg": 4.730978260869565,
         "min": 4.5,
-        "max": 4.8125
+        "max": 5.0625
       },
       "interview_per_role": {
-        "avg": 4.657608695652174,
+        "avg": 4.701086956521739,
         "min": 4.5,
-        "max": 4.875
+        "max": 5.0625
       },
       "stage_coverage_per_role": {
-        "written_avg": 3.5081521739130435,
-        "interview_avg": 3.510869565217391
+        "written_avg": 3.557065217391304,
+        "interview_avg": 3.5543478260869565
       },
       "source_url_depth": {
-        "depth_ge2_percent": 51.207729468599034
+        "depth_ge2_percent": 52.05753096284459
       }
     }
   },
   "template_reuse_v145": {
     "answer_framework": {
-      "written_top1_percent": 35.577481137550784,
-      "written_top3_percent": 61.404526987811956,
-      "interview_top1_percent": 42.35705950991832,
-      "interview_top3_percent": 64.58576429404901
+      "written_top1_percent": 35.43940264215968,
+      "written_top3_percent": 61.458931648477886,
+      "interview_top1_percent": 42.42774566473989,
+      "interview_top3_percent": 64.6820809248555
     },
     "follow_up_questions": {
-      "written_top1_percent": 10.118011220739021,
-      "written_top3_percent": 25.7109692396982,
-      "interview_top1_percent": 7.720731232983275,
-      "interview_top3_percent": 23.162193698949824
+      "written_top1_percent": 10.013402259237985,
+      "written_top3_percent": 25.445146467547385,
+      "interview_top1_percent": 7.649325626204239,
+      "interview_top3_percent": 22.947976878612717
     },
     "elimination_risks": {
       "role_profile_top1_percent": 48.369565217391305,
@@ -356,7 +356,7 @@
     }
   },
   "encyclopedia_depth_v155": {
-    "generated_at": "2026-02-19T09:57:21Z",
+    "generated_at": "2026-02-19T11:44:28Z",
     "depth_version": "v1.55.0",
     "gate_mode": "report_only",
     "enabled": true,
@@ -368,8 +368,8 @@
     },
     "actual": {
       "high_growth_landing_percent": 100,
-      "core_role_four_stage_percent": 22.463768115942027,
-      "role_profile_deep_link_percent": 10.054347826086957,
+      "core_role_four_stage_percent": 36.231884057971016,
+      "role_profile_deep_link_percent": 16.57608695652174,
       "platform_verification_pending_percent": 0,
       "expansion_candidate_landing_percent": 25
     },
@@ -381,13 +381,13 @@
         "high_growth_landed": 12,
         "high_growth_landing_percent": 100,
         "core_role_total": 6,
-        "core_role_full4_count": 1,
-        "core_role_full4_percent": 16.666666666666668,
+        "core_role_full4_count": 6,
+        "core_role_full4_percent": 100,
         "role_total": 16,
         "role_pending_platform_count": 0,
         "role_pending_platform_percent": 0,
-        "role_deep_link_count": 0,
-        "role_deep_link_percent": 0,
+        "role_deep_link_count": 6,
+        "role_deep_link_percent": 37.5,
         "expansion_candidate_total": 12,
         "expansion_candidate_landed": 6,
         "expansion_candidate_landing_percent": 50
@@ -489,13 +489,13 @@
         "high_growth_landed": 10,
         "high_growth_landing_percent": 100,
         "core_role_total": 6,
-        "core_role_full4_count": 2,
-        "core_role_full4_percent": 33.333333333333336,
+        "core_role_full4_count": 6,
+        "core_role_full4_percent": 100,
         "role_total": 16,
         "role_pending_platform_count": 0,
         "role_pending_platform_percent": 0,
-        "role_deep_link_count": 0,
-        "role_deep_link_percent": 0,
+        "role_deep_link_count": 6,
+        "role_deep_link_percent": 37.5,
         "expansion_candidate_total": 12,
         "expansion_candidate_landed": 1,
         "expansion_candidate_landing_percent": 8.333333333333334
@@ -561,13 +561,13 @@
         "high_growth_landed": 12,
         "high_growth_landing_percent": 100,
         "core_role_total": 6,
-        "core_role_full4_count": 1,
-        "core_role_full4_percent": 16.666666666666668,
+        "core_role_full4_count": 6,
+        "core_role_full4_percent": 100,
         "role_total": 16,
         "role_pending_platform_count": 0,
         "role_pending_platform_percent": 0,
-        "role_deep_link_count": 0,
-        "role_deep_link_percent": 0,
+        "role_deep_link_count": 6,
+        "role_deep_link_percent": 37.5,
         "expansion_candidate_total": 12,
         "expansion_candidate_landed": 3,
         "expansion_candidate_landing_percent": 25
@@ -579,13 +579,13 @@
         "high_growth_landed": 12,
         "high_growth_landing_percent": 100,
         "core_role_total": 6,
-        "core_role_full4_count": 1,
-        "core_role_full4_percent": 16.666666666666668,
+        "core_role_full4_count": 6,
+        "core_role_full4_percent": 100,
         "role_total": 16,
         "role_pending_platform_count": 0,
         "role_pending_platform_percent": 0,
-        "role_deep_link_count": 0,
-        "role_deep_link_percent": 0,
+        "role_deep_link_count": 6,
+        "role_deep_link_percent": 37.5,
         "expansion_candidate_total": 12,
         "expansion_candidate_landed": 3,
         "expansion_candidate_landing_percent": 25
@@ -797,13 +797,13 @@
         "high_growth_landed": 12,
         "high_growth_landing_percent": 100,
         "core_role_total": 6,
-        "core_role_full4_count": 1,
-        "core_role_full4_percent": 16.666666666666668,
+        "core_role_full4_count": 6,
+        "core_role_full4_percent": 100,
         "role_total": 16,
         "role_pending_platform_count": 0,
         "role_pending_platform_percent": 0,
-        "role_deep_link_count": 0,
-        "role_deep_link_percent": 0,
+        "role_deep_link_count": 6,
+        "role_deep_link_percent": 37.5,
         "expansion_candidate_total": 12,
         "expansion_candidate_landed": 6,
         "expansion_candidate_landing_percent": 50
@@ -905,13 +905,13 @@
         "high_growth_landed": 10,
         "high_growth_landing_percent": 100,
         "core_role_total": 6,
-        "core_role_full4_count": 2,
-        "core_role_full4_percent": 33.333333333333336,
+        "core_role_full4_count": 6,
+        "core_role_full4_percent": 100,
         "role_total": 16,
         "role_pending_platform_count": 0,
         "role_pending_platform_percent": 0,
-        "role_deep_link_count": 0,
-        "role_deep_link_percent": 0,
+        "role_deep_link_count": 6,
+        "role_deep_link_percent": 37.5,
         "expansion_candidate_total": 12,
         "expansion_candidate_landed": 1,
         "expansion_candidate_landing_percent": 8.333333333333334
@@ -977,13 +977,13 @@
         "high_growth_landed": 12,
         "high_growth_landing_percent": 100,
         "core_role_total": 6,
-        "core_role_full4_count": 1,
-        "core_role_full4_percent": 16.666666666666668,
+        "core_role_full4_count": 6,
+        "core_role_full4_percent": 100,
         "role_total": 16,
         "role_pending_platform_count": 0,
         "role_pending_platform_percent": 0,
-        "role_deep_link_count": 0,
-        "role_deep_link_percent": 0,
+        "role_deep_link_count": 6,
+        "role_deep_link_percent": 37.5,
         "expansion_candidate_total": 12,
         "expansion_candidate_landed": 3,
         "expansion_candidate_landing_percent": 25
@@ -995,13 +995,13 @@
         "high_growth_landed": 12,
         "high_growth_landing_percent": 100,
         "core_role_total": 6,
-        "core_role_full4_count": 1,
-        "core_role_full4_percent": 16.666666666666668,
+        "core_role_full4_count": 6,
+        "core_role_full4_percent": 100,
         "role_total": 16,
         "role_pending_platform_count": 0,
         "role_pending_platform_percent": 0,
-        "role_deep_link_count": 0,
-        "role_deep_link_percent": 0,
+        "role_deep_link_count": 6,
+        "role_deep_link_percent": 37.5,
         "expansion_candidate_total": 12,
         "expansion_candidate_landed": 3,
         "expansion_candidate_landing_percent": 25
