@@ -686,10 +686,19 @@
           "逐岗位补充分阶段题库：新增笔试8题、面试8题，覆盖提前批/主批/补录/实习转正。",
           "新增岗位均保留BOSS/小红书受限补录位与检索规则，缺失信息可回填可审计。"
         ]
+      },
+      {
+        "version": "v1.53.5",
+        "date": "2026-02-19",
+        "summary": [
+          "修复新增岗位证据URL与来源注册表不一致问题，清零source_id_url_host_mismatch门禁项。",
+          "保持央国企与传媒新增岗位的平台补录信息不变，仅收敛source_url/snapshot_url到注册表标准URL。",
+          "重跑质量流水线与分拆同步，确保主文件与data/entries口径一致。"
+        ]
       }
     ],
     "文档名称": "中国大陆应届生求职行业百科（v1.42.2平台补录结构化增强版）",
-    "版本": "v1.53.4",
+    "版本": "v1.53.5",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -43115,12 +43124,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 8,
-                "snapshot_url": "https://www.cscec.com?entry=IND_STATE_OWNED_ENTERPRISE&role=%E5%8F%B8%E5%BA%93%E8%B5%84%E9%87%91%E7%AE%A1%E7%90%86%E5%B2%97",
+                "snapshot_url": "https://www.cscec.com",
                 "source_date": "2026-02-19",
                 "source_id": "SRC_AUTO_WWW_CSCEC_COM_F3573BC4",
                 "source_name": "中国建筑官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.cscec.com?entry=IND_STATE_OWNED_ENTERPRISE&role=%E5%8F%B8%E5%BA%93%E8%B5%84%E9%87%91%E7%AE%A1%E7%90%86%E5%B2%97",
+                "source_url": "https://www.cscec.com",
                 "stat_definition": "基于央国企公开招聘口径与司库资金管理能力要求补齐细分岗位。",
                 "secondary_source_ids": [
                   "SRC_SASAC_RECRUIT_2026",
@@ -43128,7 +43137,8 @@
                 ],
                 "publish_date": "2026-02-19",
                 "captured_at": "2026-02-19",
-                "data_period": "2026年度"
+                "data_period": "2026年度",
+                "updated_at": "2026-02-19"
               },
               "platform_backfill_gap": {
                 "status": "pending_platform_verification",
@@ -43173,7 +43183,7 @@
                   "problem": "围绕司库资金管理核心目标未达成，需在限定周期内完成测算与执行优化。",
                   "action": "按STAR结构描述资金预测、协同推进和风险控制动作。",
                   "result_metric": "资金预测偏差率下降15%-20%，综合融资成本下降8-15bp。",
-                  "proof_link": "https://www.cscec.com?entry=IND_STATE_OWNED_ENTERPRISE&role=%E5%8F%B8%E5%BA%93%E8%B5%84%E9%87%91%E7%AE%A1%E7%90%86%E5%B2%97",
+                  "proof_link": "https://www.cscec.com",
                   "proof_source_id": "SRC_AUTO_WWW_CSCEC_COM_F3573BC4"
                 }
               ],
@@ -43218,7 +43228,7 @@
                   "上线或交付记录"
                 ],
                 "source_id": "SRC_AUTO_WWW_CSCEC_COM_F3573BC4",
-                "source_url": "https://www.cscec.com?entry=IND_STATE_OWNED_ENTERPRISE&role=%E5%8F%B8%E5%BA%93%E8%B5%84%E9%87%91%E7%AE%A1%E7%90%86%E5%B2%97",
+                "source_url": "https://www.cscec.com",
                 "updated_at": "2026-02-19"
               },
               "star_evidence_template": {
@@ -43300,12 +43310,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 8,
-                "snapshot_url": "https://www.crrcgc.cc?entry=IND_STATE_OWNED_ENTERPRISE&role=%E5%AE%A1%E8%AE%A1%E6%95%B0%E5%AD%97%E5%8C%96%E5%B2%97",
+                "snapshot_url": "https://www.crrcgc.cc",
                 "source_date": "2026-02-19",
                 "source_id": "SRC_AUTO_WWW_CRRCGC_CC_B9F6CC46",
                 "source_name": "中国中车官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.crrcgc.cc?entry=IND_STATE_OWNED_ENTERPRISE&role=%E5%AE%A1%E8%AE%A1%E6%95%B0%E5%AD%97%E5%8C%96%E5%B2%97",
+                "source_url": "https://www.crrcgc.cc",
                 "stat_definition": "基于央国企公开招聘口径与审计数字化能力要求补齐细分岗位。",
                 "secondary_source_ids": [
                   "SRC_SASAC_RECRUIT_2026",
@@ -43313,7 +43323,8 @@
                 ],
                 "publish_date": "2026-02-19",
                 "captured_at": "2026-02-19",
-                "data_period": "2026年度"
+                "data_period": "2026年度",
+                "updated_at": "2026-02-19"
               },
               "platform_backfill_gap": {
                 "status": "pending_platform_verification",
@@ -43358,7 +43369,7 @@
                   "problem": "围绕审计数字化岗核心目标未达成，需在周期内完成异常识别与整改闭环。",
                   "action": "按STAR结构描述审计抽样、数据分析、整改推动与复核机制。",
                   "result_metric": "异常识别准确率提升10%-16%，整改按期完成率提升15%-22%。",
-                  "proof_link": "https://www.crrcgc.cc?entry=IND_STATE_OWNED_ENTERPRISE&role=%E5%AE%A1%E8%AE%A1%E6%95%B0%E5%AD%97%E5%8C%96%E5%B2%97",
+                  "proof_link": "https://www.crrcgc.cc",
                   "proof_source_id": "SRC_AUTO_WWW_CRRCGC_CC_B9F6CC46"
                 }
               ],
@@ -43403,7 +43414,7 @@
                   "上线或交付记录"
                 ],
                 "source_id": "SRC_AUTO_WWW_CRRCGC_CC_B9F6CC46",
-                "source_url": "https://www.crrcgc.cc?entry=IND_STATE_OWNED_ENTERPRISE&role=%E5%AE%A1%E8%AE%A1%E6%95%B0%E5%AD%97%E5%8C%96%E5%B2%97",
+                "source_url": "https://www.crrcgc.cc",
                 "updated_at": "2026-02-19"
               },
               "star_evidence_template": {
@@ -59559,12 +59570,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 8,
-                "snapshot_url": "https://www.bilibili.com?entry=IND_MEDIA_GAME_CONTENT&role=%E5%95%86%E4%B8%9A%E5%8C%96%E7%AD%96%E7%95%A5%E8%BF%90%E8%90%A5%E5%B2%97",
+                "snapshot_url": "https://www.bilibili.com",
                 "source_date": "2026-02-19",
                 "source_id": "SRC_AUTO_WWW_BILIBILI_COM_6263DF22",
                 "source_name": "哔哩哔哩官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.bilibili.com?entry=IND_MEDIA_GAME_CONTENT&role=%E5%95%86%E4%B8%9A%E5%8C%96%E7%AD%96%E7%95%A5%E8%BF%90%E8%90%A5%E5%B2%97",
+                "source_url": "https://www.bilibili.com",
                 "stat_definition": "基于内容平台公开招聘口径与商业化策略能力要求补齐细分岗位。",
                 "secondary_source_ids": [
                   "SRC_ZHILIAN_Q4_2025_NEWS",
@@ -59572,7 +59583,8 @@
                 ],
                 "publish_date": "2026-02-19",
                 "captured_at": "2026-02-19",
-                "data_period": "2026年度"
+                "data_period": "2026年度",
+                "updated_at": "2026-02-19"
               },
               "platform_backfill_gap": {
                 "status": "pending_platform_verification",
@@ -59617,7 +59629,7 @@
                   "problem": "围绕商业化收益增长目标未达成，需在短周期内完成策略重排与执行优化。",
                   "action": "按STAR结构描述策略拆解、资源协同与收益复盘动作。",
                   "result_metric": "商业化收入提升12%-20%，投放ROI提升10%-16%。",
-                  "proof_link": "https://www.bilibili.com?entry=IND_MEDIA_GAME_CONTENT&role=%E5%95%86%E4%B8%9A%E5%8C%96%E7%AD%96%E7%95%A5%E8%BF%90%E8%90%A5%E5%B2%97",
+                  "proof_link": "https://www.bilibili.com",
                   "proof_source_id": "SRC_AUTO_WWW_BILIBILI_COM_6263DF22"
                 }
               ],
@@ -59662,7 +59674,7 @@
                   "上线或交付记录"
                 ],
                 "source_id": "SRC_AUTO_WWW_BILIBILI_COM_6263DF22",
-                "source_url": "https://www.bilibili.com?entry=IND_MEDIA_GAME_CONTENT&role=%E5%95%86%E4%B8%9A%E5%8C%96%E7%AD%96%E7%95%A5%E8%BF%90%E8%90%A5%E5%B2%97",
+                "source_url": "https://www.bilibili.com",
                 "updated_at": "2026-02-19"
               },
               "star_evidence_template": {
@@ -59744,12 +59756,12 @@
                 "http_status": 200,
                 "manual_verification_required": false,
                 "sample_size": 8,
-                "snapshot_url": "https://www.mihoyo.com?entry=IND_MEDIA_GAME_CONTENT&role=%E7%A4%BE%E5%8C%BA%E5%86%85%E5%AE%B9%E5%AE%A1%E6%A0%B8%E7%AD%96%E7%95%A5%E5%B2%97",
+                "snapshot_url": "https://www.mihoyo.com",
                 "source_date": "2026-02-19",
                 "source_id": "SRC_AUTO_WWW_MIHOYO_COM_CB059AC8",
                 "source_name": "米哈游官网/招聘页",
                 "source_type": "company_official",
-                "source_url": "https://www.mihoyo.com?entry=IND_MEDIA_GAME_CONTENT&role=%E7%A4%BE%E5%8C%BA%E5%86%85%E5%AE%B9%E5%AE%A1%E6%A0%B8%E7%AD%96%E7%95%A5%E5%B2%97",
+                "source_url": "https://www.mihoyo.com",
                 "stat_definition": "基于内容平台公开招聘口径与社区审核策略能力要求补齐细分岗位。",
                 "secondary_source_ids": [
                   "SRC_ZHILIAN_Q4_2025_NEWS",
@@ -59757,7 +59769,8 @@
                 ],
                 "publish_date": "2026-02-19",
                 "captured_at": "2026-02-19",
-                "data_period": "2026年度"
+                "data_period": "2026年度",
+                "updated_at": "2026-02-19"
               },
               "platform_backfill_gap": {
                 "status": "pending_platform_verification",
@@ -59802,7 +59815,7 @@
                   "problem": "围绕社区违规治理目标未达成，需在短周期内降低违规漏判并控制误杀。",
                   "action": "按STAR结构描述风险分级、规则迭代与申诉复核流程优化。",
                   "result_metric": "违规识别准确率提升11%-17%，误杀率下降8%-13%。",
-                  "proof_link": "https://www.mihoyo.com?entry=IND_MEDIA_GAME_CONTENT&role=%E7%A4%BE%E5%8C%BA%E5%86%85%E5%AE%B9%E5%AE%A1%E6%A0%B8%E7%AD%96%E7%95%A5%E5%B2%97",
+                  "proof_link": "https://www.mihoyo.com",
                   "proof_source_id": "SRC_AUTO_WWW_MIHOYO_COM_CB059AC8"
                 }
               ],
@@ -59847,7 +59860,7 @@
                   "上线或交付记录"
                 ],
                 "source_id": "SRC_AUTO_WWW_MIHOYO_COM_CB059AC8",
-                "source_url": "https://www.mihoyo.com?entry=IND_MEDIA_GAME_CONTENT&role=%E7%A4%BE%E5%8C%BA%E5%86%85%E5%AE%B9%E5%AE%A1%E6%A0%B8%E7%AD%96%E7%95%A5%E5%B2%97",
+                "source_url": "https://www.mihoyo.com",
                 "updated_at": "2026-02-19"
               },
               "star_evidence_template": {
