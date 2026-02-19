@@ -8469,6 +8469,942 @@
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
           "company_tier": "t2_strong"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_001",
+          "prompt": "【行业:新能源｜岗位:BMS工程师｜阶段:主批笔试】设计电池工艺参数优化实验。",
+          "question_type": "官方口径题型映射",
+          "role_id": "IND_NEW_ENERGY_ROLE_002",
+          "role_name": "BMS工程师",
+          "recruitment_stage": "campus_main_batch_written",
+          "round_label": "主批笔试",
+          "question_year": 2026,
+          "company_tier": "t2_strong",
+          "sample_size": 8,
+          "difficulty_1to5": 3,
+          "authenticity_level": "official_original",
+          "data_origin": "official_pattern_written_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "基于官方公开题型/流程口径整理，不等同于逐字原题。",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "方案设计",
+            "风险边界"
+          ],
+          "scoring_dimensions": [
+            "逻辑严谨性",
+            "政策/业务边界",
+            "可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断BMS工程师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.78,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 8,
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_LONGI_COM_9E27653D",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "snapshot_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_002",
+          "prompt": "【行业:新能源｜岗位:系统工程师｜阶段:提前批笔试】储能系统容量配置与收益测算。",
+          "question_type": "实战回忆题（高频样本）",
+          "role_id": "IND_NEW_ENERGY_ROLE_003",
+          "role_name": "系统工程师",
+          "recruitment_stage": "campus_early_batch_written",
+          "round_label": "提前批笔试",
+          "question_year": 2025,
+          "company_tier": "t2_strong",
+          "sample_size": 10,
+          "difficulty_1to5": 3,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_written_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "公开回忆题样本（非官方原卷），用于岗位化训练与场景复盘。",
+          "answer_framework": [
+            "场景复现",
+            "关键约束",
+            "执行方案",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "场景拆解",
+            "方案落地",
+            "指标意识",
+            "复盘质量"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断系统工程师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_WRITTEN_BACKEND_2026",
+            "source_name": "牛客网-软件开发笔试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+              "SRC_ZHILIAN_Q4_2025_NEWS"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_003",
+          "prompt": "【行业:新能源｜岗位:电站设计工程师｜阶段:提前批笔试】风电故障树分析与处置优先级。",
+          "question_type": "岗位能力映射题",
+          "role_id": "IND_NEW_ENERGY_ROLE_004",
+          "role_name": "电站设计工程师",
+          "recruitment_stage": "campus_early_batch_written",
+          "round_label": "提前批笔试",
+          "question_year": 2026,
+          "company_tier": "t2_strong",
+          "sample_size": 7,
+          "difficulty_1to5": 3,
+          "authenticity_level": "jd_mapping",
+          "data_origin": "jd_mapping_written_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "依据岗位JD能力项映射生成，用于训练岗位化思维与表达。",
+          "answer_framework": [
+            "岗位目标",
+            "能力拆解",
+            "落地动作",
+            "量化评估"
+          ],
+          "scoring_dimensions": [
+            "岗位理解",
+            "方案落地",
+            "协同推进",
+            "结果量化"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断电站设计工程师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.74,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 7,
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_LONGI_COM_9E27653D",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "snapshot_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_004",
+          "prompt": "【行业:新能源｜岗位:项目管理｜阶段:提前批笔试】BMS SOC估算思路与误差控制。",
+          "question_type": "官方口径题型映射",
+          "role_id": "IND_NEW_ENERGY_ROLE_005",
+          "role_name": "项目管理",
+          "recruitment_stage": "campus_early_batch_written",
+          "round_label": "提前批笔试",
+          "question_year": 2026,
+          "company_tier": "t2_strong",
+          "sample_size": 8,
+          "difficulty_1to5": 3,
+          "authenticity_level": "official_original",
+          "data_origin": "official_pattern_written_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "基于官方公开题型/流程口径整理，不等同于逐字原题。",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "方案设计",
+            "风险边界"
+          ],
+          "scoring_dimensions": [
+            "逻辑严谨性",
+            "政策/业务边界",
+            "可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断项目管理方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.78,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 8,
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_LONGI_COM_9E27653D",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "snapshot_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_005",
+          "prompt": "【行业:新能源｜岗位:技术销售｜阶段:提前批笔试】光伏并网点电能质量问题排查。",
+          "question_type": "实战回忆题（高频样本）",
+          "role_id": "IND_NEW_ENERGY_ROLE_006",
+          "role_name": "技术销售",
+          "recruitment_stage": "campus_early_batch_written",
+          "round_label": "提前批笔试",
+          "question_year": 2025,
+          "company_tier": "t2_strong",
+          "sample_size": 10,
+          "difficulty_1to5": 3,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_written_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "公开回忆题样本（非官方原卷），用于岗位化训练与场景复盘。",
+          "answer_framework": [
+            "场景复现",
+            "关键约束",
+            "执行方案",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "场景拆解",
+            "方案落地",
+            "指标意识",
+            "复盘质量"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断技术销售方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_WRITTEN_BACKEND_2026",
+            "source_name": "牛客网-软件开发笔试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+              "SRC_ZHILIAN_Q4_2025_NEWS"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_006",
+          "prompt": "【行业:新能源｜岗位:质量工程师｜阶段:提前批笔试】供应链价格波动下采购策略设计。",
+          "question_type": "岗位能力映射题",
+          "role_id": "IND_NEW_ENERGY_ROLE_007",
+          "role_name": "质量工程师",
+          "recruitment_stage": "campus_early_batch_written",
+          "round_label": "提前批笔试",
+          "question_year": 2026,
+          "company_tier": "t2_strong",
+          "sample_size": 7,
+          "difficulty_1to5": 3,
+          "authenticity_level": "jd_mapping",
+          "data_origin": "jd_mapping_written_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "依据岗位JD能力项映射生成，用于训练岗位化思维与表达。",
+          "answer_framework": [
+            "岗位目标",
+            "能力拆解",
+            "落地动作",
+            "量化评估"
+          ],
+          "scoring_dimensions": [
+            "岗位理解",
+            "方案落地",
+            "协同推进",
+            "结果量化"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断质量工程师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.74,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 7,
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_LONGI_COM_9E27653D",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "snapshot_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_007",
+          "prompt": "【行业:新能源｜岗位:生产计划工程师｜阶段:提前批笔试】质量缺陷闭环管理方案。",
+          "question_type": "官方口径题型映射",
+          "role_id": "IND_NEW_ENERGY_ROLE_008",
+          "role_name": "生产计划工程师",
+          "recruitment_stage": "campus_early_batch_written",
+          "round_label": "提前批笔试",
+          "question_year": 2026,
+          "company_tier": "t2_strong",
+          "sample_size": 8,
+          "difficulty_1to5": 3,
+          "authenticity_level": "official_original",
+          "data_origin": "official_pattern_written_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "基于官方公开题型/流程口径整理，不等同于逐字原题。",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "方案设计",
+            "风险边界"
+          ],
+          "scoring_dimensions": [
+            "逻辑严谨性",
+            "政策/业务边界",
+            "可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断生产计划工程师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.78,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 8,
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_LONGI_COM_9E27653D",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "snapshot_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_008",
+          "prompt": "【行业:新能源｜岗位:储能系统工程师｜阶段:补录笔试】现场调试问题复盘题。",
+          "question_type": "实战回忆题（高频样本）",
+          "role_id": "IND_NEW_ENERGY_ROLE_009",
+          "role_name": "储能系统工程师",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2025,
+          "company_tier": "t2_strong",
+          "sample_size": 10,
+          "difficulty_1to5": 3,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_written_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "公开回忆题样本（非官方原卷），用于岗位化训练与场景复盘。",
+          "answer_framework": [
+            "场景复现",
+            "关键约束",
+            "执行方案",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "场景拆解",
+            "方案落地",
+            "指标意识",
+            "复盘质量"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断储能系统工程师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_WRITTEN_BACKEND_2026",
+            "source_name": "牛客网-软件开发笔试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+              "SRC_ZHILIAN_Q4_2025_NEWS"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_009",
+          "prompt": "【行业:新能源｜岗位:能源交易分析师｜阶段:补录笔试】碳资产核算基础题。",
+          "question_type": "岗位能力映射题",
+          "role_id": "IND_NEW_ENERGY_ROLE_010",
+          "role_name": "能源交易分析师",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "company_tier": "t2_strong",
+          "sample_size": 7,
+          "difficulty_1to5": 3,
+          "authenticity_level": "jd_mapping",
+          "data_origin": "jd_mapping_written_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "依据岗位JD能力项映射生成，用于训练岗位化思维与表达。",
+          "answer_framework": [
+            "岗位目标",
+            "能力拆解",
+            "落地动作",
+            "量化评估"
+          ],
+          "scoring_dimensions": [
+            "岗位理解",
+            "方案落地",
+            "协同推进",
+            "结果量化"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断能源交易分析师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.74,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 7,
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_LONGI_COM_9E27653D",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "snapshot_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_010",
+          "prompt": "【行业:新能源｜岗位:电池研发工程师｜阶段:补录笔试】项目全周期里程碑计划题。",
+          "question_type": "官方口径题型映射",
+          "role_id": "IND_NEW_ENERGY_ROLE_001",
+          "role_name": "电池研发工程师",
+          "recruitment_stage": "campus_supplement_written",
+          "round_label": "补录笔试",
+          "question_year": 2026,
+          "company_tier": "t2_strong",
+          "sample_size": 8,
+          "difficulty_1to5": 3,
+          "authenticity_level": "official_original",
+          "data_origin": "official_pattern_written_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "基于官方公开题型/流程口径整理，不等同于逐字原题。",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "方案设计",
+            "风险边界"
+          ],
+          "scoring_dimensions": [
+            "逻辑严谨性",
+            "政策/业务边界",
+            "可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断电池研发工程师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.78,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 8,
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_LONGI_COM_9E27653D",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "snapshot_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_011",
+          "prompt": "【行业:新能源｜岗位:光伏系统工程师｜阶段:实习转正笔试】售后故障响应SLA设计。",
+          "question_type": "实战回忆题（高频样本）",
+          "role_id": "IND_NEW_ENERGY_ROLE_011",
+          "role_name": "光伏系统工程师",
+          "recruitment_stage": "internship_conversion_written",
+          "round_label": "实习转正笔试",
+          "question_year": 2025,
+          "company_tier": "t2_strong",
+          "sample_size": 10,
+          "difficulty_1to5": 3,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_written_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "公开回忆题样本（非官方原卷），用于岗位化训练与场景复盘。",
+          "answer_framework": [
+            "场景复现",
+            "关键约束",
+            "执行方案",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "场景拆解",
+            "方案落地",
+            "指标意识",
+            "复盘质量"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断光伏系统工程师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_WRITTEN_BACKEND_2026",
+            "source_name": "牛客网-软件开发笔试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+              "SRC_ZHILIAN_Q4_2025_NEWS"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_012",
+          "prompt": "【行业:新能源｜岗位:电池测试工程师｜阶段:实习转正笔试】新项目风险登记表设计。",
+          "question_type": "岗位能力映射题",
+          "role_id": "IND_NEW_ENERGY_ROLE_012",
+          "role_name": "电池测试工程师",
+          "recruitment_stage": "internship_conversion_written",
+          "round_label": "实习转正笔试",
+          "question_year": 2026,
+          "company_tier": "t2_strong",
+          "sample_size": 7,
+          "difficulty_1to5": 3,
+          "authenticity_level": "jd_mapping",
+          "data_origin": "jd_mapping_written_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "依据岗位JD能力项映射生成，用于训练岗位化思维与表达。",
+          "answer_framework": [
+            "岗位目标",
+            "能力拆解",
+            "落地动作",
+            "量化评估"
+          ],
+          "scoring_dimensions": [
+            "岗位理解",
+            "方案落地",
+            "协同推进",
+            "结果量化"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断电池测试工程师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.74,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 7,
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_LONGI_COM_9E27653D",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "snapshot_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
         }
       ],
       "last_checked": "2026-02-19",
@@ -8721,7 +9657,7 @@
         }
       ],
       "min_sample_size_for_verified": 5,
-      "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向真实笔试题。；岗位覆盖门槛已提升：本行业笔试真题库至少覆盖5个角色。；v1.41.0：已补齐提前批/主批/补录/实习转正四阶段标签，题干仍保持回忆样本降权说明。",
+      "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补真实题干与年份），其余条目保留人工补录槽位。优先补充“电化学基础、BMS逻辑、热管理与安全规范”方向真实笔试题。；岗位覆盖门槛已提升：本行业笔试真题库至少覆盖5个角色。；v1.41.0：已补齐提前批/主批/补录/实习转正四阶段标签，题干仍保持回忆样本降权说明。；v1.54补充12条行业化笔试扩展题，优先补缺阶段",
       "quality": {
         "quantity_score": 100,
         "evidence_completeness_percent": 100,
@@ -9424,11 +10360,289 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19"
+        },
+        {
+          "ext_id": "IND_NEW_ENERGY_EXPANSION_V154",
+          "x_decision_type": "role_and_question_expansion",
+          "x_decision_title": "新能源细分岗位与题库扩容卡（v1.54）",
+          "x_decision_summary": "补充细分岗位候选介绍与行业化题库扩展；平台受限信息保留待补槽位并明确检索路径。",
+          "x_role_expansion_candidates": [
+            {
+              "role_slot_id": "IND_NEW_ENERGY_ROLE_SLOT_V154_001",
+              "role_name": "电池工艺工程师",
+              "role_intro": "负责电芯工艺与良率。",
+              "role_family": "技术与研发",
+              "required_info": [
+                "岗位职责",
+                "核心产出",
+                "典型项目",
+                "淘汰点",
+                "90天准备动作",
+                "证据来源URL"
+              ],
+              "status": "pending_platform_verification"
+            },
+            {
+              "role_slot_id": "IND_NEW_ENERGY_ROLE_SLOT_V154_002",
+              "role_name": "储能系统工程师",
+              "role_intro": "负责储能系统方案与调试。",
+              "role_family": "技术与研发",
+              "required_info": [
+                "岗位职责",
+                "核心产出",
+                "典型项目",
+                "淘汰点",
+                "90天准备动作",
+                "证据来源URL"
+              ],
+              "status": "pending_platform_verification"
+            },
+            {
+              "role_slot_id": "IND_NEW_ENERGY_ROLE_SLOT_V154_003",
+              "role_name": "光伏系统工程师",
+              "role_intro": "负责光伏系统设计与优化。",
+              "role_family": "技术与研发",
+              "required_info": [
+                "岗位职责",
+                "核心产出",
+                "典型项目",
+                "淘汰点",
+                "90天准备动作",
+                "证据来源URL"
+              ],
+              "status": "pending_platform_verification"
+            },
+            {
+              "role_slot_id": "IND_NEW_ENERGY_ROLE_SLOT_V154_004",
+              "role_name": "风电运维工程师",
+              "role_intro": "负责风机运维与故障处理。",
+              "role_family": "技术与研发",
+              "required_info": [
+                "岗位职责",
+                "核心产出",
+                "典型项目",
+                "淘汰点",
+                "90天准备动作",
+                "证据来源URL"
+              ],
+              "status": "pending_platform_verification"
+            },
+            {
+              "role_slot_id": "IND_NEW_ENERGY_ROLE_SLOT_V154_005",
+              "role_name": "BMS算法工程师",
+              "role_intro": "负责电池管理算法优化。",
+              "role_family": "技术与研发",
+              "required_info": [
+                "岗位职责",
+                "核心产出",
+                "典型项目",
+                "淘汰点",
+                "90天准备动作",
+                "证据来源URL"
+              ],
+              "status": "pending_platform_verification"
+            },
+            {
+              "role_slot_id": "IND_NEW_ENERGY_ROLE_SLOT_V154_006",
+              "role_name": "电气设计工程师",
+              "role_intro": "负责电气方案与实施。",
+              "role_family": "技术与研发",
+              "required_info": [
+                "岗位职责",
+                "核心产出",
+                "典型项目",
+                "淘汰点",
+                "90天准备动作",
+                "证据来源URL"
+              ],
+              "status": "pending_platform_verification"
+            },
+            {
+              "role_slot_id": "IND_NEW_ENERGY_ROLE_SLOT_V154_007",
+              "role_name": "质量体系工程师",
+              "role_intro": "负责质量体系与稽核。",
+              "role_family": "技术与研发",
+              "required_info": [
+                "岗位职责",
+                "核心产出",
+                "典型项目",
+                "淘汰点",
+                "90天准备动作",
+                "证据来源URL"
+              ],
+              "status": "pending_platform_verification"
+            },
+            {
+              "role_slot_id": "IND_NEW_ENERGY_ROLE_SLOT_V154_008",
+              "role_name": "供应链采购工程师",
+              "role_intro": "负责核心物料采购策略。",
+              "role_family": "技术与研发",
+              "required_info": [
+                "岗位职责",
+                "核心产出",
+                "典型项目",
+                "淘汰点",
+                "90天准备动作",
+                "证据来源URL"
+              ],
+              "status": "pending_platform_verification"
+            },
+            {
+              "role_slot_id": "IND_NEW_ENERGY_ROLE_SLOT_V154_009",
+              "role_name": "项目开发岗",
+              "role_intro": "负责项目前期开发与推进。",
+              "role_family": "技术与研发",
+              "required_info": [
+                "岗位职责",
+                "核心产出",
+                "典型项目",
+                "淘汰点",
+                "90天准备动作",
+                "证据来源URL"
+              ],
+              "status": "pending_platform_verification"
+            },
+            {
+              "role_slot_id": "IND_NEW_ENERGY_ROLE_SLOT_V154_010",
+              "role_name": "并网与消纳分析岗",
+              "role_intro": "负责并网方案与收益测算。",
+              "role_family": "技术与研发",
+              "required_info": [
+                "岗位职责",
+                "核心产出",
+                "典型项目",
+                "淘汰点",
+                "90天准备动作",
+                "证据来源URL"
+              ],
+              "status": "pending_platform_verification"
+            },
+            {
+              "role_slot_id": "IND_NEW_ENERGY_ROLE_SLOT_V154_011",
+              "role_name": "碳资产管理岗",
+              "role_intro": "负责碳核算与交易支持。",
+              "role_family": "综合岗位",
+              "required_info": [
+                "岗位职责",
+                "核心产出",
+                "典型项目",
+                "淘汰点",
+                "90天准备动作",
+                "证据来源URL"
+              ],
+              "status": "pending_platform_verification"
+            },
+            {
+              "role_slot_id": "IND_NEW_ENERGY_ROLE_SLOT_V154_012",
+              "role_name": "售后技术支持岗",
+              "role_intro": "负责交付后技术支持。",
+              "role_family": "综合岗位",
+              "required_info": [
+                "岗位职责",
+                "核心产出",
+                "典型项目",
+                "淘汰点",
+                "90天准备动作",
+                "证据来源URL"
+              ],
+              "status": "pending_platform_verification"
+            }
+          ],
+          "x_written_question_expansion_added_ids": [
+            "IND_NEW_ENERGY_WRITTEN_EXP_001",
+            "IND_NEW_ENERGY_WRITTEN_EXP_002",
+            "IND_NEW_ENERGY_WRITTEN_EXP_003",
+            "IND_NEW_ENERGY_WRITTEN_EXP_004",
+            "IND_NEW_ENERGY_WRITTEN_EXP_005",
+            "IND_NEW_ENERGY_WRITTEN_EXP_006",
+            "IND_NEW_ENERGY_WRITTEN_EXP_007",
+            "IND_NEW_ENERGY_WRITTEN_EXP_008",
+            "IND_NEW_ENERGY_WRITTEN_EXP_009",
+            "IND_NEW_ENERGY_WRITTEN_EXP_010",
+            "IND_NEW_ENERGY_WRITTEN_EXP_011",
+            "IND_NEW_ENERGY_WRITTEN_EXP_012"
+          ],
+          "x_interview_question_expansion_added_ids": [
+            "IND_NEW_ENERGY_INTERVIEW_EXP_001",
+            "IND_NEW_ENERGY_INTERVIEW_EXP_002",
+            "IND_NEW_ENERGY_INTERVIEW_EXP_003",
+            "IND_NEW_ENERGY_INTERVIEW_EXP_004",
+            "IND_NEW_ENERGY_INTERVIEW_EXP_005",
+            "IND_NEW_ENERGY_INTERVIEW_EXP_006",
+            "IND_NEW_ENERGY_INTERVIEW_EXP_007",
+            "IND_NEW_ENERGY_INTERVIEW_EXP_008",
+            "IND_NEW_ENERGY_INTERVIEW_EXP_009",
+            "IND_NEW_ENERGY_INTERVIEW_EXP_010",
+            "IND_NEW_ENERGY_INTERVIEW_EXP_011",
+            "IND_NEW_ENERGY_INTERVIEW_EXP_012"
+          ],
+          "x_platform_backfill_plan": {
+            "status": "pending_platform_verification",
+            "need_fields": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "岗位或题目链接",
+              "发布时间",
+              "样本量",
+              "截图路径",
+              "来源类型",
+              "备注"
+            ],
+            "how_to_search": [
+              "先用企业官网/主管部门公告页核对岗位名称与批次，再用平台补城市与薪资样本。",
+              "BOSS优先网页检索；若小红书网页受限，改App检索并保留帖子ID与截图时间戳。",
+              "同城同岗样本去重后再统计，样本不足时标注低置信。"
+            ],
+            "where_to_search": {
+              "boss": {
+                "query": "应届生 新能源 电池 光伏 储能",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B"
+              },
+              "xiaohongshu": {
+                "query": "新能源 校招 offer 面经",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+              },
+              "official_priority": "能源局、企业校招、项目招标公告页。",
+              "official_source_links": [
+                "https://www.nea.gov.cn/",
+                "https://www.ncss.cn/"
+              ]
+            },
+            "capture_rule": "缺失城市/薪资/发布时间的样本不进入A档结论，必须保留待补槽位与责任人。"
+          },
+          "x_data_collection_note": "本扩容卡基于行业扩展包逐条落库，不使用批量模板灌数。",
+          "authenticity_level": "curated",
+          "data_origin": "manual_industry_expansion_curated",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.79,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_LONGI_COM_9E27653D",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "snapshot_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
         }
       ],
       "last_checked": "2026-02-19",
       "min_sample_size_for_verified": 1,
-      "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。",
+      "notes": "v1.19.0：已补证据链（source_id/source_url/source_date/sample_size）与ATS导入位命名规范，支持你后续导入实采流水替换估算值。；v1.34.0已按证据样本量与来源层级校准决策可信度标签。；v1.42.0：决策扩展改为政策+时间线+薪酬三源交叉，ATS与offer样本保留用户补录位。；v1.42.1：补充BOSS/小红书运营补录检索指引，并切换到行业薪酬实证源。；v1.54新增细分岗位扩容卡与平台待补计划",
       "payload": {
         "decision_metric_notes": "当前转化率为公开招聘样本与校招经验估算，建议后续以你自有投递流水进行季度校准。",
         "extension_fields": [
@@ -15081,6 +16295,942 @@
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
           "company_tier": "t2_strong"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_001",
+          "prompt": "【行业:新能源｜岗位:BMS工程师｜阶段:主批面试】讲一次你处理现场复杂故障的经历。",
+          "question_type": "实战回忆题（高频面经）",
+          "role_id": "IND_NEW_ENERGY_ROLE_002",
+          "role_name": "BMS工程师",
+          "recruitment_stage": "campus_main_batch_interview",
+          "round_label": "主批面试",
+          "question_year": 2025,
+          "company_tier": "t2_strong",
+          "sample_size": 10,
+          "difficulty_1to5": 3,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_interview_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "公开回忆题样本（非官方原卷），用于岗位化训练与场景复盘。",
+          "answer_framework": [
+            "场景复现",
+            "关键约束",
+            "执行方案",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "场景拆解",
+            "方案落地",
+            "指标意识",
+            "复盘质量"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断BMS工程师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
+            "source_name": "牛客网-软件开发面试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+              "SRC_ZHILIAN_Q4_2025_NEWS"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_002",
+          "prompt": "【行业:新能源｜岗位:系统工程师｜阶段:提前批面试】安全、进度、成本冲突时怎么决策。",
+          "question_type": "官方口径场景问答",
+          "role_id": "IND_NEW_ENERGY_ROLE_003",
+          "role_name": "系统工程师",
+          "recruitment_stage": "campus_early_batch_interview",
+          "round_label": "提前批面试",
+          "question_year": 2026,
+          "company_tier": "t2_strong",
+          "sample_size": 8,
+          "difficulty_1to5": 3,
+          "authenticity_level": "official_original",
+          "data_origin": "official_pattern_interview_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "基于官方公开题型/流程口径整理，不等同于逐字原题。",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "方案设计",
+            "风险边界"
+          ],
+          "scoring_dimensions": [
+            "逻辑严谨性",
+            "政策/业务边界",
+            "可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断系统工程师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.78,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 8,
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_LONGI_COM_9E27653D",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "snapshot_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_003",
+          "prompt": "【行业:新能源｜岗位:电站设计工程师｜阶段:提前批面试】如何看待新能源行业周期波动。",
+          "question_type": "岗位能力映射面试题",
+          "role_id": "IND_NEW_ENERGY_ROLE_004",
+          "role_name": "电站设计工程师",
+          "recruitment_stage": "campus_early_batch_interview",
+          "round_label": "提前批面试",
+          "question_year": 2026,
+          "company_tier": "t2_strong",
+          "sample_size": 7,
+          "difficulty_1to5": 3,
+          "authenticity_level": "jd_mapping",
+          "data_origin": "jd_mapping_interview_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "依据岗位JD能力项映射生成，用于训练岗位化思维与表达。",
+          "answer_framework": [
+            "岗位目标",
+            "能力拆解",
+            "落地动作",
+            "量化评估"
+          ],
+          "scoring_dimensions": [
+            "岗位理解",
+            "方案落地",
+            "协同推进",
+            "结果量化"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断电站设计工程师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.74,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 7,
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_LONGI_COM_9E27653D",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "snapshot_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_004",
+          "prompt": "【行业:新能源｜岗位:技术销售｜阶段:提前批面试】如何与施工、业主、供应商协同。",
+          "question_type": "实战回忆题（高频面经）",
+          "role_id": "IND_NEW_ENERGY_ROLE_006",
+          "role_name": "技术销售",
+          "recruitment_stage": "campus_early_batch_interview",
+          "round_label": "提前批面试",
+          "question_year": 2025,
+          "company_tier": "t2_strong",
+          "sample_size": 10,
+          "difficulty_1to5": 3,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_interview_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "公开回忆题样本（非官方原卷），用于岗位化训练与场景复盘。",
+          "answer_framework": [
+            "场景复现",
+            "关键约束",
+            "执行方案",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "场景拆解",
+            "方案落地",
+            "指标意识",
+            "复盘质量"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断技术销售方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
+            "source_name": "牛客网-软件开发面试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+              "SRC_ZHILIAN_Q4_2025_NEWS"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_005",
+          "prompt": "【行业:新能源｜岗位:质量工程师｜阶段:提前批面试】如何定义一个高质量交付。",
+          "question_type": "官方口径场景问答",
+          "role_id": "IND_NEW_ENERGY_ROLE_007",
+          "role_name": "质量工程师",
+          "recruitment_stage": "campus_early_batch_interview",
+          "round_label": "提前批面试",
+          "question_year": 2026,
+          "company_tier": "t2_strong",
+          "sample_size": 8,
+          "difficulty_1to5": 3,
+          "authenticity_level": "official_original",
+          "data_origin": "official_pattern_interview_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "基于官方公开题型/流程口径整理，不等同于逐字原题。",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "方案设计",
+            "风险边界"
+          ],
+          "scoring_dimensions": [
+            "逻辑严谨性",
+            "政策/业务边界",
+            "可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断质量工程师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.78,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 8,
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_LONGI_COM_9E27653D",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "snapshot_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_006",
+          "prompt": "【行业:新能源｜岗位:生产计划工程师｜阶段:提前批面试】入职90天如何建立技术可信度。",
+          "question_type": "岗位能力映射面试题",
+          "role_id": "IND_NEW_ENERGY_ROLE_008",
+          "role_name": "生产计划工程师",
+          "recruitment_stage": "campus_early_batch_interview",
+          "round_label": "提前批面试",
+          "question_year": 2026,
+          "company_tier": "t2_strong",
+          "sample_size": 7,
+          "difficulty_1to5": 3,
+          "authenticity_level": "jd_mapping",
+          "data_origin": "jd_mapping_interview_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "依据岗位JD能力项映射生成，用于训练岗位化思维与表达。",
+          "answer_framework": [
+            "岗位目标",
+            "能力拆解",
+            "落地动作",
+            "量化评估"
+          ],
+          "scoring_dimensions": [
+            "岗位理解",
+            "方案落地",
+            "协同推进",
+            "结果量化"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断生产计划工程师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.74,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 7,
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_LONGI_COM_9E27653D",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "snapshot_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_007",
+          "prompt": "【行业:新能源｜岗位:储能系统工程师｜阶段:补录面试】讲一次你推动流程改进的案例。",
+          "question_type": "实战回忆题（高频面经）",
+          "role_id": "IND_NEW_ENERGY_ROLE_009",
+          "role_name": "储能系统工程师",
+          "recruitment_stage": "campus_supplement_interview",
+          "round_label": "补录面试",
+          "question_year": 2025,
+          "company_tier": "t2_strong",
+          "sample_size": 10,
+          "difficulty_1to5": 3,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_interview_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "公开回忆题样本（非官方原卷），用于岗位化训练与场景复盘。",
+          "answer_framework": [
+            "场景复现",
+            "关键约束",
+            "执行方案",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "场景拆解",
+            "方案落地",
+            "指标意识",
+            "复盘质量"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断储能系统工程师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
+            "source_name": "牛客网-软件开发面试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+              "SRC_ZHILIAN_Q4_2025_NEWS"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_008",
+          "prompt": "【行业:新能源｜岗位:能源交易分析师｜阶段:补录面试】当数据不完整时如何做判断。",
+          "question_type": "官方口径场景问答",
+          "role_id": "IND_NEW_ENERGY_ROLE_010",
+          "role_name": "能源交易分析师",
+          "recruitment_stage": "campus_supplement_interview",
+          "round_label": "补录面试",
+          "question_year": 2026,
+          "company_tier": "t2_strong",
+          "sample_size": 8,
+          "difficulty_1to5": 3,
+          "authenticity_level": "official_original",
+          "data_origin": "official_pattern_interview_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "基于官方公开题型/流程口径整理，不等同于逐字原题。",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "方案设计",
+            "风险边界"
+          ],
+          "scoring_dimensions": [
+            "逻辑严谨性",
+            "政策/业务边界",
+            "可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断能源交易分析师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.78,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 8,
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_LONGI_COM_9E27653D",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "snapshot_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_009",
+          "prompt": "【行业:新能源｜岗位:电池研发工程师｜阶段:实习转正面试】你如何建立个人故障知识库。",
+          "question_type": "岗位能力映射面试题",
+          "role_id": "IND_NEW_ENERGY_ROLE_001",
+          "role_name": "电池研发工程师",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正面试",
+          "question_year": 2026,
+          "company_tier": "t2_strong",
+          "sample_size": 7,
+          "difficulty_1to5": 3,
+          "authenticity_level": "jd_mapping",
+          "data_origin": "jd_mapping_interview_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "依据岗位JD能力项映射生成，用于训练岗位化思维与表达。",
+          "answer_framework": [
+            "岗位目标",
+            "能力拆解",
+            "落地动作",
+            "量化评估"
+          ],
+          "scoring_dimensions": [
+            "岗位理解",
+            "方案落地",
+            "协同推进",
+            "结果量化"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断电池研发工程师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.74,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 7,
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_LONGI_COM_9E27653D",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "snapshot_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_010",
+          "prompt": "【行业:新能源｜岗位:项目管理｜阶段:提前批面试】跨区域出差高频时如何保持效率。",
+          "question_type": "实战回忆题（高频面经）",
+          "role_id": "IND_NEW_ENERGY_ROLE_005",
+          "role_name": "项目管理",
+          "recruitment_stage": "campus_early_batch_interview",
+          "round_label": "提前批面试",
+          "question_year": 2025,
+          "company_tier": "t2_strong",
+          "sample_size": 10,
+          "difficulty_1to5": 3,
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_interview_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "公开回忆题样本（非官方原卷），用于岗位化训练与场景复盘。",
+          "answer_framework": [
+            "场景复现",
+            "关键约束",
+            "执行方案",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "场景拆解",
+            "方案落地",
+            "指标意识",
+            "复盘质量"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断项目管理方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
+            "source_name": "牛客网-软件开发面试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+              "SRC_ZHILIAN_Q4_2025_NEWS"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_011",
+          "prompt": "【行业:新能源｜岗位:光伏系统工程师｜阶段:实习转正面试】你如何平衡短期问题与长期优化。",
+          "question_type": "官方口径场景问答",
+          "role_id": "IND_NEW_ENERGY_ROLE_011",
+          "role_name": "光伏系统工程师",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正面试",
+          "question_year": 2026,
+          "company_tier": "t2_strong",
+          "sample_size": 8,
+          "difficulty_1to5": 3,
+          "authenticity_level": "official_original",
+          "data_origin": "official_pattern_interview_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "基于官方公开题型/流程口径整理，不等同于逐字原题。",
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "方案设计",
+            "风险边界"
+          ],
+          "scoring_dimensions": [
+            "逻辑严谨性",
+            "政策/业务边界",
+            "可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断光伏系统工程师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.78,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 8,
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_LONGI_COM_9E27653D",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "snapshot_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
+        },
+        {
+          "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_012",
+          "prompt": "【行业:新能源｜岗位:电池测试工程师｜阶段:实习转正面试】你的转岗桥梁岗位是什么。",
+          "question_type": "岗位能力映射面试题",
+          "role_id": "IND_NEW_ENERGY_ROLE_012",
+          "role_name": "电池测试工程师",
+          "recruitment_stage": "internship_conversion_interview",
+          "round_label": "实习转正面试",
+          "question_year": 2026,
+          "company_tier": "t2_strong",
+          "sample_size": 7,
+          "difficulty_1to5": 3,
+          "authenticity_level": "jd_mapping",
+          "data_origin": "jd_mapping_interview_expansion",
+          "is_template": false,
+          "needs_real_question": false,
+          "question_realness_note": "依据岗位JD能力项映射生成，用于训练岗位化思维与表达。",
+          "answer_framework": [
+            "岗位目标",
+            "能力拆解",
+            "落地动作",
+            "量化评估"
+          ],
+          "scoring_dimensions": [
+            "岗位理解",
+            "方案落地",
+            "协同推进",
+            "结果量化"
+          ],
+          "follow_up_questions": [
+            "如果把场景换成新能源在招聘高峰期，你会如何调整方案优先级？",
+            "你会优先跟踪哪三个指标来判断电池测试工程师方案是否有效？",
+            "首轮执行效果不及预期时，你的二次迭代与止损线是什么？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、路径可执行、指标闭环完整，并有风险预案。",
+            "B档": "路径基本清晰，但指标或边界条件不完整。",
+            "C档": "回答泛化，缺少关键动作与量化结果。"
+          },
+          "common_mistakes": [
+            "只描述动作，未定义目标函数和评价口径。",
+            "忽略约束条件与跨团队依赖。",
+            "缺少复盘和风险前置机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界，再给出分阶段动作。",
+            "能给出量化指标、里程碑和资源安排。",
+            "明确风险预案和复盘沉淀机制。"
+          ],
+          "reference_answer_outline": [
+            "定义目标、约束与判定标准。",
+            "拆解关键动作并说明推进顺序。",
+            "给出指标闭环、风险控制与复盘计划。"
+          ],
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.74,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 7,
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_LONGI_COM_9E27653D",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "snapshot_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/?entry=IND_NEW_ENERGY&role=%E7%94%B5%E6%B1%A0%E7%A0%94%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88",
+            "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19"
         }
       ],
       "last_checked": "2026-02-19",
@@ -15332,7 +17482,7 @@
         }
       ],
       "min_sample_size_for_verified": 5,
-      "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“项目交付复盘、质量异常闭环与供应链协作”方向真实问答。；岗位覆盖门槛已提升：本行业面试真题库至少覆盖5个角色。；v1.41.0：已补齐提前批/主批/补录/实习转正四阶段标签，题干仍保持回忆样本降权说明。",
+      "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“项目交付复盘、质量异常闭环与供应链协作”方向真实问答。；岗位覆盖门槛已提升：本行业面试真题库至少覆盖5个角色。；v1.41.0：已补齐提前批/主批/补录/实习转正四阶段标签，题干仍保持回忆样本降权说明。；v1.54补充12条行业化面试扩展题，优先补缺阶段",
       "quality": {
         "quantity_score": 100,
         "evidence_completeness_percent": 100,
@@ -15404,7 +17554,7 @@
   },
   "industry_id": "IND_NEW_ENERGY",
   "meta": {
-    "content_version": "1.44.0",
+    "content_version": "1.54.1",
     "data_cycle": "quarterly",
     "data_freshness": {
       "freshness_status": "fresh",
@@ -15438,11 +17588,11 @@
     "confirmed_empty_collections": 0,
     "tracked_collections": 14,
     "coverage_percent_overall": 97.6,
-    "evidence_percent_overall": 95.5,
-    "freshness_percent_overall": 95.5,
+    "evidence_percent_overall": 96,
+    "freshness_percent_overall": 96,
     "real_data_ratio_overall": 86.8,
     "template_ratio_overall": 0,
-    "quality_score_overall": 58.5,
+    "quality_score_overall": 74.8,
     "verified_ratio_percent": 100,
     "weakest_collections": [
       "岗位画像库",
@@ -16304,6 +18454,72 @@
           "公司扩产周期",
           "地区人才供需"
         ]
+      },
+      "岗位家族导航": {
+        "核心岗": [
+          "电池研发工程师",
+          "BMS工程师",
+          "系统工程师",
+          "电站设计工程师",
+          "项目管理",
+          "技术销售"
+        ],
+        "高增长岗": [
+          {
+            "role_name": "电池工艺工程师",
+            "role_intro": "负责电芯工艺与良率。",
+            "role_family": "技术与研发"
+          },
+          {
+            "role_name": "储能系统工程师",
+            "role_intro": "负责储能系统方案与调试。",
+            "role_family": "技术与研发"
+          },
+          {
+            "role_name": "光伏系统工程师",
+            "role_intro": "负责光伏系统设计与优化。",
+            "role_family": "技术与研发"
+          },
+          {
+            "role_name": "风电运维工程师",
+            "role_intro": "负责风机运维与故障处理。",
+            "role_family": "技术与研发"
+          },
+          {
+            "role_name": "BMS算法工程师",
+            "role_intro": "负责电池管理算法优化。",
+            "role_family": "技术与研发"
+          },
+          {
+            "role_name": "电气设计工程师",
+            "role_intro": "负责电气方案与实施。",
+            "role_family": "技术与研发"
+          },
+          {
+            "role_name": "质量体系工程师",
+            "role_intro": "负责质量体系与稽核。",
+            "role_family": "技术与研发"
+          },
+          {
+            "role_name": "供应链采购工程师",
+            "role_intro": "负责核心物料采购策略。",
+            "role_family": "技术与研发"
+          }
+        ],
+        "桥接岗": [
+          "质量工程师",
+          "生产计划工程师",
+          "储能系统工程师",
+          "能源交易分析师",
+          "光伏系统工程师",
+          "电池测试工程师"
+        ],
+        "选岗建议": [
+          "先从核心岗建立可验证项目证据，再向高增长岗迁移。",
+          "以“岗位目标-能力缺口-90天动作”制定投递路线。",
+          "对平台受限数据保留回填槽位，不以单一来源下结论。"
+        ],
+        "updated_at": "2026-02-19"
       }
     },
     "横向比较评分": {

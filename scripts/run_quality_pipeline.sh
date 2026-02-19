@@ -656,6 +656,11 @@ GATE_WRITTEN_PER_ROLE_MIN="$(jq '."治理配置"."发布硬门槛".question_writ
 GATE_INTERVIEW_PER_ROLE_MIN="$(jq '."治理配置"."发布硬门槛".question_interview_per_role_target // 12' "${DATA_PATH}")"
 GATE_STAGE_COVERAGE_MIN="$(jq '."治理配置"."发布硬门槛".question_stage_coverage_target // 4' "${DATA_PATH}")"
 GATE_JOB_DETAIL_URL_MIN="$(jq '."治理配置"."发布硬门槛".job_detail_url_min_percent // 60' "${DATA_PATH}")"
+GATE_ROLE_COUNT_MIN_MAP="$(jq -c '."治理配置"."发布硬门槛".role_count_target_by_industry // {}' "${DATA_PATH}")"
+GATE_WRITTEN_PER_ROLE_MIN_MAP="$(jq -c '."治理配置"."发布硬门槛".question_written_per_role_target_by_industry // {}' "${DATA_PATH}")"
+GATE_INTERVIEW_PER_ROLE_MIN_MAP="$(jq -c '."治理配置"."发布硬门槛".question_interview_per_role_target_by_industry // {}' "${DATA_PATH}")"
+GATE_STAGE_COVERAGE_MIN_MAP="$(jq -c '."治理配置"."发布硬门槛".question_stage_coverage_target_by_industry // {}' "${DATA_PATH}")"
+GATE_JOB_DETAIL_URL_MIN_MAP="$(jq -c '."治理配置"."发布硬门槛".job_detail_url_min_percent_by_industry // {}' "${DATA_PATH}")"
 GATE_FRAMEWORK_TOP1_MAX="$(jq '."治理配置"."发布硬门槛".question_answer_framework_top1_max_percent // 40' "${DATA_PATH}")"
 GATE_FRAMEWORK_TOP3_MAX="$(jq '."治理配置"."发布硬门槛".question_answer_framework_top3_max_percent // 60' "${DATA_PATH}")"
 GATE_FOLLOWUP_TOP3_MAX="$(jq '."治理配置"."发布硬门槛".question_followup_top3_max_percent // 35' "${DATA_PATH}")"
@@ -725,60 +730,66 @@ EVENT_LOG_ISSUES="$(jq --argjson min_total "${GATE_EVENT_MIN_COUNT}" --argjson m
 ' <<<"${EVENT_LOG_COVERAGE_JSON}")"
 EVENT_LOG_ISSUE_COUNT="$(jq 'length' <<<"${EVENT_LOG_ISSUES}")"
 
-DEPTH_ROLE_ISSUES_JSON="$(jq --argjson min_role "${GATE_ROLE_COUNT_MIN}" '
+DEPTH_ROLE_ISSUES_JSON="$(jq --argjson min_role "${GATE_ROLE_COUNT_MIN}" --argjson min_role_map "${GATE_ROLE_COUNT_MIN_MAP}" '
 [
   ."行业词条"[]
+  | (($min_role_map[.industry_id] // $min_role)) as $min_required
   | {
       industry_id,
       industry: ."行业名称",
       role_count: (.dynamic["岗位画像库"].items | length),
-      min_required: $min_role
+      min_required: $min_required
     }
   | select(.role_count < .min_required)
 ]
 ' "${DATA_PATH}")"
 DEPTH_ROLE_ISSUES_COUNT="$(jq 'length' <<<"${DEPTH_ROLE_ISSUES_JSON}")"
 
-DEPTH_WRITTEN_PER_ROLE_ISSUES_JSON="$(jq --argjson min_density "${GATE_WRITTEN_PER_ROLE_MIN}" '
+DEPTH_WRITTEN_PER_ROLE_ISSUES_JSON="$(jq --argjson min_density "${GATE_WRITTEN_PER_ROLE_MIN}" --argjson min_density_map "${GATE_WRITTEN_PER_ROLE_MIN_MAP}" '
 [
   ."行业词条"[]
+  | .industry_id as $industry_id
   | (.dynamic["岗位画像库"].items | length) as $roles
   | (.dynamic["笔试真题库"].items | length) as $written
+  | (($min_density_map[$industry_id] // $min_density)) as $min_required
   | {
       industry_id,
       industry: ."行业名称",
       role_count: $roles,
       written_count: $written,
       written_per_role: (if $roles == 0 then 0 else ($written / $roles) end),
-      min_required: $min_density
+      min_required: $min_required
     }
   | select(.written_per_role < .min_required)
 ]
 ' "${DATA_PATH}")"
 DEPTH_WRITTEN_PER_ROLE_ISSUES_COUNT="$(jq 'length' <<<"${DEPTH_WRITTEN_PER_ROLE_ISSUES_JSON}")"
 
-DEPTH_INTERVIEW_PER_ROLE_ISSUES_JSON="$(jq --argjson min_density "${GATE_INTERVIEW_PER_ROLE_MIN}" '
+DEPTH_INTERVIEW_PER_ROLE_ISSUES_JSON="$(jq --argjson min_density "${GATE_INTERVIEW_PER_ROLE_MIN}" --argjson min_density_map "${GATE_INTERVIEW_PER_ROLE_MIN_MAP}" '
 [
   ."行业词条"[]
+  | .industry_id as $industry_id
   | (.dynamic["岗位画像库"].items | length) as $roles
   | (.dynamic["面试真题库"].items | length) as $interview
+  | (($min_density_map[$industry_id] // $min_density)) as $min_required
   | {
       industry_id,
       industry: ."行业名称",
       role_count: $roles,
       interview_count: $interview,
       interview_per_role: (if $roles == 0 then 0 else ($interview / $roles) end),
-      min_required: $min_density
+      min_required: $min_required
     }
   | select(.interview_per_role < .min_required)
 ]
 ' "${DATA_PATH}")"
 DEPTH_INTERVIEW_PER_ROLE_ISSUES_COUNT="$(jq 'length' <<<"${DEPTH_INTERVIEW_PER_ROLE_ISSUES_JSON}")"
 
-DEPTH_STAGE_COVERAGE_ISSUES_JSON="$(jq --argjson min_stage "${GATE_STAGE_COVERAGE_MIN}" '
+DEPTH_STAGE_COVERAGE_ISSUES_JSON="$(jq --argjson min_stage "${GATE_STAGE_COVERAGE_MIN}" --argjson min_stage_map "${GATE_STAGE_COVERAGE_MIN_MAP}" '
 [
   ."行业词条"[] as $entry
   | $entry.dynamic["岗位画像库"].items[]? as $role
+  | (($min_stage_map[$entry.industry_id] // $min_stage)) as $min_required
   | ([ $entry.dynamic["笔试真题库"].items[]? | select(.role_id == $role.role_id) | .recruitment_stage ] | unique | length) as $written_stage_coverage
   | ([ $entry.dynamic["面试真题库"].items[]? | select(.role_id == $role.role_id) | .recruitment_stage ] | unique | length) as $interview_stage_coverage
   | {
@@ -788,16 +799,17 @@ DEPTH_STAGE_COVERAGE_ISSUES_JSON="$(jq --argjson min_stage "${GATE_STAGE_COVERAG
       role_name: $role.role_name,
       written_stage_coverage: $written_stage_coverage,
       interview_stage_coverage: $interview_stage_coverage,
-      min_required: $min_stage
+      min_required: $min_required
     }
   | select(.written_stage_coverage < .min_required or .interview_stage_coverage < .min_required)
 ]
 ' "${DATA_PATH}")"
 DEPTH_STAGE_COVERAGE_ISSUES_COUNT="$(jq 'length' <<<"${DEPTH_STAGE_COVERAGE_ISSUES_JSON}")"
 
-DEPTH_JOB_DETAIL_URL_ISSUES_JSON="$(jq --argjson min_ratio "${GATE_JOB_DETAIL_URL_MIN}" '
+DEPTH_JOB_DETAIL_URL_ISSUES_JSON="$(jq --argjson min_ratio "${GATE_JOB_DETAIL_URL_MIN}" --argjson min_ratio_map "${GATE_JOB_DETAIL_URL_MIN_MAP}" '
 [
   ."行业词条"[] as $entry
+  | (($min_ratio_map[$entry.industry_id] // $min_ratio)) as $min_required_percent
   | ($entry.dynamic["岗位画像库"].items // []) as $roles
   | ($roles | length) as $role_total
   | (
@@ -819,7 +831,7 @@ DEPTH_JOB_DETAIL_URL_ISSUES_JSON="$(jq --argjson min_ratio "${GATE_JOB_DETAIL_UR
       role_total: $role_total,
       deep_link_count: $deep_link_count,
       deep_link_percent: (if $role_total == 0 then 0 else ($deep_link_count * 100 / $role_total) end),
-      min_required_percent: $min_ratio
+      min_required_percent: $min_required_percent
     }
   | select(.deep_link_percent < .min_required_percent)
 ]
@@ -927,11 +939,11 @@ SALARY_OBS_TIER_ISSUE="$(jq -n --argjson actual "${SALARY_OBS_TIER_COUNT}" --arg
 QUESTION_ROLE_ISSUE="$(jq -n --argjson actual "${QUESTION_ROLE_COUNT}" --argjson threshold "${GATE_QUESTION_ROLE_MAX}" --argjson min_required "${GATE_QUESTION_ROLE_MIN}" '{actual_hits:$actual, threshold_hits:$threshold, min_role_coverage:$min_required}')"
 DECISION_EVIDENCE_ISSUE="$(jq -n --argjson actual "${DECISION_EVIDENCE_LOWSAMPLE_COUNT}" --argjson threshold "${GATE_DECISION_EVIDENCE_MAX}" '{actual_hits:$actual, threshold_hits:$threshold}')"
 EVENT_LOG_ISSUE="$(jq -n --argjson actual "${EVENT_LOG_ISSUE_COUNT}" --argjson min_total "${GATE_EVENT_MIN_COUNT}" --argjson min_recent "${GATE_EVENT_RECENT_MIN}" '{actual_hits:$actual, min_event_total:$min_total, min_recent_180d:$min_recent}')"
-DEPTH_ROLE_ISSUE="$(jq -n --argjson actual "${DEPTH_ROLE_ISSUES_COUNT}" --argjson min_required "${GATE_ROLE_COUNT_MIN}" '{actual_hits:$actual, min_roles_per_industry:$min_required}')"
-DEPTH_WRITTEN_PER_ROLE_ISSUE="$(jq -n --argjson actual "${DEPTH_WRITTEN_PER_ROLE_ISSUES_COUNT}" --argjson min_required "${GATE_WRITTEN_PER_ROLE_MIN}" '{actual_hits:$actual, min_written_per_role:$min_required}')"
-DEPTH_INTERVIEW_PER_ROLE_ISSUE="$(jq -n --argjson actual "${DEPTH_INTERVIEW_PER_ROLE_ISSUES_COUNT}" --argjson min_required "${GATE_INTERVIEW_PER_ROLE_MIN}" '{actual_hits:$actual, min_interview_per_role:$min_required}')"
-DEPTH_STAGE_COVERAGE_ISSUE="$(jq -n --argjson actual "${DEPTH_STAGE_COVERAGE_ISSUES_COUNT}" --argjson min_required "${GATE_STAGE_COVERAGE_MIN}" '{actual_hits:$actual, min_stage_coverage_per_role:$min_required}')"
-DEPTH_JOB_DETAIL_URL_ISSUE="$(jq -n --argjson actual "${DEPTH_JOB_DETAIL_URL_ISSUES_COUNT}" --argjson min_required "${GATE_JOB_DETAIL_URL_MIN}" '{actual_hits:$actual, min_job_detail_url_percent:$min_required}')"
+DEPTH_ROLE_ISSUE="$(jq -n --argjson actual "${DEPTH_ROLE_ISSUES_COUNT}" --argjson min_required "${GATE_ROLE_COUNT_MIN}" --argjson min_required_map "${GATE_ROLE_COUNT_MIN_MAP}" '{actual_hits:$actual, min_roles_per_industry:$min_required, min_roles_per_industry_by_industry:$min_required_map}')"
+DEPTH_WRITTEN_PER_ROLE_ISSUE="$(jq -n --argjson actual "${DEPTH_WRITTEN_PER_ROLE_ISSUES_COUNT}" --argjson min_required "${GATE_WRITTEN_PER_ROLE_MIN}" --argjson min_required_map "${GATE_WRITTEN_PER_ROLE_MIN_MAP}" '{actual_hits:$actual, min_written_per_role:$min_required, min_written_per_role_by_industry:$min_required_map}')"
+DEPTH_INTERVIEW_PER_ROLE_ISSUE="$(jq -n --argjson actual "${DEPTH_INTERVIEW_PER_ROLE_ISSUES_COUNT}" --argjson min_required "${GATE_INTERVIEW_PER_ROLE_MIN}" --argjson min_required_map "${GATE_INTERVIEW_PER_ROLE_MIN_MAP}" '{actual_hits:$actual, min_interview_per_role:$min_required, min_interview_per_role_by_industry:$min_required_map}')"
+DEPTH_STAGE_COVERAGE_ISSUE="$(jq -n --argjson actual "${DEPTH_STAGE_COVERAGE_ISSUES_COUNT}" --argjson min_required "${GATE_STAGE_COVERAGE_MIN}" --argjson min_required_map "${GATE_STAGE_COVERAGE_MIN_MAP}" '{actual_hits:$actual, min_stage_coverage_per_role:$min_required, min_stage_coverage_per_role_by_industry:$min_required_map}')"
+DEPTH_JOB_DETAIL_URL_ISSUE="$(jq -n --argjson actual "${DEPTH_JOB_DETAIL_URL_ISSUES_COUNT}" --argjson min_required "${GATE_JOB_DETAIL_URL_MIN}" --argjson min_required_map "${GATE_JOB_DETAIL_URL_MIN_MAP}" '{actual_hits:$actual, min_job_detail_url_percent:$min_required, min_job_detail_url_percent_by_industry:$min_required_map}')"
 TEMPLATE_REUSE_ISSUE="$(jq -n --argjson actual "${TEMPLATE_REUSE_ISSUES_COUNT}" --argjson framework_top1_max "${GATE_FRAMEWORK_TOP1_MAX}" --argjson framework_top3_max "${GATE_FRAMEWORK_TOP3_MAX}" --argjson followup_top3_max "${GATE_FOLLOWUP_TOP3_MAX}" --argjson elimination_top1_max "${GATE_ELIMINATION_TOP1_MAX}" '{actual_hits:$actual, framework_top1_max_percent:$framework_top1_max, framework_top3_max_percent:$framework_top3_max, followup_top3_max_percent:$followup_top3_max, elimination_top1_max_percent:$elimination_top1_max}')"
 SOURCE_TOP1_ISSUE="$(jq -n --argjson actual "${SOURCE_TOP1_SHARE}" --argjson threshold "${GATE_SOURCE_TOP1_MAX}" '{actual_percent:$actual, threshold_percent:$threshold}')"
 SOURCE_TOP5_ISSUE="$(jq -n --argjson actual "${SOURCE_TOP5_SHARE}" --argjson threshold "${GATE_SOURCE_TOP5_MAX}" '{actual_percent:$actual, threshold_percent:$threshold}')"
@@ -970,14 +982,19 @@ jq -n \
   --argjson event_recent_min_count "${GATE_EVENT_RECENT_MIN}" \
   --argjson depth_role_issues_count "${DEPTH_ROLE_ISSUES_COUNT}" \
   --argjson depth_role_min "${GATE_ROLE_COUNT_MIN}" \
+  --argjson depth_role_min_map "${GATE_ROLE_COUNT_MIN_MAP}" \
   --argjson depth_written_per_role_issues_count "${DEPTH_WRITTEN_PER_ROLE_ISSUES_COUNT}" \
   --argjson depth_written_per_role_min "${GATE_WRITTEN_PER_ROLE_MIN}" \
+  --argjson depth_written_per_role_min_map "${GATE_WRITTEN_PER_ROLE_MIN_MAP}" \
   --argjson depth_interview_per_role_issues_count "${DEPTH_INTERVIEW_PER_ROLE_ISSUES_COUNT}" \
   --argjson depth_interview_per_role_min "${GATE_INTERVIEW_PER_ROLE_MIN}" \
+  --argjson depth_interview_per_role_min_map "${GATE_INTERVIEW_PER_ROLE_MIN_MAP}" \
   --argjson depth_stage_coverage_issues_count "${DEPTH_STAGE_COVERAGE_ISSUES_COUNT}" \
   --argjson depth_stage_coverage_min "${GATE_STAGE_COVERAGE_MIN}" \
+  --argjson depth_stage_coverage_min_map "${GATE_STAGE_COVERAGE_MIN_MAP}" \
   --argjson depth_job_detail_url_issues_count "${DEPTH_JOB_DETAIL_URL_ISSUES_COUNT}" \
   --argjson depth_job_detail_url_min "${GATE_JOB_DETAIL_URL_MIN}" \
+  --argjson depth_job_detail_url_min_map "${GATE_JOB_DETAIL_URL_MIN_MAP}" \
   --argjson framework_written_top1_percent "${FRAMEWORK_WRITTEN_TOP1}" \
   --argjson framework_written_top3_percent "${FRAMEWORK_WRITTEN_TOP3}" \
   --argjson framework_interview_top1_percent "${FRAMEWORK_INTERVIEW_TOP1}" \
@@ -1093,14 +1110,19 @@ jq -n \
       event_recent_180d_min_count: $event_recent_min_count,
       role_count_coverage_hits: $depth_role_issues_count,
       role_count_target_per_industry: $depth_role_min,
+      role_count_target_by_industry: $depth_role_min_map,
       written_per_role_hits: $depth_written_per_role_issues_count,
       written_per_role_min: $depth_written_per_role_min,
+      written_per_role_target_by_industry: $depth_written_per_role_min_map,
       interview_per_role_hits: $depth_interview_per_role_issues_count,
       interview_per_role_min: $depth_interview_per_role_min,
+      interview_per_role_target_by_industry: $depth_interview_per_role_min_map,
       stage_coverage_per_role_hits: $depth_stage_coverage_issues_count,
       stage_coverage_per_role_min: $depth_stage_coverage_min,
+      stage_coverage_per_role_target_by_industry: $depth_stage_coverage_min_map,
       job_detail_url_depth_hits: $depth_job_detail_url_issues_count,
       job_detail_url_min_percent: $depth_job_detail_url_min,
+      job_detail_url_min_percent_by_industry: $depth_job_detail_url_min_map,
       answer_framework_written_top1_percent: $framework_written_top1_percent,
       answer_framework_written_top3_percent: $framework_written_top3_percent,
       answer_framework_interview_top1_percent: $framework_interview_top1_percent,
