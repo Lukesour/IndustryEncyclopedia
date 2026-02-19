@@ -10592,7 +10592,9 @@
                 "90天准备动作",
                 "证据来源URL"
               ],
-              "status": "pending_platform_verification"
+              "status": "landed_main_profile",
+              "mapped_role_id": "IND_CIVIL_SERVICE_ROLE_013",
+              "mapped_role_name": "行政执法岗"
             },
             {
               "role_slot_id": "IND_CIVIL_SERVICE_ROLE_SLOT_V154_002",
@@ -10607,7 +10609,9 @@
                 "90天准备动作",
                 "证据来源URL"
               ],
-              "status": "pending_platform_verification"
+              "status": "landed_main_profile",
+              "mapped_role_id": "IND_CIVIL_SERVICE_ROLE_001",
+              "mapped_role_name": "综合管理岗"
             },
             {
               "role_slot_id": "IND_CIVIL_SERVICE_ROLE_SLOT_V154_003",
@@ -10622,7 +10626,46 @@
                 "90天准备动作",
                 "证据来源URL"
               ],
-              "status": "pending_platform_verification"
+              "status": "pending_platform_verification",
+              "mapped_role_id": null,
+              "mapped_role_name": null,
+              "backfill_slot_v155": {
+                "need_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "批次/轮次",
+                  "岗位或题目链接",
+                  "发布时间",
+                  "样本量",
+                  "截图路径",
+                  "来源类型",
+                  "备注"
+                ],
+                "where_to_search": {
+                  "boss": {
+                    "query": "公务员 应届 国考 省考 职位",
+                    "url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B"
+                  },
+                  "xiaohongshu": {
+                    "query": "公务员 面试 回忆 结构化",
+                    "url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+                  },
+                  "official_priority": "国家公务员局、地方人事考试网、各省公告页。",
+                  "official_source_links": [
+                    "http://www.scs.gov.cn/",
+                    "http://www.cpta.com.cn/",
+                    "https://www.mohrss.gov.cn/",
+                    "https://www.gov.cn/"
+                  ]
+                },
+                "how_to_search": [
+                  "先用企业官网/主管部门公告页核对岗位名称与批次，再用平台补城市与薪资样本。",
+                  "BOSS优先网页检索；若小红书网页受限，改App检索并保留帖子ID与截图时间戳。",
+                  "同城同岗样本去重后再统计，样本不足时标注低置信。"
+                ],
+                "capture_rule": "缺失城市/薪资/发布时间的样本不进入A档结论，必须保留待补槽位与责任人。"
+              }
             },
             {
               "role_slot_id": "IND_CIVIL_SERVICE_ROLE_SLOT_V154_004",
@@ -10637,7 +10680,9 @@
                 "90天准备动作",
                 "证据来源URL"
               ],
-              "status": "pending_platform_verification"
+              "status": "landed_main_profile",
+              "mapped_role_id": "IND_CIVIL_SERVICE_ROLE_004",
+              "mapped_role_name": "基层治理岗"
             },
             {
               "role_slot_id": "IND_CIVIL_SERVICE_ROLE_SLOT_V154_005",
@@ -10652,7 +10697,46 @@
                 "90天准备动作",
                 "证据来源URL"
               ],
-              "status": "pending_platform_verification"
+              "status": "pending_platform_verification",
+              "mapped_role_id": null,
+              "mapped_role_name": null,
+              "backfill_slot_v155": {
+                "need_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "批次/轮次",
+                  "岗位或题目链接",
+                  "发布时间",
+                  "样本量",
+                  "截图路径",
+                  "来源类型",
+                  "备注"
+                ],
+                "where_to_search": {
+                  "boss": {
+                    "query": "公务员 应届 国考 省考 职位",
+                    "url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B"
+                  },
+                  "xiaohongshu": {
+                    "query": "公务员 面试 回忆 结构化",
+                    "url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+                  },
+                  "official_priority": "国家公务员局、地方人事考试网、各省公告页。",
+                  "official_source_links": [
+                    "http://www.scs.gov.cn/",
+                    "http://www.cpta.com.cn/",
+                    "https://www.mohrss.gov.cn/",
+                    "https://www.gov.cn/"
+                  ]
+                },
+                "how_to_search": [
+                  "先用企业官网/主管部门公告页核对岗位名称与批次，再用平台补城市与薪资样本。",
+                  "BOSS优先网页检索；若小红书网页受限，改App检索并保留帖子ID与截图时间戳。",
+                  "同城同岗样本去重后再统计，样本不足时标注低置信。"
+                ],
+                "capture_rule": "缺失城市/薪资/发布时间的样本不进入A档结论，必须保留待补槽位与责任人。"
+              }
             },
             {
               "role_slot_id": "IND_CIVIL_SERVICE_ROLE_SLOT_V154_006",
@@ -10667,7 +10751,46 @@
                 "90天准备动作",
                 "证据来源URL"
               ],
-              "status": "pending_platform_verification"
+              "status": "pending_platform_verification",
+              "mapped_role_id": null,
+              "mapped_role_name": null,
+              "backfill_slot_v155": {
+                "need_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "批次/轮次",
+                  "岗位或题目链接",
+                  "发布时间",
+                  "样本量",
+                  "截图路径",
+                  "来源类型",
+                  "备注"
+                ],
+                "where_to_search": {
+                  "boss": {
+                    "query": "公务员 应届 国考 省考 职位",
+                    "url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B"
+                  },
+                  "xiaohongshu": {
+                    "query": "公务员 面试 回忆 结构化",
+                    "url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+                  },
+                  "official_priority": "国家公务员局、地方人事考试网、各省公告页。",
+                  "official_source_links": [
+                    "http://www.scs.gov.cn/",
+                    "http://www.cpta.com.cn/",
+                    "https://www.mohrss.gov.cn/",
+                    "https://www.gov.cn/"
+                  ]
+                },
+                "how_to_search": [
+                  "先用企业官网/主管部门公告页核对岗位名称与批次，再用平台补城市与薪资样本。",
+                  "BOSS优先网页检索；若小红书网页受限，改App检索并保留帖子ID与截图时间戳。",
+                  "同城同岗样本去重后再统计，样本不足时标注低置信。"
+                ],
+                "capture_rule": "缺失城市/薪资/发布时间的样本不进入A档结论，必须保留待补槽位与责任人。"
+              }
             },
             {
               "role_slot_id": "IND_CIVIL_SERVICE_ROLE_SLOT_V154_007",
@@ -10682,7 +10805,46 @@
                 "90天准备动作",
                 "证据来源URL"
               ],
-              "status": "pending_platform_verification"
+              "status": "pending_platform_verification",
+              "mapped_role_id": null,
+              "mapped_role_name": null,
+              "backfill_slot_v155": {
+                "need_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "批次/轮次",
+                  "岗位或题目链接",
+                  "发布时间",
+                  "样本量",
+                  "截图路径",
+                  "来源类型",
+                  "备注"
+                ],
+                "where_to_search": {
+                  "boss": {
+                    "query": "公务员 应届 国考 省考 职位",
+                    "url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B"
+                  },
+                  "xiaohongshu": {
+                    "query": "公务员 面试 回忆 结构化",
+                    "url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+                  },
+                  "official_priority": "国家公务员局、地方人事考试网、各省公告页。",
+                  "official_source_links": [
+                    "http://www.scs.gov.cn/",
+                    "http://www.cpta.com.cn/",
+                    "https://www.mohrss.gov.cn/",
+                    "https://www.gov.cn/"
+                  ]
+                },
+                "how_to_search": [
+                  "先用企业官网/主管部门公告页核对岗位名称与批次，再用平台补城市与薪资样本。",
+                  "BOSS优先网页检索；若小红书网页受限，改App检索并保留帖子ID与截图时间戳。",
+                  "同城同岗样本去重后再统计，样本不足时标注低置信。"
+                ],
+                "capture_rule": "缺失城市/薪资/发布时间的样本不进入A档结论，必须保留待补槽位与责任人。"
+              }
             },
             {
               "role_slot_id": "IND_CIVIL_SERVICE_ROLE_SLOT_V154_008",
@@ -10697,7 +10859,9 @@
                 "90天准备动作",
                 "证据来源URL"
               ],
-              "status": "pending_platform_verification"
+              "status": "landed_main_profile",
+              "mapped_role_id": "IND_CIVIL_SERVICE_ROLE_015",
+              "mapped_role_name": "人社业务岗"
             },
             {
               "role_slot_id": "IND_CIVIL_SERVICE_ROLE_SLOT_V154_009",
@@ -10712,7 +10876,9 @@
                 "90天准备动作",
                 "证据来源URL"
               ],
-              "status": "pending_platform_verification"
+              "status": "landed_main_profile",
+              "mapped_role_id": "IND_CIVIL_SERVICE_ROLE_010",
+              "mapped_role_name": "应急管理岗"
             },
             {
               "role_slot_id": "IND_CIVIL_SERVICE_ROLE_SLOT_V154_010",
@@ -10727,7 +10893,46 @@
                 "90天准备动作",
                 "证据来源URL"
               ],
-              "status": "pending_platform_verification"
+              "status": "pending_platform_verification",
+              "mapped_role_id": null,
+              "mapped_role_name": null,
+              "backfill_slot_v155": {
+                "need_fields": [
+                  "岗位名称",
+                  "城市",
+                  "公司层级",
+                  "批次/轮次",
+                  "岗位或题目链接",
+                  "发布时间",
+                  "样本量",
+                  "截图路径",
+                  "来源类型",
+                  "备注"
+                ],
+                "where_to_search": {
+                  "boss": {
+                    "query": "公务员 应届 国考 省考 职位",
+                    "url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B"
+                  },
+                  "xiaohongshu": {
+                    "query": "公务员 面试 回忆 结构化",
+                    "url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+                  },
+                  "official_priority": "国家公务员局、地方人事考试网、各省公告页。",
+                  "official_source_links": [
+                    "http://www.scs.gov.cn/",
+                    "http://www.cpta.com.cn/",
+                    "https://www.mohrss.gov.cn/",
+                    "https://www.gov.cn/"
+                  ]
+                },
+                "how_to_search": [
+                  "先用企业官网/主管部门公告页核对岗位名称与批次，再用平台补城市与薪资样本。",
+                  "BOSS优先网页检索；若小红书网页受限，改App检索并保留帖子ID与截图时间戳。",
+                  "同城同岗样本去重后再统计，样本不足时标注低置信。"
+                ],
+                "capture_rule": "缺失城市/薪资/发布时间的样本不进入A档结论，必须保留待补槽位与责任人。"
+              }
             },
             {
               "role_slot_id": "IND_CIVIL_SERVICE_ROLE_SLOT_V154_011",
@@ -10742,7 +10947,9 @@
                 "90天准备动作",
                 "证据来源URL"
               ],
-              "status": "pending_platform_verification"
+              "status": "landed_main_profile",
+              "mapped_role_id": "IND_CIVIL_SERVICE_ROLE_016",
+              "mapped_role_name": "纪检监察辅助岗"
             },
             {
               "role_slot_id": "IND_CIVIL_SERVICE_ROLE_SLOT_V154_012",
@@ -10757,7 +10964,9 @@
                 "90天准备动作",
                 "证据来源URL"
               ],
-              "status": "pending_platform_verification"
+              "status": "landed_main_profile",
+              "mapped_role_id": "IND_CIVIL_SERVICE_ROLE_014",
+              "mapped_role_name": "法制审核岗"
             }
           ],
           "x_written_question_expansion_added_ids": [
@@ -10829,6 +11038,150 @@
           "x_data_collection_note": "本扩容卡基于行业扩展包逐条落库，不使用批量模板灌数。",
           "authenticity_level": "curated",
           "data_origin": "manual_industry_expansion_curated",
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-19",
+            "confidence": 0.79,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "secondary_source_ids": [
+              "SRC_AUTO_BM_SCS_GOV_CN_6B67637B",
+              "SRC_AUTO_WWW_CPTA_COM_CN_FD0AA5B3"
+            ],
+            "snapshot_url": "http://www.scs.gov.cn/?entry=IND_CIVIL_SERVICE&role=%E7%BB%BC%E5%90%88%E7%AE%A1%E7%90%86%E5%B2%97",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_SCS",
+            "source_name": "国家公务员局",
+            "source_type": "government_agency",
+            "source_url": "http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html",
+            "stat_definition": "结合企业官方校招JD与公共就业平台岗位信号抽取岗位画像，并以近6个月招聘窗口进行更新。",
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-19",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-19",
+          "x_landing_progress_v155": {
+            "updated_at": "2026-02-19",
+            "total_candidates": 12,
+            "landed_main_profile_count": 7,
+            "pending_count": 5,
+            "pending_roles": [
+              {
+                "role_name": "文字综合岗",
+                "role_family": "综合岗位"
+              },
+              {
+                "role_name": "公共政策研究岗",
+                "role_family": "职能与治理"
+              },
+              {
+                "role_name": "信息化管理岗",
+                "role_family": "综合岗位"
+              },
+              {
+                "role_name": "财政审计辅助岗",
+                "role_family": "职能与治理"
+              },
+              {
+                "role_name": "政务服务岗",
+                "role_family": "职能与治理"
+              }
+            ],
+            "where_to_search": {
+              "boss": {
+                "query": "公务员 应届 国考 省考 职位",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B"
+              },
+              "xiaohongshu": {
+                "query": "公务员 面试 回忆 结构化",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+              },
+              "official_priority": "国家公务员局、地方人事考试网、各省公告页。",
+              "official_source_links": [
+                "http://www.scs.gov.cn/",
+                "http://www.cpta.com.cn/",
+                "https://www.mohrss.gov.cn/",
+                "https://www.gov.cn/"
+              ]
+            },
+            "need_fields": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "岗位或题目链接",
+              "发布时间",
+              "样本量",
+              "截图路径",
+              "来源类型",
+              "备注"
+            ],
+            "how_to_search": [
+              "先用企业官网/主管部门公告页核对岗位名称与批次，再用平台补城市与薪资样本。",
+              "BOSS优先网页检索；若小红书网页受限，改App检索并保留帖子ID与截图时间戳。",
+              "同城同岗样本去重后再统计，样本不足时标注低置信。"
+            ],
+            "capture_rule": "缺失城市/薪资/发布时间的样本不进入A档结论，必须保留待补槽位与责任人。"
+          }
+        },
+        {
+          "ext_id": "IND_CIVIL_SERVICE_DEPTH_EXECUTION_V155",
+          "x_decision_type": "depth_execution_v155",
+          "x_decision_title": "公务员体系百科深度执行卡（v1.55）",
+          "x_decision_summary": "用于跟踪高增长岗落地率、题库阶段覆盖与平台补录缺口。",
+          "x_high_growth_total": 8,
+          "x_high_growth_landed_count": 5,
+          "x_high_growth_pending_roles": [
+            "文字综合岗",
+            "信息化管理岗",
+            "财政审计辅助岗"
+          ],
+          "x_required_output_modules": [
+            "岗位对比矩阵",
+            "准备计划_90天",
+            "准备计划_180天",
+            "止损阈值"
+          ],
+          "x_platform_backfill_plan": {
+            "need_fields": [
+              "岗位名称",
+              "城市",
+              "公司层级",
+              "批次/轮次",
+              "岗位或题目链接",
+              "发布时间",
+              "样本量",
+              "截图路径",
+              "来源类型",
+              "备注"
+            ],
+            "where_to_search": {
+              "boss": {
+                "query": "公务员 应届 国考 省考 职位",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B"
+              },
+              "xiaohongshu": {
+                "query": "公务员 面试 回忆 结构化",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+              },
+              "official_priority": "国家公务员局、地方人事考试网、各省公告页。",
+              "official_source_links": [
+                "http://www.scs.gov.cn/",
+                "http://www.cpta.com.cn/",
+                "https://www.mohrss.gov.cn/",
+                "https://www.gov.cn/"
+              ]
+            },
+            "how_to_search": [
+              "先用企业官网/主管部门公告页核对岗位名称与批次，再用平台补城市与薪资样本。",
+              "BOSS优先网页检索；若小红书网页受限，改App检索并保留帖子ID与截图时间戳。",
+              "同城同岗样本去重后再统计，样本不足时标注低置信。"
+            ],
+            "capture_rule": "缺失城市/薪资/发布时间的样本不进入A档结论，必须保留待补槽位与责任人。"
+          },
+          "data_origin": "curated_manual_review",
+          "authenticity_level": "observed",
           "evidence": {
             "access_check": "checked",
             "accessed_at": "2026-02-19",
@@ -18648,42 +19001,520 @@
           {
             "role_name": "行政执法岗",
             "role_intro": "负责法规执行与现场执法。",
-            "role_family": "综合岗位"
+            "role_family": "综合岗位",
+            "landing_status": "landed_main_profile",
+            "mapped_role_id": "IND_CIVIL_SERVICE_ROLE_013",
+            "mapped_role_name": "行政执法岗",
+            "role_detail_v155": {
+              "职责边界": "行政执法岗在公务员体系中主要承担：法规执行与现场执法。",
+              "核心技能栈": [
+                "岗位核心流程掌握",
+                "跨部门协同与推进",
+                "业务问题拆解与指标口径",
+                "结构化方案设计与复盘"
+              ],
+              "典型项目": [
+                "行政执法岗专项落地",
+                "行政执法岗跨团队协同优化"
+              ],
+              "成长台阶": {
+                "0-12个月": "完成行政执法岗基础流程上手，能独立交付可验证结果。",
+                "12-24个月": "负责行政执法岗关键模块，并能推动跨团队协同落地。",
+                "24-36个月": "主导行政执法岗专项优化，沉淀方法论并带新人。"
+              },
+              "转岗去向": [
+                "同赛道邻接岗位",
+                "项目管理方向",
+                "数据分析支撑方向"
+              ],
+              "不适配信号": [
+                "只会描述行政执法岗职责，无法给出量化结果或关键指标。",
+                "缺少跨部门协同与推进证据，无法说明资源受限时如何取舍。",
+                "对失败案例没有复盘闭环，无法说明下一轮优化动作。"
+              ]
+            },
+            "coverage_snapshot_v155": {
+              "written_question_count": 4,
+              "interview_question_count": 4,
+              "written_stage_coverage": 4,
+              "interview_stage_coverage": 4
+            }
           },
           {
             "role_name": "综合管理岗",
             "role_intro": "负责事务统筹与流程管理。",
-            "role_family": "综合岗位"
+            "role_family": "综合岗位",
+            "landing_status": "landed_main_profile",
+            "mapped_role_id": "IND_CIVIL_SERVICE_ROLE_001",
+            "mapped_role_name": "综合管理岗",
+            "role_detail_v155": {
+              "职责边界": "综合管理岗在公务员体系中主要承担：事务统筹与流程管理。",
+              "核心技能栈": [
+                "岗位核心流程掌握",
+                "跨部门协同与推进",
+                "业务问题拆解与指标口径",
+                "结构化方案设计与复盘"
+              ],
+              "典型项目": [
+                "综合管理岗专项落地",
+                "综合管理岗跨团队协同优化"
+              ],
+              "成长台阶": {
+                "0-12个月": "完成综合管理岗基础流程上手，能独立交付可验证结果。",
+                "12-24个月": "负责综合管理岗关键模块，并能推动跨团队协同落地。",
+                "24-36个月": "主导综合管理岗专项优化，沉淀方法论并带新人。"
+              },
+              "转岗去向": [
+                "同赛道邻接岗位",
+                "项目管理方向",
+                "数据分析支撑方向"
+              ],
+              "不适配信号": [
+                "只会描述综合管理岗职责，无法给出量化结果或关键指标。",
+                "缺少跨部门协同与推进证据，无法说明资源受限时如何取舍。",
+                "对失败案例没有复盘闭环，无法说明下一轮优化动作。"
+              ]
+            },
+            "coverage_snapshot_v155": {
+              "written_question_count": 6,
+              "interview_question_count": 5,
+              "written_stage_coverage": 4,
+              "interview_stage_coverage": 4
+            }
           },
           {
             "role_name": "文字综合岗",
             "role_intro": "负责材料写作与政策汇编。",
-            "role_family": "综合岗位"
+            "role_family": "综合岗位",
+            "landing_status": "pending_main_profile",
+            "mapped_role_id": null,
+            "mapped_role_name": null,
+            "role_detail_v155": {
+              "职责边界": "文字综合岗在公务员体系中主要承担：材料写作与政策汇编。",
+              "核心技能栈": [
+                "岗位核心流程掌握",
+                "跨部门协同与推进",
+                "业务问题拆解与指标口径",
+                "结构化方案设计与复盘"
+              ],
+              "典型项目": [
+                "文字综合岗专项落地",
+                "文字综合岗跨团队协同优化"
+              ],
+              "成长台阶": {
+                "0-12个月": "完成文字综合岗基础流程上手，能独立交付可验证结果。",
+                "12-24个月": "负责文字综合岗关键模块，并能推动跨团队协同落地。",
+                "24-36个月": "主导文字综合岗专项优化，沉淀方法论并带新人。"
+              },
+              "转岗去向": [
+                "同赛道邻接岗位",
+                "项目管理方向",
+                "数据分析支撑方向"
+              ],
+              "不适配信号": [
+                "只会描述文字综合岗职责，无法给出量化结果或关键指标。",
+                "缺少跨部门协同与推进证据，无法说明资源受限时如何取舍。",
+                "对失败案例没有复盘闭环，无法说明下一轮优化动作。"
+              ]
+            },
+            "backfill_slot_v155": {
+              "status": "pending_platform_verification",
+              "need_fields": [
+                "岗位名称",
+                "城市",
+                "公司层级",
+                "批次/轮次",
+                "岗位或题目链接",
+                "发布时间",
+                "样本量",
+                "截图路径",
+                "来源类型",
+                "备注"
+              ],
+              "where_to_search": {
+                "boss": {
+                  "query": "公务员 应届 国考 省考 职位",
+                  "url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B"
+                },
+                "xiaohongshu": {
+                  "query": "公务员 面试 回忆 结构化",
+                  "url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+                },
+                "official_priority": "国家公务员局、地方人事考试网、各省公告页。",
+                "official_source_links": [
+                  "http://www.scs.gov.cn/",
+                  "http://www.cpta.com.cn/",
+                  "https://www.mohrss.gov.cn/",
+                  "https://www.gov.cn/"
+                ]
+              },
+              "how_to_search": [
+                "先用企业官网/主管部门公告页核对岗位名称与批次，再用平台补城市与薪资样本。",
+                "BOSS优先网页检索；若小红书网页受限，改App检索并保留帖子ID与截图时间戳。",
+                "同城同岗样本去重后再统计，样本不足时标注低置信。"
+              ],
+              "capture_rule": "缺失城市/薪资/发布时间的样本不进入A档结论，必须保留待补槽位与责任人。",
+              "note": "该高增长岗尚未落地主表岗位卡与题库，需优先补齐岗位画像与笔面试样本。"
+            }
           },
           {
             "role_name": "基层治理岗",
             "role_intro": "负责街道社区治理协同。",
-            "role_family": "职能与治理"
+            "role_family": "职能与治理",
+            "landing_status": "landed_main_profile",
+            "mapped_role_id": "IND_CIVIL_SERVICE_ROLE_004",
+            "mapped_role_name": "基层治理岗",
+            "role_detail_v155": {
+              "职责边界": "基层治理岗在公务员体系中主要承担：街道社区治理协同。",
+              "核心技能栈": [
+                "岗位核心流程掌握",
+                "跨部门协同与推进",
+                "业务问题拆解与指标口径",
+                "结构化方案设计与复盘"
+              ],
+              "典型项目": [
+                "基层治理岗专项落地",
+                "基层治理岗跨团队协同优化"
+              ],
+              "成长台阶": {
+                "0-12个月": "完成基层治理岗基础流程上手，能独立交付可验证结果。",
+                "12-24个月": "负责基层治理岗关键模块，并能推动跨团队协同落地。",
+                "24-36个月": "主导基层治理岗专项优化，沉淀方法论并带新人。"
+              },
+              "转岗去向": [
+                "同赛道邻接岗位",
+                "项目管理方向",
+                "数据分析支撑方向"
+              ],
+              "不适配信号": [
+                "只会描述基层治理岗职责，无法给出量化结果或关键指标。",
+                "缺少跨部门协同与推进证据，无法说明资源受限时如何取舍。",
+                "对失败案例没有复盘闭环，无法说明下一轮优化动作。"
+              ]
+            },
+            "coverage_snapshot_v155": {
+              "written_question_count": 5,
+              "interview_question_count": 4,
+              "written_stage_coverage": 3,
+              "interview_stage_coverage": 3
+            },
+            "backfill_slot_v155": {
+              "status": "pending_stage_and_density_backfill",
+              "need_fields": [
+                "岗位名称",
+                "城市",
+                "公司层级",
+                "批次/轮次",
+                "岗位或题目链接",
+                "发布时间",
+                "样本量",
+                "截图路径",
+                "来源类型",
+                "备注"
+              ],
+              "where_to_search": {
+                "boss": {
+                  "query": "公务员 应届 国考 省考 职位",
+                  "url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B"
+                },
+                "xiaohongshu": {
+                  "query": "公务员 面试 回忆 结构化",
+                  "url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+                },
+                "official_priority": "国家公务员局、地方人事考试网、各省公告页。",
+                "official_source_links": [
+                  "http://www.scs.gov.cn/",
+                  "http://www.cpta.com.cn/",
+                  "https://www.mohrss.gov.cn/",
+                  "https://www.gov.cn/"
+                ]
+              },
+              "how_to_search": [
+                "先用企业官网/主管部门公告页核对岗位名称与批次，再用平台补城市与薪资样本。",
+                "BOSS优先网页检索；若小红书网页受限，改App检索并保留帖子ID与截图时间戳。",
+                "同城同岗样本去重后再统计，样本不足时标注低置信。"
+              ],
+              "capture_rule": "缺失城市/薪资/发布时间的样本不进入A档结论，必须保留待补槽位与责任人。",
+              "gap_summary": {
+                "written_gap_to_4": 0,
+                "interview_gap_to_4": 0,
+                "written_stage_gap_to_4": 1,
+                "interview_stage_gap_to_4": 1
+              }
+            }
           },
           {
             "role_name": "公共政策研究岗",
             "role_intro": "负责政策评估与建议。",
-            "role_family": "职能与治理"
+            "role_family": "职能与治理",
+            "landing_status": "pending_main_profile",
+            "mapped_role_id": null,
+            "mapped_role_name": null,
+            "role_detail_v155": {
+              "职责边界": "公共政策研究岗在公务员体系中主要承担：政策评估与建议。",
+              "核心技能栈": [
+                "岗位核心流程掌握",
+                "跨部门协同与推进",
+                "业务问题拆解与指标口径",
+                "结构化方案设计与复盘"
+              ],
+              "典型项目": [
+                "公共政策研究岗专项落地",
+                "公共政策研究岗跨团队协同优化"
+              ],
+              "成长台阶": {
+                "0-12个月": "完成公共政策研究岗基础流程上手，能独立交付可验证结果。",
+                "12-24个月": "负责公共政策研究岗关键模块，并能推动跨团队协同落地。",
+                "24-36个月": "主导公共政策研究岗专项优化，沉淀方法论并带新人。"
+              },
+              "转岗去向": [
+                "同赛道邻接岗位",
+                "项目管理方向",
+                "数据分析支撑方向"
+              ],
+              "不适配信号": [
+                "只会描述公共政策研究岗职责，无法给出量化结果或关键指标。",
+                "缺少跨部门协同与推进证据，无法说明资源受限时如何取舍。",
+                "对失败案例没有复盘闭环，无法说明下一轮优化动作。"
+              ]
+            },
+            "coverage_snapshot_v155": {
+              "written_question_count": 4,
+              "interview_question_count": 4,
+              "written_stage_coverage": 3,
+              "interview_stage_coverage": 3
+            },
+            "backfill_slot_v155": {
+              "status": "pending_platform_verification",
+              "need_fields": [
+                "岗位名称",
+                "城市",
+                "公司层级",
+                "批次/轮次",
+                "岗位或题目链接",
+                "发布时间",
+                "样本量",
+                "截图路径",
+                "来源类型",
+                "备注"
+              ],
+              "where_to_search": {
+                "boss": {
+                  "query": "公务员 应届 国考 省考 职位",
+                  "url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B"
+                },
+                "xiaohongshu": {
+                  "query": "公务员 面试 回忆 结构化",
+                  "url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+                },
+                "official_priority": "国家公务员局、地方人事考试网、各省公告页。",
+                "official_source_links": [
+                  "http://www.scs.gov.cn/",
+                  "http://www.cpta.com.cn/",
+                  "https://www.mohrss.gov.cn/",
+                  "https://www.gov.cn/"
+                ]
+              },
+              "how_to_search": [
+                "先用企业官网/主管部门公告页核对岗位名称与批次，再用平台补城市与薪资样本。",
+                "BOSS优先网页检索；若小红书网页受限，改App检索并保留帖子ID与截图时间戳。",
+                "同城同岗样本去重后再统计，样本不足时标注低置信。"
+              ],
+              "capture_rule": "缺失城市/薪资/发布时间的样本不进入A档结论，必须保留待补槽位与责任人。",
+              "note": "该高增长岗尚未落地主表岗位卡与题库，需优先补齐岗位画像与笔面试样本。"
+            }
           },
           {
             "role_name": "信息化管理岗",
             "role_intro": "负责政务系统与数据治理。",
-            "role_family": "综合岗位"
+            "role_family": "综合岗位",
+            "landing_status": "pending_main_profile",
+            "mapped_role_id": null,
+            "mapped_role_name": null,
+            "role_detail_v155": {
+              "职责边界": "信息化管理岗在公务员体系中主要承担：政务系统与数据治理。",
+              "核心技能栈": [
+                "岗位核心流程掌握",
+                "跨部门协同与推进",
+                "业务问题拆解与指标口径",
+                "结构化方案设计与复盘"
+              ],
+              "典型项目": [
+                "信息化管理岗专项落地",
+                "信息化管理岗跨团队协同优化"
+              ],
+              "成长台阶": {
+                "0-12个月": "完成信息化管理岗基础流程上手，能独立交付可验证结果。",
+                "12-24个月": "负责信息化管理岗关键模块，并能推动跨团队协同落地。",
+                "24-36个月": "主导信息化管理岗专项优化，沉淀方法论并带新人。"
+              },
+              "转岗去向": [
+                "同赛道邻接岗位",
+                "项目管理方向",
+                "数据分析支撑方向"
+              ],
+              "不适配信号": [
+                "只会描述信息化管理岗职责，无法给出量化结果或关键指标。",
+                "缺少跨部门协同与推进证据，无法说明资源受限时如何取舍。",
+                "对失败案例没有复盘闭环，无法说明下一轮优化动作。"
+              ]
+            },
+            "backfill_slot_v155": {
+              "status": "pending_platform_verification",
+              "need_fields": [
+                "岗位名称",
+                "城市",
+                "公司层级",
+                "批次/轮次",
+                "岗位或题目链接",
+                "发布时间",
+                "样本量",
+                "截图路径",
+                "来源类型",
+                "备注"
+              ],
+              "where_to_search": {
+                "boss": {
+                  "query": "公务员 应届 国考 省考 职位",
+                  "url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B"
+                },
+                "xiaohongshu": {
+                  "query": "公务员 面试 回忆 结构化",
+                  "url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+                },
+                "official_priority": "国家公务员局、地方人事考试网、各省公告页。",
+                "official_source_links": [
+                  "http://www.scs.gov.cn/",
+                  "http://www.cpta.com.cn/",
+                  "https://www.mohrss.gov.cn/",
+                  "https://www.gov.cn/"
+                ]
+              },
+              "how_to_search": [
+                "先用企业官网/主管部门公告页核对岗位名称与批次，再用平台补城市与薪资样本。",
+                "BOSS优先网页检索；若小红书网页受限，改App检索并保留帖子ID与截图时间戳。",
+                "同城同岗样本去重后再统计，样本不足时标注低置信。"
+              ],
+              "capture_rule": "缺失城市/薪资/发布时间的样本不进入A档结论，必须保留待补槽位与责任人。",
+              "note": "该高增长岗尚未落地主表岗位卡与题库，需优先补齐岗位画像与笔面试样本。"
+            }
           },
           {
             "role_name": "财政审计辅助岗",
             "role_intro": "负责预算与执行核对。",
-            "role_family": "职能与治理"
+            "role_family": "职能与治理",
+            "landing_status": "pending_main_profile",
+            "mapped_role_id": null,
+            "mapped_role_name": null,
+            "role_detail_v155": {
+              "职责边界": "财政审计辅助岗在公务员体系中主要承担：预算与执行核对。",
+              "核心技能栈": [
+                "岗位核心流程掌握",
+                "跨部门协同与推进",
+                "业务问题拆解与指标口径",
+                "结构化方案设计与复盘"
+              ],
+              "典型项目": [
+                "财政审计辅助岗专项落地",
+                "财政审计辅助岗跨团队协同优化"
+              ],
+              "成长台阶": {
+                "0-12个月": "完成财政审计辅助岗基础流程上手，能独立交付可验证结果。",
+                "12-24个月": "负责财政审计辅助岗关键模块，并能推动跨团队协同落地。",
+                "24-36个月": "主导财政审计辅助岗专项优化，沉淀方法论并带新人。"
+              },
+              "转岗去向": [
+                "同赛道邻接岗位",
+                "项目管理方向",
+                "数据分析支撑方向"
+              ],
+              "不适配信号": [
+                "只会描述财政审计辅助岗职责，无法给出量化结果或关键指标。",
+                "缺少跨部门协同与推进证据，无法说明资源受限时如何取舍。",
+                "对失败案例没有复盘闭环，无法说明下一轮优化动作。"
+              ]
+            },
+            "backfill_slot_v155": {
+              "status": "pending_platform_verification",
+              "need_fields": [
+                "岗位名称",
+                "城市",
+                "公司层级",
+                "批次/轮次",
+                "岗位或题目链接",
+                "发布时间",
+                "样本量",
+                "截图路径",
+                "来源类型",
+                "备注"
+              ],
+              "where_to_search": {
+                "boss": {
+                  "query": "公务员 应届 国考 省考 职位",
+                  "url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B"
+                },
+                "xiaohongshu": {
+                  "query": "公务员 面试 回忆 结构化",
+                  "url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+                },
+                "official_priority": "国家公务员局、地方人事考试网、各省公告页。",
+                "official_source_links": [
+                  "http://www.scs.gov.cn/",
+                  "http://www.cpta.com.cn/",
+                  "https://www.mohrss.gov.cn/",
+                  "https://www.gov.cn/"
+                ]
+              },
+              "how_to_search": [
+                "先用企业官网/主管部门公告页核对岗位名称与批次，再用平台补城市与薪资样本。",
+                "BOSS优先网页检索；若小红书网页受限，改App检索并保留帖子ID与截图时间戳。",
+                "同城同岗样本去重后再统计，样本不足时标注低置信。"
+              ],
+              "capture_rule": "缺失城市/薪资/发布时间的样本不进入A档结论，必须保留待补槽位与责任人。",
+              "note": "该高增长岗尚未落地主表岗位卡与题库，需优先补齐岗位画像与笔面试样本。"
+            }
           },
           {
             "role_name": "人社业务岗",
             "role_intro": "负责就业、社保、人才业务。",
-            "role_family": "综合岗位"
+            "role_family": "综合岗位",
+            "landing_status": "landed_main_profile",
+            "mapped_role_id": "IND_CIVIL_SERVICE_ROLE_015",
+            "mapped_role_name": "人社业务岗",
+            "role_detail_v155": {
+              "职责边界": "人社业务岗在公务员体系中主要承担：就业、社保、人才业务。",
+              "核心技能栈": [
+                "岗位核心流程掌握",
+                "跨部门协同与推进",
+                "业务问题拆解与指标口径",
+                "结构化方案设计与复盘"
+              ],
+              "典型项目": [
+                "人社业务岗专项落地",
+                "人社业务岗跨团队协同优化"
+              ],
+              "成长台阶": {
+                "0-12个月": "完成人社业务岗基础流程上手，能独立交付可验证结果。",
+                "12-24个月": "负责人社业务岗关键模块，并能推动跨团队协同落地。",
+                "24-36个月": "主导人社业务岗专项优化，沉淀方法论并带新人。"
+              },
+              "转岗去向": [
+                "同赛道邻接岗位",
+                "项目管理方向",
+                "数据分析支撑方向"
+              ],
+              "不适配信号": [
+                "只会描述人社业务岗职责，无法给出量化结果或关键指标。",
+                "缺少跨部门协同与推进证据，无法说明资源受限时如何取舍。",
+                "对失败案例没有复盘闭环，无法说明下一轮优化动作。"
+              ]
+            },
+            "coverage_snapshot_v155": {
+              "written_question_count": 4,
+              "interview_question_count": 4,
+              "written_stage_coverage": 4,
+              "interview_stage_coverage": 4
+            }
           }
         ],
         "桥接岗": [
@@ -18700,6 +19531,71 @@
           "对平台受限数据保留回填槽位，不以单一来源下结论。"
         ],
         "updated_at": "2026-02-19"
+      },
+      "职业决策模块_v155": {
+        "updated_at": "2026-02-19",
+        "岗位对比矩阵": [
+          {
+            "岗位类型": "核心岗",
+            "代表岗位": [
+              "综合管理岗",
+              "执法类岗",
+              "专业技术岗",
+              "基层治理岗",
+              "选调生岗",
+              "政策研究岗"
+            ],
+            "决策建议": "优先用于建立首份可验证项目证据与稳定面试通过率。"
+          },
+          {
+            "岗位类型": "高增长岗",
+            "已落地主表岗位": [
+              "行政执法岗",
+              "综合管理岗",
+              "基层治理岗",
+              "人社业务岗"
+            ],
+            "待落地主表岗位": [
+              "文字综合岗",
+              "公共政策研究岗",
+              "信息化管理岗",
+              "财政审计辅助岗"
+            ],
+            "决策建议": "高增长岗优先补“职责边界+题库+证据深链”，再提高投递占比。"
+          },
+          {
+            "岗位类型": "桥接岗",
+            "代表岗位": [
+              "信息化治理岗",
+              "督查督办岗",
+              "数据治理岗",
+              "应急管理岗",
+              "电子政务岗",
+              "公文综合岗"
+            ],
+            "决策建议": "用于转行业或转职能的过渡，强调可迁移项目与量化成果。"
+          }
+        ],
+        "准备计划_90天": [
+          "1-30天：锁定2个目标岗位，补齐岗位能力词典与简历证据映射。",
+          "31-60天：按提前批/主批节奏完成分阶段题库训练与2轮模拟面试。",
+          "61-90天：基于面试反馈修正投递策略，并补齐短板项目证据。"
+        ],
+        "准备计划_180天": [
+          "91-120天：扩展到邻接岗位，形成“主岗+备岗”双路径投递。",
+          "121-150天：补齐行业关键证书/工具链，并完成跨团队协作案例。",
+          "151-180天：复盘投递与面试转化，按城市与公司层级做二次分层。"
+        ],
+        "止损阈值": [
+          "连续两轮投递-面试转化低于个人历史中位值，需调整岗位与城市组合。",
+          "两个月内无法补出可量化项目证据时，优先切换到桥接岗策略。",
+          "核心能力短板无法在一个招聘周期内补齐时，启用替代行业路径。"
+        ],
+        "转岗路径执行提示": [
+          "基层岗位->综合管理",
+          "专业岗->条线业务骨干"
+        ],
+        "说明": "该模块用于站内完成“选岗-准备-执行-止损”闭环，不依赖外站拼接信息。"
       }
     },
     "横向比较评分": {

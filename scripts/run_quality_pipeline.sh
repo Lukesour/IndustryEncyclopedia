@@ -9,6 +9,8 @@ REPORT_PATH="${REPORT_DIR}/quality_report_${DATE_TAG}.json"
 LATEST_PATH="${REPORT_DIR}/quality_report_latest.json"
 GATE_PATH="${REPORT_DIR}/quality_gate_${DATE_TAG}.json"
 LATEST_GATE_PATH="${REPORT_DIR}/quality_gate_latest.json"
+DEPTH_GAP_PATH="${REPORT_DIR}/depth_gap_${DATE_TAG}.json"
+LATEST_DEPTH_GAP_PATH="${REPORT_DIR}/depth_gap_latest.json"
 RECENT_CUTOFF="$(date -v-180d +%Y-%m-%d 2>/dev/null || date -d '180 days ago' +%Y-%m-%d)"
 
 mkdir -p "${REPORT_DIR}"
@@ -325,6 +327,141 @@ TEMPLATE_REUSE_METRICS_JSON="$(jq '
 jq --argjson template_reuse "${TEMPLATE_REUSE_METRICS_JSON}" '. + {template_reuse_v145: $template_reuse}' "${REPORT_PATH}" > "${REPORT_PATH}.tmp"
 mv "${REPORT_PATH}.tmp" "${REPORT_PATH}"
 cp "${REPORT_PATH}" "${LATEST_PATH}"
+
+# v1.55 encyclopedia-depth telemetry (report-only): high-growth landing, core-role 4-stage coverage,
+# role-card deep links, pending platform verification ratio, and expansion-candidate landing.
+DEPTH_V155_HG_MIN="$(jq '."治理配置"."百科深度门槛_v155".targets.high_growth_landing_min_percent // 90' "${DATA_PATH}")"
+DEPTH_V155_CORE4_MIN="$(jq '."治理配置"."百科深度门槛_v155".targets.core_role_four_stage_min_percent // 85' "${DATA_PATH}")"
+DEPTH_V155_DEEP_LINK_MIN="$(jq '."治理配置"."百科深度门槛_v155".targets.role_profile_deep_link_min_percent // 60' "${DATA_PATH}")"
+DEPTH_V155_PENDING_MAX="$(jq '."治理配置"."百科深度门槛_v155".targets.platform_verification_pending_max_percent // 25' "${DATA_PATH}")"
+DEPTH_V155_MODE="$(jq -r '."治理配置"."百科深度门槛_v155".gate_mode // "report_only"' "${DATA_PATH}")"
+DEPTH_V155_ENABLED="$(jq '."治理配置"."百科深度门槛_v155".enabled // false' "${DATA_PATH}")"
+
+DEPTH_V155_METRICS_JSON="$(jq \
+  --argjson hg_min "${DEPTH_V155_HG_MIN}" \
+  --argjson core4_min "${DEPTH_V155_CORE4_MIN}" \
+  --argjson deep_link_min "${DEPTH_V155_DEEP_LINK_MIN}" \
+  --argjson pending_max "${DEPTH_V155_PENDING_MAX}" \
+  --arg depth_mode "${DEPTH_V155_MODE}" \
+  --argjson depth_enabled "${DEPTH_V155_ENABLED}" \
+  '
+  def url_depth($u):
+    if ($u|type)!="string" then 0
+    else (
+      (try (capture("https?://[^/]+(?<path>/.*)?").path // "") catch "")
+      | split("/") | map(select(length>0)) | length
+    )
+    end;
+
+  def stage_cov($items; $role_id):
+    ([ $items[]? | select(.role_id == $role_id) | .recruitment_stage ] | unique | length);
+
+  [."行业词条"[] as $entry
+    | ($entry.dynamic["岗位画像库"].items // []) as $roles
+    | ($entry.dynamic["笔试真题库"].items // []) as $written
+    | ($entry.dynamic["面试真题库"].items // []) as $interview
+    | ($entry.static["招聘与成长"]["岗位家族导航"]["核心岗"] // []) as $core_names
+    | ($entry.static["招聘与成长"]["岗位家族导航"]["高增长岗"] // []) as $high_growth
+    | ($entry.dynamic["自定义扩展"].items // []) as $ext_items
+    | (
+        [
+          $ext_items[]?
+          | select(.x_decision_type == "role_and_question_expansion")
+          | .x_role_expansion_candidates[]?
+        ]
+      ) as $expansion_candidates
+    | ($roles | map(select(.role_name as $n | $core_names | index($n)))) as $core_roles
+    | ($roles | length) as $role_total
+    | ([ $roles[]? | select((.platform_backfill_gap.status // "") | startswith("pending")) ] | length) as $pending_roles
+    | ([ $roles[]? | .evidence?.source_url? | select(type=="string") | url_depth(.) | select(. >= 2) ] | length) as $deep_link_roles
+    | (
+        [
+          $core_roles[]? as $r
+          | (stage_cov($written; $r.role_id)) as $w_stage
+          | (stage_cov($interview; $r.role_id)) as $i_stage
+          | select($w_stage >= 4 and $i_stage >= 4)
+        ] | length
+      ) as $core_full4
+    | ($high_growth | length) as $hg_total
+    | ([ $high_growth[]? | select((.landing_status // "") == "landed_main_profile") ] | length) as $hg_landed
+    | ($expansion_candidates | length) as $cand_total
+    | ([ $expansion_candidates[]? | select((.status // "") == "landed_main_profile") ] | length) as $cand_landed
+    | {
+        industry_id: $entry.industry_id,
+        industry: $entry."行业名称",
+        high_growth_total: $hg_total,
+        high_growth_landed: $hg_landed,
+        high_growth_landing_percent: (if $hg_total == 0 then 0 else ($hg_landed * 100 / $hg_total) end),
+        core_role_total: ($core_roles | length),
+        core_role_full4_count: $core_full4,
+        core_role_full4_percent: (if ($core_roles | length) == 0 then 0 else ($core_full4 * 100 / ($core_roles | length)) end),
+        role_total: $role_total,
+        role_pending_platform_count: $pending_roles,
+        role_pending_platform_percent: (if $role_total == 0 then 0 else ($pending_roles * 100 / $role_total) end),
+        role_deep_link_count: $deep_link_roles,
+        role_deep_link_percent: (if $role_total == 0 then 0 else ($deep_link_roles * 100 / $role_total) end),
+        expansion_candidate_total: $cand_total,
+        expansion_candidate_landed: $cand_landed,
+        expansion_candidate_landing_percent: (if $cand_total == 0 then 0 else ($cand_landed * 100 / $cand_total) end)
+      }
+  ] as $rows
+  | {
+      generated_at: now | strftime("%Y-%m-%dT%H:%M:%SZ"),
+      depth_version: "v1.55.0",
+      gate_mode: $depth_mode,
+      enabled: $depth_enabled,
+      target: {
+        high_growth_landing_min_percent: $hg_min,
+        core_role_four_stage_min_percent: $core4_min,
+        role_profile_deep_link_min_percent: $deep_link_min,
+        platform_verification_pending_max_percent: $pending_max
+      },
+      actual: {
+        high_growth_landing_percent: (
+          ([$rows[] | .high_growth_total] | add) as $t
+          | ([$rows[] | .high_growth_landed] | add) as $v
+          | if $t == 0 then 0 else ($v * 100 / $t) end
+        ),
+        core_role_four_stage_percent: (
+          ([$rows[] | .core_role_total] | add) as $t
+          | ([$rows[] | .core_role_full4_count] | add) as $v
+          | if $t == 0 then 0 else ($v * 100 / $t) end
+        ),
+        role_profile_deep_link_percent: (
+          ([$rows[] | .role_total] | add) as $t
+          | ([$rows[] | .role_deep_link_count] | add) as $v
+          | if $t == 0 then 0 else ($v * 100 / $t) end
+        ),
+        platform_verification_pending_percent: (
+          ([$rows[] | .role_total] | add) as $t
+          | ([$rows[] | .role_pending_platform_count] | add) as $v
+          | if $t == 0 then 0 else ($v * 100 / $t) end
+        ),
+        expansion_candidate_landing_percent: (
+          ([$rows[] | .expansion_candidate_total] | add) as $t
+          | ([$rows[] | .expansion_candidate_landed] | add) as $v
+          | if $t == 0 then 0 else ($v * 100 / $t) end
+        )
+      },
+      by_industry: $rows,
+      gaps_by_industry: [
+        $rows[]
+        | select(
+            .high_growth_landing_percent < $hg_min
+            or .core_role_full4_percent < $core4_min
+            or .role_deep_link_percent < $deep_link_min
+            or .role_pending_platform_percent > $pending_max
+          )
+      ]
+    }
+  ' "${DATA_PATH}")"
+
+jq --argjson depth_v155 "${DEPTH_V155_METRICS_JSON}" '. + {encyclopedia_depth_v155: $depth_v155}' "${REPORT_PATH}" > "${REPORT_PATH}.tmp"
+mv "${REPORT_PATH}.tmp" "${REPORT_PATH}"
+cp "${REPORT_PATH}" "${LATEST_PATH}"
+
+printf '%s\n' "${DEPTH_V155_METRICS_JSON}" > "${DEPTH_GAP_PATH}"
+cp "${DEPTH_GAP_PATH}" "${LATEST_DEPTH_GAP_PATH}"
 
 # Hard release gates.
 PLACEHOLDER_COUNT="$( (rg -n -e 'pending\\.example\\.com' -e '待补内部链接' -e '示范复盘结构' -e '待补统计口径' "${DATA_PATH}" || true) | wc -l | tr -d ' ' )"
