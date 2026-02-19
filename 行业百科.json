@@ -568,10 +568,19 @@
           "23个行业外部链接LINK_002升级为政策锚点直达页，LINK_003统一为校招直达页并补充用途说明。",
           "同步保留BOSS/小红书运营补录位，明确网页受限场景下的App检索与截图留证规则。"
         ]
+      },
+      {
+        "version": "v1.45.0",
+        "date": "2026-02-19",
+        "summary": [
+          "新增23行业全量扩容执行清单（岗位细分、题库缺口、搜索入口、必采字段）。",
+          "明确题库同权规则：official_original/real_recall/jd_mapping在题库训练中同权。",
+          "新增深度目标门槛字段：岗位数、每岗题量、阶段覆盖、去模板化与岗位级来源颗粒度。"
+        ]
       }
     ],
     "文档名称": "中国大陆应届生求职行业百科（v1.42.2平台补录结构化增强版）",
-    "版本": "v1.44.0",
+    "版本": "v1.45.0",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -624,7 +633,8 @@
       "v1.38.0补充事业单位体系2026年湖北省公告链路，新增访谈/案例/政策/事件与官方入口，提升公共部门条目时效与区域可执行性。",
       "v1.39.0对5个低分行业逐条做证据锚点分散化（20条），显著降低来源集中度并提升行业决策稳定性。",
       "v1.42.1将决策薪酬源改为行业实证来源，并补齐BOSS/小红书运营检索与字段补录规范。",
-      "v1.42.2将BOSS/小红书运营补录规则结构化入库到23个行业词条，提升后续实证补录执行性。"
+      "v1.42.2将BOSS/小红书运营补录规则结构化入库到23个行业词条，提升后续实证补录执行性。",
+      "新增v1.45全量扩容执行清单，覆盖23行业岗位扩容、题库缺口与平台补录检索入口。"
     ],
     "适用人群": "中国大陆应届生（含毕业3年内）",
     "updated_at": "2026-02-18"
@@ -6516,7 +6526,15 @@
       "policy_date_source_mismatch_max_hits": 0,
       "stats_data_period_missing_max_hits": 0,
       "decision_salary_source_invalid_max_hits": 0,
-      "decision_evidence_non200_max_hits": 0
+      "decision_evidence_non200_max_hits": 0,
+      "role_count_target_per_industry": 24,
+      "question_written_per_role_target": 12,
+      "question_interview_per_role_target": 12,
+      "question_stage_coverage_target": 4,
+      "question_followup_top3_max_percent": 35,
+      "question_answer_framework_top1_max_percent": 40,
+      "job_detail_url_min_percent": 60,
+      "rule_note_v145": "v1.45新增深度目标用于扩容执行与验收看板；当前硬拦截仍以已配置发布门槛为准。"
     },
     "审核要求": "所有可发布记录必须具备可追溯source_id（映射到来源注册表）和可验证source_url；低可访问来源需添加人工补录槽位，并设置优先级与到期日。",
     "数据更新周期": "quarterly",
@@ -6563,8 +6581,9 @@
       "freshness": "按stale_after_days计算",
       "manual_gap_penalty": "待人工补录槽位惩罚项",
       "quantity": "collection.coverage_percent",
-      "realness": "真实性权重（official > curated > modeled > template）",
-      "source_access": "来源可访问率（http_status=200占比）"
+      "realness": "真实性权重（official = real_user = jd_mapping > curated > template）",
+      "source_access": "来源可访问率（http_status=200占比）",
+      "realness_note_v145": "题库训练场景中回忆题与官方题同权，质量区分依赖字段完整度、来源可追溯和样本量。"
     },
     "采集优先级规则": {
       "P0": [
@@ -6580,6 +6599,23 @@
       "P2": [
         "其他集合"
       ]
+    },
+    "题库同权策略_v1_45_2026Q1": {
+      "scope": "笔试真题库/面试真题库",
+      "equal_weight_labels": [
+        "official_original",
+        "real_recall",
+        "jd_mapping"
+      ],
+      "training_weight_rule": "同权(1.0/1.0/1.0)",
+      "transparency_rule": "必须标注题目来源类型、年份、批次、轮次、样本量",
+      "conclusion_rule": "行业趋势与薪酬结论仍需L1/L2交叉，题库训练不做回忆题降权。"
+    },
+    "扩容执行清单": {
+      "plan_version": "v1.45.0",
+      "generated_at": "2026-02-19",
+      "json_path": "reports/全量扩容执行清单_v1.45.0.json",
+      "markdown_path": "reports/全量扩容执行清单_v1.45.0.md"
     }
   },
   "行业索引": [

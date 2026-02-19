@@ -207,6 +207,87 @@ def stddev($arr):
 
 cp "${REPORT_PATH}" "${LATEST_PATH}"
 
+# v1.45 depth target telemetry (non-blocking): role scale, per-role question density, source URL depth.
+DEPTH_TARGET_ROLE_COUNT="$(jq '."治理配置"."发布硬门槛".role_count_target_per_industry // 24' "${DATA_PATH}")"
+DEPTH_TARGET_WRITTEN_PER_ROLE="$(jq '."治理配置"."发布硬门槛".question_written_per_role_target // 12' "${DATA_PATH}")"
+DEPTH_TARGET_INTERVIEW_PER_ROLE="$(jq '."治理配置"."发布硬门槛".question_interview_per_role_target // 12' "${DATA_PATH}")"
+DEPTH_TARGET_STAGE_COVERAGE="$(jq '."治理配置"."发布硬门槛".question_stage_coverage_target // 4' "${DATA_PATH}")"
+DEPTH_TARGET_JOB_DETAIL_URL="$(jq '."治理配置"."发布硬门槛".job_detail_url_min_percent // 60' "${DATA_PATH}")"
+
+DEPTH_METRICS_JSON="$(jq \
+  --argjson target_role "${DEPTH_TARGET_ROLE_COUNT}" \
+  --argjson target_written "${DEPTH_TARGET_WRITTEN_PER_ROLE}" \
+  --argjson target_interview "${DEPTH_TARGET_INTERVIEW_PER_ROLE}" \
+  --argjson target_stage "${DEPTH_TARGET_STAGE_COVERAGE}" \
+  --argjson target_url "${DEPTH_TARGET_JOB_DETAIL_URL}" \
+  '
+  ([."行业词条"[] | (.dynamic["岗位画像库"].items | length)]) as $role_counts
+  | ([."行业词条"[] | ((.dynamic["笔试真题库"].items | length) / ((.dynamic["岗位画像库"].items | length) as $r | if $r == 0 then 1 else $r end))]) as $written_per_role
+  | ([."行业词条"[] | ((.dynamic["面试真题库"].items | length) / ((.dynamic["岗位画像库"].items | length) as $r | if $r == 0 then 1 else $r end))]) as $interview_per_role
+  | ([."行业词条"[] | .dynamic["岗位画像库"].items[]?] | length) as $role_total
+  | (
+      [
+        ."行业词条"[]
+        | .dynamic["岗位画像库"].items[]?.role_id as $rid
+        | ([.dynamic["笔试真题库"].items[]? | select(.role_id == $rid) | .recruitment_stage] | unique | length)
+      ]
+    ) as $written_stage_coverages
+  | (
+      [
+        ."行业词条"[]
+        | .dynamic["岗位画像库"].items[]?.role_id as $rid
+        | ([.dynamic["面试真题库"].items[]? | select(.role_id == $rid) | .recruitment_stage] | unique | length)
+      ]
+    ) as $interview_stage_coverages
+  | ([.. | objects | .evidence?.source_url? | select(type=="string")]) as $urls
+  | {
+      target: {
+        role_count_per_industry: $target_role,
+        written_per_role: $target_written,
+        interview_per_role: $target_interview,
+        stage_coverage_per_role: $target_stage,
+        job_detail_url_min_percent: $target_url
+      },
+      actual: {
+        role_count_per_industry: {
+          avg: (if ($role_counts|length)==0 then 0 else ($role_counts|add)/($role_counts|length) end),
+          min: (if ($role_counts|length)==0 then 0 else ($role_counts|min) end),
+          max: (if ($role_counts|length)==0 then 0 else ($role_counts|max) end)
+        },
+        written_per_role: {
+          avg: (if ($written_per_role|length)==0 then 0 else ($written_per_role|add)/($written_per_role|length) end),
+          min: (if ($written_per_role|length)==0 then 0 else ($written_per_role|min) end),
+          max: (if ($written_per_role|length)==0 then 0 else ($written_per_role|max) end)
+        },
+        interview_per_role: {
+          avg: (if ($interview_per_role|length)==0 then 0 else ($interview_per_role|add)/($interview_per_role|length) end),
+          min: (if ($interview_per_role|length)==0 then 0 else ($interview_per_role|min) end),
+          max: (if ($interview_per_role|length)==0 then 0 else ($interview_per_role|max) end)
+        },
+        stage_coverage_per_role: {
+          written_avg: (if ($written_stage_coverages|length)==0 then 0 else ($written_stage_coverages|add)/($written_stage_coverages|length) end),
+          interview_avg: (if ($interview_stage_coverages|length)==0 then 0 else ($interview_stage_coverages|add)/($interview_stage_coverages|length) end)
+        },
+        source_url_depth: {
+          depth_ge2_percent: (
+            if ($urls|length)==0 then 0
+            else (
+              (
+                [$urls[] | (try (capture("https?://[^/]+(?<path>/.*)?").path // "") catch "") | split("/") | map(select(length>0)) | length | select(. >= 2)]
+                | length
+              ) * 100 / ($urls|length)
+            )
+            end
+          )
+        }
+      }
+    }
+  ' "${DATA_PATH}")"
+
+jq --argjson depth_metrics "${DEPTH_METRICS_JSON}" '. + {depth_targets_v145: $depth_metrics}' "${REPORT_PATH}" > "${REPORT_PATH}.tmp"
+mv "${REPORT_PATH}.tmp" "${REPORT_PATH}"
+cp "${REPORT_PATH}" "${LATEST_PATH}"
+
 # Hard release gates.
 PLACEHOLDER_COUNT="$( (rg -n -e 'pending\\.example\\.com' -e '待补内部链接' -e '示范复盘结构' -e '待补统计口径' "${DATA_PATH}" || true) | wc -l | tr -d ' ' )"
 
