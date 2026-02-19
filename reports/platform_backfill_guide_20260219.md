@@ -1,6 +1,6 @@
 # BOSS/小红书平台缺口补录指引（2026-02-19）
 
-说明：以下为当前百科中标记为 `pending_platform_verification` 的岗位。每条样本请补齐发布时间、城市、薪资区间、公司层级与截图时间戳。
+说明：以下为当前百科中标记为 `pending_platform_verification` 的岗位。若平台不可访问，请保留缺口字段并记录检索时间、关键词与失败原因。
 
 ## 高端制造与工业自动化（IND_ADVANCED_MANUFACTURING_AUTOMATION）
 
