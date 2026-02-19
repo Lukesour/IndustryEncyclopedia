@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-19T14:01:42Z",
+  "generated_at": "2026-02-19T14:31:36Z",
   "data_file": "/Users/suan/Desktop/留学/资料/行业百科/行业百科.json",
   "document": {
     "version": "v1.58.0",
@@ -23,7 +23,7 @@
     "evidence": 96.66086956521738,
     "real_data_ratio": 87.03913043478258,
     "quality": 80.59130434782607,
-    "manual_fill_completion": 62.94117647058823
+    "manual_fill_completion": 100
   },
   "progress_dispersion": {
     "quality_score_stddev": 5.078335318096333,
@@ -46,9 +46,9 @@
     "salary_observed_tier_coverage_stddev": 0.48804226784007926,
     "salary_observed_tier_coverage_min": 2,
     "salary_observed_tier_coverage_max": 3,
-    "question_depth_stddev": 9.754452233431211,
-    "question_depth_min": 171,
-    "question_depth_max": 206,
+    "question_depth_stddev": 14.822452697504358,
+    "question_depth_min": 194,
+    "question_depth_max": 247,
     "written_role_coverage_stddev": 1.8405226511753672,
     "written_role_coverage_min": 20,
     "written_role_coverage_max": 27,
@@ -66,27 +66,27 @@
     "decision_evidence_sample_size_max": 26
   },
   "content_realness": {
-    "written_total": 2193,
+    "written_total": 2567,
     "written_need_real": 0,
-    "written_real_ready": 2193,
-    "interview_total": 2183,
+    "written_real_ready": 2567,
+    "interview_total": 2554,
     "interview_need_real": 0,
-    "interview_real_ready": 2183
+    "interview_real_ready": 2554
   },
   "template_quality": {
     "template_items": 0,
-    "items_total": 6278,
+    "items_total": 7464,
     "template_ratio_percent": 0
   },
   "source_concentration": {
-    "total_refs": 6278,
-    "top1_share_percent": 6.83338642879898,
-    "top5_share_percent": 25.453966231283847
+    "total_refs": 7464,
+    "top1_share_percent": 8.038585209003216,
+    "top5_share_percent": 25.817256162915328
   },
   "freshness_detail": {
-    "source_date_records": 7121,
+    "source_date_records": 8307,
     "effective_date_method": "publish_date_first_fallback_source_date",
-    "within_180_days_percent": 94.9726162055891,
+    "within_180_days_percent": 95.58203924401107,
     "older_than_365_days_count": 0
   },
   "salary_layers": {
@@ -163,17 +163,17 @@
     ]
   },
   "manual_fill": {
-    "pending_total": 630,
+    "pending_total": 0,
     "required_total": 1700,
     "p0_pending_total": 0,
-    "p1_pending_total": 630,
+    "p1_pending_total": 0,
     "p2_pending_total": 0
   },
   "manual_fill_explainability": {
     "p0_total_slots": 545,
     "p0_completed_slots": 545,
     "p1_total_slots": 834,
-    "p1_completed_slots": 204,
+    "p1_completed_slots": 834,
     "p2_total_slots": 0,
     "p2_completed_slots": 0
   },
@@ -307,9 +307,9 @@
   "depth_targets_v145": {
     "target": {
       "role_count_per_industry": 18,
-      "written_per_role": 2,
-      "interview_per_role": 2,
-      "stage_coverage_per_role": 1,
+      "written_per_role": 4,
+      "interview_per_role": 4,
+      "stage_coverage_per_role": 2,
       "job_detail_url_min_percent": 0
     },
     "actual": {
@@ -319,36 +319,36 @@
         "max": 27
       },
       "written_per_role": {
-        "avg": 3.945896753949684,
-        "min": 3.769230769230769,
-        "max": 4.3
+        "avg": 4.613733148459047,
+        "min": 4.5,
+        "max": 4.95
       },
       "interview_per_role": {
-        "avg": 3.927208210818797,
-        "min": 3.730769230769231,
-        "max": 4.25
+        "avg": 4.588165394431934,
+        "min": 4.461538461538462,
+        "max": 4.75
       },
       "stage_coverage_per_role": {
-        "written_avg": 3.3285457809694794,
-        "interview_avg": 3.3339317773788153
+        "written_avg": 4,
+        "interview_avg": 4
       },
       "source_url_depth": {
-        "depth_ge2_percent": 57.32484076433121
+        "depth_ge2_percent": 54.02927897113148
       }
     }
   },
   "template_reuse_v145": {
     "answer_framework": {
-      "written_top1_percent": 28.134974920200637,
-      "written_top3_percent": 50.02279981760146,
-      "interview_top1_percent": 33.62345396243701,
-      "interview_top3_percent": 52.450755840586346
+      "written_top1_percent": 24.03583950136346,
+      "written_top3_percent": 42.73470977795092,
+      "interview_top1_percent": 28.739232576350823,
+      "interview_top3_percent": 44.83163664839468
     },
     "follow_up_questions": {
-      "written_top1_percent": 7.949536403708771,
-      "written_top3_percent": 20.20063839489284,
-      "interview_top1_percent": 6.061994197587418,
-      "interview_top3_percent": 18.185982592762254
+      "written_top1_percent": 6.791325801843916,
+      "written_top3_percent": 17.257499026100508,
+      "interview_top1_percent": 5.181414774210389,
+      "interview_top3_percent": 15.544244322631167
     },
     "elimination_risks": {
       "role_profile_top1_percent": 31.956912028725313,
@@ -356,7 +356,7 @@
     }
   },
   "encyclopedia_depth_v155": {
-    "generated_at": "2026-02-19T14:01:48Z",
+    "generated_at": "2026-02-19T14:31:43Z",
     "depth_version": "v1.55.0",
     "gate_mode": "report_only",
     "enabled": true,
@@ -987,24 +987,24 @@
       "role_evidence_tri_chain_percent": 100
     },
     "prompt_uniqueness": {
-      "written_total": 2193,
-      "written_unique": 1585,
-      "written_duplicate_percent": 27.724578203374374,
-      "interview_total": 2183,
-      "interview_unique": 1579,
-      "interview_duplicate_percent": 27.66834631241411,
-      "max_duplicate_percent": 27.724578203374374
+      "written_total": 2567,
+      "written_unique": 1860,
+      "written_duplicate_percent": 27.541877678223607,
+      "interview_total": 2554,
+      "interview_unique": 1853,
+      "interview_duplicate_percent": 27.447141738449492,
+      "max_duplicate_percent": 27.541877678223607
     },
     "decision_module_depth": {
       "industry_count": 23,
-      "company_avg": 5.130434782608695,
-      "company_min": 5,
-      "timeline_avg": 3,
-      "timeline_min": 3,
-      "case_avg": 3.347826086956522,
-      "case_min": 3,
-      "talk_avg": 3.347826086956522,
-      "talk_min": 3
+      "company_avg": 12,
+      "company_min": 12,
+      "timeline_avg": 6,
+      "timeline_min": 6,
+      "case_avg": 8,
+      "case_min": 8,
+      "talk_avg": 8,
+      "talk_min": 8
     }
   }
 }

@@ -13,6 +13,12 @@
 | 牛客笔试 | https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page | 200 | https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page | 可访问 |
 | 牛客面试 | https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page | 200 | https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page | 可访问 |
 
+## 字段可提取性说明（2026-02-19 实测）
+
+- BOSS网页端在未登录环境可打开搜索页，但核心职位字段多由前端动态加载，直接抓取稳定性较差。
+- 小红书网页端可访问搜索结果，但帖子详情存在风控与登录门槛，建议App端补录并留存截图时间戳。
+- 牛客可访问题库入口，但部分内容需登录后才能完整展开，补录时需注明“可见范围”。
+
 ## 受限时必须留空位并补录的信息
 
 - 岗位名称
