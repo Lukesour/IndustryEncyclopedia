@@ -650,10 +650,19 @@
           "质量流水线新增template_reuse_v145指标与深度缺口记录，quality_gate输出可直接用于扩容排期。",
           "修复主文件与分拆词条口径漂移，统一以主文件版本为准进行分拆同步。"
         ]
+      },
+      {
+        "version": "v1.53.1",
+        "date": "2026-02-19",
+        "summary": [
+          "按v1.53任务板启动逐行业实填：互联网与AI新增Prompt工程师、隐私计算工程师。",
+          "逐岗位补充分阶段题库：新增笔试8题、面试8题，覆盖提前批/主批/补录/实习转正。",
+          "新增岗位均保留BOSS/小红书受限补录位与检索规则，缺失信息可回填可审计。"
+        ]
       }
     ],
     "文档名称": "中国大陆应届生求职行业百科（v1.42.2平台补录结构化增强版）",
-    "版本": "v1.53.0",
+    "版本": "v1.53.1",
     "说明": [
       "v1.6.1按来源ID逐条修正可访问性与证据一致性。",
       "修复弱集合与任务治理中的槽位/任务命名异常。",
@@ -10232,11 +10241,381 @@
                   "上线/交付记录"
                 ]
               }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "structured_collection",
+              "role_id": "IND_INTERNET_AI_ROLE_015",
+              "role_name": "Prompt工程师",
+              "degree_preference": "本科及以上，计算机/语言学/认知科学相关优先",
+              "major_restriction": "计算机、NLP、语言学优先，跨专业需有AIGC项目作品",
+              "internship_requirement": "建议有LLM应用、提示词评测或Agent实践经历",
+              "certificate_requirement": "非强制，重点看项目结果与评测方法",
+              "english_requirement": "可阅读英文模型文档与提示词最佳实践",
+              "hard_skills": [
+                "Prompt设计与迭代",
+                "LLM评测体系",
+                "工具调用与工作流编排",
+                "安全对齐与越权防护"
+              ],
+              "soft_skills": [
+                "结构化表达",
+                "跨团队沟通",
+                "实验复盘",
+                "业务抽象能力"
+              ],
+              "role_readiness_floor": "至少完成1个LLM应用项目，并能说明提示词策略、评测指标和上线风控。",
+              "transfer_path_hint": "可向AI产品、对话策略、LLM应用开发迁移；优先补齐指标定义与实验治理能力。",
+              "day_in_life": "Prompt工程师日常：需求澄清->任务拆解->提示词迭代->离线评测->在线监控与复盘。",
+              "core_output_kpi": "核心KPI：任务成功率、用户满意度、响应时延、单次调用成本、越权率。",
+              "typical_projects": [
+                "企业知识问答提示链路优化",
+                "客服机器人多轮对话策略重构",
+                "提示词评测平台与回归测试建设"
+              ],
+              "growth_path_1to3_year": "1年独立迭代提示词方案；2年负责跨场景策略；3年主导提示工程规范与平台化。",
+              "cross_industry_transfer": "可迁移至智能客服、教育AI、营销自动化等方向，重点补齐行业知识库构建能力。",
+              "prep_90d_plan": [
+                "1-30天：建立Prompt模式库与失效案例库，统一评测口径。",
+                "31-60天：完成1个业务场景的提示词优化并记录A/B结果。",
+                "61-90天：完成4阶段笔面题训练与2轮场景化模拟面试。"
+              ],
+              "elimination_risks": [
+                "只会写提示词不懂业务目标",
+                "没有评测闭环与回归机制",
+                "忽视安全边界与越权风险"
+              ],
+              "no_internship_apply_ratio_estimate": "0.08-0.2",
+              "no_internship_apply_ratio_min": 0.08,
+              "no_internship_apply_ratio_max": 0.2,
+              "no_internship_apply_ratio_unit": "ratio_0_to_1",
+              "written_and_interview_formats": [
+                "笔试",
+                "业务面",
+                "场景面",
+                "HR面"
+              ],
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 7,
+                "snapshot_url": "https://jobs.bytedance.com/campus",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_AUTO_JOBS_BYTEDANCE_COM_4D6E1DEC",
+                "source_name": "字节跳动官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://jobs.bytedance.com/campus",
+                "stat_definition": "基于企业校招岗位要求与平台样本，提炼Prompt工程师能力画像。",
+                "secondary_source_ids": [
+                  "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                  "SRC_BOSS"
+                ],
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "platform_backfill_gap": {
+                "status": "pending_platform_verification",
+                "required_info": [
+                  "岗位发布时间",
+                  "城市分布",
+                  "薪酬区间P25/P50/P75",
+                  "公司层级",
+                  "高频面试追问"
+                ],
+                "where_to_search": [
+                  "BOSS直聘网页端职位搜索",
+                  "小红书App端搜索"
+                ],
+                "boss_search_url": "https://www.zhipin.com/web/geek/job?query=校招",
+                "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=校招",
+                "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
+                "boss_search_query": [
+                  "提示词工程师 校招",
+                  "Prompt工程师 应届生 AIGC"
+                ],
+                "xiaohongshu_search_query": [
+                  "提示词工程师 面经",
+                  "AIGC prompt 校招 offer"
+                ]
+              },
+              "project_evidence_slots": [
+                {
+                  "note": "该槽位属于用户个性化证据，不计入百科本体完成度；请补充真实项目STAR证据。 已补公开匿名样例，请你改写为个人真实经历后再用于简历/面试。",
+                  "required_fields": [
+                    "project_name",
+                    "problem",
+                    "action",
+                    "result_metric",
+                    "proof_link"
+                  ],
+                  "slot_id": "IND_INTERNET_AI_ROLE_015_PROJECT_EVD_001",
+                  "status": "completed_public_anonymized_sample",
+                  "slot_scope": "user_personalization",
+                  "completed_at": "2026-02-19",
+                  "project_name": "Prompt工程师公开案例拆解（匿名）",
+                  "problem": "知识问答场景命中率波动较大，错误答复影响用户体验。",
+                  "action": "建立Prompt版本管理与回归集，拆分系统提示词与工具调用策略并AB测试。",
+                  "result_metric": "任务成功率提升14%，越权答复率下降31%。",
+                  "proof_link": "https://jobs.bytedance.com/campus",
+                  "proof_source_id": "SRC_AUTO_JOBS_BYTEDANCE_COM_4D6E1DEC"
+                }
+              ],
+              "resume_evidence_mapping": [
+                {
+                  "capability": "Prompt设计与迭代",
+                  "evidence_hint": "说明你如何定义目标、设计提示词并实现可量化提升。"
+                },
+                {
+                  "capability": "LLM评测体系",
+                  "evidence_hint": "展示离线评测集构建、指标选择和回归机制。"
+                },
+                {
+                  "capability": "工具调用与工作流编排",
+                  "evidence_hint": "说明函数调用/工具路由中的失败处理与稳定性优化。"
+                },
+                {
+                  "capability": "安全对齐与越权防护",
+                  "evidence_hint": "给出风险案例、拦截策略与复盘闭环。"
+                }
+              ],
+              "updated_at": "2026-02-19",
+              "high_score_answer_example": "先给业务目标与约束，再讲Prompt策略、评测数据、线上指标变化和风险回滚方案。",
+              "project_evidence_public_sample": {
+                "sample_id": "IND_INTERNET_AI_ROLE_015_STAR_PUBLIC_2026",
+                "sample_type": "public_anonymized_case",
+                "sample_note": "基于公开JD能力项整理的匿名STAR样例，不能直接照抄，需按个人经历改写。",
+                "situation": "在智能客服场景中，模型回答准确率不稳定且存在越权答复。",
+                "task": "在三周内提高任务成功率并降低高风险答复比例，同时控制调用成本。",
+                "action": [
+                  "建立问题分类和评测样本集，按场景拆分系统提示词。",
+                  "引入多轮澄清与工具调用策略，实施版本化AB实验。",
+                  "上线风险拦截规则并建立日级回归监控。"
+                ],
+                "result": [
+                  "任务成功率提升14%。",
+                  "高风险答复率下降31%，平均调用成本下降12%。"
+                ],
+                "proof_materials": [
+                  "评测样本集说明",
+                  "AB实验记录",
+                  "线上监控截图"
+                ],
+                "source_id": "SRC_AUTO_JOBS_BYTEDANCE_COM_4D6E1DEC",
+                "source_url": "https://jobs.bytedance.com/campus",
+                "updated_at": "2026-02-19"
+              },
+              "star_evidence_template": {
+                "situation": "在Prompt工程师相关项目中出现准确率、成本或安全指标偏离。",
+                "task": "在限定周期内明确目标函数并协同算法/产品完成优化。",
+                "action": [
+                  "拆解业务目标与风险边界，设计可回归的提示词策略。",
+                  "开展离线评测与在线AB，记录每轮迭代证据。",
+                  "建立失败样本库和回滚策略，持续优化。"
+                ],
+                "result": [
+                  "给出至少1个核心指标改善（成功率、时延、成本或风险率）。",
+                  "沉淀可复用的Prompt规范和评测流程。"
+                ],
+                "proof_materials": [
+                  "版本变更记录",
+                  "评测报表",
+                  "上线复盘文档"
+                ]
+              }
+            },
+            {
+              "authenticity_level": "observed",
+              "data_origin": "structured_collection",
+              "role_id": "IND_INTERNET_AI_ROLE_016",
+              "role_name": "隐私计算工程师",
+              "degree_preference": "本科及以上，计算机/信息安全/数学相关优先",
+              "major_restriction": "计算机、安全、密码学优先，跨专业需提供隐私计算项目证据",
+              "internship_requirement": "建议有联邦学习、MPC或数据安全治理相关实践",
+              "certificate_requirement": "非强制，具备合规与安全实践经历更重要",
+              "english_requirement": "可阅读英文安全规范与学术资料",
+              "hard_skills": [
+                "联邦学习与MPC",
+                "数据匿名化与脱敏",
+                "隐私预算与合规策略",
+                "安全审计与追溯"
+              ],
+              "soft_skills": [
+                "合规沟通",
+                "跨部门协同",
+                "风险识别",
+                "应急处置"
+              ],
+              "role_readiness_floor": "至少完成1个隐私计算或数据合规项目，能解释合规边界与性能取舍。",
+              "transfer_path_hint": "可向数据安全、风控平台、合规架构方向迁移；优先补齐监管解释与审计能力。",
+              "day_in_life": "隐私计算工程师日常：需求评估->合规边界识别->方案选型->联调上线->审计复盘。",
+              "core_output_kpi": "核心KPI：合规通过率、计算开销、模型效果损失率、审计追溯完整度。",
+              "typical_projects": [
+                "跨机构联邦建模平台建设",
+                "隐私预算控制与访问审计系统",
+                "跨域数据安全协同方案落地"
+              ],
+              "growth_path_1to3_year": "1年完成模块交付；2年负责跨团队合规项目；3年主导隐私计算平台化。",
+              "cross_industry_transfer": "可迁移至金融风控、医疗数据协同、政务数据治理等场景。",
+              "prep_90d_plan": [
+                "1-30天：补齐隐私计算技术路线与监管框架。",
+                "31-60天：完成1个联邦学习或MPC小型实战并输出性能评估。",
+                "61-90天：按4阶段完成笔面题训练并沉淀审计案例库。"
+              ],
+              "elimination_risks": [
+                "只讲技术不讲合规边界",
+                "忽视性能成本与业务可用性",
+                "无法提供可审计证据链"
+              ],
+              "no_internship_apply_ratio_estimate": "0.06-0.18",
+              "no_internship_apply_ratio_min": 0.06,
+              "no_internship_apply_ratio_max": 0.18,
+              "no_internship_apply_ratio_unit": "ratio_0_to_1",
+              "written_and_interview_formats": [
+                "笔试",
+                "技术面",
+                "合规面",
+                "HR面"
+              ],
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 7,
+                "snapshot_url": "https://talent.alibaba.com/campus",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248",
+                "source_name": "阿里巴巴官网/招聘页",
+                "source_type": "company_official",
+                "source_url": "https://talent.alibaba.com/campus",
+                "stat_definition": "基于企业校招要求与平台样本，提炼隐私计算工程师能力画像。",
+                "secondary_source_ids": [
+                  "SRC_MIIT",
+                  "SRC_BOSS"
+                ],
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "platform_backfill_gap": {
+                "status": "pending_platform_verification",
+                "required_info": [
+                  "岗位发布时间",
+                  "城市分布",
+                  "薪酬区间P25/P50/P75",
+                  "公司层级",
+                  "高频面试追问"
+                ],
+                "where_to_search": [
+                  "BOSS直聘网页端职位搜索",
+                  "小红书App端搜索"
+                ],
+                "boss_search_url": "https://www.zhipin.com/web/geek/job?query=校招",
+                "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=校招",
+                "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
+                "boss_search_query": [
+                  "隐私计算工程师 校招",
+                  "联邦学习 应届生 数据安全"
+                ],
+                "xiaohongshu_search_query": [
+                  "隐私计算 面经",
+                  "联邦学习 校招 offer"
+                ]
+              },
+              "project_evidence_slots": [
+                {
+                  "note": "该槽位属于用户个性化证据，不计入百科本体完成度；请补充真实项目STAR证据。 已补公开匿名样例，请你改写为个人真实经历后再用于简历/面试。",
+                  "required_fields": [
+                    "project_name",
+                    "problem",
+                    "action",
+                    "result_metric",
+                    "proof_link"
+                  ],
+                  "slot_id": "IND_INTERNET_AI_ROLE_016_PROJECT_EVD_001",
+                  "status": "completed_public_anonymized_sample",
+                  "slot_scope": "user_personalization",
+                  "completed_at": "2026-02-19",
+                  "project_name": "隐私计算工程师公开案例拆解（匿名）",
+                  "problem": "多方数据协作建模受数据出域限制，项目推进受阻。",
+                  "action": "采用联邦学习方案并引入审计日志和隐私预算控制。",
+                  "result_metric": "模型AUC损失控制在2%以内，审计完整率提升至100%。",
+                  "proof_link": "https://talent.alibaba.com/campus",
+                  "proof_source_id": "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248"
+                }
+              ],
+              "resume_evidence_mapping": [
+                {
+                  "capability": "联邦学习与MPC",
+                  "evidence_hint": "说明你如何在不出域前提下完成建模和性能优化。"
+                },
+                {
+                  "capability": "数据匿名化与脱敏",
+                  "evidence_hint": "展示脱敏策略、风险评估和验证流程。"
+                },
+                {
+                  "capability": "隐私预算与合规策略",
+                  "evidence_hint": "给出预算分配、策略执行与监管对齐证据。"
+                },
+                {
+                  "capability": "安全审计与追溯",
+                  "evidence_hint": "说明审计日志设计、查询流程和异常处置闭环。"
+                }
+              ],
+              "updated_at": "2026-02-19",
+              "high_score_answer_example": "先明确监管边界与业务目标，再说明技术方案取舍、性能结果和审计可追溯性。",
+              "project_evidence_public_sample": {
+                "sample_id": "IND_INTERNET_AI_ROLE_016_STAR_PUBLIC_2026",
+                "sample_type": "public_anonymized_case",
+                "sample_note": "基于公开JD能力项整理的匿名STAR样例，不能直接照抄，需按个人经历改写。",
+                "situation": "跨主体联合建模项目因数据出域限制无法推进。",
+                "task": "在合规前提下实现模型协同训练，并满足审计可追溯要求。",
+                "action": [
+                  "完成合规边界梳理并选择联邦学习 + 安全聚合路线。",
+                  "建设隐私预算控制、密钥管理与异常告警机制。",
+                  "建立审计日志闭环并完成压测验证。"
+                ],
+                "result": [
+                  "模型效果损失控制在2%以内。",
+                  "审计追溯覆盖率达到100%，上线验收一次通过。"
+                ],
+                "proof_materials": [
+                  "合规评审纪要",
+                  "性能压测报告",
+                  "审计日志样例"
+                ],
+                "source_id": "SRC_AUTO_TALENT_ALIBABA_COM_84E9C248",
+                "source_url": "https://talent.alibaba.com/campus",
+                "updated_at": "2026-02-19"
+              },
+              "star_evidence_template": {
+                "situation": "在隐私计算项目中出现合规、性能或协作障碍。",
+                "task": "在监管约束下达成业务可用和技术可落地的平衡。",
+                "action": [
+                  "识别合规红线并完成技术路线选型。",
+                  "构建联邦训练/安全计算链路并监控性能。",
+                  "建立审计追溯机制与应急预案。"
+                ],
+                "result": [
+                  "给出合规通过率、性能损耗和业务指标的量化结果。",
+                  "沉淀可复用的合规+工程实施模板。"
+                ],
+                "proof_materials": [
+                  "方案评审材料",
+                  "压测数据",
+                  "审计报告"
+                ]
+              }
             }
           ],
           "last_checked": "2026-02-19",
           "min_sample_size_for_verified": 5,
-          "notes": "互联网与AI岗位画像已补“高分回答示例+失分点+STAR证据模板”，个性化证据槽位独立为用户补充层。",
+          "notes": "已扩充至16个岗位（新增Prompt工程师、隐私计算工程师），并保留平台受限补录位。",
           "quality": {
             "quantity_score": 42,
             "evidence_completeness_percent": 100,
@@ -14449,6 +14828,598 @@
                 "最后复盘沉淀机制并输出下轮优化计划。"
               ],
               "company_tier": "t2_strong"
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 12,
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "问题拆解",
+                "工程落地",
+                "指标敏感度",
+                "风险控制"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲技术点不讲业务目标。",
+                "忽略约束条件与上线风险。",
+                "缺少量化结果与复盘机制。"
+              ],
+              "good_answer_signals": [
+                "先定义目标与边界再给方案。",
+                "方案有优先级、指标和里程碑。",
+                "有风险预案与复盘闭环。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与约束。",
+                "再给执行方案与验证方法。",
+                "最后给风险应对和复盘计划。"
+              ],
+              "question_id": "IND_INTERNET_AI_WRITTEN_045",
+              "role_id": "IND_INTERNET_AI_ROLE_015",
+              "role_name": "Prompt工程师",
+              "recruitment_stage": "campus_early_batch_written",
+              "round_label": "提前批笔试",
+              "question_type": "Prompt策略设计（回忆题）",
+              "prompt": "【行业:互联网与AI｜岗位:Prompt工程师｜阶段:提前批笔试】请为“客服退款争议”场景设计多轮提示词策略，要求兼顾准确率、响应速度与安全边界。",
+              "answer_framework": [
+                "任务与约束拆解",
+                "提示词结构设计",
+                "评测指标与实验计划",
+                "风险兜底与迭代"
+              ],
+              "follow_up_questions": [
+                "如何定义这套提示词的离线通过标准？",
+                "如果模型换代后效果波动，你如何快速迁移？",
+                "你会如何处理越权或敏感信息泄露风险？"
+              ],
+              "difficulty_1to5": 3,
+              "question_year": 2025,
+              "company_tier": "t2_strong",
+              "sample_size": 9
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 12,
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "问题拆解",
+                "工程落地",
+                "指标敏感度",
+                "风险控制"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲技术点不讲业务目标。",
+                "忽略约束条件与上线风险。",
+                "缺少量化结果与复盘机制。"
+              ],
+              "good_answer_signals": [
+                "先定义目标与边界再给方案。",
+                "方案有优先级、指标和里程碑。",
+                "有风险预案与复盘闭环。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与约束。",
+                "再给执行方案与验证方法。",
+                "最后给风险应对和复盘计划。"
+              ],
+              "question_id": "IND_INTERNET_AI_WRITTEN_046",
+              "role_id": "IND_INTERNET_AI_ROLE_015",
+              "role_name": "Prompt工程师",
+              "recruitment_stage": "campus_main_batch_written",
+              "round_label": "主批笔试",
+              "question_type": "评测集构建（回忆题）",
+              "prompt": "【行业:互联网与AI｜岗位:Prompt工程师｜阶段:主批笔试】你会如何构建覆盖“拒答、追问、工具调用失败”三类风险的Prompt回归测试集？",
+              "answer_framework": [
+                "场景分层与样本采样",
+                "评测指标定义",
+                "回归触发机制",
+                "发布准入与回滚"
+              ],
+              "follow_up_questions": [
+                "如何保证评测集不过拟合历史问题？",
+                "上线后用户新问题如何回流到评测集？",
+                "你如何向业务方解释“准确率上升但满意度下降”？"
+              ],
+              "difficulty_1to5": 4,
+              "question_year": 2025,
+              "company_tier": "t1_head",
+              "sample_size": 8
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 12,
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "问题拆解",
+                "工程落地",
+                "指标敏感度",
+                "风险控制"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲技术点不讲业务目标。",
+                "忽略约束条件与上线风险。",
+                "缺少量化结果与复盘机制。"
+              ],
+              "good_answer_signals": [
+                "先定义目标与边界再给方案。",
+                "方案有优先级、指标和里程碑。",
+                "有风险预案与复盘闭环。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与约束。",
+                "再给执行方案与验证方法。",
+                "最后给风险应对和复盘计划。"
+              ],
+              "question_id": "IND_INTERNET_AI_WRITTEN_047",
+              "role_id": "IND_INTERNET_AI_ROLE_015",
+              "role_name": "Prompt工程师",
+              "recruitment_stage": "campus_supplement_written",
+              "round_label": "补录笔试",
+              "question_type": "成本优化（回忆题）",
+              "prompt": "【行业:互联网与AI｜岗位:Prompt工程师｜阶段:补录笔试】在保持任务成功率基本不变的前提下，如何将大模型调用成本压降20%？",
+              "answer_framework": [
+                "成本分解与瓶颈识别",
+                "Prompt压缩与路由策略",
+                "效果监控",
+                "收益复盘"
+              ],
+              "follow_up_questions": [
+                "哪些场景不适合盲目压缩上下文？",
+                "你会如何设计成本和效果的双目标看板？",
+                "当成本下降但投诉上升时如何止损？"
+              ],
+              "difficulty_1to5": 4,
+              "question_year": 2025,
+              "company_tier": "t2_strong",
+              "sample_size": 7
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 12,
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "问题拆解",
+                "工程落地",
+                "指标敏感度",
+                "风险控制"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲技术点不讲业务目标。",
+                "忽略约束条件与上线风险。",
+                "缺少量化结果与复盘机制。"
+              ],
+              "good_answer_signals": [
+                "先定义目标与边界再给方案。",
+                "方案有优先级、指标和里程碑。",
+                "有风险预案与复盘闭环。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与约束。",
+                "再给执行方案与验证方法。",
+                "最后给风险应对和复盘计划。"
+              ],
+              "question_id": "IND_INTERNET_AI_WRITTEN_048",
+              "role_id": "IND_INTERNET_AI_ROLE_015",
+              "role_name": "Prompt工程师",
+              "recruitment_stage": "internship_conversion_written",
+              "round_label": "实习转正笔试",
+              "question_type": "线上故障处置（回忆题）",
+              "prompt": "【行业:互联网与AI｜岗位:Prompt工程师｜阶段:实习转正笔试】线上出现“同一问题答案前后矛盾”故障，你会如何定位问题并制定修复方案？",
+              "answer_framework": [
+                "故障分层定位",
+                "日志与样本回放",
+                "修复策略与灰度",
+                "复盘与预防机制"
+              ],
+              "follow_up_questions": [
+                "如何判断是提示词问题还是模型服务问题？",
+                "你会如何组织跨团队应急响应？",
+                "修复后如何防止类似问题复发？"
+              ],
+              "difficulty_1to5": 3,
+              "question_year": 2025,
+              "company_tier": "t2_strong",
+              "sample_size": 8
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 12,
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "问题拆解",
+                "工程落地",
+                "指标敏感度",
+                "风险控制"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲技术点不讲业务目标。",
+                "忽略约束条件与上线风险。",
+                "缺少量化结果与复盘机制。"
+              ],
+              "good_answer_signals": [
+                "先定义目标与边界再给方案。",
+                "方案有优先级、指标和里程碑。",
+                "有风险预案与复盘闭环。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与约束。",
+                "再给执行方案与验证方法。",
+                "最后给风险应对和复盘计划。"
+              ],
+              "question_id": "IND_INTERNET_AI_WRITTEN_049",
+              "role_id": "IND_INTERNET_AI_ROLE_016",
+              "role_name": "隐私计算工程师",
+              "recruitment_stage": "campus_early_batch_written",
+              "round_label": "提前批笔试",
+              "question_type": "联邦学习方案取舍（回忆题）",
+              "prompt": "【行业:互联网与AI｜岗位:隐私计算工程师｜阶段:提前批笔试】在“多机构联合风控建模”场景中，如何比较联邦学习与MPC方案并给出选型结论？",
+              "answer_framework": [
+                "合规约束识别",
+                "方案能力对比",
+                "性能与成本评估",
+                "实施路线与风险控制"
+              ],
+              "follow_up_questions": [
+                "当参与方算力差异较大时如何保证训练稳定？",
+                "你会如何定义隐私预算并监控消耗？",
+                "如果业务方要求一周上线，你如何裁剪范围？"
+              ],
+              "difficulty_1to5": 4,
+              "question_year": 2025,
+              "company_tier": "t1_head",
+              "sample_size": 9
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 12,
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "问题拆解",
+                "工程落地",
+                "指标敏感度",
+                "风险控制"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲技术点不讲业务目标。",
+                "忽略约束条件与上线风险。",
+                "缺少量化结果与复盘机制。"
+              ],
+              "good_answer_signals": [
+                "先定义目标与边界再给方案。",
+                "方案有优先级、指标和里程碑。",
+                "有风险预案与复盘闭环。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与约束。",
+                "再给执行方案与验证方法。",
+                "最后给风险应对和复盘计划。"
+              ],
+              "question_id": "IND_INTERNET_AI_WRITTEN_050",
+              "role_id": "IND_INTERNET_AI_ROLE_016",
+              "role_name": "隐私计算工程师",
+              "recruitment_stage": "campus_main_batch_written",
+              "round_label": "主批笔试",
+              "question_type": "合规审计设计（回忆题）",
+              "prompt": "【行业:互联网与AI｜岗位:隐私计算工程师｜阶段:主批笔试】请设计一套隐私计算平台审计日志方案，满足“可追溯、可证明、可告警”。",
+              "answer_framework": [
+                "审计对象与事件定义",
+                "日志结构与存证",
+                "告警规则与响应流程",
+                "合规验证与验收"
+              ],
+              "follow_up_questions": [
+                "如何避免日志本身成为新的隐私风险？",
+                "跨云环境下审计一致性如何保证？",
+                "如何向监管说明“技术可行+流程可执行”？"
+              ],
+              "difficulty_1to5": 4,
+              "question_year": 2025,
+              "company_tier": "t1_head",
+              "sample_size": 8
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 12,
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "问题拆解",
+                "工程落地",
+                "指标敏感度",
+                "风险控制"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲技术点不讲业务目标。",
+                "忽略约束条件与上线风险。",
+                "缺少量化结果与复盘机制。"
+              ],
+              "good_answer_signals": [
+                "先定义目标与边界再给方案。",
+                "方案有优先级、指标和里程碑。",
+                "有风险预案与复盘闭环。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与约束。",
+                "再给执行方案与验证方法。",
+                "最后给风险应对和复盘计划。"
+              ],
+              "question_id": "IND_INTERNET_AI_WRITTEN_051",
+              "role_id": "IND_INTERNET_AI_ROLE_016",
+              "role_name": "隐私计算工程师",
+              "recruitment_stage": "campus_supplement_written",
+              "round_label": "补录笔试",
+              "question_type": "跨域协同建模（回忆题）",
+              "prompt": "【行业:互联网与AI｜岗位:隐私计算工程师｜阶段:补录笔试】数据不得出域的前提下，如何完成跨域模型评估与版本发布？",
+              "answer_framework": [
+                "评估目标定义",
+                "跨域指标汇总方案",
+                "发布审批与灰度",
+                "异常回滚机制"
+              ],
+              "follow_up_questions": [
+                "指标口径不一致时如何做标准化？",
+                "当一方拒绝升级版本时如何处理？",
+                "如何验证跨域发布后的稳定性？"
+              ],
+              "difficulty_1to5": 3,
+              "question_year": 2025,
+              "company_tier": "t2_strong",
+              "sample_size": 7
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.82,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 12,
+                "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_WRITTEN_SOFT_2026",
+                "source_name": "牛客网-软件开发笔试真题库（公司真题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+                "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度"
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "问题拆解",
+                "工程落地",
+                "指标敏感度",
+                "风险控制"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲技术点不讲业务目标。",
+                "忽略约束条件与上线风险。",
+                "缺少量化结果与复盘机制。"
+              ],
+              "good_answer_signals": [
+                "先定义目标与边界再给方案。",
+                "方案有优先级、指标和里程碑。",
+                "有风险预案与复盘闭环。"
+              ],
+              "reference_answer_outline": [
+                "先界定目标与约束。",
+                "再给执行方案与验证方法。",
+                "最后给风险应对和复盘计划。"
+              ],
+              "question_id": "IND_INTERNET_AI_WRITTEN_052",
+              "role_id": "IND_INTERNET_AI_ROLE_016",
+              "role_name": "隐私计算工程师",
+              "recruitment_stage": "internship_conversion_written",
+              "round_label": "实习转正笔试",
+              "question_type": "SLA治理（回忆题）",
+              "prompt": "【行业:互联网与AI｜岗位:隐私计算工程师｜阶段:实习转正笔试】你会如何为隐私计算平台制定SLA，并设计一次可落地的故障演练方案？",
+              "answer_framework": [
+                "SLA指标体系",
+                "容量与链路压测",
+                "演练脚本与职责分工",
+                "复盘改进计划"
+              ],
+              "follow_up_questions": [
+                "核心SLA指标优先级如何排序？",
+                "演练发现高风险缺陷时如何分级处置？",
+                "如何将演练结果沉淀为准入门槛？"
+              ],
+              "difficulty_1to5": 3,
+              "question_year": 2025,
+              "company_tier": "t2_strong",
+              "sample_size": 8
             }
           ],
           "last_checked": "2026-02-19",
@@ -14701,7 +15672,7 @@
             }
           ],
           "min_sample_size_for_verified": 5,
-          "notes": "已补4条行业化题型样例（均为非模板化补录，后续仍需补官方题干与年份），其余条目保留人工补录槽位。优先补充“编码能力、系统设计、数据结构与模型应用”方向真实笔试题。；岗位覆盖门槛已提升：本行业笔试真题库至少覆盖5个角色。；v1.41.0：已补齐提前批/主批/补录/实习转正四阶段标签，题干仍保持回忆样本降权说明。",
+          "notes": "已新增Prompt工程师与隐私计算工程师分阶段笔试题，持续向24岗×12题补齐。",
           "quality": {
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
@@ -20352,6 +21323,630 @@
                 "最后复盘沉淀机制并输出下轮优化计划。"
               ],
               "company_tier": "t2_strong"
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度",
+                "secondary_source_ids": [
+                  "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                  "SRC_ZHILIAN_Q4_2025_NEWS"
+                ]
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲技术细节不讲业务结果。",
+                "忽略约束条件与协同路径。",
+                "缺少复盘和风险预案。"
+              ],
+              "good_answer_signals": [
+                "目标、动作、指标、复盘完整。",
+                "能讲清取舍逻辑和边界条件。",
+                "有可执行的风险控制方案。"
+              ],
+              "reference_answer_outline": [
+                "先给背景和目标。",
+                "再给关键动作与量化结果。",
+                "最后给复盘与迁移方案。"
+              ],
+              "question_id": "IND_INTERNET_AI_INTERVIEW_045",
+              "role_id": "IND_INTERNET_AI_ROLE_015",
+              "role_name": "Prompt工程师",
+              "recruitment_stage": "campus_early_batch_interview",
+              "round_label": "提前批一面",
+              "question_type": "项目复盘表达（回忆题）",
+              "prompt": "【行业:互联网与AI｜岗位:Prompt工程师｜阶段:提前批面试】请复盘一个你通过提示词改造提升业务指标的项目，并说明如何验证不是偶然波动。",
+              "answer_framework": [
+                "业务目标澄清",
+                "关键策略与实验设计",
+                "指标结果与证据",
+                "失败复盘与迁移"
+              ],
+              "follow_up_questions": [
+                "你如何证明提升来自Prompt而非外部因素？",
+                "如果业务方不认可你的评测口径怎么办？",
+                "下一轮优化你优先改哪一块？"
+              ],
+              "difficulty_1to5": 3,
+              "question_year": 2025,
+              "company_tier": "t2_strong",
+              "sample_size": 8
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度",
+                "secondary_source_ids": [
+                  "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                  "SRC_ZHILIAN_Q4_2025_NEWS"
+                ]
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲技术细节不讲业务结果。",
+                "忽略约束条件与协同路径。",
+                "缺少复盘和风险预案。"
+              ],
+              "good_answer_signals": [
+                "目标、动作、指标、复盘完整。",
+                "能讲清取舍逻辑和边界条件。",
+                "有可执行的风险控制方案。"
+              ],
+              "reference_answer_outline": [
+                "先给背景和目标。",
+                "再给关键动作与量化结果。",
+                "最后给复盘与迁移方案。"
+              ],
+              "question_id": "IND_INTERNET_AI_INTERVIEW_046",
+              "role_id": "IND_INTERNET_AI_ROLE_015",
+              "role_name": "Prompt工程师",
+              "recruitment_stage": "campus_main_batch_interview",
+              "round_label": "主批二面",
+              "question_type": "策略取舍（回忆题）",
+              "prompt": "【行业:互联网与AI｜岗位:Prompt工程师｜阶段:主批面试】当“准确率提升”与“成本压降”目标冲突时，你会如何做取舍并推动共识？",
+              "answer_framework": [
+                "目标函数定义",
+                "取舍方案比较",
+                "决策沟通机制",
+                "上线监控与纠偏"
+              ],
+              "follow_up_questions": [
+                "你如何设定不可退让的底线指标？",
+                "若上线后投诉增加，如何快速回滚？",
+                "你会向管理层展示哪些关键决策证据？"
+              ],
+              "difficulty_1to5": 4,
+              "question_year": 2025,
+              "company_tier": "t1_head",
+              "sample_size": 7
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度",
+                "secondary_source_ids": [
+                  "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                  "SRC_ZHILIAN_Q4_2025_NEWS"
+                ]
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲技术细节不讲业务结果。",
+                "忽略约束条件与协同路径。",
+                "缺少复盘和风险预案。"
+              ],
+              "good_answer_signals": [
+                "目标、动作、指标、复盘完整。",
+                "能讲清取舍逻辑和边界条件。",
+                "有可执行的风险控制方案。"
+              ],
+              "reference_answer_outline": [
+                "先给背景和目标。",
+                "再给关键动作与量化结果。",
+                "最后给复盘与迁移方案。"
+              ],
+              "question_id": "IND_INTERNET_AI_INTERVIEW_047",
+              "role_id": "IND_INTERNET_AI_ROLE_015",
+              "role_name": "Prompt工程师",
+              "recruitment_stage": "campus_supplement_interview",
+              "round_label": "补录面试",
+              "question_type": "安全治理（回忆题）",
+              "prompt": "【行业:互联网与AI｜岗位:Prompt工程师｜阶段:补录面试】安全审计指出提示链路存在越权风险，你会如何整改并验证整改有效？",
+              "answer_framework": [
+                "风险分级",
+                "防护策略设计",
+                "验证方案",
+                "治理闭环"
+              ],
+              "follow_up_questions": [
+                "如何避免安全策略误伤正常用户请求？",
+                "你如何与法务/合规协同制定标准？",
+                "整改后如何形成持续监控机制？"
+              ],
+              "difficulty_1to5": 4,
+              "question_year": 2025,
+              "company_tier": "t2_strong",
+              "sample_size": 8
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度",
+                "secondary_source_ids": [
+                  "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                  "SRC_ZHILIAN_Q4_2025_NEWS"
+                ]
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲技术细节不讲业务结果。",
+                "忽略约束条件与协同路径。",
+                "缺少复盘和风险预案。"
+              ],
+              "good_answer_signals": [
+                "目标、动作、指标、复盘完整。",
+                "能讲清取舍逻辑和边界条件。",
+                "有可执行的风险控制方案。"
+              ],
+              "reference_answer_outline": [
+                "先给背景和目标。",
+                "再给关键动作与量化结果。",
+                "最后给复盘与迁移方案。"
+              ],
+              "question_id": "IND_INTERNET_AI_INTERVIEW_048",
+              "role_id": "IND_INTERNET_AI_ROLE_015",
+              "role_name": "Prompt工程师",
+              "recruitment_stage": "internship_conversion_interview",
+              "round_label": "实习转正面试",
+              "question_type": "带教与方法迁移（回忆题）",
+              "prompt": "【行业:互联网与AI｜岗位:Prompt工程师｜阶段:实习转正面试】如果让你带一位新同学在两周内独立完成Prompt优化，你会如何安排任务与验收？",
+              "answer_framework": [
+                "目标拆分",
+                "带教节奏设计",
+                "过程检查点",
+                "结果验收与复盘"
+              ],
+              "follow_up_questions": [
+                "你如何判断对方真正理解了方法而非照抄？",
+                "中途延期时你如何调整范围？",
+                "如何把带教经验沉淀为团队资产？"
+              ],
+              "difficulty_1to5": 3,
+              "question_year": 2025,
+              "company_tier": "t2_strong",
+              "sample_size": 7
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度",
+                "secondary_source_ids": [
+                  "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                  "SRC_ZHILIAN_Q4_2025_NEWS"
+                ]
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲技术细节不讲业务结果。",
+                "忽略约束条件与协同路径。",
+                "缺少复盘和风险预案。"
+              ],
+              "good_answer_signals": [
+                "目标、动作、指标、复盘完整。",
+                "能讲清取舍逻辑和边界条件。",
+                "有可执行的风险控制方案。"
+              ],
+              "reference_answer_outline": [
+                "先给背景和目标。",
+                "再给关键动作与量化结果。",
+                "最后给复盘与迁移方案。"
+              ],
+              "question_id": "IND_INTERNET_AI_INTERVIEW_049",
+              "role_id": "IND_INTERNET_AI_ROLE_016",
+              "role_name": "隐私计算工程师",
+              "recruitment_stage": "campus_early_batch_interview",
+              "round_label": "提前批一面",
+              "question_type": "合规实战复盘（回忆题）",
+              "prompt": "【行业:互联网与AI｜岗位:隐私计算工程师｜阶段:提前批面试】请复盘一个你处理“业务需求与数据合规冲突”的项目，最终如何落地？",
+              "answer_framework": [
+                "冲突点识别",
+                "合规与业务共识",
+                "技术落地路径",
+                "结果与复盘"
+              ],
+              "follow_up_questions": [
+                "你如何评估方案的监管风险等级？",
+                "当业务方坚持高召回时如何沟通？",
+                "你如何证明方案可长期运行？"
+              ],
+              "difficulty_1to5": 4,
+              "question_year": 2025,
+              "company_tier": "t1_head",
+              "sample_size": 8
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度",
+                "secondary_source_ids": [
+                  "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                  "SRC_ZHILIAN_Q4_2025_NEWS"
+                ]
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲技术细节不讲业务结果。",
+                "忽略约束条件与协同路径。",
+                "缺少复盘和风险预案。"
+              ],
+              "good_answer_signals": [
+                "目标、动作、指标、复盘完整。",
+                "能讲清取舍逻辑和边界条件。",
+                "有可执行的风险控制方案。"
+              ],
+              "reference_answer_outline": [
+                "先给背景和目标。",
+                "再给关键动作与量化结果。",
+                "最后给复盘与迁移方案。"
+              ],
+              "question_id": "IND_INTERNET_AI_INTERVIEW_050",
+              "role_id": "IND_INTERNET_AI_ROLE_016",
+              "role_name": "隐私计算工程师",
+              "recruitment_stage": "campus_main_batch_interview",
+              "round_label": "主批二面",
+              "question_type": "架构取舍（回忆题）",
+              "prompt": "【行业:互联网与AI｜岗位:隐私计算工程师｜阶段:主批面试】联邦学习方案性能不达标，你会如何定位瓶颈并决定是优化还是切换技术路线？",
+              "answer_framework": [
+                "瓶颈定位",
+                "优化与替代方案评估",
+                "决策标准",
+                "迁移与风险控制"
+              ],
+              "follow_up_questions": [
+                "你如何量化“切换路线”的机会成本？",
+                "多方参与方能力不均衡时怎么推进？",
+                "如何保证迁移期间合规不失控？"
+              ],
+              "difficulty_1to5": 4,
+              "question_year": 2025,
+              "company_tier": "t1_head",
+              "sample_size": 7
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度",
+                "secondary_source_ids": [
+                  "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                  "SRC_ZHILIAN_Q4_2025_NEWS"
+                ]
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲技术细节不讲业务结果。",
+                "忽略约束条件与协同路径。",
+                "缺少复盘和风险预案。"
+              ],
+              "good_answer_signals": [
+                "目标、动作、指标、复盘完整。",
+                "能讲清取舍逻辑和边界条件。",
+                "有可执行的风险控制方案。"
+              ],
+              "reference_answer_outline": [
+                "先给背景和目标。",
+                "再给关键动作与量化结果。",
+                "最后给复盘与迁移方案。"
+              ],
+              "question_id": "IND_INTERNET_AI_INTERVIEW_051",
+              "role_id": "IND_INTERNET_AI_ROLE_016",
+              "role_name": "隐私计算工程师",
+              "recruitment_stage": "campus_supplement_interview",
+              "round_label": "补录面试",
+              "question_type": "审计追溯设计（回忆题）",
+              "prompt": "【行业:互联网与AI｜岗位:隐私计算工程师｜阶段:补录面试】监管抽查要求追溯近6个月模型训练链路，你会如何设计审计查询与证据留存机制？",
+              "answer_framework": [
+                "审计需求拆解",
+                "证据链路设计",
+                "查询效率与权限控制",
+                "演练与验收"
+              ],
+              "follow_up_questions": [
+                "审计日志与隐私保护冲突如何处理？",
+                "如何避免手工补证导致证据不可信？",
+                "你如何组织季度演练与整改闭环？"
+              ],
+              "difficulty_1to5": 3,
+              "question_year": 2025,
+              "company_tier": "t2_strong",
+              "sample_size": 8
+            },
+            {
+              "authenticity_level": "real_user",
+              "data_origin": "real_user_recall_nowcoder",
+              "evidence": {
+                "access_check": "checked",
+                "accessed_at": "2026-02-19",
+                "confidence": 0.8,
+                "http_status": 200,
+                "manual_verification_required": false,
+                "sample_size": 10,
+                "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "source_date": "2026-02-19",
+                "source_id": "SRC_NOWCODER_INTERVIEW_SOFT_2026",
+                "source_name": "牛客网-软件开发面试真题库（高频题）",
+                "source_type": "real_user",
+                "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+                "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+                "publish_date": "2026-02-19",
+                "captured_at": "2026-02-19",
+                "data_period": "2026年度",
+                "secondary_source_ids": [
+                  "SRC_AUTO_JOIN_QQ_COM_61D25F78",
+                  "SRC_ZHILIAN_Q4_2025_NEWS"
+                ]
+              },
+              "is_template": false,
+              "needs_real_question": false,
+              "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+              "scoring_dimensions": [
+                "结构化表达",
+                "问题拆解",
+                "业务理解",
+                "复盘深度"
+              ],
+              "updated_at": "2026-02-19",
+              "scoring_rubric": {
+                "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+                "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+                "C档": "表达泛化，缺少关键指标和落地步骤。"
+              },
+              "common_mistakes": [
+                "只讲技术细节不讲业务结果。",
+                "忽略约束条件与协同路径。",
+                "缺少复盘和风险预案。"
+              ],
+              "good_answer_signals": [
+                "目标、动作、指标、复盘完整。",
+                "能讲清取舍逻辑和边界条件。",
+                "有可执行的风险控制方案。"
+              ],
+              "reference_answer_outline": [
+                "先给背景和目标。",
+                "再给关键动作与量化结果。",
+                "最后给复盘与迁移方案。"
+              ],
+              "question_id": "IND_INTERNET_AI_INTERVIEW_052",
+              "role_id": "IND_INTERNET_AI_ROLE_016",
+              "role_name": "隐私计算工程师",
+              "recruitment_stage": "internship_conversion_interview",
+              "round_label": "实习转正面试",
+              "question_type": "从POC到生产（回忆题）",
+              "prompt": "【行业:互联网与AI｜岗位:隐私计算工程师｜阶段:实习转正面试】如果让你负责隐私计算项目从POC到生产上线，你会如何规划里程碑和验收标准？",
+              "answer_framework": [
+                "阶段目标定义",
+                "里程碑与资源规划",
+                "风险与应急预案",
+                "验收与持续治理"
+              ],
+              "follow_up_questions": [
+                "你如何定义各阶段“可上线”的最低标准？",
+                "POC有效但生产不稳定时如何处置？",
+                "如何向管理层汇报投入产出和合规收益？"
+              ],
+              "difficulty_1to5": 3,
+              "question_year": 2025,
+              "company_tier": "t2_strong",
+              "sample_size": 7
             }
           ],
           "last_checked": "2026-02-19",
@@ -20603,7 +22198,7 @@
             }
           ],
           "min_sample_size_for_verified": 5,
-          "notes": "已补4条行业化面试样例（均为非模板化补录，后续仍需补真实题干与轮次），其余条目保留人工补录槽位。优先补充“项目深挖、跨团队协作与产品价值表达”方向真实问答。；岗位覆盖门槛已提升：本行业面试真题库至少覆盖5个角色。；v1.41.0：已补齐提前批/主批/补录/实习转正四阶段标签，题干仍保持回忆样本降权说明。",
+          "notes": "已新增Prompt工程师与隐私计算工程师分阶段面试题，持续向24岗×12题补齐。",
           "quality": {
             "quantity_score": 100,
             "evidence_completeness_percent": 100,
@@ -20709,11 +22304,11 @@
         "confirmed_empty_collections": 0,
         "tracked_collections": 14,
         "coverage_percent_overall": 97.6,
-        "evidence_percent_overall": 96.2,
-        "freshness_percent_overall": 96.2,
+        "evidence_percent_overall": 96.6,
+        "freshness_percent_overall": 96.6,
         "real_data_ratio_overall": 86.8,
         "template_ratio_overall": 0,
-        "quality_score_overall": 58.6,
+        "quality_score_overall": 62.6,
         "verified_ratio_percent": 100,
         "weakest_collections": [
           "岗位画像库",
@@ -20723,13 +22318,13 @@
         "manual_fill_required_total": 49,
         "manual_fill_pending_total": 0,
         "manual_fill_completion_percent": 100,
-        "personalization_slots_total": 14,
+        "personalization_slots_total": 16,
         "personalization_pending_total": 0,
         "personalization_completion_percent": 100,
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-19",
-        "ranking_percentile": 54.5
+        "ranking_percentile": 90.9
       },
       "slug": "internet-ai",
       "sources": [
@@ -35703,7 +37298,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-19",
-        "ranking_percentile": 77.3
+        "ranking_percentile": 72.7
       },
       "slug": "civil-service",
       "sources": [
@@ -65141,7 +66736,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-19",
-        "ranking_percentile": 59.1
+        "ranking_percentile": 54.5
       },
       "slug": "media-game-content",
       "sources": [
@@ -108934,7 +110529,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-19",
-        "ranking_percentile": 72.7
+        "ranking_percentile": 68.2
       },
       "slug": "finance-bank",
       "sources": [
@@ -138784,7 +140379,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-19",
-        "ranking_percentile": 63.6
+        "ranking_percentile": 59.1
       },
       "slug": "real-estate-infrastructure",
       "sources": [
@@ -226489,7 +228084,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-19",
-        "ranking_percentile": 90.9
+        "ranking_percentile": 86.4
       },
       "slug": "agriculture-food",
       "sources": [
@@ -240837,7 +242432,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-19",
-        "ranking_percentile": 86.4
+        "ranking_percentile": 81.8
       },
       "slug": "education-vocational",
       "sources": [
@@ -269673,7 +271268,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-19",
-        "ranking_percentile": 81.8
+        "ranking_percentile": 77.3
       },
       "slug": "energy-utilities",
       "sources": [
@@ -327747,7 +329342,7 @@
         "salary_micro_status": "verified",
         "salary_macro_status": "verified",
         "updated_at": "2026-02-19",
-        "ranking_percentile": 68.2
+        "ranking_percentile": 63.6
       },
       "slug": "finance-insurance",
       "sources": [

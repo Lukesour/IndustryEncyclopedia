@@ -786,8 +786,8 @@ DEPTH_STAGE_COVERAGE_ISSUES_JSON="$(jq --argjson min_stage "${GATE_STAGE_COVERAG
       industry: $entry."行业名称",
       role_id: $role.role_id,
       role_name: $role.role_name,
-      written_stage_coverage,
-      interview_stage_coverage,
+      written_stage_coverage: $written_stage_coverage,
+      interview_stage_coverage: $interview_stage_coverage,
       min_required: $min_stage
     }
   | select(.written_stage_coverage < .min_required or .interview_stage_coverage < .min_required)
