@@ -3,7 +3,7 @@
 本仓库包含针对中国大陆应届生求职市场的行业百科数据与校验脚本。
 
 ## 主要文件
-- `行业百科.json`：主数据文件（当前版本 `v1.55.0`）
+- `行业百科.json`：主数据文件（当前版本 `v1.56.0`）
 - `行业百科.schema.json`：JSON Schema
 - `reports/`：质量报告与来源核验报告
 - `scripts/`：校验与质量流水线脚本
@@ -28,11 +28,11 @@
 - `reports/depth_gap_latest.json`：v1.55百科深度门槛报告（高增长岗落地率、核心岗4阶段、岗位深链、平台待验证占比）
 
 ## 本次更新要点（2026-02-19）
-- 主数据升级到 `v1.55.0`，为23行业高增长岗逐条补充落地状态、映射`role_id`、题库覆盖快照与补录缺口位。
-- 每行业新增`职业决策模块_v155`：岗位对比矩阵、90/180天准备、止损阈值、转岗路径执行提示。
-- 治理配置新增“百科深度门槛_v155”，与发布硬门槛解耦：发布门槛保可发布，深度门槛保可决策。
-- `scripts/run_quality_pipeline.sh` 新增 `encyclopedia_depth_v155` 指标，并输出 `reports/depth_gap_latest.json` 作为扩容排期输入。
-- 联网复核平台入口可达性：BOSS网页端可用，小红书网页搜索可访问（仍建议App端留截图），工信部官网存在403需备用来源。
+- 主数据升级到 `v1.56.0`，按23行业扩展包逐行业补齐高增长细分岗位深度卡（岗位职责边界、技能栈、成长台阶、转岗去向、不适配信号）。
+- 笔试/面试题库新增高增长岗扩展题：笔试 `+235`、面试 `+236`，覆盖行业差异化高增长岗（8-12个/行业）。
+- 每行业新增 `细分岗位深度扩展_v156` 模块，并统一写入平台受限缺口位：需要什么信息、如何搜索、从哪里搜索、如何留证。
+- 角色画像的 `platform_backfill_gap` 统一升级为“官方已核验+平台样本待补”状态，避免缺口信息丢失。
+- 质量流水线继续输出 `depth_gap_latest.json`，用于跟踪高增长岗落地率、核心岗4阶段覆盖、岗位深链率与平台待补比例。
 
 ## 校验命令
 ```bash
@@ -40,7 +40,7 @@ bash scripts/validate_industry_encyclopedia.sh 行业百科.schema.json 行业�
 bash scripts/validate_industry_references.sh 行业百科.json
 node scripts/recompute_progress_v1_15.js 行业百科.json
 bash scripts/run_quality_pipeline.sh 行业百科.json
-node scripts/rebuild_main_from_entries_v1_55.js
+node scripts/rebuild_main_from_entries_v1_56.js
 bash scripts/split_industry_files.sh 行业百科.json data
 ```
 
