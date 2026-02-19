@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-02-19T06:54:38Z",
+  "generated_at": "2026-02-19T06:58:50Z",
   "data_file": "行业百科.json",
   "document": {
-    "version": "v1.53.6",
+    "version": "v1.53.7",
     "release_date": "2026-02-19",
     "entries": 23
   },
@@ -20,16 +20,16 @@
   ],
   "progress_avg": {
     "coverage": 97.59999999999997,
-    "evidence": 95.8478260869565,
+    "evidence": 95.86521739130433,
     "real_data_ratio": 87.03913043478259,
-    "quality": 59.217391304347835,
+    "quality": 59.40869565217392,
     "manual_fill_completion": 100
   },
   "progress_dispersion": {
-    "quality_score_stddev": 3.9278993361219157,
+    "quality_score_stddev": 3.8085616414780024,
     "real_data_ratio_stddev": 0.3796326948337931,
-    "evidence_stddev": 0.5492046147700206,
-    "freshness_stddev": 1.175329258456752,
+    "evidence_stddev": 0.5661530716750601,
+    "freshness_stddev": 1.1879355732850123,
     "quality_score_min": 54.1,
     "quality_score_max": 67.1
   },
@@ -46,13 +46,13 @@
     "salary_observed_tier_coverage_stddev": 0.48804226784007926,
     "salary_observed_tier_coverage_min": 2,
     "salary_observed_tier_coverage_max": 3,
-    "question_depth_stddev": 6.857722317761463,
+    "question_depth_stddev": 7.272965711850063,
     "question_depth_min": 88,
     "question_depth_max": 108,
-    "written_role_coverage_stddev": 0.8249419983047949,
+    "written_role_coverage_stddev": 0.878217820727137,
     "written_role_coverage_min": 14,
     "written_role_coverage_max": 16,
-    "interview_role_coverage_stddev": 0.8249419983047949,
+    "interview_role_coverage_stddev": 0.878217820727137,
     "interview_role_coverage_min": 14,
     "interview_role_coverage_max": 16,
     "event_count_stddev": 0.4601306627938418,
@@ -66,27 +66,27 @@
     "decision_evidence_sample_size_max": 18
   },
   "content_realness": {
-    "written_total": 1068,
+    "written_total": 1076,
     "written_need_real": 0,
-    "written_real_ready": 1068,
-    "interview_total": 1058,
+    "written_real_ready": 1076,
+    "interview_total": 1066,
     "interview_need_real": 0,
-    "interview_real_ready": 1058
+    "interview_real_ready": 1066
   },
   "template_quality": {
     "template_items": 0,
-    "items_total": 3730,
+    "items_total": 3748,
     "template_ratio_percent": 0
   },
   "source_concentration": {
-    "total_refs": 3730,
-    "top1_share_percent": 4.2359249329758715,
-    "top5_share_percent": 16.943699731903486
+    "total_refs": 3748,
+    "top1_share_percent": 4.429028815368197,
+    "top5_share_percent": 17.28922091782284
   },
   "freshness_detail": {
-    "source_date_records": 4573,
+    "source_date_records": 4591,
     "effective_date_method": "publish_date_first_fallback_source_date",
-    "within_180_days_percent": 92.56505576208178,
+    "within_180_days_percent": 92.59420605532564,
     "older_than_365_days_count": 0
   },
   "salary_layers": {
@@ -178,7 +178,7 @@
     "p2_completed_slots": 0
   },
   "personalization": {
-    "slots_total": 332,
+    "slots_total": 334,
     "pending_total": 0,
     "completion_percent": 100
   },
@@ -310,45 +310,45 @@
     },
     "actual": {
       "role_count_per_industry": {
-        "avg": 14.434782608695652,
+        "avg": 14.521739130434783,
         "min": 14,
         "max": 16
       },
       "written_per_role": {
-        "avg": 3.2142857142857144,
+        "avg": 3.218555900621118,
         "min": 3.142857142857143,
         "max": 3.4375
       },
       "interview_per_role": {
-        "avg": 3.184006211180125,
+        "avg": 3.1886645962732927,
         "min": 3.142857142857143,
         "max": 3.3125
       },
       "stage_coverage_per_role": {
-        "written_avg": 2.5963855421686746,
-        "interview_avg": 2.5993975903614457
+        "written_avg": 2.604790419161677,
+        "interview_avg": 2.6077844311377247
       },
       "source_url_depth": {
-        "depth_ge2_percent": 47.44055944055944
+        "depth_ge2_percent": 47.64820484274979
       }
     }
   },
   "template_reuse_v145": {
     "answer_framework": {
-      "written_top1_percent": 57.39700374531835,
-      "written_top3_percent": 82.11610486891385,
-      "interview_top1_percent": 67.86389413988658,
-      "interview_top3_percent": 91.87145557655954
+      "written_top1_percent": 56.97026022304833,
+      "written_top3_percent": 81.50557620817844,
+      "interview_top1_percent": 67.3545966228893,
+      "interview_top3_percent": 91.18198874296435
     },
     "follow_up_questions": {
-      "written_top1_percent": 15.074906367041198,
-      "written_top3_percent": 40.23096129837703,
-      "interview_top1_percent": 12.507876496534342,
-      "interview_top3_percent": 37.523629489603024
+      "written_top1_percent": 14.962825278810408,
+      "written_top3_percent": 39.93184634448575,
+      "interview_top1_percent": 12.414008755472171,
+      "interview_top3_percent": 37.24202626641651
     },
     "elimination_risks": {
-      "role_profile_top1_percent": 53.6144578313253,
-      "role_profile_top3_percent": 87.95180722891567
+      "role_profile_top1_percent": 53.293413173652695,
+      "role_profile_top3_percent": 87.42514970059881
     }
   }
 }
