@@ -1,0 +1,941 @@
+{
+  "version": "v1.61.0",
+  "generated_at": "2026-02-20T15:42:03.897Z",
+  "objective": "校准基线漂移并输出23行业扩容+补录可执行任务表，支持站内闭环职业决策。",
+  "summary": {
+    "industry_count": 23,
+    "actual_roles": 583,
+    "role_target": 751,
+    "role_gap": 168,
+    "written_total": 3539,
+    "interview_total": 3537,
+    "gap8_written": 1125,
+    "gap8_interview": 1127,
+    "gap10_written": 2291,
+    "gap10_interview": 2293,
+    "plan_drift_count": 9
+  },
+  "source_layers": {
+    "L1": [
+      "https://www.moe.gov.cn/",
+      "https://www.mohrss.gov.cn/",
+      "https://www.ncss.cn/",
+      "https://chinajob.mohrss.gov.cn/",
+      "http://www.scs.gov.cn/",
+      "http://www.cpta.com.cn/"
+    ],
+    "L1_enterprise": [
+      "https://join.qq.com/",
+      "https://jobs.bytedance.com/campus",
+      "https://talent.alibaba.com/campus/home",
+      "https://campus.jd.com/",
+      "https://job.byd.com/"
+    ],
+    "L2": [
+      "https://www.zhipin.com/web/geek/job",
+      "https://www.zhaopin.com/",
+      "https://www.51job.com/",
+      "https://www.liepin.com/"
+    ],
+    "L3": [
+      "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+      "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+      "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+    ]
+  },
+  "required_backfill_fields": [
+    "岗位名称",
+    "城市",
+    "公司层级",
+    "批次/轮次",
+    "薪资区间P25/P50/P75",
+    "发布时间",
+    "来源链接或帖子ID",
+    "样本量",
+    "截图路径与截图时间",
+    "缺失原因",
+    "预计回填时间"
+  ],
+  "execution_rules": {
+    "phase_1": "先校准current_roles，再按行业复杂度补岗位树。",
+    "phase_2": "核心岗优先补到10/10，再提升至分层目标（14-20/10-14/8-10）。",
+    "phase_3": "补齐star/common并把platform占位字段转为证据化实填。",
+    "phase_4": "发布前跑质量门禁并处理阻断项。"
+  },
+  "industry_tasks": [
+    {
+      "industry_id": "IND_BIOMED_DEVICE",
+      "industry_name": "生物医药与器械",
+      "priority": "P0",
+      "current_roles_in_plan": 27,
+      "actual_roles_now": 29,
+      "role_target": 39,
+      "role_gap": 10,
+      "current_roles_delta": 2,
+      "written_total": 178,
+      "interview_total": 179,
+      "written_per_role": 6.138,
+      "interview_per_role": 6.172,
+      "question_gap_to_8": {
+        "written": 54,
+        "interview": 53
+      },
+      "question_gap_to_10": {
+        "written": 112,
+        "interview": 111
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 20,
+        "missing_common_deduction_points": 9,
+        "platform_placeholder_roles": 29
+      },
+      "role_candidates": [
+        "临床运营专员",
+        "药物警戒专员",
+        "注册事务工程师",
+        "生物统计分析师"
+      ],
+      "source_search": {
+        "boss_query": "应届生 生物医药 器械 临床 注册 质量",
+        "xiaohongshu_query": "生物医药 器械 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_FIN_SECURITIES_FUND",
+      "industry_name": "金融-证券基金",
+      "priority": "P0",
+      "current_roles_in_plan": 27,
+      "actual_roles_now": 29,
+      "role_target": 38,
+      "role_gap": 9,
+      "current_roles_delta": 2,
+      "written_total": 178,
+      "interview_total": 178,
+      "written_per_role": 6.138,
+      "interview_per_role": 6.138,
+      "question_gap_to_8": {
+        "written": 54,
+        "interview": 54
+      },
+      "question_gap_to_10": {
+        "written": 112,
+        "interview": 112
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 22,
+        "missing_common_deduction_points": 9,
+        "platform_placeholder_roles": 29
+      },
+      "role_candidates": [
+        "行业研究员",
+        "量化研究员",
+        "基金运营专员",
+        "估值核算专员"
+      ],
+      "source_search": {
+        "boss_query": "应届生 证券 基金 研究 量化 运营",
+        "xiaohongshu_query": "证券 基金 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_ENERGY_UTILITIES",
+      "industry_name": "能源与公用事业",
+      "priority": "P0",
+      "current_roles_in_plan": 26,
+      "actual_roles_now": 28,
+      "role_target": 37,
+      "role_gap": 9,
+      "current_roles_delta": 2,
+      "written_total": 172,
+      "interview_total": 172,
+      "written_per_role": 6.143,
+      "interview_per_role": 6.143,
+      "question_gap_to_8": {
+        "written": 52,
+        "interview": 52
+      },
+      "question_gap_to_10": {
+        "written": 108,
+        "interview": 108
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 19,
+        "missing_common_deduction_points": 9,
+        "platform_placeholder_roles": 28
+      },
+      "role_candidates": [
+        "电力交易分析师",
+        "调度优化工程师",
+        "储能运营工程师",
+        "碳资产管理专员"
+      ],
+      "source_search": {
+        "boss_query": "应届生 能源 电力 调度 交易 运维",
+        "xiaohongshu_query": "电力 能源 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_AUTO_INTELLIGENT_DRIVING",
+      "industry_name": "汽车与智能驾驶",
+      "priority": "P0",
+      "current_roles_in_plan": 26,
+      "actual_roles_now": 28,
+      "role_target": 37,
+      "role_gap": 9,
+      "current_roles_delta": 2,
+      "written_total": 172,
+      "interview_total": 172,
+      "written_per_role": 6.143,
+      "interview_per_role": 6.143,
+      "question_gap_to_8": {
+        "written": 52,
+        "interview": 52
+      },
+      "question_gap_to_10": {
+        "written": 108,
+        "interview": 108
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 21,
+        "missing_common_deduction_points": 9,
+        "platform_placeholder_roles": 28
+      },
+      "role_candidates": [
+        "感知融合工程师",
+        "规控算法工程师",
+        "仿真测试工程师",
+        "功能安全工程师"
+      ],
+      "source_search": {
+        "boss_query": "应届生 智能驾驶 感知 规控 仿真",
+        "xiaohongshu_query": "智能驾驶 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_FIN_BANK",
+      "industry_name": "金融-银行",
+      "priority": "P0",
+      "current_roles_in_plan": 26,
+      "actual_roles_now": 28,
+      "role_target": 36,
+      "role_gap": 8,
+      "current_roles_delta": 2,
+      "written_total": 172,
+      "interview_total": 172,
+      "written_per_role": 6.143,
+      "interview_per_role": 6.143,
+      "question_gap_to_8": {
+        "written": 52,
+        "interview": 52
+      },
+      "question_gap_to_10": {
+        "written": 108,
+        "interview": 108
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 15,
+        "missing_common_deduction_points": 9,
+        "platform_placeholder_roles": 28
+      },
+      "role_candidates": [
+        "对公授信分析师",
+        "交易银行产品运营",
+        "反洗钱分析师",
+        "资产保全专员"
+      ],
+      "source_search": {
+        "boss_query": "应届生 银行 对公 风控 授信 运营",
+        "xiaohongshu_query": "银行 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_PUBLIC_INSTITUTION",
+      "industry_name": "事业单位体系",
+      "priority": "P0",
+      "current_roles_in_plan": 24,
+      "actual_roles_now": 26,
+      "role_target": 34,
+      "role_gap": 8,
+      "current_roles_delta": 2,
+      "written_total": 160,
+      "interview_total": 160,
+      "written_per_role": 6.154,
+      "interview_per_role": 6.154,
+      "question_gap_to_8": {
+        "written": 48,
+        "interview": 48
+      },
+      "question_gap_to_10": {
+        "written": 100,
+        "interview": 100
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 17,
+        "missing_common_deduction_points": 11,
+        "platform_placeholder_roles": 26
+      },
+      "role_candidates": [
+        "医院行政管理专员",
+        "高校教务管理专员",
+        "科研项目管理专员",
+        "采购资产管理专员"
+      ],
+      "source_search": {
+        "boss_query": "应届生 事业单位 医院 高校 行政",
+        "xiaohongshu_query": "事业单位 面试 结构化 备考"
+      }
+    },
+    {
+      "industry_id": "IND_ECOMMERCE_CROSSBORDER",
+      "industry_name": "电商与跨境电商",
+      "priority": "P0",
+      "current_roles_in_plan": 24,
+      "actual_roles_now": 26,
+      "role_target": 34,
+      "role_gap": 8,
+      "current_roles_delta": 2,
+      "written_total": 160,
+      "interview_total": 160,
+      "written_per_role": 6.154,
+      "interview_per_role": 6.154,
+      "question_gap_to_8": {
+        "written": 48,
+        "interview": 48
+      },
+      "question_gap_to_10": {
+        "written": 100,
+        "interview": 100
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 15,
+        "missing_common_deduction_points": 9,
+        "platform_placeholder_roles": 26
+      },
+      "role_candidates": [
+        "跨境选品运营",
+        "站内投放优化师",
+        "跨境物流运营",
+        "关务合规专员"
+      ],
+      "source_search": {
+        "boss_query": "应届生 跨境电商 选品 投放 运营",
+        "xiaohongshu_query": "跨境电商 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_FMCG_RETAIL",
+      "industry_name": "快消与零售",
+      "priority": "P0",
+      "current_roles_in_plan": 24,
+      "actual_roles_now": 26,
+      "role_target": 33,
+      "role_gap": 7,
+      "current_roles_delta": 2,
+      "written_total": 157,
+      "interview_total": 157,
+      "written_per_role": 6.038,
+      "interview_per_role": 6.038,
+      "question_gap_to_8": {
+        "written": 51,
+        "interview": 51
+      },
+      "question_gap_to_10": {
+        "written": 103,
+        "interview": 103
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 20,
+        "missing_common_deduction_points": 10,
+        "platform_placeholder_roles": 26
+      },
+      "role_candidates": [
+        "品类运营专员",
+        "渠道销售管培",
+        "门店运营专员",
+        "补货计划专员"
+      ],
+      "source_search": {
+        "boss_query": "应届生 快消 零售 渠道 运营",
+        "xiaohongshu_query": "快消 零售 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_NEW_ENERGY",
+      "industry_name": "新能源",
+      "priority": "P0",
+      "current_roles_in_plan": 26,
+      "actual_roles_now": 36,
+      "role_target": 36,
+      "role_gap": 0,
+      "current_roles_delta": 10,
+      "written_total": 220,
+      "interview_total": 220,
+      "written_per_role": 6.111,
+      "interview_per_role": 6.111,
+      "question_gap_to_8": {
+        "written": 68,
+        "interview": 68
+      },
+      "question_gap_to_10": {
+        "written": 140,
+        "interview": 140
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 25,
+        "missing_common_deduction_points": 9,
+        "platform_placeholder_roles": 36
+      },
+      "role_candidates": [
+        "电池工艺工程师",
+        "储能系统工程师",
+        "BMS算法工程师",
+        "碳交易专员"
+      ],
+      "source_search": {
+        "boss_query": "应届生 新能源 电池 储能 光伏",
+        "xiaohongshu_query": "新能源 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_INTERNET_AI",
+      "industry_name": "互联网与AI",
+      "priority": "P1",
+      "current_roles_in_plan": 25,
+      "actual_roles_now": 25,
+      "role_target": 35,
+      "role_gap": 10,
+      "current_roles_delta": 0,
+      "written_total": 150,
+      "interview_total": 150,
+      "written_per_role": 6,
+      "interview_per_role": 6,
+      "question_gap_to_8": {
+        "written": 50,
+        "interview": 50
+      },
+      "question_gap_to_10": {
+        "written": 100,
+        "interview": 100
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 15,
+        "missing_common_deduction_points": 10,
+        "platform_placeholder_roles": 25
+      },
+      "role_candidates": [
+        "MLOps工程师",
+        "LLM应用工程师",
+        "AI安全评测工程师",
+        "算法平台工程师"
+      ],
+      "source_search": {
+        "boss_query": "应届生 互联网 AI 算法 后端",
+        "xiaohongshu_query": "互联网 AI 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_SEMICONDUCTOR_ELECTRONICS",
+      "industry_name": "半导体与电子",
+      "priority": "P1",
+      "current_roles_in_plan": 25,
+      "actual_roles_now": 25,
+      "role_target": 35,
+      "role_gap": 10,
+      "current_roles_delta": 0,
+      "written_total": 151,
+      "interview_total": 151,
+      "written_per_role": 6.04,
+      "interview_per_role": 6.04,
+      "question_gap_to_8": {
+        "written": 49,
+        "interview": 49
+      },
+      "question_gap_to_10": {
+        "written": 99,
+        "interview": 99
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 15,
+        "missing_common_deduction_points": 10,
+        "platform_placeholder_roles": 25
+      },
+      "role_candidates": [
+        "工艺整合工程师",
+        "设备工程师",
+        "DFT工程师",
+        "失效分析工程师"
+      ],
+      "source_search": {
+        "boss_query": "应届生 半导体 工艺 设备 测试",
+        "xiaohongshu_query": "半导体 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION",
+      "industry_name": "高端制造与工业自动化",
+      "priority": "P1",
+      "current_roles_in_plan": 26,
+      "actual_roles_now": 26,
+      "role_target": 35,
+      "role_gap": 9,
+      "current_roles_delta": 0,
+      "written_total": 156,
+      "interview_total": 156,
+      "written_per_role": 6,
+      "interview_per_role": 6,
+      "question_gap_to_8": {
+        "written": 52,
+        "interview": 52
+      },
+      "question_gap_to_10": {
+        "written": 104,
+        "interview": 104
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 20,
+        "missing_common_deduction_points": 10,
+        "platform_placeholder_roles": 26
+      },
+      "role_candidates": [
+        "MES实施工程师",
+        "机器视觉工程师",
+        "工业互联网产品经理",
+        "OT安全工程师"
+      ],
+      "source_search": {
+        "boss_query": "应届生 工业自动化 PLC MES 视觉",
+        "xiaohongshu_query": "工业自动化 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_CONSULTING_PRO_SERVICES",
+      "industry_name": "咨询与专业服务",
+      "priority": "P1",
+      "current_roles_in_plan": 25,
+      "actual_roles_now": 25,
+      "role_target": 33,
+      "role_gap": 8,
+      "current_roles_delta": 0,
+      "written_total": 150,
+      "interview_total": 150,
+      "written_per_role": 6,
+      "interview_per_role": 6,
+      "question_gap_to_8": {
+        "written": 50,
+        "interview": 50
+      },
+      "question_gap_to_10": {
+        "written": 100,
+        "interview": 100
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 19,
+        "missing_common_deduction_points": 10,
+        "platform_placeholder_roles": 25
+      },
+      "role_candidates": [
+        "战略咨询顾问",
+        "ESG咨询顾问",
+        "数据分析顾问",
+        "并购交易顾问"
+      ],
+      "source_search": {
+        "boss_query": "应届生 咨询 审计 税务 ESG",
+        "xiaohongshu_query": "咨询 校招 case 面经"
+      }
+    },
+    {
+      "industry_id": "IND_FIN_INSURANCE",
+      "industry_name": "金融-保险",
+      "priority": "P1",
+      "current_roles_in_plan": 23,
+      "actual_roles_now": 23,
+      "role_target": 31,
+      "role_gap": 8,
+      "current_roles_delta": 0,
+      "written_total": 140,
+      "interview_total": 139,
+      "written_per_role": 6.087,
+      "interview_per_role": 6.043,
+      "question_gap_to_8": {
+        "written": 44,
+        "interview": 45
+      },
+      "question_gap_to_10": {
+        "written": 90,
+        "interview": 91
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 17,
+        "missing_common_deduction_points": 10,
+        "platform_placeholder_roles": 23
+      },
+      "role_candidates": [
+        "精算分析师",
+        "核保专员",
+        "理赔风控专员",
+        "反欺诈分析师"
+      ],
+      "source_search": {
+        "boss_query": "应届生 保险 精算 核保 理赔 风控",
+        "xiaohongshu_query": "保险 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_MEDIA_GAME_CONTENT",
+      "industry_name": "传媒游戏与内容",
+      "priority": "P1",
+      "current_roles_in_plan": 21,
+      "actual_roles_now": 21,
+      "role_target": 29,
+      "role_gap": 8,
+      "current_roles_delta": 0,
+      "written_total": 126,
+      "interview_total": 126,
+      "written_per_role": 6,
+      "interview_per_role": 6,
+      "question_gap_to_8": {
+        "written": 42,
+        "interview": 42
+      },
+      "question_gap_to_10": {
+        "written": 84,
+        "interview": 84
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 11,
+        "missing_common_deduction_points": 10,
+        "platform_placeholder_roles": 21
+      },
+      "role_candidates": [
+        "内容商业化运营",
+        "游戏发行投放专员",
+        "社区运营专员",
+        "版权商务专员"
+      ],
+      "source_search": {
+        "boss_query": "应届生 游戏 内容 商业化 运营",
+        "xiaohongshu_query": "游戏 内容 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_REAL_ESTATE_INFRA",
+      "industry_name": "房地产与基建",
+      "priority": "P1",
+      "current_roles_in_plan": 24,
+      "actual_roles_now": 24,
+      "role_target": 31,
+      "role_gap": 7,
+      "current_roles_delta": 0,
+      "written_total": 145,
+      "interview_total": 145,
+      "written_per_role": 6.042,
+      "interview_per_role": 6.042,
+      "question_gap_to_8": {
+        "written": 47,
+        "interview": 47
+      },
+      "question_gap_to_10": {
+        "written": 95,
+        "interview": 95
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 14,
+        "missing_common_deduction_points": 10,
+        "platform_placeholder_roles": 24
+      },
+      "role_candidates": [
+        "投拓测算专员",
+        "工程成本专员",
+        "计划运营专员",
+        "城市更新专员"
+      ],
+      "source_search": {
+        "boss_query": "应届生 基建 房地产 工程 成本 投拓",
+        "xiaohongshu_query": "基建 地产 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_LOGISTICS_SUPPLYCHAIN",
+      "industry_name": "物流与供应链",
+      "priority": "P1",
+      "current_roles_in_plan": 23,
+      "actual_roles_now": 23,
+      "role_target": 30,
+      "role_gap": 7,
+      "current_roles_delta": 0,
+      "written_total": 139,
+      "interview_total": 139,
+      "written_per_role": 6.043,
+      "interview_per_role": 6.043,
+      "question_gap_to_8": {
+        "written": 45,
+        "interview": 45
+      },
+      "question_gap_to_10": {
+        "written": 91,
+        "interview": 91
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 13,
+        "missing_common_deduction_points": 10,
+        "platform_placeholder_roles": 23
+      },
+      "role_candidates": [
+        "仓网规划工程师",
+        "运输调度优化专员",
+        "库存控制专员",
+        "关务合规专员"
+      ],
+      "source_search": {
+        "boss_query": "应届生 物流 供应链 仓网 调度",
+        "xiaohongshu_query": "物流 供应链 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_STATE_OWNED_ENTERPRISE",
+      "industry_name": "央国企体系",
+      "priority": "P2",
+      "current_roles_in_plan": 22,
+      "actual_roles_now": 22,
+      "role_target": 28,
+      "role_gap": 6,
+      "current_roles_delta": 0,
+      "written_total": 132,
+      "interview_total": 132,
+      "written_per_role": 6,
+      "interview_per_role": 6,
+      "question_gap_to_8": {
+        "written": 44,
+        "interview": 44
+      },
+      "question_gap_to_10": {
+        "written": 88,
+        "interview": 88
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 13,
+        "missing_common_deduction_points": 11,
+        "platform_placeholder_roles": 22
+      },
+      "role_candidates": [
+        "战略投资分析岗",
+        "运营管理岗",
+        "审计风控岗",
+        "法务合规岗"
+      ],
+      "source_search": {
+        "boss_query": "央国企 应届 管培 审计 风控",
+        "xiaohongshu_query": "央国企 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_EDU_VOCATIONAL",
+      "industry_name": "教育与职教",
+      "priority": "P2",
+      "current_roles_in_plan": 22,
+      "actual_roles_now": 22,
+      "role_target": 28,
+      "role_gap": 6,
+      "current_roles_delta": 0,
+      "written_total": 133,
+      "interview_total": 132,
+      "written_per_role": 6.045,
+      "interview_per_role": 6,
+      "question_gap_to_8": {
+        "written": 43,
+        "interview": 44
+      },
+      "question_gap_to_10": {
+        "written": 87,
+        "interview": 88
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 16,
+        "missing_common_deduction_points": 10,
+        "platform_placeholder_roles": 22
+      },
+      "role_candidates": [
+        "教研产品经理",
+        "课程运营经理",
+        "学习体验设计师",
+        "班主任运营"
+      ],
+      "source_search": {
+        "boss_query": "应届生 教育 职教 教研 运营",
+        "xiaohongshu_query": "教育 职教 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_CIVIL_SERVICE",
+      "industry_name": "公务员体系",
+      "priority": "P2",
+      "current_roles_in_plan": 20,
+      "actual_roles_now": 20,
+      "role_target": 26,
+      "role_gap": 6,
+      "current_roles_delta": 0,
+      "written_total": 121,
+      "interview_total": 120,
+      "written_per_role": 6.05,
+      "interview_per_role": 6,
+      "question_gap_to_8": {
+        "written": 39,
+        "interview": 40
+      },
+      "question_gap_to_10": {
+        "written": 79,
+        "interview": 80
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 12,
+        "missing_common_deduction_points": 12,
+        "platform_placeholder_roles": 20
+      },
+      "role_candidates": [
+        "行政执法岗",
+        "综合管理岗",
+        "文字综合岗",
+        "政策研究岗"
+      ],
+      "source_search": {
+        "boss_query": "公务员 应届 国考 省考 职位",
+        "xiaohongshu_query": "公务员 面试 结构化 备考"
+      }
+    },
+    {
+      "industry_id": "IND_TELECOM_OPERATOR",
+      "industry_name": "通信与运营商",
+      "priority": "P2",
+      "current_roles_in_plan": 25,
+      "actual_roles_now": 25,
+      "role_target": 30,
+      "role_gap": 5,
+      "current_roles_delta": 0,
+      "written_total": 150,
+      "interview_total": 150,
+      "written_per_role": 6,
+      "interview_per_role": 6,
+      "question_gap_to_8": {
+        "written": 50,
+        "interview": 50
+      },
+      "question_gap_to_10": {
+        "written": 100,
+        "interview": 100
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 16,
+        "missing_common_deduction_points": 11,
+        "platform_placeholder_roles": 25
+      },
+      "role_candidates": [
+        "无线网优工程师",
+        "核心网工程师",
+        "云网融合工程师",
+        "政企解决方案经理"
+      ],
+      "source_search": {
+        "boss_query": "应届生 运营商 通信 网络 云网",
+        "xiaohongshu_query": "通信 运营商 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_CHEM_NEW_MATERIALS",
+      "industry_name": "化工与新材料",
+      "priority": "P2",
+      "current_roles_in_plan": 23,
+      "actual_roles_now": 23,
+      "role_target": 28,
+      "role_gap": 5,
+      "current_roles_delta": 0,
+      "written_total": 138,
+      "interview_total": 138,
+      "written_per_role": 6,
+      "interview_per_role": 6,
+      "question_gap_to_8": {
+        "written": 46,
+        "interview": 46
+      },
+      "question_gap_to_10": {
+        "written": 92,
+        "interview": 92
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 17,
+        "missing_common_deduction_points": 10,
+        "platform_placeholder_roles": 23
+      },
+      "role_candidates": [
+        "材料研发工程师",
+        "应用开发工程师",
+        "工艺工程师",
+        "EHS工程师"
+      ],
+      "source_search": {
+        "boss_query": "应届生 化工 新材料 工艺 研发 EHS",
+        "xiaohongshu_query": "化工 新材料 校招 面经 offer"
+      }
+    },
+    {
+      "industry_id": "IND_AGRI_FOOD",
+      "industry_name": "农业与食品",
+      "priority": "P2",
+      "current_roles_in_plan": 23,
+      "actual_roles_now": 23,
+      "role_target": 28,
+      "role_gap": 5,
+      "current_roles_delta": 0,
+      "written_total": 139,
+      "interview_total": 139,
+      "written_per_role": 6.043,
+      "interview_per_role": 6.043,
+      "question_gap_to_8": {
+        "written": 45,
+        "interview": 45
+      },
+      "question_gap_to_10": {
+        "written": 91,
+        "interview": 91
+      },
+      "role_depth_gaps": {
+        "stage_coverage_below_4": 0,
+        "missing_star_evidence_template": 17,
+        "missing_common_deduction_points": 10,
+        "platform_placeholder_roles": 23
+      },
+      "role_candidates": [
+        "食品工艺工程师",
+        "食品安全工程师",
+        "冷链运营专员",
+        "供应链质量管理"
+      ],
+      "source_search": {
+        "boss_query": "应届生 农业 食品 工艺 质量 供应链",
+        "xiaohongshu_query": "农业 食品 校招 面经 offer"
+      }
+    }
+  ]
+}

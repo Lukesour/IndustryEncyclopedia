@@ -815,6 +815,10 @@ GATE_JOB_DETAIL_URL_MIN="$(jq '."治理配置"."发布硬门槛".job_detail_url_
 GATE_ROLE_SPECIFIC_WRITTEN_MIN="$(jq '."治理配置"."发布硬门槛".role_specific_written_per_role_target // 4' "${DATA_PATH}")"
 GATE_ROLE_SPECIFIC_INTERVIEW_MIN="$(jq '."治理配置"."发布硬门槛".role_specific_interview_per_role_target // 4' "${DATA_PATH}")"
 GATE_ROLE_SCOPE_DUP_MAX="$(jq '."治理配置"."发布硬门槛".role_scope_duplicate_max_percent // 100' "${DATA_PATH}")"
+GATE_STAR_FILL_MIN_PERCENT="$(jq '."治理配置"."发布硬门槛".star_evidence_template_min_percent // 100' "${DATA_PATH}")"
+GATE_DEDUCTION_FILL_MIN_PERCENT="$(jq '."治理配置"."发布硬门槛".common_deduction_points_min_percent // 100' "${DATA_PATH}")"
+GATE_PLATFORM_PLACEHOLDER_MAX_PERCENT="$(jq '."治理配置"."发布硬门槛".platform_placeholder_max_percent // 25' "${DATA_PATH}")"
+GATE_ROLE_TEXT_DUP_MAX_PERCENT="$(jq '."治理配置"."发布硬门槛".role_text_duplicate_max_percent // 75' "${DATA_PATH}")"
 GATE_ROLE_COUNT_MIN_MAP="$(jq -c '."治理配置"."发布硬门槛".role_count_target_by_industry // {}' "${DATA_PATH}")"
 GATE_WRITTEN_PER_ROLE_MIN_MAP="$(jq -c '."治理配置"."发布硬门槛".question_written_per_role_target_by_industry // {}' "${DATA_PATH}")"
 GATE_INTERVIEW_PER_ROLE_MIN_MAP="$(jq -c '."治理配置"."发布硬门槛".question_interview_per_role_target_by_industry // {}' "${DATA_PATH}")"
@@ -1030,6 +1034,101 @@ ROLE_SCOPE_TOTAL_COUNT="$(jq '[."行业词条"[]|.dynamic["岗位画像库"].ite
 ROLE_SCOPE_UNIQUE_COUNT="$(jq '[."行业词条"[]|.dynamic["岗位画像库"].items[]?|(.role_detail_v158.role_scope // "")|select(length>0)]|unique|length' "${DATA_PATH}")"
 ROLE_TOTAL_COUNT="$(jq '[."行业词条"[]|.dynamic["岗位画像库"].items[]?|.role_id]|length' "${DATA_PATH}")"
 
+V161_ROLE_DEPTH_JSON="$(jq '
+def strip_text($txt; $role; $industry):
+  ($txt
+    | tostring
+    | split($role) | join("")
+    | split($industry) | join("")
+    | ascii_downcase
+    | gsub("[[:space:][:punct:]]"; ""));
+def stat_for_field($rows; $field):
+  ([ $rows[] | strip_text((.[$field] // ""); .role_name; .industry_name) | select(length>0) ]) as $arr
+  | ($arr | length) as $total
+  | ($arr | unique | length) as $uniq
+  | {
+      total: $total,
+      unique: $uniq,
+      duplicate_percent: (if $total == 0 then 0 else (($total - $uniq) * 100 / $total) end),
+      top_duplicates: (
+        $arr
+        | group_by(.)
+        | map({normalized: .[0], count: length})
+        | map(select(.count > 1))
+        | sort_by(-.count)
+        | .[0:5]
+      )
+    };
+
+[
+  ."行业词条"[] as $entry
+  | $entry.dynamic["岗位画像库"].items[]? as $role
+  | {
+      industry_id: $entry.industry_id,
+      industry_name: $entry."行业名称",
+      role_id: $role.role_id,
+      role_name: $role.role_name,
+      has_star: ((($role.star_evidence_template // null) | type) == "object" and (($role.star_evidence_template // {}) | length) > 0),
+      has_deduction: ((($role.common_deduction_points // null) | type) == "array" and (($role.common_deduction_points // []) | length) > 0),
+      platform_status: ($role.platform_backfill_gap.status // ""),
+      day_in_life: ($role.day_in_life // ""),
+      growth_path_1to3_year: ($role.growth_path_1to3_year // ""),
+      cross_industry_transfer: ($role.cross_industry_transfer // ""),
+      prep_90d_plan: ($role.prep_90d_plan // [])
+    }
+] as $rows
+| ($rows | length) as $role_total
+| ([$rows[] | select(.has_star)] | length) as $star_filled
+| ([$rows[] | select(.has_deduction)] | length) as $deduction_filled
+| ([$rows[] | select(.platform_status == "completed_with_placeholders")] | length) as $platform_placeholder
+| (stat_for_field($rows; "day_in_life")) as $day_stat
+| (stat_for_field($rows; "growth_path_1to3_year")) as $growth_stat
+| (stat_for_field($rows; "cross_industry_transfer")) as $transfer_stat
+| ([
+    $rows[]
+    | . as $r
+    | strip_text((($r.prep_90d_plan // []) | join("|")); $r.role_name; $r.industry_name)
+    | select(length>0)
+  ]) as $prep_vals
+| ($prep_vals | length) as $prep_total
+| ($prep_vals | unique | length) as $prep_uniq
+| {
+    role_total: $role_total,
+    star_filled_count: $star_filled,
+    star_fill_percent: (if $role_total == 0 then 0 else ($star_filled * 100 / $role_total) end),
+    deduction_filled_count: $deduction_filled,
+    deduction_fill_percent: (if $role_total == 0 then 0 else ($deduction_filled * 100 / $role_total) end),
+    platform_placeholder_count: $platform_placeholder,
+    platform_placeholder_percent: (if $role_total == 0 then 0 else ($platform_placeholder * 100 / $role_total) end),
+    day_in_life_duplicate_percent: $day_stat.duplicate_percent,
+    growth_duplicate_percent: $growth_stat.duplicate_percent,
+    transfer_duplicate_percent: $transfer_stat.duplicate_percent,
+    prep_duplicate_percent: (if $prep_total == 0 then 0 else (($prep_total - $prep_uniq) * 100 / $prep_total) end),
+    star_missing_records: ([$rows[] | select(.has_star | not) | {industry_id, industry_name, role_id, role_name}] | .[0:200]),
+    deduction_missing_records: ([$rows[] | select(.has_deduction | not) | {industry_id, industry_name, role_id, role_name}] | .[0:200]),
+    platform_placeholder_records: ([$rows[] | select(.platform_status == "completed_with_placeholders") | {industry_id, industry_name, role_id, role_name}] | .[0:200]),
+    duplicate_samples: {
+      day_in_life: $day_stat.top_duplicates,
+      growth_path_1to3_year: $growth_stat.top_duplicates,
+      cross_industry_transfer: $transfer_stat.top_duplicates
+    }
+  }
+' "${DATA_PATH}")"
+V161_STAR_FILLED_COUNT="$(jq '.star_filled_count' <<<"${V161_ROLE_DEPTH_JSON}")"
+V161_STAR_FILL_PERCENT="$(jq '.star_fill_percent' <<<"${V161_ROLE_DEPTH_JSON}")"
+V161_DEDUCTION_FILLED_COUNT="$(jq '.deduction_filled_count' <<<"${V161_ROLE_DEPTH_JSON}")"
+V161_DEDUCTION_FILL_PERCENT="$(jq '.deduction_fill_percent' <<<"${V161_ROLE_DEPTH_JSON}")"
+V161_PLATFORM_PLACEHOLDER_COUNT="$(jq '.platform_placeholder_count' <<<"${V161_ROLE_DEPTH_JSON}")"
+V161_PLATFORM_PLACEHOLDER_PERCENT="$(jq '.platform_placeholder_percent' <<<"${V161_ROLE_DEPTH_JSON}")"
+V161_DAY_DUPLICATE_PERCENT="$(jq '.day_in_life_duplicate_percent' <<<"${V161_ROLE_DEPTH_JSON}")"
+V161_GROWTH_DUPLICATE_PERCENT="$(jq '.growth_duplicate_percent' <<<"${V161_ROLE_DEPTH_JSON}")"
+V161_TRANSFER_DUPLICATE_PERCENT="$(jq '.transfer_duplicate_percent' <<<"${V161_ROLE_DEPTH_JSON}")"
+V161_PREP_DUPLICATE_PERCENT="$(jq '.prep_duplicate_percent' <<<"${V161_ROLE_DEPTH_JSON}")"
+V161_STAR_MISSING_JSON="$(jq '.star_missing_records' <<<"${V161_ROLE_DEPTH_JSON}")"
+V161_DEDUCTION_MISSING_JSON="$(jq '.deduction_missing_records' <<<"${V161_ROLE_DEPTH_JSON}")"
+V161_PLATFORM_PLACEHOLDER_JSON="$(jq '.platform_placeholder_records' <<<"${V161_ROLE_DEPTH_JSON}")"
+V161_DUPLICATE_SAMPLES_JSON="$(jq '.duplicate_samples' <<<"${V161_ROLE_DEPTH_JSON}")"
+
 TEMPLATE_REUSE_GATE_JSON="$(jq '
 def top1_pct($arr):
   if ($arr|length)==0 then 0
@@ -1108,6 +1207,13 @@ if awk -v a="${DEPTH_STAGE_COVERAGE_ISSUES_COUNT}" 'BEGIN{exit !(a > 0)}'; then 
 if awk -v a="${DEPTH_JOB_DETAIL_URL_ISSUES_COUNT}" 'BEGIN{exit !(a > 0)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${ROLE_SPECIFIC_ISSUES_COUNT}" 'BEGIN{exit !(a > 0)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${ROLE_SCOPE_DUPLICATE_PERCENT}" -v b="${GATE_ROLE_SCOPE_DUP_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${V161_STAR_FILL_PERCENT}" -v b="${GATE_STAR_FILL_MIN_PERCENT}" 'BEGIN{exit !(a < b)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${V161_DEDUCTION_FILL_PERCENT}" -v b="${GATE_DEDUCTION_FILL_MIN_PERCENT}" 'BEGIN{exit !(a < b)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${V161_PLATFORM_PLACEHOLDER_PERCENT}" -v b="${GATE_PLATFORM_PLACEHOLDER_MAX_PERCENT}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${V161_DAY_DUPLICATE_PERCENT}" -v b="${GATE_ROLE_TEXT_DUP_MAX_PERCENT}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${V161_GROWTH_DUPLICATE_PERCENT}" -v b="${GATE_ROLE_TEXT_DUP_MAX_PERCENT}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${V161_TRANSFER_DUPLICATE_PERCENT}" -v b="${GATE_ROLE_TEXT_DUP_MAX_PERCENT}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
+if awk -v a="${V161_PREP_DUPLICATE_PERCENT}" -v b="${GATE_ROLE_TEXT_DUP_MAX_PERCENT}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${TEMPLATE_REUSE_ISSUES_COUNT}" 'BEGIN{exit !(a > 0)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${SOURCE_TOP1_SHARE}" -v b="${GATE_SOURCE_TOP1_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
 if awk -v a="${SOURCE_TOP5_SHARE}" -v b="${GATE_SOURCE_TOP5_MAX}" 'BEGIN{exit !(a > b)}'; then HAS_BLOCKERS=1; fi
@@ -1140,6 +1246,13 @@ DEPTH_STAGE_COVERAGE_ISSUE="$(jq -n --argjson actual "${DEPTH_STAGE_COVERAGE_ISS
 DEPTH_JOB_DETAIL_URL_ISSUE="$(jq -n --argjson actual "${DEPTH_JOB_DETAIL_URL_ISSUES_COUNT}" --argjson min_required "${GATE_JOB_DETAIL_URL_MIN}" --argjson min_required_map "${GATE_JOB_DETAIL_URL_MIN_MAP}" '{actual_hits:$actual, min_job_detail_url_percent:$min_required, min_job_detail_url_percent_by_industry:$min_required_map}')"
 ROLE_SPECIFIC_ISSUE="$(jq -n --argjson actual "${ROLE_SPECIFIC_ISSUES_COUNT}" --argjson min_written "${GATE_ROLE_SPECIFIC_WRITTEN_MIN}" --argjson min_interview "${GATE_ROLE_SPECIFIC_INTERVIEW_MIN}" '{actual_hits:$actual, min_role_specific_written_per_role:$min_written, min_role_specific_interview_per_role:$min_interview}')"
 ROLE_SCOPE_DUP_ISSUE="$(jq -n --argjson actual "${ROLE_SCOPE_DUPLICATE_PERCENT}" --argjson threshold "${GATE_ROLE_SCOPE_DUP_MAX}" '{actual_percent:$actual, threshold_percent:$threshold}')"
+V161_STAR_FILL_ISSUE="$(jq -n --argjson actual "${V161_STAR_FILL_PERCENT}" --argjson threshold "${GATE_STAR_FILL_MIN_PERCENT}" '{actual_percent:$actual, threshold_percent:$threshold}')"
+V161_DEDUCTION_FILL_ISSUE="$(jq -n --argjson actual "${V161_DEDUCTION_FILL_PERCENT}" --argjson threshold "${GATE_DEDUCTION_FILL_MIN_PERCENT}" '{actual_percent:$actual, threshold_percent:$threshold}')"
+V161_PLATFORM_PLACEHOLDER_ISSUE="$(jq -n --argjson actual "${V161_PLATFORM_PLACEHOLDER_PERCENT}" --argjson threshold "${GATE_PLATFORM_PLACEHOLDER_MAX_PERCENT}" '{actual_percent:$actual, threshold_percent:$threshold}')"
+V161_DAY_DUPLICATE_ISSUE="$(jq -n --argjson actual "${V161_DAY_DUPLICATE_PERCENT}" --argjson threshold "${GATE_ROLE_TEXT_DUP_MAX_PERCENT}" '{actual_percent:$actual, threshold_percent:$threshold}')"
+V161_GROWTH_DUPLICATE_ISSUE="$(jq -n --argjson actual "${V161_GROWTH_DUPLICATE_PERCENT}" --argjson threshold "${GATE_ROLE_TEXT_DUP_MAX_PERCENT}" '{actual_percent:$actual, threshold_percent:$threshold}')"
+V161_TRANSFER_DUPLICATE_ISSUE="$(jq -n --argjson actual "${V161_TRANSFER_DUPLICATE_PERCENT}" --argjson threshold "${GATE_ROLE_TEXT_DUP_MAX_PERCENT}" '{actual_percent:$actual, threshold_percent:$threshold}')"
+V161_PREP_DUPLICATE_ISSUE="$(jq -n --argjson actual "${V161_PREP_DUPLICATE_PERCENT}" --argjson threshold "${GATE_ROLE_TEXT_DUP_MAX_PERCENT}" '{actual_percent:$actual, threshold_percent:$threshold}')"
 TEMPLATE_REUSE_ISSUE="$(jq -n --argjson actual "${TEMPLATE_REUSE_ISSUES_COUNT}" --argjson framework_top1_max "${GATE_FRAMEWORK_TOP1_MAX}" --argjson framework_top3_max "${GATE_FRAMEWORK_TOP3_MAX}" --argjson followup_top3_max "${GATE_FOLLOWUP_TOP3_MAX}" --argjson elimination_top1_max "${GATE_ELIMINATION_TOP1_MAX}" '{actual_hits:$actual, framework_top1_max_percent:$framework_top1_max, framework_top3_max_percent:$framework_top3_max, followup_top3_max_percent:$followup_top3_max, elimination_top1_max_percent:$elimination_top1_max}')"
 SOURCE_TOP1_ISSUE="$(jq -n --argjson actual "${SOURCE_TOP1_SHARE}" --argjson threshold "${GATE_SOURCE_TOP1_MAX}" '{actual_percent:$actual, threshold_percent:$threshold}')"
 SOURCE_TOP5_ISSUE="$(jq -n --argjson actual "${SOURCE_TOP5_SHARE}" --argjson threshold "${GATE_SOURCE_TOP5_MAX}" '{actual_percent:$actual, threshold_percent:$threshold}')"
@@ -1436,6 +1549,67 @@ jq \
 mv "${GATE_PATH}.tmp" "${GATE_PATH}"
 cp "${GATE_PATH}" "${LATEST_GATE_PATH}"
 
+# v1.61 role-depth gates: STAR/扣分点覆盖、平台占位比例、岗位文本同质化。
+jq \
+  --argjson star_filled_count "${V161_STAR_FILLED_COUNT}" \
+  --argjson star_fill_percent "${V161_STAR_FILL_PERCENT}" \
+  --argjson star_fill_min "${GATE_STAR_FILL_MIN_PERCENT}" \
+  --argjson deduction_filled_count "${V161_DEDUCTION_FILLED_COUNT}" \
+  --argjson deduction_fill_percent "${V161_DEDUCTION_FILL_PERCENT}" \
+  --argjson deduction_fill_min "${GATE_DEDUCTION_FILL_MIN_PERCENT}" \
+  --argjson platform_placeholder_count "${V161_PLATFORM_PLACEHOLDER_COUNT}" \
+  --argjson platform_placeholder_percent "${V161_PLATFORM_PLACEHOLDER_PERCENT}" \
+  --argjson platform_placeholder_max "${GATE_PLATFORM_PLACEHOLDER_MAX_PERCENT}" \
+  --argjson role_text_duplicate_max "${GATE_ROLE_TEXT_DUP_MAX_PERCENT}" \
+  --argjson day_duplicate_percent "${V161_DAY_DUPLICATE_PERCENT}" \
+  --argjson growth_duplicate_percent "${V161_GROWTH_DUPLICATE_PERCENT}" \
+  --argjson transfer_duplicate_percent "${V161_TRANSFER_DUPLICATE_PERCENT}" \
+  --argjson prep_duplicate_percent "${V161_PREP_DUPLICATE_PERCENT}" \
+  --argjson star_missing_records "${V161_STAR_MISSING_JSON}" \
+  --argjson deduction_missing_records "${V161_DEDUCTION_MISSING_JSON}" \
+  --argjson platform_placeholder_records "${V161_PLATFORM_PLACEHOLDER_JSON}" \
+  --argjson duplicate_samples "${V161_DUPLICATE_SAMPLES_JSON}" \
+  --argjson star_fill_threshold "${V161_STAR_FILL_ISSUE}" \
+  --argjson deduction_fill_threshold "${V161_DEDUCTION_FILL_ISSUE}" \
+  --argjson platform_placeholder_threshold "${V161_PLATFORM_PLACEHOLDER_ISSUE}" \
+  --argjson day_duplicate_threshold "${V161_DAY_DUPLICATE_ISSUE}" \
+  --argjson growth_duplicate_threshold "${V161_GROWTH_DUPLICATE_ISSUE}" \
+  --argjson transfer_duplicate_threshold "${V161_TRANSFER_DUPLICATE_ISSUE}" \
+  --argjson prep_duplicate_threshold "${V161_PREP_DUPLICATE_ISSUE}" \
+  '
+  .gates += {
+    star_evidence_template_filled_count: $star_filled_count,
+    star_evidence_template_fill_percent: $star_fill_percent,
+    star_evidence_template_min_percent: $star_fill_min,
+    common_deduction_points_filled_count: $deduction_filled_count,
+    common_deduction_points_fill_percent: $deduction_fill_percent,
+    common_deduction_points_min_percent: $deduction_fill_min,
+    platform_placeholder_count: $platform_placeholder_count,
+    platform_placeholder_percent: $platform_placeholder_percent,
+    platform_placeholder_max_percent: $platform_placeholder_max,
+    role_text_duplicate_max_percent: $role_text_duplicate_max,
+    day_in_life_duplicate_percent: $day_duplicate_percent,
+    growth_path_duplicate_percent: $growth_duplicate_percent,
+    transfer_path_duplicate_percent: $transfer_duplicate_percent,
+    prep_plan_duplicate_percent: $prep_duplicate_percent
+  }
+  | .issues += {
+    star_evidence_template_missing_records: $star_missing_records,
+    common_deduction_points_missing_records: $deduction_missing_records,
+    platform_placeholder_records_v161: $platform_placeholder_records,
+    role_text_duplicate_samples_v161: $duplicate_samples,
+    star_evidence_template_fill_threshold: $star_fill_threshold,
+    common_deduction_points_fill_threshold: $deduction_fill_threshold,
+    platform_placeholder_threshold_v161: $platform_placeholder_threshold,
+    day_in_life_duplicate_threshold: $day_duplicate_threshold,
+    growth_path_duplicate_threshold: $growth_duplicate_threshold,
+    transfer_path_duplicate_threshold: $transfer_duplicate_threshold,
+    prep_plan_duplicate_threshold: $prep_duplicate_threshold
+  }
+  ' "${GATE_PATH}" > "${GATE_PATH}.tmp"
+mv "${GATE_PATH}.tmp" "${GATE_PATH}"
+cp "${GATE_PATH}" "${LATEST_GATE_PATH}"
+
 # v1.58 overlay: mapping integrity, deep-link quality, prompt de-dup and decision-module depth.
 V158_OVERLAY_SCRIPT="${ROOT_DIR}/scripts/apply_v158_quality_overlay.sh"
 if [[ -f "${V158_OVERLAY_SCRIPT}" ]]; then
@@ -1455,6 +1629,21 @@ jq \
   --argjson role_scope_unique "${ROLE_SCOPE_UNIQUE_COUNT}" \
   --argjson role_scope_dup_percent "${ROLE_SCOPE_DUPLICATE_PERCENT}" \
   --argjson role_scope_dup_max "${GATE_ROLE_SCOPE_DUP_MAX}" \
+  --argjson star_filled_count "${V161_STAR_FILLED_COUNT}" \
+  --argjson star_fill_percent "${V161_STAR_FILL_PERCENT}" \
+  --argjson star_fill_min "${GATE_STAR_FILL_MIN_PERCENT}" \
+  --argjson deduction_filled_count "${V161_DEDUCTION_FILLED_COUNT}" \
+  --argjson deduction_fill_percent "${V161_DEDUCTION_FILL_PERCENT}" \
+  --argjson deduction_fill_min "${GATE_DEDUCTION_FILL_MIN_PERCENT}" \
+  --argjson platform_placeholder_count "${V161_PLATFORM_PLACEHOLDER_COUNT}" \
+  --argjson platform_placeholder_percent "${V161_PLATFORM_PLACEHOLDER_PERCENT}" \
+  --argjson platform_placeholder_max "${GATE_PLATFORM_PLACEHOLDER_MAX_PERCENT}" \
+  --argjson role_text_dup_max "${GATE_ROLE_TEXT_DUP_MAX_PERCENT}" \
+  --argjson day_dup_percent "${V161_DAY_DUPLICATE_PERCENT}" \
+  --argjson growth_dup_percent "${V161_GROWTH_DUPLICATE_PERCENT}" \
+  --argjson transfer_dup_percent "${V161_TRANSFER_DUPLICATE_PERCENT}" \
+  --argjson prep_dup_percent "${V161_PREP_DUPLICATE_PERCENT}" \
+  --argjson duplicate_samples "${V161_DUPLICATE_SAMPLES_JSON}" \
   '
   . + {
     role_specific_depth_v159: {
@@ -1469,6 +1658,31 @@ jq \
       scope_unique: $role_scope_unique,
       duplicate_percent: $role_scope_dup_percent,
       duplicate_max_percent: $role_scope_dup_max
+    },
+    role_content_depth_v161: {
+      star_evidence_template: {
+        filled_count: $star_filled_count,
+        fill_percent: $star_fill_percent,
+        min_percent: $star_fill_min
+      },
+      common_deduction_points: {
+        filled_count: $deduction_filled_count,
+        fill_percent: $deduction_fill_percent,
+        min_percent: $deduction_fill_min
+      },
+      platform_placeholder: {
+        count: $platform_placeholder_count,
+        percent: $platform_placeholder_percent,
+        max_percent: $platform_placeholder_max
+      },
+      role_text_duplication: {
+        day_in_life_duplicate_percent: $day_dup_percent,
+        growth_path_duplicate_percent: $growth_dup_percent,
+        transfer_path_duplicate_percent: $transfer_dup_percent,
+        prep_plan_duplicate_percent: $prep_dup_percent,
+        max_percent: $role_text_dup_max,
+        top_duplicate_samples: $duplicate_samples
+      }
     }
   }
   ' "${REPORT_PATH}" > "${REPORT_PATH}.tmp"
