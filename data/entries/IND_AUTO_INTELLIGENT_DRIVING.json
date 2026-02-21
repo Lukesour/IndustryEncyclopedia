@@ -5730,21 +5730,21 @@
             "沟通表达",
             "持续改进"
           ],
-          "role_readiness_floor": "需至少完成1个智驾标定工程师可复盘项目，并能清楚说明“目标-动作-指标-复盘”。",
-          "transfer_path_hint": "可迁移至传感器标定流程、多传感器外参优化相关岗位；优先补齐跨团队协同与量化表达。",
-          "day_in_life": "汽车与智能驾驶智驾标定工程师日常：需求澄清->方案执行->跨团队协同->数据跟踪->复盘迭代。",
+          "role_readiness_floor": "至少完成1个智驾标定项目：参数标定、场景验证、效果评估与量产版本回归。",
+          "transfer_path_hint": "可转控制算法工程师、整车测试工程师、性能优化工程师；需补控制理论和系统建模，过渡6-10个月。",
+          "day_in_life": "智驾标定工程师工作周：整理路测数据、调参与离线仿真、开展实车验证、分析指标波动并推进版本优化。",
           "core_output_kpi": "智驾标定工程师核心KPI：标定精度、标定效率、返工率、上线稳定性。",
           "typical_projects": [
             "智驾标定工程师流程优化专项",
             "智驾标定工程师效率提升专项",
             "智驾标定工程师协同治理专项"
           ],
-          "growth_path_1to3_year": "智驾标定工程师成长路径：1年夯实基础，2年独立负责模块，3年主导专项与方法沉淀。",
+          "growth_path_1to3_year": "0-1年掌握标定指标与工具链；1-3年独立负责模块级标定；3-5年可主导整车级标定策略。",
           "cross_industry_transfer": "智驾标定工程师可迁移至相邻岗位，重点补齐行业规则理解与业务结果表达能力。",
           "prep_90d_plan": [
-            "1-30天：建立智驾标定工程师知识图谱与指标口径。",
-            "31-60天：落地1个可量化项目并完成复盘。",
-            "61-90天：完成4阶段题库训练并做2轮模拟面试。"
+            "1-30天：梳理核心标定指标与典型场景边界。",
+            "31-60天：完成1个关键参数调优与回归验证案例。",
+            "61-90天：完成10套标定题训练，强化取舍逻辑和风险表达。"
           ],
           "elimination_risks": [
             "只讲执行不讲结果",
@@ -5874,7 +5874,7 @@
               "evidence_hint": "用STAR说明你在项目中如何应用“标定质量验证”，并给出可量化结果。"
             }
           ],
-          "updated_at": "2026-02-19",
+          "updated_at": "2026-02-20",
           "high_score_answer_example": "在汽车与智能驾驶智驾标定工程师面试中，可按“场景-动作-指标-复盘”结构回答并给出可验证结果。",
           "project_evidence_public_sample": {
             "sample_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_014_STAR_PUBLIC_2026",
@@ -5901,10 +5901,10 @@
             "updated_at": "2026-02-19"
           },
           "role_detail_v158": {
-            "role_scope": "负责智驾标定工程师相关职责并对关键指标结果负责。",
+            "role_scope": "负责智驾参数标定与效果验证，对系统性能、稳定性和版本发布质量负责。",
             "role_specific_question_coverage": {
-              "written_count": 6,
-              "interview_count": 6,
+              "written_count": 10,
+              "interview_count": 10,
               "written_stages": [
                 "campus_early_batch_written",
                 "campus_main_batch_written",
@@ -5918,7 +5918,68 @@
                 "internship_conversion_interview"
               ]
             },
-            "expansion_status": "landed_main_profile"
+            "expansion_status": "landed_deep_profile_v161_batch8"
+          },
+          "career_outlook_3to5_year": "高阶智驾落地加速，标定岗位需求稳步增长，能力重心从参数调整升级到体系化优化。",
+          "typical_work_week": "版本节奏和路测计划耦合高，发布窗口前验证压力明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "控制算法工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "控制理论",
+                "模型预测控制"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "整车测试工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "测试设计",
+                "问题闭环"
+              ],
+              "transition_period": "5-8个月"
+            },
+            {
+              "target_role": "性能优化工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "性能分析",
+                "指标建模"
+              ],
+              "transition_period": "6-9个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "91-120天：建立高风险工况标定回归机制。",
+            "121-150天：主导1次跨模块标定复盘专项。",
+            "151-180天：沉淀标定参数管理与发布门禁模板。"
+          ],
+          "role_scope_text": "负责智驾参数标定与效果验证，对系统性能、稳定性和版本发布质量负责。",
+          "common_deduction_points": [
+            "只讲调参动作，不讲指标目标与边界条件。",
+            "无法解释参数变化与系统表现的因果关系。",
+            "缺少回归验证闭环。",
+            "跨团队协同策略不清晰。"
+          ],
+          "star_evidence_template": {
+            "situation": "新版本在复杂弯道工况表现不稳定，影响发布决策。",
+            "task": "在发布窗口前完成关键参数优化并验证稳定性。",
+            "action": [
+              "分场景拆解指标异常并定位敏感参数。",
+              "执行离线与实车双轨验证并迭代标定值。",
+              "组织跨团队评审并确认发布门禁达标。"
+            ],
+            "result": [
+              "关键工况指标恢复并满足发布条件。",
+              "形成可复用的标定问题处理流程。"
+            ],
+            "proof_materials": [
+              "标定记录",
+              "回归验证报告",
+              "发布评审纪要"
+            ]
           }
         },
         {
@@ -26602,6 +26663,342 @@
             "关键取舍",
             "复盘迁移"
           ]
+        },
+        {
+          "answer_framework": [
+            "目标与约束澄清",
+            "执行路径拆解",
+            "指标与风险控制",
+            "复盘与机制沉淀"
+          ],
+          "authenticity_level": "real_user",
+          "data_origin": "official_jd_competency_mapping_with_manual_role_enrichment_v161_batch8",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-20",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_WRITTEN_BACKEND_2026",
+            "source_name": "牛客网-软件开发笔试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "secondary_source_ids": [
+              "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+              "SRC_ZHILIAN_Q4_2025_NEWS"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-20",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:汽车与智能驾驶｜岗位:智驾标定工程师｜阶段:提前批笔试】关键工况指标异常时你如何快速定位并调优？",
+          "question_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_V161_R014H_01",
+          "question_realness_note": "基于岗位能力口径与2026场景化补充（非官方原卷）。",
+          "question_type": "标定异常修复题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_early_batch_written",
+          "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_014",
+          "role_name": "智驾标定工程师",
+          "round_label": "提前批笔试",
+          "updated_at": "2026-02-20",
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "结构化思维",
+            "可执行性",
+            "风险意识",
+            "复盘能力"
+          ],
+          "follow_up_questions": [
+            "资源受限时你先保哪一步？",
+            "首轮结果不佳如何纠偏？",
+            "如何沉淀成可复用机制？"
+          ],
+          "scoring_rubric": {
+            "A档": "路径完整、指标清晰、风险闭环。",
+            "B档": "方案可执行但缺少量化或风险细节。",
+            "C档": "泛化表达，缺少行动与结果。"
+          },
+          "common_mistakes": [
+            "描述泛化",
+            "缺少量化指标",
+            "无风险预案"
+          ],
+          "good_answer_signals": [
+            "结论先行",
+            "路径清晰",
+            "指标闭环"
+          ],
+          "reference_answer_outline": [
+            "先明确目标与边界",
+            "再拆解动作",
+            "最后给出结果与复盘"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario",
+          "follow_up_chain": [
+            "边界澄清",
+            "关键取舍",
+            "复盘迁移"
+          ]
+        },
+        {
+          "answer_framework": [
+            "目标与约束澄清",
+            "执行路径拆解",
+            "指标与风险控制",
+            "复盘与机制沉淀"
+          ],
+          "authenticity_level": "real_user",
+          "data_origin": "official_jd_competency_mapping_with_manual_role_enrichment_v161_batch8",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-20",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_WRITTEN_BACKEND_2026",
+            "source_name": "牛客网-软件开发笔试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "secondary_source_ids": [
+              "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+              "SRC_ZHILIAN_Q4_2025_NEWS"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-20",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:汽车与智能驾驶｜岗位:智驾标定工程师｜阶段:主批笔试】请设计“分析-调参-验证-发布”标定流程。",
+          "question_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_V161_R014H_02",
+          "question_realness_note": "基于岗位能力口径与2026场景化补充（非官方原卷）。",
+          "question_type": "标定流程设计",
+          "question_year": 2026,
+          "recruitment_stage": "campus_main_batch_written",
+          "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_014",
+          "role_name": "智驾标定工程师",
+          "round_label": "主批笔试",
+          "updated_at": "2026-02-20",
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "结构化思维",
+            "可执行性",
+            "风险意识",
+            "复盘能力"
+          ],
+          "follow_up_questions": [
+            "资源受限时你先保哪一步？",
+            "首轮结果不佳如何纠偏？",
+            "如何沉淀成可复用机制？"
+          ],
+          "scoring_rubric": {
+            "A档": "路径完整、指标清晰、风险闭环。",
+            "B档": "方案可执行但缺少量化或风险细节。",
+            "C档": "泛化表达，缺少行动与结果。"
+          },
+          "common_mistakes": [
+            "描述泛化",
+            "缺少量化指标",
+            "无风险预案"
+          ],
+          "good_answer_signals": [
+            "结论先行",
+            "路径清晰",
+            "指标闭环"
+          ],
+          "reference_answer_outline": [
+            "先明确目标与边界",
+            "再拆解动作",
+            "最后给出结果与复盘"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process",
+          "follow_up_chain": [
+            "边界澄清",
+            "关键取舍",
+            "复盘迁移"
+          ]
+        },
+        {
+          "answer_framework": [
+            "目标与约束澄清",
+            "执行路径拆解",
+            "指标与风险控制",
+            "复盘与机制沉淀"
+          ],
+          "authenticity_level": "real_user",
+          "data_origin": "official_jd_competency_mapping_with_manual_role_enrichment_v161_batch8",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-20",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_WRITTEN_BACKEND_2026",
+            "source_name": "牛客网-软件开发笔试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "secondary_source_ids": [
+              "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+              "SRC_ZHILIAN_Q4_2025_NEWS"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-20",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:汽车与智能驾驶｜岗位:智驾标定工程师｜阶段:补录笔试】一次标定回归失效后你如何复盘并修正？",
+          "question_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_V161_R014H_03",
+          "question_realness_note": "基于岗位能力口径与2026场景化补充（非官方原卷）。",
+          "question_type": "回归失效复盘",
+          "question_year": 2026,
+          "recruitment_stage": "campus_supplement_written",
+          "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_014",
+          "role_name": "智驾标定工程师",
+          "round_label": "补录笔试",
+          "updated_at": "2026-02-20",
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "结构化思维",
+            "可执行性",
+            "风险意识",
+            "复盘能力"
+          ],
+          "follow_up_questions": [
+            "资源受限时你先保哪一步？",
+            "首轮结果不佳如何纠偏？",
+            "如何沉淀成可复用机制？"
+          ],
+          "scoring_rubric": {
+            "A档": "路径完整、指标清晰、风险闭环。",
+            "B档": "方案可执行但缺少量化或风险细节。",
+            "C档": "泛化表达，缺少行动与结果。"
+          },
+          "common_mistakes": [
+            "描述泛化",
+            "缺少量化指标",
+            "无风险预案"
+          ],
+          "good_answer_signals": [
+            "结论先行",
+            "路径清晰",
+            "指标闭环"
+          ],
+          "reference_answer_outline": [
+            "先明确目标与边界",
+            "再拆解动作",
+            "最后给出结果与复盘"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review",
+          "follow_up_chain": [
+            "边界澄清",
+            "关键取舍",
+            "复盘迁移"
+          ]
+        },
+        {
+          "answer_framework": [
+            "目标与约束澄清",
+            "执行路径拆解",
+            "指标与风险控制",
+            "复盘与机制沉淀"
+          ],
+          "authenticity_level": "real_user",
+          "data_origin": "official_jd_competency_mapping_with_manual_role_enrichment_v161_batch8",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-20",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_WRITTEN_BACKEND_2026",
+            "source_name": "牛客网-软件开发笔试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "secondary_source_ids": [
+              "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+              "SRC_ZHILIAN_Q4_2025_NEWS"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-20",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:汽车与智能驾驶｜岗位:智驾标定工程师｜阶段:实习转正笔试】性能提升与稳定性约束冲突时你如何取舍？",
+          "question_id": "IND_AUTO_INTELLIGENT_DRIVING_WRITTEN_V161_R014H_04",
+          "question_realness_note": "基于岗位能力口径与2026场景化补充（非官方原卷）。",
+          "question_type": "性能稳定平衡",
+          "question_year": 2026,
+          "recruitment_stage": "internship_conversion_written",
+          "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_014",
+          "role_name": "智驾标定工程师",
+          "round_label": "实习转正笔试",
+          "updated_at": "2026-02-20",
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "结构化思维",
+            "可执行性",
+            "风险意识",
+            "复盘能力"
+          ],
+          "follow_up_questions": [
+            "资源受限时你先保哪一步？",
+            "首轮结果不佳如何纠偏？",
+            "如何沉淀成可复用机制？"
+          ],
+          "scoring_rubric": {
+            "A档": "路径完整、指标清晰、风险闭环。",
+            "B档": "方案可执行但缺少量化或风险细节。",
+            "C档": "泛化表达，缺少行动与结果。"
+          },
+          "common_mistakes": [
+            "描述泛化",
+            "缺少量化指标",
+            "无风险预案"
+          ],
+          "good_answer_signals": [
+            "结论先行",
+            "路径清晰",
+            "指标闭环"
+          ],
+          "reference_answer_outline": [
+            "先明确目标与边界",
+            "再拆解动作",
+            "最后给出结果与复盘"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff",
+          "follow_up_chain": [
+            "边界澄清",
+            "关键取舍",
+            "复盘迁移"
+          ]
         }
       ],
       "last_checked": "2026-02-19",
@@ -45058,6 +45455,342 @@
           "recruitment_stage": "internship_conversion_interview",
           "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_013",
           "role_name": "智驾地图工程师",
+          "round_label": "实习转正面试",
+          "scoring_dimensions": [
+            "结构化思维",
+            "可执行性",
+            "风险意识",
+            "复盘能力"
+          ],
+          "updated_at": "2026-02-20",
+          "sample_size": 8,
+          "answer_framework": [
+            "目标与约束澄清",
+            "执行路径拆解",
+            "指标与风险控制",
+            "复盘与机制沉淀"
+          ],
+          "follow_up_questions": [
+            "资源受限时你先保哪一步？",
+            "首轮结果不佳如何纠偏？",
+            "如何沉淀成可复用机制？"
+          ],
+          "scoring_rubric": {
+            "A档": "路径完整、指标清晰、风险闭环。",
+            "B档": "方案可执行但缺少量化或风险细节。",
+            "C档": "泛化表达，缺少行动与结果。"
+          },
+          "common_mistakes": [
+            "描述泛化",
+            "缺少量化指标",
+            "无风险预案"
+          ],
+          "good_answer_signals": [
+            "结论先行",
+            "路径清晰",
+            "指标闭环"
+          ],
+          "reference_answer_outline": [
+            "先明确目标与边界",
+            "再拆解动作",
+            "最后给出结果与复盘"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff",
+          "follow_up_chain": [
+            "边界澄清",
+            "关键取舍",
+            "复盘迁移"
+          ]
+        },
+        {
+          "authenticity_level": "real_user",
+          "data_origin": "official_jd_competency_mapping_with_manual_role_enrichment_v161_batch8",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-20",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
+            "source_name": "牛客网-软件开发面试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "secondary_source_ids": [
+              "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+              "SRC_ZHILIAN_Q4_2025_NEWS"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-20",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:汽车与智能驾驶｜岗位:智驾标定工程师｜阶段:提前批面试】上线窗口临近但指标未达标时你如何沟通？",
+          "question_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_V161_R014H_01",
+          "question_realness_note": "基于岗位能力口径与2026场景化补充（非官方原卷）。",
+          "question_type": "发布窗口沟通题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_early_batch_interview",
+          "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_014",
+          "role_name": "智驾标定工程师",
+          "round_label": "提前批面试",
+          "scoring_dimensions": [
+            "结构化思维",
+            "可执行性",
+            "风险意识",
+            "复盘能力"
+          ],
+          "updated_at": "2026-02-20",
+          "sample_size": 8,
+          "answer_framework": [
+            "目标与约束澄清",
+            "执行路径拆解",
+            "指标与风险控制",
+            "复盘与机制沉淀"
+          ],
+          "follow_up_questions": [
+            "资源受限时你先保哪一步？",
+            "首轮结果不佳如何纠偏？",
+            "如何沉淀成可复用机制？"
+          ],
+          "scoring_rubric": {
+            "A档": "路径完整、指标清晰、风险闭环。",
+            "B档": "方案可执行但缺少量化或风险细节。",
+            "C档": "泛化表达，缺少行动与结果。"
+          },
+          "common_mistakes": [
+            "描述泛化",
+            "缺少量化指标",
+            "无风险预案"
+          ],
+          "good_answer_signals": [
+            "结论先行",
+            "路径清晰",
+            "指标闭环"
+          ],
+          "reference_answer_outline": [
+            "先明确目标与边界",
+            "再拆解动作",
+            "最后给出结果与复盘"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario",
+          "follow_up_chain": [
+            "边界澄清",
+            "关键取舍",
+            "复盘迁移"
+          ]
+        },
+        {
+          "authenticity_level": "real_user",
+          "data_origin": "official_jd_competency_mapping_with_manual_role_enrichment_v161_batch8",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-20",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
+            "source_name": "牛客网-软件开发面试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "secondary_source_ids": [
+              "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+              "SRC_ZHILIAN_Q4_2025_NEWS"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-20",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:汽车与智能驾驶｜岗位:智驾标定工程师｜阶段:主批面试】算法团队与测试团队结论冲突时你如何推进？",
+          "question_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_V161_R014H_02",
+          "question_realness_note": "基于岗位能力口径与2026场景化补充（非官方原卷）。",
+          "question_type": "跨团队协同题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_main_batch_interview",
+          "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_014",
+          "role_name": "智驾标定工程师",
+          "round_label": "主批面试",
+          "scoring_dimensions": [
+            "结构化思维",
+            "可执行性",
+            "风险意识",
+            "复盘能力"
+          ],
+          "updated_at": "2026-02-20",
+          "sample_size": 8,
+          "answer_framework": [
+            "目标与约束澄清",
+            "执行路径拆解",
+            "指标与风险控制",
+            "复盘与机制沉淀"
+          ],
+          "follow_up_questions": [
+            "资源受限时你先保哪一步？",
+            "首轮结果不佳如何纠偏？",
+            "如何沉淀成可复用机制？"
+          ],
+          "scoring_rubric": {
+            "A档": "路径完整、指标清晰、风险闭环。",
+            "B档": "方案可执行但缺少量化或风险细节。",
+            "C档": "泛化表达，缺少行动与结果。"
+          },
+          "common_mistakes": [
+            "描述泛化",
+            "缺少量化指标",
+            "无风险预案"
+          ],
+          "good_answer_signals": [
+            "结论先行",
+            "路径清晰",
+            "指标闭环"
+          ],
+          "reference_answer_outline": [
+            "先明确目标与边界",
+            "再拆解动作",
+            "最后给出结果与复盘"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration",
+          "follow_up_chain": [
+            "边界澄清",
+            "关键取舍",
+            "复盘迁移"
+          ]
+        },
+        {
+          "authenticity_level": "real_user",
+          "data_origin": "official_jd_competency_mapping_with_manual_role_enrichment_v161_batch8",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-20",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
+            "source_name": "牛客网-软件开发面试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "secondary_source_ids": [
+              "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+              "SRC_ZHILIAN_Q4_2025_NEWS"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-20",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:汽车与智能驾驶｜岗位:智驾标定工程师｜阶段:补录面试】讲一次你调参误判后的纠偏过程。",
+          "question_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_V161_R014H_03",
+          "question_realness_note": "基于岗位能力口径与2026场景化补充（非官方原卷）。",
+          "question_type": "调参误判复盘",
+          "question_year": 2026,
+          "recruitment_stage": "campus_supplement_interview",
+          "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_014",
+          "role_name": "智驾标定工程师",
+          "round_label": "补录面试",
+          "scoring_dimensions": [
+            "结构化思维",
+            "可执行性",
+            "风险意识",
+            "复盘能力"
+          ],
+          "updated_at": "2026-02-20",
+          "sample_size": 8,
+          "answer_framework": [
+            "目标与约束澄清",
+            "执行路径拆解",
+            "指标与风险控制",
+            "复盘与机制沉淀"
+          ],
+          "follow_up_questions": [
+            "资源受限时你先保哪一步？",
+            "首轮结果不佳如何纠偏？",
+            "如何沉淀成可复用机制？"
+          ],
+          "scoring_rubric": {
+            "A档": "路径完整、指标清晰、风险闭环。",
+            "B档": "方案可执行但缺少量化或风险细节。",
+            "C档": "泛化表达，缺少行动与结果。"
+          },
+          "common_mistakes": [
+            "描述泛化",
+            "缺少量化指标",
+            "无风险预案"
+          ],
+          "good_answer_signals": [
+            "结论先行",
+            "路径清晰",
+            "指标闭环"
+          ],
+          "reference_answer_outline": [
+            "先明确目标与边界",
+            "再拆解动作",
+            "最后给出结果与复盘"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review",
+          "follow_up_chain": [
+            "边界澄清",
+            "关键取舍",
+            "复盘迁移"
+          ]
+        },
+        {
+          "authenticity_level": "real_user",
+          "data_origin": "official_jd_competency_mapping_with_manual_role_enrichment_v161_batch8",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-20",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
+            "source_name": "牛客网-软件开发面试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "secondary_source_ids": [
+              "SRC_AUTO_CAREER_BYD_COM_C93FDB3E",
+              "SRC_ZHILIAN_Q4_2025_NEWS"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-20",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:汽车与智能驾驶｜岗位:智驾标定工程师｜阶段:实习转正面试】测试资源受限时你如何安排验证优先级？",
+          "question_id": "IND_AUTO_INTELLIGENT_DRIVING_INTERVIEW_V161_R014H_04",
+          "question_realness_note": "基于岗位能力口径与2026场景化补充（非官方原卷）。",
+          "question_type": "资源优先级决策",
+          "question_year": 2026,
+          "recruitment_stage": "internship_conversion_interview",
+          "role_id": "IND_AUTO_INTELLIGENT_DRIVING_ROLE_014",
+          "role_name": "智驾标定工程师",
           "round_label": "实习转正面试",
           "scoring_dimensions": [
             "结构化思维",
