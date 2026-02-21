@@ -5988,21 +5988,21 @@
             "规则意识",
             "复盘能力"
           ],
-          "role_readiness_floor": "需至少完成1个临床数据管理岗可复盘项目，能解释“目标-动作-指标-风险-复盘”全链路。",
-          "transfer_path_hint": "可向临床数据清洗、CRF核查管理相关岗位迁移，优先补齐可量化结果证据。",
-          "day_in_life": "生物医药与器械临床数据管理岗日常：需求澄清->方案设计->协同执行->数据跟踪->复盘优化。",
+          "role_readiness_floor": "至少完成1个临床数据管理闭环：数据核查、query清理、锁库支持与质量复盘。",
+          "transfer_path_hint": "可转生物统计、临床运营、药物警戒；需补统计建模和项目管理能力，过渡6-10个月。",
+          "day_in_life": "临床数据管理岗工作周：核对CRF数据、发起并跟进query、执行一致性检查、支持中期分析和锁库准备。",
           "core_output_kpi": "临床数据管理岗核心KPI：数据核查通过率、锁库时效、query关闭率、合规审计通过率。",
           "typical_projects": [
             "临床数据管理岗流程优化专项",
             "临床数据管理岗效率提升专项",
             "临床数据管理岗跨部门协同专项"
           ],
-          "growth_path_1to3_year": "临床数据管理岗成长路径：1年夯实执行，2年独立负责模块，3年主导专项并沉淀方法论。",
+          "growth_path_1to3_year": "0-1年掌握临床数据流程和标准；1-3年独立负责试验数据质量；3-5年可主导多中心数据管理策略。",
           "cross_industry_transfer": "临床数据管理岗可迁移至相邻岗位，重点补齐行业规则理解与跨团队协同证据。",
           "prep_90d_plan": [
-            "1-30天：完成临床数据管理岗知识图谱与核心指标口径整理。",
-            "31-60天：落地1个临床数据管理岗可量化项目并形成复盘文档。",
-            "61-90天：完成4阶段题库训练并进行2轮模拟面试。"
+            "1-30天：梳理关键变量与常见数据偏差类型。",
+            "31-60天：完成1个query高压清理案例。",
+            "61-90天：完成10套临床数据题训练，强化时效与质量平衡。"
           ],
           "elimination_risks": [
             "只讲动作不讲指标",
@@ -6132,7 +6132,7 @@
               "evidence_hint": "用STAR说明你在项目中如何应用“试验数据库维护”，并给出可量化结果。"
             }
           ],
-          "updated_at": "2026-02-19",
+          "updated_at": "2026-02-20",
           "high_score_answer_example": "在生物医药与器械临床数据管理岗面试中，先明确目标与约束，再给执行方案、量化结果与复盘改进。",
           "project_evidence_public_sample": {
             "sample_id": "IND_BIOMED_DEVICE_ROLE_015_STAR_PUBLIC_2026",
@@ -6159,10 +6159,10 @@
             "updated_at": "2026-02-19"
           },
           "role_detail_v158": {
-            "role_scope": "负责临床数据管理岗相关职责并对关键指标结果负责。",
+            "role_scope": "负责临床数据质量管理与锁库支持，对数据完整性、准确性和交付时效负责。",
             "role_specific_question_coverage": {
-              "written_count": 6,
-              "interview_count": 6,
+              "written_count": 10,
+              "interview_count": 10,
               "written_stages": [
                 "campus_early_batch_written",
                 "campus_main_batch_written",
@@ -6176,7 +6176,68 @@
                 "internship_conversion_interview"
               ]
             },
-            "expansion_status": "landed_main_profile"
+            "expansion_status": "landed_deep_profile_v161_batch9"
+          },
+          "career_outlook_3to5_year": "临床试验数字化推进，数据管理岗位保持稳定需求，能力重心向自动质检与跨团队协同。",
+          "typical_work_week": "锁库前任务密度高，中心协调与数据核查并行。",
+          "switch_directions": [
+            {
+              "target_role": "生物统计师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "统计分析",
+                "SAS/R"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "临床运营",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "中心管理",
+                "流程推进"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "药物警戒",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "安全数据",
+                "信号评估"
+              ],
+              "transition_period": "6-9个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "91-120天：建立高风险字段质量监控规则。",
+            "121-150天：主导1次锁库前专项复盘。",
+            "151-180天：沉淀query分层管理与时效标准。"
+          ],
+          "role_scope_text": "负责临床数据质量管理与锁库支持，对数据完整性、准确性和交付时效负责。",
+          "common_deduction_points": [
+            "只讲清理动作，不讲质量判定标准。",
+            "query优先级划分不清。",
+            "锁库准备缺少风险清单。",
+            "跨中心沟通机制不完整。"
+          ],
+          "star_evidence_template": {
+            "situation": "锁库前关键变量缺失率升高且query积压。",
+            "task": "在锁库节点前完成高风险字段清理并确保质量达标。",
+            "action": [
+              "按变量重要性和中心表现分层清理query。",
+              "联动CRA和中心快速补录与复核。",
+              "输出锁库风险清单并闭环追踪。"
+            ],
+            "result": [
+              "按期锁库且关键指标质量达标。",
+              "形成高压阶段的数据治理机制。"
+            ],
+            "proof_materials": [
+              "query看板",
+              "锁库前核查表",
+              "风险追踪记录"
+            ]
           }
         },
         {
@@ -27728,6 +27789,342 @@
             "关键取舍",
             "复盘迁移"
           ]
+        },
+        {
+          "answer_framework": [
+            "目标与约束澄清",
+            "执行路径拆解",
+            "指标与风险控制",
+            "复盘与机制沉淀"
+          ],
+          "authenticity_level": "real_user",
+          "data_origin": "official_jd_competency_mapping_with_manual_role_enrichment_v161_batch9",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-20",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+              "SRC_NBS_INCOME_2025_FULLYEAR"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-20",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:生物医药与器械｜岗位:临床数据管理岗｜阶段:提前批笔试】锁库前query积压时你如何快速清理？",
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_V161_R015I_01",
+          "question_realness_note": "基于岗位能力口径与2026场景化补充（非官方原卷）。",
+          "question_type": "query积压处置题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_early_batch_written",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_015",
+          "role_name": "临床数据管理岗",
+          "round_label": "提前批笔试",
+          "updated_at": "2026-02-20",
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "结构化思维",
+            "可执行性",
+            "风险意识",
+            "复盘能力"
+          ],
+          "follow_up_questions": [
+            "资源受限时你先保哪一步？",
+            "首轮结果不佳如何纠偏？",
+            "如何沉淀成可复用机制？"
+          ],
+          "scoring_rubric": {
+            "A档": "路径完整、指标清晰、风险闭环。",
+            "B档": "方案可执行但缺少量化或风险细节。",
+            "C档": "泛化表达，缺少行动与结果。"
+          },
+          "common_mistakes": [
+            "描述泛化",
+            "缺少量化指标",
+            "无风险预案"
+          ],
+          "good_answer_signals": [
+            "结论先行",
+            "路径清晰",
+            "指标闭环"
+          ],
+          "reference_answer_outline": [
+            "先明确目标与边界",
+            "再拆解动作",
+            "最后给出结果与复盘"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario",
+          "follow_up_chain": [
+            "边界澄清",
+            "关键取舍",
+            "复盘迁移"
+          ]
+        },
+        {
+          "answer_framework": [
+            "目标与约束澄清",
+            "执行路径拆解",
+            "指标与风险控制",
+            "复盘与机制沉淀"
+          ],
+          "authenticity_level": "real_user",
+          "data_origin": "official_jd_competency_mapping_with_manual_role_enrichment_v161_batch9",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-20",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+              "SRC_NBS_INCOME_2025_FULLYEAR"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-20",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:生物医药与器械｜岗位:临床数据管理岗｜阶段:主批笔试】请设计“采集-核查-清理-锁库”流程。",
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_V161_R015I_02",
+          "question_realness_note": "基于岗位能力口径与2026场景化补充（非官方原卷）。",
+          "question_type": "数据管理流程设计",
+          "question_year": 2026,
+          "recruitment_stage": "campus_main_batch_written",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_015",
+          "role_name": "临床数据管理岗",
+          "round_label": "主批笔试",
+          "updated_at": "2026-02-20",
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "结构化思维",
+            "可执行性",
+            "风险意识",
+            "复盘能力"
+          ],
+          "follow_up_questions": [
+            "资源受限时你先保哪一步？",
+            "首轮结果不佳如何纠偏？",
+            "如何沉淀成可复用机制？"
+          ],
+          "scoring_rubric": {
+            "A档": "路径完整、指标清晰、风险闭环。",
+            "B档": "方案可执行但缺少量化或风险细节。",
+            "C档": "泛化表达，缺少行动与结果。"
+          },
+          "common_mistakes": [
+            "描述泛化",
+            "缺少量化指标",
+            "无风险预案"
+          ],
+          "good_answer_signals": [
+            "结论先行",
+            "路径清晰",
+            "指标闭环"
+          ],
+          "reference_answer_outline": [
+            "先明确目标与边界",
+            "再拆解动作",
+            "最后给出结果与复盘"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process",
+          "follow_up_chain": [
+            "边界澄清",
+            "关键取舍",
+            "复盘迁移"
+          ]
+        },
+        {
+          "answer_framework": [
+            "目标与约束澄清",
+            "执行路径拆解",
+            "指标与风险控制",
+            "复盘与机制沉淀"
+          ],
+          "authenticity_level": "real_user",
+          "data_origin": "official_jd_competency_mapping_with_manual_role_enrichment_v161_batch9",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-20",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+              "SRC_NBS_INCOME_2025_FULLYEAR"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-20",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:生物医药与器械｜岗位:临床数据管理岗｜阶段:补录笔试】一次锁库延期后你如何复盘并优化？",
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_V161_R015I_03",
+          "question_realness_note": "基于岗位能力口径与2026场景化补充（非官方原卷）。",
+          "question_type": "锁库延期复盘",
+          "question_year": 2026,
+          "recruitment_stage": "campus_supplement_written",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_015",
+          "role_name": "临床数据管理岗",
+          "round_label": "补录笔试",
+          "updated_at": "2026-02-20",
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "结构化思维",
+            "可执行性",
+            "风险意识",
+            "复盘能力"
+          ],
+          "follow_up_questions": [
+            "资源受限时你先保哪一步？",
+            "首轮结果不佳如何纠偏？",
+            "如何沉淀成可复用机制？"
+          ],
+          "scoring_rubric": {
+            "A档": "路径完整、指标清晰、风险闭环。",
+            "B档": "方案可执行但缺少量化或风险细节。",
+            "C档": "泛化表达，缺少行动与结果。"
+          },
+          "common_mistakes": [
+            "描述泛化",
+            "缺少量化指标",
+            "无风险预案"
+          ],
+          "good_answer_signals": [
+            "结论先行",
+            "路径清晰",
+            "指标闭环"
+          ],
+          "reference_answer_outline": [
+            "先明确目标与边界",
+            "再拆解动作",
+            "最后给出结果与复盘"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review",
+          "follow_up_chain": [
+            "边界澄清",
+            "关键取舍",
+            "复盘迁移"
+          ]
+        },
+        {
+          "answer_framework": [
+            "目标与约束澄清",
+            "执行路径拆解",
+            "指标与风险控制",
+            "复盘与机制沉淀"
+          ],
+          "authenticity_level": "real_user",
+          "data_origin": "official_jd_competency_mapping_with_manual_role_enrichment_v161_batch9",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-20",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_WRITTEN_PRODUCT_OP_2026",
+            "source_name": "牛客网-笔试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+              "SRC_NBS_INCOME_2025_FULLYEAR"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-20",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:生物医药与器械｜岗位:临床数据管理岗｜阶段:实习转正笔试】节点紧迫时如何兼顾时效与质量？",
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_V161_R015I_04",
+          "question_realness_note": "基于岗位能力口径与2026场景化补充（非官方原卷）。",
+          "question_type": "速度质量平衡",
+          "question_year": 2026,
+          "recruitment_stage": "internship_conversion_written",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_015",
+          "role_name": "临床数据管理岗",
+          "round_label": "实习转正笔试",
+          "updated_at": "2026-02-20",
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "结构化思维",
+            "可执行性",
+            "风险意识",
+            "复盘能力"
+          ],
+          "follow_up_questions": [
+            "资源受限时你先保哪一步？",
+            "首轮结果不佳如何纠偏？",
+            "如何沉淀成可复用机制？"
+          ],
+          "scoring_rubric": {
+            "A档": "路径完整、指标清晰、风险闭环。",
+            "B档": "方案可执行但缺少量化或风险细节。",
+            "C档": "泛化表达，缺少行动与结果。"
+          },
+          "common_mistakes": [
+            "描述泛化",
+            "缺少量化指标",
+            "无风险预案"
+          ],
+          "good_answer_signals": [
+            "结论先行",
+            "路径清晰",
+            "指标闭环"
+          ],
+          "reference_answer_outline": [
+            "先明确目标与边界",
+            "再拆解动作",
+            "最后给出结果与复盘"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff",
+          "follow_up_chain": [
+            "边界澄清",
+            "关键取舍",
+            "复盘迁移"
+          ]
         }
       ],
       "last_checked": "2026-02-19",
@@ -47108,6 +47505,342 @@
           "recruitment_stage": "internship_conversion_interview",
           "role_id": "IND_BIOMED_DEVICE_ROLE_014",
           "role_name": "体外诊断产品经理",
+          "round_label": "实习转正面试",
+          "scoring_dimensions": [
+            "结构化思维",
+            "可执行性",
+            "风险意识",
+            "复盘能力"
+          ],
+          "updated_at": "2026-02-20",
+          "sample_size": 8,
+          "answer_framework": [
+            "目标与约束澄清",
+            "执行路径拆解",
+            "指标与风险控制",
+            "复盘与机制沉淀"
+          ],
+          "follow_up_questions": [
+            "资源受限时你先保哪一步？",
+            "首轮结果不佳如何纠偏？",
+            "如何沉淀成可复用机制？"
+          ],
+          "scoring_rubric": {
+            "A档": "路径完整、指标清晰、风险闭环。",
+            "B档": "方案可执行但缺少量化或风险细节。",
+            "C档": "泛化表达，缺少行动与结果。"
+          },
+          "common_mistakes": [
+            "描述泛化",
+            "缺少量化指标",
+            "无风险预案"
+          ],
+          "good_answer_signals": [
+            "结论先行",
+            "路径清晰",
+            "指标闭环"
+          ],
+          "reference_answer_outline": [
+            "先明确目标与边界",
+            "再拆解动作",
+            "最后给出结果与复盘"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff",
+          "follow_up_chain": [
+            "边界澄清",
+            "关键取舍",
+            "复盘迁移"
+          ]
+        },
+        {
+          "authenticity_level": "real_user",
+          "data_origin": "official_jd_competency_mapping_with_manual_role_enrichment_v161_batch9",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-20",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_INTERVIEW_PRODUCT_OP_2026",
+            "source_name": "牛客网-面试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+              "SRC_NBS_INCOME_2025_FULLYEAR"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-20",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:生物医药与器械｜岗位:临床数据管理岗｜阶段:提前批面试】研究中心长期延迟回query时你如何推进？",
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_V161_R015I_01",
+          "question_realness_note": "基于岗位能力口径与2026场景化补充（非官方原卷）。",
+          "question_type": "中心沟通题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_early_batch_interview",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_015",
+          "role_name": "临床数据管理岗",
+          "round_label": "提前批面试",
+          "scoring_dimensions": [
+            "结构化思维",
+            "可执行性",
+            "风险意识",
+            "复盘能力"
+          ],
+          "updated_at": "2026-02-20",
+          "sample_size": 8,
+          "answer_framework": [
+            "目标与约束澄清",
+            "执行路径拆解",
+            "指标与风险控制",
+            "复盘与机制沉淀"
+          ],
+          "follow_up_questions": [
+            "资源受限时你先保哪一步？",
+            "首轮结果不佳如何纠偏？",
+            "如何沉淀成可复用机制？"
+          ],
+          "scoring_rubric": {
+            "A档": "路径完整、指标清晰、风险闭环。",
+            "B档": "方案可执行但缺少量化或风险细节。",
+            "C档": "泛化表达，缺少行动与结果。"
+          },
+          "common_mistakes": [
+            "描述泛化",
+            "缺少量化指标",
+            "无风险预案"
+          ],
+          "good_answer_signals": [
+            "结论先行",
+            "路径清晰",
+            "指标闭环"
+          ],
+          "reference_answer_outline": [
+            "先明确目标与边界",
+            "再拆解动作",
+            "最后给出结果与复盘"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario",
+          "follow_up_chain": [
+            "边界澄清",
+            "关键取舍",
+            "复盘迁移"
+          ]
+        },
+        {
+          "authenticity_level": "real_user",
+          "data_origin": "official_jd_competency_mapping_with_manual_role_enrichment_v161_batch9",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-20",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_INTERVIEW_PRODUCT_OP_2026",
+            "source_name": "牛客网-面试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+              "SRC_NBS_INCOME_2025_FULLYEAR"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-20",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:生物医药与器械｜岗位:临床数据管理岗｜阶段:主批面试】统计和医学口径冲突时你如何协调？",
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_V161_R015I_02",
+          "question_realness_note": "基于岗位能力口径与2026场景化补充（非官方原卷）。",
+          "question_type": "医统协同题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_main_batch_interview",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_015",
+          "role_name": "临床数据管理岗",
+          "round_label": "主批面试",
+          "scoring_dimensions": [
+            "结构化思维",
+            "可执行性",
+            "风险意识",
+            "复盘能力"
+          ],
+          "updated_at": "2026-02-20",
+          "sample_size": 8,
+          "answer_framework": [
+            "目标与约束澄清",
+            "执行路径拆解",
+            "指标与风险控制",
+            "复盘与机制沉淀"
+          ],
+          "follow_up_questions": [
+            "资源受限时你先保哪一步？",
+            "首轮结果不佳如何纠偏？",
+            "如何沉淀成可复用机制？"
+          ],
+          "scoring_rubric": {
+            "A档": "路径完整、指标清晰、风险闭环。",
+            "B档": "方案可执行但缺少量化或风险细节。",
+            "C档": "泛化表达，缺少行动与结果。"
+          },
+          "common_mistakes": [
+            "描述泛化",
+            "缺少量化指标",
+            "无风险预案"
+          ],
+          "good_answer_signals": [
+            "结论先行",
+            "路径清晰",
+            "指标闭环"
+          ],
+          "reference_answer_outline": [
+            "先明确目标与边界",
+            "再拆解动作",
+            "最后给出结果与复盘"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration",
+          "follow_up_chain": [
+            "边界澄清",
+            "关键取舍",
+            "复盘迁移"
+          ]
+        },
+        {
+          "authenticity_level": "real_user",
+          "data_origin": "official_jd_competency_mapping_with_manual_role_enrichment_v161_batch9",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-20",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_INTERVIEW_PRODUCT_OP_2026",
+            "source_name": "牛客网-面试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+              "SRC_NBS_INCOME_2025_FULLYEAR"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-20",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:生物医药与器械｜岗位:临床数据管理岗｜阶段:补录面试】讲一次关键变量遗漏后的修正过程。",
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_V161_R015I_03",
+          "question_realness_note": "基于岗位能力口径与2026场景化补充（非官方原卷）。",
+          "question_type": "遗漏复盘题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_supplement_interview",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_015",
+          "role_name": "临床数据管理岗",
+          "round_label": "补录面试",
+          "scoring_dimensions": [
+            "结构化思维",
+            "可执行性",
+            "风险意识",
+            "复盘能力"
+          ],
+          "updated_at": "2026-02-20",
+          "sample_size": 8,
+          "answer_framework": [
+            "目标与约束澄清",
+            "执行路径拆解",
+            "指标与风险控制",
+            "复盘与机制沉淀"
+          ],
+          "follow_up_questions": [
+            "资源受限时你先保哪一步？",
+            "首轮结果不佳如何纠偏？",
+            "如何沉淀成可复用机制？"
+          ],
+          "scoring_rubric": {
+            "A档": "路径完整、指标清晰、风险闭环。",
+            "B档": "方案可执行但缺少量化或风险细节。",
+            "C档": "泛化表达，缺少行动与结果。"
+          },
+          "common_mistakes": [
+            "描述泛化",
+            "缺少量化指标",
+            "无风险预案"
+          ],
+          "good_answer_signals": [
+            "结论先行",
+            "路径清晰",
+            "指标闭环"
+          ],
+          "reference_answer_outline": [
+            "先明确目标与边界",
+            "再拆解动作",
+            "最后给出结果与复盘"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review",
+          "follow_up_chain": [
+            "边界澄清",
+            "关键取舍",
+            "复盘迁移"
+          ]
+        },
+        {
+          "authenticity_level": "real_user",
+          "data_origin": "official_jd_competency_mapping_with_manual_role_enrichment_v161_batch9",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-20",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-19",
+            "source_id": "SRC_NOWCODER_INTERVIEW_PRODUCT_OP_2026",
+            "source_name": "牛客网-面试真题库（产品/运营/综合岗标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+              "SRC_NBS_INCOME_2025_FULLYEAR"
+            ],
+            "publish_date": "2026-02-19",
+            "captured_at": "2026-02-20",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:生物医药与器械｜岗位:临床数据管理岗｜阶段:实习转正面试】多项目并发时你如何分配清理优先级？",
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_V161_R015I_04",
+          "question_realness_note": "基于岗位能力口径与2026场景化补充（非官方原卷）。",
+          "question_type": "任务排序决策",
+          "question_year": 2026,
+          "recruitment_stage": "internship_conversion_interview",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_015",
+          "role_name": "临床数据管理岗",
           "round_label": "实习转正面试",
           "scoring_dimensions": [
             "结构化思维",
