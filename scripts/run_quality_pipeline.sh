@@ -1689,6 +1689,16 @@ jq \
 mv "${REPORT_PATH}.tmp" "${REPORT_PATH}"
 cp "${REPORT_PATH}" "${LATEST_PATH}"
 
+# v1.62 overlay: decision-depth hardening (six-pack coverage, scenario buckets,
+# role-tier question density, official-share, observed-sample ratio, and follow-up de-dup telemetry).
+V162_OVERLAY_SCRIPT="${ROOT_DIR}/scripts/apply_v162_depth_overlay.sh"
+if [[ -f "${V162_OVERLAY_SCRIPT}" ]]; then
+  OVERLAY_V162_BLOCKERS="$("${V162_OVERLAY_SCRIPT}" "${DATA_PATH}" "${REPORT_PATH}" "${GATE_PATH}" "${LATEST_PATH}" "${LATEST_GATE_PATH}" || true)"
+  if [[ "${OVERLAY_V162_BLOCKERS}" == "1" ]]; then
+    HAS_BLOCKERS=1
+  fi
+fi
+
 echo "Quality pipeline completed"
 echo "- report: ${REPORT_PATH}"
 echo "- latest: ${LATEST_PATH}"
