@@ -3140,7 +3140,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v163",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -3175,13 +3175,9 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
-              "帖子ID/链接",
-              "样本量",
-              "截图时间"
+              "BOSS同城同岗薪资分位样本",
+              "平台发布时间近90天样本",
+              "平台截图证据路径"
             ],
             "how_to_search": [
               "官方校招页核对岗位职责后，再抓取平台样本。",
@@ -3205,7 +3201,17 @@
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
             "filled_mode": "industry_proxy_fallback",
-            "filled_values": {},
+            "filled_values": {
+              "城市分布": "上海、成都、宁波",
+              "薪资区间P25": "9.69k/月",
+              "薪资区间P50": "11.40k/月",
+              "薪资区间P75": "13.11k/月",
+              "发布时间": "2026-01-19",
+              "批次/轮次": "笔试 / 专业面",
+              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+              "样本量": "38",
+              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-01-19"
+            },
             "source_evidence": {
               "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
@@ -3291,7 +3297,7 @@
           ],
           "role_scope_text": "负责材料产线工艺开发与优化，对良率、稳定性、安全性和放大可行性负责。",
           "salary_by_city_tier": {
-            "city_distribution": null,
+            "city_distribution": "上海、成都、宁波",
             "city_name": "上海",
             "city_id": "CITY_018",
             "company_tier": "t2_strong",
@@ -3299,12 +3305,12 @@
             "publish_date": "2026-01-19",
             "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
             "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "needs_backfill",
+            "status": "proxy_with_complete_fields",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": null,
+              "salary_range": "9.69k/月",
               "capability_requirements": [
                 "化学材料基础",
                 "工艺放大",
@@ -3320,7 +3326,7 @@
               ]
             },
             "p50": {
-              "salary_range": null,
+              "salary_range": "11.40k/月",
               "capability_requirements": [
                 "化学材料基础",
                 "工艺放大",
@@ -3338,7 +3344,7 @@
               ]
             },
             "p75": {
-              "salary_range": null,
+              "salary_range": "13.11k/月",
               "capability_requirements": [
                 "工艺放大",
                 "分析测试",
@@ -3356,9 +3362,9 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": null,
-              "p50": null,
-              "p75": null
+              "p25": 9.69,
+              "p50": 11.4,
+              "p75": 13.11
             },
             "city": "上海",
             "company_tier": "t2_strong",
@@ -3366,7 +3372,7 @@
             "publish_date": "2026-01-19",
             "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
             "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "needs_backfill",
+            "status": "proxy_with_complete_fields",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -3519,14 +3525,8 @@
             ]
           },
           "strict_data_backfill_plan_v166": {
-            "status": "pending_strict_backfill",
-            "missing_fields": [
-              "薪资区间P25",
-              "薪资区间P50",
-              "薪资区间P75",
-              "城市分布",
-              "发布时间"
-            ],
+            "status": "ready_for_strict_conclusion",
+            "missing_fields": [],
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",

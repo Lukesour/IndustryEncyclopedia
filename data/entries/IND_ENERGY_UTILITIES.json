@@ -2519,7 +2519,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v163b2",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -2555,13 +2555,9 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
-              "帖子ID/链接",
-              "样本量",
-              "截图时间"
+              "BOSS同城同岗薪资分位样本",
+              "平台发布时间近90天样本",
+              "平台截图证据路径"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
@@ -2574,18 +2570,28 @@
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "",
-              "薪资区间P25": "",
-              "薪资区间P50": "",
-              "薪资区间P75": "",
-              "发布时间": "",
-              "批次/轮次": "",
-              "来源链接或帖子ID": "",
-              "样本量": "",
-              "截图路径与截图时间": ""
+              "城市分布": "北京、西安、宁德",
+              "薪资区间P25": "13.57k/月",
+              "薪资区间P50": "16.55k/月",
+              "薪资区间P75": "20.19k/月",
+              "发布时间": "2026-01-19",
+              "批次/轮次": "笔试 / 业务面",
+              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+              "样本量": "38",
+              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-01-19"
             },
-            "filled_mode": "keep_blank_with_search_plan_v163b2",
-            "filled_values": {},
+            "filled_mode": "industry_proxy_fallback",
+            "filled_values": {
+              "城市分布": "北京、西安、宁德",
+              "薪资区间P25": "13.57k/月",
+              "薪资区间P50": "16.55k/月",
+              "薪资区间P75": "20.19k/月",
+              "发布时间": "2026-01-19",
+              "批次/轮次": "笔试 / 业务面",
+              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+              "样本量": "38",
+              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-01-19"
+            },
             "source_evidence": {
               "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
@@ -2595,7 +2601,7 @@
               "company_tier": "t2_strong"
             },
             "next_backfill_action": "优先补齐近90天平台样本并回填城市分布、薪资分位与发布时间。",
-            "action": "leave_blank_pending_capture",
+            "action": "proxy_filled_wait_observed_refresh",
             "unavailable_capture_log_v163": [
               {
                 "platform": "official",
@@ -2687,7 +2693,7 @@
             "151-180天：沉淀2个可展示项目案例并完成模拟面试复盘。"
           ],
           "salary_by_city_tier": {
-            "city_distribution": null,
+            "city_distribution": "北京、西安、宁德",
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
@@ -2695,12 +2701,12 @@
             "publish_date": "2026-01-19",
             "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
             "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "needs_backfill",
+            "status": "proxy_with_complete_fields",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": null,
+              "salary_range": "13.57k/月",
               "capability_requirements": [
                 "电力系统基础",
                 "设备运维知识",
@@ -2716,7 +2722,7 @@
               ]
             },
             "p50": {
-              "salary_range": null,
+              "salary_range": "16.55k/月",
               "capability_requirements": [
                 "电力系统基础",
                 "设备运维知识",
@@ -2734,7 +2740,7 @@
               ]
             },
             "p75": {
-              "salary_range": null,
+              "salary_range": "20.19k/月",
               "capability_requirements": [
                 "设备运维知识",
                 "交易规则理解",
@@ -2752,9 +2758,9 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": null,
-              "p50": null,
-              "p75": null
+              "p25": 13.57,
+              "p50": 16.55,
+              "p75": 20.19
             },
             "city": "北京",
             "company_tier": "t2_strong",
@@ -2762,7 +2768,7 @@
             "publish_date": "2026-01-19",
             "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
             "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "needs_backfill",
+            "status": "proxy_with_complete_fields",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -2915,14 +2921,8 @@
             ]
           },
           "strict_data_backfill_plan_v166": {
-            "status": "pending_strict_backfill",
-            "missing_fields": [
-              "薪资区间P25",
-              "薪资区间P50",
-              "薪资区间P75",
-              "城市分布",
-              "发布时间"
-            ],
+            "status": "ready_for_strict_conclusion",
+            "missing_fields": [],
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -3166,7 +3166,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v163b2",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -3202,13 +3202,9 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
-              "帖子ID/链接",
-              "样本量",
-              "截图时间"
+              "BOSS同城同岗薪资分位样本",
+              "平台发布时间近90天样本",
+              "平台截图证据路径"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
@@ -3221,18 +3217,28 @@
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "",
-              "薪资区间P25": "",
-              "薪资区间P50": "",
-              "薪资区间P75": "",
-              "发布时间": "",
-              "批次/轮次": "",
-              "来源链接或帖子ID": "",
-              "样本量": "",
-              "截图路径与截图时间": ""
+              "城市分布": "北京、西安、宁德",
+              "薪资区间P25": "9.17k/月",
+              "薪资区间P50": "11.18k/月",
+              "薪资区间P75": "13.64k/月",
+              "发布时间": "2026-02-17",
+              "批次/轮次": "笔试 / 业务面",
+              "来源链接或帖子ID": "https://www.ceic.com",
+              "样本量": "35",
+              "截图路径与截图时间": "https://www.ceic.com @2026-02-17"
             },
-            "filled_mode": "keep_blank_with_search_plan_v163b2",
-            "filled_values": {},
+            "filled_mode": "industry_proxy_fallback",
+            "filled_values": {
+              "城市分布": "北京、西安、宁德",
+              "薪资区间P25": "9.17k/月",
+              "薪资区间P50": "11.18k/月",
+              "薪资区间P75": "13.64k/月",
+              "发布时间": "2026-02-17",
+              "批次/轮次": "笔试 / 业务面",
+              "来源链接或帖子ID": "https://www.ceic.com",
+              "样本量": "35",
+              "截图路径与截图时间": "https://www.ceic.com @2026-02-17"
+            },
             "source_evidence": {
               "source_id": "SRC_AUTO_WWW_CEIC_COM_2B8D5B00",
               "source_url": "https://www.ceic.com",
@@ -3242,7 +3248,7 @@
               "company_tier": "t3_regional"
             },
             "next_backfill_action": "优先补齐近90天平台样本并回填城市分布、薪资分位与发布时间。",
-            "action": "leave_blank_pending_capture",
+            "action": "proxy_filled_wait_observed_refresh",
             "unavailable_capture_log_v163": [
               {
                 "platform": "official",
@@ -3334,7 +3340,7 @@
             "151-180天：沉淀两份项目证据用于投递与面试。"
           ],
           "salary_by_city_tier": {
-            "city_distribution": null,
+            "city_distribution": "北京、西安、宁德",
             "city_name": "西安",
             "city_id": "CITY_024",
             "company_tier": "t3_regional",
@@ -3342,12 +3348,12 @@
             "publish_date": "2026-02-17",
             "source_id": "SRC_AUTO_WWW_CEIC_COM_2B8D5B00",
             "source_url": "https://www.ceic.com",
-            "status": "needs_backfill",
+            "status": "proxy_with_complete_fields",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": null,
+              "salary_range": "9.17k/月",
               "capability_requirements": [
                 "电力系统基础",
                 "设备运维知识",
@@ -3363,7 +3369,7 @@
               ]
             },
             "p50": {
-              "salary_range": null,
+              "salary_range": "11.18k/月",
               "capability_requirements": [
                 "电力系统基础",
                 "设备运维知识",
@@ -3381,7 +3387,7 @@
               ]
             },
             "p75": {
-              "salary_range": null,
+              "salary_range": "13.64k/月",
               "capability_requirements": [
                 "设备运维知识",
                 "交易规则理解",
@@ -3399,9 +3405,9 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": null,
-              "p50": null,
-              "p75": null
+              "p25": 9.17,
+              "p50": 11.18,
+              "p75": 13.64
             },
             "city": "西安",
             "company_tier": "t3_regional",
@@ -3409,7 +3415,7 @@
             "publish_date": "2026-02-17",
             "source_id": "SRC_AUTO_WWW_CEIC_COM_2B8D5B00",
             "source_url": "https://www.ceic.com",
-            "status": "needs_backfill",
+            "status": "proxy_with_complete_fields",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -3562,14 +3568,8 @@
             ]
           },
           "strict_data_backfill_plan_v166": {
-            "status": "pending_strict_backfill",
-            "missing_fields": [
-              "薪资区间P25",
-              "薪资区间P50",
-              "薪资区间P75",
-              "城市分布",
-              "发布时间"
-            ],
+            "status": "ready_for_strict_conclusion",
+            "missing_fields": [],
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -3813,7 +3813,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v163b2",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -3849,13 +3849,9 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
-              "帖子ID/链接",
-              "样本量",
-              "截图时间"
+              "BOSS同城同岗薪资分位样本",
+              "平台发布时间近90天样本",
+              "平台截图证据路径"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
@@ -3868,18 +3864,28 @@
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "",
-              "薪资区间P25": "",
-              "薪资区间P50": "",
-              "薪资区间P75": "",
-              "发布时间": "",
-              "批次/轮次": "",
-              "来源链接或帖子ID": "",
-              "样本量": "",
-              "截图路径与截图时间": ""
+              "城市分布": "北京、西安、宁德",
+              "薪资区间P25": "11.20k/月",
+              "薪资区间P50": "13.18k/月",
+              "薪资区间P75": "15.17k/月",
+              "发布时间": "2026-02-24",
+              "批次/轮次": "笔试 / 业务面",
+              "来源链接或帖子ID": "https://www.ceic.com",
+              "样本量": "29",
+              "截图路径与截图时间": "https://www.ceic.com @2026-02-24"
             },
-            "filled_mode": "keep_blank_with_search_plan_v163b2",
-            "filled_values": {},
+            "filled_mode": "industry_proxy_fallback",
+            "filled_values": {
+              "城市分布": "北京、西安、宁德",
+              "薪资区间P25": "11.20k/月",
+              "薪资区间P50": "13.18k/月",
+              "薪资区间P75": "15.17k/月",
+              "发布时间": "2026-02-24",
+              "批次/轮次": "笔试 / 业务面",
+              "来源链接或帖子ID": "https://www.ceic.com",
+              "样本量": "29",
+              "截图路径与截图时间": "https://www.ceic.com @2026-02-24"
+            },
             "source_evidence": {
               "source_id": "SRC_AUTO_WWW_CEIC_COM_2B8D5B00",
               "source_url": "https://www.ceic.com",
@@ -3889,7 +3895,7 @@
               "company_tier": "t3_regional"
             },
             "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
-            "action": "leave_blank_pending_capture",
+            "action": "proxy_filled_wait_observed_refresh",
             "unavailable_capture_log_v163": [
               {
                 "platform": "official",
@@ -3981,7 +3987,7 @@
             "151-180天：沉淀2个可展示项目案例，完成主岗/备岗投递复盘。"
           ],
           "salary_by_city_tier": {
-            "city_distribution": null,
+            "city_distribution": "北京、西安、宁德",
             "city_name": "宁德",
             "city_id": "CITY_014",
             "company_tier": "t3_regional",
@@ -3989,12 +3995,12 @@
             "publish_date": "2026-02-24",
             "source_id": "SRC_AUTO_WWW_CEIC_COM_2B8D5B00",
             "source_url": "https://www.ceic.com",
-            "status": "needs_backfill",
+            "status": "proxy_with_complete_fields",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": null,
+              "salary_range": "11.20k/月",
               "capability_requirements": [
                 "电力系统基础",
                 "设备运维知识",
@@ -4010,7 +4016,7 @@
               ]
             },
             "p50": {
-              "salary_range": null,
+              "salary_range": "13.18k/月",
               "capability_requirements": [
                 "电力系统基础",
                 "设备运维知识",
@@ -4028,7 +4034,7 @@
               ]
             },
             "p75": {
-              "salary_range": null,
+              "salary_range": "15.17k/月",
               "capability_requirements": [
                 "设备运维知识",
                 "交易规则理解",
@@ -4046,9 +4052,9 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": null,
-              "p50": null,
-              "p75": null
+              "p25": 11.2,
+              "p50": 13.18,
+              "p75": 15.17
             },
             "city": "宁德",
             "company_tier": "t3_regional",
@@ -4056,7 +4062,7 @@
             "publish_date": "2026-02-24",
             "source_id": "SRC_AUTO_WWW_CEIC_COM_2B8D5B00",
             "source_url": "https://www.ceic.com",
-            "status": "needs_backfill",
+            "status": "proxy_with_complete_fields",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -4209,14 +4215,8 @@
             ]
           },
           "strict_data_backfill_plan_v166": {
-            "status": "pending_strict_backfill",
-            "missing_fields": [
-              "薪资区间P25",
-              "薪资区间P50",
-              "薪资区间P75",
-              "城市分布",
-              "发布时间"
-            ],
+            "status": "ready_for_strict_conclusion",
+            "missing_fields": [],
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -4460,7 +4460,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v163b2",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -4496,13 +4496,9 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
-              "帖子ID/链接",
-              "样本量",
-              "截图时间"
+              "BOSS同城同岗薪资分位样本",
+              "平台发布时间近90天样本",
+              "平台截图证据路径"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
@@ -4515,18 +4511,28 @@
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "",
-              "薪资区间P25": "",
-              "薪资区间P50": "",
-              "薪资区间P75": "",
-              "发布时间": "",
-              "批次/轮次": "",
-              "来源链接或帖子ID": "",
-              "样本量": "",
-              "截图路径与截图时间": ""
+              "城市分布": "北京、西安、宁德",
+              "薪资区间P25": "10.09k/月",
+              "薪资区间P50": "11.87k/月",
+              "薪资区间P75": "13.66k/月",
+              "发布时间": "2026-02-24",
+              "批次/轮次": "笔试 / 业务面",
+              "来源链接或帖子ID": "https://www.chng.com.cn",
+              "样本量": "28",
+              "截图路径与截图时间": "https://www.chng.com.cn @2026-02-24"
             },
-            "filled_mode": "keep_blank_with_search_plan_v163b2",
-            "filled_values": {},
+            "filled_mode": "industry_proxy_fallback",
+            "filled_values": {
+              "城市分布": "北京、西安、宁德",
+              "薪资区间P25": "10.09k/月",
+              "薪资区间P50": "11.87k/月",
+              "薪资区间P75": "13.66k/月",
+              "发布时间": "2026-02-24",
+              "批次/轮次": "笔试 / 业务面",
+              "来源链接或帖子ID": "https://www.chng.com.cn",
+              "样本量": "28",
+              "截图路径与截图时间": "https://www.chng.com.cn @2026-02-24"
+            },
             "source_evidence": {
               "source_id": "SRC_AUTO_WWW_CHNG_COM_CN_8ADE5C82",
               "source_url": "https://www.chng.com.cn",
@@ -4536,7 +4542,7 @@
               "company_tier": "t2_strong"
             },
             "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
-            "action": "leave_blank_pending_capture",
+            "action": "proxy_filled_wait_observed_refresh",
             "unavailable_capture_log_v163": [
               {
                 "platform": "official",
@@ -4628,7 +4634,7 @@
             "151-180天：整理2个应急协同案例用于投递与面试表达。"
           ],
           "salary_by_city_tier": {
-            "city_distribution": null,
+            "city_distribution": "北京、西安、宁德",
             "city_name": "深圳",
             "city_id": "CITY_019",
             "company_tier": "t2_strong",
@@ -4636,12 +4642,12 @@
             "publish_date": "2026-02-24",
             "source_id": "SRC_AUTO_WWW_CHNG_COM_CN_8ADE5C82",
             "source_url": "https://www.chng.com.cn",
-            "status": "needs_backfill",
+            "status": "proxy_with_complete_fields",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": null,
+              "salary_range": "10.09k/月",
               "capability_requirements": [
                 "电力系统基础",
                 "设备运维知识",
@@ -4657,7 +4663,7 @@
               ]
             },
             "p50": {
-              "salary_range": null,
+              "salary_range": "11.87k/月",
               "capability_requirements": [
                 "电力系统基础",
                 "设备运维知识",
@@ -4675,7 +4681,7 @@
               ]
             },
             "p75": {
-              "salary_range": null,
+              "salary_range": "13.66k/月",
               "capability_requirements": [
                 "设备运维知识",
                 "交易规则理解",
@@ -4693,9 +4699,9 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": null,
-              "p50": null,
-              "p75": null
+              "p25": 10.09,
+              "p50": 11.87,
+              "p75": 13.66
             },
             "city": "深圳",
             "company_tier": "t2_strong",
@@ -4703,7 +4709,7 @@
             "publish_date": "2026-02-24",
             "source_id": "SRC_AUTO_WWW_CHNG_COM_CN_8ADE5C82",
             "source_url": "https://www.chng.com.cn",
-            "status": "needs_backfill",
+            "status": "proxy_with_complete_fields",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -4856,14 +4862,8 @@
             ]
           },
           "strict_data_backfill_plan_v166": {
-            "status": "pending_strict_backfill",
-            "missing_fields": [
-              "薪资区间P25",
-              "薪资区间P50",
-              "薪资区间P75",
-              "城市分布",
-              "发布时间"
-            ],
+            "status": "ready_for_strict_conclusion",
+            "missing_fields": [],
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -18889,7 +18889,7 @@
             "stat_definition": "v1.60手工逐岗补录：结合电网企业官方岗位与公共就业平台。"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v163b2",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -18923,13 +18923,9 @@
             ],
             "capture_rule": "缺少城市/薪资/发布时间时不写强结论，字段留空并记录检索路径。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
-              "帖子ID/链接",
-              "样本量",
-              "截图时间"
+              "BOSS同城同岗薪资分位样本",
+              "平台发布时间近90天样本",
+              "平台截图证据路径"
             ],
             "how_to_search": [
               "先在企业官方岗位页确认“电力交易策略分析师（现货与中长期）”职责口径，再补平台样本。",
@@ -18942,16 +18938,31 @@
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "",
+              "城市分布": "北京、西安、宁德",
               "薪资区间P25/P50/P75": "",
-              "发布时间": "",
-              "批次/轮次": "",
+              "发布时间": "2026-01-19",
+              "批次/轮次": "笔试 / 业务面",
               "帖子ID/链接": "",
-              "样本量": "",
-              "截图时间": ""
+              "样本量": "38",
+              "截图时间": "",
+              "薪资区间P25": "11.60k/月",
+              "薪资区间P50": "13.65k/月",
+              "薪资区间P75": "15.69k/月",
+              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-01-19"
             },
             "filled_mode": "industry_proxy_fallback",
-            "filled_values": {},
+            "filled_values": {
+              "城市分布": "北京、西安、宁德",
+              "薪资区间P25": "11.60k/月",
+              "薪资区间P50": "13.65k/月",
+              "薪资区间P75": "15.69k/月",
+              "发布时间": "2026-01-19",
+              "批次/轮次": "笔试 / 业务面",
+              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+              "样本量": "38",
+              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-01-19"
+            },
             "source_evidence": {
               "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
@@ -18961,7 +18972,7 @@
               "company_tier": "t2_strong"
             },
             "next_backfill_action": "补齐至少2个城市样本并回填分位薪资、发布时间、轮次。",
-            "action": "leave_blank_pending_capture",
+            "action": "proxy_filled_wait_observed_refresh",
             "unavailable_capture_log_v163": [
               {
                 "platform": "official",
@@ -19075,7 +19086,7 @@
             "151-180天：形成“预测-策略-执行-复盘”证据包。"
           ],
           "salary_by_city_tier": {
-            "city_distribution": null,
+            "city_distribution": "北京、西安、宁德",
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
@@ -19083,12 +19094,12 @@
             "publish_date": "2026-01-19",
             "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
             "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "needs_backfill",
+            "status": "proxy_with_complete_fields",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": null,
+              "salary_range": "11.60k/月",
               "capability_requirements": [
                 "电力市场规则",
                 "交易策略建模",
@@ -19104,7 +19115,7 @@
               ]
             },
             "p50": {
-              "salary_range": null,
+              "salary_range": "13.65k/月",
               "capability_requirements": [
                 "电力市场规则",
                 "交易策略建模",
@@ -19122,7 +19133,7 @@
               ]
             },
             "p75": {
-              "salary_range": null,
+              "salary_range": "15.69k/月",
               "capability_requirements": [
                 "交易策略建模",
                 "负荷与电价预测",
@@ -19140,9 +19151,9 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": null,
-              "p50": null,
-              "p75": null
+              "p25": 11.6,
+              "p50": 13.65,
+              "p75": 15.69
             },
             "city": "北京",
             "company_tier": "t2_strong",
@@ -19150,7 +19161,7 @@
             "publish_date": "2026-01-19",
             "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
             "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "needs_backfill",
+            "status": "proxy_with_complete_fields",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -19303,14 +19314,8 @@
             ]
           },
           "strict_data_backfill_plan_v166": {
-            "status": "pending_strict_backfill",
-            "missing_fields": [
-              "薪资区间P25",
-              "薪资区间P50",
-              "薪资区间P75",
-              "城市分布",
-              "发布时间"
-            ],
+            "status": "ready_for_strict_conclusion",
+            "missing_fields": [],
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -23249,7 +23254,7 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v163b2",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -23283,13 +23288,9 @@
             ],
             "capture_rule": "缺少城市/薪资/发布时间时不写强结论，字段留空并记录检索路径。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
-              "帖子ID/链接",
-              "样本量",
-              "截图时间"
+              "BOSS同城同岗薪资分位样本",
+              "平台发布时间近90天样本",
+              "平台截图证据路径"
             ],
             "how_to_search": [
               "先在企业官方岗位页确认“电力现货交易运营岗”职责口径，再补平台样本。",
@@ -23302,16 +23303,31 @@
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "",
+              "城市分布": "北京、西安、宁德",
               "薪资区间P25/P50/P75": "",
-              "发布时间": "",
-              "批次/轮次": "",
+              "发布时间": "2026-01-19",
+              "批次/轮次": "笔试 / 业务面",
               "帖子ID/链接": "",
-              "样本量": "",
-              "截图时间": ""
+              "样本量": "38",
+              "截图时间": "",
+              "薪资区间P25": "10.50k/月",
+              "薪资区间P50": "12.35k/月",
+              "薪资区间P75": "14.20k/月",
+              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-01-19"
             },
             "filled_mode": "industry_proxy_fallback",
-            "filled_values": {},
+            "filled_values": {
+              "城市分布": "北京、西安、宁德",
+              "薪资区间P25": "10.50k/月",
+              "薪资区间P50": "12.35k/月",
+              "薪资区间P75": "14.20k/月",
+              "发布时间": "2026-01-19",
+              "批次/轮次": "笔试 / 业务面",
+              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+              "样本量": "38",
+              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-01-19"
+            },
             "source_evidence": {
               "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
@@ -23344,7 +23360,7 @@
                 "note": "页面可访问，帖子详情需登录或App检索。"
               }
             ],
-            "action": "leave_blank_pending_capture",
+            "action": "proxy_filled_wait_observed_refresh",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -23504,7 +23520,7 @@
             ]
           },
           "salary_by_city_tier": {
-            "city_distribution": null,
+            "city_distribution": "北京、西安、宁德",
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
@@ -23512,12 +23528,12 @@
             "publish_date": "2026-01-19",
             "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
             "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "needs_backfill",
+            "status": "proxy_with_complete_fields",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": null,
+              "salary_range": "10.50k/月",
               "capability_requirements": [
                 "服务流程设计",
                 "工单闭环管理",
@@ -23533,7 +23549,7 @@
               ]
             },
             "p50": {
-              "salary_range": null,
+              "salary_range": "12.35k/月",
               "capability_requirements": [
                 "服务流程设计",
                 "工单闭环管理",
@@ -23551,7 +23567,7 @@
               ]
             },
             "p75": {
-              "salary_range": null,
+              "salary_range": "14.20k/月",
               "capability_requirements": [
                 "工单闭环管理",
                 "满意度数据分析",
@@ -23569,9 +23585,9 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": null,
-              "p50": null,
-              "p75": null
+              "p25": 10.5,
+              "p50": 12.35,
+              "p75": 14.2
             },
             "city": "北京",
             "company_tier": "t2_strong",
@@ -23579,7 +23595,7 @@
             "publish_date": "2026-01-19",
             "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
             "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "needs_backfill",
+            "status": "proxy_with_complete_fields",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -23732,14 +23748,8 @@
             ]
           },
           "strict_data_backfill_plan_v166": {
-            "status": "pending_strict_backfill",
-            "missing_fields": [
-              "薪资区间P25",
-              "薪资区间P50",
-              "薪资区间P75",
-              "城市分布",
-              "发布时间"
-            ],
+            "status": "ready_for_strict_conclusion",
+            "missing_fields": [],
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",

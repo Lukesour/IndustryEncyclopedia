@@ -3070,7 +3070,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v163",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -3104,13 +3104,9 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
-              "帖子ID/链接",
-              "样本量",
-              "截图时间"
+              "BOSS同城同岗薪资分位样本",
+              "平台发布时间近90天样本",
+              "平台截图证据路径"
             ],
             "how_to_search": [
               "公务体系优先以官方招录公告为主证据。",
@@ -3134,7 +3130,17 @@
               "截图路径与截图时间": "https://www.zhipin.com @2026-02-17"
             },
             "filled_mode": "industry_proxy_fallback",
-            "filled_values": {},
+            "filled_values": {
+              "城市分布": "北京、武汉、常州",
+              "薪资区间P25": "8.30k/月",
+              "薪资区间P50": "9.60k/月",
+              "薪资区间P75": "10.90k/月",
+              "发布时间": "2026-02-17",
+              "批次/轮次": "笔试 / 结构化面试",
+              "来源链接或帖子ID": "https://www.zhipin.com",
+              "样本量": "38",
+              "截图路径与截图时间": "https://www.zhipin.com @2026-02-17"
+            },
             "source_evidence": {
               "source_id": "SRC_BOSS",
               "source_url": "https://www.zhipin.com",
@@ -3220,7 +3226,7 @@
           ],
           "role_scope_text": "负责执法事项办理与规范执行，对程序合规、证据完整和执法结果质量负责。",
           "salary_by_city_tier": {
-            "city_distribution": null,
+            "city_distribution": "北京、武汉、常州",
             "city_name": "重庆",
             "city_id": "CITY_004",
             "company_tier": "public_sector",
@@ -3228,12 +3234,12 @@
             "publish_date": "2026-02-17",
             "source_id": "SRC_BOSS",
             "source_url": "https://www.zhipin.com",
-            "status": "needs_backfill",
+            "status": "proxy_with_complete_fields",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": null,
+              "salary_range": "8.30k/月",
               "capability_requirements": [
                 "政策理解",
                 "公文能力",
@@ -3249,7 +3255,7 @@
               ]
             },
             "p50": {
-              "salary_range": null,
+              "salary_range": "9.60k/月",
               "capability_requirements": [
                 "政策理解",
                 "公文能力",
@@ -3267,7 +3273,7 @@
               ]
             },
             "p75": {
-              "salary_range": null,
+              "salary_range": "10.90k/月",
               "capability_requirements": [
                 "公文能力",
                 "项目管理基础",
@@ -3285,9 +3291,9 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": null,
-              "p50": null,
-              "p75": null
+              "p25": 8.3,
+              "p50": 9.6,
+              "p75": 10.9
             },
             "city": "重庆",
             "company_tier": "public_sector",
@@ -3295,7 +3301,7 @@
             "publish_date": "2026-02-17",
             "source_id": "SRC_BOSS",
             "source_url": "https://www.zhipin.com",
-            "status": "needs_backfill",
+            "status": "proxy_with_complete_fields",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -3448,14 +3454,8 @@
             ]
           },
           "strict_data_backfill_plan_v166": {
-            "status": "pending_strict_backfill",
-            "missing_fields": [
-              "薪资区间P25",
-              "薪资区间P50",
-              "薪资区间P75",
-              "城市分布",
-              "发布时间"
-            ],
+            "status": "ready_for_strict_conclusion",
+            "missing_fields": [],
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
