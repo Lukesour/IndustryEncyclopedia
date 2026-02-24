@@ -3102,7 +3102,7 @@
             "逻辑性",
             "合规意识"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "笔试",
             "案例面",
@@ -3179,7 +3179,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v163b2",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -3202,51 +3202,73 @@
               "金融-证券基金 销售交易支持 offer 薪资"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
+            "missing_fields": [
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
+            ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
               "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "上海、北京、深圳",
-              "薪资区间P25": "10.80k/月",
-              "薪资区间P50": "12.80k/月",
-              "薪资区间P75": "14.90k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "笔试 / 案例面",
-              "来源链接或帖子ID": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
-              "样本量": "30",
-              "截图路径与截图时间": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page @2026-02-17"
+              "城市分布": "",
+              "薪资区间P25": "",
+              "薪资区间P50": "",
+              "薪资区间P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "来源链接或帖子ID": "",
+              "样本量": "",
+              "截图路径与截图时间": ""
             },
-            "filled_mode": "role_observed_sample",
-            "filled_values": {
-              "城市分布": "上海、北京、深圳",
-              "薪资区间P25": "10.80k/月",
-              "薪资区间P50": "12.80k/月",
-              "薪资区间P75": "14.90k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "笔试 / 案例面",
-              "来源链接或帖子ID": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
-              "样本量": "30",
-              "截图路径与截图时间": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page @2026-02-17"
-            },
+            "filled_mode": "keep_blank_with_search_plan_v163b2",
+            "filled_values": {},
             "source_evidence": {
-              "source_id": "SRC_NOWCODER_INTERVIEW_ALGO_DATA_2026",
-              "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
-              "publish_date": "2026-02-17",
+              "source_id": "SRC_AUTO_WWW_CICC_COM_4BA29DE6",
+              "source_url": "https://cicc.zhiye.com",
+              "publish_date": "2026-02-24",
               "sample_size": 30,
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://cicc.zhiye.com",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方招聘入口可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E8%AF%81%E5%88%B8%E5%9F%BA%E9%87%91%20%E9%94%80%E5%94%AE%E4%BA%A4%E6%98%93%E6%94%AF%E6%8C%81%20%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索入口可访问，岗位详情需人工抽样。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E9%87%91%E8%9E%8D-%E8%AF%81%E5%88%B8%E5%9F%BA%E9%87%91%20%E9%94%80%E5%94%AE%E4%BA%A4%E6%98%93%E6%94%AF%E6%8C%81%20%E9%9D%A2%E7%BB%8F",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索页可访问，帖子正文需登录或App查看。"
+              }
+            ]
           },
           "role_detail_v158": {
             "role_scope": "负责销售交易支持相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 10,
-              "interview_count": 10,
+              "written_count": 11,
+              "interview_count": 11,
               "written_stages": [
                 "campus_main_batch_written",
                 "campus_supplement_written",
@@ -3261,7 +3283,46 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "电子化交易和机构客户精细化服务加速推进，销售交易支持岗位3-5年将从单点执行升级为“交易流程优化+客户执行质量监控+合规协同”的复合岗位。",
+          "typical_work_week": "周一复盘成交与异常执行数据，周二至周三推进客户需求对接和交易支持排期，周四联动交易/风控/运营处理争议场景，周五输出执行质量报告与改进计划。",
+          "switch_directions": [
+            {
+              "target_role": "机构销售助理",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "客户沟通",
+                "路演材料准备"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "交易风控专员",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "交易监控",
+                "异常处置"
+              ],
+              "transition_period": "6-8个月"
+            },
+            {
+              "target_role": "金融产品运营专员",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "运营指标体系",
+                "流程优化"
+              ],
+              "transition_period": "8-12个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理交易支持流程、常见异常与合规边界。",
+            "31-60天：完成1个客户执行支持案例并量化效率与准确率。",
+            "61-90天：强化跨团队协同与指标取舍类题目训练。",
+            "91-120天：参与一次交易复盘会议并沉淀流程改进建议。",
+            "121-150天：补齐Excel/SQL分析能力并建立执行监控模板。",
+            "151-180天：沉淀2个“问题-动作-结果”案例用于面试表达。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -3353,7 +3414,7 @@
             "逻辑性",
             "合规意识"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "笔试",
             "案例面",
@@ -3430,7 +3491,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v163b2",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -3453,51 +3514,73 @@
               "金融-证券基金 投顾支持 offer 薪资"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
+            "missing_fields": [
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
+            ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
               "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "上海、北京、深圳",
-              "薪资区间P25": "10.10k/月",
-              "薪资区间P50": "11.90k/月",
-              "薪资区间P75": "13.80k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "笔试 / 案例面",
-              "来源链接或帖子ID": "https://www.zhaopin.com",
-              "样本量": "29",
-              "截图路径与截图时间": "https://www.zhaopin.com @2026-02-17"
+              "城市分布": "",
+              "薪资区间P25": "",
+              "薪资区间P50": "",
+              "薪资区间P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "来源链接或帖子ID": "",
+              "样本量": "",
+              "截图路径与截图时间": ""
             },
-            "filled_mode": "role_observed_sample",
-            "filled_values": {
-              "城市分布": "上海、北京、深圳",
-              "薪资区间P25": "10.10k/月",
-              "薪资区间P50": "11.90k/月",
-              "薪资区间P75": "13.80k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "笔试 / 案例面",
-              "来源链接或帖子ID": "https://www.zhaopin.com",
-              "样本量": "29",
-              "截图路径与截图时间": "https://www.zhaopin.com @2026-02-17"
-            },
+            "filled_mode": "keep_blank_with_search_plan_v163b2",
+            "filled_values": {},
             "source_evidence": {
-              "source_id": "SRC_ZHILIAN",
-              "source_url": "https://www.zhaopin.com",
-              "publish_date": "2026-02-17",
+              "source_id": "SRC_AUTO_WWW_EFUNDS_COM_CN_F4FC6AFF",
+              "source_url": "https://www.efunds.com.cn",
+              "publish_date": "2026-02-24",
               "sample_size": 29,
               "city": "广州",
               "company_tier": "t3_regional"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.efunds.com.cn",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方岗位入口可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E8%AF%81%E5%88%B8%E5%9F%BA%E9%87%91%20%E6%8A%95%E9%A1%BE%E6%94%AF%E6%8C%81%20%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索入口可访问，岗位详情需人工抽样。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E9%87%91%E8%9E%8D-%E8%AF%81%E5%88%B8%E5%9F%BA%E9%87%91%20%E6%8A%95%E9%A1%BE%E6%94%AF%E6%8C%81%20%E9%9D%A2%E7%BB%8F",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索页可访问，帖子正文需登录或App查看。"
+              }
+            ]
           },
           "role_detail_v158": {
             "role_scope": "负责投顾支持相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 10,
-              "interview_count": 10,
+              "written_count": 11,
+              "interview_count": 11,
               "written_stages": [
                 "campus_main_batch_written",
                 "campus_supplement_written",
@@ -3512,7 +3595,46 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "财富管理转型和买方投顾服务扩容将推动投顾支持岗位从资料辅助升级为“投顾流程协同+组合沟通支持+客户适配跟踪”的关键支撑岗位。",
+          "typical_work_week": "周一更新客户组合表现和问答清单，周二至周三协同投研与销售准备投顾材料，周四跟踪客户沟通反馈并处理异常，周五复盘投顾支持效率和下周优先级。",
+          "switch_directions": [
+            {
+              "target_role": "投资研究助理",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "基金研究",
+                "组合分析"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "财富顾问",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "客户画像经营",
+                "资产配置沟通"
+              ],
+              "transition_period": "6-8个月"
+            },
+            {
+              "target_role": "基金产品经理助理",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "产品生命周期管理",
+                "合规材料制作"
+              ],
+              "transition_period": "8-12个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理投顾支持流程、产品谱系和客户沟通规范。",
+            "31-60天：完成1份组合沟通支持案例并量化客户反馈改进。",
+            "61-90天：强化投顾支持岗位高频面试题训练与复盘。",
+            "91-120天：参与一次投顾例会并沉淀跨团队协同清单。",
+            "121-150天：补齐基金分析与数据整理能力并形成模板。",
+            "151-180天：沉淀2个“需求-执行-结果”案例用于主备岗投递。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -42422,6 +42544,164 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_FIN_SECURITIES_FUND_WRITTEN_V163B3_R003_01",
+          "role_id": "IND_FIN_SECURITIES_FUND_ROLE_003",
+          "role_name": "销售交易支持",
+          "prompt": "【金融-证券基金-销售交易支持】某机构客户的成交偏差率连续上升，交易与销售对责任归因不一致。请设计“问题定位-协同处置-质量验证”方案。",
+          "question_type": "交易执行治理题（第三批补深）",
+          "question_year": 2026,
+          "round_label": "主批笔试",
+          "recruitment_stage": "campus_main_batch_written",
+          "scenario_bucket": "system_process",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b3",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "问题拆解清晰，协同机制可执行，验证指标完整。",
+            "B档": "有治理思路但缺责任边界和复盘机制。",
+            "C档": "回答泛化，难以落地。"
+          },
+          "follow_up_questions": [
+            "若客户继续投诉，你如何定义优先处理队列？",
+            "当交易与销售结论冲突时你如何推动一致方案？",
+            "你会设置哪些指标判定治理生效？"
+          ],
+          "common_mistakes": [
+            "只讲流程不讲指标。",
+            "忽略跨团队责任边界。",
+            "没有闭环验证与复盘。"
+          ],
+          "good_answer_signals": [
+            "能定义清晰目标和责任分工。",
+            "有分阶段动作和升级机制。",
+            "有量化验证和复盘计划。"
+          ],
+          "reference_answer_outline": [
+            "拆解成交偏差问题与影响范围。",
+            "制定协同处置动作和执行节奏。",
+            "设置质量指标、预警线和复盘机制。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://cicc.zhiye.com",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_CICC_COM_4BA29DE6",
+            "source_name": "中金公司招聘站",
+            "source_type": "company_official",
+            "source_url": "https://cicc.zhiye.com",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_NBS_INCOME_2025_FULLYEAR",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_FIN_SECURITIES_FUND_WRITTEN_V163B3_R004_01",
+          "role_id": "IND_FIN_SECURITIES_FUND_ROLE_004",
+          "role_name": "投顾支持",
+          "prompt": "【金融-证券基金-投顾支持】市场波动期客户赎回压力上升，投顾团队希望加强沟通但合规要求收紧。请提出“客户分层-话术策略-风险揭示”执行方案。",
+          "question_type": "投顾服务平衡题（第三批补深）",
+          "question_year": 2026,
+          "round_label": "主批笔试",
+          "recruitment_stage": "campus_main_batch_written",
+          "scenario_bucket": "metric_tradeoff",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b3",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "能平衡客户体验与合规边界，动作节奏和验证口径完整。",
+            "B档": "有应对思路但缺少分层策略与复盘机制。",
+            "C档": "回答泛化，缺落地细节。"
+          },
+          "follow_up_questions": [
+            "若客户继续高频赎回，你如何调整沟通优先级？",
+            "当销售团队要求弱化风险提示时你如何应对？",
+            "你如何定义本轮投顾支持成效？"
+          ],
+          "common_mistakes": [
+            "只讲沟通，不讲风险边界。",
+            "忽略客户分层和差异化策略。",
+            "缺少验证和复盘。"
+          ],
+          "good_answer_signals": [
+            "能先定义合规红线与客户目标。",
+            "有可执行分层动作与协同路径。",
+            "有量化结果和复盘闭环。"
+          ],
+          "reference_answer_outline": [
+            "界定客户诉求与合规约束。",
+            "设计分层沟通与风险揭示动作。",
+            "设置成效指标、升级机制和复盘计划。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.efunds.com.cn",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_EFUNDS_COM_CN_F4FC6AFF",
+            "source_name": "易方达基金官网",
+            "source_type": "company_official",
+            "source_url": "https://www.efunds.com.cn",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_NBS_INCOME_2025_FULLYEAR",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
         }
       ],
       "last_checked": "2026-02-19",
@@ -73609,6 +73889,164 @@
             "source_name": "中信证券官网",
             "source_type": "company_official",
             "source_url": "https://www.cs.ecitic.com/newsite/",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_NBS_INCOME_2025_FULLYEAR",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_V163B3_R003_01",
+          "role_id": "IND_FIN_SECURITIES_FUND_ROLE_003",
+          "role_name": "销售交易支持",
+          "prompt": "某机构客户要求临时调整大额指令，交易团队担心冲击成本，风控团队要求先降仓位。你如何组织协同并在限定时间内给出执行方案？",
+          "question_type": "大额指令协同题（第三批补深）",
+          "question_year": 2026,
+          "round_label": "主批面试",
+          "recruitment_stage": "campus_main_batch_interview",
+          "scenario_bucket": "cross_team_collaboration",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b3",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "协同机制清晰，执行时序明确，风险控制与客户沟通并重。",
+            "B档": "有协同思路但缺升级机制和验收口径。",
+            "C档": "回答空泛，缺少可执行动作。"
+          },
+          "follow_up_questions": [
+            "若客户继续加码指令，你如何管理预期？",
+            "当交易结果偏离预期时你如何追责和纠偏？",
+            "你如何定义本次协同的成功标准？"
+          ],
+          "common_mistakes": [
+            "只讲沟通，不讲执行顺序。",
+            "忽略风险边界与责任划分。",
+            "缺少复盘与机制沉淀。"
+          ],
+          "good_answer_signals": [
+            "能快速统一目标与红线。",
+            "有分层动作、时序和责任人。",
+            "有量化结果和复盘闭环。"
+          ],
+          "reference_answer_outline": [
+            "定义客户目标、风控边界和执行时限。",
+            "设计协同动作与升级机制。",
+            "设置结果指标、纠偏动作和复盘计划。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://cicc.zhiye.com",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_CICC_COM_4BA29DE6",
+            "source_name": "中金公司招聘站",
+            "source_type": "company_official",
+            "source_url": "https://cicc.zhiye.com",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_NBS_INCOME_2025_FULLYEAR",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_FIN_SECURITIES_FUND_INTERVIEW_V163B3_R004_01",
+          "role_id": "IND_FIN_SECURITIES_FUND_ROLE_004",
+          "role_name": "投顾支持",
+          "prompt": "销售团队希望快速推进高波动产品，投顾团队强调客户适配性与风险揭示。你如何在转化目标和适当性管理之间做取舍？",
+          "question_type": "适当性取舍题（第三批补深）",
+          "question_year": 2026,
+          "round_label": "主批面试",
+          "recruitment_stage": "campus_main_batch_interview",
+          "scenario_bucket": "metric_tradeoff",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b3",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "目标与边界定义清晰，取舍逻辑可解释，且有复盘闭环。",
+            "B档": "思路合理但缺少量化标准和升级路径。",
+            "C档": "回答笼统，无法落地。"
+          },
+          "follow_up_questions": [
+            "若短期转化下降，你如何向销售团队解释策略？",
+            "当客户强烈要求高风险产品时你如何处理？",
+            "你如何定义投顾支持的长期成功标准？"
+          ],
+          "common_mistakes": [
+            "只讲合规原则，不给执行动作。",
+            "忽略客户分层和场景差异。",
+            "没有结果验证和复盘机制。"
+          ],
+          "good_answer_signals": [
+            "能明确转化目标与适当性红线。",
+            "有可执行分层沟通方案。",
+            "有量化指标与复盘机制。"
+          ],
+          "reference_answer_outline": [
+            "界定业务目标、客户诉求和监管红线。",
+            "设计分层沟通与执行取舍策略。",
+            "定义验收指标、升级机制和复盘计划。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.efunds.com.cn",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_EFUNDS_COM_CN_F4FC6AFF",
+            "source_name": "易方达基金官网",
+            "source_type": "company_official",
+            "source_url": "https://www.efunds.com.cn",
             "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
             "secondary_source_ids": [
               "SRC_NBS_INCOME_2025_FULLYEAR",

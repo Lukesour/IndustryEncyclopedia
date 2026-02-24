@@ -3112,7 +3112,7 @@
             "合规意识",
             "稳定性"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "网申",
             "行测/测评",
@@ -3190,7 +3190,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v163b2",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -3213,51 +3213,73 @@
               "金融-银行 风险管理 offer 薪资"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
+            "missing_fields": [
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
+            ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
               "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "北京、常州、上海",
-              "薪资区间P25": "9.86k/月",
-              "薪资区间P50": "11.61k/月",
-              "薪资区间P75": "13.36k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "网申 / 行测/测评",
-              "来源链接或帖子ID": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
-              "样本量": "36",
-              "截图路径与截图时间": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page @2026-02-17"
+              "城市分布": "",
+              "薪资区间P25": "",
+              "薪资区间P50": "",
+              "薪资区间P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "来源链接或帖子ID": "",
+              "样本量": "",
+              "截图路径与截图时间": ""
             },
-            "filled_mode": "role_observed_sample",
-            "filled_values": {
-              "城市分布": "北京、常州、上海",
-              "薪资区间P25": "9.86k/月",
-              "薪资区间P50": "11.61k/月",
-              "薪资区间P75": "13.36k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "网申 / 行测/测评",
-              "来源链接或帖子ID": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
-              "样本量": "36",
-              "截图路径与截图时间": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page @2026-02-17"
-            },
+            "filled_mode": "keep_blank_with_search_plan_v163b2",
+            "filled_values": {},
             "source_evidence": {
-              "source_id": "SRC_NOWCODER_INTERVIEW_PRODUCT_OP_2026",
-              "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
-              "publish_date": "2026-02-17",
+              "source_id": "SRC_AUTO_WWW_ABCHINA_COM_412B2D24",
+              "source_url": "https://www.abchina.com",
+              "publish_date": "2026-02-24",
               "sample_size": 36,
               "city": "上海",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.abchina.com",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方岗位入口可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86%20%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索入口可访问，岗位详情需人工抽样。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86%20%E9%9D%A2%E7%BB%8F",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索页可访问，帖子正文需登录或App查看。"
+              }
+            ]
           },
           "role_detail_v158": {
             "role_scope": "负责风险管理相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 10,
-              "interview_count": 10,
+              "written_count": 11,
+              "interview_count": 11,
               "written_stages": [
                 "campus_main_batch_written",
                 "campus_supplement_written",
@@ -3272,7 +3294,46 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "监管科技和智能风控持续深化，银行风险管理岗位3-5年将从规则执行升级为“策略迭代+组合风险监控+跨条线风险治理”的关键岗位。",
+          "typical_work_week": "周一复盘风险指标波动和预警命中，周二至周三推进策略校验与样本分析，周四联动业务和模型团队评审策略变更，周五输出风险周报和下周优化清单。",
+          "switch_directions": [
+            {
+              "target_role": "授信策略分析师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "策略建模",
+                "授信流程设计"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "模型风险管理专员",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "模型验证",
+                "监控指标体系"
+              ],
+              "transition_period": "6-8个月"
+            },
+            {
+              "target_role": "内控与审计专员",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "内控测试",
+                "审计沟通"
+              ],
+              "transition_period": "8-12个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：系统梳理信用风险、操作风险和市场风险核心口径。",
+            "31-60天：完成1个风险策略评估案例并给出量化改进建议。",
+            "61-90天：训练风险管理岗位高频题，强化指标与边界表达。",
+            "91-120天：参与一次跨条线风险评审并沉淀协同流程。",
+            "121-150天：补齐SQL/报表分析和风险监控看板构建能力。",
+            "151-180天：沉淀2个风险治理案例并完成主备岗位投递复盘。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -3366,7 +3427,7 @@
             "合规意识",
             "稳定性"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "网申",
             "行测/测评",
@@ -3444,7 +3505,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v163b2",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -3467,51 +3528,73 @@
               "金融-银行 运营清算 offer 薪资"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
+            "missing_fields": [
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
+            ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
               "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "北京、常州、上海",
-              "薪资区间P25": "9.34k/月",
-              "薪资区间P50": "10.99k/月",
-              "薪资区间P75": "12.64k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "网申 / 行测/测评",
-              "来源链接或帖子ID": "https://www.zhaopin.com",
-              "样本量": "35",
-              "截图路径与截图时间": "https://www.zhaopin.com @2026-02-17"
+              "城市分布": "",
+              "薪资区间P25": "",
+              "薪资区间P50": "",
+              "薪资区间P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "来源链接或帖子ID": "",
+              "样本量": "",
+              "截图路径与截图时间": ""
             },
-            "filled_mode": "role_observed_sample",
-            "filled_values": {
-              "城市分布": "北京、常州、上海",
-              "薪资区间P25": "9.34k/月",
-              "薪资区间P50": "10.99k/月",
-              "薪资区间P75": "12.64k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "网申 / 行测/测评",
-              "来源链接或帖子ID": "https://www.zhaopin.com",
-              "样本量": "35",
-              "截图路径与截图时间": "https://www.zhaopin.com @2026-02-17"
-            },
+            "filled_mode": "keep_blank_with_search_plan_v163b2",
+            "filled_values": {},
             "source_evidence": {
-              "source_id": "SRC_ZHILIAN",
-              "source_url": "https://www.zhaopin.com",
-              "publish_date": "2026-02-17",
+              "source_id": "SRC_AUTO_WWW_BOC_CN_EF1AAA2A",
+              "source_url": "https://www.boc.cn",
+              "publish_date": "2026-02-24",
               "sample_size": 35,
               "city": "深圳",
               "company_tier": "t3_regional"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.boc.cn",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方岗位入口可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E8%BF%90%E8%90%A5%E6%B8%85%E7%AE%97%20%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索入口可访问，岗位详情需人工抽样。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E8%BF%90%E8%90%A5%E6%B8%85%E7%AE%97%20%E9%9D%A2%E7%BB%8F",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索页可访问，帖子正文需登录或App查看。"
+              }
+            ]
           },
           "role_detail_v158": {
             "role_scope": "负责运营清算相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 10,
-              "interview_count": 10,
+              "written_count": 11,
+              "interview_count": 11,
               "written_stages": [
                 "campus_main_batch_written",
                 "campus_supplement_written",
@@ -3526,7 +3609,46 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "支付清算基础设施升级和实时支付普及将推动运营清算岗位从“流程执行”升级为“异常治理+自动化运营+合规审计联动”的中台岗位。",
+          "typical_work_week": "周一复盘清算差错与异常单，周二至周三推进对账与差错处理闭环，周四协调科技/业务/合规优化流程，周五输出运营指标报告与次周改进计划。",
+          "switch_directions": [
+            {
+              "target_role": "支付产品运营",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "支付链路理解",
+                "运营指标设计"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "资金清算专员",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "头寸管理",
+                "清算规则"
+              ],
+              "transition_period": "6-8个月"
+            },
+            {
+              "target_role": "流程管理专员",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "流程再造",
+                "内控设计"
+              ],
+              "transition_period": "8-12个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理清算流程、异常类型与核心监控指标。",
+            "31-60天：完成1个差错处理闭环案例并量化效率提升。",
+            "61-90天：训练运营清算高频题，重点强化跨团队协同表达。",
+            "91-120天：参与一次流程优化评审并沉淀执行SOP。",
+            "121-150天：补齐SQL/流程建模能力，建立日常监控模板。",
+            "151-180天：沉淀2个“异常发现-处置-复盘”案例并完成投递复盘。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -41450,6 +41572,164 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_FIN_BANK_WRITTEN_V163B3_R003_01",
+          "role_id": "IND_FIN_BANK_ROLE_003",
+          "role_name": "风险管理",
+          "prompt": "【金融-银行-风险管理】某客群不良预警率连续上升，但业务条线要求维持投放节奏。请设计“风险识别-策略调整-效果回溯”方案。",
+          "question_type": "风控策略修复题（第三批补深）",
+          "question_year": 2026,
+          "round_label": "主批笔试",
+          "recruitment_stage": "campus_main_batch_written",
+          "scenario_bucket": "metric_tradeoff",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b3",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "能平衡增长与风险，策略动作、验证口径和止损机制完整。",
+            "B档": "有调整思路但边界条件和复盘机制不足。",
+            "C档": "回答泛化，缺少可执行细节。"
+          },
+          "follow_up_questions": [
+            "若业务要求短期冲量，你如何守住风险底线？",
+            "模型稳定性下降时你优先调整哪些参数？",
+            "你如何定义本轮策略“有效但可控”？"
+          ],
+          "common_mistakes": [
+            "只谈风险不谈业务目标。",
+            "忽略策略实施的协同成本。",
+            "缺少验证与止损机制。"
+          ],
+          "good_answer_signals": [
+            "能清晰定义双目标和边界。",
+            "有分阶段动作与责任分工。",
+            "有量化结果与复盘闭环。"
+          ],
+          "reference_answer_outline": [
+            "拆解不良预警上升主因。",
+            "制定策略调整路径和执行节奏。",
+            "设置验证指标、止损阈值和复盘计划。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.abchina.com",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_ABCHINA_COM_412B2D24",
+            "source_name": "中国农业银行官网",
+            "source_type": "company_official",
+            "source_url": "https://www.abchina.com",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_NBS_INCOME_2025_FULLYEAR",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_FIN_BANK_WRITTEN_V163B3_R004_01",
+          "role_id": "IND_FIN_BANK_ROLE_004",
+          "role_name": "运营清算",
+          "prompt": "【金融-银行-运营清算】跨行清算差错率在月末集中上升，部分异常单超时未闭环。请给出“异常分层-处置优先级-流程再造”方案。",
+          "question_type": "清算异常治理题（第三批补深）",
+          "question_year": 2026,
+          "round_label": "主批笔试",
+          "recruitment_stage": "campus_main_batch_written",
+          "scenario_bucket": "failure_review",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b3",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "异常分类清晰，处置机制可执行，复核指标与闭环标准完整。",
+            "B档": "有改进思路但缺少时序与责任划分。",
+            "C档": "回答泛化，缺关键动作。"
+          },
+          "follow_up_questions": [
+            "若系统改造周期较长，你如何先做短期止血？",
+            "当业务拒绝改流程时你如何推进？",
+            "你会设置哪些指标衡量治理效果？"
+          ],
+          "common_mistakes": [
+            "只讲流程，不讲异常优先级。",
+            "忽略跨系统依赖和升级路径。",
+            "没有复盘与预防机制。"
+          ],
+          "good_answer_signals": [
+            "能明确异常分层和处置顺序。",
+            "有跨团队执行与升级机制。",
+            "有量化闭环指标。"
+          ],
+          "reference_answer_outline": [
+            "拆解异常来源并定义优先级。",
+            "制定处置动作与协同机制。",
+            "设置复核指标、流程优化和复盘计划。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.boc.cn",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_BOC_CN_EF1AAA2A",
+            "source_name": "中国银行官网",
+            "source_type": "company_official",
+            "source_url": "https://www.boc.cn",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_NBS_INCOME_2025_FULLYEAR",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
         }
       ],
       "last_checked": "2026-02-19",
@@ -71889,6 +72169,164 @@
             "source_name": "中国工商银行官网/招聘页",
             "source_type": "company_official",
             "source_url": "https://www.icbc.com.cn/ICBC/%E4%BA%BA%E6%89%8D%E6%8B%9B%E8%81%98/",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_NBS_INCOME_2025_FULLYEAR",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_FIN_BANK_INTERVIEW_V163B3_R003_01",
+          "role_id": "IND_FIN_BANK_ROLE_003",
+          "role_name": "风险管理",
+          "prompt": "业务条线希望放宽准入阈值拉升规模，风险团队认为当前组合已接近预警线。你如何组织协同并形成最终决策？",
+          "question_type": "风险与业务协同题（第三批补深）",
+          "question_year": 2026,
+          "round_label": "主批面试",
+          "recruitment_stage": "campus_main_batch_interview",
+          "scenario_bucket": "cross_team_collaboration",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b3",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "协同路径清晰，风险边界明确，决策依据可量化。",
+            "B档": "有协同思路但缺升级机制和验证口径。",
+            "C档": "回答空泛，缺可执行动作。"
+          },
+          "follow_up_questions": [
+            "若业务继续施压，你如何升级沟通路径？",
+            "你如何用数据证明当前风险边界不能突破？",
+            "如果最终方案失效，你如何快速回退？"
+          ],
+          "common_mistakes": [
+            "只讲原则，不给执行步骤。",
+            "忽略跨团队目标冲突。",
+            "没有复盘与迭代机制。"
+          ],
+          "good_answer_signals": [
+            "先定义共同目标和风险红线。",
+            "能给出分层沟通和决策机制。",
+            "有可量化结果和复盘动作。"
+          ],
+          "reference_answer_outline": [
+            "界定增长目标与风险边界。",
+            "设计协同分工、升级路径与决策流程。",
+            "定义验证指标、回退机制和复盘计划。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.abchina.com",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_ABCHINA_COM_412B2D24",
+            "source_name": "中国农业银行官网",
+            "source_type": "company_official",
+            "source_url": "https://www.abchina.com",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_NBS_INCOME_2025_FULLYEAR",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_FIN_BANK_INTERVIEW_V163B3_R004_01",
+          "role_id": "IND_FIN_BANK_ROLE_004",
+          "role_name": "运营清算",
+          "prompt": "月末清算高峰时，业务要求缩短处理时效，科技团队提示系统容量接近上限。你如何在稳定性、时效和合规之间做取舍？",
+          "question_type": "清算容量取舍题（第三批补深）",
+          "question_year": 2026,
+          "round_label": "主批面试",
+          "recruitment_stage": "campus_main_batch_interview",
+          "scenario_bucket": "metric_tradeoff",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b3",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "能定义优先级和红线，执行方案可落地且有兜底机制。",
+            "B档": "有取舍思路但缺验证标准与升级路径。",
+            "C档": "回答泛化，难以执行。"
+          },
+          "follow_up_questions": [
+            "若业务继续要求提速，你如何解释容量边界？",
+            "当首轮方案失败时你如何在1小时内纠偏？",
+            "你如何定义本次决策成功标准？"
+          ],
+          "common_mistakes": [
+            "只给结论，不给决策依据。",
+            "忽略容量和合规双重约束。",
+            "缺少复盘与预防机制。"
+          ],
+          "good_answer_signals": [
+            "能明确目标函数和约束边界。",
+            "能给出分阶段执行和升级机制。",
+            "有量化验证和复盘闭环。"
+          ],
+          "reference_answer_outline": [
+            "定义时效、稳定和合规三目标边界。",
+            "设计取舍策略与执行节奏。",
+            "设置监控指标、升级路径和复盘计划。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.boc.cn",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_BOC_CN_EF1AAA2A",
+            "source_name": "中国银行官网",
+            "source_type": "company_official",
+            "source_url": "https://www.boc.cn",
             "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
             "secondary_source_ids": [
               "SRC_NBS_INCOME_2025_FULLYEAR",

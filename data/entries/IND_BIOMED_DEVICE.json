@@ -3101,7 +3101,7 @@
             "项目协同",
             "专业表达"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "专业笔试（部分）",
             "专业面",
@@ -3178,7 +3178,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v163b2",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -3201,51 +3201,73 @@
               "生物医药与器械 注册专员 offer 薪资"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
+            "missing_fields": [
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
+            ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
               "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "上海、青岛、北京",
-              "薪资区间P25": "9.90k/月",
-              "薪资区间P50": "11.70k/月",
-              "薪资区间P75": "13.50k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "专业笔试（部分） / 专业面",
-              "来源链接或帖子ID": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
-              "样本量": "35",
-              "截图路径与截图时间": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page @2026-02-17"
+              "城市分布": "",
+              "薪资区间P25": "",
+              "薪资区间P50": "",
+              "薪资区间P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "来源链接或帖子ID": "",
+              "样本量": "",
+              "截图路径与截图时间": ""
             },
-            "filled_mode": "role_observed_sample",
-            "filled_values": {
-              "城市分布": "上海、青岛、北京",
-              "薪资区间P25": "9.90k/月",
-              "薪资区间P50": "11.70k/月",
-              "薪资区间P75": "13.50k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "专业笔试（部分） / 专业面",
-              "来源链接或帖子ID": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
-              "样本量": "35",
-              "截图路径与截图时间": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page @2026-02-17"
-            },
+            "filled_mode": "keep_blank_with_search_plan_v163b2",
+            "filled_values": {},
             "source_evidence": {
-              "source_id": "SRC_NOWCODER_INTERVIEW_PRODUCT_OP_2026",
-              "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
-              "publish_date": "2026-02-17",
+              "source_id": "SRC_AUTO_WWW_WUXIAPPTEC_COM_AA38B545",
+              "source_url": "https://www.wuxiapptec.com",
+              "publish_date": "2026-02-24",
               "sample_size": 35,
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.wuxiapptec.com",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方岗位入口可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%B3%A8%E5%86%8C%E4%B8%93%E5%91%98%20%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索入口可访问，具体岗位详情需人工抓取。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%B3%A8%E5%86%8C%E4%B8%93%E5%91%98%20%E9%9D%A2%E7%BB%8F",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索页可访问，帖子正文需登录或App查看。"
+              }
+            ]
           },
           "role_detail_v158": {
             "role_scope": "负责注册专员相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 12,
-              "interview_count": 12,
+              "written_count": 13,
+              "interview_count": 13,
               "written_stages": [
                 "campus_main_batch_written",
                 "campus_supplement_written",
@@ -3260,7 +3282,46 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "在NMPA审评提速和国际多区域申报并行背景下，注册专员3-5年将从资料执行岗位升级为“注册策略+生命周期变更管理+跨团队证据统筹”的关键中台岗位。",
+          "typical_work_week": "周一更新申报里程碑与风险台账，周二至周三完成申报资料差距分析和补件计划，周四联动临床/CMC/法规开评审会，周五复盘问询反馈并锁定下周优先级。",
+          "switch_directions": [
+            {
+              "target_role": "法规事务经理",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "法规策略制定",
+                "变更申报管理"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "临床运营专员",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "试验里程碑管理",
+                "跨中心沟通"
+              ],
+              "transition_period": "6-8个月"
+            },
+            {
+              "target_role": "医疗器械质量体系专员",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "QMS体系",
+                "CAPA闭环"
+              ],
+              "transition_period": "8-12个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：系统梳理NMPA注册路径、补件规则与高频审评问询口径。",
+            "31-60天：完成1份真实注册资料差距分析并给出修订优先级。",
+            "61-90天：训练注册岗位高频笔面试题，补齐法规与项目协同表达。",
+            "91-120天：参与一次跨部门资料评审并沉淀问题闭环清单。",
+            "121-150天：输出1个“问询-补件-反馈”完整案例用于面试证据。",
+            "151-180天：按主岗/备岗重构简历与面试叙事，完成两轮模拟复盘。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -3352,7 +3413,7 @@
             "项目协同",
             "专业表达"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "专业笔试（部分）",
             "专业面",
@@ -3429,7 +3490,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v163b2",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -3452,51 +3513,73 @@
               "生物医药与器械 质量管理 offer 薪资"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
+            "missing_fields": [
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
+            ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
               "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "上海、青岛、北京",
-              "薪资区间P25": "9.20k/月",
-              "薪资区间P50": "10.90k/月",
-              "薪资区间P75": "12.60k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "专业笔试（部分） / 专业面",
-              "来源链接或帖子ID": "https://www.zhaopin.com",
-              "样本量": "34",
-              "截图路径与截图时间": "https://www.zhaopin.com @2026-02-17"
+              "城市分布": "",
+              "薪资区间P25": "",
+              "薪资区间P50": "",
+              "薪资区间P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "来源链接或帖子ID": "",
+              "样本量": "",
+              "截图路径与截图时间": ""
             },
-            "filled_mode": "role_observed_sample",
-            "filled_values": {
-              "城市分布": "上海、青岛、北京",
-              "薪资区间P25": "9.20k/月",
-              "薪资区间P50": "10.90k/月",
-              "薪资区间P75": "12.60k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "专业笔试（部分） / 专业面",
-              "来源链接或帖子ID": "https://www.zhaopin.com",
-              "样本量": "34",
-              "截图路径与截图时间": "https://www.zhaopin.com @2026-02-17"
-            },
+            "filled_mode": "keep_blank_with_search_plan_v163b2",
+            "filled_values": {},
             "source_evidence": {
-              "source_id": "SRC_ZHILIAN",
-              "source_url": "https://www.zhaopin.com",
-              "publish_date": "2026-02-17",
+              "source_id": "SRC_AUTO_WWW_UNITED_IMAGING_COM_53177FB1",
+              "source_url": "https://www.united-imaging.com",
+              "publish_date": "2026-02-24",
               "sample_size": 34,
               "city": "苏州",
               "company_tier": "t3_regional"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.united-imaging.com",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方岗位入口可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86%20%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索入口可访问，具体岗位详情需人工抓取。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86%20%E9%9D%A2%E7%BB%8F",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索页可访问，帖子正文需登录或App查看。"
+              }
+            ]
           },
           "role_detail_v158": {
             "role_scope": "负责质量管理相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 12,
-              "interview_count": 12,
+              "written_count": 13,
+              "interview_count": 13,
               "written_stages": [
                 "campus_main_batch_written",
                 "internship_conversion_written",
@@ -3511,7 +3594,46 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "在医疗器械全生命周期质量监管趋严和数字化质量体系建设推进下，质量管理岗位3-5年将从质量检查执行升级为“质量体系设计+风险前移控制+跨工厂一致性治理”核心岗位。",
+          "typical_work_week": "周一复盘偏差/CAPA状态，周二至周三执行体系文件审阅和现场核查，周四组织研发/生产/法规联合评审，周五输出质量风险看板并更新整改节奏。",
+          "switch_directions": [
+            {
+              "target_role": "QA体系工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "质量体系建设",
+                "内审管理"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "生产质量工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "过程质量控制",
+                "偏差调查"
+              ],
+              "transition_period": "6-8个月"
+            },
+            {
+              "target_role": "审计与合规专员",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "法规审计",
+                "合规整改闭环"
+              ],
+              "transition_period": "8-12个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：补齐医疗器械质量体系（QMS）和法规检查重点条款。",
+            "31-60天：完成1次偏差/CAPA闭环案例并沉淀证据链。",
+            "61-90天：针对质量管理岗位高频题训练“问题-措施-验证”表达。",
+            "91-120天：参与一次跨部门质量评审并输出风险分级清单。",
+            "121-150天：补齐统计过程控制与根因分析方法并形成模板。",
+            "151-180天：整理2个可用于面试的质量改进案例，完成模拟复盘。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -47987,6 +48109,164 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_V163B3_R003_01",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_003",
+          "role_name": "注册专员",
+          "prompt": "【生物医药与器械-注册专员】某II类器械补充注册进入技术审评后收到三条问询，其中一条涉及临床评价证据不足。请设计30天补件推进方案，并说明跨部门分工与风险止损线。",
+          "question_type": "注册补件与策略题（第三批补深）",
+          "question_year": 2026,
+          "round_label": "主批笔试",
+          "recruitment_stage": "campus_main_batch_written",
+          "scenario_bucket": "system_process",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b3",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "补件路径、时间节点和责任分工完整，且给出明确风险阈值。",
+            "B档": "方案方向正确，但验收口径和止损机制不完整。",
+            "C档": "回答泛化，缺少可执行动作。"
+          },
+          "follow_up_questions": [
+            "若临床数据补充周期超过计划，你会先调整哪一段流程？",
+            "当研发与法规意见冲突时，你如何定优先级？",
+            "你如何定义本次补件“可提交”的最低标准？"
+          ],
+          "common_mistakes": [
+            "只列资料清单，不定义补件优先级。",
+            "忽略跨团队依赖和审批时序。",
+            "缺少风险升级与止损机制。"
+          ],
+          "good_answer_signals": [
+            "先明确审评目标与时间边界。",
+            "能给出分阶段动作和责任人。",
+            "有清晰验收口径与复盘机制。"
+          ],
+          "reference_answer_outline": [
+            "拆解问询重点并定义证据缺口。",
+            "设计补件节奏与跨部门协同分工。",
+            "设置风险阈值、升级路径和复盘动作。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.wuxiapptec.com",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_WUXIAPPTEC_COM_AA38B545",
+            "source_name": "药明康德官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.wuxiapptec.com",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_NMPA_GOV_CN_59F31F83",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_V163B3_R004_01",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_004",
+          "role_name": "质量管理",
+          "prompt": "【生物医药与器械-质量管理】某关键工序连续两周出现同类偏差，CAPA执行后仍复发。请给出“根因验证-整改优先级-效果复核”一体化方案。",
+          "question_type": "质量体系纠偏题（第三批补深）",
+          "question_year": 2026,
+          "round_label": "主批笔试",
+          "recruitment_stage": "campus_main_batch_written",
+          "scenario_bucket": "failure_review",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b3",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "根因定位准确、整改措施可执行、复核指标和关闭标准明确。",
+            "B档": "有整改思路但缺验证闭环与分工细节。",
+            "C档": "回答泛化，无法指导现场执行。"
+          },
+          "follow_up_questions": [
+            "如果整改影响交付节奏，你如何平衡质量与时效？",
+            "当跨部门对根因判断不一致时，你如何推进一致结论？",
+            "你会设置哪些指标判定CAPA真正生效？"
+          ],
+          "common_mistakes": [
+            "把现象当根因，缺少验证步骤。",
+            "忽略跨部门执行依赖。",
+            "没有定义复核周期和退出条件。"
+          ],
+          "good_answer_signals": [
+            "能给出清晰根因树和优先级。",
+            "能定义责任分工和时序节点。",
+            "有量化复核标准与复盘机制。"
+          ],
+          "reference_answer_outline": [
+            "拆解偏差复发原因并确认证据。",
+            "制定整改动作、分工与里程碑。",
+            "设置复核指标、预警线和关闭标准。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.united-imaging.com",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_UNITED_IMAGING_COM_53177FB1",
+            "source_name": "联影医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.united-imaging.com",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_NMPA_GOV_CN_59F31F83",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
         }
       ],
       "last_checked": "2026-02-19",
@@ -84705,6 +84985,164 @@
             "source_name": "迈瑞医疗官网",
             "source_type": "company_official",
             "source_url": "https://www.mindray.com/en/about-us/careers",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_NMPA_GOV_CN_59F31F83",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_V163B3_R003_01",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_003",
+          "role_name": "注册专员",
+          "prompt": "临近申报窗口时，法规团队要求补齐证据、业务团队要求按时提交、项目管理要求冻结版本。你如何做取舍并保证申报质量？",
+          "question_type": "注册节奏取舍题（第三批补深）",
+          "question_year": 2026,
+          "round_label": "主批面试",
+          "recruitment_stage": "campus_main_batch_interview",
+          "scenario_bucket": "metric_tradeoff",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b3",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "决策原则清晰，优先级可解释，且有止损与复盘机制。",
+            "B档": "有取舍思路但缺量化边界与升级路径。",
+            "C档": "回答泛化，无法指导实际执行。"
+          },
+          "follow_up_questions": [
+            "若关键证据无法按时补齐，你会触发什么替代动作？",
+            "如何向业务团队解释延后提交的必要性？",
+            "你如何定义本次决策的成功标准？"
+          ],
+          "common_mistakes": [
+            "只讲态度不讲决策口径。",
+            "忽略申报风险与审批时序。",
+            "没有复盘与二次迭代机制。"
+          ],
+          "good_answer_signals": [
+            "先定义目标函数和边界。",
+            "能给出分层动作和责任人。",
+            "能说明风险阈值与复盘闭环。"
+          ],
+          "reference_answer_outline": [
+            "明确提交目标和质量红线。",
+            "按优先级拆解动作并协调资源。",
+            "设置风险阈值、升级机制和复盘计划。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.wuxiapptec.com",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_WUXIAPPTEC_COM_AA38B545",
+            "source_name": "药明康德官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.wuxiapptec.com",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_NMPA_GOV_CN_59F31F83",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_V163B3_R004_01",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_004",
+          "role_name": "质量管理",
+          "prompt": "生产团队要求先放行后补文件，QA坚持“先纠偏再放行”。在交付压力下你如何组织协同并守住质量红线？",
+          "question_type": "质量放行协同题（第三批补深）",
+          "question_year": 2026,
+          "round_label": "主批面试",
+          "recruitment_stage": "campus_main_batch_interview",
+          "scenario_bucket": "cross_team_collaboration",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b3",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "协同路径清晰，质量边界明确，交付与风险平衡合理。",
+            "B档": "有协同动作但缺升级与兜底机制。",
+            "C档": "回答空泛，缺可执行细节。"
+          },
+          "follow_up_questions": [
+            "若业务继续施压，你如何进行风险升级？",
+            "怎样定义“可放行”的最低质量标准？",
+            "事后你如何防止同类冲突再次发生？"
+          ],
+          "common_mistakes": [
+            "只强调沟通，不定义质量红线。",
+            "忽略时序与责任分工。",
+            "缺少结果验证和复盘。"
+          ],
+          "good_answer_signals": [
+            "能平衡交付时效与质量底线。",
+            "能给出清晰分工和决策顺序。",
+            "有风险升级与复盘闭环。"
+          ],
+          "reference_answer_outline": [
+            "定义放行目标、质量红线和时间窗口。",
+            "设计跨团队协同、升级和兜底机制。",
+            "给出验收标准、复盘动作和改进计划。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.united-imaging.com",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_UNITED_IMAGING_COM_53177FB1",
+            "source_name": "联影医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.united-imaging.com",
             "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
             "secondary_source_ids": [
               "SRC_AUTO_WWW_NMPA_GOV_CN_59F31F83",

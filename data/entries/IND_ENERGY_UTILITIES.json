@@ -3067,7 +3067,7 @@
             "风险意识",
             "协同能力"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "笔试",
             "面试",
@@ -3143,7 +3143,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v163b2",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -3166,51 +3166,73 @@
               "能源与公用事业 电力交易分析 offer 薪资"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
+            "missing_fields": [
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
+            ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
               "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "北京、西安、宁德",
-              "薪资区间P25": "8.60k/月",
-              "薪资区间P50": "10.00k/月",
-              "薪资区间P75": "11.60k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "笔试 / 面试",
-              "来源链接或帖子ID": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
-              "样本量": "29",
-              "截图路径与截图时间": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page @2026-02-17"
+              "城市分布": "",
+              "薪资区间P25": "",
+              "薪资区间P50": "",
+              "薪资区间P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "来源链接或帖子ID": "",
+              "样本量": "",
+              "截图路径与截图时间": ""
             },
-            "filled_mode": "role_observed_sample",
-            "filled_values": {
-              "城市分布": "北京、西安、宁德",
-              "薪资区间P25": "8.60k/月",
-              "薪资区间P50": "10.00k/月",
-              "薪资区间P75": "11.60k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "笔试 / 面试",
-              "来源链接或帖子ID": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
-              "样本量": "29",
-              "截图路径与截图时间": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page @2026-02-17"
-            },
+            "filled_mode": "keep_blank_with_search_plan_v163b2",
+            "filled_values": {},
             "source_evidence": {
-              "source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
-              "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
-              "publish_date": "2026-02-17",
+              "source_id": "SRC_AUTO_WWW_CEIC_COM_2B8D5B00",
+              "source_url": "https://www.ceic.com",
+              "publish_date": "2026-02-24",
               "sample_size": 29,
               "city": "宁德",
               "company_tier": "t3_regional"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.ceic.com",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方网站可访问，具体岗位详情需人工定位。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E8%83%BD%E6%BA%90%E4%B8%8E%E5%85%AC%E7%94%A8%E4%BA%8B%E4%B8%9A%20%E7%94%B5%E5%8A%9B%E4%BA%A4%E6%98%93%E5%88%86%E6%9E%90%20%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索入口可访问，岗位详情需人工抽样。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E8%83%BD%E6%BA%90%E4%B8%8E%E5%85%AC%E7%94%A8%E4%BA%8B%E4%B8%9A%20%E7%94%B5%E5%8A%9B%E4%BA%A4%E6%98%93%E5%88%86%E6%9E%90%20%E9%9D%A2%E7%BB%8F",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索页可访问，帖子正文需登录或App查看。"
+              }
+            ]
           },
           "role_detail_v158": {
             "role_scope": "负责电力交易分析相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 10,
-              "interview_count": 10,
+              "written_count": 11,
+              "interview_count": 11,
               "written_stages": [
                 "campus_main_batch_written",
                 "campus_supplement_written",
@@ -3225,7 +3247,46 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "电力现货、辅助服务和源网荷储协同持续深化，电力交易分析岗位3-5年将从报表分析扩展为“策略建模+实时监控+交易风险联动决策”的复合岗位。",
+          "typical_work_week": "周一更新负荷和交易偏差看板，周二至周三完成价格/电量预测与策略回测，周四联动调度和营销复盘偏差原因，周五输出交易策略迭代与风险清单。",
+          "switch_directions": [
+            {
+              "target_role": "负荷预测工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "时间序列建模",
+                "气象因子处理"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "电力交易策略分析师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "现货规则",
+                "收益风险测算"
+              ],
+              "transition_period": "6-8个月"
+            },
+            {
+              "target_role": "能源数据产品经理",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "数据产品规划",
+                "跨团队需求管理"
+              ],
+              "transition_period": "8-12个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：补齐电力市场规则、结算口径与常用指标定义。",
+            "31-60天：完成1份“预测-执行-偏差复盘”交易分析报告。",
+            "61-90天：训练交易分析高频题，重点强化策略取舍表达。",
+            "91-120天：参与一次跨部门交易复盘并沉淀风险台账。",
+            "121-150天：补齐负荷预测与异常检测方法，形成分析模板。",
+            "151-180天：沉淀2个可展示项目案例，完成主岗/备岗投递复盘。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -3318,7 +3379,7 @@
             "风险意识",
             "协同能力"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "笔试",
             "面试",
@@ -3394,7 +3455,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v163b2",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -3417,51 +3478,73 @@
               "能源与公用事业 调度与控制 offer 薪资"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
+            "missing_fields": [
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
+            ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
               "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "北京、西安、宁德",
-              "薪资区间P25": "9.20k/月",
-              "薪资区间P50": "10.80k/月",
-              "薪资区间P75": "12.50k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "笔试 / 面试",
-              "来源链接或帖子ID": "https://www.zhaopin.com",
-              "样本量": "28",
-              "截图路径与截图时间": "https://www.zhaopin.com @2026-02-17"
+              "城市分布": "",
+              "薪资区间P25": "",
+              "薪资区间P50": "",
+              "薪资区间P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "来源链接或帖子ID": "",
+              "样本量": "",
+              "截图路径与截图时间": ""
             },
-            "filled_mode": "role_observed_sample",
-            "filled_values": {
-              "城市分布": "北京、西安、宁德",
-              "薪资区间P25": "9.20k/月",
-              "薪资区间P50": "10.80k/月",
-              "薪资区间P75": "12.50k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "笔试 / 面试",
-              "来源链接或帖子ID": "https://www.zhaopin.com",
-              "样本量": "28",
-              "截图路径与截图时间": "https://www.zhaopin.com @2026-02-17"
-            },
+            "filled_mode": "keep_blank_with_search_plan_v163b2",
+            "filled_values": {},
             "source_evidence": {
-              "source_id": "SRC_ZHILIAN",
-              "source_url": "https://www.zhaopin.com",
-              "publish_date": "2026-02-17",
+              "source_id": "SRC_AUTO_WWW_CHNG_COM_CN_8ADE5C82",
+              "source_url": "https://www.chng.com.cn",
+              "publish_date": "2026-02-24",
               "sample_size": 28,
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.chng.com.cn",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方岗位入口可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E8%83%BD%E6%BA%90%E4%B8%8E%E5%85%AC%E7%94%A8%E4%BA%8B%E4%B8%9A%20%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%8E%A7%E5%88%B6%20%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索入口可访问，岗位详情需人工抽样。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E8%83%BD%E6%BA%90%E4%B8%8E%E5%85%AC%E7%94%A8%E4%BA%8B%E4%B8%9A%20%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%8E%A7%E5%88%B6%20%E9%9D%A2%E7%BB%8F",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索页可访问，帖子正文需登录或App查看。"
+              }
+            ]
           },
           "role_detail_v158": {
             "role_scope": "负责调度与控制相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 10,
-              "interview_count": 10,
+              "written_count": 11,
+              "interview_count": 11,
               "written_stages": [
                 "campus_main_batch_written",
                 "campus_supplement_written",
@@ -3476,7 +3559,46 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "新型电力系统调度从“经验驱动”转向“实时数据驱动+自动化控制+安全红线联动”，调度与控制岗位3-5年将更强调系统稳定性和多资源协同控制能力。",
+          "typical_work_week": "周一复盘运行偏差与告警闭环，周二至周三校核控制策略和操作票据，周四组织调度-检修-安监联动会议，周五更新应急预案并进行演练复盘。",
+          "switch_directions": [
+            {
+              "target_role": "调度运行工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "实时运行监控",
+                "应急指挥"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "继电保护与自动化工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "保护逻辑",
+                "自动化系统配置"
+              ],
+              "transition_period": "6-8个月"
+            },
+            {
+              "target_role": "安全生产管理岗",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "安全体系建设",
+                "事故复盘治理"
+              ],
+              "transition_period": "8-12个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：补齐调度规程、应急预案与关键操作红线。",
+            "31-60天：完成1次典型调度事件复盘并输出改进动作。",
+            "61-90天：强化“时效-安全-供电稳定”取舍类面试题训练。",
+            "91-120天：参与跨部门联动演练并沉淀指挥流程模板。",
+            "121-150天：补齐自动化控制与告警分级处理方法。",
+            "151-180天：整理2个应急协同案例用于投递与面试表达。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -41299,6 +41421,164 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_ENERGY_UTILITIES_WRITTEN_V163B3_R003_01",
+          "role_id": "IND_ENERGY_UTILITIES_ROLE_003",
+          "role_name": "电力交易分析",
+          "prompt": "【能源与公用事业-电力交易分析】某区域现货偏差成本连续三周上升，负荷预测误差与边界约束同时扩大。请设计“偏差归因-策略重排-收益验证”方案。",
+          "question_type": "现货偏差修复题（第三批补深）",
+          "question_year": 2026,
+          "round_label": "主批笔试",
+          "recruitment_stage": "campus_main_batch_written",
+          "scenario_bucket": "business_scenario",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b3",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "能清晰拆解偏差来源，给出可执行策略与量化验证口径。",
+            "B档": "有策略思路但缺少边界条件与复盘机制。",
+            "C档": "回答泛化，无法指导执行。"
+          },
+          "follow_up_questions": [
+            "若预测误差未改善，你会先调整模型还是交易策略？",
+            "当调度约束突然收紧时你如何改写优先级？",
+            "你如何定义本轮策略的退出阈值？"
+          ],
+          "common_mistakes": [
+            "只讲模型，不讲交易执行约束。",
+            "忽略跨部门协同和节奏管理。",
+            "缺少收益与风险双指标验证。"
+          ],
+          "good_answer_signals": [
+            "能先定义目标函数与边界。",
+            "能给出分阶段动作和责任分工。",
+            "有明确验证指标和复盘闭环。"
+          ],
+          "reference_answer_outline": [
+            "拆解偏差成本上升的主因。",
+            "制定策略调整动作与资源安排。",
+            "设置收益、风险与退出条件并复盘。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.ceic.com",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_CEIC_COM_2B8D5B00",
+            "source_name": "CEIC官网",
+            "source_type": "company_official",
+            "source_url": "https://www.ceic.com",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_ENERGY_UTILITIES_WRITTEN_V163B3_R004_01",
+          "role_id": "IND_ENERGY_UTILITIES_ROLE_004",
+          "role_name": "调度与控制",
+          "prompt": "【能源与公用事业-调度与控制】某站点AGC响应异常导致调频考核连续扣分，同时检修窗口被压缩。请给出“根因排查-应急处置-稳定恢复”方案。",
+          "question_type": "调度控制故障复盘题（第三批补深）",
+          "question_year": 2026,
+          "round_label": "主批笔试",
+          "recruitment_stage": "campus_main_batch_written",
+          "scenario_bucket": "failure_review",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b3",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "根因定位准确，应急动作和恢复路径完整，风险控制清晰。",
+            "B档": "处置方向合理但缺少时序与验证闭环。",
+            "C档": "仅描述现象，无法落地执行。"
+          },
+          "follow_up_questions": [
+            "如果关键设备暂时无法检修，你如何维持系统稳定？",
+            "当保供压力上升时你如何调整应急优先级？",
+            "你会用哪些指标判定系统恢复达标？"
+          ],
+          "common_mistakes": [
+            "只谈排障动作，不定义安全边界。",
+            "忽略跨班组协同和升级路径。",
+            "缺少恢复验证和复盘机制。"
+          ],
+          "good_answer_signals": [
+            "有清晰根因树和应急分层动作。",
+            "能说明时序节点与责任分工。",
+            "有量化恢复标准与风险预案。"
+          ],
+          "reference_answer_outline": [
+            "拆解AGC异常来源并确认优先级。",
+            "制定应急动作与协同机制。",
+            "定义恢复指标、复盘动作和预防策略。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.chng.com.cn",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_CHNG_COM_CN_8ADE5C82",
+            "source_name": "华能集团官网",
+            "source_type": "company_official",
+            "source_url": "https://www.chng.com.cn",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
         }
       ],
       "last_checked": "2026-02-19",
@@ -71718,6 +71998,164 @@
             "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
             "secondary_source_ids": [
               "SRC_NBS_INCOME_2025_FULLYEAR",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_ENERGY_UTILITIES_INTERVIEW_V163B3_R003_01",
+          "role_id": "IND_ENERGY_UTILITIES_ROLE_003",
+          "role_name": "电力交易分析",
+          "prompt": "交易团队希望提高收益仓位，调度团队要求降低波动风险，营销团队强调保供口碑。你如何定义共识指标并组织三方协同执行？",
+          "question_type": "交易协同决策题（第三批补深）",
+          "question_year": 2026,
+          "round_label": "主批面试",
+          "recruitment_stage": "campus_main_batch_interview",
+          "scenario_bucket": "cross_team_collaboration",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b3",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "协同目标清晰，责任分工明确，决策节奏和风险预案完整。",
+            "B档": "有协同思路但缺少升级路径与量化验收。",
+            "C档": "回答空泛，缺少可执行细节。"
+          },
+          "follow_up_questions": [
+            "若核心分歧持续存在，你如何推进最终决策？",
+            "你会如何设计跨团队周会的关键指标看板？",
+            "当策略失效时你如何快速止损？"
+          ],
+          "common_mistakes": [
+            "只讲沟通态度，不讲决策机制。",
+            "忽略业务目标和安全边界冲突。",
+            "没有复盘和机制沉淀。"
+          ],
+          "good_answer_signals": [
+            "先定义共同目标和不可突破红线。",
+            "有清晰分工、节奏和升级路径。",
+            "有量化结果与复盘机制。"
+          ],
+          "reference_answer_outline": [
+            "界定三方目标冲突与优先级。",
+            "设计协同分工与决策节奏。",
+            "定义验证口径、止损条件和复盘计划。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.ceic.com",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_CEIC_COM_2B8D5B00",
+            "source_name": "CEIC官网",
+            "source_type": "company_official",
+            "source_url": "https://www.ceic.com",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_ENERGY_UTILITIES_INTERVIEW_V163B3_R004_01",
+          "role_id": "IND_ENERGY_UTILITIES_ROLE_004",
+          "role_name": "调度与控制",
+          "prompt": "高峰保供期间，检修计划必须压缩，但安全团队强调必须执行全部检查项。你如何在时效、稳定和安全之间做取舍？",
+          "question_type": "保供与安全取舍题（第三批补深）",
+          "question_year": 2026,
+          "round_label": "主批面试",
+          "recruitment_stage": "campus_main_batch_interview",
+          "scenario_bucket": "metric_tradeoff",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b3",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "能明确定义红线与优先级，给出可执行取舍方案与兜底机制。",
+            "B档": "有取舍思路但风险升级和验收口径不完整。",
+            "C档": "结论笼统，缺乏执行细节。"
+          },
+          "follow_up_questions": [
+            "若领导要求先保时效，你如何坚持安全底线？",
+            "当首次方案失败时你如何在30分钟内纠偏？",
+            "你如何定义“风险可接受”的阈值？"
+          ],
+          "common_mistakes": [
+            "只给原则，不给执行顺序。",
+            "忽略红线管理和升级机制。",
+            "缺少复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "能明确目标函数与不可突破红线。",
+            "有分阶段动作和责任分工。",
+            "有可量化验证和复盘机制。"
+          ],
+          "reference_answer_outline": [
+            "定义冲突目标与红线边界。",
+            "设计取舍策略与执行节奏。",
+            "设置验证指标、止损机制和复盘动作。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.chng.com.cn",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_CHNG_COM_CN_8ADE5C82",
+            "source_name": "华能集团官网",
+            "source_type": "company_official",
+            "source_url": "https://www.chng.com.cn",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_SGCC_COM_CN_124A1CC",
               "SRC_BOSS"
             ],
             "publish_date": "2026-02-24",
