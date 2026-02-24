@@ -18,6 +18,9 @@ GATE_SCENARIO_MAX_HITS="$(jq '."治理配置"."发布硬门槛".scenario_bucket_
 GATE_OBSERVED_MIN="$(jq '."治理配置"."发布硬门槛".role_observed_sample_min_percent // 60' "${DATA_PATH}")"
 GATE_OFFICIAL_MIN="$(jq '."治理配置"."发布硬门槛".official_question_share_min_percent // 35' "${DATA_PATH}")"
 GATE_CORE_OFFICIAL_MIN="$(jq '."治理配置"."发布硬门槛".official_question_share_core_min_percent // 50' "${DATA_PATH}")"
+GATE_STRICT_OBS_MIN="$(jq '."治理配置"."发布硬门槛".strict_role_observed_sample_min_percent_v165 // 20' "${DATA_PATH}")"
+GATE_STRICT_OFFICIAL_MIN="$(jq '."治理配置"."发布硬门槛".strict_official_question_share_min_percent_v165 // 25' "${DATA_PATH}")"
+GATE_STRICT_CORE_OFFICIAL_MIN="$(jq '."治理配置"."发布硬门槛".strict_core_official_question_share_min_percent_v165 // 30' "${DATA_PATH}")"
 GATE_CORE_TIER_MIN="$(jq '."治理配置"."发布硬门槛".role_tier_question_targets_v162.core // 14' "${DATA_PATH}")"
 GATE_MAIN_TIER_MIN="$(jq '."治理配置"."发布硬门槛".role_tier_question_targets_v162.mainstream // 10' "${DATA_PATH}")"
 GATE_LONG_TIER_MIN="$(jq '."治理配置"."发布硬门槛".role_tier_question_targets_v162.longtail // 8' "${DATA_PATH}")"
@@ -30,6 +33,9 @@ V162_METRICS_JSON="$(jq \
   --argjson obs_min "${GATE_OBSERVED_MIN}" \
   --argjson official_min "${GATE_OFFICIAL_MIN}" \
   --argjson core_official_min "${GATE_CORE_OFFICIAL_MIN}" \
+  --argjson strict_obs_min "${GATE_STRICT_OBS_MIN}" \
+  --argjson strict_official_min "${GATE_STRICT_OFFICIAL_MIN}" \
+  --argjson strict_core_official_min "${GATE_STRICT_CORE_OFFICIAL_MIN}" \
   --argjson core_min "${GATE_CORE_TIER_MIN}" \
   --argjson main_min "${GATE_MAIN_TIER_MIN}" \
   --argjson long_min "${GATE_LONG_TIER_MIN}" \
@@ -56,6 +62,10 @@ V162_METRICS_JSON="$(jq \
       or (($q.evidence.source_type // "") == "government")
     );
 
+  def is_strict_official_question($q):
+    (($q.authenticity_level // "") == "official"
+      or ($q.authenticity_level // "") == "official_original");
+
   def has_role_observed_sample($r):
     (($r.platform_backfill_gap.filled_mode // "") == "role_observed_sample")
     or (
@@ -69,6 +79,9 @@ V162_METRICS_JSON="$(jq \
       and (($r.platform_backfill_gap.source_evidence // null) != null)
       and ((($r.platform_backfill_gap.source_evidence.source_url // "") | tostring | length) > 0)
     );
+
+  def has_role_observed_sample_strict($r):
+    (($r.platform_backfill_gap.filled_mode // "") == "role_observed_sample");
 
   ([."行业词条"[] | .dynamic["岗位画像库"].items[]?]) as $roles
   | ([."行业词条"[] | .dynamic["笔试真题库"].items[]?]) as $written
@@ -109,9 +122,12 @@ V162_METRICS_JSON="$(jq \
   | ([ $roles[] | select(filled(.career_outlook_3to5_year?) and filled(.typical_work_week?) and filled(.switch_directions?) and filled(.prepare_180d_plan?)) ] | length) as $deep_count
   | ($roles | length) as $role_total
   | ([ $roles[] | select(has_role_observed_sample(.)) ] | length) as $observed_count
+  | ([ $roles[] | select(has_role_observed_sample_strict(.)) ] | length) as $strict_observed_count
   | ([ $questions[] | select(is_official_question(.)) ] | length) as $official_count
+  | ([ $questions[] | select(is_strict_official_question(.)) ] | length) as $strict_official_count
   | ([ $questions[] | select(($tier_map[.role_id] // "longtail") == "core") ]) as $core_questions
   | ([ $core_questions[] | select(is_official_question(.)) ] | length) as $core_official_count
+  | ([ $core_questions[] | select(is_strict_official_question(.)) ] | length) as $strict_core_official_count
   | ([ $roles[] | {role_id, role_name, bucket_count: (($bucket_map[.role_id] // []) | unique | length)} ]) as $bucket_rows
   | ([ $bucket_rows[] | select(.bucket_count < $scenario_min) ]) as $bucket_issues
   | ([ $roles[]
@@ -143,14 +159,23 @@ V162_METRICS_JSON="$(jq \
       role_observed_sample_count: $observed_count,
       role_observed_sample_percent: (if $role_total == 0 then 0 else ($observed_count * 100 / $role_total) end),
       role_observed_sample_min_percent: $obs_min,
+      strict_role_observed_sample_count: $strict_observed_count,
+      strict_role_observed_sample_percent: (if $role_total == 0 then 0 else ($strict_observed_count * 100 / $role_total) end),
+      strict_role_observed_sample_min_percent: $strict_obs_min,
       official_question_share_count: $official_count,
       question_total: ($questions | length),
       official_question_share_percent: (if ($questions | length) == 0 then 0 else ($official_count * 100 / ($questions | length)) end),
       official_question_share_min_percent: $official_min,
+      strict_official_question_share_count: $strict_official_count,
+      strict_official_question_share_percent: (if ($questions | length) == 0 then 0 else ($strict_official_count * 100 / ($questions | length)) end),
+      strict_official_question_share_min_percent: $strict_official_min,
       core_question_total: ($core_questions | length),
       core_official_question_share_count: $core_official_count,
       core_official_question_share_percent: (if ($core_questions | length) == 0 then 0 else ($core_official_count * 100 / ($core_questions | length)) end),
       official_question_share_core_min_percent: $core_official_min,
+      strict_core_official_question_share_count: $strict_core_official_count,
+      strict_core_official_question_share_percent: (if ($core_questions | length) == 0 then 0 else ($strict_core_official_count * 100 / ($core_questions | length)) end),
+      strict_core_official_question_share_min_percent: $strict_core_official_min,
       role_tier_question_targets: {core: $core_min, mainstream: $main_min, longtail: $long_min},
       role_tier_question_hits: ($tier_issues | length),
       role_tier_question_records: $tier_issues,
@@ -172,10 +197,16 @@ jq --argjson v162 "${V162_METRICS_JSON}" '
     scenario_bucket_max_hits_v162: $v162.scenario_bucket_max_hits,
     role_observed_sample_percent_v162: $v162.role_observed_sample_percent,
     role_observed_sample_min_percent_v162: $v162.role_observed_sample_min_percent,
+    strict_role_observed_sample_percent_v165: $v162.strict_role_observed_sample_percent,
+    strict_role_observed_sample_min_percent_v165: $v162.strict_role_observed_sample_min_percent,
     official_question_share_percent_v162: $v162.official_question_share_percent,
     official_question_share_min_percent_v162: $v162.official_question_share_min_percent,
+    strict_official_question_share_percent_v165: $v162.strict_official_question_share_percent,
+    strict_official_question_share_min_percent_v165: $v162.strict_official_question_share_min_percent,
     core_official_question_share_percent_v162: $v162.core_official_question_share_percent,
     official_question_share_core_min_percent_v162: $v162.official_question_share_core_min_percent,
+    strict_core_official_question_share_percent_v165: $v162.strict_core_official_question_share_percent,
+    strict_core_official_question_share_min_percent_v165: $v162.strict_core_official_question_share_min_percent,
     role_tier_question_hits_v162: $v162.role_tier_question_hits,
     resource_reduction_followup_percent_v162: $v162.resource_reduction_followup_percent,
     resource_reduction_followup_max_percent_v162: $v162.resource_reduction_followup_max_percent
@@ -196,13 +227,25 @@ jq --argjson v162 "${V162_METRICS_JSON}" '
       actual_percent: $v162.role_observed_sample_percent,
       threshold_percent: $v162.role_observed_sample_min_percent
     },
+    strict_role_observed_sample_threshold_v165: {
+      actual_percent: $v162.strict_role_observed_sample_percent,
+      threshold_percent: $v162.strict_role_observed_sample_min_percent
+    },
     official_question_share_threshold_v162: {
       actual_percent: $v162.official_question_share_percent,
       threshold_percent: $v162.official_question_share_min_percent
     },
+    strict_official_question_share_threshold_v165: {
+      actual_percent: $v162.strict_official_question_share_percent,
+      threshold_percent: $v162.strict_official_question_share_min_percent
+    },
     core_official_question_share_threshold_v162: {
       actual_percent: $v162.core_official_question_share_percent,
       threshold_percent: $v162.official_question_share_core_min_percent
+    },
+    strict_core_official_question_share_threshold_v165: {
+      actual_percent: $v162.strict_core_official_question_share_percent,
+      threshold_percent: $v162.strict_core_official_question_share_min_percent
     },
     resource_reduction_followup_threshold_v162: {
       actual_percent: $v162.resource_reduction_followup_percent,
