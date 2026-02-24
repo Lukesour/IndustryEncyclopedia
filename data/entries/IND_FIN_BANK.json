@@ -2579,7 +2579,10 @@
               "小红书App端搜索",
               "企业校招官网岗位详情页",
               "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "小红书App搜索（网页不可达时）",
+              "360搜索(BOSS结果摘要)",
+              "BOSS直聘职位详情页",
+              "小红书App搜索页"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -2596,9 +2599,9 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "岗位发布时间(职位级原始链接)",
+              "帖子ID/链接",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
@@ -2607,7 +2610,8 @@
               "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
               "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
               "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。",
+              "优先补抓BOSS职位详情页原始发布时间与截图证据，搜索页摘要仅作过渡样本。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -2621,27 +2625,32 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-01-19"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_so360_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "17.37k/月",
-              "薪资区间P50": "21.18k/月",
-              "薪资区间P75": "25.84k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "8.00k/月",
+              "薪资区间P50": "8.00k/月",
+              "薪资区间P75": "8.00k/月",
+              "发布时间": "2026-02-24",
               "批次/轮次": "网申 / 行测/测评",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-01-19"
+              "来源链接或帖子ID": "https://www.so.com/s?q=%E7%AE%A1%E5%9F%B9%E7%94%9F%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "1",
+              "截图路径与截图时间": "https://www.so.com/s?q=%E7%AE%A1%E5%9F%B9%E7%94%9F%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-02-24",
+              "sample_size": 1,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "https://www.so.com/s?q=%E7%AE%A1%E5%9F%B9%E7%94%9F%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "so360_snippet_extraction_v167",
+              "salary_tokens": [
+                "6-10K"
+              ]
             },
-            "next_backfill_action": "优先补齐近90天平台样本并回填城市分布、薪资分位与发布时间。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后再升级为严格A档实证。",
             "action": "proxy_filled_wait_observed_refresh",
             "unavailable_capture_log_v163": [
               {
@@ -2738,16 +2747,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 1,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "17.37k/月",
+              "salary_range": "8.00k/月",
               "capability_requirements": [
                 "金融基础",
                 "报表阅读",
@@ -2763,7 +2772,7 @@
               ]
             },
             "p50": {
-              "salary_range": "21.18k/月",
+              "salary_range": "8.00k/月",
               "capability_requirements": [
                 "金融基础",
                 "报表阅读",
@@ -2781,7 +2790,7 @@
               ]
             },
             "p75": {
-              "salary_range": "25.84k/月",
+              "salary_range": "8.00k/月",
               "capability_requirements": [
                 "报表阅读",
                 "风控逻辑",
@@ -2799,17 +2808,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 17.37,
-              "p50": 21.18,
-              "p75": 25.84
+              "p25": 8.0,
+              "p50": 8.0,
+              "p75": 8.0
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 1,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -3010,7 +3019,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
             },
-            "next_backfill_action": "优先补齐近90天平台样本并回填城市分布、薪资分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -3038,6 +3047,17 @@
               "运营管理岗"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "360搜索结果摘要",
+            "search_query_url": "https://www.so.com/s?q=%E7%AE%A1%E5%9F%B9%E7%94%9F%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "6-10K"
+            ],
+            "sample_size": 1,
+            "note": "如平台详情页不可稳定访问，先保留摘要证据并在后续回填职位级截图。"
           }
         },
         {
@@ -3229,7 +3249,10 @@
               "小红书App端搜索",
               "企业校招官网岗位详情页",
               "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "小红书App搜索（网页不可达时）",
+              "360搜索(BOSS结果摘要)",
+              "BOSS直聘职位详情页",
+              "小红书App搜索页"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -3246,9 +3269,9 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "岗位发布时间(职位级原始链接)",
+              "帖子ID/链接",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
@@ -3257,7 +3280,8 @@
               "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
               "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
               "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。",
+              "优先补抓BOSS职位详情页原始发布时间与截图证据，搜索页摘要仅作过渡样本。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -3271,27 +3295,33 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.icbc.com.cn @2026-02-17"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_so360_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "11.73k/月",
-              "薪资区间P50": "14.31k/月",
-              "薪资区间P75": "17.46k/月",
-              "发布时间": "2026-02-17",
+              "薪资区间P25": "14.25k/月",
+              "薪资区间P50": "17.00k/月",
+              "薪资区间P75": "19.75k/月",
+              "发布时间": "2026-02-24",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.icbc.com.cn",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.icbc.com.cn @2026-02-17"
+              "来源链接或帖子ID": "https://www.so.com/s?q=%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "2",
+              "截图路径与截图时间": "https://www.so.com/s?q=%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B",
-              "source_url": "https://www.icbc.com.cn",
-              "publish_date": "2026-02-17",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-02-24",
+              "sample_size": 2,
               "city": "常州",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "https://www.so.com/s?q=%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "so360_snippet_extraction_v167",
+              "salary_tokens": [
+                "20-25K",
+                "9-14K"
+              ]
             },
-            "next_backfill_action": "优先补齐近90天平台样本并回填城市分布、薪资分位与发布时间。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后再升级为严格A档实证。",
             "action": "proxy_filled_wait_observed_refresh",
             "unavailable_capture_log_v163": [
               {
@@ -3388,16 +3418,16 @@
             "city_name": "常州",
             "city_id": "CITY_002",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-02-17",
-            "source_id": "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B",
-            "source_url": "https://www.icbc.com.cn",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "11.73k/月",
+              "salary_range": "14.25k/月",
               "capability_requirements": [
                 "金融基础",
                 "报表阅读",
@@ -3413,7 +3443,7 @@
               ]
             },
             "p50": {
-              "salary_range": "14.31k/月",
+              "salary_range": "17.00k/月",
               "capability_requirements": [
                 "金融基础",
                 "报表阅读",
@@ -3431,7 +3461,7 @@
               ]
             },
             "p75": {
-              "salary_range": "17.46k/月",
+              "salary_range": "19.75k/月",
               "capability_requirements": [
                 "报表阅读",
                 "风控逻辑",
@@ -3449,17 +3479,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 11.73,
-              "p50": 14.31,
-              "p75": 17.46
+              "p25": 14.25,
+              "p50": 17.0,
+              "p75": 19.75
             },
             "city": "常州",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-02-17",
-            "source_id": "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B",
-            "source_url": "https://www.icbc.com.cn",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -3660,7 +3690,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
             },
-            "next_backfill_action": "优先补齐近90天平台样本并回填城市分布、薪资分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -3688,6 +3718,18 @@
               "普惠产品运营岗"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "360搜索结果摘要",
+            "search_query_url": "https://www.so.com/s?q=%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "20-25K",
+              "9-14K"
+            ],
+            "sample_size": 2,
+            "note": "如平台详情页不可稳定访问，先保留摘要证据并在后续回填职位级截图。"
           }
         },
         {
@@ -3879,7 +3921,10 @@
               "小红书App端搜索",
               "企业校招官网岗位详情页",
               "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "小红书App搜索（网页不可达时）",
+              "360搜索(BOSS结果摘要)",
+              "BOSS直聘职位详情页",
+              "小红书App搜索页"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -3896,9 +3941,9 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "岗位发布时间(职位级原始链接)",
+              "帖子ID/链接",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
@@ -3907,7 +3952,8 @@
               "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
               "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
               "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。",
+              "优先补抓BOSS职位详情页原始发布时间与截图证据，搜索页摘要仅作过渡样本。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -3921,27 +3967,33 @@
               "样本量": "36",
               "截图路径与截图时间": "https://www.abchina.com @2026-02-24"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_so360_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "11.20k/月",
-              "薪资区间P50": "13.17k/月",
-              "薪资区间P75": "15.14k/月",
-              "发布时间": "2026-02-24",
+              "薪资区间P25": "11.00k/月",
+              "薪资区间P50": "12.50k/月",
+              "薪资区间P75": "14.00k/月",
+              "发布时间": "2025-09-30",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.abchina.com",
-              "样本量": "36",
-              "截图路径与截图时间": "https://www.abchina.com @2026-02-24"
+              "来源链接或帖子ID": "https://www.so.com/s?q=%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "2",
+              "截图路径与截图时间": "https://www.so.com/s?q=%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_AUTO_WWW_ABCHINA_COM_412B2D24",
-              "source_url": "https://www.abchina.com",
-              "publish_date": "2026-02-24",
-              "sample_size": 36,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2025-09-30",
+              "sample_size": 2,
               "city": "上海",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "https://www.so.com/s?q=%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "so360_snippet_extraction_v167",
+              "salary_tokens": [
+                "9-10K·13薪",
+                "15-16K"
+              ]
             },
-            "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后再升级为严格A档实证。",
             "action": "proxy_filled_wait_observed_refresh",
             "unavailable_capture_log_v163": [
               {
@@ -4038,16 +4090,16 @@
             "city_name": "上海",
             "city_id": "CITY_018",
             "company_tier": "t2_strong",
-            "sample_size": 36,
-            "publish_date": "2026-02-24",
-            "source_id": "SRC_AUTO_WWW_ABCHINA_COM_412B2D24",
-            "source_url": "https://www.abchina.com",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2025-09-30",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "11.20k/月",
+              "salary_range": "11.00k/月",
               "capability_requirements": [
                 "金融基础",
                 "报表阅读",
@@ -4063,7 +4115,7 @@
               ]
             },
             "p50": {
-              "salary_range": "13.17k/月",
+              "salary_range": "12.50k/月",
               "capability_requirements": [
                 "金融基础",
                 "报表阅读",
@@ -4081,7 +4133,7 @@
               ]
             },
             "p75": {
-              "salary_range": "15.14k/月",
+              "salary_range": "14.00k/月",
               "capability_requirements": [
                 "报表阅读",
                 "风控逻辑",
@@ -4099,17 +4151,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 11.2,
-              "p50": 13.17,
-              "p75": 15.14
+              "p25": 11.0,
+              "p50": 12.5,
+              "p75": 14.0
             },
             "city": "上海",
             "company_tier": "t2_strong",
-            "sample_size": 36,
-            "publish_date": "2026-02-24",
-            "source_id": "SRC_AUTO_WWW_ABCHINA_COM_412B2D24",
-            "source_url": "https://www.abchina.com",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2025-09-30",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -4310,7 +4362,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
             },
-            "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -4338,6 +4390,18 @@
               "内控与审计专员"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "360搜索结果摘要",
+            "search_query_url": "https://www.so.com/s?q=%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "9-10K·13薪",
+              "15-16K"
+            ],
+            "sample_size": 2,
+            "note": "如平台详情页不可稳定访问，先保留摘要证据并在后续回填职位级截图。"
           }
         },
         {
@@ -4510,26 +4574,23 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -4546,18 +4607,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "岗位发布时间(职位级原始链接)",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -4591,7 +4652,7 @@
               "city": "深圳",
               "company_tier": "t3_regional"
             },
-            "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "action": "proxy_filled_wait_observed_refresh",
             "unavailable_capture_log_v163": [
               {
@@ -4622,6 +4683,33 @@
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E8%BF%90%E8%90%A5%E6%B8%85%E7%AE%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "运营清算 校招",
+                "应届生 运营清算",
+                "IND_FIN_BANK 运营清算 北京",
+                "IND_FIN_BANK 运营清算 上海"
+              ],
+              "so360": [
+                "运营清算 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "运营清算 面经",
+                "运营清算 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "role_detail_v158": {
@@ -6353,7 +6441,10 @@
               "小红书App端搜索",
               "企业校招官网岗位详情页",
               "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "小红书App搜索（网页不可达时）",
+              "360搜索(BOSS结果摘要)",
+              "BOSS直聘职位详情页",
+              "小红书App搜索页"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -6371,15 +6462,8 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
-              "城市分布",
-              "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -6389,7 +6473,8 @@
               "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
               "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
               "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。",
+              "优先补抓BOSS职位详情页原始发布时间与截图证据，搜索页摘要仅作过渡样本。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -6403,27 +6488,32 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_so360_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "12.50k/月",
+              "薪资区间P50": "12.50k/月",
+              "薪资区间P75": "12.50k/月",
+              "发布时间": "2026-02-24",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "https://www.so.com/s?q=%E5%90%88%E8%A7%84%E7%AE%A1%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "1",
+              "截图路径与截图时间": "https://www.so.com/s?q=%E5%90%88%E8%A7%84%E7%AE%A1%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-02-24",
+              "sample_size": 1,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "https://www.so.com/s?q=%E5%90%88%E8%A7%84%E7%AE%A1%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "so360_snippet_extraction_v167",
+              "salary_tokens": [
+                "10-15K"
+              ]
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后再升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -6580,16 +6670,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 1,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "12.50k/月",
               "capability_requirements": [
                 "业务建模与问题拆解",
                 "数据分析与指标体系",
@@ -6605,7 +6695,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "12.50k/月",
               "capability_requirements": [
                 "业务建模与问题拆解",
                 "数据分析与指标体系",
@@ -6623,7 +6713,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "12.50k/月",
               "capability_requirements": [
                 "数据分析与指标体系",
                 "跨团队协同推进",
@@ -6641,17 +6731,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 12.5,
+              "p50": 12.5,
+              "p75": 12.5
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 1,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -6853,7 +6943,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -6881,6 +6971,17 @@
               "反洗钱分析师"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "360搜索结果摘要",
+            "search_query_url": "https://www.so.com/s?q=%E5%90%88%E8%A7%84%E7%AE%A1%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "10-15K"
+            ],
+            "sample_size": 1,
+            "note": "如平台详情页不可稳定访问，先保留摘要证据并在后续回填职位级截图。"
           }
         },
         {
@@ -6982,7 +7083,10 @@
               "小红书App端搜索",
               "企业校招官网岗位详情页",
               "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "小红书App搜索（网页不可达时）",
+              "360搜索(BOSS结果摘要)",
+              "BOSS直聘职位详情页",
+              "小红书App搜索页"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -7000,15 +7104,8 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
-              "城市分布",
-              "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -7018,7 +7115,8 @@
               "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
               "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
               "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。",
+              "优先补抓BOSS职位详情页原始发布时间与截图证据，搜索页摘要仅作过渡样本。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -7032,27 +7130,33 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_so360_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "10.62k/月",
+              "薪资区间P50": "13.75k/月",
+              "薪资区间P75": "16.88k/月",
+              "发布时间": "2026-02-24",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "https://www.so.com/s?q=%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "2",
+              "截图路径与截图时间": "https://www.so.com/s?q=%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-02-24",
+              "sample_size": 2,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "https://www.so.com/s?q=%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "so360_snippet_extraction_v167",
+              "salary_tokens": [
+                "5-10K",
+                "15-25K"
+              ]
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后再升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -7209,16 +7313,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "10.62k/月",
               "capability_requirements": [
                 "业务建模与问题拆解",
                 "数据分析与指标体系",
@@ -7234,7 +7338,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "13.75k/月",
               "capability_requirements": [
                 "业务建模与问题拆解",
                 "数据分析与指标体系",
@@ -7252,7 +7356,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "16.88k/月",
               "capability_requirements": [
                 "数据分析与指标体系",
                 "跨团队协同推进",
@@ -7270,17 +7374,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 10.62,
+              "p50": 13.75,
+              "p75": 16.88
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -7482,7 +7586,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -7510,6 +7614,18 @@
               "风险策略分析师"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "360搜索结果摘要",
+            "search_query_url": "https://www.so.com/s?q=%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "5-10K",
+              "15-25K"
+            ],
+            "sample_size": 2,
+            "note": "如平台详情页不可稳定访问，先保留摘要证据并在后续回填职位级截图。"
           }
         },
         {
@@ -7592,26 +7708,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -7628,25 +7741,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -7680,13 +7786,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E9%9B%B6%E5%94%AE%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "零售产品经理 校招",
+                "应届生 零售产品经理",
+                "IND_FIN_BANK 零售产品经理 北京",
+                "IND_FIN_BANK 零售产品经理 上海"
+              ],
+              "so360": [
+                "零售产品经理 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "零售产品经理 面经",
+                "零售产品经理 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -8219,26 +8352,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -8255,25 +8385,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -8307,13 +8430,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E5%8F%8D%E6%B4%97%E9%92%B1%E5%88%86%E6%9E%90%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "反洗钱分析师 校招",
+                "应届生 反洗钱分析师",
+                "IND_FIN_BANK 反洗钱分析师 北京",
+                "IND_FIN_BANK 反洗钱分析师 上海"
+              ],
+              "so360": [
+                "反洗钱分析师 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "反洗钱分析师 面经",
+                "反洗钱分析师 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -8865,7 +9015,10 @@
               "小红书App端搜索",
               "企业校招官网岗位详情页",
               "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "小红书App搜索（网页不可达时）",
+              "360搜索(BOSS结果摘要)",
+              "BOSS直聘职位详情页",
+              "小红书App搜索页"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -8882,15 +9035,8 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
-              "城市分布",
-              "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -8900,7 +9046,8 @@
               "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
               "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
               "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。",
+              "优先补抓BOSS职位详情页原始发布时间与截图证据，搜索页摘要仅作过渡样本。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -8914,27 +9061,33 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_so360_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "18.12k/月",
+              "薪资区间P50": "18.75k/月",
+              "薪资区间P75": "19.38k/月",
+              "发布时间": "2026-02-24",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "https://www.so.com/s?q=%E5%AF%B9%E5%85%AC%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "2",
+              "截图路径与截图时间": "https://www.so.com/s?q=%E5%AF%B9%E5%85%AC%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-02-24",
+              "sample_size": 2,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "https://www.so.com/s?q=%E5%AF%B9%E5%85%AC%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "so360_snippet_extraction_v167",
+              "salary_tokens": [
+                "15-25K",
+                "15-20K"
+              ]
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后再升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -9091,16 +9244,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "18.12k/月",
               "capability_requirements": [
                 "目标拆解与策略设计",
                 "增长实验与转化优化",
@@ -9116,7 +9269,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "18.75k/月",
               "capability_requirements": [
                 "目标拆解与策略设计",
                 "增长实验与转化优化",
@@ -9134,7 +9287,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "19.38k/月",
               "capability_requirements": [
                 "增长实验与转化优化",
                 "跨团队协同推进",
@@ -9152,17 +9305,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 18.12,
+              "p50": 18.75,
+              "p75": 19.38
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -9363,7 +9516,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -9391,6 +9544,18 @@
               "投行承做支持"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "360搜索结果摘要",
+            "search_query_url": "https://www.so.com/s?q=%E5%AF%B9%E5%85%AC%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "15-25K",
+              "15-20K"
+            ],
+            "sample_size": 2,
+            "note": "如平台详情页不可稳定访问，先保留摘要证据并在后续回填职位级截图。"
           }
         },
         {
@@ -9473,26 +9638,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -9509,25 +9671,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -9561,13 +9716,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E9%93%B6%E8%A1%8C%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E4%B8%93%E5%91%98%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "银行数据治理专员 校招",
+                "应届生 银行数据治理专员",
+                "IND_FIN_BANK 银行数据治理专员 北京",
+                "IND_FIN_BANK 银行数据治理专员 上海"
+              ],
+              "so360": [
+                "银行数据治理专员 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "银行数据治理专员 面经",
+                "银行数据治理专员 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -10119,7 +10301,10 @@
               "小红书App端搜索",
               "企业校招官网岗位详情页",
               "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "小红书App搜索（网页不可达时）",
+              "360搜索(BOSS结果摘要)",
+              "BOSS直聘职位详情页",
+              "小红书App搜索页"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -10137,15 +10322,8 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
-              "城市分布",
-              "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -10155,7 +10333,8 @@
               "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
               "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
               "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。",
+              "优先补抓BOSS职位详情页原始发布时间与截图证据，搜索页摘要仅作过渡样本。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -10169,27 +10348,33 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_so360_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "8.25k/月",
+              "薪资区间P50": "9.00k/月",
+              "薪资区间P75": "9.75k/月",
+              "发布时间": "2026-02-24",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "https://www.so.com/s?q=%E6%8E%88%E4%BF%A1%E5%AE%A1%E6%89%B9%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "2",
+              "截图路径与截图时间": "https://www.so.com/s?q=%E6%8E%88%E4%BF%A1%E5%AE%A1%E6%89%B9%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-02-24",
+              "sample_size": 2,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "https://www.so.com/s?q=%E6%8E%88%E4%BF%A1%E5%AE%A1%E6%89%B9%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "so360_snippet_extraction_v167",
+              "salary_tokens": [
+                "8-13K",
+                "7-8K"
+              ]
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后再升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -10350,16 +10535,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "8.25k/月",
               "capability_requirements": [
                 "财务报表分析",
                 "现金流测算",
@@ -10375,7 +10560,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "9.00k/月",
               "capability_requirements": [
                 "财务报表分析",
                 "现金流测算",
@@ -10393,7 +10578,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "9.75k/月",
               "capability_requirements": [
                 "现金流测算",
                 "授信结构设计",
@@ -10411,17 +10596,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 8.25,
+              "p50": 9.0,
+              "p75": 9.75
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -10623,7 +10808,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -10651,6 +10836,18 @@
               "不良资产处置"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "360搜索结果摘要",
+            "search_query_url": "https://www.so.com/s?q=%E6%8E%88%E4%BF%A1%E5%AE%A1%E6%89%B9%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "8-13K",
+              "7-8K"
+            ],
+            "sample_size": 2,
+            "note": "如平台详情页不可稳定访问，先保留摘要证据并在后续回填职位级截图。"
           }
         },
         {
@@ -10733,26 +10930,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -10770,25 +10964,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -10822,13 +11009,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E8%B4%A2%E5%AF%8C%E9%A1%BE%E9%97%AE%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "财富顾问岗 校招",
+                "应届生 财富顾问岗",
+                "IND_FIN_BANK 财富顾问岗 北京",
+                "IND_FIN_BANK 财富顾问岗 上海"
+              ],
+              "so360": [
+                "财富顾问岗 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "财富顾问岗 面经",
+                "财富顾问岗 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -11366,26 +11580,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E4%BA%A4%E6%98%93%E9%93%B6%E8%A1%8C%20%E4%BA%A7%E5%93%81%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -11403,25 +11614,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -11455,13 +11659,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E4%BA%A4%E6%98%93%E9%93%B6%E8%A1%8C%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "交易银行产品运营岗 校招",
+                "应届生 交易银行产品运营岗",
+                "IND_FIN_BANK 交易银行产品运营岗 北京",
+                "IND_FIN_BANK 交易银行产品运营岗 上海"
+              ],
+              "so360": [
+                "交易银行产品运营岗 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "交易银行产品运营岗 面经",
+                "交易银行产品运营岗 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -11999,26 +12230,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%9B%B6%E5%94%AE%20%E9%A3%8E%E6%8E%A7%20%E7%AD%96%E7%95%A5%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -12036,25 +12264,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -12088,13 +12309,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E9%9B%B6%E5%94%AE%E9%A3%8E%E6%8E%A7%E7%AD%96%E7%95%A5%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "零售风控策略岗 校招",
+                "应届生 零售风控策略岗",
+                "IND_FIN_BANK 零售风控策略岗 北京",
+                "IND_FIN_BANK 零售风控策略岗 上海"
+              ],
+              "so360": [
+                "零售风控策略岗 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "零售风控策略岗 面经",
+                "零售风控策略岗 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -12689,26 +12937,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E9%9B%B6%E5%94%AE%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -12725,25 +12970,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -12777,13 +13015,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E9%9B%B6%E5%94%AE%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "零售客户经理 校招",
+                "应届生 零售客户经理",
+                "IND_FIN_BANK 零售客户经理 北京",
+                "IND_FIN_BANK 零售客户经理 上海"
+              ],
+              "so360": [
+                "零售客户经理 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "零售客户经理 面经",
+                "零售客户经理 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -13316,26 +13581,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E5%85%AC%E5%8F%B8%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -13352,25 +13614,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -13404,13 +13659,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E5%85%AC%E5%8F%B8%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "公司客户经理 校招",
+                "应届生 公司客户经理",
+                "IND_FIN_BANK 公司客户经理 北京",
+                "IND_FIN_BANK 公司客户经理 上海"
+              ],
+              "so360": [
+                "公司客户经理 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "公司客户经理 面经",
+                "公司客户经理 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -13943,26 +14225,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%EF%BC%88%E6%94%AF%E4%BB%98%EF%BC%89%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -13979,25 +14258,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -14031,13 +14303,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%EF%BC%88%E6%94%AF%E4%BB%98%EF%BC%89%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "产品经理（支付） 校招",
+                "应届生 产品经理（支付）",
+                "IND_FIN_BANK 产品经理（支付） 北京",
+                "IND_FIN_BANK 产品经理（支付） 上海"
+              ],
+              "so360": [
+                "产品经理（支付） 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "产品经理（支付） 面经",
+                "产品经理（支付） offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -14570,26 +14869,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E9%A3%8E%E9%99%A9%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90%E5%B8%88%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -14606,25 +14902,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -14658,13 +14947,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E9%A3%8E%E9%99%A9%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "风险策略分析师 校招",
+                "应届生 风险策略分析师",
+                "IND_FIN_BANK 风险策略分析师 北京",
+                "IND_FIN_BANK 风险策略分析师 上海"
+              ],
+              "so360": [
+                "风险策略分析师 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "风险策略分析师 面经",
+                "风险策略分析师 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -15198,26 +15514,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E5%8F%8D%E6%AC%BA%E8%AF%88%E5%88%86%E6%9E%90%E5%B8%88%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -15234,25 +15547,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -15286,13 +15592,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E5%8F%8D%E6%AC%BA%E8%AF%88%E5%88%86%E6%9E%90%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "反欺诈分析师 校招",
+                "应届生 反欺诈分析师",
+                "IND_FIN_BANK 反欺诈分析师 北京",
+                "IND_FIN_BANK 反欺诈分析师 上海"
+              ],
+              "so360": [
+                "反欺诈分析师 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "反欺诈分析师 面经",
+                "反欺诈分析师 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -15826,26 +16159,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E5%B2%97%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -15862,25 +16192,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -15914,13 +16237,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "数据治理岗 校招",
+                "应届生 数据治理岗",
+                "IND_FIN_BANK 数据治理岗 北京",
+                "IND_FIN_BANK 数据治理岗 上海"
+              ],
+              "so360": [
+                "数据治理岗 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "数据治理岗 面经",
+                "数据治理岗 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -16454,26 +16804,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E8%BF%90%E8%90%A5%E7%AE%A1%E7%90%86%E5%B2%97%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -16490,25 +16837,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -16542,13 +16882,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E8%BF%90%E8%90%A5%E7%AE%A1%E7%90%86%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "运营管理岗 校招",
+                "应届生 运营管理岗",
+                "IND_FIN_BANK 运营管理岗 北京",
+                "IND_FIN_BANK 运营管理岗 上海"
+              ],
+              "so360": [
+                "运营管理岗 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "运营管理岗 面经",
+                "运营管理岗 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -17081,26 +17448,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E5%90%88%E8%A7%84%E7%A8%BD%E6%A0%B8%E5%B2%97%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -17117,25 +17481,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -17169,13 +17526,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E5%90%88%E8%A7%84%E7%A8%BD%E6%A0%B8%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "合规稽核岗 校招",
+                "应届生 合规稽核岗",
+                "IND_FIN_BANK 合规稽核岗 北京",
+                "IND_FIN_BANK 合规稽核岗 上海"
+              ],
+              "so360": [
+                "合规稽核岗 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "合规稽核岗 面经",
+                "合规稽核岗 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -17709,26 +18093,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E6%8E%88%E4%BF%A1%E5%AE%A1%E6%89%B9%E5%B2%97%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -17745,25 +18126,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -17797,13 +18171,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E6%8E%88%E4%BF%A1%E5%AE%A1%E6%89%B9%E5%B2%97%EF%BC%88%E5%AF%B9%E5%85%AC%EF%BC%89%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "授信审批岗（对公） 校招",
+                "应届生 授信审批岗（对公）",
+                "IND_FIN_BANK 授信审批岗（对公） 北京",
+                "IND_FIN_BANK 授信审批岗（对公） 上海"
+              ],
+              "so360": [
+                "授信审批岗（对公） 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "授信审批岗（对公） 面经",
+                "授信审批岗（对公） offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -18337,26 +18738,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E8%B4%A2%E5%AF%8C%E9%A1%BE%E9%97%AE%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -18373,25 +18771,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -18425,13 +18816,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E8%B4%A2%E5%AF%8C%E9%A1%BE%E9%97%AE%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "财富顾问 校招",
+                "应届生 财富顾问",
+                "IND_FIN_BANK 财富顾问 北京",
+                "IND_FIN_BANK 财富顾问 上海"
+              ],
+              "so360": [
+                "财富顾问 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "财富顾问 面经",
+                "财富顾问 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -18959,23 +19377,23 @@
             "stat_definition": "v1.60手工逐岗补录：结合银行官方岗位页与公共就业平台。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
-              "小红书App搜索",
-              "牛客网笔面试",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
+              "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%AF%B9%E5%85%AC%E6%8E%88%E4%BF%A1%20%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90",
             "boss_search_query": [
@@ -18993,18 +19411,18 @@
             ],
             "capture_rule": "缺少城市/薪资/发布时间时不写强结论，字段留空并记录检索路径。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "岗位发布时间(职位级原始链接)",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
-              "先在企业官方岗位页确认“对公授信策略分析师（行业与现金流）”职责口径，再补平台样本。",
-              "BOSS用“应届生+岗位+城市”检索，保留发布时间与薪资区间证据。",
-              "小红书仅作回忆样本，需记录帖子ID和截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -19041,7 +19459,7 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "补齐至少2个城市样本并回填分位薪资、发布时间、轮次。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "action": "proxy_filled_wait_observed_refresh",
             "unavailable_capture_log_v163": [
               {
@@ -19072,6 +19490,33 @@
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E5%AF%B9%E5%85%AC%E6%8E%88%E4%BF%A1%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90%E5%B8%88%EF%BC%88%E8%A1%8C%E4%B8%9A%E4%B8%8E%E7%8E%B0%E9%87%91%E6%B5%81%EF%BC%89%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "对公授信策略分析师（行业与现金流） 校招",
+                "应届生 对公授信策略分析师（行业与现金流）",
+                "IND_FIN_BANK 对公授信策略分析师（行业与现金流） 北京",
+                "IND_FIN_BANK 对公授信策略分析师（行业与现金流） 上海"
+              ],
+              "so360": [
+                "对公授信策略分析师（行业与现金流） 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "对公授信策略分析师（行业与现金流） 面经",
+                "对公授信策略分析师（行业与现金流） offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -19592,26 +20037,23 @@
             "stat_definition": "v1.60手工逐岗补录：结合银行官方岗位页与公共就业平台。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%20%E8%BF%90%E8%90%A5%20%E5%B0%8F%E5%BE%AE",
             "boss_search_query": [
@@ -19629,25 +20071,18 @@
             ],
             "capture_rule": "保留链接、截图时间戳、发布日期、样本量；缺失字段不进入强结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页职责和能力要求，再补平台样本。",
-              "BOSS按应届+城市+岗位关键词组合检索。",
-              "小红书优先App检索并记录帖子ID、时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -19681,13 +20116,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%E8%BF%90%E8%90%A5%E4%B8%93%E5%91%98%EF%BC%88%E5%B0%8F%E5%BE%AE%E5%AE%A2%E7%BE%A4%EF%BC%89%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "普惠金融运营专员（小微客群） 校招",
+                "应届生 普惠金融运营专员（小微客群）",
+                "IND_FIN_BANK 普惠金融运营专员（小微客群） 北京",
+                "IND_FIN_BANK 普惠金融运营专员（小微客群） 上海"
+              ],
+              "so360": [
+                "普惠金融运营专员（小微客群） 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "普惠金融运营专员（小微客群） 面经",
+                "普惠金融运营专员（小微客群） offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -20165,26 +20627,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%9B%B6%E5%94%AE%20%E9%A3%8E%E6%8E%A7%20%E7%AD%96%E7%95%A5%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -20202,25 +20661,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -20254,13 +20706,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E8%B5%84%E4%BA%A7%E4%BF%9D%E5%85%A8%E4%B8%93%E5%91%98%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "资产保全专员 校招",
+                "应届生 资产保全专员",
+                "IND_FIN_BANK 资产保全专员 北京",
+                "IND_FIN_BANK 资产保全专员 上海"
+              ],
+              "so360": [
+                "资产保全专员 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "资产保全专员 面经",
+                "资产保全专员 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -20817,7 +21296,10 @@
               "小红书App端搜索",
               "企业校招官网岗位详情页",
               "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "小红书App搜索（网页不可达时）",
+              "360搜索(BOSS结果摘要)",
+              "BOSS直聘职位详情页",
+              "小红书App搜索页"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%9B%B6%E5%94%AE%20%E9%A3%8E%E6%8E%A7%20%E7%AD%96%E7%95%A5%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -20835,15 +21317,8 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
-              "城市分布",
-              "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -20853,7 +21328,8 @@
               "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
               "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
               "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。",
+              "优先补抓BOSS职位详情页原始发布时间与截图证据，搜索页摘要仅作过渡样本。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -20867,27 +21343,34 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_so360_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "16.25k/月",
+              "薪资区间P50": "19.50k/月",
+              "薪资区间P75": "21.25k/月",
+              "发布时间": "2026-02-24",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "https://www.so.com/s?q=%E5%AF%B9%E5%85%AC%E6%8E%88%E4%BF%A1%E5%88%86%E6%9E%90%E5%B8%88%20site%3Azhipin.com",
+              "样本量": "3",
+              "截图路径与截图时间": "https://www.so.com/s?q=%E5%AF%B9%E5%85%AC%E6%8E%88%E4%BF%A1%E5%88%86%E6%9E%90%E5%B8%88%20site%3Azhipin.com @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-02-24",
+              "sample_size": 3,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "https://www.so.com/s?q=%E5%AF%B9%E5%85%AC%E6%8E%88%E4%BF%A1%E5%88%86%E6%9E%90%E5%B8%88%20site%3Azhipin.com",
+              "capture_method": "so360_snippet_extraction_v167",
+              "salary_tokens": [
+                "20-26K·16薪",
+                "19-20K",
+                "12-14K·14薪"
+              ]
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后再升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -21048,16 +21531,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 3,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "16.25k/月",
               "capability_requirements": [
                 "信用评分策略设计",
                 "反欺诈规则配置",
@@ -21073,7 +21556,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "19.50k/月",
               "capability_requirements": [
                 "信用评分策略设计",
                 "反欺诈规则配置",
@@ -21091,7 +21574,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "21.25k/月",
               "capability_requirements": [
                 "反欺诈规则配置",
                 "策略A/B测试评估",
@@ -21109,17 +21592,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 16.25,
+              "p50": 19.5,
+              "p75": 21.25
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 3,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -21321,7 +21804,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E9%9B%B6%E5%94%AE%20%E9%A3%8E%E6%8E%A7%20%E7%AD%96%E7%95%A5%20%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E9%9B%B6%E5%94%AE%E9%A3%8E%E6%8E%A7%E7%AD%96%E7%95%A5"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -21349,6 +21832,19 @@
               "公司金融产品岗"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "360搜索结果摘要",
+            "search_query_url": "https://www.so.com/s?q=%E5%AF%B9%E5%85%AC%E6%8E%88%E4%BF%A1%E5%88%86%E6%9E%90%E5%B8%88%20site%3Azhipin.com",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "20-26K·16薪",
+              "19-20K",
+              "12-14K·14薪"
+            ],
+            "sample_size": 3,
+            "note": "如平台详情页不可稳定访问，先保留摘要证据并在后续回填职位级截图。"
           }
         },
         {
@@ -21431,26 +21927,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%9B%B6%E5%94%AE%20%E9%A3%8E%E6%8E%A7%20%E7%AD%96%E7%95%A5%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -21468,25 +21961,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -21520,13 +22006,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "普惠金融客户经理 校招",
+                "应届生 普惠金融客户经理",
+                "IND_FIN_BANK 普惠金融客户经理 北京",
+                "IND_FIN_BANK 普惠金融客户经理 上海"
+              ],
+              "so360": [
+                "普惠金融客户经理 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "普惠金融客户经理 面经",
+                "普惠金融客户经理 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -22064,26 +22577,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%9B%B6%E5%94%AE%20%E9%A3%8E%E6%8E%A7%20%E7%AD%96%E7%95%A5%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -22101,25 +22611,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -22153,13 +22656,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E4%BA%A4%E6%98%93%E9%93%B6%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "交易银行客户经理 校招",
+                "应届生 交易银行客户经理",
+                "IND_FIN_BANK 交易银行客户经理 北京",
+                "IND_FIN_BANK 交易银行客户经理 上海"
+              ],
+              "so360": [
+                "交易银行客户经理 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "交易银行客户经理 面经",
+                "交易银行客户经理 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -22716,7 +23246,10 @@
               "小红书App端搜索",
               "企业校招官网岗位详情页",
               "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "小红书App搜索（网页不可达时）",
+              "360搜索(BOSS结果摘要)",
+              "BOSS直聘职位详情页",
+              "小红书App搜索页"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%9B%B6%E5%94%AE%20%E9%A3%8E%E6%8E%A7%20%E7%AD%96%E7%95%A5%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -22734,15 +23267,8 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
-              "城市分布",
-              "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -22752,7 +23278,8 @@
               "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
               "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
               "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。",
+              "优先补抓BOSS职位详情页原始发布时间与截图证据，搜索页摘要仅作过渡样本。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -22766,27 +23293,33 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_so360_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "13.62k/月",
+              "薪资区间P50": "14.75k/月",
+              "薪资区间P75": "15.88k/月",
+              "发布时间": "2026-02-24",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "https://www.so.com/s?q=%E4%BE%9B%E5%BA%94%E9%93%BE%E9%87%91%E8%9E%8D%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "2",
+              "截图路径与截图时间": "https://www.so.com/s?q=%E4%BE%9B%E5%BA%94%E9%93%BE%E9%87%91%E8%9E%8D%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-02-24",
+              "sample_size": 2,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "https://www.so.com/s?q=%E4%BE%9B%E5%BA%94%E9%93%BE%E9%87%91%E8%9E%8D%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "so360_snippet_extraction_v167",
+              "salary_tokens": [
+                "10-15K",
+                "14-20K·15薪"
+              ]
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后再升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -22947,16 +23480,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "13.62k/月",
               "capability_requirements": [
                 "信用评分策略设计",
                 "反欺诈规则配置",
@@ -22972,7 +23505,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "14.75k/月",
               "capability_requirements": [
                 "信用评分策略设计",
                 "反欺诈规则配置",
@@ -22990,7 +23523,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "15.88k/月",
               "capability_requirements": [
                 "反欺诈规则配置",
                 "策略A/B测试评估",
@@ -23008,17 +23541,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 13.62,
+              "p50": 14.75,
+              "p75": 15.88
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -23220,7 +23753,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E9%9B%B6%E5%94%AE%20%E9%A3%8E%E6%8E%A7%20%E7%AD%96%E7%95%A5%20%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E9%9B%B6%E5%94%AE%E9%A3%8E%E6%8E%A7%E7%AD%96%E7%95%A5"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -23248,6 +23781,18 @@
               "风险管理岗"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "360搜索结果摘要",
+            "search_query_url": "https://www.so.com/s?q=%E4%BE%9B%E5%BA%94%E9%93%BE%E9%87%91%E8%9E%8D%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "10-15K",
+              "14-20K·15薪"
+            ],
+            "sample_size": 2,
+            "note": "如平台详情页不可稳定访问，先保留摘要证据并在后续回填职位级截图。"
           }
         },
         {
@@ -23346,7 +23891,10 @@
               "牛客网笔面试",
               "企业校招官网岗位详情页",
               "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "小红书App搜索（网页不可达时）",
+              "360搜索(BOSS结果摘要)",
+              "BOSS直聘职位详情页",
+              "小红书App搜索页"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job",
             "boss_search_query": [
@@ -23364,9 +23912,9 @@
             ],
             "capture_rule": "缺少城市/薪资/发布时间时不写强结论，字段留空并记录检索路径。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "岗位发布时间(职位级原始链接)",
+              "帖子ID/链接",
+              "截图时间"
             ],
             "how_to_search": [
               "先在企业官方岗位页确认“普惠金融产品运营岗”职责口径，再补平台样本。",
@@ -23375,7 +23923,8 @@
               "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
               "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
               "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。",
+              "优先补抓BOSS职位详情页原始发布时间与截图证据，搜索页摘要仅作过渡样本。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -23392,27 +23941,32 @@
               "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-01-19"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_so360_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.40k/月",
-              "薪资区间P50": "12.23k/月",
-              "薪资区间P75": "14.06k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "8.50k/月",
+              "薪资区间P50": "8.50k/月",
+              "薪资区间P75": "8.50k/月",
+              "发布时间": "2026-02-24",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-01-19"
+              "来源链接或帖子ID": "https://www.so.com/s?q=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "1",
+              "截图路径与截图时间": "https://www.so.com/s?q=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-02-24",
+              "sample_size": 1,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "https://www.so.com/s?q=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "so360_snippet_extraction_v167",
+              "salary_tokens": [
+                "6-11K"
+              ]
             },
-            "next_backfill_action": "补齐至少2个城市样本并回填分位薪资、发布时间、轮次。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后再升级为严格A档实证。",
             "unavailable_capture_log_v163": [
               {
                 "platform": "official",
@@ -23600,16 +24154,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 1,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.40k/月",
+              "salary_range": "8.50k/月",
               "capability_requirements": [
                 "信用评分策略设计",
                 "反欺诈规则配置",
@@ -23625,7 +24179,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.23k/月",
+              "salary_range": "8.50k/月",
               "capability_requirements": [
                 "信用评分策略设计",
                 "反欺诈规则配置",
@@ -23643,7 +24197,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.06k/月",
+              "salary_range": "8.50k/月",
               "capability_requirements": [
                 "反欺诈规则配置",
                 "策略A/B测试评估",
@@ -23661,17 +24215,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.4,
-              "p50": 12.23,
-              "p75": 14.06
+              "p25": 8.5,
+              "p50": 8.5,
+              "p75": 8.5
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 1,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -23870,7 +24424,7 @@
               "boss": "https://www.zhipin.com/web/geek/job",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%20%E9%9D%A2%E7%BB%8F"
             },
-            "next_backfill_action": "补齐至少2个城市样本并回填分位薪资、发布时间、轮次。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -23898,6 +24452,17 @@
               "客户经营策略岗"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "360搜索结果摘要",
+            "search_query_url": "https://www.so.com/s?q=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "6-11K"
+            ],
+            "sample_size": 1,
+            "note": "如平台详情页不可稳定访问，先保留摘要证据并在后续回填职位级截图。"
           }
         }
       ],

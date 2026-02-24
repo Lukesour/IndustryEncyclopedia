@@ -2538,7 +2538,10 @@
               "小红书App端搜索",
               "企业校招官网岗位详情页",
               "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "小红书App搜索（网页不可达时）",
+              "360搜索(BOSS结果摘要)",
+              "BOSS直聘职位详情页",
+              "小红书App搜索页"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -2555,9 +2558,9 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "岗位发布时间(职位级原始链接)",
+              "帖子ID/链接",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
@@ -2566,7 +2569,8 @@
               "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
               "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
               "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。",
+              "优先补抓BOSS职位详情页原始发布时间与截图证据，搜索页摘要仅作过渡样本。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -2580,27 +2584,33 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-01-19"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_so360_snippet_v167",
             "filled_values": {
               "城市分布": "北京、西安、宁德",
-              "薪资区间P25": "13.57k/月",
-              "薪资区间P50": "16.55k/月",
-              "薪资区间P75": "20.19k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "13.50k/月",
+              "薪资区间P50": "16.50k/月",
+              "薪资区间P75": "19.50k/月",
+              "发布时间": "2026-02-24",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-01-19"
+              "来源链接或帖子ID": "https://www.so.com/s?q=%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "2",
+              "截图路径与截图时间": "https://www.so.com/s?q=%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-02-24",
+              "sample_size": 2,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "https://www.so.com/s?q=%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "so360_snippet_extraction_v167",
+              "salary_tokens": [
+                "8-13K",
+                "15-30K"
+              ]
             },
-            "next_backfill_action": "优先补齐近90天平台样本并回填城市分布、薪资分位与发布时间。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后再升级为严格A档实证。",
             "action": "proxy_filled_wait_observed_refresh",
             "unavailable_capture_log_v163": [
               {
@@ -2697,16 +2707,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "13.57k/月",
+              "salary_range": "13.50k/月",
               "capability_requirements": [
                 "电力系统基础",
                 "设备运维知识",
@@ -2722,7 +2732,7 @@
               ]
             },
             "p50": {
-              "salary_range": "16.55k/月",
+              "salary_range": "16.50k/月",
               "capability_requirements": [
                 "电力系统基础",
                 "设备运维知识",
@@ -2740,7 +2750,7 @@
               ]
             },
             "p75": {
-              "salary_range": "20.19k/月",
+              "salary_range": "19.50k/月",
               "capability_requirements": [
                 "设备运维知识",
                 "交易规则理解",
@@ -2758,17 +2768,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 13.57,
-              "p50": 16.55,
-              "p75": 20.19
+              "p25": 13.5,
+              "p50": 16.5,
+              "p75": 19.5
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -2969,7 +2979,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
             },
-            "next_backfill_action": "优先补齐近90天平台样本并回填城市分布、薪资分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -2997,6 +3007,18 @@
               "配网规划工程师"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "360搜索结果摘要",
+            "search_query_url": "https://www.so.com/s?q=%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "8-13K",
+              "15-30K"
+            ],
+            "sample_size": 2,
+            "note": "如平台详情页不可稳定访问，先保留摘要证据并在后续回填职位级截图。"
           }
         },
         {
@@ -3185,7 +3207,10 @@
               "小红书App端搜索",
               "企业校招官网岗位详情页",
               "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "小红书App搜索（网页不可达时）",
+              "360搜索(BOSS结果摘要)",
+              "BOSS直聘职位详情页",
+              "小红书App搜索页"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -3202,9 +3227,9 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "岗位发布时间(职位级原始链接)",
+              "帖子ID/链接",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
@@ -3213,7 +3238,8 @@
               "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
               "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
               "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。",
+              "优先补抓BOSS职位详情页原始发布时间与截图证据，搜索页摘要仅作过渡样本。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -3227,27 +3253,36 @@
               "样本量": "35",
               "截图路径与截图时间": "https://www.ceic.com @2026-02-17"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_so360_snippet_v167",
             "filled_values": {
               "城市分布": "北京、西安、宁德",
-              "薪资区间P25": "9.17k/月",
-              "薪资区间P50": "11.18k/月",
-              "薪资区间P75": "13.64k/月",
-              "发布时间": "2026-02-17",
+              "薪资区间P25": "10.50k/月",
+              "薪资区间P50": "12.50k/月",
+              "薪资区间P75": "15.00k/月",
+              "发布时间": "2026-02-24",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.ceic.com",
-              "样本量": "35",
-              "截图路径与截图时间": "https://www.ceic.com @2026-02-17"
+              "来源链接或帖子ID": "https://www.so.com/s?q=%E7%94%B5%E5%8A%9B%20%E8%BF%90%E7%BB%B4%E5%B7%A5%E7%A8%8B%E5%B8%88%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "5",
+              "截图路径与截图时间": "https://www.so.com/s?q=%E7%94%B5%E5%8A%9B%20%E8%BF%90%E7%BB%B4%E5%B7%A5%E7%A8%8B%E5%B8%88%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_AUTO_WWW_CEIC_COM_2B8D5B00",
-              "source_url": "https://www.ceic.com",
-              "publish_date": "2026-02-17",
-              "sample_size": 35,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-02-24",
+              "sample_size": 5,
               "city": "西安",
-              "company_tier": "t3_regional"
+              "company_tier": "t3_regional",
+              "search_query_url": "https://www.so.com/s?q=%E7%94%B5%E5%8A%9B%20%E8%BF%90%E7%BB%B4%E5%B7%A5%E7%A8%8B%E5%B8%88%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "so360_snippet_extraction_v167",
+              "salary_tokens": [
+                "10-11K",
+                "12-18K",
+                "13-25K",
+                "5-6K",
+                "10-15K"
+              ]
             },
-            "next_backfill_action": "优先补齐近90天平台样本并回填城市分布、薪资分位与发布时间。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后再升级为严格A档实证。",
             "action": "proxy_filled_wait_observed_refresh",
             "unavailable_capture_log_v163": [
               {
@@ -3344,16 +3379,16 @@
             "city_name": "西安",
             "city_id": "CITY_024",
             "company_tier": "t3_regional",
-            "sample_size": 35,
-            "publish_date": "2026-02-17",
-            "source_id": "SRC_AUTO_WWW_CEIC_COM_2B8D5B00",
-            "source_url": "https://www.ceic.com",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 5,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "9.17k/月",
+              "salary_range": "10.50k/月",
               "capability_requirements": [
                 "电力系统基础",
                 "设备运维知识",
@@ -3369,7 +3404,7 @@
               ]
             },
             "p50": {
-              "salary_range": "11.18k/月",
+              "salary_range": "12.50k/月",
               "capability_requirements": [
                 "电力系统基础",
                 "设备运维知识",
@@ -3387,7 +3422,7 @@
               ]
             },
             "p75": {
-              "salary_range": "13.64k/月",
+              "salary_range": "15.00k/月",
               "capability_requirements": [
                 "设备运维知识",
                 "交易规则理解",
@@ -3405,17 +3440,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 9.17,
-              "p50": 11.18,
-              "p75": 13.64
+              "p25": 10.5,
+              "p50": 12.5,
+              "p75": 15.0
             },
             "city": "西安",
             "company_tier": "t3_regional",
-            "sample_size": 35,
-            "publish_date": "2026-02-17",
-            "source_id": "SRC_AUTO_WWW_CEIC_COM_2B8D5B00",
-            "source_url": "https://www.ceic.com",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 5,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -3616,7 +3651,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
             },
-            "next_backfill_action": "优先补齐近90天平台样本并回填城市分布、薪资分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -3644,6 +3679,21 @@
               "安全生产管理岗"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "360搜索结果摘要",
+            "search_query_url": "https://www.so.com/s?q=%E7%94%B5%E5%8A%9B%20%E8%BF%90%E7%BB%B4%E5%B7%A5%E7%A8%8B%E5%B8%88%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "10-11K",
+              "12-18K",
+              "13-25K",
+              "5-6K",
+              "10-15K"
+            ],
+            "sample_size": 5,
+            "note": "如平台详情页不可稳定访问，先保留摘要证据并在后续回填职位级截图。"
           }
         },
         {
@@ -3813,26 +3863,23 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -3849,18 +3896,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "岗位发布时间(职位级原始链接)",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -3894,7 +3941,7 @@
               "city": "宁德",
               "company_tier": "t3_regional"
             },
-            "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "action": "proxy_filled_wait_observed_refresh",
             "unavailable_capture_log_v163": [
               {
@@ -3925,6 +3972,33 @@
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E7%94%B5%E5%8A%9B%E4%BA%A4%E6%98%93%E5%88%86%E6%9E%90%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "电力交易分析 校招",
+                "应届生 电力交易分析",
+                "IND_ENERGY_UTILITIES 电力交易分析 北京",
+                "IND_ENERGY_UTILITIES 电力交易分析 上海"
+              ],
+              "so360": [
+                "电力交易分析 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "电力交易分析 面经",
+                "电力交易分析 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "role_detail_v158": {
@@ -4479,7 +4553,10 @@
               "小红书App端搜索",
               "企业校招官网岗位详情页",
               "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "小红书App搜索（网页不可达时）",
+              "360搜索(BOSS结果摘要)",
+              "BOSS直聘职位详情页",
+              "小红书App搜索页"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -4496,9 +4573,9 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "岗位发布时间(职位级原始链接)",
+              "帖子ID/链接",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
@@ -4507,7 +4584,8 @@
               "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
               "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
               "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。",
+              "优先补抓BOSS职位详情页原始发布时间与截图证据，搜索页摘要仅作过渡样本。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -4521,27 +4599,33 @@
               "样本量": "28",
               "截图路径与截图时间": "https://www.chng.com.cn @2026-02-24"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_so360_snippet_v167",
             "filled_values": {
               "城市分布": "北京、西安、宁德",
-              "薪资区间P25": "10.09k/月",
-              "薪资区间P50": "11.87k/月",
-              "薪资区间P75": "13.66k/月",
+              "薪资区间P25": "9.62k/月",
+              "薪资区间P50": "9.75k/月",
+              "薪资区间P75": "9.88k/月",
               "发布时间": "2026-02-24",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.chng.com.cn",
-              "样本量": "28",
-              "截图路径与截图时间": "https://www.chng.com.cn @2026-02-24"
+              "来源链接或帖子ID": "https://www.so.com/s?q=%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%8E%A7%E5%88%B6%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "2",
+              "截图路径与截图时间": "https://www.so.com/s?q=%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%8E%A7%E5%88%B6%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_AUTO_WWW_CHNG_COM_CN_8ADE5C82",
-              "source_url": "https://www.chng.com.cn",
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
               "publish_date": "2026-02-24",
-              "sample_size": 28,
+              "sample_size": 2,
               "city": "深圳",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "https://www.so.com/s?q=%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%8E%A7%E5%88%B6%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "so360_snippet_extraction_v167",
+              "salary_tokens": [
+                "9-10K",
+                "9-10K"
+              ]
             },
-            "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后再升级为严格A档实证。",
             "action": "proxy_filled_wait_observed_refresh",
             "unavailable_capture_log_v163": [
               {
@@ -4638,16 +4722,16 @@
             "city_name": "深圳",
             "city_id": "CITY_019",
             "company_tier": "t2_strong",
-            "sample_size": 28,
+            "sample_size": 2,
             "publish_date": "2026-02-24",
-            "source_id": "SRC_AUTO_WWW_CHNG_COM_CN_8ADE5C82",
-            "source_url": "https://www.chng.com.cn",
-            "status": "proxy_with_complete_fields",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.09k/月",
+              "salary_range": "9.62k/月",
               "capability_requirements": [
                 "电力系统基础",
                 "设备运维知识",
@@ -4663,7 +4747,7 @@
               ]
             },
             "p50": {
-              "salary_range": "11.87k/月",
+              "salary_range": "9.75k/月",
               "capability_requirements": [
                 "电力系统基础",
                 "设备运维知识",
@@ -4681,7 +4765,7 @@
               ]
             },
             "p75": {
-              "salary_range": "13.66k/月",
+              "salary_range": "9.88k/月",
               "capability_requirements": [
                 "设备运维知识",
                 "交易规则理解",
@@ -4699,17 +4783,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.09,
-              "p50": 11.87,
-              "p75": 13.66
+              "p25": 9.62,
+              "p50": 9.75,
+              "p75": 9.88
             },
             "city": "深圳",
             "company_tier": "t2_strong",
-            "sample_size": 28,
+            "sample_size": 2,
             "publish_date": "2026-02-24",
-            "source_id": "SRC_AUTO_WWW_CHNG_COM_CN_8ADE5C82",
-            "source_url": "https://www.chng.com.cn",
-            "status": "proxy_with_complete_fields",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -4910,7 +4994,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
             },
-            "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -4938,6 +5022,18 @@
               "安全生产管理岗"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "360搜索结果摘要",
+            "search_query_url": "https://www.so.com/s?q=%E8%B0%83%E5%BA%A6%E4%B8%8E%E6%8E%A7%E5%88%B6%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "9-10K",
+              "9-10K"
+            ],
+            "sample_size": 2,
+            "note": "如平台详情页不可稳定访问，先保留摘要证据并在后续回填职位级截图。"
           }
         },
         {
@@ -6279,26 +6375,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -6316,25 +6409,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -6368,13 +6454,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "设备管理工程师 校招",
+                "应届生 设备管理工程师",
+                "IND_ENERGY_UTILITIES 设备管理工程师 北京",
+                "IND_ENERGY_UTILITIES 设备管理工程师 上海"
+              ],
+              "so360": [
+                "设备管理工程师 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "设备管理工程师 面经",
+                "设备管理工程师 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -6926,7 +7039,10 @@
               "小红书App端搜索",
               "企业校招官网岗位详情页",
               "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "小红书App搜索（网页不可达时）",
+              "360搜索(BOSS结果摘要)",
+              "BOSS直聘职位详情页",
+              "小红书App搜索页"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -6944,15 +7060,8 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
-              "城市分布",
-              "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -6962,7 +7071,8 @@
               "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
               "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
               "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。",
+              "优先补抓BOSS职位详情页原始发布时间与截图证据，搜索页摘要仅作过渡样本。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -6976,27 +7086,33 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_so360_snippet_v167",
             "filled_values": {
               "城市分布": "北京、西安、宁德",
-              "薪资区间P25": "10.03k/月",
-              "薪资区间P50": "11.80k/月",
-              "薪资区间P75": "13.57k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "10.75k/月",
+              "薪资区间P50": "11.00k/月",
+              "薪资区间P75": "11.25k/月",
+              "发布时间": "2026-02-24",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "https://www.so.com/s?q=%E7%94%B5%E5%8A%9B%E4%BA%A4%E6%98%93%E8%BF%90%E8%90%A5%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "2",
+              "截图路径与截图时间": "https://www.so.com/s?q=%E7%94%B5%E5%8A%9B%E4%BA%A4%E6%98%93%E8%BF%90%E8%90%A5%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-02-24",
+              "sample_size": 2,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "https://www.so.com/s?q=%E7%94%B5%E5%8A%9B%E4%BA%A4%E6%98%93%E8%BF%90%E8%90%A5%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "so360_snippet_extraction_v167",
+              "salary_tokens": [
+                "8-13K",
+                "9-14K"
+              ]
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后再升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -7153,16 +7269,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.03k/月",
+              "salary_range": "10.75k/月",
               "capability_requirements": [
                 "业务建模与问题拆解",
                 "数据分析与指标体系",
@@ -7178,7 +7294,7 @@
               ]
             },
             "p50": {
-              "salary_range": "11.80k/月",
+              "salary_range": "11.00k/月",
               "capability_requirements": [
                 "业务建模与问题拆解",
                 "数据分析与指标体系",
@@ -7196,7 +7312,7 @@
               ]
             },
             "p75": {
-              "salary_range": "13.57k/月",
+              "salary_range": "11.25k/月",
               "capability_requirements": [
                 "数据分析与指标体系",
                 "跨团队协同推进",
@@ -7214,17 +7330,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.03,
-              "p50": 11.8,
-              "p75": 13.57
+              "p25": 10.75,
+              "p50": 11.0,
+              "p75": 11.25
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-02-24",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -7426,7 +7542,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -7454,6 +7570,18 @@
               "新能源市场策略岗"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "360搜索结果摘要",
+            "search_query_url": "https://www.so.com/s?q=%E7%94%B5%E5%8A%9B%E4%BA%A4%E6%98%93%E8%BF%90%E8%90%A5%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "8-13K",
+              "9-14K"
+            ],
+            "sample_size": 2,
+            "note": "如平台详情页不可稳定访问，先保留摘要证据并在后续回填职位级截图。"
           }
         },
         {
@@ -7535,26 +7663,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -7571,25 +7696,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -7623,13 +7741,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E5%82%A8%E8%83%BD%E8%BF%90%E7%BB%B4%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "储能运维工程师 校招",
+                "应届生 储能运维工程师",
+                "IND_ENERGY_UTILITIES 储能运维工程师 北京",
+                "IND_ENERGY_UTILITIES 储能运维工程师 上海"
+              ],
+              "so360": [
+                "储能运维工程师 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "储能运维工程师 面经",
+                "储能运维工程师 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -8161,26 +8306,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -8197,25 +8339,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -8249,13 +8384,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E7%A2%B3%E7%AE%A1%E7%90%86%E4%B8%93%E5%91%98%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "碳管理专员 校招",
+                "应届生 碳管理专员",
+                "IND_ENERGY_UTILITIES 碳管理专员 北京",
+                "IND_ENERGY_UTILITIES 碳管理专员 上海"
+              ],
+              "so360": [
+                "碳管理专员 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "碳管理专员 面经",
+                "碳管理专员 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -8787,26 +8949,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -8823,25 +8982,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -8875,13 +9027,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E6%96%B0%E8%83%BD%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "新能源项目开发 校招",
+                "应届生 新能源项目开发",
+                "IND_ENERGY_UTILITIES 新能源项目开发 北京",
+                "IND_ENERGY_UTILITIES 新能源项目开发 上海"
+              ],
+              "so360": [
+                "新能源项目开发 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "新能源项目开发 面经",
+                "新能源项目开发 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -9413,26 +9592,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -9449,25 +9625,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -9501,13 +9670,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E7%94%B5%E7%BD%91%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "电网数据分析师 校招",
+                "应届生 电网数据分析师",
+                "IND_ENERGY_UTILITIES 电网数据分析师 北京",
+                "IND_ENERGY_UTILITIES 电网数据分析师 上海"
+              ],
+              "so360": [
+                "电网数据分析师 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "电网数据分析师 面经",
+                "电网数据分析师 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -10039,26 +10235,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -10076,25 +10269,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -10128,13 +10314,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E9%85%8D%E7%94%B5%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "配电自动化工程师 校招",
+                "应届生 配电自动化工程师",
+                "IND_ENERGY_UTILITIES 配电自动化工程师 北京",
+                "IND_ENERGY_UTILITIES 配电自动化工程师 上海"
+              ],
+              "so360": [
+                "配电自动化工程师 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "配电自动化工程师 面经",
+                "配电自动化工程师 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -10671,26 +10884,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -10708,25 +10918,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -10760,13 +10963,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E6%B0%B4%E5%8A%A1%E8%BF%90%E8%90%A5%E5%88%86%E6%9E%90%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "水务运营分析师 校招",
+                "应届生 水务运营分析师",
+                "IND_ENERGY_UTILITIES 水务运营分析师 北京",
+                "IND_ENERGY_UTILITIES 水务运营分析师 上海"
+              ],
+              "so360": [
+                "水务运营分析师 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "水务运营分析师 面经",
+                "水务运营分析师 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -11303,26 +11533,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -11340,25 +11567,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -11392,13 +11612,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E7%94%B5%E5%8A%9B%E4%BA%A4%E6%98%93%E5%88%86%E6%9E%90%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "电力交易分析岗 校招",
+                "应届生 电力交易分析岗",
+                "IND_ENERGY_UTILITIES 电力交易分析岗 北京",
+                "IND_ENERGY_UTILITIES 电力交易分析岗 上海"
+              ],
+              "so360": [
+                "电力交易分析岗 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "电力交易分析岗 面经",
+                "电力交易分析岗 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -11935,26 +12182,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -11972,25 +12216,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -12024,13 +12261,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E5%85%AC%E7%94%A8%E4%BA%8B%E4%B8%9A%E5%AE%A2%E6%9C%8D%E8%BF%90%E8%90%A5%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "公用事业客服运营岗 校招",
+                "应届生 公用事业客服运营岗",
+                "IND_ENERGY_UTILITIES 公用事业客服运营岗 北京",
+                "IND_ENERGY_UTILITIES 公用事业客服运营岗 上海"
+              ],
+              "so360": [
+                "公用事业客服运营岗 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "公用事业客服运营岗 面经",
+                "公用事业客服运营岗 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -12624,26 +12888,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E8%83%BD%E6%BA%90%E4%B8%8E%E5%85%AC%E7%94%A8%E4%BA%8B%E4%B8%9A%20%E8%B0%83%E5%BA%A6%E8%BF%90%E8%A1%8C%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -12660,25 +12921,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -12712,13 +12966,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E8%B0%83%E5%BA%A6%E8%BF%90%E8%A1%8C%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "调度运行工程师 校招",
+                "应届生 调度运行工程师",
+                "IND_ENERGY_UTILITIES 调度运行工程师 北京",
+                "IND_ENERGY_UTILITIES 调度运行工程师 上海"
+              ],
+              "so360": [
+                "调度运行工程师 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "调度运行工程师 面经",
+                "调度运行工程师 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -13251,26 +13532,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E8%83%BD%E6%BA%90%E4%B8%8E%E5%85%AC%E7%94%A8%E4%BA%8B%E4%B8%9A%20%E7%94%B5%E5%8A%9B%E4%BA%A4%E6%98%93%E5%88%86%E6%9E%90%E5%B8%88%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -13287,25 +13565,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -13339,13 +13610,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E7%94%B5%E5%8A%9B%E4%BA%A4%E6%98%93%E5%88%86%E6%9E%90%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "电力交易分析师 校招",
+                "应届生 电力交易分析师",
+                "IND_ENERGY_UTILITIES 电力交易分析师 北京",
+                "IND_ENERGY_UTILITIES 电力交易分析师 上海"
+              ],
+              "so360": [
+                "电力交易分析师 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "电力交易分析师 面经",
+                "电力交易分析师 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -13878,26 +14176,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E8%83%BD%E6%BA%90%E4%B8%8E%E5%85%AC%E7%94%A8%E4%BA%8B%E4%B8%9A%20%E6%96%B0%E8%83%BD%E6%BA%90%E5%B9%B6%E7%BD%91%E5%B2%97%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -13914,25 +14209,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -13966,13 +14254,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E6%96%B0%E8%83%BD%E6%BA%90%E5%B9%B6%E7%BD%91%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "新能源并网岗 校招",
+                "应届生 新能源并网岗",
+                "IND_ENERGY_UTILITIES 新能源并网岗 北京",
+                "IND_ENERGY_UTILITIES 新能源并网岗 上海"
+              ],
+              "so360": [
+                "新能源并网岗 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "新能源并网岗 面经",
+                "新能源并网岗 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -14505,26 +14820,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E8%83%BD%E6%BA%90%E4%B8%8E%E5%85%AC%E7%94%A8%E4%BA%8B%E4%B8%9A%20%E8%AE%BE%E5%A4%87%E8%BF%90%E7%BB%B4%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -14541,25 +14853,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -14593,13 +14898,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E8%AE%BE%E5%A4%87%E8%BF%90%E7%BB%B4%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "设备运维工程师 校招",
+                "应届生 设备运维工程师",
+                "IND_ENERGY_UTILITIES 设备运维工程师 北京",
+                "IND_ENERGY_UTILITIES 设备运维工程师 上海"
+              ],
+              "so360": [
+                "设备运维工程师 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "设备运维工程师 面经",
+                "设备运维工程师 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -15132,26 +15464,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E8%83%BD%E6%BA%90%E4%B8%8E%E5%85%AC%E7%94%A8%E4%BA%8B%E4%B8%9A%20%E5%AE%89%E5%85%A8%E7%94%9F%E4%BA%A7%E7%AE%A1%E7%90%86%E5%B2%97%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -15168,25 +15497,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -15220,13 +15542,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E5%AE%89%E5%85%A8%E7%94%9F%E4%BA%A7%E7%AE%A1%E7%90%86%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "安全生产管理岗 校招",
+                "应届生 安全生产管理岗",
+                "IND_ENERGY_UTILITIES 安全生产管理岗 北京",
+                "IND_ENERGY_UTILITIES 安全生产管理岗 上海"
+              ],
+              "so360": [
+                "安全生产管理岗 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "安全生产管理岗 面经",
+                "安全生产管理岗 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -15759,26 +16108,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E8%83%BD%E6%BA%90%E4%B8%8E%E5%85%AC%E7%94%A8%E4%BA%8B%E4%B8%9A%20%E8%AE%A1%E9%87%8F%E4%B8%8E%E8%83%BD%E6%95%88%E5%B2%97%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -15795,25 +16141,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -15847,13 +16186,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E8%AE%A1%E9%87%8F%E4%B8%8E%E8%83%BD%E6%95%88%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "计量与能效岗 校招",
+                "应届生 计量与能效岗",
+                "IND_ENERGY_UTILITIES 计量与能效岗 北京",
+                "IND_ENERGY_UTILITIES 计量与能效岗 上海"
+              ],
+              "so360": [
+                "计量与能效岗 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "计量与能效岗 面经",
+                "计量与能效岗 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -16386,26 +16752,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E8%83%BD%E6%BA%90%E4%B8%8E%E5%85%AC%E7%94%A8%E4%BA%8B%E4%B8%9A%20%E9%85%8D%E7%BD%91%E8%A7%84%E5%88%92%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -16422,25 +16785,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -16474,13 +16830,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E9%85%8D%E7%BD%91%E8%A7%84%E5%88%92%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "配网规划工程师 校招",
+                "应届生 配网规划工程师",
+                "IND_ENERGY_UTILITIES 配网规划工程师 北京",
+                "IND_ENERGY_UTILITIES 配网规划工程师 上海"
+              ],
+              "so360": [
+                "配网规划工程师 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "配网规划工程师 面经",
+                "配网规划工程师 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -17013,26 +17396,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E8%83%BD%E6%BA%90%E4%B8%8E%E5%85%AC%E7%94%A8%E4%BA%8B%E4%B8%9A%20%E5%B8%82%E5%9C%BA%E8%90%A5%E9%94%80%E5%B2%97%EF%BC%88%E8%83%BD%E6%BA%90%EF%BC%89%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -17049,25 +17429,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -17101,13 +17474,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E5%B8%82%E5%9C%BA%E8%90%A5%E9%94%80%E5%B2%97%EF%BC%88%E8%83%BD%E6%BA%90%EF%BC%89%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "市场营销岗（能源） 校招",
+                "应届生 市场营销岗（能源）",
+                "IND_ENERGY_UTILITIES 市场营销岗（能源） 北京",
+                "IND_ENERGY_UTILITIES 市场营销岗（能源） 上海"
+              ],
+              "so360": [
+                "市场营销岗（能源） 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "市场营销岗（能源） 面经",
+                "市场营销岗（能源） offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -17639,26 +18039,23 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E8%83%BD%E6%BA%90%E4%B8%8E%E5%85%AC%E7%94%A8%E4%BA%8B%E4%B8%9A%20%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E5%B2%97%EF%BC%88%E7%94%B5%E7%AB%99%EF%BC%89%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -17675,25 +18072,18 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -17727,13 +18117,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E5%B2%97%EF%BC%88%E7%94%B5%E7%AB%99%EF%BC%89%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "项目开发岗（电站） 校招",
+                "应届生 项目开发岗（电站）",
+                "IND_ENERGY_UTILITIES 项目开发岗（电站） 北京",
+                "IND_ENERGY_UTILITIES 项目开发岗（电站） 上海"
+              ],
+              "so360": [
+                "项目开发岗（电站） 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "项目开发岗（电站） 面经",
+                "项目开发岗（电站） offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -18285,7 +18702,10 @@
               "小红书App端搜索",
               "企业校招官网岗位详情页",
               "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "小红书App搜索（网页不可达时）",
+              "360搜索(BOSS结果摘要)",
+              "BOSS直聘职位详情页",
+              "小红书App搜索页"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E8%83%BD%E6%BA%90%E4%B8%8E%E5%85%AC%E7%94%A8%E4%BA%8B%E4%B8%9A%20%E7%A2%B3%E7%AE%A1%E7%90%86%E5%B2%97%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -18302,15 +18722,8 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
-              "城市分布",
-              "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -18320,7 +18733,8 @@
               "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
               "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
               "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。",
+              "优先补抓BOSS职位详情页原始发布时间与截图证据，搜索页摘要仅作过渡样本。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -18334,27 +18748,30 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_so360_snippet_v167",
             "filled_values": {
               "城市分布": "北京、西安、宁德",
-              "薪资区间P25": "10.03k/月",
-              "薪资区间P50": "11.80k/月",
-              "薪资区间P75": "13.57k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "9.75k/月",
+              "薪资区间P50": "10.50k/月",
+              "薪资区间P75": "14.62k/月",
+              "发布时间": "2026-01-14",
               "批次/轮次": "网申 / 笔试",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "https://www.so.com/s?q=%E7%A2%B3%E7%AE%A1%E7%90%86%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "6",
+              "截图路径与截图时间": "https://www.so.com/s?q=%E7%A2%B3%E7%AE%A1%E7%90%86%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-01-14",
+              "sample_size": 6,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "https://www.so.com/s?q=%E7%A2%B3%E7%AE%A1%E7%90%86%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "so360_snippet_extraction_v167",
+              "salary_tokens": []
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后再升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -18452,16 +18869,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 6,
+            "publish_date": "2026-01-14",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.03k/月",
+              "salary_range": "9.75k/月",
               "capability_requirements": [
                 "结构化分析",
                 "数据处理",
@@ -18477,7 +18894,7 @@
               ]
             },
             "p50": {
-              "salary_range": "11.80k/月",
+              "salary_range": "10.50k/月",
               "capability_requirements": [
                 "结构化分析",
                 "数据处理",
@@ -18495,7 +18912,7 @@
               ]
             },
             "p75": {
-              "salary_range": "13.57k/月",
+              "salary_range": "14.62k/月",
               "capability_requirements": [
                 "数据处理",
                 "业务理解",
@@ -18513,17 +18930,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.03,
-              "p50": 11.8,
-              "p75": 13.57
+              "p25": 9.75,
+              "p50": 10.5,
+              "p75": 14.62
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 6,
+            "publish_date": "2026-01-14",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -18727,7 +19144,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E8%83%BD%E6%BA%90%E4%B8%8E%E5%85%AC%E7%94%A8%E4%BA%8B%E4%B8%9A%20%E7%A2%B3%E7%AE%A1%E7%90%86%E5%B2%97%20%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E8%83%BD%E6%BA%90%E4%B8%8E%E5%85%AC%E7%94%A8%E4%BA%8B%E4%B8%9A%20%E7%A2%B3%E7%AE%A1%E7%90%86%E5%B2%97%20%E9%9D%A2%E7%BB%8F"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -18755,6 +19172,15 @@
               "调度优化工程师"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "360搜索结果摘要",
+            "search_query_url": "https://www.so.com/s?q=%E7%A2%B3%E7%AE%A1%E7%90%86%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [],
+            "sample_size": 6,
+            "note": "如平台详情页不可稳定访问，先保留摘要证据并在后续回填职位级截图。"
           }
         },
         {
@@ -18889,23 +19315,23 @@
             "stat_definition": "v1.60手工逐岗补录：结合电网企业官方岗位与公共就业平台。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
-              "小红书App搜索",
-              "牛客网笔面试",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
+              "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E7%94%B5%E5%8A%9B%E4%BA%A4%E6%98%93%20%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90%E5%B8%88",
             "boss_search_query": [
@@ -18923,18 +19349,18 @@
             ],
             "capture_rule": "缺少城市/薪资/发布时间时不写强结论，字段留空并记录检索路径。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "岗位发布时间(职位级原始链接)",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
-              "先在企业官方岗位页确认“电力交易策略分析师（现货与中长期）”职责口径，再补平台样本。",
-              "BOSS用“应届生+岗位+城市”检索，保留发布时间与薪资区间证据。",
-              "小红书仅作回忆样本，需记录帖子ID和截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -18971,7 +19397,7 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "补齐至少2个城市样本并回填分位薪资、发布时间、轮次。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "action": "proxy_filled_wait_observed_refresh",
             "unavailable_capture_log_v163": [
               {
@@ -19002,6 +19428,33 @@
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E7%94%B5%E5%8A%9B%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90%E5%B8%88%EF%BC%88%E7%8E%B0%E8%B4%A7%E4%B8%8E%E4%B8%AD%E9%95%BF%E6%9C%9F%EF%BC%89%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "电力交易策略分析师（现货与中长期） 校招",
+                "应届生 电力交易策略分析师（现货与中长期）",
+                "IND_ENERGY_UTILITIES 电力交易策略分析师（现货与中长期） 北京",
+                "IND_ENERGY_UTILITIES 电力交易策略分析师（现货与中长期） 上海"
+              ],
+              "so360": [
+                "电力交易策略分析师（现货与中长期） 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "电力交易策略分析师（现货与中长期） 面经",
+                "电力交易策略分析师（现货与中长期） offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -19522,26 +19975,23 @@
             "stat_definition": "v1.60手工逐岗补录：结合电网企业官方岗位与公共就业平台。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E5%82%A8%E8%83%BD%E8%BF%90%E8%90%A5%20%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -19559,25 +20009,18 @@
             ],
             "capture_rule": "保留链接、截图时间戳、发布日期、样本量；缺失关键字段不进入强结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官网岗位职责，再补平台样本。",
-              "BOSS按应届+城市+岗位关键词组合检索。",
-              "小红书优先App检索并记录帖子ID、时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -19611,13 +20054,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E5%82%A8%E8%83%BD%E8%BF%90%E8%90%A5%E5%B7%A5%E7%A8%8B%E5%B8%88%EF%BC%88%E4%BA%A4%E6%98%93%E8%B0%83%E5%BA%A6%EF%BC%89%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "储能运营工程师（交易调度） 校招",
+                "应届生 储能运营工程师（交易调度）",
+                "IND_ENERGY_UTILITIES 储能运营工程师（交易调度） 北京",
+                "IND_ENERGY_UTILITIES 储能运营工程师（交易调度） 上海"
+              ],
+              "so360": [
+                "储能运营工程师（交易调度） 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "储能运营工程师（交易调度） 面经",
+                "储能运营工程师（交易调度） offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_public_sample": {
@@ -20094,26 +20564,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -20131,25 +20598,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -20183,13 +20643,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E8%B0%83%E5%BA%A6%E4%BC%98%E5%8C%96%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "调度优化工程师 校招",
+                "应届生 调度优化工程师",
+                "IND_ENERGY_UTILITIES 调度优化工程师 北京",
+                "IND_ENERGY_UTILITIES 调度优化工程师 上海"
+              ],
+              "so360": [
+                "调度优化工程师 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "调度优化工程师 面经",
+                "调度优化工程师 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -20726,26 +21213,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -20763,25 +21247,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -20815,13 +21292,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E9%9C%80%E6%B1%82%E4%BE%A7%E5%93%8D%E5%BA%94%E5%88%86%E6%9E%90%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "需求侧响应分析师 校招",
+                "应届生 需求侧响应分析师",
+                "IND_ENERGY_UTILITIES 需求侧响应分析师 北京",
+                "IND_ENERGY_UTILITIES 需求侧响应分析师 上海"
+              ],
+              "so360": [
+                "需求侧响应分析师 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "需求侧响应分析师 面经",
+                "需求侧响应分析师 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -21358,26 +21862,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -21395,25 +21896,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -21447,13 +21941,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E7%BB%BC%E5%90%88%E8%83%BD%E6%BA%90%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "综合能源解决方案工程师 校招",
+                "应届生 综合能源解决方案工程师",
+                "IND_ENERGY_UTILITIES 综合能源解决方案工程师 北京",
+                "IND_ENERGY_UTILITIES 综合能源解决方案工程师 上海"
+              ],
+              "so360": [
+                "综合能源解决方案工程师 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "综合能源解决方案工程师 面经",
+                "综合能源解决方案工程师 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -21990,26 +22511,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -22027,25 +22545,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -22079,13 +22590,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E9%85%8D%E7%BD%91%E9%9C%80%E6%B1%82%E9%A2%84%E6%B5%8B%E5%88%86%E6%9E%90%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "配网需求预测分析师 校招",
+                "应届生 配网需求预测分析师",
+                "IND_ENERGY_UTILITIES 配网需求预测分析师 北京",
+                "IND_ENERGY_UTILITIES 配网需求预测分析师 上海"
+              ],
+              "so360": [
+                "配网需求预测分析师 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "配网需求预测分析师 面经",
+                "配网需求预测分析师 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -22622,26 +23160,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
               "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -22659,25 +23194,18 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径",
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
-              "批次/轮次",
+              "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -22711,13 +23239,40 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E7%94%B5%E5%8A%9B%E8%B4%9F%E8%8D%B7%E4%BC%98%E5%8C%96%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "电力负荷优化工程师 校招",
+                "应届生 电力负荷优化工程师",
+                "IND_ENERGY_UTILITIES 电力负荷优化工程师 北京",
+                "IND_ENERGY_UTILITIES 电力负荷优化工程师 上海"
+              ],
+              "so360": [
+                "电力负荷优化工程师 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "电力负荷优化工程师 面经",
+                "电力负荷优化工程师 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
@@ -23254,23 +23809,23 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v167",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
-              "发布时间",
+              "岗位发布时间",
+              "公司层级",
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端职位搜索",
-              "小红书App搜索",
-              "牛客网笔面试",
+              "BOSS直聘职位详情页",
+              "360搜索(BOSS结果摘要)用于定位入口",
+              "小红书App端搜索",
               "企业校招官网岗位详情页",
-              "牛客网笔试/面试题库",
-              "小红书App搜索（网页不可达时）"
+              "牛客网笔试/面试题库"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job",
             "boss_search_query": [
@@ -23288,18 +23843,18 @@
             ],
             "capture_rule": "缺少城市/薪资/发布时间时不写强结论，字段留空并记录检索路径。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "岗位发布时间(职位级原始链接)",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
-              "先在企业官方岗位页确认“电力现货交易运营岗”职责口径，再补平台样本。",
-              "BOSS用“应届生+岗位+城市”检索，保留发布时间与薪资区间证据。",
-              "小红书仅作回忆样本，需记录帖子ID和截图时间。",
-              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
-              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
-              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
-              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
+              "先在360搜索定位BOSS岗位入口，再回到BOSS详情页抓发布时间与薪资信息。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选并记录分位。",
+              "小红书仅做面经补充，必须记录帖子ID、发布时间与截图时间。",
+              "网页不可达时保留留空字段，登记检索入口、检索词和下次回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -23336,7 +23891,7 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "补齐至少2个城市样本并回填分位薪资、发布时间、轮次。",
+            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
             "unavailable_capture_log_v163": [
               {
                 "platform": "official",
@@ -23367,6 +23922,33 @@
               "xiaohongshu_search_http": 404,
               "nowcoder_http": 200,
               "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            },
+            "search_entry": {
+              "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+              "so360": "https://www.so.com/s?q=%E7%94%B5%E5%8A%9B%E7%8E%B0%E8%B4%A7%E4%BA%A4%E6%98%93%E8%BF%90%E8%90%A5%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
+            },
+            "search_queries": {
+              "boss": [
+                "电力现货交易运营岗 校招",
+                "应届生 电力现货交易运营岗",
+                "IND_ENERGY_UTILITIES 电力现货交易运营岗 北京",
+                "IND_ENERGY_UTILITIES 电力现货交易运营岗 上海"
+              ],
+              "so360": [
+                "电力现货交易运营岗 招聘信息 BOSS直聘"
+              ],
+              "xiaohongshu": [
+                "电力现货交易运营岗 面经",
+                "电力现货交易运营岗 offer 薪资"
+              ]
+            },
+            "unavailable_capture_log_v167": {
+              "checked_at": "2026-02-24",
+              "boss_detail_access": "unstable_slider_verify",
+              "so360_snippet_access": "available",
+              "xiaohongshu_web_access": "unstable_or_login_required",
+              "note": "按规范保留留空字段并记录检索入口与关键词。"
             }
           },
           "project_evidence_slots": [
