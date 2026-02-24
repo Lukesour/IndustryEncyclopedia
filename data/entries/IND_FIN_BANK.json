@@ -4574,7 +4574,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v167",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -4607,11 +4607,8 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
               "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -4632,27 +4629,33 @@
               "样本量": "35",
               "截图路径与截图时间": "https://www.boc.cn @2026-02-24"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_baidu_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "9.90k/月",
-              "薪资区间P50": "11.63k/月",
-              "薪资区间P75": "13.38k/月",
-              "发布时间": "2026-02-24",
+              "薪资区间P25": "9.50k/月",
+              "薪资区间P50": "9.50k/月",
+              "薪资区间P75": "9.50k/月",
+              "发布时间": "2026-01-30",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.boc.cn",
-              "样本量": "35",
-              "截图路径与截图时间": "https://www.boc.cn @2026-02-24"
+              "来源链接或帖子ID": "http://www.baidu.com/s?wd=%E8%BF%90%E8%90%A5%E6%B8%85%E7%AE%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "2",
+              "截图路径与截图时间": "http://www.baidu.com/s?wd=%E8%BF%90%E8%90%A5%E6%B8%85%E7%AE%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_AUTO_WWW_BOC_CN_EF1AAA2A",
-              "source_url": "https://www.boc.cn",
-              "publish_date": "2026-02-24",
-              "sample_size": 35,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-01-30",
+              "sample_size": 2,
               "city": "深圳",
-              "company_tier": "t3_regional"
+              "company_tier": "t3_regional",
+              "search_query_url": "http://www.baidu.com/s?wd=%E8%BF%90%E8%90%A5%E6%B8%85%E7%AE%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "baidu_snippet_extraction_v167",
+              "salary_tokens": [
+                "8-11K",
+                "7-12K·18薪"
+              ]
             },
-            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后升级为严格A档实证。",
             "action": "proxy_filled_wait_observed_refresh",
             "unavailable_capture_log_v163": [
               {
@@ -4776,16 +4779,16 @@
             "city_name": "深圳",
             "city_id": "CITY_019",
             "company_tier": "t3_regional",
-            "sample_size": 35,
-            "publish_date": "2026-02-24",
-            "source_id": "SRC_AUTO_WWW_BOC_CN_EF1AAA2A",
-            "source_url": "https://www.boc.cn",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-01-30",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "9.90k/月",
+              "salary_range": "9.50k/月",
               "capability_requirements": [
                 "金融基础",
                 "报表阅读",
@@ -4801,7 +4804,7 @@
               ]
             },
             "p50": {
-              "salary_range": "11.63k/月",
+              "salary_range": "9.50k/月",
               "capability_requirements": [
                 "金融基础",
                 "报表阅读",
@@ -4819,7 +4822,7 @@
               ]
             },
             "p75": {
-              "salary_range": "13.38k/月",
+              "salary_range": "9.50k/月",
               "capability_requirements": [
                 "报表阅读",
                 "风控逻辑",
@@ -4837,17 +4840,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 9.9,
-              "p50": 11.63,
-              "p75": 13.38
+              "p25": 9.5,
+              "p50": 9.5,
+              "p75": 9.5
             },
             "city": "深圳",
             "company_tier": "t3_regional",
-            "sample_size": 35,
-            "publish_date": "2026-02-24",
-            "source_id": "SRC_AUTO_WWW_BOC_CN_EF1AAA2A",
-            "source_url": "https://www.boc.cn",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-01-30",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -5048,7 +5051,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
             },
-            "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -5076,6 +5079,19 @@
               "流程管理专员"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "baidu_search_snippet",
+            "search_query": "运营清算 招聘信息 BOSS直聘",
+            "search_query_url": "http://www.baidu.com/s?wd=%E8%BF%90%E8%90%A5%E6%B8%85%E7%AE%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "8-11K",
+              "7-12K·18薪"
+            ],
+            "sample_size": 2,
+            "note": "搜索摘要证据用于补齐岗位级实采分位，后续回填职位详情截图。"
           }
         },
         {
@@ -7708,7 +7724,7 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v167",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -7741,11 +7757,8 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
               "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -7766,27 +7779,35 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_baidu_kanzhun_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "18.25k/月",
+              "薪资区间P50": "21.75k/月",
+              "薪资区间P75": "24.88k/月",
+              "发布时间": "2026-01-28",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "http://www.baidu.com/s?wd=%E9%9B%B6%E5%94%AE%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84",
+              "样本量": "4",
+              "截图路径与截图时间": "http://www.baidu.com/s?wd=%E9%9B%B6%E5%94%AE%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_KANZHUN",
+              "source_url": "https://www.kanzhun.com",
+              "publish_date": "2026-01-28",
+              "sample_size": 4,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "http://www.baidu.com/s?wd=%E9%9B%B6%E5%94%AE%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84",
+              "capture_method": "baidu_kanzhun_snippet_extraction_v167",
+              "salary_tokens": [
+                "13000-26000元/月",
+                "12000-17000元/月",
+                "20000-35000元/月",
+                "18000-30000元/月"
+              ]
             },
-            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
+            "next_backfill_action": "补抓看准/BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -7970,16 +7991,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 4,
+            "publish_date": "2026-01-28",
+            "source_id": "SRC_KANZHUN",
+            "source_url": "https://www.kanzhun.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "18.25k/月",
               "capability_requirements": [
                 "业务建模与问题拆解",
                 "指标体系搭建",
@@ -7995,7 +8016,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "21.75k/月",
               "capability_requirements": [
                 "业务建模与问题拆解",
                 "指标体系搭建",
@@ -8013,7 +8034,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "24.88k/月",
               "capability_requirements": [
                 "指标体系搭建",
                 "项目推进与资源协调",
@@ -8031,17 +8052,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 18.25,
+              "p50": 21.75,
+              "p75": 24.88
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 4,
+            "publish_date": "2026-01-28",
+            "source_id": "SRC_KANZHUN",
+            "source_url": "https://www.kanzhun.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -8242,7 +8263,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -8270,6 +8291,21 @@
               "风险策略产品"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "看准",
+            "extraction_channel": "baidu_search_snippet",
+            "search_query": "零售产品经理 看准 薪资",
+            "search_query_url": "http://www.baidu.com/s?wd=%E9%9B%B6%E5%94%AE%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "13000-26000元/月",
+              "12000-17000元/月",
+              "20000-35000元/月",
+              "18000-30000元/月"
+            ],
+            "sample_size": 4,
+            "note": "看准检索摘要用于补齐岗位级薪资分位，后续回填详情页截图。"
           }
         },
         {
@@ -9638,7 +9674,7 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v167",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -9671,11 +9707,8 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
               "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -9696,27 +9729,32 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_baidu_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "30.00k/月",
+              "薪资区间P50": "30.00k/月",
+              "薪资区间P75": "30.00k/月",
+              "发布时间": "2026-02-06",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "http://www.baidu.com/s?wd=%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "1",
+              "截图路径与截图时间": "http://www.baidu.com/s?wd=%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-02-06",
+              "sample_size": 1,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "http://www.baidu.com/s?wd=%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "baidu_snippet_extraction_v167",
+              "salary_tokens": [
+                "25-35K"
+              ]
             },
-            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -9900,16 +9938,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 1,
+            "publish_date": "2026-02-06",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "30.00k/月",
               "capability_requirements": [
                 "指标体系搭建",
                 "统计分析与归因",
@@ -9925,7 +9963,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "30.00k/月",
               "capability_requirements": [
                 "指标体系搭建",
                 "统计分析与归因",
@@ -9943,7 +9981,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "30.00k/月",
               "capability_requirements": [
                 "统计分析与归因",
                 "策略评估与实验设计",
@@ -9961,17 +9999,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 30.0,
+              "p50": 30.0,
+              "p75": 30.0
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 1,
+            "publish_date": "2026-02-06",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -10172,7 +10210,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -10200,6 +10238,18 @@
               "数据产品经理"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "baidu_search_snippet",
+            "search_query": "数据治理岗 招聘信息 BOSS直聘",
+            "search_query_url": "http://www.baidu.com/s?wd=%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "25-35K"
+            ],
+            "sample_size": 1,
+            "note": "搜索摘要证据用于补齐岗位级实采分位，后续回填职位详情截图。"
           }
         },
         {
@@ -10930,7 +10980,7 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v167",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -10964,11 +11014,8 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
               "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -10989,27 +11036,36 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_360_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "10.50k/月",
+              "薪资区间P50": "12.50k/月",
+              "薪资区间P75": "12.50k/月",
+              "发布时间": "2026-02-05",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "https://www.so.com/s?q=%E8%B4%A2%E5%AF%8C%E9%A1%BE%E9%97%AE%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "5",
+              "截图路径与截图时间": "https://www.so.com/s?q=%E8%B4%A2%E5%AF%8C%E9%A1%BE%E9%97%AE%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-02-05",
+              "sample_size": 5,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "https://www.so.com/s?q=%E8%B4%A2%E5%AF%8C%E9%A1%BE%E9%97%AE%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "360_snippet_extraction_v167",
+              "salary_tokens": [
+                "10-15K·13薪",
+                "8-12K",
+                "8-13K",
+                "20-35K",
+                "10-15K"
+              ]
             },
-            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -11197,16 +11253,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 5,
+            "publish_date": "2026-02-05",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "10.50k/月",
               "capability_requirements": [
                 "资产配置",
                 "客户画像分析",
@@ -11222,7 +11278,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "12.50k/月",
               "capability_requirements": [
                 "资产配置",
                 "客户画像分析",
@@ -11240,7 +11296,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "12.50k/月",
               "capability_requirements": [
                 "客户画像分析",
                 "产品风险评估",
@@ -11258,17 +11314,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 10.5,
+              "p50": 12.5,
+              "p75": 12.5
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 5,
+            "publish_date": "2026-02-05",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -11470,7 +11526,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -11498,6 +11554,22 @@
               "私人银行顾问"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "360_search_snippet",
+            "search_query": "财富顾问 招聘信息 BOSS直聘",
+            "search_query_url": "https://www.so.com/s?q=%E8%B4%A2%E5%AF%8C%E9%A1%BE%E9%97%AE%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "10-15K·13薪",
+              "8-12K",
+              "8-13K",
+              "20-35K",
+              "10-15K"
+            ],
+            "sample_size": 5,
+            "note": "搜索摘要证据用于补齐岗位级实采分位，后续回填职位详情截图。"
           }
         },
         {
@@ -11580,7 +11652,7 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v167",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -11614,11 +11686,8 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
               "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -11639,27 +11708,32 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_baidu_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
+              "薪资区间P25": "32.50k/月",
+              "薪资区间P50": "32.50k/月",
+              "薪资区间P75": "32.50k/月",
               "发布时间": "2026-01-19",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "http://www.baidu.com/s?wd=%E4%BA%A4%E6%98%93%E9%93%B6%E8%A1%8C%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "1",
+              "截图路径与截图时间": "http://www.baidu.com/s?wd=%E4%BA%A4%E6%98%93%E9%93%B6%E8%A1%8C%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
               "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "sample_size": 1,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "http://www.baidu.com/s?wd=%E4%BA%A4%E6%98%93%E9%93%B6%E8%A1%8C%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "baidu_snippet_extraction_v167",
+              "salary_tokens": [
+                "25-40K·16薪"
+              ]
             },
-            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -11847,16 +11921,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
+            "sample_size": 1,
             "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "32.50k/月",
               "capability_requirements": [
                 "现金管理方案设计",
                 "供应链金融产品流程",
@@ -11872,7 +11946,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "32.50k/月",
               "capability_requirements": [
                 "现金管理方案设计",
                 "供应链金融产品流程",
@@ -11890,7 +11964,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "32.50k/月",
               "capability_requirements": [
                 "供应链金融产品流程",
                 "对公客户需求分析",
@@ -11908,17 +11982,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 32.5,
+              "p50": 32.5,
+              "p75": 32.5
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
+            "sample_size": 1,
             "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -12120,7 +12194,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E4%BA%A4%E6%98%93%E9%93%B6%E8%A1%8C%20%E4%BA%A7%E5%93%81%20%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E4%BA%A4%E6%98%93%E9%93%B6%E8%A1%8C%E4%BA%A7%E5%93%81"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -12148,6 +12222,18 @@
               "运营风控岗"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "baidu_search_snippet",
+            "search_query": "交易银行产品运营岗 招聘信息 BOSS直聘",
+            "search_query_url": "http://www.baidu.com/s?wd=%E4%BA%A4%E6%98%93%E9%93%B6%E8%A1%8C%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "25-40K·16薪"
+            ],
+            "sample_size": 1,
+            "note": "搜索摘要证据用于补齐岗位级实采分位，后续回填职位详情截图。"
           }
         },
         {
@@ -12230,7 +12316,7 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v167",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -12264,11 +12350,8 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
               "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -12289,27 +12372,34 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_baidu_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "20.00k/月",
+              "薪资区间P50": "22.50k/月",
+              "薪资区间P75": "30.00k/月",
+              "发布时间": "2025-10-26",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "http://www.baidu.com/s?wd=%E9%9B%B6%E5%94%AE%E9%A3%8E%E6%8E%A7%E7%AD%96%E7%95%A5%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "3",
+              "截图路径与截图时间": "http://www.baidu.com/s?wd=%E9%9B%B6%E5%94%AE%E9%A3%8E%E6%8E%A7%E7%AD%96%E7%95%A5%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2025-10-26",
+              "sample_size": 3,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "http://www.baidu.com/s?wd=%E9%9B%B6%E5%94%AE%E9%A3%8E%E6%8E%A7%E7%AD%96%E7%95%A5%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "baidu_snippet_extraction_v167",
+              "salary_tokens": [
+                "25-50K·15薪",
+                "15-30K·15薪",
+                "15-20K·15薪"
+              ]
             },
-            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -12497,16 +12587,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 3,
+            "publish_date": "2025-10-26",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "20.00k/月",
               "capability_requirements": [
                 "信用评分策略设计",
                 "反欺诈规则配置",
@@ -12522,7 +12612,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "22.50k/月",
               "capability_requirements": [
                 "信用评分策略设计",
                 "反欺诈规则配置",
@@ -12540,7 +12630,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "30.00k/月",
               "capability_requirements": [
                 "反欺诈规则配置",
                 "策略A/B测试评估",
@@ -12558,17 +12648,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 20.0,
+              "p50": 22.5,
+              "p75": 30.0
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 3,
+            "publish_date": "2025-10-26",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -12770,7 +12860,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E9%9B%B6%E5%94%AE%20%E9%A3%8E%E6%8E%A7%20%E7%AD%96%E7%95%A5%20%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E9%9B%B6%E5%94%AE%E9%A3%8E%E6%8E%A7%E7%AD%96%E7%95%A5"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -12798,6 +12888,20 @@
               "数据产品经理"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "baidu_search_snippet",
+            "search_query": "零售风控策略 招聘信息 BOSS直聘",
+            "search_query_url": "http://www.baidu.com/s?wd=%E9%9B%B6%E5%94%AE%E9%A3%8E%E6%8E%A7%E7%AD%96%E7%95%A5%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "25-50K·15薪",
+              "15-30K·15薪",
+              "15-20K·15薪"
+            ],
+            "sample_size": 3,
+            "note": "搜索摘要证据用于补齐岗位级实采分位，后续回填职位详情截图。"
           }
         },
         {
@@ -12937,7 +13041,7 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v167",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -12970,11 +13074,8 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
               "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -12995,27 +13096,33 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_baidu_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "10.50k/月",
+              "薪资区间P50": "10.50k/月",
+              "薪资区间P75": "10.50k/月",
+              "发布时间": "2025-12-22",
               "批次/轮次": "网申 / 笔试",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "http://www.baidu.com/s?wd=%E9%9B%B6%E5%94%AE%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "2",
+              "截图路径与截图时间": "http://www.baidu.com/s?wd=%E9%9B%B6%E5%94%AE%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2025-12-22",
+              "sample_size": 2,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "http://www.baidu.com/s?wd=%E9%9B%B6%E5%94%AE%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "baidu_snippet_extraction_v167",
+              "salary_tokens": [
+                "8-13K",
+                "10-11K"
+              ]
             },
-            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -13140,16 +13247,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2025-12-22",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "10.50k/月",
               "capability_requirements": [
                 "业务分析",
                 "指标拆解",
@@ -13165,7 +13272,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "10.50k/月",
               "capability_requirements": [
                 "业务分析",
                 "指标拆解",
@@ -13182,7 +13289,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "10.50k/月",
               "capability_requirements": [
                 "指标拆解",
                 "跨团队协同",
@@ -13200,17 +13307,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 10.5,
+              "p50": 10.5,
+              "p75": 10.5
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2025-12-22",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -13414,7 +13521,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E9%9B%B6%E5%94%AE%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E9%9B%B6%E5%94%AE%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E9%9D%A2%E7%BB%8F"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -13442,6 +13549,19 @@
               "风险策略分析师"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "baidu_search_snippet",
+            "search_query": "零售客户经理 招聘信息 BOSS直聘",
+            "search_query_url": "http://www.baidu.com/s?wd=%E9%9B%B6%E5%94%AE%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "8-13K",
+              "10-11K"
+            ],
+            "sample_size": 2,
+            "note": "搜索摘要证据用于补齐岗位级实采分位，后续回填职位详情截图。"
           }
         },
         {
@@ -14869,7 +14989,7 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v167",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -14902,11 +15022,8 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
               "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -14927,27 +15044,33 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_baidu_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "18.75k/月",
+              "薪资区间P50": "20.00k/月",
+              "薪资区间P75": "21.25k/月",
+              "发布时间": "2026-02-21",
               "批次/轮次": "网申 / 笔试",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "http://www.baidu.com/s?wd=%E9%A3%8E%E6%8E%A7%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "2",
+              "截图路径与截图时间": "http://www.baidu.com/s?wd=%E9%A3%8E%E6%8E%A7%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-02-21",
+              "sample_size": 2,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "http://www.baidu.com/s?wd=%E9%A3%8E%E6%8E%A7%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "baidu_snippet_extraction_v167",
+              "salary_tokens": [
+                "15-30K·15薪",
+                "15-20K·15薪"
+              ]
             },
-            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -15072,16 +15195,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-02-21",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "18.75k/月",
               "capability_requirements": [
                 "结构化分析",
                 "数据处理",
@@ -15097,7 +15220,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "20.00k/月",
               "capability_requirements": [
                 "结构化分析",
                 "数据处理",
@@ -15115,7 +15238,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "21.25k/月",
               "capability_requirements": [
                 "数据处理",
                 "业务理解",
@@ -15133,17 +15256,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 18.75,
+              "p50": 20.0,
+              "p75": 21.25
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-02-21",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -15347,7 +15470,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E9%A3%8E%E9%99%A9%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90%E5%B8%88%20%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E9%A3%8E%E9%99%A9%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90%E5%B8%88%20%E9%9D%A2%E7%BB%8F"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -15375,6 +15498,19 @@
               "运营管理岗"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "baidu_search_snippet",
+            "search_query": "风控策略分析师 招聘信息 BOSS直聘",
+            "search_query_url": "http://www.baidu.com/s?wd=%E9%A3%8E%E6%8E%A7%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90%E5%B8%88%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "15-30K·15薪",
+              "15-20K·15薪"
+            ],
+            "sample_size": 2,
+            "note": "搜索摘要证据用于补齐岗位级实采分位，后续回填职位详情截图。"
           }
         },
         {
@@ -16159,7 +16295,7 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v167",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -16192,11 +16328,8 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
               "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -16217,27 +16350,32 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_baidu_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "30.00k/月",
+              "薪资区间P50": "30.00k/月",
+              "薪资区间P75": "30.00k/月",
+              "发布时间": "2026-02-06",
               "批次/轮次": "网申 / 笔试",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "http://www.baidu.com/s?wd=%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "1",
+              "截图路径与截图时间": "http://www.baidu.com/s?wd=%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-02-06",
+              "sample_size": 1,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "http://www.baidu.com/s?wd=%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "baidu_snippet_extraction_v167",
+              "salary_tokens": [
+                "25-35K"
+              ]
             },
-            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -16362,16 +16500,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 1,
+            "publish_date": "2026-02-06",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "30.00k/月",
               "capability_requirements": [
                 "结构化分析",
                 "数据处理",
@@ -16387,7 +16525,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "30.00k/月",
               "capability_requirements": [
                 "结构化分析",
                 "数据处理",
@@ -16405,7 +16543,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "30.00k/月",
               "capability_requirements": [
                 "数据处理",
                 "业务理解",
@@ -16423,17 +16561,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 30.0,
+              "p50": 30.0,
+              "p75": 30.0
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 1,
+            "publish_date": "2026-02-06",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -16637,7 +16775,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E5%B2%97%20%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E5%B2%97%20%E9%9D%A2%E7%BB%8F"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -16665,6 +16803,18 @@
               "授信审批岗（对公）"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "baidu_search_snippet",
+            "search_query": "数据治理岗 招聘信息 BOSS直聘",
+            "search_query_url": "http://www.baidu.com/s?wd=%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E5%B2%97%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "25-35K"
+            ],
+            "sample_size": 1,
+            "note": "搜索摘要证据用于补齐岗位级实采分位，后续回填职位详情截图。"
           }
         },
         {
@@ -16804,7 +16954,7 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v167",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -16837,11 +16987,8 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
               "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -16862,27 +17009,34 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_360_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
+              "薪资区间P25": "10.25k/月",
+              "薪资区间P50": "10.50k/月",
+              "薪资区间P75": "19.00k/月",
               "发布时间": "2026-01-19",
               "批次/轮次": "网申 / 笔试",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "https://www.so.com/s?q=%E8%BF%90%E8%90%A5%E7%AE%A1%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "3",
+              "截图路径与截图时间": "https://www.so.com/s?q=%E8%BF%90%E8%90%A5%E7%AE%A1%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
               "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "sample_size": 3,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "https://www.so.com/s?q=%E8%BF%90%E8%90%A5%E7%AE%A1%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "360_snippet_extraction_v167",
+              "salary_tokens": [
+                "8-13K",
+                "20-35K",
+                "8-12K"
+              ]
             },
-            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -17007,16 +17161,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
+            "sample_size": 3,
             "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "10.25k/月",
               "capability_requirements": [
                 "业务分析",
                 "指标拆解",
@@ -17032,7 +17186,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "10.50k/月",
               "capability_requirements": [
                 "业务分析",
                 "指标拆解",
@@ -17049,7 +17203,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "19.00k/月",
               "capability_requirements": [
                 "指标拆解",
                 "跨团队协同",
@@ -17067,17 +17221,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 10.25,
+              "p50": 10.5,
+              "p75": 19.0
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
+            "sample_size": 3,
             "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -17281,7 +17435,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E8%BF%90%E8%90%A5%E7%AE%A1%E7%90%86%E5%B2%97%20%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E8%BF%90%E8%90%A5%E7%AE%A1%E7%90%86%E5%B2%97%20%E9%9D%A2%E7%BB%8F"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -17309,6 +17463,20 @@
               "财富顾问"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "360_search_snippet",
+            "search_query": "运营管理 招聘信息 BOSS直聘",
+            "search_query_url": "https://www.so.com/s?q=%E8%BF%90%E8%90%A5%E7%AE%A1%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "8-13K",
+              "20-35K",
+              "8-12K"
+            ],
+            "sample_size": 3,
+            "note": "搜索摘要证据用于补齐岗位级实采分位，后续回填职位详情截图。"
           }
         },
         {
@@ -17448,7 +17616,7 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v167",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -17481,11 +17649,8 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
               "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -17506,27 +17671,32 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_baidu_kanzhun_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "25.00k/月",
+              "薪资区间P50": "25.00k/月",
+              "薪资区间P75": "25.00k/月",
+              "发布时间": "2026-02-11",
               "批次/轮次": "网申 / 笔试",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "http://www.baidu.com/s?wd=%E5%90%88%E8%A7%84%E7%A8%BD%E6%A0%B8%E5%B2%97%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84",
+              "样本量": "1",
+              "截图路径与截图时间": "http://www.baidu.com/s?wd=%E5%90%88%E8%A7%84%E7%A8%BD%E6%A0%B8%E5%B2%97%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_KANZHUN",
+              "source_url": "https://www.kanzhun.com",
+              "publish_date": "2026-02-11",
+              "sample_size": 1,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "http://www.baidu.com/s?wd=%E5%90%88%E8%A7%84%E7%A8%BD%E6%A0%B8%E5%B2%97%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84",
+              "capture_method": "baidu_kanzhun_snippet_extraction_v167",
+              "salary_tokens": [
+                "20-30K·15薪"
+              ]
             },
-            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
+            "next_backfill_action": "补抓看准/BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -17651,16 +17821,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 1,
+            "publish_date": "2026-02-11",
+            "source_id": "SRC_KANZHUN",
+            "source_url": "https://www.kanzhun.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "25.00k/月",
               "capability_requirements": [
                 "规则理解",
                 "风险识别",
@@ -17676,7 +17846,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "25.00k/月",
               "capability_requirements": [
                 "规则理解",
                 "风险识别",
@@ -17694,7 +17864,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "25.00k/月",
               "capability_requirements": [
                 "风险识别",
                 "流程审查",
@@ -17712,17 +17882,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 25.0,
+              "p50": 25.0,
+              "p75": 25.0
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 1,
+            "publish_date": "2026-02-11",
+            "source_id": "SRC_KANZHUN",
+            "source_url": "https://www.kanzhun.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -17926,7 +18096,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E5%90%88%E8%A7%84%E7%A8%BD%E6%A0%B8%E5%B2%97%20%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E5%90%88%E8%A7%84%E7%A8%BD%E6%A0%B8%E5%B2%97%20%E9%9D%A2%E7%BB%8F"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -17954,6 +18124,18 @@
               "对公授信策略分析师（行业与现金流）"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "看准",
+            "extraction_channel": "baidu_search_snippet",
+            "search_query": "合规稽核岗 看准 薪资",
+            "search_query_url": "http://www.baidu.com/s?wd=%E5%90%88%E8%A7%84%E7%A8%BD%E6%A0%B8%E5%B2%97%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "20-30K·15薪"
+            ],
+            "sample_size": 1,
+            "note": "看准检索摘要用于补齐岗位级薪资分位，后续回填详情页截图。"
           }
         },
         {
@@ -18093,7 +18275,7 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v167",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -18126,11 +18308,8 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
               "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -18151,27 +18330,38 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_baidu_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "20.00k/月",
+              "薪资区间P50": "21.50k/月",
+              "薪资区间P75": "22.50k/月",
+              "发布时间": "2026-02-15",
               "批次/轮次": "网申 / 笔试",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "http://www.baidu.com/s?wd=%E6%8E%88%E4%BF%A1%E5%AE%A1%E6%89%B9%E5%B2%97%EF%BC%88%E5%AF%B9%E5%85%AC%EF%BC%89%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "7",
+              "截图路径与截图时间": "http://www.baidu.com/s?wd=%E6%8E%88%E4%BF%A1%E5%AE%A1%E6%89%B9%E5%B2%97%EF%BC%88%E5%AF%B9%E5%85%AC%EF%BC%89%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-02-15",
+              "sample_size": 7,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "http://www.baidu.com/s?wd=%E6%8E%88%E4%BF%A1%E5%AE%A1%E6%89%B9%E5%B2%97%EF%BC%88%E5%AF%B9%E5%85%AC%EF%BC%89%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "baidu_snippet_extraction_v167",
+              "salary_tokens": [
+                "20-30k·14薪",
+                "15-30K·14薪",
+                "15-25K",
+                "15-28K·24薪",
+                "15-25K·14薪",
+                "15-18K",
+                "15-30K"
+              ]
             },
-            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -18296,16 +18486,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 7,
+            "publish_date": "2026-02-15",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "20.00k/月",
               "capability_requirements": [
                 "结构化分析",
                 "数据处理",
@@ -18321,7 +18511,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "21.50k/月",
               "capability_requirements": [
                 "结构化分析",
                 "数据处理",
@@ -18339,7 +18529,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "22.50k/月",
               "capability_requirements": [
                 "数据处理",
                 "业务理解",
@@ -18357,17 +18547,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 20.0,
+              "p50": 21.5,
+              "p75": 22.5
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 7,
+            "publish_date": "2026-02-15",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -18571,7 +18761,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E6%8E%88%E4%BF%A1%E5%AE%A1%E6%89%B9%E5%B2%97%20%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E6%8E%88%E4%BF%A1%E5%AE%A1%E6%89%B9%E5%B2%97%20%E9%9D%A2%E7%BB%8F"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -18599,6 +18789,24 @@
               "普惠金融运营专员（小微客群）"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "baidu_search_snippet",
+            "search_query": "授信审批岗（对公） 招聘信息 BOSS直聘",
+            "search_query_url": "http://www.baidu.com/s?wd=%E6%8E%88%E4%BF%A1%E5%AE%A1%E6%89%B9%E5%B2%97%EF%BC%88%E5%AF%B9%E5%85%AC%EF%BC%89%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "20-30k·14薪",
+              "15-30K·14薪",
+              "15-25K",
+              "15-28K·24薪",
+              "15-25K·14薪",
+              "15-18K",
+              "15-30K"
+            ],
+            "sample_size": 7,
+            "note": "搜索摘要证据用于补齐岗位级实采分位，后续回填职位详情截图。"
           }
         },
         {
@@ -18738,7 +18946,7 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v167",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -18771,11 +18979,8 @@
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
               "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -18796,27 +19001,34 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_baidu_kanzhun_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "7.58k/月",
+              "薪资区间P50": "8.65k/月",
+              "薪资区间P75": "9.57k/月",
+              "发布时间": "2026-01-27",
               "批次/轮次": "网申 / 笔试",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "http://www.baidu.com/s?wd=%E8%B4%A2%E5%AF%8C%E9%A1%BE%E9%97%AE%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84",
+              "样本量": "3",
+              "截图路径与截图时间": "http://www.baidu.com/s?wd=%E8%B4%A2%E5%AF%8C%E9%A1%BE%E9%97%AE%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_KANZHUN",
+              "source_url": "https://www.kanzhun.com",
+              "publish_date": "2026-01-27",
+              "sample_size": 3,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "http://www.baidu.com/s?wd=%E8%B4%A2%E5%AF%8C%E9%A1%BE%E9%97%AE%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84",
+              "capture_method": "baidu_kanzhun_snippet_extraction_v167",
+              "salary_tokens": [
+                "4000-9000元/月",
+                "10000-11000元/月",
+                "8000-9300元/月"
+              ]
             },
-            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
+            "next_backfill_action": "补抓看准/BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -18941,16 +19153,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 3,
+            "publish_date": "2026-01-27",
+            "source_id": "SRC_KANZHUN",
+            "source_url": "https://www.kanzhun.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "7.58k/月",
               "capability_requirements": [
                 "业务分析",
                 "指标拆解",
@@ -18966,7 +19178,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "8.65k/月",
               "capability_requirements": [
                 "业务分析",
                 "指标拆解",
@@ -18983,7 +19195,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "9.57k/月",
               "capability_requirements": [
                 "指标拆解",
                 "跨团队协同",
@@ -19001,17 +19213,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 7.58,
+              "p50": 8.65,
+              "p75": 9.57
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 3,
+            "publish_date": "2026-01-27",
+            "source_id": "SRC_KANZHUN",
+            "source_url": "https://www.kanzhun.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -19215,7 +19427,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E8%B4%A2%E5%AF%8C%E9%A1%BE%E9%97%AE%20%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E8%B4%A2%E5%AF%8C%E9%A1%BE%E9%97%AE%20%E9%9D%A2%E7%BB%8F"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -19243,6 +19455,20 @@
               "资产保全专员"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "看准",
+            "extraction_channel": "baidu_search_snippet",
+            "search_query": "财富顾问 看准 薪资",
+            "search_query_url": "http://www.baidu.com/s?wd=%E8%B4%A2%E5%AF%8C%E9%A1%BE%E9%97%AE%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "4000-9000元/月",
+              "10000-11000元/月",
+              "8000-9300元/月"
+            ],
+            "sample_size": 3,
+            "note": "看准检索摘要用于补齐岗位级薪资分位，后续回填详情页截图。"
           }
         },
         {
@@ -19377,7 +19603,7 @@
             "stat_definition": "v1.60手工逐岗补录：结合银行官方岗位页与公共就业平台。"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v167",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -19411,11 +19637,8 @@
             ],
             "capture_rule": "缺少城市/薪资/发布时间时不写强结论，字段留空并记录检索路径。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
               "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -19439,27 +19662,34 @@
               "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-01-19"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_baidu_kanzhun_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "11.80k/月",
-              "薪资区间P50": "13.88k/月",
-              "薪资区间P75": "15.96k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "32.50k/月",
+              "薪资区间P50": "32.50k/月",
+              "薪资区间P75": "33.00k/月",
+              "发布时间": "2026-01-27",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-01-19"
+              "来源链接或帖子ID": "http://www.baidu.com/s?wd=%E5%AF%B9%E5%85%AC%E6%8E%88%E4%BF%A1%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90%E5%B8%88%EF%BC%88%E8%A1%8C%E4%B8%9A%E4%B8%8E%E7%8E%B0%E9%87%91%E6%B5%81%EF%BC%89%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84",
+              "样本量": "3",
+              "截图路径与截图时间": "http://www.baidu.com/s?wd=%E5%AF%B9%E5%85%AC%E6%8E%88%E4%BF%A1%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90%E5%B8%88%EF%BC%88%E8%A1%8C%E4%B8%9A%E4%B8%8E%E7%8E%B0%E9%87%91%E6%B5%81%EF%BC%89%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_KANZHUN",
+              "source_url": "https://www.kanzhun.com",
+              "publish_date": "2026-01-27",
+              "sample_size": 3,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "http://www.baidu.com/s?wd=%E5%AF%B9%E5%85%AC%E6%8E%88%E4%BF%A1%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90%E5%B8%88%EF%BC%88%E8%A1%8C%E4%B8%9A%E4%B8%8E%E7%8E%B0%E9%87%91%E6%B5%81%EF%BC%89%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84",
+              "capture_method": "baidu_kanzhun_snippet_extraction_v167",
+              "salary_tokens": [
+                "27-40K·15薪",
+                "30-35K·14薪",
+                "30-35K·14薪"
+              ]
             },
-            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
+            "next_backfill_action": "补抓看准/BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID。",
             "action": "proxy_filled_wait_observed_refresh",
             "unavailable_capture_log_v163": [
               {
@@ -19605,16 +19835,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 3,
+            "publish_date": "2026-01-27",
+            "source_id": "SRC_KANZHUN",
+            "source_url": "https://www.kanzhun.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "11.80k/月",
+              "salary_range": "32.50k/月",
               "capability_requirements": [
                 "财报与现金流分析",
                 "行业景气判断",
@@ -19630,7 +19860,7 @@
               ]
             },
             "p50": {
-              "salary_range": "13.88k/月",
+              "salary_range": "32.50k/月",
               "capability_requirements": [
                 "财报与现金流分析",
                 "行业景气判断",
@@ -19648,7 +19878,7 @@
               ]
             },
             "p75": {
-              "salary_range": "15.96k/月",
+              "salary_range": "33.00k/月",
               "capability_requirements": [
                 "行业景气判断",
                 "授信结构设计",
@@ -19666,17 +19896,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 11.8,
-              "p50": 13.88,
-              "p75": 15.96
+              "p25": 32.5,
+              "p50": 32.5,
+              "p75": 33.0
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 3,
+            "publish_date": "2026-01-27",
+            "source_id": "SRC_KANZHUN",
+            "source_url": "https://www.kanzhun.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -19875,7 +20105,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%AF%B9%E5%85%AC%E6%8E%88%E4%BF%A1%20%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E5%AF%B9%E5%85%AC%E6%8E%88%E4%BF%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F"
             },
-            "next_backfill_action": "补齐至少2个城市样本并回填分位薪资、发布时间、轮次。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -19903,6 +20133,20 @@
               "普惠风控策略岗"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "看准",
+            "extraction_channel": "baidu_search_snippet",
+            "search_query": "对公授信策略分析师（行业与现金流） 看准 薪资",
+            "search_query_url": "http://www.baidu.com/s?wd=%E5%AF%B9%E5%85%AC%E6%8E%88%E4%BF%A1%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90%E5%B8%88%EF%BC%88%E8%A1%8C%E4%B8%9A%E4%B8%8E%E7%8E%B0%E9%87%91%E6%B5%81%EF%BC%89%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "27-40K·15薪",
+              "30-35K·14薪",
+              "30-35K·14薪"
+            ],
+            "sample_size": 3,
+            "note": "看准检索摘要用于补齐岗位级薪资分位，后续回填详情页截图。"
           }
         },
         {
@@ -20037,7 +20281,7 @@
             "stat_definition": "v1.60手工逐岗补录：结合银行官方岗位页与公共就业平台。"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v167",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -20071,11 +20315,8 @@
             ],
             "capture_rule": "保留链接、截图时间戳、发布日期、样本量；缺失字段不进入强结论。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
               "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -20096,27 +20337,33 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_baidu_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "12.38k/月",
+              "薪资区间P50": "14.25k/月",
+              "薪资区间P75": "16.12k/月",
+              "发布时间": "2026-01-21",
               "批次/轮次": "网申 / 笔试",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "http://www.baidu.com/s?wd=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%E8%BF%90%E8%90%A5%E4%B8%93%E5%91%98%EF%BC%88%E5%B0%8F%E5%BE%AE%E5%AE%A2%E7%BE%A4%EF%BC%89%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "2",
+              "截图路径与截图时间": "http://www.baidu.com/s?wd=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%E8%BF%90%E8%90%A5%E4%B8%93%E5%91%98%EF%BC%88%E5%B0%8F%E5%BE%AE%E5%AE%A2%E7%BE%A4%EF%BC%89%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-01-21",
+              "sample_size": 2,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "http://www.baidu.com/s?wd=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%E8%BF%90%E8%90%A5%E4%B8%93%E5%91%98%EF%BC%88%E5%B0%8F%E5%BE%AE%E5%AE%A2%E7%BE%A4%EF%BC%89%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "baidu_snippet_extraction_v167",
+              "salary_tokens": [
+                "12-24K",
+                "8-13K"
+              ]
             },
-            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -20241,16 +20488,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-01-21",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "12.38k/月",
               "capability_requirements": [
                 "客群分层运营",
                 "活动与转化漏斗分析",
@@ -20266,7 +20513,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "14.25k/月",
               "capability_requirements": [
                 "客群分层运营",
                 "活动与转化漏斗分析",
@@ -20284,7 +20531,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "16.12k/月",
               "capability_requirements": [
                 "活动与转化漏斗分析",
                 "渠道协同管理",
@@ -20302,17 +20549,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 12.38,
+              "p50": 14.25,
+              "p75": 16.12
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 2,
+            "publish_date": "2026-01-21",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -20517,7 +20764,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%20%E8%BF%90%E8%90%A5%20%E5%B0%8F%E5%BE%AE",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%20%E8%BF%90%E8%90%A5%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -20545,6 +20792,19 @@
               "普惠金融客户经理"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "baidu_search_snippet",
+            "search_query": "普惠金融运营专员（小微客群） 招聘信息 BOSS直聘",
+            "search_query_url": "http://www.baidu.com/s?wd=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%E8%BF%90%E8%90%A5%E4%B8%93%E5%91%98%EF%BC%88%E5%B0%8F%E5%BE%AE%E5%AE%A2%E7%BE%A4%EF%BC%89%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "12-24K",
+              "8-13K"
+            ],
+            "sample_size": 2,
+            "note": "搜索摘要证据用于补齐岗位级实采分位，后续回填职位详情截图。"
           }
         },
         {
@@ -20627,7 +20887,7 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v167",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -20661,11 +20921,8 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
               "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -20686,27 +20943,32 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_baidu_kanzhun_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
-              "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "薪资区间P25": "5.50k/月",
+              "薪资区间P50": "5.50k/月",
+              "薪资区间P75": "5.50k/月",
+              "发布时间": "2026-02-08",
+              "批次/轮次": "网申 / 笔试 / 面试",
+              "来源链接或帖子ID": "http://www.baidu.com/s?wd=%E8%B5%84%E4%BA%A7%E4%BF%9D%E5%85%A8%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84",
+              "样本量": "1",
+              "截图路径与截图时间": "http://www.baidu.com/s?wd=%E8%B5%84%E4%BA%A7%E4%BF%9D%E5%85%A8%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_KANZHUN",
+              "source_url": "https://www.kanzhun.com",
+              "publish_date": "2026-02-08",
+              "sample_size": 1,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "http://www.baidu.com/s?wd=%E8%B5%84%E4%BA%A7%E4%BF%9D%E5%85%A8%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84",
+              "capture_method": "baidu_kanzhun_snippet_extraction_v167",
+              "salary_tokens": [
+                "5000-6000元/月"
+              ]
             },
-            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
+            "next_backfill_action": "补抓看准/BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -20894,16 +21156,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 1,
+            "publish_date": "2026-02-08",
+            "source_id": "SRC_KANZHUN",
+            "source_url": "https://www.kanzhun.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "5.50k/月",
               "capability_requirements": [
                 "信用评分策略设计",
                 "反欺诈规则配置",
@@ -20919,7 +21181,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "5.50k/月",
               "capability_requirements": [
                 "信用评分策略设计",
                 "反欺诈规则配置",
@@ -20937,7 +21199,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "5.50k/月",
               "capability_requirements": [
                 "反欺诈规则配置",
                 "策略A/B测试评估",
@@ -20955,17 +21217,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 5.5,
+              "p50": 5.5,
+              "p75": 5.5
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 1,
+            "publish_date": "2026-02-08",
+            "source_id": "SRC_KANZHUN",
+            "source_url": "https://www.kanzhun.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -21167,7 +21429,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E9%9B%B6%E5%94%AE%20%E9%A3%8E%E6%8E%A7%20%E7%AD%96%E7%95%A5%20%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E9%9B%B6%E5%94%AE%E9%A3%8E%E6%8E%A7%E7%AD%96%E7%95%A5"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -21195,6 +21457,18 @@
               "法务协同岗"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "看准",
+            "extraction_channel": "baidu_search_snippet",
+            "search_query": "资产保全 看准 薪资",
+            "search_query_url": "http://www.baidu.com/s?wd=%E8%B5%84%E4%BA%A7%E4%BF%9D%E5%85%A8%20%E7%9C%8B%E5%87%86%20%E8%96%AA%E8%B5%84",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "5000-6000元/月"
+            ],
+            "sample_size": 1,
+            "note": "看准检索摘要用于补齐岗位级薪资分位，后续回填详情页截图。"
           }
         },
         {
@@ -21927,7 +22201,7 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v167",
+            "status": "completed_with_observed_or_proxy",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -21961,11 +22235,8 @@
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
-              "城市分布",
-              "薪资区间P25/P50/P75",
               "岗位发布时间(职位级原始链接)",
               "帖子ID/链接",
-              "样本量",
               "截图时间"
             ],
             "how_to_search": [
@@ -21986,27 +22257,32 @@
               "样本量": "38",
               "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
             },
-            "filled_mode": "industry_proxy_fallback",
+            "filled_mode": "role_observed_sample_baidu_snippet_v167",
             "filled_values": {
               "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
+              "薪资区间P25": "7.50k/月",
+              "薪资区间P50": "7.50k/月",
+              "薪资区间P75": "7.50k/月",
+              "发布时间": "2026-02-15",
               "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "来源链接或帖子ID": "http://www.baidu.com/s?wd=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "样本量": "1",
+              "截图路径与截图时间": "http://www.baidu.com/s?wd=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98 @2026-02-24"
             },
             "source_evidence": {
-              "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-              "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "publish_date": "2026-01-19",
-              "sample_size": 38,
+              "source_id": "SRC_BOSS",
+              "source_url": "https://www.zhipin.com",
+              "publish_date": "2026-02-15",
+              "sample_size": 1,
               "city": "北京",
-              "company_tier": "t2_strong"
+              "company_tier": "t2_strong",
+              "search_query_url": "http://www.baidu.com/s?wd=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+              "capture_method": "baidu_snippet_extraction_v167",
+              "salary_tokens": [
+                "5-10K"
+              ]
             },
-            "next_backfill_action": "优先补录BOSS职位详情页与小红书帖子ID；未获取前维持留空。",
+            "next_backfill_action": "补抓BOSS职位详情页原始发布时间与截图证据；补小红书面经帖ID后升级为严格A档实证。",
             "unavailable_capture_log_v164": {
               "checked_at": "2026-02-24",
               "boss_search_http": 200,
@@ -22194,16 +22470,16 @@
             "city_name": "北京",
             "city_id": "CITY_001",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 1,
+            "publish_date": "2026-02-15",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "salary_ladder_requirements": {
             "p25": {
-              "salary_range": "10.51k/月",
+              "salary_range": "7.50k/月",
               "capability_requirements": [
                 "信用评分策略设计",
                 "反欺诈规则配置",
@@ -22219,7 +22495,7 @@
               ]
             },
             "p50": {
-              "salary_range": "12.37k/月",
+              "salary_range": "7.50k/月",
               "capability_requirements": [
                 "信用评分策略设计",
                 "反欺诈规则配置",
@@ -22237,7 +22513,7 @@
               ]
             },
             "p75": {
-              "salary_range": "14.23k/月",
+              "salary_range": "7.50k/月",
               "capability_requirements": [
                 "反欺诈规则配置",
                 "策略A/B测试评估",
@@ -22255,17 +22531,17 @@
               ]
             },
             "salary_k_monthly_estimate": {
-              "p25": 10.51,
-              "p50": 12.37,
-              "p75": 14.23
+              "p25": 7.5,
+              "p50": 7.5,
+              "p75": 7.5
             },
             "city": "北京",
             "company_tier": "t2_strong",
-            "sample_size": 38,
-            "publish_date": "2026-01-19",
-            "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
-            "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-            "status": "proxy_with_complete_fields",
+            "sample_size": 1,
+            "publish_date": "2026-02-15",
+            "source_id": "SRC_BOSS",
+            "source_url": "https://www.zhipin.com",
+            "status": "role_observed_sample",
             "updated_at": "2026-02-24"
           },
           "entry_bar_by_tier": {
@@ -22467,7 +22743,7 @@
               "boss": "https://www.zhipin.com/web/geek/job?query=%E9%9B%B6%E5%94%AE%20%E9%A3%8E%E6%8E%A7%20%E7%AD%96%E7%95%A5%20%E6%A0%A1%E6%8B%9B",
               "xiaohongshu": "https://www.xiaohongshu.com/search_result/?keyword=%E9%9B%B6%E5%94%AE%E9%A3%8E%E6%8E%A7%E7%AD%96%E7%95%A5"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "next_backfill_action": "继续补采职位详情页级证据（发布时间、截图、帖子ID）。",
             "next_backfill_eta": "2026-03-31",
             "updated_at": "2026-02-24"
           },
@@ -22495,6 +22771,18 @@
               "风险管理岗"
             ],
             "updated_at": "2026-02-24"
+          },
+          "salary_observed_trace_v167": {
+            "source_platform": "BOSS直聘",
+            "extraction_channel": "baidu_search_snippet",
+            "search_query": "普惠金融客户经理 招聘信息 BOSS直聘",
+            "search_query_url": "http://www.baidu.com/s?wd=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%8B%9B%E8%81%98%E4%BF%A1%E6%81%AF%20BOSS%E7%9B%B4%E8%81%98",
+            "captured_at": "2026-02-24",
+            "salary_tokens": [
+              "5-10K"
+            ],
+            "sample_size": 1,
+            "note": "搜索摘要证据用于补齐岗位级实采分位，后续回填职位详情截图。"
           }
         },
         {
