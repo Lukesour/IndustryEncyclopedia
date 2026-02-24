@@ -2434,7 +2434,7 @@
             "快速学习",
             "时间管理"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-23",
           "written_and_interview_formats": [
             "笔试",
             "案例面试",
@@ -2491,14 +2491,14 @@
             "source_url": "https://www.pwccn.com/zh/careers.html",
             "updated_at": "2026-02-18"
           },
-          "day_in_life": "咨询与专业服务咨询顾问日常：目标对齐->任务拆解->执行推进->复盘沉淀。",
+          "day_in_life": "咨询顾问日常：问题定义->数据采集->方案建模->客户共创->落地复盘。",
           "core_output_kpi": "咨询顾问核心KPI：目标达成率、交付时效、协同效率、复盘完成率。",
           "typical_projects": [
             "咨询顾问流程优化专项",
             "咨询顾问效率提升专项",
             "咨询与专业服务跨部门协同专项"
           ],
-          "growth_path_1to3_year": "咨询顾问成长路径：1年夯实执行与质量；2年独立负责模块与跨组协同；3年主导专项并输出方法论。",
+          "growth_path_1to3_year": "咨询顾问成长路径：0-1年夯实研究与分析功底；1-3年可独立带模块并管理客户预期；3-5年可主导项目与行业方法论沉淀。",
           "cross_industry_transfer": "可在同职能上下游岗位间转岗，建议补齐业务理解与数据表达证据。；迁移前建议补齐结构化分析与财务分析，并准备1个可量化项目证据。",
           "prep_90d_plan": [
             "1-30天：完成咨询与专业服务咨询顾问知识图谱、术语表与指标口径清单。",
@@ -2572,7 +2572,46 @@
               "city": "上海",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。",
+            "unavailable_capture_log_v162": {
+              "checked_at": "2026-02-23",
+              "official_source_http": 200,
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "missing_fields": [
+                "帖子ID",
+                "帖子发布时间",
+                "截图时间",
+                "追问链样本"
+              ],
+              "search_plan": {
+                "boss": {
+                  "where": "https://www.zhipin.com/web/geek/job",
+                  "query_template": "应届生 + 行业 + 岗位 + 城市",
+                  "filters": [
+                    "经验=应届生",
+                    "学历=本科/硕士",
+                    "薪资范围",
+                    "发布时间近30天"
+                  ]
+                },
+                "xiaohongshu": {
+                  "where": "小红书App/网页版搜索",
+                  "query_template": "行业 + 岗位 + 面经/校招/offer",
+                  "filters": [
+                    "最近一年",
+                    "含轮次关键词",
+                    "含具体公司名"
+                  ]
+                }
+              },
+              "fallback_notes": [
+                "若小红书网页返回404，改用App内搜索并记录帖子ID与截图时间。",
+                "若BOSS仅返回列表页，需进入职位详情页再记录薪资分位与发布时间。",
+                "无法获取字段保持留空，不可使用估算值覆盖。"
+              ],
+              "expected_backfill_eta": "2026-03-15"
+            }
           },
           "role_detail_v158": {
             "role_scope": "负责咨询顾问相关职责并对关键指标结果负责。",
@@ -2593,7 +2632,46 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "企业数字化与降本增效需求持续，咨询顾问岗位需求稳定，竞争焦点从报告输出转向落地推进与可量化价值交付。",
+          "typical_work_week": "项目周期内穿插访谈、分析建模、客户汇报与内部评审，提案和结项阶段工作强度显著上升。",
+          "switch_directions": [
+            {
+              "target_role": "企业战略BP",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "战略拆解",
+                "经营分析",
+                "组织协同"
+              ],
+              "transition_period": "5-8个月"
+            },
+            {
+              "target_role": "数据分析经理",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "指标体系",
+                "SQL/Python",
+                "可视化汇报"
+              ],
+              "transition_period": "4-7个月"
+            },
+            {
+              "target_role": "产品经理",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "需求管理",
+                "MVP设计",
+                "跨团队推进"
+              ],
+              "transition_period": "6-9个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "91-120天：独立完成1个行业研究模块并交付可执行建议。",
+            "121-150天：主导1次客户工作坊并沉淀问题清单模板。",
+            "151-180天：形成项目复盘方法库与估算模型模板。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -2685,7 +2763,7 @@
             "快速学习",
             "时间管理"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "笔试",
             "案例面试",
@@ -2762,7 +2840,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "pending_platform_capture",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -2772,7 +2850,8 @@
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App搜索",
+              "牛客网笔面试"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -2785,23 +2864,29 @@
               "咨询与专业服务 审计助理 offer 薪资"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
-            "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
+            "missing_fields": [
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
-            "updated_at": "2026-02-21",
+            "how_to_search": [
+              "先在企业官方招聘页确认“审计助理”职责口径，再做平台检索。",
+              "BOSS检索词建议：“应届生 审计助理 IND_CONSULTING_PRO_SERVICES 城市名”。",
+              "小红书仅作为回忆样本，必须记录帖子ID、截图时间与关键词。"
+            ],
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "上海、广州、北京",
-              "薪资区间P25": "9.20k/月",
-              "薪资区间P50": "10.80k/月",
-              "薪资区间P75": "12.30k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "笔试 / 案例面试",
-              "来源链接或帖子ID": "https://www.pwccn.com/zh/careers.html",
-              "样本量": "32",
-              "截图路径与截图时间": "https://www.pwccn.com/zh/careers.html @2026-02-17"
+              "城市分布": "",
+              "薪资区间P25/P50/P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "帖子ID/链接": "",
+              "样本量": "",
+              "截图时间": ""
             },
             "filled_mode": "role_observed_sample",
             "filled_values": {
@@ -2823,13 +2908,37 @@
               "city": "广州",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "补齐至少2个城市样本，并回填P25/P50/P75与发布时间。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.pwccn.com/zh/careers.html",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方岗位口径可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索页可访问，需人工逐条采样。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "页面可访问，但具体帖子需登录或App内检索后人工留痕。"
+              }
+            ]
           },
           "role_detail_v158": {
             "role_scope": "负责审计助理相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 10,
-              "interview_count": 10,
+              "written_count": 11,
+              "interview_count": 11,
               "written_stages": [
                 "campus_early_batch_written",
                 "campus_main_batch_written",
@@ -2844,7 +2953,46 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "审计数字化和监管精细化将推动审计助理从底稿执行向数据审计与流程诊断升级，3-5年内具备数据分析能力者晋升弹性更高。",
+          "typical_work_week": "月初集中执行函证与抽样，月中进行底稿整理与问题沟通，月末完成复核与报告支持。",
+          "switch_directions": [
+            {
+              "target_role": "风险咨询顾问",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "内控框架",
+                "流程审查"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "财务分析",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "财务建模",
+                "经营分析"
+              ],
+              "transition_period": "5-8个月"
+            },
+            {
+              "target_role": "合规专员",
+              "switch_cost": "低中",
+              "bridge_skills": [
+                "监管规则",
+                "证据链管理"
+              ],
+              "transition_period": "4-7个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：熟悉审计流程、底稿规范与常见科目风险点。",
+            "31-60天：独立完成1个科目抽样与函证闭环。",
+            "61-90天：训练审计逻辑、异常识别、追问链题。",
+            "91-120天：补齐SQL/Excel数据透视在审计场景中的应用。",
+            "121-150天：参与一次项目复核并输出问题清单模板。",
+            "151-180天：形成“业务理解+证据链+结论表达”案例包。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -11183,7 +11331,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -11257,7 +11406,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -11331,7 +11481,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -11405,7 +11556,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -11479,7 +11631,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -11553,7 +11706,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -11627,7 +11781,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -11705,7 +11860,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -11783,7 +11939,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -11861,7 +12018,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -11939,7 +12097,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -12017,7 +12176,8 @@
             "再分阶段执行并监控",
             "最后复盘沉淀机制"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -12095,7 +12255,8 @@
             "再分阶段执行并监控",
             "最后复盘沉淀机制"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -12173,7 +12334,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -12251,7 +12413,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -12329,7 +12492,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -12407,7 +12571,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -12485,7 +12650,8 @@
             "再分阶段给出动作、资源与监控指标。",
             "最后给出止损阈值和复盘迭代机制。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -12563,7 +12729,8 @@
             "再分阶段给出动作、资源与监控指标。",
             "最后给出止损阈值和复盘迭代机制。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -12641,7 +12808,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -12719,7 +12887,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -12797,7 +12966,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -12875,7 +13045,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -12953,7 +13124,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13031,7 +13203,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13109,7 +13282,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13187,7 +13361,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13265,7 +13440,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13343,7 +13519,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13421,7 +13598,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13499,7 +13677,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13577,7 +13756,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13655,7 +13835,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13733,7 +13914,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13811,7 +13993,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13889,7 +14072,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13967,7 +14151,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -14045,7 +14230,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -14123,7 +14309,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -14201,7 +14388,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -14279,7 +14467,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -14357,7 +14546,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -14435,7 +14625,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "answer_framework": [
@@ -14513,7 +14704,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -14591,7 +14783,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -14669,7 +14862,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -14747,7 +14941,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -14825,7 +15020,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "answer_framework": [
@@ -14903,7 +15099,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -14981,7 +15178,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -15059,7 +15257,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -15137,7 +15336,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -15215,7 +15415,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_EXP_001",
@@ -15293,7 +15494,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_EXP_002",
@@ -15371,7 +15573,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_EXP_003",
@@ -15449,7 +15652,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_EXP_004",
@@ -15527,7 +15731,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_EXP_005",
@@ -15605,7 +15810,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_EXP_006",
@@ -15683,7 +15889,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_EXP_007",
@@ -15761,7 +15968,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_EXP_008",
@@ -15839,7 +16047,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_EXP_009",
@@ -15917,7 +16126,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_EXP_010",
@@ -15995,7 +16205,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_EXP_011",
@@ -16073,7 +16284,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_EXP_012",
@@ -16151,7 +16363,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_HGX_001",
@@ -16224,7 +16437,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_HGX_002",
@@ -16297,7 +16511,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_HGX_003",
@@ -16370,7 +16585,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_HGX_004",
@@ -16443,7 +16659,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_HGX_005",
@@ -16516,7 +16733,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_HGX_006",
@@ -16589,7 +16807,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_HGX_007",
@@ -16662,7 +16881,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_HGX_008",
@@ -16735,7 +16955,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_HGX_009",
@@ -16808,7 +17029,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_HGX_010",
@@ -16881,7 +17103,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -16955,7 +17178,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -17029,7 +17253,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -17107,7 +17332,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_054",
@@ -17181,7 +17407,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_055",
@@ -17255,7 +17482,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_056",
@@ -17329,7 +17557,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_057",
@@ -17403,7 +17632,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_058",
@@ -17477,7 +17707,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_059",
@@ -17551,7 +17782,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_060",
@@ -17625,7 +17857,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_061",
@@ -17699,7 +17932,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_062",
@@ -17773,7 +18007,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_063",
@@ -17847,7 +18082,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_064",
@@ -17921,7 +18157,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_065",
@@ -17995,7 +18232,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_066",
@@ -18069,7 +18307,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_067",
@@ -18143,7 +18382,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_068",
@@ -18217,7 +18457,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_069",
@@ -18291,7 +18532,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_070",
@@ -18365,7 +18607,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_071",
@@ -18439,7 +18682,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -18517,7 +18761,8 @@
             "再分阶段执行并监控",
             "最后复盘沉淀机制"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -18595,7 +18840,8 @@
             "再分阶段执行并监控",
             "最后复盘沉淀机制"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -18673,7 +18919,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -18751,7 +18998,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_076",
@@ -18825,7 +19073,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_077",
@@ -18899,7 +19148,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_078",
@@ -18973,7 +19223,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_079",
@@ -19047,7 +19298,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_080",
@@ -19121,7 +19373,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_081",
@@ -19195,7 +19448,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_082",
@@ -19269,7 +19523,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_083",
@@ -19343,7 +19598,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_084",
@@ -19417,7 +19673,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_085",
@@ -19491,7 +19748,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_086",
@@ -19565,7 +19823,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_087",
@@ -19639,7 +19898,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_088",
@@ -19713,7 +19973,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_001",
@@ -19790,7 +20051,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_002",
@@ -19867,7 +20129,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_003",
@@ -19944,7 +20207,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_004",
@@ -20021,7 +20285,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_005",
@@ -20098,7 +20363,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_006",
@@ -20175,7 +20441,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_007",
@@ -20252,7 +20519,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_008",
@@ -20329,7 +20597,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_009",
@@ -20406,7 +20675,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_010",
@@ -20483,7 +20753,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_011",
@@ -20560,7 +20831,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_012",
@@ -20637,7 +20909,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_013",
@@ -20714,7 +20987,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_014",
@@ -20791,7 +21065,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_015",
@@ -20868,7 +21143,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_016",
@@ -20945,7 +21221,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_017",
@@ -21022,7 +21299,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_018",
@@ -21099,7 +21377,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_019",
@@ -21176,7 +21455,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_020",
@@ -21253,7 +21533,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_021",
@@ -21330,7 +21611,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_022",
@@ -21407,7 +21689,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_023",
@@ -21484,7 +21767,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_024",
@@ -21561,7 +21845,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_025",
@@ -21638,7 +21923,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_026",
@@ -21715,7 +22001,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_027",
@@ -21792,7 +22079,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_028",
@@ -21869,7 +22157,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_029",
@@ -21946,7 +22235,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_030",
@@ -22023,7 +22313,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_031",
@@ -22100,7 +22391,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_032",
@@ -22177,7 +22469,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_033",
@@ -22254,7 +22547,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_034",
@@ -22331,7 +22625,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_035",
@@ -22408,7 +22703,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_036",
@@ -22485,7 +22781,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V159D_037",
@@ -22562,7 +22859,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -30253,6 +30551,86 @@
           "updated_at": "2026-02-21",
           "is_template": false,
           "scenario_bucket": "system_process"
+        },
+        {
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "authenticity_level": "observed",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.pwccn.com/zh/careers.html",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+            "source_name": "普华永道中国职业页面",
+            "source_type": "company_official",
+            "source_url": "https://www.pwccn.com/zh/careers.html",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点后生成的训练题。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+              "SRC_AUTO_WWW_EY_COM_541F649A"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "follow_up_questions": [
+            "如果资源减半，你会如何重排优先级？",
+            "你会如何设置里程碑和退出条件？",
+            "若首轮动作失败，二次迭代路径是什么？"
+          ],
+          "good_answer_signals": [
+            "目标与约束定义清晰",
+            "步骤可执行且可量化",
+            "复盘与风险控制完整"
+          ],
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【咨询审计-审计助理】某公司应收账款周转异常，请设计抽样策略、核查步骤及异常处理优先级。",
+          "question_realness_note": "依据官方岗位职责和能力要求整理的训练题。",
+          "question_type": "流程机制与证据链（官方岗位能力改编）",
+          "question_year": 2026,
+          "recruitment_stage": "campus_main_batch_written",
+          "reference_answer_outline": [
+            "定义目标与约束",
+            "给出可执行路径",
+            "列出指标与风险预案",
+            "说明复盘机制"
+          ],
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_002",
+          "role_name": "审计助理",
+          "round_label": "主批笔试",
+          "sample_size": 6,
+          "scenario_bucket": "system_process",
+          "scoring_dimensions": [
+            "结构化思维",
+            "业务判断",
+            "执行落地",
+            "复盘能力"
+          ],
+          "scoring_rubric": {
+            "A档": "方案完整、指标闭环、风险可控。",
+            "B档": "路径基本可行，但指标或边界不完整。",
+            "C档": "回答泛化，缺少落地动作与量化。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标",
+            "忽略约束和协同依赖",
+            "没有复盘闭环"
+          ],
+          "company_tier": "t2_strong",
+          "updated_at": "2026-02-24",
+          "question_id": "IND_CONSULTING_PRO_SERVICES_WRITTEN_V163M_002_01"
         }
       ],
       "last_checked": "2026-02-19",
@@ -33535,7 +33913,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "authenticity_level": "curated",
@@ -33609,7 +33988,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "authenticity_level": "real_user",
@@ -33683,7 +34063,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "real_user",
@@ -33757,7 +34138,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -33831,7 +34213,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "real_user",
@@ -33905,7 +34288,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "authenticity_level": "real_user",
@@ -33979,7 +34363,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "curated",
@@ -34057,7 +34442,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "curated",
@@ -34135,7 +34521,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "curated",
@@ -34213,7 +34600,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -34291,7 +34679,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -34369,7 +34758,8 @@
             "再推进关键动作",
             "最后沉淀机制与标准"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -34447,7 +34837,8 @@
             "再推进关键动作",
             "最后沉淀机制与标准"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -34525,7 +34916,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -34603,7 +34995,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -34681,7 +35074,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -34759,7 +35153,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -34837,7 +35232,8 @@
             "再推动协同执行并实时监控关键指标。",
             "最后复盘沉淀机制并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -34915,7 +35311,8 @@
             "再推动协同执行并实时监控关键指标。",
             "最后复盘沉淀机制并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -34993,7 +35390,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -35071,7 +35469,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -35149,7 +35548,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -35227,7 +35627,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -35305,7 +35706,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -35383,7 +35785,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -35461,7 +35864,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -35539,7 +35943,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -35617,7 +36022,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -35695,7 +36101,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -35773,7 +36180,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -35851,7 +36259,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -35929,7 +36338,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -36007,7 +36417,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -36085,7 +36496,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -36163,7 +36575,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -36241,7 +36654,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -36319,7 +36733,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "real_user",
@@ -36397,7 +36812,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "authenticity_level": "real_user",
@@ -36475,7 +36891,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "real_user",
@@ -36553,7 +36970,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -36631,7 +37049,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -36709,7 +37128,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "authenticity_level": "real_user",
@@ -36787,7 +37207,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "real_user",
@@ -36865,7 +37286,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -36943,7 +37365,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "authenticity_level": "real_user",
@@ -37021,7 +37444,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "authenticity_level": "real_user",
@@ -37099,7 +37523,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "authenticity_level": "real_user",
@@ -37177,7 +37602,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -37255,7 +37681,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "real_user",
@@ -37333,7 +37760,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "authenticity_level": "real_user",
@@ -37411,7 +37839,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "real_user",
@@ -37489,7 +37918,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_EXP_001",
@@ -37567,7 +37997,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_EXP_002",
@@ -37645,7 +38076,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_EXP_003",
@@ -37723,7 +38155,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_EXP_004",
@@ -37801,7 +38234,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_EXP_005",
@@ -37879,7 +38313,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_EXP_006",
@@ -37957,7 +38392,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_EXP_007",
@@ -38035,7 +38471,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_EXP_008",
@@ -38113,7 +38550,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_EXP_009",
@@ -38191,7 +38629,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_EXP_010",
@@ -38269,7 +38708,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_EXP_011",
@@ -38347,7 +38787,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_EXP_012",
@@ -38425,7 +38866,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_HGX_001",
@@ -38498,7 +38940,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_HGX_002",
@@ -38571,7 +39014,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_HGX_003",
@@ -38644,7 +39088,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_HGX_004",
@@ -38717,7 +39162,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_HGX_005",
@@ -38790,7 +39236,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_HGX_006",
@@ -38863,7 +39310,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_HGX_007",
@@ -38936,7 +39384,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_HGX_008",
@@ -39009,7 +39458,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_HGX_009",
@@ -39082,7 +39532,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_HGX_010",
@@ -39155,7 +39606,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "curated",
@@ -39229,7 +39681,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "curated",
@@ -39303,7 +39756,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "curated",
@@ -39377,7 +39831,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -39455,7 +39910,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_053",
@@ -39529,7 +39985,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_054",
@@ -39603,7 +40060,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_055",
@@ -39677,7 +40135,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_056",
@@ -39751,7 +40210,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_057",
@@ -39825,7 +40285,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_058",
@@ -39899,7 +40360,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_059",
@@ -39973,7 +40435,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_060",
@@ -40047,7 +40510,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_061",
@@ -40121,7 +40585,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_062",
@@ -40195,7 +40660,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_063",
@@ -40269,7 +40735,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_064",
@@ -40343,7 +40810,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_065",
@@ -40417,7 +40885,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_066",
@@ -40491,7 +40960,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_067",
@@ -40565,7 +41035,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_068",
@@ -40639,7 +41110,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_069",
@@ -40713,7 +41185,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_070",
@@ -40787,7 +41260,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -40865,7 +41339,8 @@
             "再推进关键动作",
             "最后沉淀机制与标准"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -40943,7 +41418,8 @@
             "再推进关键动作",
             "最后沉淀机制与标准"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -41021,7 +41497,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -41099,7 +41576,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_075",
@@ -41173,7 +41651,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_076",
@@ -41247,7 +41726,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_077",
@@ -41321,7 +41801,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_078",
@@ -41395,7 +41876,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_079",
@@ -41469,7 +41951,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_080",
@@ -41543,7 +42026,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_081",
@@ -41617,7 +42101,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_082",
@@ -41691,7 +42176,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_083",
@@ -41765,7 +42251,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_084",
@@ -41839,7 +42326,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_085",
@@ -41913,7 +42401,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_086",
@@ -41987,7 +42476,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_087",
@@ -42061,7 +42551,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_001",
@@ -42139,7 +42630,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_002",
@@ -42217,7 +42709,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_003",
@@ -42295,7 +42788,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_004",
@@ -42373,7 +42867,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_005",
@@ -42451,7 +42946,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_006",
@@ -42529,7 +43025,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_007",
@@ -42607,7 +43104,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_008",
@@ -42685,7 +43183,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_009",
@@ -42763,7 +43262,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_010",
@@ -42841,7 +43341,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_011",
@@ -42919,7 +43420,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_012",
@@ -42997,7 +43499,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_013",
@@ -43075,7 +43578,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_014",
@@ -43153,7 +43657,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_015",
@@ -43231,7 +43736,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_016",
@@ -43309,7 +43815,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_017",
@@ -43387,7 +43894,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_018",
@@ -43465,7 +43973,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_019",
@@ -43543,7 +44052,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_020",
@@ -43621,7 +44131,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_021",
@@ -43699,7 +44210,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_022",
@@ -43777,7 +44289,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_023",
@@ -43855,7 +44368,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_024",
@@ -43933,7 +44447,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_025",
@@ -44011,7 +44526,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_026",
@@ -44089,7 +44605,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_027",
@@ -44167,7 +44684,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_028",
@@ -44245,7 +44763,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_029",
@@ -44323,7 +44842,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_030",
@@ -44401,7 +44921,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_031",
@@ -44479,7 +45000,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_032",
@@ -44557,7 +45079,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_033",
@@ -44635,7 +45158,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_034",
@@ -44713,7 +45237,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_035",
@@ -44791,7 +45316,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_036",
@@ -44869,7 +45395,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V159D_037",
@@ -44947,7 +45474,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "authenticity_level": "real_user",
@@ -52638,6 +53166,86 @@
           "updated_at": "2026-02-21",
           "is_template": false,
           "scenario_bucket": "cross_team_collaboration"
+        },
+        {
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "authenticity_level": "observed",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.pwccn.com/zh/careers.html",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+            "source_name": "普华永道中国职业页面",
+            "source_type": "company_official",
+            "source_url": "https://www.pwccn.com/zh/careers.html",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点后生成的训练题。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_PWCCN_COM_B092A9CD",
+              "SRC_AUTO_WWW_EY_COM_541F649A"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "follow_up_questions": [
+            "如果资源减半，你会如何重排优先级？",
+            "你会如何设置里程碑和退出条件？",
+            "若首轮动作失败，二次迭代路径是什么？"
+          ],
+          "good_answer_signals": [
+            "目标与约束定义清晰",
+            "步骤可执行且可量化",
+            "复盘与风险控制完整"
+          ],
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "如果项目经理要求提前出具结论但关键证据尚未闭环，你会如何沟通并控制审计风险？",
+          "question_realness_note": "依据官方岗位职责和能力要求整理的训练题。",
+          "question_type": "合规判断与沟通协同（官方岗位能力改编）",
+          "question_year": 2026,
+          "recruitment_stage": "campus_main_batch_interview",
+          "reference_answer_outline": [
+            "定义目标与约束",
+            "给出可执行路径",
+            "列出指标与风险预案",
+            "说明复盘机制"
+          ],
+          "role_id": "IND_CONSULTING_PRO_SERVICES_ROLE_002",
+          "role_name": "审计助理",
+          "round_label": "主批面试",
+          "sample_size": 6,
+          "scenario_bucket": "metric_tradeoff",
+          "scoring_dimensions": [
+            "结构化思维",
+            "业务判断",
+            "执行落地",
+            "复盘能力"
+          ],
+          "scoring_rubric": {
+            "A档": "方案完整、指标闭环、风险可控。",
+            "B档": "路径基本可行，但指标或边界不完整。",
+            "C档": "回答泛化，缺少落地动作与量化。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标",
+            "忽略约束和协同依赖",
+            "没有复盘闭环"
+          ],
+          "company_tier": "t2_strong",
+          "updated_at": "2026-02-24",
+          "question_id": "IND_CONSULTING_PRO_SERVICES_INTERVIEW_V163M_002_01"
         }
       ],
       "last_checked": "2026-02-19",

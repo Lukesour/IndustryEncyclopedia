@@ -2475,7 +2475,7 @@
             "问题定位",
             "跨部门协作"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-23",
           "written_and_interview_formats": [
             "专业笔试",
             "技术面",
@@ -2532,14 +2532,14 @@
             "source_url": "https://www.inovance.com",
             "updated_at": "2026-02-18"
           },
-          "day_in_life": "高端制造与工业自动化机械工程师日常：需求评审->方案设计->开发/验证->上线回归->复盘优化。",
+          "day_in_life": "机械工程师日常：需求澄清->方案建模->图纸评审->试制验证->问题闭环。",
           "core_output_kpi": "机械工程师核心KPI：交付准时率、缺陷率、系统可用性、迭代效率。",
           "typical_projects": [
             "机械工程师流程优化专项",
             "机械工程师效率提升专项",
             "高端制造与工业自动化跨部门协同专项"
           ],
-          "growth_path_1to3_year": "机械工程师成长路径：1年夯实执行与质量；2年独立负责模块与跨组协同；3年主导专项并输出方法论。",
+          "growth_path_1to3_year": "机械工程师成长路径：0-1年熟悉设计规范与验证流程；1-3年可独立负责子系统方案并主导跨部门问题闭环；3-5年可承担平台化设计与可靠性治理。",
           "cross_industry_transfer": "可向平台工程、系统工程、质量与项目管理方向迁移；先补跨团队协同与业务指标表达证据。；迁移前建议补齐机械与电气基础与PLC/SCADA，并准备1个可量化项目证据。",
           "prep_90d_plan": [
             "1-30天：完成高端制造与工业自动化机械工程师知识图谱、术语表与指标口径清单。",
@@ -2613,7 +2613,46 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。",
+            "unavailable_capture_log_v162": {
+              "checked_at": "2026-02-23",
+              "official_source_http": 200,
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "missing_fields": [
+                "帖子ID",
+                "帖子发布时间",
+                "截图时间",
+                "追问链样本"
+              ],
+              "search_plan": {
+                "boss": {
+                  "where": "https://www.zhipin.com/web/geek/job",
+                  "query_template": "应届生 + 行业 + 岗位 + 城市",
+                  "filters": [
+                    "经验=应届生",
+                    "学历=本科/硕士",
+                    "薪资范围",
+                    "发布时间近30天"
+                  ]
+                },
+                "xiaohongshu": {
+                  "where": "小红书App/网页版搜索",
+                  "query_template": "行业 + 岗位 + 面经/校招/offer",
+                  "filters": [
+                    "最近一年",
+                    "含轮次关键词",
+                    "含具体公司名"
+                  ]
+                }
+              },
+              "fallback_notes": [
+                "若小红书网页返回404，改用App内搜索并记录帖子ID与截图时间。",
+                "若BOSS仅返回列表页，需进入职位详情页再记录薪资分位与发布时间。",
+                "无法获取字段保持留空，不可使用估算值覆盖。"
+              ],
+              "expected_backfill_eta": "2026-03-15"
+            }
           },
           "role_detail_v158": {
             "role_scope": "负责机械工程师相关职责并对关键指标结果负责。",
@@ -2634,7 +2673,46 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "高端装备国产替代与产线智能化并行推进，机械工程师需求保持稳中有增，能力重心从单机设计升级为全生命周期可靠性与可制造性协同。",
+          "typical_work_week": "周内通常在设计评审、现场验证、供应商沟通之间切换，试制和量产爬坡阶段问题闭环节奏明显加快。",
+          "switch_directions": [
+            {
+              "target_role": "工艺工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "DFM",
+                "工装夹具",
+                "制程能力"
+              ],
+              "transition_period": "4-7个月"
+            },
+            {
+              "target_role": "自动化控制工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "PLC基础",
+                "传感器选型",
+                "联调排障"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "产品工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "需求管理",
+                "可靠性验证",
+                "成本拆解"
+              ],
+              "transition_period": "5-8个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "91-120天：完成1条关键机构链路的失效模式分析并建立整改闭环。",
+            "121-150天：主导1次跨研发/工艺/质量的试制问题复盘会议。",
+            "151-180天：沉淀设计评审清单与量产切换风险台账。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -2726,7 +2804,7 @@
             "问题定位",
             "跨部门协作"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "专业笔试",
             "技术面",
@@ -2803,7 +2881,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "pending_platform_capture",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -2813,7 +2891,8 @@
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App搜索",
+              "牛客网笔面试"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -2826,23 +2905,29 @@
               "高端制造与工业自动化 电气工程师 offer 薪资"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
-            "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
+            "missing_fields": [
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
-            "updated_at": "2026-02-21",
+            "how_to_search": [
+              "先在企业官方招聘页确认“电气工程师”职责口径，再做平台检索。",
+              "BOSS检索词建议：“应届生 电气工程师 IND_ADVANCED_MANUFACTURING_AUTOMATION 城市名”。",
+              "小红书仅作为回忆样本，必须记录帖子ID、截图时间与关键词。"
+            ],
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "深圳、合肥、上海",
-              "薪资区间P25": "9.80k/月",
-              "薪资区间P50": "11.40k/月",
-              "薪资区间P75": "13.00k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "专业笔试 / 技术面",
-              "来源链接或帖子ID": "https://www.inovance.com",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.inovance.com @2026-02-17"
+              "城市分布": "",
+              "薪资区间P25/P50/P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "帖子ID/链接": "",
+              "样本量": "",
+              "截图时间": ""
             },
             "filled_mode": "role_observed_sample",
             "filled_values": {
@@ -2864,13 +2949,37 @@
               "city": "合肥",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "补齐至少2个城市样本，并回填P25/P50/P75与发布时间。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.inovance.com/about/join-us",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方岗位口径可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索页可访问，需人工逐条采样。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "页面可访问，但具体帖子需登录或App内检索后人工留痕。"
+              }
+            ]
           },
           "role_detail_v158": {
             "role_scope": "负责电气工程师相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 12,
-              "interview_count": 12,
+              "written_count": 13,
+              "interview_count": 13,
               "written_stages": [
                 "campus_early_batch_written",
                 "campus_main_batch_written",
@@ -2885,7 +2994,46 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "智能产线改造和国产替代持续推进，电气工程师将从单点调试转向整线稳定性与能效优化，3-5年内对“电气+数据”复合能力需求会明显上升。",
+          "typical_work_week": "项目周前半段以图纸校审、控制逻辑联调为主，后半段集中现场试运行、故障闭环和跨班组复盘。",
+          "switch_directions": [
+            {
+              "target_role": "自动化系统工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "系统集成",
+                "现场总线"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "设备可靠性工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "故障树分析",
+                "预防性维护"
+              ],
+              "transition_period": "5-8个月"
+            },
+            {
+              "target_role": "工业数字化实施顾问",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "MES接口",
+                "数据建模"
+              ],
+              "transition_period": "8-12个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：补齐电气控制标准、常用PLC品牌指令与安全规范。",
+            "31-60天：完成1个产线联调案例复盘，沉淀故障定位流程图。",
+            "61-90天：按设备层/产线层分别训练高频笔面试题。",
+            "91-120天：补齐工业网络与SCADA数据采集实操。",
+            "121-150天：主导一次跨机械/工艺/生产协同的问题闭环演练。",
+            "151-180天：形成可展示的“节拍提升+良率改善”项目证据包。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -11573,7 +11721,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -11647,7 +11796,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -11721,7 +11871,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -11795,7 +11946,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "answer_framework": [
@@ -11869,7 +12021,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -11943,7 +12096,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -12017,7 +12171,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -12095,7 +12250,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -12173,7 +12329,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -12251,7 +12408,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -12329,7 +12487,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -12407,7 +12566,8 @@
             "按周推进联调、验收和问题闭环。",
             "复盘返工根因并沉淀标准流程。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "answer_framework": [
@@ -12485,7 +12645,8 @@
             "再分阶段执行并监控",
             "最后复盘沉淀机制"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -12563,7 +12724,8 @@
             "再按阶段推进PoC和交付计划。",
             "最后定义风险预警与复盘闭环。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -12641,7 +12803,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -12719,7 +12882,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -12797,7 +12961,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -12875,7 +13040,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -12953,7 +13119,8 @@
             "再分阶段给出动作、资源与监控指标。",
             "最后给出止损阈值和复盘迭代机制。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -13031,7 +13198,8 @@
             "再分阶段给出动作、资源与监控指标。",
             "最后给出止损阈值和复盘迭代机制。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -13109,7 +13277,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13187,7 +13356,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13265,7 +13435,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13343,7 +13514,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13421,7 +13593,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13499,7 +13672,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13577,7 +13751,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13655,7 +13830,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13733,7 +13909,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13811,7 +13988,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13889,7 +14067,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -13967,7 +14146,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -14045,7 +14225,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -14123,7 +14304,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -14201,7 +14383,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -14279,7 +14462,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -14357,7 +14541,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -14435,7 +14620,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "answer_framework": [
@@ -14513,7 +14699,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -14591,7 +14778,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -14669,7 +14857,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -14747,7 +14936,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "answer_framework": [
@@ -14825,7 +15015,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -14903,7 +15094,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -14981,7 +15173,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -15059,7 +15252,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -15137,7 +15331,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -15215,7 +15410,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -15293,7 +15489,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -15371,7 +15568,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -15449,7 +15647,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -15527,7 +15726,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_EXP_001",
@@ -15605,7 +15805,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_EXP_002",
@@ -15683,7 +15884,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_EXP_003",
@@ -15761,7 +15963,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_EXP_004",
@@ -15839,7 +16042,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_EXP_005",
@@ -15917,7 +16121,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_EXP_006",
@@ -15995,7 +16200,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_EXP_007",
@@ -16073,7 +16279,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_EXP_008",
@@ -16151,7 +16358,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_EXP_009",
@@ -16229,7 +16437,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_EXP_010",
@@ -16307,7 +16516,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_EXP_011",
@@ -16385,7 +16595,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_EXP_012",
@@ -16463,7 +16674,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_HGX_001",
@@ -16536,7 +16748,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_HGX_002",
@@ -16609,7 +16822,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_HGX_003",
@@ -16682,7 +16896,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_HGX_004",
@@ -16755,7 +16970,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_HGX_005",
@@ -16828,7 +17044,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_HGX_006",
@@ -16901,7 +17118,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_HGX_007",
@@ -16974,7 +17192,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_HGX_008",
@@ -17047,7 +17266,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_HGX_009",
@@ -17120,7 +17340,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_HGX_010",
@@ -17193,7 +17414,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_HGX_011",
@@ -17266,7 +17488,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_HGX_012",
@@ -17339,7 +17562,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -17413,7 +17637,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -17487,7 +17712,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -17561,7 +17787,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -17639,7 +17866,8 @@
             "按周推进联调、验收和问题闭环。",
             "复盘返工根因并沉淀标准流程。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_053",
@@ -17713,7 +17941,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_054",
@@ -17787,7 +18016,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_055",
@@ -17861,7 +18091,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_056",
@@ -17935,7 +18166,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_057",
@@ -18009,7 +18241,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_058",
@@ -18083,7 +18316,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_059",
@@ -18157,7 +18391,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_060",
@@ -18231,7 +18466,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_061",
@@ -18305,7 +18541,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_062",
@@ -18379,7 +18616,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_063",
@@ -18453,7 +18691,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_064",
@@ -18527,7 +18766,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_065",
@@ -18601,7 +18841,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_066",
@@ -18675,7 +18916,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_067",
@@ -18749,7 +18991,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_068",
@@ -18823,7 +19066,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_069",
@@ -18897,7 +19141,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_070",
@@ -18971,7 +19216,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_071",
@@ -19045,7 +19291,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_072",
@@ -19119,7 +19366,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -19197,7 +19445,8 @@
             "再分阶段执行并监控",
             "最后复盘沉淀机制"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -19275,7 +19524,8 @@
             "再按阶段推进PoC和交付计划。",
             "最后定义风险预警与复盘闭环。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -19353,7 +19603,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -19431,7 +19682,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_077",
@@ -19505,7 +19757,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_078",
@@ -19579,7 +19832,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_079",
@@ -19653,7 +19907,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_080",
@@ -19727,7 +19982,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_081",
@@ -19801,7 +20057,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_082",
@@ -19875,7 +20132,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_083",
@@ -19949,7 +20207,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_084",
@@ -20023,7 +20282,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_085",
@@ -20097,7 +20357,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_086",
@@ -20171,7 +20432,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_087",
@@ -20245,7 +20507,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_088",
@@ -20319,7 +20582,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_089",
@@ -20393,7 +20657,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_090",
@@ -20467,7 +20732,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_091",
@@ -20541,7 +20807,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_001",
@@ -20618,7 +20885,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_002",
@@ -20695,7 +20963,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_003",
@@ -20772,7 +21041,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_004",
@@ -20849,7 +21119,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_005",
@@ -20926,7 +21197,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_006",
@@ -21003,7 +21275,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_007",
@@ -21080,7 +21353,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_008",
@@ -21157,7 +21431,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_009",
@@ -21234,7 +21509,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_010",
@@ -21311,7 +21587,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_011",
@@ -21388,7 +21665,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_012",
@@ -21465,7 +21743,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_013",
@@ -21542,7 +21821,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_014",
@@ -21619,7 +21899,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_015",
@@ -21696,7 +21977,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_016",
@@ -21773,7 +22055,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_017",
@@ -21850,7 +22133,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_018",
@@ -21927,7 +22211,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_019",
@@ -22004,7 +22289,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_020",
@@ -22081,7 +22367,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_021",
@@ -22158,7 +22445,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_022",
@@ -22235,7 +22523,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_023",
@@ -22312,7 +22601,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_024",
@@ -22389,7 +22679,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_025",
@@ -22466,7 +22757,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_026",
@@ -22543,7 +22835,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_027",
@@ -22620,7 +22913,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_028",
@@ -22697,7 +22991,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_029",
@@ -22774,7 +23069,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_030",
@@ -22851,7 +23147,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_031",
@@ -22928,7 +23225,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_032",
@@ -23005,7 +23303,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_033",
@@ -23082,7 +23381,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_034",
@@ -23159,7 +23459,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_035",
@@ -23236,7 +23537,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_036",
@@ -23313,7 +23615,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V159D_037",
@@ -23390,7 +23693,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -35407,6 +35711,86 @@
           "updated_at": "2026-02-21",
           "is_template": false,
           "scenario_bucket": "metric_tradeoff"
+        },
+        {
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "authenticity_level": "observed",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.inovance.com/about/join-us",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+            "source_name": "汇川技术官网",
+            "source_type": "company_official",
+            "source_url": "https://www.inovance.com/about/join-us",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点后生成的训练题。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+              "SRC_AUTO_WWW_ESTUN_COM_60CC692A"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "follow_up_questions": [
+            "如果资源减半，你会如何重排优先级？",
+            "你会如何设置里程碑和退出条件？",
+            "若首轮动作失败，二次迭代路径是什么？"
+          ],
+          "good_answer_signals": [
+            "目标与约束定义清晰",
+            "步骤可执行且可量化",
+            "复盘与风险控制完整"
+          ],
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【高端制造-电气工程师】某产线在换型后频繁触发急停，给定I/O日志与报警序列，要求定位根因并给出两周内可执行的整改方案。",
+          "question_realness_note": "依据官方岗位职责和能力要求整理的训练题。",
+          "question_type": "系统流程与故障定位（官方岗位能力改编）",
+          "question_year": 2026,
+          "recruitment_stage": "campus_main_batch_written",
+          "reference_answer_outline": [
+            "定义目标与约束",
+            "给出可执行路径",
+            "列出指标与风险预案",
+            "说明复盘机制"
+          ],
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_002",
+          "role_name": "电气工程师",
+          "round_label": "主批笔试",
+          "sample_size": 6,
+          "scenario_bucket": "system_process",
+          "scoring_dimensions": [
+            "结构化思维",
+            "业务判断",
+            "执行落地",
+            "复盘能力"
+          ],
+          "scoring_rubric": {
+            "A档": "方案完整、指标闭环、风险可控。",
+            "B档": "路径基本可行，但指标或边界不完整。",
+            "C档": "回答泛化，缺少落地动作与量化。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标",
+            "忽略约束和协同依赖",
+            "没有复盘闭环"
+          ],
+          "company_tier": "t2_strong",
+          "updated_at": "2026-02-24",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V163M_002_01"
         }
       ],
       "last_checked": "2026-02-19",
@@ -38746,7 +39130,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "curated",
@@ -38820,7 +39205,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "authenticity_level": "real_user",
@@ -38894,7 +39280,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -38968,7 +39355,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -39042,7 +39430,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -39116,7 +39505,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -39190,7 +39580,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "authenticity_level": "curated",
@@ -39268,7 +39659,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "authenticity_level": "curated",
@@ -39346,7 +39738,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -39424,7 +39817,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "answer_framework": [
@@ -39502,7 +39896,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -39580,7 +39975,8 @@
             "再推进关键动作",
             "最后沉淀机制与标准"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -39658,7 +40054,8 @@
             "再推进试点与关键干系人对齐。",
             "最后沉淀复盘与复制机制。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -39736,7 +40133,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -39814,7 +40212,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -39892,7 +40291,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -39970,7 +40370,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -40048,7 +40449,8 @@
             "再推动协同执行并实时监控关键指标。",
             "最后复盘沉淀机制并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -40126,7 +40528,8 @@
             "再推动协同执行并实时监控关键指标。",
             "最后复盘沉淀机制并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -40204,7 +40607,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -40282,7 +40686,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -40360,7 +40765,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -40438,7 +40844,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -40516,7 +40923,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -40594,7 +41002,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -40672,7 +41081,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -40750,7 +41160,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -40828,7 +41239,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -40906,7 +41318,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -40984,7 +41397,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -41062,7 +41476,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -41140,7 +41555,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -41218,7 +41634,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -41296,7 +41713,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -41374,7 +41792,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -41452,7 +41871,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -41530,7 +41950,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "real_user",
@@ -41608,7 +42029,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "authenticity_level": "real_user",
@@ -41686,7 +42108,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "authenticity_level": "real_user",
@@ -41764,7 +42187,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -41842,7 +42266,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -41920,7 +42345,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "authenticity_level": "real_user",
@@ -41998,7 +42424,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "real_user",
@@ -42076,7 +42503,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -42154,7 +42582,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "authenticity_level": "real_user",
@@ -42232,7 +42661,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "authenticity_level": "real_user",
@@ -42310,7 +42740,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "authenticity_level": "real_user",
@@ -42388,7 +42819,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -42466,7 +42898,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "authenticity_level": "real_user",
@@ -42544,7 +42977,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "real_user",
@@ -42622,7 +43056,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "real_user",
@@ -42700,7 +43135,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_EXP_001",
@@ -42778,7 +43214,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_EXP_002",
@@ -42856,7 +43293,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_EXP_003",
@@ -42934,7 +43372,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_EXP_004",
@@ -43012,7 +43451,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_EXP_005",
@@ -43090,7 +43530,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_EXP_006",
@@ -43168,7 +43609,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_EXP_007",
@@ -43246,7 +43688,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_EXP_008",
@@ -43324,7 +43767,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_EXP_009",
@@ -43402,7 +43846,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_EXP_010",
@@ -43480,7 +43925,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_EXP_011",
@@ -43558,7 +44004,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_EXP_012",
@@ -43636,7 +44083,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_HGX_001",
@@ -43709,7 +44157,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_HGX_002",
@@ -43782,7 +44231,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_HGX_003",
@@ -43855,7 +44305,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_HGX_004",
@@ -43928,7 +44379,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_HGX_005",
@@ -44001,7 +44453,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_HGX_006",
@@ -44074,7 +44527,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_HGX_007",
@@ -44147,7 +44601,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_HGX_008",
@@ -44220,7 +44675,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_HGX_009",
@@ -44293,7 +44749,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_HGX_010",
@@ -44366,7 +44823,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_HGX_011",
@@ -44439,7 +44897,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_HGX_012",
@@ -44512,7 +44971,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "authenticity_level": "curated",
@@ -44590,7 +45050,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "curated",
@@ -44664,7 +45125,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "curated",
@@ -44738,7 +45200,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "curated",
@@ -44812,7 +45275,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -44890,7 +45354,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_053",
@@ -44964,7 +45429,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_054",
@@ -45038,7 +45504,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_055",
@@ -45112,7 +45579,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_056",
@@ -45186,7 +45654,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_057",
@@ -45260,7 +45729,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_058",
@@ -45334,7 +45804,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_059",
@@ -45408,7 +45879,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_060",
@@ -45482,7 +45954,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_061",
@@ -45556,7 +46029,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_062",
@@ -45630,7 +46104,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_063",
@@ -45704,7 +46179,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_064",
@@ -45778,7 +46254,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_065",
@@ -45852,7 +46329,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_066",
@@ -45926,7 +46404,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_067",
@@ -46000,7 +46479,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_068",
@@ -46074,7 +46554,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_069",
@@ -46148,7 +46629,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_070",
@@ -46222,7 +46704,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_071",
@@ -46296,7 +46779,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_072",
@@ -46370,7 +46854,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -46448,7 +46933,8 @@
             "再推进关键动作",
             "最后沉淀机制与标准"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -46526,7 +47012,8 @@
             "再推进试点与关键干系人对齐。",
             "最后沉淀复盘与复制机制。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -46604,7 +47091,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -46682,7 +47170,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_077",
@@ -46756,7 +47245,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_078",
@@ -46830,7 +47320,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_079",
@@ -46904,7 +47395,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_080",
@@ -46978,7 +47470,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_081",
@@ -47052,7 +47545,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_082",
@@ -47126,7 +47620,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_083",
@@ -47200,7 +47695,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_084",
@@ -47274,7 +47770,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_085",
@@ -47348,7 +47845,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_086",
@@ -47422,7 +47920,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_087",
@@ -47496,7 +47995,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_088",
@@ -47570,7 +48070,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_089",
@@ -47644,7 +48145,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_090",
@@ -47718,7 +48220,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_091",
@@ -47792,7 +48295,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_092",
@@ -47866,7 +48370,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_001",
@@ -47944,7 +48449,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_002",
@@ -48022,7 +48528,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_003",
@@ -48100,7 +48607,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_004",
@@ -48178,7 +48686,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_005",
@@ -48256,7 +48765,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_006",
@@ -48334,7 +48844,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_007",
@@ -48412,7 +48923,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_008",
@@ -48490,7 +49002,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_009",
@@ -48568,7 +49081,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_010",
@@ -48646,7 +49160,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_011",
@@ -48724,7 +49239,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_012",
@@ -48802,7 +49318,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_013",
@@ -48880,7 +49397,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_014",
@@ -48958,7 +49476,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_015",
@@ -49036,7 +49555,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_016",
@@ -49114,7 +49634,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_017",
@@ -49192,7 +49713,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_018",
@@ -49270,7 +49792,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_019",
@@ -49348,7 +49871,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_020",
@@ -49426,7 +49950,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_021",
@@ -49504,7 +50029,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_022",
@@ -49582,7 +50108,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_023",
@@ -49660,7 +50187,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_024",
@@ -49738,7 +50266,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_025",
@@ -49816,7 +50345,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_026",
@@ -49894,7 +50424,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_027",
@@ -49972,7 +50503,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_028",
@@ -50050,7 +50582,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_029",
@@ -50128,7 +50661,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_030",
@@ -50206,7 +50740,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_031",
@@ -50284,7 +50819,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_032",
@@ -50362,7 +50898,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_033",
@@ -50440,7 +50977,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_034",
@@ -50518,7 +51056,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V159D_035",
@@ -50596,7 +51135,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "authenticity_level": "real_user",
@@ -62613,6 +63153,86 @@
           "updated_at": "2026-02-21",
           "is_template": false,
           "scenario_bucket": "metric_tradeoff"
+        },
+        {
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "authenticity_level": "observed",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.inovance.com/about/join-us",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+            "source_name": "汇川技术官网",
+            "source_type": "company_official",
+            "source_url": "https://www.inovance.com/about/join-us",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点后生成的训练题。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+              "SRC_AUTO_WWW_ESTUN_COM_60CC692A"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "follow_up_questions": [
+            "如果资源减半，你会如何重排优先级？",
+            "你会如何设置里程碑和退出条件？",
+            "若首轮动作失败，二次迭代路径是什么？"
+          ],
+          "good_answer_signals": [
+            "目标与约束定义清晰",
+            "步骤可执行且可量化",
+            "复盘与风险控制完整"
+          ],
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "你在产线联调阶段遇到机械、工艺、生产三方目标冲突，如何定义优先级并保证交付节点不失控？",
+          "question_realness_note": "依据官方岗位职责和能力要求整理的训练题。",
+          "question_type": "跨团队协同与指标取舍（官方岗位能力改编）",
+          "question_year": 2026,
+          "recruitment_stage": "campus_main_batch_interview",
+          "reference_answer_outline": [
+            "定义目标与约束",
+            "给出可执行路径",
+            "列出指标与风险预案",
+            "说明复盘机制"
+          ],
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_002",
+          "role_name": "电气工程师",
+          "round_label": "主批面试",
+          "sample_size": 6,
+          "scenario_bucket": "cross_team_collaboration",
+          "scoring_dimensions": [
+            "结构化思维",
+            "业务判断",
+            "执行落地",
+            "复盘能力"
+          ],
+          "scoring_rubric": {
+            "A档": "方案完整、指标闭环、风险可控。",
+            "B档": "路径基本可行，但指标或边界不完整。",
+            "C档": "回答泛化，缺少落地动作与量化。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标",
+            "忽略约束和协同依赖",
+            "没有复盘闭环"
+          ],
+          "company_tier": "t2_strong",
+          "updated_at": "2026-02-24",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V163M_002_01"
         }
       ],
       "last_checked": "2026-02-19",

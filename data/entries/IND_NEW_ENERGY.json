@@ -2726,7 +2726,7 @@
             "现场执行",
             "跨团队协同"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "专业笔试",
             "技术面",
@@ -2803,7 +2803,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "pending_platform_capture",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -2813,7 +2813,8 @@
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App搜索",
+              "牛客网笔面试"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -2826,23 +2827,29 @@
               "新能源 BMS工程师 offer 薪资"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
-            "how_to_search": [
-              "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
-              "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
+            "missing_fields": [
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
-            "updated_at": "2026-02-21",
+            "how_to_search": [
+              "先在企业官方招聘页确认“BMS工程师”职责口径，再做平台检索。",
+              "BOSS检索词建议：“应届生 BMS工程师 IND_NEW_ENERGY 城市名”。",
+              "小红书仅作为回忆样本，必须记录帖子ID、截图时间与关键词。"
+            ],
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "上海、长沙、深圳",
-              "薪资区间P25": "10.06k/月",
-              "薪资区间P50": "11.70k/月",
-              "薪资区间P75": "13.34k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "专业笔试 / 技术面",
-              "来源链接或帖子ID": "https://www.catl.com",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.catl.com @2026-02-17"
+              "城市分布": "",
+              "薪资区间P25/P50/P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "帖子ID/链接": "",
+              "样本量": "",
+              "截图时间": ""
             },
             "filled_mode": "role_observed_sample",
             "filled_values": {
@@ -2864,13 +2871,37 @@
               "city": "长沙",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "补齐至少2个城市样本，并回填P25/P50/P75与发布时间。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.catl.com/recruitment/",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方岗位口径可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索页可访问，需人工逐条采样。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "页面可访问，但具体帖子需登录或App内检索后人工留痕。"
+              }
+            ]
           },
           "role_detail_v158": {
             "role_scope": "负责BMS工程师相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 12,
-              "interview_count": 12,
+              "written_count": 13,
+              "interview_count": 13,
               "written_stages": [
                 "campus_early_batch_written",
                 "campus_supplement_written",
@@ -2885,7 +2916,46 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "储能和整车电子电气架构升级持续推进，BMS工程师将从功能实现走向安全策略与系统优化，3-5年内高压安全和算法能力需求显著提升。",
+          "typical_work_week": "每周围绕需求评审、算法调参、台架验证和问题闭环推进，试制期会集中处理热失控和一致性问题。",
+          "switch_directions": [
+            {
+              "target_role": "电池系统工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "系统集成",
+                "热管理"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "功能安全工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "ISO 26262",
+                "FMEA"
+              ],
+              "transition_period": "8-12个月"
+            },
+            {
+              "target_role": "储能控制工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "PCS协同",
+                "能量管理策略"
+              ],
+              "transition_period": "7-10个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理BMS架构、SOC/SOH估算与安全机制。",
+            "31-60天：完成1个均衡策略或故障诊断优化案例。",
+            "61-90天：训练BMS高频题和故障追问链。",
+            "91-120天：补齐CAN通信、HIL测试与数据分析。",
+            "121-150天：参与一次试制问题闭环复盘。",
+            "151-180天：产出“安全策略+性能优化”项目证据。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -15899,7 +15969,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -15973,7 +16044,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -16047,7 +16119,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -16121,7 +16194,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -16195,7 +16269,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -16269,7 +16344,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -16343,7 +16419,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -16421,7 +16498,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -16499,7 +16577,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -16577,7 +16656,8 @@
             "再分阶段执行并监控",
             "最后复盘沉淀机制"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -16655,7 +16735,8 @@
             "再分阶段执行并监控",
             "最后复盘沉淀机制"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -16733,7 +16814,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -16811,7 +16893,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -16889,7 +16972,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -16967,7 +17051,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -17045,7 +17130,8 @@
             "再分阶段给出动作、资源与监控指标。",
             "最后给出止损阈值和复盘迭代机制。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -17123,7 +17209,8 @@
             "再分阶段给出动作、资源与监控指标。",
             "最后给出止损阈值和复盘迭代机制。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -17201,7 +17288,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -17279,7 +17367,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -17357,7 +17446,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -17435,7 +17525,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -17513,7 +17604,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -17591,7 +17683,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -17669,7 +17762,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -17747,7 +17841,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -17825,7 +17920,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -17903,7 +17999,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -17981,7 +18078,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -18059,7 +18157,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -18137,7 +18236,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -18215,7 +18315,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -18293,7 +18394,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -18371,7 +18473,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -18449,7 +18552,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -18527,7 +18631,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -18605,7 +18710,8 @@
             "按阶段执行并建立监控机制。",
             "复盘沉淀方法并进入下一轮优化。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -18683,7 +18789,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -18761,7 +18868,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -18839,7 +18947,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -18917,7 +19026,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -18995,7 +19105,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -19073,7 +19184,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -19151,7 +19263,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -19229,7 +19342,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -19307,7 +19421,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -19385,7 +19500,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -19463,7 +19579,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -19541,7 +19658,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -19619,7 +19737,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -19697,7 +19816,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -19775,7 +19895,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -19853,7 +19974,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_001",
@@ -19931,7 +20053,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_002",
@@ -20009,7 +20132,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_003",
@@ -20087,7 +20211,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_004",
@@ -20165,7 +20290,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_005",
@@ -20243,7 +20369,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_006",
@@ -20321,7 +20448,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_007",
@@ -20399,7 +20527,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_008",
@@ -20477,7 +20606,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_009",
@@ -20555,7 +20685,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_010",
@@ -20633,7 +20764,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_011",
@@ -20711,7 +20843,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_EXP_012",
@@ -20789,7 +20922,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_HGX_001",
@@ -20862,7 +20996,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_HGX_002",
@@ -20935,7 +21070,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_HGX_003",
@@ -21008,7 +21144,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_HGX_004",
@@ -21081,7 +21218,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_HGX_005",
@@ -21154,7 +21292,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_HGX_006",
@@ -21227,7 +21366,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_HGX_007",
@@ -21300,7 +21440,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_HGX_008",
@@ -21373,7 +21514,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_HGX_009",
@@ -21446,7 +21588,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_HGX_010",
@@ -21519,7 +21662,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_HGX_011",
@@ -21592,7 +21736,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_HGX_012",
@@ -21665,7 +21810,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -21739,7 +21885,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -21813,7 +21960,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -21887,7 +22035,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "answer_framework": [
@@ -21961,7 +22110,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -22039,7 +22189,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_053",
@@ -22113,7 +22264,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_054",
@@ -22187,7 +22339,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_055",
@@ -22261,7 +22414,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_056",
@@ -22335,7 +22489,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_057",
@@ -22409,7 +22564,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_058",
@@ -22483,7 +22639,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_059",
@@ -22557,7 +22714,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_060",
@@ -22631,7 +22789,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_061",
@@ -22705,7 +22864,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_062",
@@ -22779,7 +22939,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_063",
@@ -22853,7 +23014,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_064",
@@ -22927,7 +23089,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_065",
@@ -23001,7 +23164,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_066",
@@ -23075,7 +23239,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_067",
@@ -23149,7 +23314,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_068",
@@ -23223,7 +23389,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_069",
@@ -23297,7 +23464,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_070",
@@ -23371,7 +23539,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_071",
@@ -23445,7 +23614,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_072",
@@ -23519,7 +23689,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -23597,7 +23768,8 @@
             "再分阶段执行并监控",
             "最后复盘沉淀机制"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -23675,7 +23847,8 @@
             "再分阶段执行并监控",
             "最后复盘沉淀机制"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -23753,7 +23926,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -23831,7 +24005,8 @@
             "按里程碑执行并建立周度监控与纠偏机制。",
             "复盘沉淀为可复制方法，形成下一轮优化输入。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_077",
@@ -23905,7 +24080,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_078",
@@ -23979,7 +24155,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_079",
@@ -24053,7 +24230,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_080",
@@ -24127,7 +24305,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_081",
@@ -24201,7 +24380,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_082",
@@ -24275,7 +24455,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_083",
@@ -24349,7 +24530,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_084",
@@ -24423,7 +24605,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_085",
@@ -24497,7 +24680,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_086",
@@ -24571,7 +24755,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_087",
@@ -24645,7 +24830,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_088",
@@ -24719,7 +24905,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_089",
@@ -24793,7 +24980,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_090",
@@ -24867,7 +25055,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_001",
@@ -24944,7 +25133,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_002",
@@ -25021,7 +25211,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_003",
@@ -25098,7 +25289,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_004",
@@ -25175,7 +25367,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_005",
@@ -25252,7 +25445,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_006",
@@ -25329,7 +25523,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_007",
@@ -25406,7 +25601,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_008",
@@ -25483,7 +25679,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_009",
@@ -25560,7 +25757,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_010",
@@ -25637,7 +25835,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_011",
@@ -25714,7 +25913,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_012",
@@ -25791,7 +25991,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_013",
@@ -25868,7 +26069,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_014",
@@ -25945,7 +26147,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_015",
@@ -26022,7 +26225,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_016",
@@ -26099,7 +26303,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_017",
@@ -26176,7 +26381,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_018",
@@ -26253,7 +26459,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_019",
@@ -26330,7 +26537,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_020",
@@ -26407,7 +26615,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_021",
@@ -26484,7 +26693,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_022",
@@ -26561,7 +26771,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_023",
@@ -26638,7 +26849,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_024",
@@ -26715,7 +26927,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_025",
@@ -26792,7 +27005,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_026",
@@ -26869,7 +27083,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_027",
@@ -26946,7 +27161,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_028",
@@ -27023,7 +27239,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_029",
@@ -27100,7 +27317,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_030",
@@ -27177,7 +27395,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_031",
@@ -27254,7 +27473,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_032",
@@ -27331,7 +27551,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_033",
@@ -27408,7 +27629,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_034",
@@ -27485,7 +27707,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_035",
@@ -27562,7 +27785,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_036",
@@ -27639,7 +27863,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V159D_037",
@@ -27716,7 +27941,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_001",
@@ -27793,7 +28019,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_002",
@@ -27870,7 +28097,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_003",
@@ -27947,7 +28175,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_004",
@@ -28024,7 +28253,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_005",
@@ -28101,7 +28331,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_006",
@@ -28178,7 +28409,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_007",
@@ -28255,7 +28487,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_008",
@@ -28332,7 +28565,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_009",
@@ -28409,7 +28643,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_010",
@@ -28486,7 +28721,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_011",
@@ -28563,7 +28799,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_012",
@@ -28640,7 +28877,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_013",
@@ -28717,7 +28955,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_014",
@@ -28794,7 +29033,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_015",
@@ -28871,7 +29111,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_016",
@@ -28948,7 +29189,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_017",
@@ -29025,7 +29267,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_018",
@@ -29102,7 +29345,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_019",
@@ -29179,7 +29423,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_020",
@@ -29256,7 +29501,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_021",
@@ -29333,7 +29579,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_022",
@@ -29410,7 +29657,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_023",
@@ -29487,7 +29735,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_024",
@@ -29564,7 +29813,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_025",
@@ -29641,7 +29891,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_026",
@@ -29718,7 +29969,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_027",
@@ -29795,7 +30047,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_028",
@@ -29872,7 +30125,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_029",
@@ -29949,7 +30203,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_030",
@@ -30026,7 +30281,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_031",
@@ -30103,7 +30359,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_032",
@@ -30180,7 +30437,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_033",
@@ -30257,7 +30515,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_034",
@@ -30334,7 +30593,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_035",
@@ -30411,7 +30671,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_036",
@@ -30488,7 +30749,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_037",
@@ -30565,7 +30827,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_038",
@@ -30642,7 +30905,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_039",
@@ -30719,7 +30983,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_040",
@@ -30796,7 +31061,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_041",
@@ -30873,7 +31139,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_042",
@@ -30950,7 +31217,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_043",
@@ -31027,7 +31295,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_044",
@@ -31104,7 +31373,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_045",
@@ -31181,7 +31451,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_046",
@@ -31258,7 +31529,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_047",
@@ -31335,7 +31607,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_048",
@@ -31412,7 +31685,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_049",
@@ -31489,7 +31763,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_050",
@@ -31566,7 +31841,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_051",
@@ -31643,7 +31919,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_052",
@@ -31720,7 +31997,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_053",
@@ -31797,7 +32075,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_054",
@@ -31874,7 +32153,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_055",
@@ -31951,7 +32231,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_056",
@@ -32028,7 +32309,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_057",
@@ -32105,7 +32387,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_058",
@@ -32182,7 +32465,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_059",
@@ -32259,7 +32543,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_WRITTEN_V160_060",
@@ -32336,7 +32621,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -54263,6 +54549,86 @@
             "关键取舍",
             "复盘迁移"
           ]
+        },
+        {
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "authenticity_level": "observed",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.catl.com/recruitment/",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/recruitment/",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点后生成的训练题。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "follow_up_questions": [
+            "如果资源减半，你会如何重排优先级？",
+            "你会如何设置里程碑和退出条件？",
+            "若首轮动作失败，二次迭代路径是什么？"
+          ],
+          "good_answer_signals": [
+            "目标与约束定义清晰",
+            "步骤可执行且可量化",
+            "复盘与风险控制完整"
+          ],
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【新能源-BMS工程师】在低温工况下SOC估算偏差扩大，请给出诊断思路、补偿策略和验证方案。",
+          "question_realness_note": "依据官方岗位职责和能力要求整理的训练题。",
+          "question_type": "系统机制与算法优化（官方岗位能力改编）",
+          "question_year": 2026,
+          "recruitment_stage": "campus_main_batch_written",
+          "reference_answer_outline": [
+            "定义目标与约束",
+            "给出可执行路径",
+            "列出指标与风险预案",
+            "说明复盘机制"
+          ],
+          "role_id": "IND_NEW_ENERGY_ROLE_002",
+          "role_name": "BMS工程师",
+          "round_label": "主批笔试",
+          "sample_size": 6,
+          "scenario_bucket": "system_process",
+          "scoring_dimensions": [
+            "结构化思维",
+            "业务判断",
+            "执行落地",
+            "复盘能力"
+          ],
+          "scoring_rubric": {
+            "A档": "方案完整、指标闭环、风险可控。",
+            "B档": "路径基本可行，但指标或边界不完整。",
+            "C档": "回答泛化，缺少落地动作与量化。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标",
+            "忽略约束和协同依赖",
+            "没有复盘闭环"
+          ],
+          "company_tier": "t2_strong",
+          "updated_at": "2026-02-24",
+          "question_id": "IND_NEW_ENERGY_WRITTEN_V163M_002_01"
         }
       ],
       "last_checked": "2026-02-19",
@@ -57881,7 +58247,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "authenticity_level": "real_user",
@@ -57955,7 +58322,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "authenticity_level": "curated",
@@ -58029,7 +58397,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -58103,7 +58472,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "authenticity_level": "real_user",
@@ -58177,7 +58547,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -58251,7 +58622,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -58325,7 +58697,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "authenticity_level": "curated",
@@ -58403,7 +58776,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "answer_framework": [
@@ -58481,7 +58855,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "answer_framework": [
@@ -58559,7 +58934,8 @@
             "再推进关键动作",
             "最后沉淀机制与标准"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "answer_framework": [
@@ -58637,7 +59013,8 @@
             "再推进关键动作",
             "最后沉淀机制与标准"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -58715,7 +59092,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -58793,7 +59171,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -58871,7 +59250,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -58949,7 +59329,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -59027,7 +59408,8 @@
             "再推动协同执行并实时监控关键指标。",
             "最后复盘沉淀机制并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -59105,7 +59487,8 @@
             "再推动协同执行并实时监控关键指标。",
             "最后复盘沉淀机制并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -59183,7 +59566,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -59261,7 +59645,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -59339,7 +59724,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -59417,7 +59803,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -59495,7 +59882,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -59573,7 +59961,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -59651,7 +60040,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -59729,7 +60119,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -59807,7 +60198,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -59885,7 +60277,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -59963,7 +60356,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -60041,7 +60435,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -60119,7 +60514,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -60197,7 +60593,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -60275,7 +60672,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -60353,7 +60751,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -60431,7 +60830,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -60509,7 +60909,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -60587,7 +60988,8 @@
             "再推进协同执行并实时监控指标。",
             "最后复盘沉淀并跟踪改进。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -60665,7 +61067,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -60743,7 +61146,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "real_user",
@@ -60821,7 +61225,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -60899,7 +61304,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -60977,7 +61383,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "real_user",
@@ -61055,7 +61462,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "real_user",
@@ -61133,7 +61541,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "authenticity_level": "real_user",
@@ -61211,7 +61620,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -61289,7 +61699,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "authenticity_level": "real_user",
@@ -61367,7 +61778,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "authenticity_level": "real_user",
@@ -61445,7 +61857,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "authenticity_level": "real_user",
@@ -61523,7 +61936,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "authenticity_level": "real_user",
@@ -61601,7 +62015,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "authenticity_level": "real_user",
@@ -61679,7 +62094,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "authenticity_level": "real_user",
@@ -61757,7 +62173,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "authenticity_level": "real_user",
@@ -61835,7 +62252,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_001",
@@ -61913,7 +62331,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_002",
@@ -61991,7 +62410,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_003",
@@ -62069,7 +62489,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_004",
@@ -62147,7 +62568,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_005",
@@ -62225,7 +62647,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_006",
@@ -62303,7 +62726,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_007",
@@ -62381,7 +62805,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_008",
@@ -62459,7 +62884,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_009",
@@ -62537,7 +62963,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_010",
@@ -62615,7 +63042,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_011",
@@ -62693,7 +63121,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_EXP_012",
@@ -62771,7 +63200,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_HGX_001",
@@ -62844,7 +63274,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_HGX_002",
@@ -62917,7 +63348,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_HGX_003",
@@ -62990,7 +63422,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_HGX_004",
@@ -63063,7 +63496,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_HGX_005",
@@ -63136,7 +63570,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_HGX_006",
@@ -63209,7 +63644,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_HGX_007",
@@ -63282,7 +63718,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_HGX_008",
@@ -63355,7 +63792,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_HGX_009",
@@ -63428,7 +63866,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_HGX_010",
@@ -63501,7 +63940,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_HGX_011",
@@ -63574,7 +64014,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_HGX_012",
@@ -63647,7 +64088,8 @@
             "stat_definition": "按行业扩展包逐条填充并保留来源字段。",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "business_scenario"
         },
         {
           "authenticity_level": "curated",
@@ -63721,7 +64163,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "authenticity_level": "curated",
@@ -63795,7 +64238,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
         },
         {
           "authenticity_level": "curated",
@@ -63869,7 +64313,8 @@
             "再按阶段推进动作并跟踪过程指标。",
             "最后复盘沉淀机制并输出下轮优化计划。"
           ],
-          "company_tier": "t2_strong"
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "answer_framework": [
@@ -63947,7 +64392,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_053",
@@ -64021,7 +64467,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_054",
@@ -64095,7 +64542,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_055",
@@ -64169,7 +64617,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_056",
@@ -64243,7 +64692,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_057",
@@ -64317,7 +64767,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_058",
@@ -64391,7 +64842,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_059",
@@ -64465,7 +64917,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_060",
@@ -64539,7 +64992,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_061",
@@ -64613,7 +65067,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_062",
@@ -64687,7 +65142,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_063",
@@ -64761,7 +65217,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_064",
@@ -64835,7 +65292,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_065",
@@ -64909,7 +65367,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_066",
@@ -64983,7 +65442,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_067",
@@ -65057,7 +65517,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_068",
@@ -65131,7 +65592,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_069",
@@ -65205,7 +65667,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_070",
@@ -65279,7 +65742,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_071",
@@ -65353,7 +65817,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_072",
@@ -65427,7 +65892,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "business_scenario"
         },
         {
           "answer_framework": [
@@ -65505,7 +65971,8 @@
             "再推进关键动作",
             "最后沉淀机制与标准"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -65583,7 +66050,8 @@
             "再推进关键动作",
             "最后沉淀机制与标准"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -65661,7 +66129,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "answer_framework": [
@@ -65739,7 +66208,8 @@
             "再推进关键动作闭环，保证核心指标回稳。",
             "最后沉淀机制与看板，降低同类问题复发。"
           ],
-          "company_tier": "t1_head"
+          "company_tier": "t1_head",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_077",
@@ -65813,7 +66283,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_078",
@@ -65887,7 +66358,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_079",
@@ -65961,7 +66433,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_080",
@@ -66035,7 +66508,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_081",
@@ -66109,7 +66583,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_082",
@@ -66183,7 +66658,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_083",
@@ -66257,7 +66733,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_084",
@@ -66331,7 +66808,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_085",
@@ -66405,7 +66883,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_086",
@@ -66479,7 +66958,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_087",
@@ -66553,7 +67033,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_088",
@@ -66627,7 +67108,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_089",
@@ -66701,7 +67183,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_090",
@@ -66775,7 +67258,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_091",
@@ -66849,7 +67333,8 @@
             "data_period": "2026年度"
           },
           "updated_at": "2026-02-19",
-          "is_template": false
+          "is_template": false,
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_001",
@@ -66926,7 +67411,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_002",
@@ -67003,7 +67489,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_003",
@@ -67080,7 +67567,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_004",
@@ -67157,7 +67645,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_005",
@@ -67234,7 +67723,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_006",
@@ -67311,7 +67801,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_007",
@@ -67388,7 +67879,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_008",
@@ -67465,7 +67957,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_009",
@@ -67542,7 +68035,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_010",
@@ -67619,7 +68113,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_011",
@@ -67696,7 +68191,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_012",
@@ -67773,7 +68269,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_013",
@@ -67850,7 +68347,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_014",
@@ -67927,7 +68425,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_015",
@@ -68004,7 +68503,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_016",
@@ -68081,7 +68581,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_017",
@@ -68158,7 +68659,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_018",
@@ -68235,7 +68737,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_019",
@@ -68312,7 +68815,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_020",
@@ -68389,7 +68893,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_021",
@@ -68466,7 +68971,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_022",
@@ -68543,7 +69049,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_023",
@@ -68620,7 +69127,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_024",
@@ -68697,7 +69205,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_025",
@@ -68774,7 +69283,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_026",
@@ -68851,7 +69361,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_027",
@@ -68928,7 +69439,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_028",
@@ -69005,7 +69517,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_029",
@@ -69082,7 +69595,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_030",
@@ -69159,7 +69673,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_031",
@@ -69236,7 +69751,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_032",
@@ -69313,7 +69829,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_033",
@@ -69390,7 +69907,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_034",
@@ -69467,7 +69985,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_035",
@@ -69544,7 +70063,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_036",
@@ -69621,7 +70141,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V159D_037",
@@ -69698,7 +70219,8 @@
             "captured_at": "2026-02-19",
             "data_period": "2026年度"
           },
-          "updated_at": "2026-02-19"
+          "updated_at": "2026-02-19",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_001",
@@ -69775,7 +70297,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_002",
@@ -69852,7 +70375,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_003",
@@ -69929,7 +70453,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_004",
@@ -70006,7 +70531,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_005",
@@ -70083,7 +70609,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_006",
@@ -70160,7 +70687,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_007",
@@ -70237,7 +70765,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_008",
@@ -70314,7 +70843,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_009",
@@ -70391,7 +70921,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_010",
@@ -70468,7 +70999,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_011",
@@ -70545,7 +71077,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_012",
@@ -70622,7 +71155,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_013",
@@ -70699,7 +71233,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_014",
@@ -70776,7 +71311,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_015",
@@ -70853,7 +71389,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_016",
@@ -70930,7 +71467,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_017",
@@ -71007,7 +71545,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_018",
@@ -71084,7 +71623,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_019",
@@ -71161,7 +71701,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_020",
@@ -71238,7 +71779,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_021",
@@ -71315,7 +71857,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_022",
@@ -71392,7 +71935,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_023",
@@ -71469,7 +72013,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_024",
@@ -71546,7 +72091,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_025",
@@ -71623,7 +72169,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_026",
@@ -71700,7 +72247,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_027",
@@ -71777,7 +72325,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_028",
@@ -71854,7 +72403,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_029",
@@ -71931,7 +72481,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_030",
@@ -72008,7 +72559,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_031",
@@ -72085,7 +72637,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_032",
@@ -72162,7 +72715,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_033",
@@ -72239,7 +72793,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_034",
@@ -72316,7 +72871,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_035",
@@ -72393,7 +72949,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_036",
@@ -72470,7 +73027,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_037",
@@ -72547,7 +73105,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_038",
@@ -72624,7 +73183,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_039",
@@ -72701,7 +73261,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_040",
@@ -72778,7 +73339,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_041",
@@ -72855,7 +73417,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_042",
@@ -72932,7 +73495,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_043",
@@ -73009,7 +73573,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_044",
@@ -73086,7 +73651,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_045",
@@ -73163,7 +73729,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_046",
@@ -73240,7 +73807,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_047",
@@ -73317,7 +73885,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_048",
@@ -73394,7 +73963,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_049",
@@ -73471,7 +74041,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_050",
@@ -73548,7 +74119,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_051",
@@ -73625,7 +74197,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "metric_tradeoff"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_052",
@@ -73702,7 +74275,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_053",
@@ -73779,7 +74353,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "cross_team_collaboration"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_054",
@@ -73856,7 +74431,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_055",
@@ -73933,7 +74509,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_056",
@@ -74010,7 +74587,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_057",
@@ -74087,7 +74665,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_058",
@@ -74164,7 +74743,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "business_scenario"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_059",
@@ -74241,7 +74821,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "failure_review"
         },
         {
           "question_id": "IND_NEW_ENERGY_INTERVIEW_V160_060",
@@ -74318,7 +74899,8 @@
             ],
             "stat_definition": "v1.60手工扩容：岗位职责映射题。"
           },
-          "updated_at": "2026-02-20"
+          "updated_at": "2026-02-20",
+          "scenario_bucket": "system_process"
         },
         {
           "answer_framework": [
@@ -96245,6 +96827,86 @@
             "关键取舍",
             "复盘迁移"
           ]
+        },
+        {
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "authenticity_level": "observed",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.catl.com/recruitment/",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+            "source_name": "宁德时代官网",
+            "source_type": "company_official",
+            "source_url": "https://www.catl.com/recruitment/",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点后生成的训练题。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_CATL_COM_551E6E0C",
+              "SRC_AUTO_WWW_SUNGROWPOWER_COM_F48D14DB"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "follow_up_questions": [
+            "如果资源减半，你会如何重排优先级？",
+            "你会如何设置里程碑和退出条件？",
+            "若首轮动作失败，二次迭代路径是什么？"
+          ],
+          "good_answer_signals": [
+            "目标与约束定义清晰",
+            "步骤可执行且可量化",
+            "复盘与风险控制完整"
+          ],
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "若续航目标与电池安全边界冲突，你会如何在产品、测试和安全团队间推动决策？",
+          "question_realness_note": "依据官方岗位职责和能力要求整理的训练题。",
+          "question_type": "安全与性能取舍（官方岗位能力改编）",
+          "question_year": 2026,
+          "recruitment_stage": "campus_main_batch_interview",
+          "reference_answer_outline": [
+            "定义目标与约束",
+            "给出可执行路径",
+            "列出指标与风险预案",
+            "说明复盘机制"
+          ],
+          "role_id": "IND_NEW_ENERGY_ROLE_002",
+          "role_name": "BMS工程师",
+          "round_label": "主批面试",
+          "sample_size": 6,
+          "scenario_bucket": "metric_tradeoff",
+          "scoring_dimensions": [
+            "结构化思维",
+            "业务判断",
+            "执行落地",
+            "复盘能力"
+          ],
+          "scoring_rubric": {
+            "A档": "方案完整、指标闭环、风险可控。",
+            "B档": "路径基本可行，但指标或边界不完整。",
+            "C档": "回答泛化，缺少落地动作与量化。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标",
+            "忽略约束和协同依赖",
+            "没有复盘闭环"
+          ],
+          "company_tier": "t2_strong",
+          "updated_at": "2026-02-24",
+          "question_id": "IND_NEW_ENERGY_INTERVIEW_V163M_002_01"
         }
       ],
       "last_checked": "2026-02-19",

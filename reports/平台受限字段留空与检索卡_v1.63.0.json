@@ -1,0 +1,532 @@
+[
+  {
+    "industry": "农业与食品",
+    "industry_id": "IND_AGRI_FOOD",
+    "role_id": "IND_AGRI_FOOD_ROLE_002",
+    "role_name": "研发工程师",
+    "official_http": 200,
+    "boss_http": 200,
+    "xiaohongshu_http": 404,
+    "checked_at": "2026-02-23",
+    "action": "keep_blank_and_backfill",
+    "missing_fields": [
+      "城市分布",
+      "薪资区间P25/P50/P75",
+      "发布时间",
+      "批次/轮次",
+      "帖子ID/链接",
+      "样本量",
+      "截图时间"
+    ],
+    "where_to_search": [
+      "BOSS直聘网页端",
+      "小红书搜索页",
+      "牛客网面经"
+    ],
+    "boss_search_url": "https://www.zhipin.com/web/geek/job",
+    "boss_search_query": [
+      "应届生 食品研发 校招 上海",
+      "农业 食品 研发工程师 苏州"
+    ],
+    "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E9%A3%9F%E5%93%81%E7%A0%94%E5%8F%91%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F",
+    "xiaohongshu_search_query": [
+      "食品研发 校招 面经",
+      "快消 研发岗 offer"
+    ],
+    "how_to_search": [
+      "用企业校招页确认研发岗位口径后再抓取平台样本。",
+      "BOSS记录城市和发布时间，构建P25/P50/P75分位。",
+      "小红书仅作回忆补充并标注帖子ID。"
+    ],
+    "next_backfill_action": "补齐华东与华南至少各1个城市样本。"
+  },
+  {
+    "industry": "生物医药与器械",
+    "industry_id": "IND_BIOMED_DEVICE",
+    "role_id": "IND_BIOMED_DEVICE_ROLE_022",
+    "role_name": "医疗器械临床数据运营专员",
+    "official_http": 200,
+    "boss_http": 200,
+    "xiaohongshu_http": 404,
+    "checked_at": "2026-02-23",
+    "action": "keep_blank_and_backfill",
+    "missing_fields": [
+      "城市分布",
+      "薪资区间P25/P50/P75",
+      "发布时间",
+      "批次/轮次",
+      "帖子ID/链接",
+      "样本量",
+      "截图时间"
+    ],
+    "where_to_search": [
+      "BOSS直聘网页端",
+      "小红书搜索页",
+      "牛客网"
+    ],
+    "boss_search_url": "https://www.zhipin.com/web/geek/job",
+    "boss_search_query": [
+      "应届生 医疗器械 临床数据 运营 上海",
+      "临床数据运营 校招 北京"
+    ],
+    "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E4%B8%B4%E5%BA%8A%E6%95%B0%E6%8D%AE%20%E9%9D%A2%E7%BB%8F",
+    "xiaohongshu_search_query": [
+      "临床数据 运营 面经",
+      "医疗器械 临床数据 校招"
+    ],
+    "how_to_search": [
+      "先在药企/器械企业官方校招页确认岗位定义。",
+      "BOSS抓城市与发布时间，构建分位薪资样本。",
+      "小红书仅做回忆样本补充并记录帖子ID。"
+    ],
+    "next_backfill_action": "补齐沪京两地各1条有效样本。"
+  },
+  {
+    "industry": "化工与新材料",
+    "industry_id": "IND_CHEM_NEW_MATERIALS",
+    "role_id": "IND_CHEM_NEW_MATERIALS_ROLE_002",
+    "role_name": "工艺工程师",
+    "official_http": 200,
+    "boss_http": 200,
+    "xiaohongshu_http": 404,
+    "checked_at": "2026-02-23",
+    "action": "keep_blank_and_backfill",
+    "missing_fields": [
+      "城市分布",
+      "薪资区间P25/P50/P75",
+      "发布时间",
+      "批次/轮次",
+      "帖子ID/链接",
+      "样本量",
+      "截图时间"
+    ],
+    "where_to_search": [
+      "BOSS直聘网页端",
+      "小红书搜索页",
+      "牛客网面经"
+    ],
+    "boss_search_url": "https://www.zhipin.com/web/geek/job",
+    "boss_search_query": [
+      "应届生 化工 工艺工程师 苏州",
+      "新材料 工艺岗 校招 无锡"
+    ],
+    "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%B7%A5%E8%89%BA%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F",
+    "xiaohongshu_search_query": [
+      "化工 工艺工程师 校招",
+      "新材料 工艺岗 面经"
+    ],
+    "how_to_search": [
+      "官方校招页核对岗位职责后，再抓取平台样本。",
+      "BOSS筛选应届+本科+近30天并记录发布时间。",
+      "小红书记录帖子ID与截图时间，标记回忆样本。"
+    ],
+    "next_backfill_action": "优先补齐长三角城市样本并回填分位薪资。"
+  },
+  {
+    "industry": "公务员体系",
+    "industry_id": "IND_CIVIL_SERVICE",
+    "role_id": "IND_CIVIL_SERVICE_ROLE_002",
+    "role_name": "执法类岗",
+    "official_http": 200,
+    "boss_http": 200,
+    "xiaohongshu_http": 404,
+    "checked_at": "2026-02-23",
+    "action": "keep_blank_and_backfill",
+    "missing_fields": [
+      "城市分布",
+      "薪资区间P25/P50/P75",
+      "发布时间",
+      "批次/轮次",
+      "帖子ID/链接",
+      "样本量",
+      "截图时间"
+    ],
+    "where_to_search": [
+      "国家公务员局/各地人事考试网",
+      "小红书搜索页",
+      "牛客/论坛面经"
+    ],
+    "boss_search_url": "https://www.zhipin.com/web/geek/job",
+    "boss_search_query": [
+      "公务员 执法类 岗位 信息"
+    ],
+    "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%89%A7%E6%B3%95%E7%B1%BB%20%E9%9D%A2%E7%BB%8F",
+    "xiaohongshu_search_query": [
+      "执法类 岗位 面经",
+      "公考 执法类 上岸经验"
+    ],
+    "how_to_search": [
+      "公务体系优先以官方招录公告为主证据。",
+      "平台内容仅作面经训练样本，不作薪资强结论。",
+      "留存帖子ID、轮次与年份。"
+    ],
+    "next_backfill_action": "补齐近一年执法类面经样本与轮次信息。"
+  },
+  {
+    "industry": "教育与职教",
+    "industry_id": "IND_EDU_VOCATIONAL",
+    "role_id": "IND_EDU_VOCATIONAL_ROLE_002",
+    "role_name": "课程运营",
+    "official_http": 200,
+    "boss_http": 200,
+    "xiaohongshu_http": 404,
+    "checked_at": "2026-02-23",
+    "action": "keep_blank_and_backfill",
+    "missing_fields": [
+      "城市分布",
+      "薪资区间P25/P50/P75",
+      "发布时间",
+      "批次/轮次",
+      "帖子ID/链接",
+      "样本量",
+      "截图时间"
+    ],
+    "where_to_search": [
+      "BOSS直聘网页端",
+      "小红书搜索页",
+      "牛客网面经"
+    ],
+    "boss_search_url": "https://www.zhipin.com/web/geek/job",
+    "boss_search_query": [
+      "应届生 课程运营 职教 北京",
+      "校招 教育 课程运营 广州"
+    ],
+    "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E8%AF%BE%E7%A8%8B%E8%BF%90%E8%90%A5%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F",
+    "xiaohongshu_search_query": [
+      "课程运营 校招 面经",
+      "职教 课程运营 offer"
+    ],
+    "how_to_search": [
+      "优先校招官网核对岗位职责，再抓平台样本。",
+      "BOSS按“应届生+城市”筛选并保留发布时间。",
+      "小红书标注帖子ID和截图日期。"
+    ],
+    "next_backfill_action": "优先补齐一线城市样本并记录轮次信息。"
+  },
+  {
+    "industry": "能源与公用事业",
+    "industry_id": "IND_ENERGY_UTILITIES",
+    "role_id": "IND_ENERGY_UTILITIES_ROLE_022",
+    "role_name": "电力现货交易运营岗",
+    "official_http": 200,
+    "boss_http": 200,
+    "xiaohongshu_http": 404,
+    "checked_at": "2026-02-23",
+    "action": "keep_blank_and_backfill",
+    "missing_fields": [
+      "城市分布",
+      "薪资区间P25/P50/P75",
+      "发布时间",
+      "批次/轮次",
+      "帖子ID/链接",
+      "样本量",
+      "截图时间"
+    ],
+    "where_to_search": [
+      "BOSS直聘网页端",
+      "小红书搜索页",
+      "牛客网"
+    ],
+    "boss_search_url": "https://www.zhipin.com/web/geek/job",
+    "boss_search_query": [
+      "应届生 电力现货 交易运营 广州",
+      "能源 交易运营 校招 南京"
+    ],
+    "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%B5%E5%8A%9B%E4%BA%A4%E6%98%93%20%E9%9D%A2%E7%BB%8F",
+    "xiaohongshu_search_query": [
+      "电力交易 运营 面经",
+      "现货交易 校招 offer"
+    ],
+    "how_to_search": [
+      "先以国家能源局和电网企业校招口径确定岗位定义。",
+      "BOSS保留城市与发布时间用于分位统计。",
+      "小红书仅补面经并标记回忆样本。"
+    ],
+    "next_backfill_action": "补齐南方和华东至少各1条样本。"
+  },
+  {
+    "industry": "金融-银行",
+    "industry_id": "IND_FIN_BANK",
+    "role_id": "IND_FIN_BANK_ROLE_022",
+    "role_name": "普惠金融产品运营岗",
+    "official_http": 200,
+    "boss_http": 200,
+    "xiaohongshu_http": 404,
+    "checked_at": "2026-02-23",
+    "action": "keep_blank_and_backfill",
+    "missing_fields": [
+      "城市分布",
+      "薪资区间P25/P50/P75",
+      "发布时间",
+      "批次/轮次",
+      "帖子ID/链接",
+      "样本量",
+      "截图时间"
+    ],
+    "where_to_search": [
+      "BOSS直聘网页端",
+      "小红书搜索页",
+      "牛客网"
+    ],
+    "boss_search_url": "https://www.zhipin.com/web/geek/job",
+    "boss_search_query": [
+      "应届生 普惠金融 产品运营 银行",
+      "校招 银行 产品运营 普惠"
+    ],
+    "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%20%E9%9D%A2%E7%BB%8F",
+    "xiaohongshu_search_query": [
+      "普惠金融 产品运营 面经",
+      "银行 产品运营 offer"
+    ],
+    "how_to_search": [
+      "先对齐银行官方校招岗位口径。",
+      "BOSS保留发布时间和城市样本用于分位统计。",
+      "小红书面经仅作训练参考，记录帖子ID。"
+    ],
+    "next_backfill_action": "补齐至少3条银行普惠运营岗位样本。"
+  },
+  {
+    "industry": "金融-证券基金",
+    "industry_id": "IND_FIN_SECURITIES_FUND",
+    "role_id": "IND_FIN_SECURITIES_FUND_ROLE_022",
+    "role_name": "公募产品运营分析岗",
+    "official_http": 200,
+    "boss_http": 200,
+    "xiaohongshu_http": 404,
+    "checked_at": "2026-02-23",
+    "action": "keep_blank_and_backfill",
+    "missing_fields": [
+      "城市分布",
+      "薪资区间P25/P50/P75",
+      "发布时间",
+      "批次/轮次",
+      "帖子ID/链接",
+      "样本量",
+      "截图时间"
+    ],
+    "where_to_search": [
+      "BOSS直聘网页端",
+      "小红书搜索页",
+      "牛客网"
+    ],
+    "boss_search_url": "https://www.zhipin.com/web/geek/job",
+    "boss_search_query": [
+      "应届生 公募 产品运营 分析 上海",
+      "证券 基金 运营分析 校招"
+    ],
+    "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%85%AC%E5%8B%9F%20%E4%BA%A7%E5%93%81%E8%BF%90%E8%90%A5%20%E9%9D%A2%E7%BB%8F",
+    "xiaohongshu_search_query": [
+      "公募 产品运营 面经",
+      "基金 运营分析 offer"
+    ],
+    "how_to_search": [
+      "以基金公司官方招聘页为岗位口径主源。",
+      "BOSS记录城市、发布时间和样本量。",
+      "小红书只用于面经补充并标记回忆样本。"
+    ],
+    "next_backfill_action": "补齐沪深两地产品运营分析岗位样本。"
+  },
+  {
+    "industry": "事业单位体系",
+    "industry_id": "IND_PUBLIC_INSTITUTION",
+    "role_id": "IND_PUBLIC_INSTITUTION_ROLE_002",
+    "role_name": "医技岗",
+    "official_http": 200,
+    "boss_http": 200,
+    "xiaohongshu_http": 404,
+    "checked_at": "2026-02-23",
+    "action": "keep_blank_and_backfill",
+    "missing_fields": [
+      "城市分布",
+      "薪资区间P25/P50/P75",
+      "发布时间",
+      "批次/轮次",
+      "帖子ID/链接",
+      "样本量",
+      "截图时间"
+    ],
+    "where_to_search": [
+      "事业单位招聘公告",
+      "小红书搜索页",
+      "论坛面经"
+    ],
+    "boss_search_url": "https://www.zhipin.com/web/geek/job",
+    "boss_search_query": [
+      "事业单位 医技岗 招聘 城市"
+    ],
+    "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%8C%BB%E6%8A%80%E5%B2%97%20%E9%9D%A2%E7%BB%8F",
+    "xiaohongshu_search_query": [
+      "医技岗 面经",
+      "事业单位 医技 上岸"
+    ],
+    "how_to_search": [
+      "优先使用事业单位公开招聘公告和医院官网公告。",
+      "平台面经仅作训练参考，标注回忆样本。",
+      "记录公告发布日期和抓取时间。"
+    ],
+    "next_backfill_action": "补齐近一年医技岗公告样本及轮次信息。"
+  },
+  {
+    "industry": "事业单位体系",
+    "industry_id": "IND_PUBLIC_INSTITUTION",
+    "role_id": "IND_PUBLIC_INSTITUTION_ROLE_022",
+    "role_name": "事业单位绩效评价岗",
+    "official_http": 200,
+    "boss_http": 200,
+    "xiaohongshu_http": 404,
+    "checked_at": "2026-02-23",
+    "action": "keep_blank_and_backfill",
+    "missing_fields": [
+      "城市分布",
+      "薪资区间P25/P50/P75",
+      "发布时间",
+      "批次/轮次",
+      "帖子ID/链接",
+      "样本量",
+      "截图时间"
+    ],
+    "where_to_search": [
+      "事业单位招聘公告",
+      "小红书搜索页",
+      "面经社区"
+    ],
+    "boss_search_url": "https://www.zhipin.com/web/geek/job",
+    "boss_search_query": [
+      "事业单位 绩效评价 岗位 招聘"
+    ],
+    "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E4%BA%8B%E4%B8%9A%E5%8D%95%E4%BD%8D%20%E7%BB%A9%E6%95%88%20%E9%9D%A2%E7%BB%8F",
+    "xiaohongshu_search_query": [
+      "事业单位 绩效评价 面经",
+      "事业编 绩效岗 经验"
+    ],
+    "how_to_search": [
+      "优先官方招聘公告获取岗位口径。",
+      "平台样本仅用于训练补充，不做强薪资结论。",
+      "记录公告/帖子链接与截图时间。"
+    ],
+    "next_backfill_action": "补齐3条绩效评价岗位样本并标注轮次。"
+  },
+  {
+    "industry": "房地产与基建",
+    "industry_id": "IND_REAL_ESTATE_INFRA",
+    "role_id": "IND_REAL_ESTATE_INFRA_ROLE_002",
+    "role_name": "成本管理",
+    "official_http": 200,
+    "boss_http": 200,
+    "xiaohongshu_http": 404,
+    "checked_at": "2026-02-23",
+    "action": "keep_blank_and_backfill",
+    "missing_fields": [
+      "城市分布",
+      "薪资区间P25/P50/P75",
+      "发布时间",
+      "批次/轮次",
+      "帖子ID/链接",
+      "样本量",
+      "截图时间"
+    ],
+    "where_to_search": [
+      "BOSS直聘网页端",
+      "小红书搜索页",
+      "牛客网面经"
+    ],
+    "boss_search_url": "https://www.zhipin.com/web/geek/job",
+    "boss_search_query": [
+      "应届生 成本管理 房地产 基建 广州",
+      "校招 成本合约岗 上海"
+    ],
+    "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%88%90%E6%9C%AC%E7%AE%A1%E7%90%86%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F",
+    "xiaohongshu_search_query": [
+      "成本管理 校招 面经",
+      "房地产 成本岗 offer"
+    ],
+    "how_to_search": [
+      "优先企业校招页确认岗位口径后，再做平台样本抓取。",
+      "BOSS按城市和近30天筛选，保留职位发布时间。",
+      "小红书帖子需记录ID和截图时间。"
+    ],
+    "next_backfill_action": "两周内补齐至少3条城市+薪资+发布时间样本。"
+  },
+  {
+    "industry": "央国企体系",
+    "industry_id": "IND_STATE_OWNED_ENTERPRISE",
+    "role_id": "IND_STATE_OWNED_ENTERPRISE_ROLE_002",
+    "role_name": "工程技术岗",
+    "official_http": 200,
+    "boss_http": 200,
+    "xiaohongshu_http": 404,
+    "checked_at": "2026-02-23",
+    "action": "keep_blank_and_backfill",
+    "missing_fields": [
+      "城市分布",
+      "薪资区间P25/P50/P75",
+      "发布时间",
+      "批次/轮次",
+      "帖子ID/链接",
+      "样本量",
+      "截图时间"
+    ],
+    "where_to_search": [
+      "BOSS直聘网页端",
+      "小红书搜索页",
+      "牛客网面经"
+    ],
+    "boss_search_url": "https://www.zhipin.com/web/geek/job",
+    "boss_search_query": [
+      "应届生 央国企 工程技术岗 西安",
+      "校招 国企 工程岗 北京"
+    ],
+    "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%A4%AE%E5%9B%BD%E4%BC%81%20%E5%B7%A5%E7%A8%8B%E6%8A%80%E6%9C%AF%20%E6%A0%A1%E6%8B%9B",
+    "xiaohongshu_search_query": [
+      "央国企 工程技术岗 面经",
+      "国企 工程岗 offer"
+    ],
+    "how_to_search": [
+      "先在央国企校招页确认岗位分类和专业要求。",
+      "BOSS保留职位发布时间与城市分布。",
+      "小红书仅补面经样本并标记回忆来源。"
+    ],
+    "next_backfill_action": "按区域优先补齐3条有效样本。"
+  },
+  {
+    "industry": "通信与运营商",
+    "industry_id": "IND_TELECOM_OPERATOR",
+    "role_id": "IND_TELECOM_OPERATOR_ROLE_002",
+    "role_name": "通信研发",
+    "official_http": 200,
+    "boss_http": 200,
+    "xiaohongshu_http": 404,
+    "checked_at": "2026-02-23",
+    "action": "keep_blank_and_backfill",
+    "missing_fields": [
+      "城市分布",
+      "薪资区间P25/P50/P75",
+      "发布时间",
+      "批次/轮次",
+      "帖子ID/链接",
+      "样本量",
+      "截图时间"
+    ],
+    "where_to_search": [
+      "BOSS直聘网页端",
+      "小红书搜索页",
+      "牛客网笔面经"
+    ],
+    "boss_search_url": "https://www.zhipin.com/web/geek/job",
+    "boss_search_query": [
+      "应届生 通信研发 运营商 北京",
+      "校招 通信研发 云网融合 上海"
+    ],
+    "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E9%80%9A%E4%BF%A1%E7%A0%94%E5%8F%91%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F",
+    "xiaohongshu_search_query": [
+      "通信研发 校招 面经",
+      "运营商 通信研发 offer"
+    ],
+    "how_to_search": [
+      "先用企业校招官网确认岗位名称和职责，再去BOSS按城市筛选应届岗位。",
+      "小红书仅用于回忆样本补充，记录帖子ID与截图时间。",
+      "牛客用于题型与追问链补充，记录年份与轮次。"
+    ],
+    "next_backfill_action": "两周内补齐3条带城市与发布时间的平台样本。"
+  }
+]
