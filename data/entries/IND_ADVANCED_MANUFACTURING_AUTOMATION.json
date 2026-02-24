@@ -2558,30 +2558,50 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频面试追问"
+              "高频面试追问",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 机械工程师 校招",
-              "高端制造与工业自动化 机械工程师 应届生"
+              "高端制造与工业自动化 机械工程师 应届生",
+              "应届生 高端制造与工业自动化 机械工程师 北京",
+              "校招 机械工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 机械工程师 面经",
-              "高端制造与工业自动化 机械工程师 offer 薪资"
+              "高端制造与工业自动化 机械工程师 offer 薪资",
+              "机械工程师 校招 offer"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
+            "missing_fields": [
+              "帖子ID/链接",
+              "帖子发布时间",
+              "截图时间"
+            ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
+              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -2652,13 +2672,20 @@
                 "无法获取字段保持留空，不可使用估算值覆盖。"
               ],
               "expected_backfill_eta": "2026-03-15"
+            },
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
             }
           },
           "role_detail_v158": {
             "role_scope": "负责机械工程师相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 12,
-              "interview_count": 12,
+              "written_count": 14,
+              "interview_count": 14,
               "written_stages": [
                 "campus_early_batch_written",
                 "campus_main_batch_written",
@@ -2887,22 +2914,34 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频面试追问"
+              "高频面试追问",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
               "小红书App搜索",
-              "牛客网笔面试"
+              "牛客网笔面试",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 电气工程师 校招",
-              "高端制造与工业自动化 电气工程师 应届生"
+              "高端制造与工业自动化 电气工程师 应届生",
+              "应届生 高端制造与工业自动化 电气工程师 北京",
+              "校招 电气工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 电气工程师 面经",
-              "高端制造与工业自动化 电气工程师 offer 薪资"
+              "高端制造与工业自动化 电气工程师 offer 薪资",
+              "电气工程师 校招 offer"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
@@ -2912,12 +2951,17 @@
               "批次/轮次",
               "帖子ID/链接",
               "样本量",
-              "截图时间"
+              "截图时间",
+              "帖子发布时间"
             ],
             "how_to_search": [
               "先在企业官方招聘页确认“电气工程师”职责口径，再做平台检索。",
               "BOSS检索词建议：“应届生 电气工程师 IND_ADVANCED_MANUFACTURING_AUTOMATION 城市名”。",
-              "小红书仅作为回忆样本，必须记录帖子ID、截图时间与关键词。"
+              "小红书仅作为回忆样本，必须记录帖子ID、截图时间与关键词。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
             "updated_at": "2026-02-24",
             "placeholder_values": {
@@ -2973,13 +3017,20 @@
                 "checked_at": "2026-02-24",
                 "note": "页面可访问，但具体帖子需登录或App内检索后人工留痕。"
               }
-            ]
+            ],
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "role_detail_v158": {
             "role_scope": "负责电气工程师相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 13,
-              "interview_count": 13,
+              "written_count": 14,
+              "interview_count": 14,
               "written_stages": [
                 "campus_early_batch_written",
                 "campus_main_batch_written",
@@ -3125,7 +3176,7 @@
             "问题定位",
             "跨部门协作"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "专业笔试",
             "技术面",
@@ -3208,30 +3259,50 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频面试追问"
+              "高频面试追问",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 PLC工程师 校招",
-              "高端制造与工业自动化 PLC工程师 应届生"
+              "高端制造与工业自动化 PLC工程师 应届生",
+              "应届生 高端制造与工业自动化 PLC工程师 北京",
+              "校招 PLC工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 PLC工程师 面经",
-              "高端制造与工业自动化 PLC工程师 offer 薪资"
+              "高端制造与工业自动化 PLC工程师 offer 薪资",
+              "PLC工程师 校招 offer"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
+            "missing_fields": [
+              "帖子ID/链接",
+              "帖子发布时间",
+              "截图时间"
+            ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
+              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "10.20k/月",
@@ -3263,13 +3334,20 @@
               "city": "上海",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "role_detail_v158": {
             "role_scope": "负责PLC工程师相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 12,
-              "interview_count": 12,
+              "written_count": 14,
+              "interview_count": 14,
               "written_stages": [
                 "campus_main_batch_written",
                 "campus_supplement_written",
@@ -3284,7 +3362,49 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，PLC工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "PLC工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "工艺工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "质量工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "项目工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理PLC工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个PLC工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练PLC工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -3376,7 +3496,7 @@
             "问题定位",
             "跨部门协作"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "专业笔试",
             "技术面",
@@ -3459,30 +3579,50 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频面试追问"
+              "高频面试追问",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 工艺工程师 校招",
-              "高端制造与工业自动化 工艺工程师 应届生"
+              "高端制造与工业自动化 工艺工程师 应届生",
+              "应届生 高端制造与工业自动化 工艺工程师 北京",
+              "校招 工艺工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 工艺工程师 面经",
-              "高端制造与工业自动化 工艺工程师 offer 薪资"
+              "高端制造与工业自动化 工艺工程师 offer 薪资",
+              "工艺工程师 校招 offer"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
+            "missing_fields": [
+              "帖子ID/链接",
+              "帖子发布时间",
+              "截图时间"
+            ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
+              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.60k/月",
@@ -3514,13 +3654,20 @@
               "city": "苏州",
               "company_tier": "t3_regional"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "role_detail_v158": {
             "role_scope": "负责工艺工程师相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 12,
-              "interview_count": 12,
+              "written_count": 14,
+              "interview_count": 14,
               "written_stages": [
                 "campus_main_batch_written",
                 "campus_supplement_written",
@@ -3535,7 +3682,49 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，工艺工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "工艺工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "质量工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "项目工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            },
+            {
+              "target_role": "售前应用工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "5-8个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理工艺工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个工艺工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练工艺工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -3627,7 +3816,7 @@
             "问题定位",
             "跨部门协作"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "专业笔试",
             "技术面",
@@ -3710,30 +3899,50 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频面试追问"
+              "高频面试追问",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 质量工程师 校招",
-              "高端制造与工业自动化 质量工程师 应届生"
+              "高端制造与工业自动化 质量工程师 应届生",
+              "应届生 高端制造与工业自动化 质量工程师 北京",
+              "校招 质量工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 质量工程师 面经",
-              "高端制造与工业自动化 质量工程师 offer 薪资"
+              "高端制造与工业自动化 质量工程师 offer 薪资",
+              "质量工程师 校招 offer"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
+            "missing_fields": [
+              "帖子ID/链接",
+              "帖子发布时间",
+              "截图时间"
+            ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
+              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "10.56k/月",
@@ -3765,13 +3974,20 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "role_detail_v158": {
             "role_scope": "负责质量工程师相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 12,
-              "interview_count": 12,
+              "written_count": 14,
+              "interview_count": 14,
               "written_stages": [
                 "campus_main_batch_written",
                 "internship_conversion_written",
@@ -3786,7 +4002,49 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，质量工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "质量工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "项目工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            },
+            {
+              "target_role": "售前应用工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "5-8个月"
+            },
+            {
+              "target_role": "解决方案工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "6-9个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理质量工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个质量工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练质量工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -3879,7 +4137,7 @@
             "问题定位",
             "跨部门协作"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "专业笔试",
             "技术面",
@@ -3962,30 +4220,50 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频面试追问"
+              "高频面试追问",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 项目工程师 校招",
-              "高端制造与工业自动化 项目工程师 应届生"
+              "高端制造与工业自动化 项目工程师 应届生",
+              "应届生 高端制造与工业自动化 项目工程师 北京",
+              "校招 项目工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 项目工程师 面经",
-              "高端制造与工业自动化 项目工程师 offer 薪资"
+              "高端制造与工业自动化 项目工程师 offer 薪资",
+              "项目工程师 校招 offer"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
+            "missing_fields": [
+              "帖子ID/链接",
+              "帖子发布时间",
+              "截图时间"
+            ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
+              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "10.40k/月",
@@ -4017,13 +4295,20 @@
               "city": "杭州",
               "company_tier": "t3_regional"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "role_detail_v158": {
             "role_scope": "负责项目工程师相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 12,
-              "interview_count": 12,
+              "written_count": 14,
+              "interview_count": 14,
               "written_stages": [
                 "campus_main_batch_written",
                 "campus_supplement_written",
@@ -4038,7 +4323,49 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，项目工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "项目工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "售前应用工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "5-8个月"
+            },
+            {
+              "target_role": "解决方案工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "工业数据分析工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "7-10个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理项目工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个项目工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练项目工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -4125,34 +4452,58 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频面试追问"
+              "高频面试追问",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 售前应用工程师 校招",
-              "高端制造与工业自动化 售前应用工程师 应届生"
+              "高端制造与工业自动化 售前应用工程师 应届生",
+              "应届生 高端制造与工业自动化 售前应用工程师 北京",
+              "校招 售前应用工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 售前应用工程师 校招 面经",
-              "高端制造与工业自动化 售前应用工程师 offer 薪资"
+              "高端制造与工业自动化 售前应用工程师 offer 薪资",
+              "高端制造与工业自动化 售前应用工程师 面经",
+              "售前应用工程师 校招 offer"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
+              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -4184,7 +4535,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_slots": [
             {
@@ -4222,7 +4580,7 @@
               "evidence_hint": "至少给出1个量化结果与复盘改进。"
             }
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "high_score_answer_example": "在高端制造与工业自动化售前应用工程师面试中，高分回答应先定义业务目标与边界，再说明你如何基于业务建模与问题拆解定位核心问题、用数据分析与指标体系推进落地，最后给出量化结果、风险应对和复盘改进。",
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_007_STAR_PUBLIC_2026V159B",
@@ -4291,6 +4649,48 @@
             "缺少量化结果与复盘",
             "回答缺少业务建模与问题拆解的可验证落地证据。",
             "方案没有明确数据分析与指标体系推进路径与协同边界。"
+          ],
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，售前应用工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "售前应用工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "解决方案工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "工业数据分析工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "设备可靠性工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理售前应用工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个售前应用工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练售前应用工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
           ]
         },
         {
@@ -4378,34 +4778,58 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频面试追问"
+              "高频面试追问",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造 解决方案工程师 校招",
-              "工业自动化 解决方案工程师 应届生"
+              "工业自动化 解决方案工程师 应届生",
+              "应届生 高端制造与工业自动化 解决方案工程师 北京",
+              "校招 解决方案工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
             "xiaohongshu_search_query": [
               "高端制造 解决方案工程师 校招 面经",
-              "工业自动化 解决方案工程师 offer 薪资"
+              "工业自动化 解决方案工程师 offer 薪资",
+              "高端制造与工业自动化 解决方案工程师 面经",
+              "解决方案工程师 校招 offer"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
+              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -4437,7 +4861,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_slots": [
             {
@@ -4475,7 +4906,7 @@
               "evidence_hint": "至少给出1个量化结果与复盘改进。"
             }
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "high_score_answer_example": "在高端制造与工业自动化解决方案工程师面试中，高分回答应先定义业务目标与边界，再说明你如何基于业务建模与问题拆解定位核心问题、用数据分析与指标体系推进落地，最后给出量化结果、风险应对和复盘改进。",
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_008_STAR_PUBLIC_2026V159B",
@@ -4544,6 +4975,48 @@
             "缺少量化结果与复盘",
             "回答缺少业务建模与问题拆解的可验证落地证据。",
             "方案没有明确数据分析与指标体系推进路径与协同边界。"
+          ],
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，解决方案工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "解决方案工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "工业数据分析工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "设备可靠性工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            },
+            {
+              "target_role": "工业互联网产品经理",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "5-8个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理解决方案工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个解决方案工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练解决方案工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
           ]
         },
         {
@@ -4631,34 +5104,57 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频面试追问"
+              "高频面试追问",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 工业数据分析工程师 校招",
-              "高端制造与工业自动化 工业数据分析工程师 应届生"
+              "高端制造与工业自动化 工业数据分析工程师 应届生",
+              "应届生 高端制造与工业自动化 工业数据分析工程师 北京",
+              "校招 工业数据分析工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 工业数据分析工程师 面经",
-              "高端制造与工业自动化 工业数据分析工程师 offer 薪资"
+              "高端制造与工业自动化 工业数据分析工程师 offer 薪资",
+              "工业数据分析工程师 校招 offer"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
+              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -4690,7 +5186,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_slots": [
             {
@@ -4728,7 +5231,7 @@
               "evidence_hint": "至少给出1个量化结果与复盘改进。"
             }
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "high_score_answer_example": "在高端制造与工业自动化工业数据分析工程师面试中，高分回答应先定义业务目标与边界，再说明你如何基于系统建模与实现定位核心问题、用数据分析与指标体系推进落地，最后给出量化结果、风险应对和复盘改进。",
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_009_STAR_PUBLIC_2026V159B",
@@ -4797,6 +5300,48 @@
             "缺少量化结果与复盘",
             "回答缺少系统建模与实现的可验证落地证据。",
             "方案没有明确数据分析与指标体系推进路径与协同边界。"
+          ],
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，工业数据分析工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "工业数据分析工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "设备可靠性工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            },
+            {
+              "target_role": "工业互联网产品经理",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "5-8个月"
+            },
+            {
+              "target_role": "机器视觉工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "6-9个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理工业数据分析工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个工业数据分析工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练工业数据分析工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
           ]
         },
         {
@@ -4884,34 +5429,57 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频面试追问"
+              "高频面试追问",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 设备可靠性工程师 校招",
-              "高端制造与工业自动化 设备可靠性工程师 应届生"
+              "高端制造与工业自动化 设备可靠性工程师 应届生",
+              "应届生 高端制造与工业自动化 设备可靠性工程师 北京",
+              "校招 设备可靠性工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 设备可靠性工程师 面经",
-              "高端制造与工业自动化 设备可靠性工程师 offer 薪资"
+              "高端制造与工业自动化 设备可靠性工程师 offer 薪资",
+              "设备可靠性工程师 校招 offer"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
+              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -4943,7 +5511,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_slots": [
             {
@@ -4981,7 +5556,7 @@
               "evidence_hint": "至少给出1个量化结果与复盘改进。"
             }
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "high_score_answer_example": "在高端制造与工业自动化设备可靠性工程师面试中，高分回答应先定义业务目标与边界，再说明你如何基于系统建模与实现定位核心问题、用数据分析与指标体系推进落地，最后给出量化结果、风险应对和复盘改进。",
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_010_STAR_PUBLIC_2026V159B",
@@ -5050,6 +5625,48 @@
             "缺少量化结果与复盘",
             "回答缺少系统建模与实现的可验证落地证据。",
             "方案没有明确数据分析与指标体系推进路径与协同边界。"
+          ],
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，设备可靠性工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "设备可靠性工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "工业互联网产品经理",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "机器视觉工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "工业机器人调试工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理设备可靠性工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个设备可靠性工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练设备可靠性工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
           ]
         },
         {
@@ -5137,34 +5754,57 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频面试追问"
+              "高频面试追问",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 工业互联网产品经理 校招",
-              "高端制造与工业自动化 工业互联网产品经理 应届生"
+              "高端制造与工业自动化 工业互联网产品经理 应届生",
+              "应届生 高端制造与工业自动化 工业互联网产品经理 北京",
+              "校招 工业互联网产品经理 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 工业互联网产品经理 面经",
-              "高端制造与工业自动化 工业互联网产品经理 offer 薪资"
+              "高端制造与工业自动化 工业互联网产品经理 offer 薪资",
+              "工业互联网产品经理 校招 offer"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
+              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -5196,7 +5836,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_slots": [
             {
@@ -5234,7 +5881,7 @@
               "evidence_hint": "至少给出1个量化结果与复盘改进。"
             }
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "high_score_answer_example": "在高端制造与工业自动化工业互联网产品经理面试中，高分回答应先定义业务目标与边界，再说明你如何基于目标拆解与策略设计定位核心问题、用增长实验与转化优化推进落地，最后给出量化结果、风险应对和复盘改进。",
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_011_STAR_PUBLIC_2026V159B",
@@ -5303,6 +5950,48 @@
             "缺少量化结果与复盘",
             "回答缺少目标拆解与策略设计的可验证落地证据。",
             "方案没有明确增长实验与转化优化推进路径与协同边界。"
+          ],
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，工业互联网产品经理岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "工业互联网产品经理常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "机器视觉工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "需求拆解",
+                "指标体系",
+                "结果复盘表达"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "工业机器人调试工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "指标体系",
+                "跨团队推进",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            },
+            {
+              "target_role": "MES实施工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "跨团队推进",
+                "需求拆解",
+                "结果复盘表达"
+              ],
+              "transition_period": "5-8个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理工业互联网产品经理岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个工业互联网产品经理相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练工业互联网产品经理高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
           ]
         },
         {
@@ -5390,34 +6079,57 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频面试追问"
+              "高频面试追问",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 机器视觉工程师 校招",
-              "高端制造与工业自动化 机器视觉工程师 应届生"
+              "高端制造与工业自动化 机器视觉工程师 应届生",
+              "应届生 高端制造与工业自动化 机器视觉工程师 北京",
+              "校招 机器视觉工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 机器视觉工程师 面经",
-              "高端制造与工业自动化 机器视觉工程师 offer 薪资"
+              "高端制造与工业自动化 机器视觉工程师 offer 薪资",
+              "机器视觉工程师 校招 offer"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
+              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -5449,7 +6161,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_slots": [
             {
@@ -5487,7 +6206,7 @@
               "evidence_hint": "至少给出1个量化结果与复盘改进。"
             }
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "high_score_answer_example": "在高端制造与工业自动化机器视觉工程师面试中，高分回答应先定义业务目标与边界，再说明你如何基于系统设计与工程实现定位核心问题、用数据分析与性能优化推进落地，最后给出量化结果、风险应对和复盘改进。",
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_012_STAR_PUBLIC_2026V159B",
@@ -5556,6 +6275,48 @@
             "缺少量化结果与复盘",
             "回答缺少系统设计与工程实现的可验证落地证据。",
             "方案没有明确数据分析与性能优化推进路径与协同边界。"
+          ],
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，机器视觉工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "机器视觉工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "工业机器人调试工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            },
+            {
+              "target_role": "MES实施工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "5-8个月"
+            },
+            {
+              "target_role": "工业软件实施工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "6-9个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理机器视觉工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个机器视觉工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练机器视觉工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
           ]
         },
         {
@@ -5643,34 +6404,58 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频面试追问"
+              "高频面试追问",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "工业机器人 调试工程师 校招",
-              "自动化 调试 应届生"
+              "自动化 调试 应届生",
+              "应届生 高端制造与工业自动化 工业机器人调试工程师 北京",
+              "校招 工业机器人调试工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
             "xiaohongshu_search_query": [
               "机器人调试 面经",
-              "工业自动化 校招 岗位"
+              "工业自动化 校招 岗位",
+              "高端制造与工业自动化 工业机器人调试工程师 面经",
+              "工业机器人调试工程师 校招 offer"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
+              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -5702,7 +6487,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_slots": [
             {
@@ -5744,7 +6536,7 @@
               "evidence_hint": "用STAR说明你在项目中如何应用“故障诊断与恢复”，并给出可量化结果。"
             }
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "high_score_answer_example": "在高端制造与工业自动化工业机器人调试工程师面试中，可按“场景-动作-指标-复盘”结构回答并给出可验证结果。",
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_013_STAR_PUBLIC_2026",
@@ -5813,6 +6605,48 @@
             "忽视约束与风险边界",
             "回答缺少机器人离线编程的可验证落地证据。",
             "方案没有明确产线联调优化推进路径与协同边界。"
+          ],
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，工业机器人调试工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "工业机器人调试工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "MES实施工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "5-8个月"
+            },
+            {
+              "target_role": "工业软件实施工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "产线数字孪生工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "7-10个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理工业机器人调试工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个工业机器人调试工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练工业机器人调试工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
           ]
         },
         {
@@ -5900,34 +6734,58 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频面试追问"
+              "高频面试追问",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "MES 实施工程师 校招",
-              "制造执行系统 应届生"
+              "制造执行系统 应届生",
+              "应届生 高端制造与工业自动化 MES实施工程师 北京",
+              "校招 MES实施工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
             "xiaohongshu_search_query": [
               "MES实施 面经",
-              "制造数字化 岗位"
+              "制造数字化 岗位",
+              "高端制造与工业自动化 MES实施工程师 面经",
+              "MES实施工程师 校招 offer"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
+              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -5959,7 +6817,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_slots": [
             {
@@ -6001,7 +6866,7 @@
               "evidence_hint": "用STAR说明你在项目中如何应用“上线切换管理”，并给出可量化结果。"
             }
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "high_score_answer_example": "在高端制造与工业自动化MES实施工程师面试中，可按“场景-动作-指标-复盘”结构回答并给出可验证结果。",
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_014_STAR_PUBLIC_2026",
@@ -6070,6 +6935,48 @@
             "忽视约束与风险边界",
             "回答缺少MES流程建模的可验证落地证据。",
             "方案没有明确车间数据集成推进路径与协同边界。"
+          ],
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，MES实施工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "MES实施工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "工业软件实施工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "产线数字孪生工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "自动化控制工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理MES实施工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个MES实施工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练MES实施工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
           ]
         },
         {
@@ -6157,34 +7064,58 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频面试追问"
+              "高频面试追问",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "工业软件实施工程师 校招",
-              "高端制造与工业自动化 工业软件实施工程师 应届"
+              "高端制造与工业自动化 工业软件实施工程师 应届",
+              "应届生 高端制造与工业自动化 工业软件实施工程师 北京",
+              "校招 工业软件实施工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
             "xiaohongshu_search_query": [
               "工业软件实施工程师 面经",
-              "高端制造与工业自动化 工业软件实施工程师 offer"
+              "高端制造与工业自动化 工业软件实施工程师 offer",
+              "高端制造与工业自动化 工业软件实施工程师 面经",
+              "工业软件实施工程师 校招 offer"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
+              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -6216,7 +7147,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_slots": [
             {
@@ -6258,7 +7196,7 @@
               "evidence_hint": "用STAR说明你在项目中如何应用“用户培训与验收”，并给出可量化结果。"
             }
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "high_score_answer_example": "在高端制造与工业自动化工业软件实施工程师面试中，先明确目标与约束，再给执行方案、量化结果与复盘改进。",
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_015_STAR_PUBLIC_2026",
@@ -6327,6 +7265,48 @@
             "忽略约束与风险边界",
             "回答缺少MES流程配置的可验证落地证据。",
             "方案没有明确产线数据集成推进路径与协同边界。"
+          ],
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，工业软件实施工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "工业软件实施工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "产线数字孪生工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "自动化控制工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            },
+            {
+              "target_role": "工业软件工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "5-8个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理工业软件实施工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个工业软件实施工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练工业软件实施工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
           ]
         },
         {
@@ -6414,34 +7394,58 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频面试追问"
+              "高频面试追问",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "产线数字孪生工程师 校招",
-              "高端制造与工业自动化 产线数字孪生工程师 应届"
+              "高端制造与工业自动化 产线数字孪生工程师 应届",
+              "应届生 高端制造与工业自动化 产线数字孪生工程师 北京",
+              "校招 产线数字孪生工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%A0%A1%E6%8B%9B",
             "xiaohongshu_search_query": [
               "产线数字孪生工程师 面经",
-              "高端制造与工业自动化 产线数字孪生工程师 offer"
+              "高端制造与工业自动化 产线数字孪生工程师 offer",
+              "高端制造与工业自动化 产线数字孪生工程师 面经",
+              "产线数字孪生工程师 校招 offer"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
-              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
+              "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -6473,7 +7477,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_slots": [
             {
@@ -6515,7 +7526,7 @@
               "evidence_hint": "用STAR说明你在项目中如何应用“虚实联动验证”，并给出可量化结果。"
             }
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "high_score_answer_example": "在高端制造与工业自动化产线数字孪生工程师面试中，先明确目标与约束，再给执行方案、量化结果与复盘改进。",
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_016_STAR_PUBLIC_2026",
@@ -6584,6 +7595,48 @@
             "忽略约束与风险边界",
             "回答缺少产线仿真建模的可验证落地证据。",
             "方案没有明确实时数据映射推进路径与协同边界。"
+          ],
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，产线数字孪生工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "产线数字孪生工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "自动化控制工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            },
+            {
+              "target_role": "工业软件工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "5-8个月"
+            },
+            {
+              "target_role": "视觉算法工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "6-9个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理产线数字孪生工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个产线数字孪生工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练产线数字孪生工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
           ]
         },
         {
@@ -6591,7 +7644,7 @@
           "role_name": "自动化控制工程师",
           "authenticity_level": "curated",
           "data_origin": "manual_role_profile_fill_v158",
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "degree_preference": "本科及以上，相关专业优先",
           "major_restriction": "相关专业优先，跨专业需补充项目证据",
           "english_requirement": "根据岗位场景，通常基础到中等",
@@ -6728,34 +7781,57 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频追问链"
+              "高频追问链",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20%E8%87%AA%E5%8A%A8%E5%8C%96%E6%8E%A7%E5%88%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 自动化控制工程师 校招",
-              "应届生 自动化控制工程师"
+              "应届生 自动化控制工程师",
+              "应届生 高端制造与工业自动化 自动化控制工程师 北京",
+              "校招 自动化控制工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20%E8%87%AA%E5%8A%A8%E5%8C%96%E6%8E%A7%E5%88%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E9%9D%A2%E7%BB%8F",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 自动化控制工程师 面经",
-              "高端制造与工业自动化 自动化控制工程师 offer 薪资"
+              "高端制造与工业自动化 自动化控制工程师 offer 薪资",
+              "自动化控制工程师 校招 offer"
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -6787,7 +7863,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_001_STAR_PUBLIC_2026V159",
@@ -6830,14 +7913,56 @@
               "指标追踪报表",
               "复盘纪要与改进清单"
             ]
-          }
+          },
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，自动化控制工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "自动化控制工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "工业软件工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "5-8个月"
+            },
+            {
+              "target_role": "视觉算法工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "机器人应用工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "7-10个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理自动化控制工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个自动化控制工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练自动化控制工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
+          ]
         },
         {
           "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_002",
           "role_name": "工业软件工程师",
           "authenticity_level": "curated",
           "data_origin": "manual_role_profile_fill_v158",
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "degree_preference": "本科及以上，相关专业优先",
           "major_restriction": "相关专业优先，跨专业需补充项目证据",
           "english_requirement": "根据岗位场景，通常基础到中等",
@@ -6974,34 +8099,57 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频追问链"
+              "高频追问链",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20%E5%B7%A5%E4%B8%9A%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 工业软件工程师 校招",
-              "应届生 工业软件工程师"
+              "应届生 工业软件工程师",
+              "应届生 高端制造与工业自动化 工业软件工程师 北京",
+              "校招 工业软件工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20%E5%B7%A5%E4%B8%9A%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E9%9D%A2%E7%BB%8F",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 工业软件工程师 面经",
-              "高端制造与工业自动化 工业软件工程师 offer 薪资"
+              "高端制造与工业自动化 工业软件工程师 offer 薪资",
+              "工业软件工程师 校招 offer"
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -7033,7 +8181,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_002_STAR_PUBLIC_2026V159",
@@ -7076,14 +8231,56 @@
               "指标追踪报表",
               "复盘纪要与改进清单"
             ]
-          }
+          },
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，工业软件工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "工业软件工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "视觉算法工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "机器人应用工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "生产计划工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理工业软件工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个工业软件工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练工业软件工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
+          ]
         },
         {
           "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_003",
           "role_name": "视觉算法工程师",
           "authenticity_level": "curated",
           "data_origin": "manual_role_profile_fill_v158",
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "degree_preference": "本科及以上，相关专业优先",
           "major_restriction": "相关专业优先，跨专业需补充项目证据",
           "english_requirement": "根据岗位场景，通常基础到中等",
@@ -7220,34 +8417,57 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频追问链"
+              "高频追问链",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20%E8%A7%86%E8%A7%89%E7%AE%97%E6%B3%95%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 视觉算法工程师 校招",
-              "应届生 视觉算法工程师"
+              "应届生 视觉算法工程师",
+              "应届生 高端制造与工业自动化 视觉算法工程师 北京",
+              "校招 视觉算法工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20%E8%A7%86%E8%A7%89%E7%AE%97%E6%B3%95%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E9%9D%A2%E7%BB%8F",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 视觉算法工程师 面经",
-              "高端制造与工业自动化 视觉算法工程师 offer 薪资"
+              "高端制造与工业自动化 视觉算法工程师 offer 薪资",
+              "视觉算法工程师 校招 offer"
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -7279,7 +8499,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_003_STAR_PUBLIC_2026V159",
@@ -7322,14 +8549,56 @@
               "指标追踪报表",
               "复盘纪要与改进清单"
             ]
-          }
+          },
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，视觉算法工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "视觉算法工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "机器人应用工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "生产计划工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            },
+            {
+              "target_role": "设备维护工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "5-8个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理视觉算法工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个视觉算法工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练视觉算法工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
+          ]
         },
         {
           "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_004",
           "role_name": "机器人应用工程师",
           "authenticity_level": "curated",
           "data_origin": "manual_role_profile_fill_v158",
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "degree_preference": "本科及以上，相关专业优先",
           "major_restriction": "相关专业优先，跨专业需补充项目证据",
           "english_requirement": "根据岗位场景，通常基础到中等",
@@ -7466,34 +8735,57 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频追问链"
+              "高频追问链",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%BA%94%E7%94%A8%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 机器人应用工程师 校招",
-              "应届生 机器人应用工程师"
+              "应届生 机器人应用工程师",
+              "应届生 高端制造与工业自动化 机器人应用工程师 北京",
+              "校招 机器人应用工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%BA%94%E7%94%A8%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E9%9D%A2%E7%BB%8F",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 机器人应用工程师 面经",
-              "高端制造与工业自动化 机器人应用工程师 offer 薪资"
+              "高端制造与工业自动化 机器人应用工程师 offer 薪资",
+              "机器人应用工程师 校招 offer"
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -7525,7 +8817,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_004_STAR_PUBLIC_2026V159",
@@ -7568,14 +8867,56 @@
               "指标追踪报表",
               "复盘纪要与改进清单"
             ]
-          }
+          },
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，机器人应用工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "机器人应用工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "生产计划工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            },
+            {
+              "target_role": "设备维护工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "5-8个月"
+            },
+            {
+              "target_role": "供应链工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "6-9个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理机器人应用工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个机器人应用工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练机器人应用工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
+          ]
         },
         {
           "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_006",
           "role_name": "生产计划工程师",
           "authenticity_level": "curated",
           "data_origin": "manual_role_profile_fill_v158",
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "degree_preference": "本科及以上，相关专业优先",
           "major_restriction": "相关专业优先，跨专业需补充项目证据",
           "english_requirement": "根据岗位场景，通常基础到中等",
@@ -7712,34 +9053,57 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频追问链"
+              "高频追问链",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20%E7%94%9F%E4%BA%A7%E8%AE%A1%E5%88%92%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 生产计划工程师 校招",
-              "应届生 生产计划工程师"
+              "应届生 生产计划工程师",
+              "应届生 高端制造与工业自动化 生产计划工程师 北京",
+              "校招 生产计划工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20%E7%94%9F%E4%BA%A7%E8%AE%A1%E5%88%92%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E9%9D%A2%E7%BB%8F",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 生产计划工程师 面经",
-              "高端制造与工业自动化 生产计划工程师 offer 薪资"
+              "高端制造与工业自动化 生产计划工程师 offer 薪资",
+              "生产计划工程师 校招 offer"
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -7771,7 +9135,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_006_STAR_PUBLIC_2026V159",
@@ -7814,14 +9185,56 @@
               "指标追踪报表",
               "复盘纪要与改进清单"
             ]
-          }
+          },
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，生产计划工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "生产计划工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "设备维护工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "供应链工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "售前解决方案工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理生产计划工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个生产计划工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练生产计划工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
+          ]
         },
         {
           "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_008",
           "role_name": "设备维护工程师",
           "authenticity_level": "curated",
           "data_origin": "manual_role_profile_fill_v158",
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "degree_preference": "本科及以上，相关专业优先",
           "major_restriction": "相关专业优先，跨专业需补充项目证据",
           "english_requirement": "根据岗位场景，通常基础到中等",
@@ -7958,34 +9371,57 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频追问链"
+              "高频追问链",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20%E8%AE%BE%E5%A4%87%E7%BB%B4%E6%8A%A4%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 设备维护工程师 校招",
-              "应届生 设备维护工程师"
+              "应届生 设备维护工程师",
+              "应届生 高端制造与工业自动化 设备维护工程师 北京",
+              "校招 设备维护工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20%E8%AE%BE%E5%A4%87%E7%BB%B4%E6%8A%A4%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E9%9D%A2%E7%BB%8F",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 设备维护工程师 面经",
-              "高端制造与工业自动化 设备维护工程师 offer 薪资"
+              "高端制造与工业自动化 设备维护工程师 offer 薪资",
+              "设备维护工程师 校招 offer"
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -8017,7 +9453,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_008_STAR_PUBLIC_2026V159",
@@ -8060,14 +9503,56 @@
               "指标追踪报表",
               "复盘纪要与改进清单"
             ]
-          }
+          },
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，设备维护工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "设备维护工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "供应链工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            },
+            {
+              "target_role": "售前解决方案工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "5-8个月"
+            },
+            {
+              "target_role": "MES实施工程师（产线数字化）",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "6-9个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理设备维护工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个设备维护工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练设备维护工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
+          ]
         },
         {
           "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_009",
           "role_name": "供应链工程师",
           "authenticity_level": "curated",
           "data_origin": "manual_role_profile_fill_v158",
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "degree_preference": "本科及以上，相关专业优先",
           "major_restriction": "相关专业优先，跨专业需补充项目证据",
           "english_requirement": "根据岗位场景，通常基础到中等",
@@ -8204,34 +9689,57 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频追问链"
+              "高频追问链",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20%E4%BE%9B%E5%BA%94%E9%93%BE%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 供应链工程师 校招",
-              "应届生 供应链工程师"
+              "应届生 供应链工程师",
+              "应届生 高端制造与工业自动化 供应链工程师 北京",
+              "校招 供应链工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20%E4%BE%9B%E5%BA%94%E9%93%BE%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E9%9D%A2%E7%BB%8F",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 供应链工程师 面经",
-              "高端制造与工业自动化 供应链工程师 offer 薪资"
+              "高端制造与工业自动化 供应链工程师 offer 薪资",
+              "供应链工程师 校招 offer"
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -8263,7 +9771,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_009_STAR_PUBLIC_2026V159",
@@ -8306,14 +9821,56 @@
               "指标追踪报表",
               "复盘纪要与改进清单"
             ]
-          }
+          },
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，供应链工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "供应链工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "售前解决方案工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "5-8个月"
+            },
+            {
+              "target_role": "MES实施工程师（产线数字化）",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "项目管理工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "7-10个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理供应链工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个供应链工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练供应链工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
+          ]
         },
         {
           "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_010",
           "role_name": "售前解决方案工程师",
           "authenticity_level": "curated",
           "data_origin": "manual_role_profile_fill_v158",
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "degree_preference": "本科及以上，相关专业优先",
           "major_restriction": "相关专业优先，跨专业需补充项目证据",
           "english_requirement": "根据岗位场景，通常基础到中等",
@@ -8450,34 +10007,57 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频追问链"
+              "高频追问链",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20%E5%94%AE%E5%89%8D%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 售前解决方案工程师 校招",
-              "应届生 售前解决方案工程师"
+              "应届生 售前解决方案工程师",
+              "应届生 高端制造与工业自动化 售前解决方案工程师 北京",
+              "校招 售前解决方案工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20%E5%94%AE%E5%89%8D%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E9%9D%A2%E7%BB%8F",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 售前解决方案工程师 面经",
-              "高端制造与工业自动化 售前解决方案工程师 offer 薪资"
+              "高端制造与工业自动化 售前解决方案工程师 offer 薪资",
+              "售前解决方案工程师 校招 offer"
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -8509,7 +10089,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_010_STAR_PUBLIC_2026V159",
@@ -8552,14 +10139,56 @@
               "指标追踪报表",
               "复盘纪要与改进清单"
             ]
-          }
+          },
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，售前解决方案工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "售前解决方案工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "MES实施工程师（产线数字化）",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "项目管理工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            },
+            {
+              "target_role": "机械工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "5-8个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理售前解决方案工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个售前解决方案工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练售前解决方案工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
+          ]
         },
         {
           "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_011",
           "role_name": "MES实施工程师（产线数字化）",
           "authenticity_level": "curated",
           "data_origin": "manual_role_profile_fill_v158",
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "degree_preference": "本科及以上，相关专业优先",
           "major_restriction": "相关专业优先，跨专业需补充项目证据",
           "english_requirement": "根据岗位场景，通常基础到中等",
@@ -8696,34 +10325,57 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频追问链"
+              "高频追问链",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20MES%E5%AE%9E%E6%96%BD%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 MES实施工程师（产线数字化） 校招",
-              "应届生 MES实施工程师（产线数字化）"
+              "应届生 MES实施工程师（产线数字化）",
+              "应届生 高端制造与工业自动化 MES实施工程师（产线数字化） 北京",
+              "校招 MES实施工程师（产线数字化） 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20MES%E5%AE%9E%E6%96%BD%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E9%9D%A2%E7%BB%8F",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 MES实施工程师（产线数字化） 面经",
-              "高端制造与工业自动化 MES实施工程师（产线数字化） offer 薪资"
+              "高端制造与工业自动化 MES实施工程师（产线数字化） offer 薪资",
+              "MES实施工程师（产线数字化） 校招 offer"
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -8755,7 +10407,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_011_STAR_PUBLIC_2026V159",
@@ -8798,14 +10457,56 @@
               "指标追踪报表",
               "复盘纪要与改进清单"
             ]
-          }
+          },
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，MES实施工程师（产线数字化）岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "MES实施工程师（产线数字化）常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "项目管理工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "4-6个月"
+            },
+            {
+              "target_role": "机械工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "5-8个月"
+            },
+            {
+              "target_role": "电气工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "6-9个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理MES实施工程师（产线数字化）岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个MES实施工程师（产线数字化）相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练MES实施工程师（产线数字化）高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
+          ]
         },
         {
           "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_012",
           "role_name": "项目管理工程师",
           "authenticity_level": "curated",
           "data_origin": "manual_role_profile_fill_v158",
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "degree_preference": "本科及以上，相关专业优先",
           "major_restriction": "相关专业优先，跨专业需补充项目证据",
           "english_requirement": "根据岗位场景，通常基础到中等",
@@ -8942,34 +10643,57 @@
               "城市分布",
               "薪酬区间P25/P50/P75",
               "公司层级",
-              "高频追问链"
+              "高频追问链",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App端搜索",
+              "企业校招官网岗位详情页",
+              "牛客网笔试/面试题库",
+              "小红书App搜索（网页不可达时）"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
               "高端制造与工业自动化 项目管理工程师 校招",
-              "应届生 项目管理工程师"
+              "应届生 项目管理工程师",
+              "应届生 高端制造与工业自动化 项目管理工程师 北京",
+              "校招 项目管理工程师 高端制造与工业自动化 上海"
             ],
             "xiaohongshu_search_url": "https://www.xiaohongshu.com/search_result/?keyword=%E9%AB%98%E7%AB%AF%E5%88%B6%E9%80%A0%E4%B8%8E%E5%B7%A5%E4%B8%9A%E8%87%AA%E5%8A%A8%E5%8C%96%20%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88%20%E9%9D%A2%E7%BB%8F",
             "xiaohongshu_search_query": [
               "高端制造与工业自动化 项目管理工程师 面经",
-              "高端制造与工业自动化 项目管理工程师 offer 薪资"
+              "高端制造与工业自动化 项目管理工程师 offer 薪资",
+              "项目管理工程师 校招 offer"
             ],
             "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
             "missing_fields": [
               "BOSS同城同岗薪资分位样本",
               "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "平台截图证据路径",
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
               "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
               "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "小红书优先App检索，记录帖子ID与截图时间。",
+              "先用企业校招官网确认岗位职责与能力口径，再采集平台样本。",
+              "BOSS按“应届生+岗位+城市+近30天发布时间”筛选，并记录薪资分位。",
+              "小红书仅作面经补充，需记录帖子ID、发布时间与截图时间。",
+              "若网页端不可达，保留留空字段并记录检索入口、关键词与回填时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
               "城市分布": "深圳、合肥、上海",
               "薪资区间P25": "9.78k/月",
@@ -9001,7 +10725,14 @@
               "city": "深圳",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。",
+            "unavailable_capture_log_v164": {
+              "checked_at": "2026-02-24",
+              "boss_search_http": 200,
+              "xiaohongshu_search_http": 404,
+              "nowcoder_http": 200,
+              "note": "小红书网页检索返回404，按规范保留留空字段并登记回填计划。"
+            }
           },
           "project_evidence_public_sample": {
             "sample_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_HGX_012_STAR_PUBLIC_2026V159",
@@ -9044,7 +10775,49 @@
               "指标追踪报表",
               "复盘纪要与改进清单"
             ]
-          }
+          },
+          "career_outlook_3to5_year": "高端制造与工业自动化未来3-5年将持续向“智能制造与产线数字化协同升级”演进，项目管理工程师岗位会从单点执行转向结果导向与跨团队协同，兼具业务理解、数据复盘和落地能力的人才机会更高。",
+          "typical_work_week": "项目管理工程师常见周节奏为“周初目标对齐与任务拆解、周中执行推进与跨团队协同、周末指标复盘与机制优化”；在关键发布或交付节点，加班与沟通密度会明显上升。",
+          "switch_directions": [
+            {
+              "target_role": "机械工程师",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "系统设计",
+                "数据分析",
+                "结果复盘表达"
+              ],
+              "transition_period": "5-8个月"
+            },
+            {
+              "target_role": "电气工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "数据分析",
+                "问题定位",
+                "结果复盘表达"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "PLC工程师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "问题定位",
+                "系统设计",
+                "结果复盘表达"
+              ],
+              "transition_period": "7-10个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理项目管理工程师岗位JD能力项，建立知识与项目差距清单。",
+            "31-60天：完成1个项目管理工程师相关小型项目，沉淀“问题-动作-结果-复盘”证据。",
+            "61-90天：按提前批/主批/补录节奏训练项目管理工程师高频笔面试题并整理错题。",
+            "91-120天：补齐关键方法论与工具链，形成可复用模板。",
+            "121-150天：进行2轮模拟面试，重点强化追问链与取舍表达。",
+            "151-180天：整理岗位证据包（项目文档、指标结果、复盘记录），用于网申与面试。"
+          ]
         }
       ],
       "last_checked": "2026-02-19",
@@ -9065,7 +10838,7 @@
       "stale_on": "2026-03-21",
       "stale_status": "fresh",
       "template_data_ratio_percent": 0,
-      "updated_at": "2026-02-19",
+      "updated_at": "2026-02-24",
       "payload": {
         "personalization_examples": [
           {
@@ -35791,6 +37564,847 @@
           "company_tier": "t2_strong",
           "updated_at": "2026-02-24",
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V163M_002_01"
+        },
+        {
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "difficulty_1to5": 3,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_NOWCODER_WRITTEN_BACKEND_2026",
+            "source_name": "牛客网-软件开发笔试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+              "SRC_NBS_INCOME_2025_FULLYEAR"
+            ],
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:机械工程师｜阶段:主批笔试】请结合一个真实业务场景，说明你如何拆解目标、推进执行并复盘结果（第13题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V164_R_001_13",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+          "question_type": "业务场景分析题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_main_batch_written",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_001",
+          "role_name": "机械工程师",
+          "round_label": "主批笔试",
+          "updated_at": "2026-02-24",
+          "sample_size": 12,
+          "scoring_dimensions": [
+            "问题拆解",
+            "指标敏感度",
+            "方案可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排机械工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
+        },
+        {
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "difficulty_1to5": 3,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_NOWCODER_WRITTEN_BACKEND_2026",
+            "source_name": "牛客网-软件开发笔试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库的高频题回忆样本，已补题干与岗位标签。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+              "SRC_NBS_INCOME_2025_FULLYEAR"
+            ],
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:机械工程师｜阶段:实习转正笔试】请基于一次失败案例，说明你如何定位根因、纠偏并沉淀机制（第14题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V164_R_001_14",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+          "question_type": "失败复盘题",
+          "question_year": 2026,
+          "recruitment_stage": "internship_conversion_written",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_001",
+          "role_name": "机械工程师",
+          "round_label": "实习转正笔试",
+          "updated_at": "2026-02-24",
+          "sample_size": 12,
+          "scoring_dimensions": [
+            "问题拆解",
+            "指标敏感度",
+            "方案可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排机械工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
+        },
+        {
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "difficulty_1to5": 3,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.71,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 8,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "stat_definition": "基于公开岗位能力要求与工业自动化排障场景整理的题型样例（非官方原题，待补真实题干）。",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:电气工程师｜阶段:实习转正笔试】在资源受限或时间压缩的情况下，你会如何进行指标取舍并说明边界条件（第14题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V164_R_002_14",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+          "question_type": "指标取舍题",
+          "question_year": 2026,
+          "recruitment_stage": "internship_conversion_written",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_002",
+          "role_name": "电气工程师",
+          "round_label": "实习转正笔试",
+          "updated_at": "2026-02-24",
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "指标敏感度",
+            "方案可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排电气工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
+        },
+        {
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.78,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_NOWCODER_WRITTEN_BACKEND_2026",
+            "source_name": "牛客网-软件开发笔试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:PLC工程师｜阶段:提前批笔试】请结合一个真实业务场景，说明你如何拆解目标、推进执行并复盘结果（第13题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V164_R_003_13",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+          "question_type": "业务场景分析题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_early_batch_written",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_003",
+          "role_name": "PLC工程师",
+          "round_label": "提前批笔试",
+          "updated_at": "2026-02-24",
+          "sample_size": 12,
+          "scoring_dimensions": [
+            "问题拆解",
+            "指标敏感度",
+            "方案可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排PLC工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
+        },
+        {
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.78,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_NOWCODER_WRITTEN_BACKEND_2026",
+            "source_name": "牛客网-软件开发笔试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:PLC工程师｜阶段:补录笔试】请基于一次失败案例，说明你如何定位根因、纠偏并沉淀机制（第14题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V164_R_003_14",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+          "question_type": "失败复盘题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_supplement_written",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_003",
+          "role_name": "PLC工程师",
+          "round_label": "补录笔试",
+          "updated_at": "2026-02-24",
+          "sample_size": 12,
+          "scoring_dimensions": [
+            "问题拆解",
+            "指标敏感度",
+            "方案可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排PLC工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
+        },
+        {
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.78,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_NOWCODER_WRITTEN_BACKEND_2026",
+            "source_name": "牛客网-软件开发笔试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:工艺工程师｜阶段:主批笔试】请设计一套工艺工程师可落地的流程机制，并说明关键门禁与风险控制点（第13题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V164_R_004_13",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+          "question_type": "流程设计题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_main_batch_written",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_004",
+          "role_name": "工艺工程师",
+          "round_label": "主批笔试",
+          "updated_at": "2026-02-24",
+          "sample_size": 12,
+          "scoring_dimensions": [
+            "问题拆解",
+            "指标敏感度",
+            "方案可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排工艺工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
+        },
+        {
+          "answer_framework": [
+            "问题定义",
+            "分析方法",
+            "执行步骤",
+            "结果复盘"
+          ],
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.78,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_NOWCODER_WRITTEN_BACKEND_2026",
+            "source_name": "牛客网-软件开发笔试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:工艺工程师｜阶段:实习转正笔试】当跨团队目标冲突时，你会如何对齐口径、推进决策并保证交付（第14题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V164_R_004_14",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+          "question_type": "协同推进题",
+          "question_year": 2026,
+          "recruitment_stage": "internship_conversion_written",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_004",
+          "role_name": "工艺工程师",
+          "round_label": "实习转正笔试",
+          "updated_at": "2026-02-24",
+          "sample_size": 12,
+          "scoring_dimensions": [
+            "问题拆解",
+            "指标敏感度",
+            "方案可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排工艺工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
+        },
+        {
+          "answer_framework": [
+            "问题定义与边界确认",
+            "关键指标与数据口径",
+            "执行方案与优先级",
+            "风险预案与复盘机制"
+          ],
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "difficulty_1to5": 3,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.78,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_NOWCODER_WRITTEN_BACKEND_2026",
+            "source_name": "牛客网-软件开发笔试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:质量工程师｜阶段:补录笔试】请基于一次失败案例，说明你如何定位根因、纠偏并沉淀机制（第13题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V164_R_005_13",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+          "question_type": "失败复盘题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_supplement_written",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_005",
+          "role_name": "质量工程师",
+          "round_label": "补录笔试",
+          "updated_at": "2026-02-24",
+          "sample_size": 12,
+          "scoring_dimensions": [
+            "问题拆解",
+            "指标敏感度",
+            "方案可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排质量工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
+        },
+        {
+          "answer_framework": [
+            "问题定义与边界确认",
+            "关键指标与数据口径",
+            "执行方案与优先级",
+            "风险预案与复盘机制"
+          ],
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "difficulty_1to5": 3,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.78,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 12,
+            "snapshot_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_NOWCODER_WRITTEN_BACKEND_2026",
+            "source_name": "牛客网-软件开发笔试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/company?questionJobId=10&subTabName=written_page",
+            "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:质量工程师｜阶段:提前批笔试】在资源受限或时间压缩的情况下，你会如何进行指标取舍并说明边界条件（第14题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V164_R_005_14",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+          "question_type": "指标取舍题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_early_batch_written",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_005",
+          "role_name": "质量工程师",
+          "round_label": "提前批笔试",
+          "updated_at": "2026-02-24",
+          "sample_size": 12,
+          "scoring_dimensions": [
+            "问题拆解",
+            "指标敏感度",
+            "方案可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排质量工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
+        },
+        {
+          "answer_framework": [
+            "问题澄清与目标拆解",
+            "关键指标与数据口径",
+            "执行方案与资源协同",
+            "结果复盘与下一步优化"
+          ],
+          "authenticity_level": "official",
+          "data_origin": "official_jd_competency_mapping",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.83,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 8,
+            "snapshot_url": "https://www.inovance.com",
+            "source_date": "2026-02-18",
+            "source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+            "source_name": "汇川技术官网",
+            "source_type": "company_official",
+            "source_url": "https://www.inovance.com",
+            "stat_definition": "基于企业官方校招岗位说明整理的项目工程师官方样题映射题。",
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:项目工程师｜阶段:实习转正笔试】当跨团队目标冲突时，你会如何对齐口径、推进决策并保证交付（第13题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V164_R_006_13",
+          "question_realness_note": "基于企业官方岗位说明与校招流程公开信息整理的官方样题映射（非官方原卷）。",
+          "question_type": "协同推进题",
+          "question_year": 2026,
+          "recruitment_stage": "internship_conversion_written",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_006",
+          "role_name": "项目工程师",
+          "round_label": "实习转正笔试",
+          "updated_at": "2026-02-24",
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "指标意识",
+            "方案可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排项目工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "方案具备明确里程碑、责任分工和风险预案，并有量化验收标准。",
+            "B档": "有执行动作但缺少关键约束与复盘机制。",
+            "C档": "只给原则性建议，缺少具体推进路径。"
+          },
+          "common_mistakes": [
+            "只关注进度不关注质量返工风险。",
+            "跨部门职责边界不清晰。",
+            "没有定义周度验收与纠偏阈值。"
+          ],
+          "good_answer_signals": [
+            "里程碑拆解清楚且可验证。",
+            "能平衡工期、成本和质量约束。",
+            "包含异常场景下的止损与复盘。"
+          ],
+          "reference_answer_outline": [
+            "先完成风险分级和关键路径重排。",
+            "按周推进联调、验收和问题闭环。",
+            "复盘返工根因并沉淀标准流程。"
+          ],
+          "company_tier": "t1_head",
+          "scenario_bucket": "cross_team_collaboration"
+        },
+        {
+          "answer_framework": [
+            "问题澄清与目标拆解",
+            "关键指标与数据口径",
+            "执行方案与资源协同",
+            "结果复盘与下一步优化"
+          ],
+          "authenticity_level": "official",
+          "data_origin": "official_jd_competency_mapping",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.83,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 8,
+            "snapshot_url": "https://www.inovance.com",
+            "source_date": "2026-02-18",
+            "source_id": "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+            "source_name": "汇川技术官网",
+            "source_type": "company_official",
+            "source_url": "https://www.inovance.com",
+            "stat_definition": "基于企业官方校招岗位说明整理的项目工程师官方样题映射题。",
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_MOHRSS_CHUNFENG_PROGRESS_2026"
+            ],
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:项目工程师｜阶段:主批笔试】请结合一个真实业务场景，说明你如何拆解目标、推进执行并复盘结果（第14题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_WRITTEN_V164_R_006_14",
+          "question_realness_note": "基于企业官方岗位说明与校招流程公开信息整理的官方样题映射（非官方原卷）。",
+          "question_type": "业务场景分析题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_main_batch_written",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_006",
+          "role_name": "项目工程师",
+          "round_label": "主批笔试",
+          "updated_at": "2026-02-24",
+          "sample_size": 8,
+          "scoring_dimensions": [
+            "问题拆解",
+            "指标意识",
+            "方案可执行性",
+            "风险控制"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排项目工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "方案具备明确里程碑、责任分工和风险预案，并有量化验收标准。",
+            "B档": "有执行动作但缺少关键约束与复盘机制。",
+            "C档": "只给原则性建议，缺少具体推进路径。"
+          },
+          "common_mistakes": [
+            "只关注进度不关注质量返工风险。",
+            "跨部门职责边界不清晰。",
+            "没有定义周度验收与纠偏阈值。"
+          ],
+          "good_answer_signals": [
+            "里程碑拆解清楚且可验证。",
+            "能平衡工期、成本和质量约束。",
+            "包含异常场景下的止损与复盘。"
+          ],
+          "reference_answer_outline": [
+            "先完成风险分级和关键路径重排。",
+            "按周推进联调、验收和问题闭环。",
+            "复盘返工根因并沉淀标准流程。"
+          ],
+          "company_tier": "t1_head",
+          "scenario_bucket": "business_scenario"
         }
       ],
       "last_checked": "2026-02-19",
@@ -36059,7 +38673,7 @@
       "stale_on": "2026-03-21",
       "stale_status": "fresh",
       "template_data_ratio_percent": 0,
-      "updated_at": "2026-02-19",
+      "updated_at": "2026-02-24",
       "payload": {
         "source_diversification": {
           "current": {
@@ -63233,6 +65847,847 @@
           "company_tier": "t2_strong",
           "updated_at": "2026-02-24",
           "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V163M_002_01"
+        },
+        {
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "difficulty_1to5": 3,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
+            "source_name": "牛客网-软件开发面试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+              "SRC_NBS_INCOME_2025_FULLYEAR"
+            ],
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:机械工程师｜阶段:实习转正面试】当跨团队目标冲突时，你会如何对齐口径、推进决策并保证交付（第13题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V164_R_001_13",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+          "question_type": "跨团队冲突处理题",
+          "question_year": 2026,
+          "recruitment_stage": "internship_conversion_interview",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_001",
+          "role_name": "机械工程师",
+          "round_label": "实习转正面试",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "业务理解",
+            "复盘深度"
+          ],
+          "updated_at": "2026-02-24",
+          "sample_size": 10,
+          "answer_framework": [
+            "问题澄清与目标定义",
+            "方案拆解与执行步骤",
+            "结果指标与业务影响",
+            "复盘改进与迁移应用"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排机械工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
+        },
+        {
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "difficulty_1to5": 3,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
+            "source_name": "牛客网-软件开发面试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开高频面试题库的回忆题样本，适用于应届生首轮面。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_INOVANCE_COM_3C75604F",
+              "SRC_NBS_INCOME_2025_FULLYEAR"
+            ],
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:机械工程师｜阶段:主批面试】请结合一个真实业务场景，说明你如何拆解目标、推进执行并复盘结果（第14题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V164_R_001_14",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）；并参考官方招聘信息口径校对",
+          "question_type": "业务情景应答题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_main_batch_interview",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_001",
+          "role_name": "机械工程师",
+          "round_label": "主批面试",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "业务理解",
+            "复盘深度"
+          ],
+          "updated_at": "2026-02-24",
+          "sample_size": 10,
+          "answer_framework": [
+            "问题澄清与目标定义",
+            "方案拆解与执行步骤",
+            "结果指标与业务影响",
+            "复盘改进与迁移应用"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排机械工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
+        },
+        {
+          "authenticity_level": "curated",
+          "data_origin": "curated_from_public_jd_and_process",
+          "difficulty_1to5": 3,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.71,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 8,
+            "snapshot_url": "https://www.ncss.cn/student/24365",
+            "source_date": "2026-02-16",
+            "source_id": "SRC_NCSS_2026_JOINT",
+            "source_name": "国家大学生就业服务平台-2026届高校毕业生全国网络联合招聘",
+            "source_type": "government_platform",
+            "source_url": "https://www.ncss.cn/student/24365",
+            "stat_definition": "基于公开岗位面试流程与制造现场协同场景整理的问答样例（非官方原题，待补真实题干）。",
+            "publish_date": "2026-02-16",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:电气工程师｜阶段:主批面试】请基于一次失败案例，说明你如何定位根因、纠偏并沉淀机制（第14题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V164_R_002_14",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+          "question_type": "失败复盘面试题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_main_batch_interview",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_002",
+          "role_name": "电气工程师",
+          "round_label": "主批面试",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "业务理解",
+            "复盘深度"
+          ],
+          "updated_at": "2026-02-24",
+          "sample_size": 8,
+          "answer_framework": [
+            "场景分级与止损优先级",
+            "定位路径与关键证据",
+            "协同动作与备选方案",
+            "复盘机制与预防措施"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排电气工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
+        },
+        {
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.77,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
+            "source_name": "牛客网-软件开发面试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:PLC工程师｜阶段:补录面试】当跨团队目标冲突时，你会如何对齐口径、推进决策并保证交付（第13题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V164_R_003_13",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+          "question_type": "跨团队冲突处理题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_supplement_interview",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_003",
+          "role_name": "PLC工程师",
+          "round_label": "补录面试",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "业务理解",
+            "复盘深度"
+          ],
+          "updated_at": "2026-02-24",
+          "sample_size": 10,
+          "answer_framework": [
+            "问题澄清与目标定义",
+            "方案拆解与执行步骤",
+            "结果指标与业务影响",
+            "复盘改进与迁移应用"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排PLC工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "cross_team_collaboration"
+        },
+        {
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.77,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
+            "source_name": "牛客网-软件开发面试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:PLC工程师｜阶段:提前批面试】请结合一个真实业务场景，说明你如何拆解目标、推进执行并复盘结果（第14题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V164_R_003_14",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+          "question_type": "业务情景应答题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_early_batch_interview",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_003",
+          "role_name": "PLC工程师",
+          "round_label": "提前批面试",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "业务理解",
+            "复盘深度"
+          ],
+          "updated_at": "2026-02-24",
+          "sample_size": 10,
+          "answer_framework": [
+            "问题澄清与目标定义",
+            "方案拆解与执行步骤",
+            "结果指标与业务影响",
+            "复盘改进与迁移应用"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排PLC工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
+        },
+        {
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.77,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
+            "source_name": "牛客网-软件开发面试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:工艺工程师｜阶段:实习转正面试】在资源受限或时间压缩的情况下，你会如何进行指标取舍并说明边界条件（第13题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V164_R_004_13",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+          "question_type": "资源取舍追问题",
+          "question_year": 2026,
+          "recruitment_stage": "internship_conversion_interview",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_004",
+          "role_name": "工艺工程师",
+          "round_label": "实习转正面试",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "业务理解",
+            "复盘深度"
+          ],
+          "updated_at": "2026-02-24",
+          "sample_size": 10,
+          "answer_framework": [
+            "场景分级与止损优先级",
+            "定位路径与关键证据",
+            "协同动作与备选方案",
+            "复盘机制与预防措施"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排工艺工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "metric_tradeoff"
+        },
+        {
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.77,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
+            "source_name": "牛客网-软件开发面试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:工艺工程师｜阶段:主批面试】请设计一套工艺工程师可落地的流程机制，并说明关键门禁与风险控制点（第14题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V164_R_004_14",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+          "question_type": "流程改进追问题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_main_batch_interview",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_004",
+          "role_name": "工艺工程师",
+          "round_label": "主批面试",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "业务理解",
+            "复盘深度"
+          ],
+          "updated_at": "2026-02-24",
+          "sample_size": 10,
+          "answer_framework": [
+            "场景分级与止损优先级",
+            "定位路径与关键证据",
+            "协同动作与备选方案",
+            "复盘机制与预防措施"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排工艺工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "system_process"
+        },
+        {
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "difficulty_1to5": 3,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.77,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
+            "source_name": "牛客网-软件开发面试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:质量工程师｜阶段:提前批面试】请结合一个真实业务场景，说明你如何拆解目标、推进执行并复盘结果（第13题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V164_R_005_13",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+          "question_type": "业务情景应答题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_early_batch_interview",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_005",
+          "role_name": "质量工程师",
+          "round_label": "提前批面试",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "跨团队协同",
+            "复盘与改进"
+          ],
+          "updated_at": "2026-02-24",
+          "sample_size": 10,
+          "answer_framework": [
+            "结论先行（目标-约束-原则）",
+            "行动拆解（你做了什么）",
+            "结果量化（指标与影响）",
+            "复盘迁移（下次如何做得更好）"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排质量工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "business_scenario"
+        },
+        {
+          "authenticity_level": "real_user",
+          "data_origin": "real_user_recall_nowcoder",
+          "difficulty_1to5": 3,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.77,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 10,
+            "snapshot_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "source_date": "2026-02-17",
+            "source_id": "SRC_NOWCODER_INTERVIEW_BACKEND_2026",
+            "source_name": "牛客网-软件开发面试真题库（后端/研发标签）",
+            "source_type": "real_user",
+            "source_url": "https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page",
+            "stat_definition": "来源于公开题库回忆题干样本，按行业岗位归类。",
+            "publish_date": "2026-02-17",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:质量工程师｜阶段:补录面试】请基于一次失败案例，说明你如何定位根因、纠偏并沉淀机制（第14题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V164_R_005_14",
+          "question_realness_note": "公开题库回忆题干（非官方完整原卷）",
+          "question_type": "失败复盘面试题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_supplement_interview",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_005",
+          "role_name": "质量工程师",
+          "round_label": "补录面试",
+          "scoring_dimensions": [
+            "结构化表达",
+            "问题拆解",
+            "跨团队协同",
+            "复盘与改进"
+          ],
+          "updated_at": "2026-02-24",
+          "sample_size": 10,
+          "answer_framework": [
+            "结论先行（目标-约束-原则）",
+            "行动拆解（你做了什么）",
+            "结果量化（指标与影响）",
+            "复盘迁移（下次如何做得更好）"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排质量工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t2_strong",
+          "scenario_bucket": "failure_review"
+        },
+        {
+          "answer_framework": [
+            "背景",
+            "任务",
+            "行动",
+            "结果"
+          ],
+          "authenticity_level": "official",
+          "data_origin": "company_official_job_requirement",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 5,
+            "snapshot_url": "https://www.estun.com/about-us/",
+            "source_date": "2026-02-18",
+            "source_id": "SRC_AUTO_WWW_ESTUN_COM_60CC692A",
+            "source_name": "埃斯顿官网-关于我们/招聘入口",
+            "source_type": "company_official",
+            "source_url": "https://www.estun.com/about-us/",
+            "stat_definition": "依据工业自动化岗位面试要求整理的现场协同题型。",
+            "secondary_source_ids": [
+              "SRC_MIIT_MECHANICAL_STABLE_20250929",
+              "SRC_NCSS_2026_JOINT"
+            ],
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:项目工程师｜阶段:主批面试】请设计一套项目工程师可落地的流程机制，并说明关键门禁与风险控制点（第13题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V164_R_006_13",
+          "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+          "question_type": "流程改进追问题",
+          "question_year": 2026,
+          "recruitment_stage": "campus_main_batch_interview",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_006",
+          "role_name": "项目工程师",
+          "round_label": "主批面试",
+          "updated_at": "2026-02-24",
+          "sample_size": 5,
+          "scoring_dimensions": [
+            "结构化表达",
+            "业务判断",
+            "跨团队协同",
+            "结果导向"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排项目工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t1_head",
+          "scenario_bucket": "system_process"
+        },
+        {
+          "answer_framework": [
+            "背景",
+            "任务",
+            "行动",
+            "结果"
+          ],
+          "authenticity_level": "official",
+          "data_origin": "company_official_job_requirement",
+          "difficulty_1to5": 4,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.8,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 5,
+            "snapshot_url": "https://www.estun.com/about-us/",
+            "source_date": "2026-02-18",
+            "source_id": "SRC_AUTO_WWW_ESTUN_COM_60CC692A",
+            "source_name": "埃斯顿官网-关于我们/招聘入口",
+            "source_type": "company_official",
+            "source_url": "https://www.estun.com/about-us/",
+            "stat_definition": "依据工业自动化岗位面试要求整理的现场协同题型。",
+            "secondary_source_ids": [
+              "SRC_MIIT_MECHANICAL_STABLE_20250929",
+              "SRC_NCSS_2026_JOINT"
+            ],
+            "publish_date": "2026-02-18",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "is_template": false,
+          "needs_real_question": false,
+          "prompt": "【行业:高端制造与工业自动化｜岗位:项目工程师｜阶段:实习转正面试】当跨团队目标冲突时，你会如何对齐口径、推进决策并保证交付（第14题）。",
+          "question_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_INTERVIEW_V164_R_006_14",
+          "question_realness_note": "基于企业岗位能力要求整理的官方题型，不是官方原卷逐字复刻。",
+          "question_type": "跨团队冲突处理题",
+          "question_year": 2026,
+          "recruitment_stage": "internship_conversion_interview",
+          "role_id": "IND_ADVANCED_MANUFACTURING_AUTOMATION_ROLE_006",
+          "role_name": "项目工程师",
+          "round_label": "实习转正面试",
+          "updated_at": "2026-02-24",
+          "sample_size": 5,
+          "scoring_dimensions": [
+            "结构化表达",
+            "业务判断",
+            "跨团队协同",
+            "结果导向"
+          ],
+          "follow_up_questions": [
+            "如果关键资源减少30%，你会如何重排项目工程师优先级？",
+            "若第一轮动作效果不及预期，你会如何快速二次迭代？",
+            "你如何定义该岗位场景下的退出条件与复盘模板？"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环完整，并有风险预案。",
+            "B档": "执行路径较清晰，但量化指标和边界条件不够完整。",
+            "C档": "表达泛化，缺少关键指标和落地步骤。"
+          },
+          "common_mistakes": [
+            "只讲动作不讲目标函数。",
+            "忽略约束条件和协同依赖。",
+            "缺少止损机制与复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界再给方案。",
+            "里程碑、资源与指标口径清晰。",
+            "有风险预案与复盘沉淀。"
+          ],
+          "reference_answer_outline": [
+            "先界定目标、约束和评价指标。",
+            "再按阶段推进动作并跟踪过程指标。",
+            "最后复盘沉淀机制并输出下轮优化计划。"
+          ],
+          "company_tier": "t1_head",
+          "scenario_bucket": "cross_team_collaboration"
         }
       ],
       "last_checked": "2026-02-19",
@@ -63501,7 +66956,7 @@
       "stale_on": "2026-03-21",
       "stale_status": "fresh",
       "template_data_ratio_percent": 0,
-      "updated_at": "2026-02-19",
+      "updated_at": "2026-02-24",
       "payload": {
         "source_diversification": {
           "current": {
@@ -63567,7 +67022,7 @@
       "stale_on": "2026-03-21"
     },
     "data_version": "2026Q1",
-    "last_updated": "2026-02-19",
+    "last_updated": "2026-02-24",
     "next_review_at": "2026-06-30",
     "owner": "owner-industrial-manufacturing",
     "reviewer": "review-board-industrial",

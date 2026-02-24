@@ -193,4 +193,24 @@ jq --argjson v162 "${V162_METRICS_JSON}" '. + {depth_upgrade_v162: $v162}' "${RE
 mv "${REPORT_PATH}.tmp" "${REPORT_PATH}"
 cp "${REPORT_PATH}" "${LATEST_REPORT_PATH}"
 
-echo "0"
+V162_BLOCKERS=0
+V162_DEEP_PERCENT="$(jq -r '.deep_profile_all4_percent' <<<"${V162_METRICS_JSON}")"
+V162_DEEP_MIN="$(jq -r '.deep_profile_all4_min_percent' <<<"${V162_METRICS_JSON}")"
+V162_SCENARIO_HITS="$(jq -r '.scenario_bucket_hits' <<<"${V162_METRICS_JSON}")"
+V162_SCENARIO_MAX="$(jq -r '.scenario_bucket_max_hits' <<<"${V162_METRICS_JSON}")"
+V162_OBS_PERCENT="$(jq -r '.role_observed_sample_percent' <<<"${V162_METRICS_JSON}")"
+V162_OBS_MIN="$(jq -r '.role_observed_sample_min_percent' <<<"${V162_METRICS_JSON}")"
+V162_OFFICIAL_PERCENT="$(jq -r '.official_question_share_percent' <<<"${V162_METRICS_JSON}")"
+V162_OFFICIAL_MIN="$(jq -r '.official_question_share_min_percent' <<<"${V162_METRICS_JSON}")"
+V162_CORE_OFFICIAL_PERCENT="$(jq -r '.core_official_question_share_percent' <<<"${V162_METRICS_JSON}")"
+V162_CORE_OFFICIAL_MIN="$(jq -r '.official_question_share_core_min_percent' <<<"${V162_METRICS_JSON}")"
+V162_TIER_HITS="$(jq -r '.role_tier_question_hits' <<<"${V162_METRICS_JSON}")"
+
+if awk -v a="${V162_DEEP_PERCENT}" -v b="${V162_DEEP_MIN}" 'BEGIN{exit !(a < b)}'; then V162_BLOCKERS=1; fi
+if awk -v a="${V162_SCENARIO_HITS}" -v b="${V162_SCENARIO_MAX}" 'BEGIN{exit !(a > b)}'; then V162_BLOCKERS=1; fi
+if awk -v a="${V162_OBS_PERCENT}" -v b="${V162_OBS_MIN}" 'BEGIN{exit !(a < b)}'; then V162_BLOCKERS=1; fi
+if awk -v a="${V162_OFFICIAL_PERCENT}" -v b="${V162_OFFICIAL_MIN}" 'BEGIN{exit !(a < b)}'; then V162_BLOCKERS=1; fi
+if awk -v a="${V162_CORE_OFFICIAL_PERCENT}" -v b="${V162_CORE_OFFICIAL_MIN}" 'BEGIN{exit !(a < b)}'; then V162_BLOCKERS=1; fi
+if awk -v a="${V162_TIER_HITS}" 'BEGIN{exit !(a > 0)}'; then V162_BLOCKERS=1; fi
+
+echo "${V162_BLOCKERS}"

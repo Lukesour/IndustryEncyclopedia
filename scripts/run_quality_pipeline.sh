@@ -475,6 +475,7 @@ cp "${REPORT_PATH}" "${LATEST_PATH}"
 
 printf '%s\n' "${DEPTH_V155_METRICS_JSON}" > "${DEPTH_GAP_PATH}"
 cp "${DEPTH_GAP_PATH}" "${LATEST_DEPTH_GAP_PATH}"
+DEPTH_V155_GAP_COUNT="$(jq '.gaps_by_industry | length' <<<"${DEPTH_V155_METRICS_JSON}")"
 
 # v1.57 next-batch special: core-role 4-stage coverage + role deep-link rate.
 SPECIAL_V157_SCRIPT="${ROOT_DIR}/scripts/generate_core4_deeplink_special_v157.js"
@@ -1186,6 +1187,9 @@ TEMPLATE_REUSE_ISSUES_JSON="$(jq -n \
 TEMPLATE_REUSE_ISSUES_COUNT="$(jq 'length' <<<"${TEMPLATE_REUSE_ISSUES_JSON}")"
 
 HAS_BLOCKERS=0
+if [[ "${DEPTH_V155_ENABLED}" == "true" ]] && [[ "${DEPTH_V155_MODE}" != "report_only" ]] && [[ "${DEPTH_V155_GAP_COUNT}" -gt 0 ]]; then
+  HAS_BLOCKERS=1
+fi
 if [[ "${PLACEHOLDER_COUNT}" -gt 0 ]]; then HAS_BLOCKERS=1; fi
 if [[ "${DUP_SOURCE_COUNT}" -gt 0 ]]; then HAS_BLOCKERS=1; fi
 if [[ "${NON200_UNMARKED_COUNT}" -gt 0 ]]; then HAS_BLOCKERS=1; fi
@@ -1698,6 +1702,10 @@ if [[ -f "${V162_OVERLAY_SCRIPT}" ]]; then
     HAS_BLOCKERS=1
   fi
 fi
+
+jq --argjson has_blockers "${HAS_BLOCKERS}" '.has_blockers = ($has_blockers == 1)' "${GATE_PATH}" > "${GATE_PATH}.tmp"
+mv "${GATE_PATH}.tmp" "${GATE_PATH}"
+cp "${GATE_PATH}" "${LATEST_GATE_PATH}"
 
 echo "Quality pipeline completed"
 echo "- report: ${REPORT_PATH}"
