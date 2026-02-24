@@ -2482,7 +2482,7 @@
             "合规意识",
             "稳定性"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "网申",
             "行测/测评",
@@ -2560,7 +2560,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v163b2",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -2583,36 +2583,34 @@
               "金融-银行 管培生 offer 薪资"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
+            "missing_fields": [
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
+            ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
               "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
-              "批次/轮次": "网申 / 行测/测评",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "城市分布": "",
+              "薪资区间P25": "",
+              "薪资区间P50": "",
+              "薪资区间P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "来源链接或帖子ID": "",
+              "样本量": "",
+              "截图路径与截图时间": ""
             },
-            "filled_mode": "role_observed_sample",
-            "filled_values": {
-              "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
-              "批次/轮次": "网申 / 行测/测评",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
-            },
+            "filled_mode": "keep_blank_with_search_plan_v163b2",
+            "filled_values": {},
             "source_evidence": {
               "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
@@ -2621,13 +2619,37 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "优先补齐近90天平台样本并回填城市分布、薪资分位与发布时间。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.icbc.com.cn/ICBC/%E4%BA%BA%E6%89%8D%E6%8B%9B%E8%81%98/",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方招聘入口可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E7%AE%A1%E5%9F%B9%E7%94%9F%20%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索入口可访问，岗位详情需人工抽样。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E7%AE%A1%E5%9F%B9%E7%94%9F%20%E9%9D%A2%E7%BB%8F",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索页可访问，帖子正文需登录或App查看。"
+              }
+            ]
           },
           "role_detail_v158": {
             "role_scope": "负责管培生相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 10,
-              "interview_count": 10,
+              "written_count": 11,
+              "interview_count": 11,
               "written_stages": [
                 "campus_early_batch_written",
                 "campus_main_batch_written",
@@ -2642,7 +2664,46 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "银行数字化和综合经营深化，管培生岗位将从轮岗体验升级为“业务理解+数据分析+风险意识”三位一体的人才入口，后续分流到产品、风控和对公方向机会扩大。",
+          "typical_work_week": "周一参加条线晨会和任务分配，周二至周三跟进网点/业务项目执行，周四复盘数据与客户反馈，周五输出周报并制定下周改进动作。",
+          "switch_directions": [
+            {
+              "target_role": "零售产品经理",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "产品分析",
+                "流程优化"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "风险策略分析师",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "策略建模",
+                "数据分析"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "运营管理岗",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "流程管理",
+                "跨团队协同"
+              ],
+              "transition_period": "6-8个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：完成银行核心产品、风控和合规框架梳理。",
+            "31-60天：输出1份网点或业务流程优化小结并量化结果。",
+            "61-90天：训练管培生高频笔面试题并形成答题模板。",
+            "91-120天：补齐财务报表和授信基础分析能力。",
+            "121-150天：参与跨条线项目并沉淀协同证据。",
+            "151-180天：确定主岗与备岗方向，完成简历与面试策略升级。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -2736,7 +2797,7 @@
             "合规意识",
             "稳定性"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "网申",
             "行测/测评",
@@ -2814,7 +2875,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v163b2",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -2837,36 +2898,34 @@
               "金融-银行 客户经理 offer 薪资"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
+            "missing_fields": [
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
+            ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
               "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "北京、常州、上海",
-              "薪资区间P25": "9.52k/月",
-              "薪资区间P50": "11.20k/月",
-              "薪资区间P75": "12.88k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "网申 / 行测/测评",
-              "来源链接或帖子ID": "https://www.icbc.com.cn",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.icbc.com.cn @2026-02-17"
+              "城市分布": "",
+              "薪资区间P25": "",
+              "薪资区间P50": "",
+              "薪资区间P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "来源链接或帖子ID": "",
+              "样本量": "",
+              "截图路径与截图时间": ""
             },
-            "filled_mode": "role_observed_sample",
-            "filled_values": {
-              "城市分布": "北京、常州、上海",
-              "薪资区间P25": "9.52k/月",
-              "薪资区间P50": "11.20k/月",
-              "薪资区间P75": "12.88k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "网申 / 行测/测评",
-              "来源链接或帖子ID": "https://www.icbc.com.cn",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.icbc.com.cn @2026-02-17"
-            },
+            "filled_mode": "keep_blank_with_search_plan_v163b2",
+            "filled_values": {},
             "source_evidence": {
               "source_id": "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B",
               "source_url": "https://www.icbc.com.cn",
@@ -2875,13 +2934,37 @@
               "city": "常州",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "优先补齐近90天平台样本并回填城市分布、薪资分位与发布时间。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.icbc.com.cn/ICBC/%E4%BA%BA%E6%89%8D%E6%8B%9B%E8%81%98/",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方招聘入口可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索入口可访问，岗位详情需人工抽样。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E9%87%91%E8%9E%8D-%E9%93%B6%E8%A1%8C%20%E5%AE%A2%E6%88%B7%E7%BB%8F%E7%90%86%20%E9%9D%A2%E7%BB%8F",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索页可访问，帖子正文需登录或App查看。"
+              }
+            ]
           },
           "role_detail_v158": {
             "role_scope": "负责客户经理相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 10,
-              "interview_count": 10,
+              "written_count": 11,
+              "interview_count": 11,
               "written_stages": [
                 "campus_early_batch_written",
                 "internship_conversion_written",
@@ -2896,7 +2979,46 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "零售金融与普惠金融线上化加速，客户经理岗位将从传统拉新转向“客户经营+风险识别+产品匹配”复合能力，3-5年内高质量客户运营能力更稀缺。",
+          "typical_work_week": "周一梳理客户池与目标，周二至周三外呼/面访推进转化，周四复盘授信和产品匹配情况，周五输出客户分层策略与下周动作。",
+          "switch_directions": [
+            {
+              "target_role": "对公客户经理",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "财务报表分析",
+                "授信逻辑"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "财富顾问",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "资产配置",
+                "客户画像经营"
+              ],
+              "transition_period": "6-8个月"
+            },
+            {
+              "target_role": "普惠产品运营岗",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "漏斗分析",
+                "流程优化"
+              ],
+              "transition_period": "7-10个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：补齐零售与普惠产品、授信和合规知识。",
+            "31-60天：完成1个客户经营小项目并量化转化结果。",
+            "61-90天：训练客户经理场景化题库并复盘弱项。",
+            "91-120天：补齐报表阅读与现金流分析基础。",
+            "121-150天：参与跨部门协同项目并沉淀案例证据。",
+            "151-180天：形成“主岗+备岗”投递方案并完成模拟面试。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -9315,7 +9437,7 @@
           "role_name": "对公授信策略分析师（行业与现金流）",
           "authenticity_level": "curated",
           "data_origin": "manual_role_profile_fill_v160",
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "degree_preference": "本科及以上，金融、会计、经济、统计相关优先",
           "major_restriction": "金融、财务、经济、数量分析相关优先",
           "english_requirement": "基础到中等（行业材料与财务报告阅读）",
@@ -9402,8 +9524,8 @@
           "role_detail_v158": {
             "role_scope": "负责对公授信策略制定与评估，重点覆盖行业景气、现金流质量与风险暴露控制。",
             "role_specific_question_coverage": {
-              "written_count": 10,
-              "interview_count": 10,
+              "written_count": 11,
+              "interview_count": 11,
               "written_stages": [
                 "campus_early_batch_written",
                 "campus_main_batch_written",
@@ -9442,17 +9564,20 @@
             "stat_definition": "v1.60手工逐岗补录：结合银行官方岗位页与公共就业平台。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v163b2",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频面试追问"
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App搜索",
+              "牛客网笔面试"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%AF%B9%E5%85%AC%E6%8E%88%E4%BF%A1%20%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90",
             "boss_search_query": [
@@ -9464,41 +9589,33 @@
               "对公授信 校招 面经",
               "银行 授信策略 offer"
             ],
-            "capture_rule": "保留链接、截图时间戳、发布日期、样本量；缺失字段不进入强结论。",
+            "capture_rule": "缺少城市/薪资/发布时间时不写强结论，字段留空并记录检索路径。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页职责和能力要求，再补平台样本。",
-              "BOSS按应届+城市+岗位关键词组合检索。",
-              "小红书优先App检索并记录帖子ID、时间戳。"
+              "先在企业官方岗位页确认“对公授信策略分析师（行业与现金流）”职责口径，再补平台样本。",
+              "BOSS用“应届生+岗位+城市”检索，保留发布时间与薪资区间证据。",
+              "小红书仅作回忆样本，需记录帖子ID和截图时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
-              "批次/轮次": "网申 / 专业笔试",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "城市分布": "",
+              "薪资区间P25/P50/P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "帖子ID/链接": "",
+              "样本量": "",
+              "截图时间": ""
             },
             "filled_mode": "industry_proxy_fallback",
-            "filled_values": {
-              "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
-              "批次/轮次": "网申 / 专业笔试",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
-            },
+            "filled_values": {},
             "source_evidence": {
               "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
@@ -9507,7 +9624,31 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "补齐至少2个城市样本并回填分位薪资、发布时间、轮次。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "http://job.ccb.com",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方岗位来源可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E5%BA%94%E5%B1%8A%E7%94%9F%20%E5%AF%B9%E5%85%AC%E6%8E%88%E4%BF%A1%20%E7%AD%96%E7%95%A5%E5%88%86%E6%9E%90",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索入口可访问，具体岗位样本需人工抽取。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E5%AF%B9%E5%85%AC%E6%8E%88%E4%BF%A1%20%E6%A0%A1%E6%8B%9B%20%E9%9D%A2%E7%BB%8F",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "页面可访问，帖子详情需登录或App检索。"
+              }
+            ]
           },
           "project_evidence_public_sample": {
             "sample_id": "IND_FIN_BANK_ROLE_HGX_011_STAR_PUBLIC_2026V160",
@@ -9550,7 +9691,46 @@
               "模型与阈值文档",
               "贷后预警看板"
             ]
-          }
+          },
+          "career_outlook_3to5_year": "在宏观波动和行业分化背景下，对公授信策略岗位将从静态审批向动态监测升级，3-5年内“行业认知+现金流模型”能力价值更高。",
+          "typical_work_week": "工作周前半段以行业与客户数据分析为主，后半段集中授信评审、策略沟通和贷后跟踪复盘。",
+          "switch_directions": [
+            {
+              "target_role": "风险政策经理",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "政策制定",
+                "风险组合管理"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "行业研究员（金融）",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "行业框架",
+                "财务建模"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "普惠风控策略岗",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "评分卡",
+                "策略实验"
+              ],
+              "transition_period": "6-8个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：系统梳理对公授信流程与行业风险指标。",
+            "31-60天：完成1个行业现金流压力测试案例。",
+            "61-90天：训练授信策略场景题与追问链。",
+            "91-120天：补齐财务建模与反欺诈识别方法。",
+            "121-150天：参与一次授信复盘会并输出改进建议。",
+            "151-180天：形成“授信判断-执行-贷后反馈”案例。"
+          ]
         },
         {
           "role_id": "IND_FIN_BANK_ROLE_HGX_012",
@@ -11349,7 +11529,7 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v163",
+            "status": "keep_blank_with_search_plan_v163b2",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -11360,9 +11540,9 @@
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端",
-              "小红书搜索页",
-              "牛客网"
+              "BOSS直聘网页端职位搜索",
+              "小红书App搜索",
+              "牛客网笔面试"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job",
             "boss_search_query": [
@@ -11374,7 +11554,7 @@
               "普惠金融 产品运营 面经",
               "银行 产品运营 offer"
             ],
-            "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
+            "capture_rule": "缺少城市/薪资/发布时间时不写强结论，字段留空并记录检索路径。",
             "missing_fields": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -11385,21 +11565,19 @@
               "截图时间"
             ],
             "how_to_search": [
-              "先对齐银行官方校招岗位口径。",
-              "BOSS保留发布时间和城市样本用于分位统计。",
-              "小红书面经仅作训练参考，记录帖子ID。"
+              "先在企业官方岗位页确认“普惠金融产品运营岗”职责口径，再补平台样本。",
+              "BOSS用“应届生+岗位+城市”检索，保留发布时间与薪资区间证据。",
+              "小红书仅作回忆样本，需记录帖子ID和截图时间。"
             ],
-            "updated_at": "2026-02-23",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "北京、常州、上海",
-              "薪资区间P25": "10.51k/月",
-              "薪资区间P50": "12.37k/月",
-              "薪资区间P75": "14.23k/月",
-              "发布时间": "2026-01-19",
-              "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "城市分布": "",
+              "薪资区间P25/P50/P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "帖子ID/链接": "",
+              "样本量": "",
+              "截图时间": ""
             },
             "filled_mode": "industry_proxy_fallback",
             "filled_values": {},
@@ -11411,14 +11589,31 @@
               "city": "北京",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "补齐至少3条银行普惠运营岗位样本。",
-            "unavailable_capture_log_v163": {
-              "official_http": 200,
-              "boss_http": 200,
-              "xiaohongshu_http": 404,
-              "checked_at": "2026-02-23",
-              "note": "小红书检索不稳定，按规范留空。"
-            }
+            "next_backfill_action": "补齐至少2个城市样本并回填分位薪资、发布时间、轮次。",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.icbc.com.cn/ICBC/%E4%BA%BA%E6%89%8D%E6%8B%9B%E8%81%98/",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方岗位来源可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索入口可访问，具体岗位样本需人工抽取。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E6%99%AE%E6%83%A0%E9%87%91%E8%9E%8D%20%E9%9D%A2%E7%BB%8F",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "页面可访问，帖子详情需登录或App检索。"
+              }
+            ],
+            "action": "leave_blank_pending_capture"
           },
           "project_evidence_slots": [
             {
@@ -11460,7 +11655,7 @@
               "evidence_hint": "用STAR说明你在项目中如何应用“风险监控看板”，并给出可量化结果。"
             }
           ],
-          "updated_at": "2026-02-23",
+          "updated_at": "2026-02-24",
           "high_score_answer_example": "在普惠金融产品运营岗面试中，先明确风险目标与业务约束，再给策略路径、监控指标和迭代计划。",
           "project_evidence_public_sample": {
             "sample_id": "IND_FIN_BANK_ROLE_022_STAR_PUBLIC_2026",
@@ -11507,8 +11702,8 @@
           "role_detail_v158": {
             "role_scope": "负责普惠金融产品运营与增长策略执行，对产品渗透率、活跃度和风险可控性负责。",
             "role_specific_question_coverage": {
-              "written_count": 8,
-              "interview_count": 8,
+              "written_count": 9,
+              "interview_count": 9,
               "written_stages": [
                 "campus_early_batch_written",
                 "campus_main_batch_written",
@@ -40937,6 +41132,324 @@
             "关键取舍",
             "复盘迁移"
           ]
+        },
+        {
+          "question_id": "IND_FIN_BANK_WRITTEN_V163B2_RHGX011_01",
+          "role_id": "IND_FIN_BANK_ROLE_HGX_011",
+          "role_name": "对公授信策略分析师（行业与现金流）",
+          "prompt": "【金融-银行-对公授信策略分析师】某制造企业订单增长但经营性现金流恶化，请给出授信额度建议、担保条件与贷后监控方案。",
+          "question_type": "对公授信策略题（第二批人工补深）",
+          "question_year": 2026,
+          "round_label": "主批笔试",
+          "recruitment_stage": "campus_main_batch_written",
+          "scenario_bucket": "business_scenario",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环并有风险预案。",
+            "B档": "方案基本完整，但边界条件与验证口径不充分。",
+            "C档": "回答泛化，缺少可执行细节和量化指标。"
+          },
+          "follow_up_questions": [
+            "若资源减半，你如何重排优先级？",
+            "若第一轮动作失效，二次迭代怎么做？",
+            "如何设定退出条件和复盘模板？"
+          ],
+          "common_mistakes": [
+            "只讲动作不讲目标函数",
+            "忽略约束条件和协同依赖",
+            "缺少复盘与止损机制"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界",
+            "关键指标和里程碑清晰",
+            "给出风险预案和复盘机制"
+          ],
+          "reference_answer_outline": [
+            "明确目标和约束",
+            "拆解动作与优先级",
+            "说明指标与风险控制",
+            "给出复盘和迭代路径"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "http://job.ccb.com",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_CCB_COM_4CC35DD8",
+            "source_name": "中国建设银行官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "http://job.ccb.com",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_FIN_BANK_WRITTEN_V163_R022_09",
+          "role_id": "IND_FIN_BANK_ROLE_022",
+          "role_name": "普惠金融产品运营岗",
+          "prompt": "【金融-银行-普惠金融产品运营岗】某小微客群转化率连续下滑，请设计产品漏斗诊断框架与90天修复计划。",
+          "question_type": "普惠产品运营诊断题（第二批人工补深）",
+          "question_year": 2026,
+          "round_label": "主批笔试",
+          "recruitment_stage": "campus_main_batch_written",
+          "scenario_bucket": "business_scenario",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环并有风险预案。",
+            "B档": "方案基本完整，但边界条件与验证口径不充分。",
+            "C档": "回答泛化，缺少可执行细节和量化指标。"
+          },
+          "follow_up_questions": [
+            "若资源减半，你如何重排优先级？",
+            "若第一轮动作失效，二次迭代怎么做？",
+            "如何设定退出条件和复盘模板？"
+          ],
+          "common_mistakes": [
+            "只讲动作不讲目标函数",
+            "忽略约束条件和协同依赖",
+            "缺少复盘与止损机制"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界",
+            "关键指标和里程碑清晰",
+            "给出风险预案和复盘机制"
+          ],
+          "reference_answer_outline": [
+            "明确目标和约束",
+            "拆解动作与优先级",
+            "说明指标与风险控制",
+            "给出复盘和迭代路径"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.icbc.com.cn/ICBC/%E4%BA%BA%E6%89%8D%E6%8B%9B%E8%81%98/",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B",
+            "source_name": "中国工商银行官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.icbc.com.cn/ICBC/%E4%BA%BA%E6%89%8D%E6%8B%9B%E8%81%98/",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_NBS_INCOME_2025_FULLYEAR",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_FIN_BANK_WRITTEN_V163B2C_R001_01",
+          "role_id": "IND_FIN_BANK_ROLE_001",
+          "role_name": "管培生",
+          "prompt": "【金融-银行-管培生】某网点零售客户活跃度连续下滑，要求在8周内提升核心指标。请设计“问题定位-方案落地-结果复盘”推进框架。",
+          "question_type": "网点经营分析题（第二批续补）",
+          "question_year": 2026,
+          "round_label": "主批笔试",
+          "recruitment_stage": "campus_main_batch_written",
+          "scenario_bucket": "business_scenario",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2c",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "能提出可执行方案并给出明确量化口径。",
+            "B档": "方案方向正确但缺里程碑与风险预案。",
+            "C档": "回答泛化，无法指导落地。"
+          },
+          "follow_up_questions": [
+            "如果预算被压缩30%，你会先保哪些动作？",
+            "当分行和网点目标冲突时你如何对齐？",
+            "你如何定义“活跃度提升有效”的判定标准？"
+          ],
+          "common_mistakes": [
+            "只谈活动，不谈客户分层和指标。",
+            "忽视合规与风险约束。",
+            "没有复盘闭环。"
+          ],
+          "good_answer_signals": [
+            "先定目标和边界，再给执行节奏。",
+            "能拆分到周级里程碑。",
+            "能量化验证结果。"
+          ],
+          "reference_answer_outline": [
+            "定义目标与限制条件。",
+            "拆解动作并分配资源。",
+            "设置复核指标和纠偏机制。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.icbc.com.cn/ICBC/%E4%BA%BA%E6%89%8D%E6%8B%9B%E8%81%98/",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B",
+            "source_name": "中国工商银行官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.icbc.com.cn/ICBC/%E4%BA%BA%E6%89%8D%E6%8B%9B%E8%81%98/",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_NBS_INCOME_2025_FULLYEAR",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_FIN_BANK_WRITTEN_V163B2C_R002_01",
+          "role_id": "IND_FIN_BANK_ROLE_002",
+          "role_name": "客户经理",
+          "prompt": "【金融-银行-客户经理】某小微客群贷款申请通过率下降但逾期风险同步上升，你如何设计“获客-授信-贷后”一体化优化方案？",
+          "question_type": "客户经营与风控题（第二批续补）",
+          "question_year": 2026,
+          "round_label": "主批笔试",
+          "recruitment_stage": "campus_main_batch_written",
+          "scenario_bucket": "metric_tradeoff",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2c",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "兼顾增长与风险，取舍逻辑和验证口径完整。",
+            "B档": "有优化思路但风险边界不清。",
+            "C档": "回答泛化，缺少可执行细节。"
+          },
+          "follow_up_questions": [
+            "若分行要求短期冲量，你如何守住风险底线？",
+            "当客户经理人手不足时你先优化哪一段流程？",
+            "你如何定义本轮策略的退出条件？"
+          ],
+          "common_mistakes": [
+            "只追求规模，不考虑风险成本。",
+            "忽略贷后管理闭环。",
+            "缺少阶段性验证指标。"
+          ],
+          "good_answer_signals": [
+            "能定义清晰目标函数。",
+            "有分阶段动作与责任分工。",
+            "有风险预警与复盘机制。"
+          ],
+          "reference_answer_outline": [
+            "明确增长与风险双目标。",
+            "拆解获客、授信、贷后关键动作。",
+            "设置验证指标和止损机制。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.icbc.com.cn/ICBC/%E4%BA%BA%E6%89%8D%E6%8B%9B%E8%81%98/",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B",
+            "source_name": "中国工商银行官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.icbc.com.cn/ICBC/%E4%BA%BA%E6%89%8D%E6%8B%9B%E8%81%98/",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_NBS_INCOME_2025_FULLYEAR",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
         }
       ],
       "last_checked": "2026-02-19",
@@ -71068,6 +71581,324 @@
             "关键取舍",
             "复盘迁移"
           ]
+        },
+        {
+          "question_id": "IND_FIN_BANK_INTERVIEW_V163B2_RHGX011_01",
+          "role_id": "IND_FIN_BANK_ROLE_HGX_011",
+          "role_name": "对公授信策略分析师（行业与现金流）",
+          "prompt": "客户经理强烈推动优质大客户快速获批，但你识别到行业尾部风险加速，你如何说服业务与审批委员会？",
+          "question_type": "授信冲突协同题（第二批人工补深）",
+          "question_year": 2026,
+          "round_label": "主批面试",
+          "recruitment_stage": "campus_main_batch_interview",
+          "scenario_bucket": "cross_team_collaboration",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环并有风险预案。",
+            "B档": "方案基本完整，但边界条件与验证口径不充分。",
+            "C档": "回答泛化，缺少可执行细节和量化指标。"
+          },
+          "follow_up_questions": [
+            "若资源减半，你如何重排优先级？",
+            "若第一轮动作失效，二次迭代怎么做？",
+            "如何设定退出条件和复盘模板？"
+          ],
+          "common_mistakes": [
+            "只讲动作不讲目标函数",
+            "忽略约束条件和协同依赖",
+            "缺少复盘与止损机制"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界",
+            "关键指标和里程碑清晰",
+            "给出风险预案和复盘机制"
+          ],
+          "reference_answer_outline": [
+            "明确目标和约束",
+            "拆解动作与优先级",
+            "说明指标与风险控制",
+            "给出复盘和迭代路径"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "http://job.ccb.com",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_CCB_COM_4CC35DD8",
+            "source_name": "中国建设银行官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "http://job.ccb.com",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_NCSS_2026_JOINT",
+              "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_FIN_BANK_INTERVIEW_V163_R022_09",
+          "role_id": "IND_FIN_BANK_ROLE_022",
+          "role_name": "普惠金融产品运营岗",
+          "prompt": "业务条线希望放宽准入提规模，风控条线担心不良率抬升，你如何定义阶段目标与边界条件？",
+          "question_type": "增长与风险取舍题（第二批人工补深）",
+          "question_year": 2026,
+          "round_label": "主批面试",
+          "recruitment_stage": "campus_main_batch_interview",
+          "scenario_bucket": "metric_tradeoff",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环并有风险预案。",
+            "B档": "方案基本完整，但边界条件与验证口径不充分。",
+            "C档": "回答泛化，缺少可执行细节和量化指标。"
+          },
+          "follow_up_questions": [
+            "若资源减半，你如何重排优先级？",
+            "若第一轮动作失效，二次迭代怎么做？",
+            "如何设定退出条件和复盘模板？"
+          ],
+          "common_mistakes": [
+            "只讲动作不讲目标函数",
+            "忽略约束条件和协同依赖",
+            "缺少复盘与止损机制"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界",
+            "关键指标和里程碑清晰",
+            "给出风险预案和复盘机制"
+          ],
+          "reference_answer_outline": [
+            "明确目标和约束",
+            "拆解动作与优先级",
+            "说明指标与风险控制",
+            "给出复盘和迭代路径"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.icbc.com.cn/ICBC/%E4%BA%BA%E6%89%8D%E6%8B%9B%E8%81%98/",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B",
+            "source_name": "中国工商银行官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.icbc.com.cn/ICBC/%E4%BA%BA%E6%89%8D%E6%8B%9B%E8%81%98/",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_NBS_INCOME_2025_FULLYEAR",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_FIN_BANK_INTERVIEW_V163B2C_R001_01",
+          "role_id": "IND_FIN_BANK_ROLE_001",
+          "role_name": "管培生",
+          "prompt": "当分行业务指标压力很大，但你发现某执行方案存在合规隐患时，你如何沟通并推动调整？",
+          "question_type": "合规与业绩取舍题（第二批续补）",
+          "question_year": 2026,
+          "round_label": "主批面试",
+          "recruitment_stage": "campus_main_batch_interview",
+          "scenario_bucket": "metric_tradeoff",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2c",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "能平衡业务和合规，沟通路径与升级机制清晰。",
+            "B档": "有风险意识但缺少落地动作细节。",
+            "C档": "只给原则，缺乏执行方案。"
+          },
+          "follow_up_questions": [
+            "若上级坚持原方案，你的升级路径是什么？",
+            "你如何用数据证明调整方案更优？",
+            "事后你如何防止同类问题再次发生？"
+          ],
+          "common_mistakes": [
+            "只强调风险，不给替代方案。",
+            "忽略沟通节奏和责任分工。",
+            "缺少复盘机制。"
+          ],
+          "good_answer_signals": [
+            "有清晰合规底线和业务目标。",
+            "能给出可执行替代动作。",
+            "能量化影响并闭环复盘。"
+          ],
+          "reference_answer_outline": [
+            "界定合规风险与业务目标。",
+            "提出替代方案并规划沟通路径。",
+            "定义结果指标与后续复盘。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.icbc.com.cn/ICBC/%E4%BA%BA%E6%89%8D%E6%8B%9B%E8%81%98/",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B",
+            "source_name": "中国工商银行官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.icbc.com.cn/ICBC/%E4%BA%BA%E6%89%8D%E6%8B%9B%E8%81%98/",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_NBS_INCOME_2025_FULLYEAR",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_FIN_BANK_INTERVIEW_V163B2C_R002_01",
+          "role_id": "IND_FIN_BANK_ROLE_002",
+          "role_name": "客户经理",
+          "prompt": "客户希望快速放款但资料不完整，风控部门要求严格补件。你如何在客户体验、风险控制和时效之间做平衡？",
+          "question_type": "客户与风控协同题（第二批续补）",
+          "question_year": 2026,
+          "round_label": "主批面试",
+          "recruitment_stage": "campus_main_batch_interview",
+          "scenario_bucket": "cross_team_collaboration",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2c",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "协同路径清晰，兼顾客户体验与风险底线。",
+            "B档": "方案基本合理但缺时序与升级机制。",
+            "C档": "回答空泛，缺少可执行细节。"
+          },
+          "follow_up_questions": [
+            "若客户坚持不补件，你会如何沟通并止损？",
+            "如何向风控团队证明你的客户判断可信？",
+            "你如何定义这次协同的成功标准？"
+          ],
+          "common_mistakes": [
+            "只考虑客户关系忽略风险底线。",
+            "缺少跨团队协同步骤。",
+            "未定义结果指标。"
+          ],
+          "good_answer_signals": [
+            "能平衡三方诉求并给出执行顺序。",
+            "能说明升级路径和时限管理。",
+            "能形成可复用复盘结论。"
+          ],
+          "reference_answer_outline": [
+            "明确客户诉求与风险边界。",
+            "设计分阶段协同动作。",
+            "定义结果指标和复盘机制。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.icbc.com.cn/ICBC/%E4%BA%BA%E6%89%8D%E6%8B%9B%E8%81%98/",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_ICBC_COM_CN_EF3B371B",
+            "source_name": "中国工商银行官网/招聘页",
+            "source_type": "company_official",
+            "source_url": "https://www.icbc.com.cn/ICBC/%E4%BA%BA%E6%89%8D%E6%8B%9B%E8%81%98/",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_NBS_INCOME_2025_FULLYEAR",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
         }
       ],
       "last_checked": "2026-02-19",

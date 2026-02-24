@@ -2477,7 +2477,7 @@
             "项目协同",
             "专业表达"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "专业笔试（部分）",
             "专业面",
@@ -2554,7 +2554,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v163b2",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -2577,36 +2577,34 @@
               "生物医药与器械 医学事务 offer 薪资"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
+            "missing_fields": [
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
+            ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
               "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "上海、青岛、北京",
-              "薪资区间P25": "9.52k/月",
-              "薪资区间P50": "11.20k/月",
-              "薪资区间P75": "12.88k/月",
-              "发布时间": "2026-01-19",
-              "批次/轮次": "专业笔试（部分） / 专业面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "城市分布": "",
+              "薪资区间P25": "",
+              "薪资区间P50": "",
+              "薪资区间P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "来源链接或帖子ID": "",
+              "样本量": "",
+              "截图路径与截图时间": ""
             },
-            "filled_mode": "role_observed_sample",
-            "filled_values": {
-              "城市分布": "上海、青岛、北京",
-              "薪资区间P25": "9.52k/月",
-              "薪资区间P50": "11.20k/月",
-              "薪资区间P75": "12.88k/月",
-              "发布时间": "2026-01-19",
-              "批次/轮次": "专业笔试（部分） / 专业面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
-            },
+            "filled_mode": "keep_blank_with_search_plan_v163b2",
+            "filled_values": {},
             "source_evidence": {
               "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
@@ -2615,13 +2613,37 @@
               "city": "上海",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.mindray.com/en/about-us/careers",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方岗位入口可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E5%8C%BB%E5%AD%A6%E4%BA%8B%E5%8A%A1%20%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索入口可访问，具体岗位详情需人工抓取。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E5%8C%BB%E5%AD%A6%E4%BA%8B%E5%8A%A1%20%E9%9D%A2%E7%BB%8F",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索页可访问，帖子正文需登录或App查看。"
+              }
+            ]
           },
           "role_detail_v158": {
             "role_scope": "负责医学事务相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 12,
-              "interview_count": 12,
+              "written_count": 13,
+              "interview_count": 13,
               "written_stages": [
                 "campus_early_batch_written",
                 "campus_main_batch_written",
@@ -2636,7 +2658,46 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "创新药与器械从“上市速度竞争”转向“临床价值+真实世界证据竞争”，医学事务岗位将从资料支持升级为证据策略与跨团队学术沟通中枢。",
+          "typical_work_week": "周一复盘项目进度和医学答疑，周二至周三完成文献检索与材料审核，周四参与准入/市场/法规协同会议，周五输出问题清单和下周推进节奏。",
+          "switch_directions": [
+            {
+              "target_role": "医学联络专员MSL",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "KOL沟通",
+                "学术活动规划"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "临床运营经理",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "试验进度管理",
+                "跨中心协同"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "市场准入专员",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "卫生经济学基础",
+                "支付方沟通"
+              ],
+              "transition_period": "9-12个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：补齐核心治疗领域文献检索与证据分级方法。",
+            "31-60天：完成1次学术资料审核与问题闭环记录。",
+            "61-90天：围绕医学事务高频题做2轮结构化答题训练。",
+            "91-120天：参与跨部门评审并输出可执行行动项。",
+            "121-150天：沉淀1份“证据解读-业务落地”案例文档。",
+            "151-180天：按目标岗位重构简历和面试话术，完成模拟复盘。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -2728,7 +2789,7 @@
             "项目协同",
             "专业表达"
           ],
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "written_and_interview_formats": [
             "专业笔试（部分）",
             "专业面",
@@ -2805,7 +2866,7 @@
             "协同推进能力弱"
           ],
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v163b2",
             "required_info": [
               "岗位发布时间",
               "城市分布",
@@ -2828,36 +2889,34 @@
               "生物医药与器械 临床运营 offer 薪资"
             ],
             "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
-            "missing_fields": [],
+            "missing_fields": [
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
+            ],
             "how_to_search": [
               "先核对企业官方岗位页，再补平台样本，避免岗位口径漂移。",
               "BOSS优先按“应届生+行业+岗位”检索并筛选城市。",
               "小红书仅做回忆题/面经补充，需留帖子ID与截图时间戳。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "上海、青岛、北京",
-              "薪资区间P25": "9.46k/月",
-              "薪资区间P50": "11.00k/月",
-              "薪资区间P75": "12.54k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "专业笔试（部分） / 专业面",
-              "来源链接或帖子ID": "https://www.mindray.com",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.mindray.com @2026-02-17"
+              "城市分布": "",
+              "薪资区间P25": "",
+              "薪资区间P50": "",
+              "薪资区间P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "来源链接或帖子ID": "",
+              "样本量": "",
+              "截图路径与截图时间": ""
             },
-            "filled_mode": "role_observed_sample",
-            "filled_values": {
-              "城市分布": "上海、青岛、北京",
-              "薪资区间P25": "9.46k/月",
-              "薪资区间P50": "11.00k/月",
-              "薪资区间P75": "12.54k/月",
-              "发布时间": "2026-02-17",
-              "批次/轮次": "专业笔试（部分） / 专业面",
-              "来源链接或帖子ID": "https://www.mindray.com",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.mindray.com @2026-02-17"
-            },
+            "filled_mode": "keep_blank_with_search_plan_v163b2",
+            "filled_values": {},
             "source_evidence": {
               "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
               "source_url": "https://www.mindray.com",
@@ -2866,13 +2925,37 @@
               "city": "青岛",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "持续补充近90天平台样本并滚动更新分位。"
+            "next_backfill_action": "优先补齐近90天BOSS与小红书可核验样本，再回填城市分布与薪资分位。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.mindray.com/en/about-us/careers",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方岗位入口可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E4%B8%B4%E5%BA%8A%E8%BF%90%E8%90%A5%20%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索入口可访问，具体岗位详情需人工抓取。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E4%B8%B4%E5%BA%8A%E8%BF%90%E8%90%A5%20%E9%9D%A2%E7%BB%8F",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索页可访问，帖子正文需登录或App查看。"
+              }
+            ]
           },
           "role_detail_v158": {
             "role_scope": "负责临床运营相关职责并对关键指标结果负责。",
             "role_specific_question_coverage": {
-              "written_count": 12,
-              "interview_count": 12,
+              "written_count": 13,
+              "interview_count": 13,
               "written_stages": [
                 "campus_early_batch_written",
                 "campus_main_batch_written",
@@ -2887,7 +2970,46 @@
               ]
             },
             "expansion_status": "landed_main_profile"
-          }
+          },
+          "career_outlook_3to5_year": "临床试验数字化和真实世界研究提速，临床运营岗位3-5年将从进度跟催升级为“风险预警+跨中心资源协调+数据质量共治”的综合岗位。",
+          "typical_work_week": "周一更新入组和偏差看板，周二到周三推进中心问题闭环与里程碑校准，周四组织项目例会与风险复盘，周五沉淀SOP并规划下周关键节点。",
+          "switch_directions": [
+            {
+              "target_role": "临床项目管理经理",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "进度与资源统筹",
+                "风险管理"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "临床数据管理专员",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "EDC规则配置",
+                "数据清洗"
+              ],
+              "transition_period": "6-8个月"
+            },
+            {
+              "target_role": "药物警戒运营专员",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "安全事件上报",
+                "合规沟通"
+              ],
+              "transition_period": "7-10个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理临床运营全流程和关键里程碑口径。",
+            "31-60天：完成1个中心问题闭环案例并量化结果。",
+            "61-90天：训练“进度-质量-合规”冲突场景题并复盘。",
+            "91-120天：参与跨中心协同会议并输出风险台账。",
+            "121-150天：补齐EDC与数据核查基础，形成操作模板。",
+            "151-180天：沉淀2个可展示的项目案例，用于面试与投递。"
+          ]
         },
         {
           "authenticity_level": "observed",
@@ -6815,7 +6937,7 @@
           "role_name": "临床监查员CRA",
           "authenticity_level": "curated",
           "data_origin": "manual_role_profile_fill_v158",
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "degree_preference": "本科及以上，相关专业优先",
           "major_restriction": "相关专业优先，跨专业需补充项目证据",
           "english_requirement": "根据岗位场景，通常基础到中等",
@@ -6906,8 +7028,8 @@
           "role_detail_v158": {
             "role_scope": "负责临床试验中心监查。",
             "role_specific_question_coverage": {
-              "written_count": 12,
-              "interview_count": 12,
+              "written_count": 13,
+              "interview_count": 13,
               "written_stages": [
                 "campus_early_batch_written",
                 "campus_main_batch_written",
@@ -6946,17 +7068,20 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v163b2",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链"
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App搜索",
+              "牛客网笔面试"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E4%B8%B4%E5%BA%8A%E7%9B%91%E6%9F%A5%E5%91%98CRA%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -6968,41 +7093,33 @@
               "生物医药与器械 临床监查员CRA 面经",
               "生物医药与器械 临床监查员CRA offer 薪资"
             ],
-            "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
+            "capture_rule": "缺少城市/薪资/发布时间时不写强结论，字段留空并记录检索路径。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "先在企业官方岗位页确认“临床监查员CRA”职责口径，再补平台样本。",
+              "BOSS用“应届生+岗位+城市”检索，保留发布时间与薪资区间证据。",
+              "小红书仅作回忆样本，需记录帖子ID和截图时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "上海、青岛、北京",
-              "薪资区间P25": "9.52k/月",
-              "薪资区间P50": "11.20k/月",
-              "薪资区间P75": "12.88k/月",
-              "发布时间": "2026-01-19",
-              "批次/轮次": "网申 / 笔试",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "城市分布": "",
+              "薪资区间P25/P50/P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "帖子ID/链接": "",
+              "样本量": "",
+              "截图时间": ""
             },
             "filled_mode": "industry_proxy_fallback",
-            "filled_values": {
-              "城市分布": "上海、青岛、北京",
-              "薪资区间P25": "9.52k/月",
-              "薪资区间P50": "11.20k/月",
-              "薪资区间P75": "12.88k/月",
-              "发布时间": "2026-01-19",
-              "批次/轮次": "网申 / 笔试",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
-            },
+            "filled_values": {},
             "source_evidence": {
               "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
@@ -7011,7 +7128,31 @@
               "city": "上海",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "补齐至少2个城市样本并回填分位薪资、发布时间、轮次。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.mindray.com/en/about-us/careers",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方岗位来源可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E4%B8%B4%E5%BA%8A%E7%9B%91%E6%9F%A5%E5%91%98CRA%20%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索入口可访问，具体岗位样本需人工抽取。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E4%B8%B4%E5%BA%8A%E7%9B%91%E6%9F%A5%E5%91%98CRA%20%E9%9D%A2%E7%BB%8F",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "页面可访问，帖子详情需登录或App检索。"
+              }
+            ]
           },
           "project_evidence_public_sample": {
             "sample_id": "IND_BIOMED_DEVICE_ROLE_HGX_001_STAR_PUBLIC_2026V159",
@@ -7054,14 +7195,53 @@
               "指标追踪报表",
               "复盘纪要与改进清单"
             ]
-          }
+          },
+          "career_outlook_3to5_year": "随着多中心临床项目和真实世界研究增加，CRA岗位将从执行监查向风险导向监查与数据质量管理升级，3-5年内复合型CRA需求持续走高。",
+          "typical_work_week": "每周前半段进行中心访视与疑问项跟进，后半段完成监查报告、偏差闭环和项目例会。",
+          "switch_directions": [
+            {
+              "target_role": "临床运营经理",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "项目统筹",
+                "中心管理"
+              ],
+              "transition_period": "6-9个月"
+            },
+            {
+              "target_role": "临床数据管理",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "EDC规则",
+                "数据核查"
+              ],
+              "transition_period": "6-8个月"
+            },
+            {
+              "target_role": "药物警戒专员",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "安全事件识别",
+                "合规报送"
+              ],
+              "transition_period": "7-10个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：补齐GCP条款、监查流程与中心沟通模板。",
+            "31-60天：独立完成1次访视报告与偏差闭环。",
+            "61-90天：训练监查场景题与追问链。",
+            "91-120天：补齐EDC数据核查与疑问项管理。",
+            "121-150天：参与一次锁库前风险评审并输出清单。",
+            "151-180天：沉淀“访视-问题-整改-复盘”案例证据。"
+          ]
         },
         {
           "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_002",
           "role_name": "注册事务专员",
           "authenticity_level": "curated",
           "data_origin": "manual_role_profile_fill_v158",
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "degree_preference": "本科及以上，相关专业优先",
           "major_restriction": "相关专业优先，跨专业需补充项目证据",
           "english_requirement": "根据岗位场景，通常基础到中等",
@@ -7152,8 +7332,8 @@
           "role_detail_v158": {
             "role_scope": "负责注册申报与资料准备。",
             "role_specific_question_coverage": {
-              "written_count": 12,
-              "interview_count": 12,
+              "written_count": 13,
+              "interview_count": 13,
               "written_stages": [
                 "campus_main_batch_written",
                 "campus_supplement_written",
@@ -7192,17 +7372,20 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v163b2",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链"
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App搜索",
+              "牛客网笔面试"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%B3%A8%E5%86%8C%E4%BA%8B%E5%8A%A1%E4%B8%93%E5%91%98%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -7214,41 +7397,33 @@
               "生物医药与器械 注册事务专员 面经",
               "生物医药与器械 注册事务专员 offer 薪资"
             ],
-            "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
+            "capture_rule": "缺少城市/薪资/发布时间时不写强结论，字段留空并记录检索路径。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "先在企业官方岗位页确认“注册事务专员”职责口径，再补平台样本。",
+              "BOSS用“应届生+岗位+城市”检索，保留发布时间与薪资区间证据。",
+              "小红书仅作回忆样本，需记录帖子ID和截图时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "上海、青岛、北京",
-              "薪资区间P25": "9.52k/月",
-              "薪资区间P50": "11.20k/月",
-              "薪资区间P75": "12.88k/月",
-              "发布时间": "2026-01-19",
-              "批次/轮次": "网申 / 笔试",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "城市分布": "",
+              "薪资区间P25/P50/P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "帖子ID/链接": "",
+              "样本量": "",
+              "截图时间": ""
             },
             "filled_mode": "industry_proxy_fallback",
-            "filled_values": {
-              "城市分布": "上海、青岛、北京",
-              "薪资区间P25": "9.52k/月",
-              "薪资区间P50": "11.20k/月",
-              "薪资区间P75": "12.88k/月",
-              "发布时间": "2026-01-19",
-              "批次/轮次": "网申 / 笔试",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
-            },
+            "filled_values": {},
             "source_evidence": {
               "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
@@ -7257,7 +7432,31 @@
               "city": "上海",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "补齐至少2个城市样本并回填分位薪资、发布时间、轮次。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.mindray.com/en/about-us/careers",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方岗位来源可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%B3%A8%E5%86%8C%E4%BA%8B%E5%8A%A1%E4%B8%93%E5%91%98%20%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索入口可访问，具体岗位样本需人工抽取。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E6%B3%A8%E5%86%8C%E4%BA%8B%E5%8A%A1%E4%B8%93%E5%91%98%20%E9%9D%A2%E7%BB%8F",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "页面可访问，帖子详情需登录或App检索。"
+              }
+            ]
           },
           "project_evidence_public_sample": {
             "sample_id": "IND_BIOMED_DEVICE_ROLE_HGX_002_STAR_PUBLIC_2026V159",
@@ -7300,14 +7499,53 @@
               "指标追踪报表",
               "复盘纪要与改进清单"
             ]
-          }
+          },
+          "career_outlook_3to5_year": "器械和药品注册审评标准持续细化，注册事务专员岗位将从资料整理转向全周期注册策略，3-5年内法规与项目管理双能力更稀缺。",
+          "typical_work_week": "每周围绕注册资料维护、补件沟通和法规检索推进，审评节点前集中处理问询回复与风险复核。",
+          "switch_directions": [
+            {
+              "target_role": "注册事务经理",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "注册策略",
+                "项目排期"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "质量法规专员",
+              "switch_cost": "低中",
+              "bridge_skills": [
+                "法规体系",
+                "质量文件"
+              ],
+              "transition_period": "5-8个月"
+            },
+            {
+              "target_role": "医疗器械合规顾问",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "多地区法规",
+                "审评沟通"
+              ],
+              "transition_period": "9-12个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理NMPA注册流程和核心申报资料框架。",
+            "31-60天：完成1份补件回复草案并通过复核。",
+            "61-90天：训练法规问答与审评沟通题。",
+            "91-120天：补齐海外注册基础（FDA/CE）对比。",
+            "121-150天：参与一次注册里程碑复盘。",
+            "151-180天：形成“申报计划-补件闭环”案例材料。"
+          ]
         },
         {
           "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_003",
           "role_name": "医学联络专员MSL",
           "authenticity_level": "curated",
           "data_origin": "manual_role_profile_fill_v158",
-          "updated_at": "2026-02-21",
+          "updated_at": "2026-02-24",
           "degree_preference": "本科及以上，相关专业优先",
           "major_restriction": "相关专业优先，跨专业需补充项目证据",
           "english_requirement": "根据岗位场景，通常基础到中等",
@@ -7398,8 +7636,8 @@
           "role_detail_v158": {
             "role_scope": "负责医学沟通支持。",
             "role_specific_question_coverage": {
-              "written_count": 12,
-              "interview_count": 12,
+              "written_count": 13,
+              "interview_count": 13,
               "written_stages": [
                 "campus_supplement_written",
                 "campus_main_batch_written",
@@ -7438,17 +7676,20 @@
             "stat_definition": "v1.58优先行业官方岗位详情深链补齐（企业官方主链）。"
           },
           "platform_backfill_gap": {
-            "status": "completed_with_observed_or_proxy",
+            "status": "keep_blank_with_search_plan_v163b2",
             "required_info": [
-              "岗位发布时间",
               "城市分布",
-              "薪酬区间P25/P50/P75",
-              "公司层级",
-              "高频追问链"
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "where_to_search": [
               "BOSS直聘网页端职位搜索",
-              "小红书App端搜索"
+              "小红书App搜索",
+              "牛客网笔面试"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job?query=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E5%8C%BB%E5%AD%A6%E8%81%94%E7%BB%9C%E4%B8%93%E5%91%98MSL%20%E6%A0%A1%E6%8B%9B",
             "boss_search_query": [
@@ -7460,41 +7701,33 @@
               "生物医药与器械 医学联络专员MSL 面经",
               "生物医药与器械 医学联络专员MSL offer 薪资"
             ],
-            "capture_rule": "保留帖子/岗位链接、截图时间戳、样本量与发布时间；缺城市/薪资/发布时间则仅作低置信补充。",
+            "capture_rule": "缺少城市/薪资/发布时间时不写强结论，字段留空并记录检索路径。",
             "missing_fields": [
-              "BOSS同城同岗薪资分位样本",
-              "平台发布时间近90天样本",
-              "平台截图证据路径"
+              "城市分布",
+              "薪资区间P25/P50/P75",
+              "发布时间",
+              "批次/轮次",
+              "帖子ID/链接",
+              "样本量",
+              "截图时间"
             ],
             "how_to_search": [
-              "先核对官方岗位页或公告页，再补平台样本，避免岗位口径漂移。",
-              "BOSS按“应届生+行业+岗位”组合检索并筛选城市。",
-              "小红书优先App检索，记录帖子ID与截图时间。"
+              "先在企业官方岗位页确认“医学联络专员MSL”职责口径，再补平台样本。",
+              "BOSS用“应届生+岗位+城市”检索，保留发布时间与薪资区间证据。",
+              "小红书仅作回忆样本，需记录帖子ID和截图时间。"
             ],
-            "updated_at": "2026-02-21",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "上海、青岛、北京",
-              "薪资区间P25": "9.52k/月",
-              "薪资区间P50": "11.20k/月",
-              "薪资区间P75": "12.88k/月",
-              "发布时间": "2026-01-19",
-              "批次/轮次": "网申 / 笔试",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "城市分布": "",
+              "薪资区间P25/P50/P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "帖子ID/链接": "",
+              "样本量": "",
+              "截图时间": ""
             },
             "filled_mode": "industry_proxy_fallback",
-            "filled_values": {
-              "城市分布": "上海、青岛、北京",
-              "薪资区间P25": "9.52k/月",
-              "薪资区间P50": "11.20k/月",
-              "薪资区间P75": "12.88k/月",
-              "发布时间": "2026-01-19",
-              "批次/轮次": "网申 / 笔试",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
-            },
+            "filled_values": {},
             "source_evidence": {
               "source_id": "SRC_NBS_INCOME_2025_FULLYEAR",
               "source_url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
@@ -7503,7 +7736,31 @@
               "city": "上海",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "按既有检索词补录BOSS与小红书样本，回填真实平台分位与发布时间。"
+            "next_backfill_action": "补齐至少2个城市样本并回填分位薪资、发布时间、轮次。",
+            "action": "leave_blank_pending_capture",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.mindray.com/en/about-us/careers",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方岗位来源可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job?query=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E5%8C%BB%E5%AD%A6%E8%81%94%E7%BB%9C%E4%B8%93%E5%91%98MSL%20%E6%A0%A1%E6%8B%9B",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索入口可访问，具体岗位样本需人工抽取。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E7%94%9F%E7%89%A9%E5%8C%BB%E8%8D%AF%E4%B8%8E%E5%99%A8%E6%A2%B0%20%E5%8C%BB%E5%AD%A6%E8%81%94%E7%BB%9C%E4%B8%93%E5%91%98MSL%20%E9%9D%A2%E7%BB%8F",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "页面可访问，帖子详情需登录或App检索。"
+              }
+            ]
           },
           "project_evidence_public_sample": {
             "sample_id": "IND_BIOMED_DEVICE_ROLE_HGX_003_STAR_PUBLIC_2026V159",
@@ -7546,7 +7803,46 @@
               "指标追踪报表",
               "复盘纪要与改进清单"
             ]
-          }
+          },
+          "career_outlook_3to5_year": "医学联络岗位将持续向“学术影响力+真实世界证据”演进，3-5年内具备医学解读与跨团队沟通能力的MSL将更具竞争优势。",
+          "typical_work_week": "常规周以KOL拜访、学术资料准备和内部医学培训为主，会议季会增加答疑支持和会后复盘。",
+          "switch_directions": [
+            {
+              "target_role": "医学事务经理",
+              "switch_cost": "中",
+              "bridge_skills": [
+                "医学策略",
+                "团队协同"
+              ],
+              "transition_period": "7-10个月"
+            },
+            {
+              "target_role": "市场准入经理",
+              "switch_cost": "中高",
+              "bridge_skills": [
+                "卫生经济",
+                "支付政策"
+              ],
+              "transition_period": "9-12个月"
+            },
+            {
+              "target_role": "医学教育专员",
+              "switch_cost": "低中",
+              "bridge_skills": [
+                "课程设计",
+                "内容表达"
+              ],
+              "transition_period": "5-7个月"
+            }
+          ],
+          "prepare_180d_plan": [
+            "1-30天：梳理核心治疗领域指南与证据层级。",
+            "31-60天：输出1份KOL沟通纪要与问题闭环。",
+            "61-90天：训练医学沟通与合规边界题。",
+            "91-120天：补齐真实世界研究和数据解读能力。",
+            "121-150天：参与一次学术活动复盘。",
+            "151-180天：沉淀“学术沟通-反馈-行动”案例。"
+          ]
         },
         {
           "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_004",
@@ -11501,7 +11797,7 @@
             "data_period": "2026年度"
           },
           "platform_backfill_gap": {
-            "status": "keep_blank_with_search_plan_v163",
+            "status": "keep_blank_with_search_plan_v163b2",
             "required_info": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -11512,9 +11808,9 @@
               "截图时间"
             ],
             "where_to_search": [
-              "BOSS直聘网页端",
-              "小红书搜索页",
-              "牛客网"
+              "BOSS直聘网页端职位搜索",
+              "小红书App搜索",
+              "牛客网笔面试"
             ],
             "boss_search_url": "https://www.zhipin.com/web/geek/job",
             "boss_search_query": [
@@ -11526,7 +11822,7 @@
               "临床数据 运营 面经",
               "医疗器械 临床数据 校招"
             ],
-            "capture_rule": "保留截图时间戳、来源链接、发布日期；缺失城市/薪资/发布时间的样本不入A档结论。",
+            "capture_rule": "缺少城市/薪资/发布时间时不写强结论，字段留空并记录检索路径。",
             "missing_fields": [
               "城市分布",
               "薪资区间P25/P50/P75",
@@ -11537,21 +11833,19 @@
               "截图时间"
             ],
             "how_to_search": [
-              "先在药企/器械企业官方校招页确认岗位定义。",
-              "BOSS抓城市与发布时间，构建分位薪资样本。",
-              "小红书仅做回忆样本补充并记录帖子ID。"
+              "先在企业官方岗位页确认“医疗器械临床数据运营专员”职责口径，再补平台样本。",
+              "BOSS用“应届生+岗位+城市”检索，保留发布时间与薪资区间证据。",
+              "小红书仅作回忆样本，需记录帖子ID和截图时间。"
             ],
-            "updated_at": "2026-02-23",
+            "updated_at": "2026-02-24",
             "placeholder_values": {
-              "城市分布": "上海、青岛、北京",
-              "薪资区间P25": "9.52k/月",
-              "薪资区间P50": "11.20k/月",
-              "薪资区间P75": "12.88k/月",
-              "发布时间": "2026-01-19",
-              "批次/轮次": "笔试 / 业务面",
-              "来源链接或帖子ID": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html",
-              "样本量": "38",
-              "截图路径与截图时间": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260119_1962321.html @2026-02-18"
+              "城市分布": "",
+              "薪资区间P25/P50/P75": "",
+              "发布时间": "",
+              "批次/轮次": "",
+              "帖子ID/链接": "",
+              "样本量": "",
+              "截图时间": ""
             },
             "filled_mode": "industry_proxy_fallback",
             "filled_values": {},
@@ -11563,14 +11857,31 @@
               "city": "上海",
               "company_tier": "t2_strong"
             },
-            "next_backfill_action": "补齐沪京两地各1条有效样本。",
-            "unavailable_capture_log_v163": {
-              "official_http": 200,
-              "boss_http": 200,
-              "xiaohongshu_http": 404,
-              "checked_at": "2026-02-23",
-              "note": "小红书公开检索受限，按规范留空。"
-            }
+            "next_backfill_action": "补齐至少2个城市样本并回填分位薪资、发布时间、轮次。",
+            "unavailable_capture_log_v163": [
+              {
+                "platform": "official",
+                "url": "https://www.mindray.com/en/about-us/careers",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "官方岗位来源可访问。"
+              },
+              {
+                "platform": "boss",
+                "url": "https://www.zhipin.com/web/geek/job",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "检索入口可访问，具体岗位样本需人工抽取。"
+              },
+              {
+                "platform": "xiaohongshu",
+                "url": "https://www.xiaohongshu.com/search_result/?keyword=%E4%B8%B4%E5%BA%8A%E6%95%B0%E6%8D%AE%20%E9%9D%A2%E7%BB%8F",
+                "http_status": 200,
+                "checked_at": "2026-02-24",
+                "note": "页面可访问，帖子详情需登录或App检索。"
+              }
+            ],
+            "action": "leave_blank_pending_capture"
           },
           "project_evidence_slots": [
             {
@@ -11612,7 +11923,7 @@
               "evidence_hint": "用STAR说明你在项目中如何应用“申报进度管理”，并给出可量化结果。"
             }
           ],
-          "updated_at": "2026-02-23",
+          "updated_at": "2026-02-24",
           "high_score_answer_example": "在生物医药与器械医疗器械临床数据运营专员面试中，先明确目标与约束，再给执行方案、量化结果与复盘改进。",
           "project_evidence_public_sample": {
             "sample_id": "IND_BIOMED_DEVICE_ROLE_022_STAR_PUBLIC_2026",
@@ -11641,8 +11952,8 @@
           "role_detail_v158": {
             "role_scope": "负责临床试验数据运营与质量控制，对数据完整性、时效性和合规可追溯性负责。",
             "role_specific_question_coverage": {
-              "written_count": 8,
-              "interview_count": 8,
+              "written_count": 9,
+              "interview_count": 9,
               "written_stages": [
                 "campus_early_batch_written",
                 "campus_main_batch_written",
@@ -47198,6 +47509,484 @@
             "关键取舍",
             "复盘迁移"
           ]
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_V163B2_RHGX001_01",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_001",
+          "role_name": "临床监查员CRA",
+          "prompt": "【生物医药与器械-临床监查员CRA】某中心连续两次出现原始记录与CRF不一致，请给出风险分级、复核顺序与升级路径。",
+          "question_type": "临床监查风险诊断题（第二批人工补深）",
+          "question_year": 2026,
+          "round_label": "主批笔试",
+          "recruitment_stage": "campus_main_batch_written",
+          "scenario_bucket": "system_process",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环并有风险预案。",
+            "B档": "方案基本完整，但边界条件与验证口径不充分。",
+            "C档": "回答泛化，缺少可执行细节和量化指标。"
+          },
+          "follow_up_questions": [
+            "若资源减半，你如何重排优先级？",
+            "若第一轮动作失效，二次迭代怎么做？",
+            "如何设定退出条件和复盘模板？"
+          ],
+          "common_mistakes": [
+            "只讲动作不讲目标函数",
+            "忽略约束条件和协同依赖",
+            "缺少复盘与止损机制"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界",
+            "关键指标和里程碑清晰",
+            "给出风险预案和复盘机制"
+          ],
+          "reference_answer_outline": [
+            "明确目标和约束",
+            "拆解动作与优先级",
+            "说明指标与风险控制",
+            "给出复盘和迭代路径"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.mindray.com/en/about-us/careers",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com/en/about-us/careers",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_ZHILIAN",
+              "SRC_NOWCODER_WRITTEN_SOFT_2026"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_V163B2_RHGX002_01",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_002",
+          "role_name": "注册事务专员",
+          "prompt": "【生物医药与器械-注册事务专员】收到审评补件通知后仅有10个工作日，请设计补件分工、证据链校验和进度管控方案。",
+          "question_type": "注册补件流程题（第二批人工补深）",
+          "question_year": 2026,
+          "round_label": "主批笔试",
+          "recruitment_stage": "campus_main_batch_written",
+          "scenario_bucket": "system_process",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环并有风险预案。",
+            "B档": "方案基本完整，但边界条件与验证口径不充分。",
+            "C档": "回答泛化，缺少可执行细节和量化指标。"
+          },
+          "follow_up_questions": [
+            "若资源减半，你如何重排优先级？",
+            "若第一轮动作失效，二次迭代怎么做？",
+            "如何设定退出条件和复盘模板？"
+          ],
+          "common_mistakes": [
+            "只讲动作不讲目标函数",
+            "忽略约束条件和协同依赖",
+            "缺少复盘与止损机制"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界",
+            "关键指标和里程碑清晰",
+            "给出风险预案和复盘机制"
+          ],
+          "reference_answer_outline": [
+            "明确目标和约束",
+            "拆解动作与优先级",
+            "说明指标与风险控制",
+            "给出复盘和迭代路径"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.mindray.com/en/about-us/careers",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com/en/about-us/careers",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_ZHILIAN",
+              "SRC_NOWCODER_WRITTEN_SOFT_2026"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_V163B2_RHGX003_01",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_003",
+          "role_name": "医学联络专员MSL",
+          "prompt": "【生物医药与器械-医学联络专员MSL】某指南更新后产品核心证据被质疑，请设计证据沟通话术与学术拜访优先级。",
+          "question_type": "医学证据沟通题（第二批人工补深）",
+          "question_year": 2026,
+          "round_label": "主批笔试",
+          "recruitment_stage": "campus_main_batch_written",
+          "scenario_bucket": "business_scenario",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环并有风险预案。",
+            "B档": "方案基本完整，但边界条件与验证口径不充分。",
+            "C档": "回答泛化，缺少可执行细节和量化指标。"
+          },
+          "follow_up_questions": [
+            "若资源减半，你如何重排优先级？",
+            "若第一轮动作失效，二次迭代怎么做？",
+            "如何设定退出条件和复盘模板？"
+          ],
+          "common_mistakes": [
+            "只讲动作不讲目标函数",
+            "忽略约束条件和协同依赖",
+            "缺少复盘与止损机制"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界",
+            "关键指标和里程碑清晰",
+            "给出风险预案和复盘机制"
+          ],
+          "reference_answer_outline": [
+            "明确目标和约束",
+            "拆解动作与优先级",
+            "说明指标与风险控制",
+            "给出复盘和迭代路径"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.mindray.com/en/about-us/careers",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com/en/about-us/careers",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_ZHILIAN",
+              "SRC_NOWCODER_WRITTEN_SOFT_2026"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_V163_R022_09",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_022",
+          "role_name": "医疗器械临床数据运营专员",
+          "prompt": "【生物医药与器械-医疗器械临床数据运营专员】某多中心临床项目在数据库锁库前48小时发现疑问项集中积压，请设计分层清理与风险兜底方案，并给出可量化验收指标。",
+          "question_type": "临床数据运营场景题（第二批人工补深）",
+          "question_year": 2026,
+          "round_label": "主批笔试",
+          "recruitment_stage": "campus_main_batch_written",
+          "scenario_bucket": "business_scenario",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环并有风险预案。",
+            "B档": "方案基本完整，但边界条件与验证口径不充分。",
+            "C档": "回答泛化，缺少可执行细节和量化指标。"
+          },
+          "follow_up_questions": [
+            "若资源减半，你如何重排优先级？",
+            "若第一轮动作失效，二次迭代怎么做？",
+            "如何设定退出条件和复盘模板？"
+          ],
+          "common_mistakes": [
+            "只讲动作不讲目标函数",
+            "忽略约束条件和协同依赖",
+            "缺少复盘与止损机制"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界",
+            "关键指标和里程碑清晰",
+            "给出风险预案和复盘机制"
+          ],
+          "reference_answer_outline": [
+            "明确目标和约束",
+            "拆解动作与优先级",
+            "说明指标与风险控制",
+            "给出复盘和迭代路径"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.mindray.com/en/about-us/careers",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com/en/about-us/careers",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_NMPA_GOV_CN_59F31F83",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_V163B2C_R001_01",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_001",
+          "role_name": "医学事务",
+          "prompt": "【生物医药与器械-医学事务】某创新药新适应症准备医院准入，医学团队需在4周内给出循证资料包。请设计“证据优先级-协同分工-质量验收”方案。",
+          "question_type": "医学证据策略题（第二批续补）",
+          "question_year": 2026,
+          "round_label": "主批笔试",
+          "recruitment_stage": "campus_main_batch_written",
+          "scenario_bucket": "process_mechanism",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2c",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "证据优先级清晰，协同机制可执行，验收标准可量化。",
+            "B档": "方案完整但缺乏关键边界条件与里程碑定义。",
+            "C档": "仅描述动作，缺少证据闭环与量化指标。"
+          },
+          "follow_up_questions": [
+            "若关键文献发布时间晚于项目节点，你怎么做替代方案？",
+            "当市场团队要求缩短一半准备时间时你怎么重排优先级？",
+            "如何设置资料包的“一票否决”质量红线？"
+          ],
+          "common_mistakes": [
+            "只讲资料罗列，不讲证据等级和业务影响。",
+            "忽略跨团队协同和审批链路。",
+            "没有给出验收口径和复盘机制。"
+          ],
+          "good_answer_signals": [
+            "先定目标与约束，再给出分层证据策略。",
+            "能说明跨团队分工和节奏管理。",
+            "给出量化验收指标与风险预案。"
+          ],
+          "reference_answer_outline": [
+            "定义准入目标与时间边界。",
+            "按证据强度拆分资料优先级并安排分工。",
+            "设置验收标准、风险预案与复盘机制。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.mindray.com/en/about-us/careers",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com/en/about-us/careers",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_NMPA_GOV_CN_59F31F83",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_WRITTEN_V163B2C_R002_01",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_002",
+          "role_name": "临床运营",
+          "prompt": "【生物医药与器械-临床运营】某多中心项目连续两周入组率低于计划，监查资源和预算都受限。请给出90天“诊断-干预-验证”推进方案。",
+          "question_type": "临床运营修复题（第二批续补）",
+          "question_year": 2026,
+          "round_label": "主批笔试",
+          "recruitment_stage": "campus_main_batch_written",
+          "scenario_bucket": "business_scenario",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2c",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "能基于约束提出分阶段方案并定义量化验收指标。",
+            "B档": "方案方向正确，但缺里程碑和风险控制细节。",
+            "C档": "回答泛化，无法落地执行。"
+          },
+          "follow_up_questions": [
+            "若关键中心持续低入组，你会触发什么替代动作？",
+            "预算再下降20%时你如何调整监查节奏？",
+            "如何定义“干预有效”与“停止投入”的阈值？"
+          ],
+          "common_mistakes": [
+            "只给动作列表，不给优先级与里程碑。",
+            "忽略数据质量与合规约束。",
+            "缺少复盘和退出机制。"
+          ],
+          "good_answer_signals": [
+            "能先定义目标函数并说明约束。",
+            "能给出跨团队协同与阶段目标。",
+            "有明确的验证口径与风险预案。"
+          ],
+          "reference_answer_outline": [
+            "拆解入组下滑的主要原因。",
+            "提出分阶段干预动作和资源配置。",
+            "定义验证指标、风险预警与复盘机制。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.mindray.com/en/about-us/careers",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com/en/about-us/careers",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_NMPA_GOV_CN_59F31F83",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
         }
       ],
       "last_checked": "2026-02-19",
@@ -83448,6 +84237,484 @@
             "关键取舍",
             "复盘迁移"
           ]
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_V163B2_RHGX001_01",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_001",
+          "role_name": "临床监查员CRA",
+          "prompt": "PI认为“轻微偏差不影响结果”而质控团队坚持重开核查，你如何推动一致结论并避免项目延期？",
+          "question_type": "冲突协同与风险决策（第二批人工补深）",
+          "question_year": 2026,
+          "round_label": "主批面试",
+          "recruitment_stage": "campus_main_batch_interview",
+          "scenario_bucket": "cross_team_collaboration",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环并有风险预案。",
+            "B档": "方案基本完整，但边界条件与验证口径不充分。",
+            "C档": "回答泛化，缺少可执行细节和量化指标。"
+          },
+          "follow_up_questions": [
+            "若资源减半，你如何重排优先级？",
+            "若第一轮动作失效，二次迭代怎么做？",
+            "如何设定退出条件和复盘模板？"
+          ],
+          "common_mistakes": [
+            "只讲动作不讲目标函数",
+            "忽略约束条件和协同依赖",
+            "缺少复盘与止损机制"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界",
+            "关键指标和里程碑清晰",
+            "给出风险预案和复盘机制"
+          ],
+          "reference_answer_outline": [
+            "明确目标和约束",
+            "拆解动作与优先级",
+            "说明指标与风险控制",
+            "给出复盘和迭代路径"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.mindray.com/en/about-us/careers",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com/en/about-us/careers",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_ZHILIAN",
+              "SRC_NOWCODER_WRITTEN_SOFT_2026"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_V163B2_RHGX002_01",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_002",
+          "role_name": "注册事务专员",
+          "prompt": "研发希望先上线迭代版本、法规要求先完成变更备案，你如何协调业务时效与合规顺序？",
+          "question_type": "合规与交付取舍（第二批人工补深）",
+          "question_year": 2026,
+          "round_label": "主批面试",
+          "recruitment_stage": "campus_main_batch_interview",
+          "scenario_bucket": "metric_tradeoff",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环并有风险预案。",
+            "B档": "方案基本完整，但边界条件与验证口径不充分。",
+            "C档": "回答泛化，缺少可执行细节和量化指标。"
+          },
+          "follow_up_questions": [
+            "若资源减半，你如何重排优先级？",
+            "若第一轮动作失效，二次迭代怎么做？",
+            "如何设定退出条件和复盘模板？"
+          ],
+          "common_mistakes": [
+            "只讲动作不讲目标函数",
+            "忽略约束条件和协同依赖",
+            "缺少复盘与止损机制"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界",
+            "关键指标和里程碑清晰",
+            "给出风险预案和复盘机制"
+          ],
+          "reference_answer_outline": [
+            "明确目标和约束",
+            "拆解动作与优先级",
+            "说明指标与风险控制",
+            "给出复盘和迭代路径"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.mindray.com/en/about-us/careers",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com/en/about-us/careers",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_ZHILIAN",
+              "SRC_NOWCODER_WRITTEN_SOFT_2026"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_V163B2_RHGX003_01",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_HGX_003",
+          "role_name": "医学联络专员MSL",
+          "prompt": "KOL观点与公司医学结论不一致且市场团队希望快速传播，你如何在合规边界内推进？",
+          "question_type": "医学合规协同题（第二批人工补深）",
+          "question_year": 2026,
+          "round_label": "主批面试",
+          "recruitment_stage": "campus_main_batch_interview",
+          "scenario_bucket": "cross_team_collaboration",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环并有风险预案。",
+            "B档": "方案基本完整，但边界条件与验证口径不充分。",
+            "C档": "回答泛化，缺少可执行细节和量化指标。"
+          },
+          "follow_up_questions": [
+            "若资源减半，你如何重排优先级？",
+            "若第一轮动作失效，二次迭代怎么做？",
+            "如何设定退出条件和复盘模板？"
+          ],
+          "common_mistakes": [
+            "只讲动作不讲目标函数",
+            "忽略约束条件和协同依赖",
+            "缺少复盘与止损机制"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界",
+            "关键指标和里程碑清晰",
+            "给出风险预案和复盘机制"
+          ],
+          "reference_answer_outline": [
+            "明确目标和约束",
+            "拆解动作与优先级",
+            "说明指标与风险控制",
+            "给出复盘和迭代路径"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.mindray.com/en/about-us/careers",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com/en/about-us/careers",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_ZHILIAN",
+              "SRC_NOWCODER_WRITTEN_SOFT_2026"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_V163_R022_09",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_022",
+          "role_name": "医疗器械临床数据运营专员",
+          "prompt": "当项目经理要求按时锁库、医学团队要求补充核查、监查员担心中心配合度下降时，你如何在质量、时效和合规之间做取舍？",
+          "question_type": "跨团队协同与指标取舍（第二批人工补深）",
+          "question_year": 2026,
+          "round_label": "主批面试",
+          "recruitment_stage": "campus_main_batch_interview",
+          "scenario_bucket": "metric_tradeoff",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "目标清晰、动作可执行、指标闭环并有风险预案。",
+            "B档": "方案基本完整，但边界条件与验证口径不充分。",
+            "C档": "回答泛化，缺少可执行细节和量化指标。"
+          },
+          "follow_up_questions": [
+            "若资源减半，你如何重排优先级？",
+            "若第一轮动作失效，二次迭代怎么做？",
+            "如何设定退出条件和复盘模板？"
+          ],
+          "common_mistakes": [
+            "只讲动作不讲目标函数",
+            "忽略约束条件和协同依赖",
+            "缺少复盘与止损机制"
+          ],
+          "good_answer_signals": [
+            "先定义目标与边界",
+            "关键指标和里程碑清晰",
+            "给出风险预案和复盘机制"
+          ],
+          "reference_answer_outline": [
+            "明确目标和约束",
+            "拆解动作与优先级",
+            "说明指标与风险控制",
+            "给出复盘和迭代路径"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.mindray.com/en/about-us/careers",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com/en/about-us/careers",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_NMPA_GOV_CN_59F31F83",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_V163B2C_R001_01",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_001",
+          "role_name": "医学事务",
+          "prompt": "当医学、市场和准入团队对同一份证据的解读发生冲突时，你如何在一周内推动形成可执行一致方案？",
+          "question_type": "跨团队证据对齐题（第二批续补）",
+          "question_year": 2026,
+          "round_label": "主批面试",
+          "recruitment_stage": "campus_main_batch_interview",
+          "scenario_bucket": "cross_team_collaboration",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2c",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "能平衡多方诉求并给出清晰决策机制和里程碑。",
+            "B档": "能提出协同动作，但缺冲突升级和止损方案。",
+            "C档": "停留在沟通口号，缺少执行细节。"
+          },
+          "follow_up_questions": [
+            "若仍无法达成一致，你的升级路径和时限是什么？",
+            "你会用哪些指标判断协同机制是否有效？",
+            "如何在保持合规前提下提升跨团队效率？"
+          ],
+          "common_mistakes": [
+            "只谈沟通态度，不给决策机制。",
+            "忽略合规边界和审批流程。",
+            "没有量化结果与复盘动作。"
+          ],
+          "good_answer_signals": [
+            "先定义目标冲突和边界条件。",
+            "给出可执行的协同节奏和责任分工。",
+            "能说明结果指标和复盘机制。"
+          ],
+          "reference_answer_outline": [
+            "界定冲突点并设定统一目标。",
+            "设计分层协同机制与升级路径。",
+            "定义验收指标与复盘动作。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.mindray.com/en/about-us/careers",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com/en/about-us/careers",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_NMPA_GOV_CN_59F31F83",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
+        },
+        {
+          "question_id": "IND_BIOMED_DEVICE_INTERVIEW_V163B2C_R002_01",
+          "role_id": "IND_BIOMED_DEVICE_ROLE_002",
+          "role_name": "临床运营",
+          "prompt": "项目临近数据库锁库时，医学团队要求补充核查、数据团队要求冻结变更、监查团队反馈人手不足。你如何做取舍并保证项目质量？",
+          "question_type": "临床运营取舍题（第二批续补）",
+          "question_year": 2026,
+          "round_label": "主批面试",
+          "recruitment_stage": "campus_main_batch_interview",
+          "scenario_bucket": "metric_tradeoff",
+          "authenticity_level": "official",
+          "data_origin": "manual_curated_official_plus_platform_gap_v163b2c",
+          "company_tier": "t2_strong",
+          "difficulty_1to5": 4,
+          "sample_size": 6,
+          "answer_framework": [
+            "问题定义",
+            "约束识别",
+            "执行路径",
+            "结果复盘"
+          ],
+          "scoring_dimensions": [
+            "结构化分析",
+            "业务判断",
+            "执行落地",
+            "风险控制"
+          ],
+          "scoring_rubric": {
+            "A档": "能明确目标函数、优先级策略和止损机制。",
+            "B档": "思路合理但风险预案与量化口径不足。",
+            "C档": "回答泛化，无法指导实际执行。"
+          },
+          "follow_up_questions": [
+            "资源再缩减30%时你先砍哪些动作？",
+            "如果首次决策失败，你如何在48小时内纠偏？",
+            "你如何定义“锁库可执行”的最低标准？"
+          ],
+          "common_mistakes": [
+            "没有定义关键目标和约束条件。",
+            "忽视跨团队依赖与风险升级路径。",
+            "缺少复盘与二次迭代机制。"
+          ],
+          "good_answer_signals": [
+            "先给决策原则，再给执行动作。",
+            "能给出明确里程碑与责任人。",
+            "能设置风险阈值和复盘闭环。"
+          ],
+          "reference_answer_outline": [
+            "定义锁库目标与约束。",
+            "按优先级拆解动作并分配资源。",
+            "设置风险阈值、升级机制和复盘计划。"
+          ],
+          "question_realness_note": "基于企业官方岗位职责与能力要求整理的训练题。",
+          "is_template": false,
+          "needs_real_question": false,
+          "evidence": {
+            "access_check": "checked",
+            "accessed_at": "2026-02-24",
+            "confidence": 0.82,
+            "http_status": 200,
+            "manual_verification_required": false,
+            "sample_size": 6,
+            "snapshot_url": "https://www.mindray.com/en/about-us/careers",
+            "source_date": "2026-02-24",
+            "source_id": "SRC_AUTO_WWW_MINDRAY_COM_EB5B1C59",
+            "source_name": "迈瑞医疗官网",
+            "source_type": "company_official",
+            "source_url": "https://www.mindray.com/en/about-us/careers",
+            "stat_definition": "基于企业官方岗位要求抽取能力要点并人工编写。",
+            "secondary_source_ids": [
+              "SRC_AUTO_WWW_NMPA_GOV_CN_59F31F83",
+              "SRC_BOSS"
+            ],
+            "publish_date": "2026-02-24",
+            "captured_at": "2026-02-24",
+            "data_period": "2026年度"
+          },
+          "updated_at": "2026-02-24"
         }
       ],
       "last_checked": "2026-02-19",
