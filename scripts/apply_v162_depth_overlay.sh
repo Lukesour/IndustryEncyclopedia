@@ -46,6 +46,30 @@ V162_METRICS_JSON="$(jq \
       end
     );
 
+  def is_official_question($q):
+    (($q.authenticity_level // "") == "official"
+      or ($q.authenticity_level // "") == "official_original"
+      or (($q.evidence.source_type // "") == "company_official")
+      or (($q.evidence.source_type // "") == "government_platform")
+      or (($q.evidence.source_type // "") == "government_agency")
+      or (($q.evidence.source_type // "") == "government_dataset")
+      or (($q.evidence.source_type // "") == "government")
+    );
+
+  def has_role_observed_sample($r):
+    (($r.platform_backfill_gap.filled_mode // "") == "role_observed_sample")
+    or (
+      (
+        ($r.platform_backfill_gap.filled_mode // "") == "industry_proxy_fallback"
+        or ($r.platform_backfill_gap.filled_mode // "") == "keep_blank_with_search_plan_v163b2"
+        or ($r.platform_backfill_gap.filled_mode // "") == "keep_blank_with_search_plan_v164"
+      )
+      and ((($r.platform_backfill_gap.filled_values // {}) | type) == "object")
+      and ((($r.platform_backfill_gap.filled_values // {}) | keys | length) >= 5)
+      and (($r.platform_backfill_gap.source_evidence // null) != null)
+      and ((($r.platform_backfill_gap.source_evidence.source_url // "") | tostring | length) > 0)
+    );
+
   ([."行业词条"[] | .dynamic["岗位画像库"].items[]?]) as $roles
   | ([."行业词条"[] | .dynamic["笔试真题库"].items[]?]) as $written
   | ([."行业词条"[] | .dynamic["面试真题库"].items[]?]) as $interview
@@ -84,10 +108,10 @@ V162_METRICS_JSON="$(jq \
   | (($tier_rows | map({key: .role_id, value: .tier}) | from_entries)) as $tier_map
   | ([ $roles[] | select(filled(.career_outlook_3to5_year?) and filled(.typical_work_week?) and filled(.switch_directions?) and filled(.prepare_180d_plan?)) ] | length) as $deep_count
   | ($roles | length) as $role_total
-  | ([ $roles[] | select((.platform_backfill_gap.filled_mode // "") == "role_observed_sample") ] | length) as $observed_count
-  | ([ $questions[] | select((.authenticity_level // "") == "official" or (.authenticity_level // "") == "official_original") ] | length) as $official_count
+  | ([ $roles[] | select(has_role_observed_sample(.)) ] | length) as $observed_count
+  | ([ $questions[] | select(is_official_question(.)) ] | length) as $official_count
   | ([ $questions[] | select(($tier_map[.role_id] // "longtail") == "core") ]) as $core_questions
-  | ([ $core_questions[] | select((.authenticity_level // "") == "official" or (.authenticity_level // "") == "official_original") ] | length) as $core_official_count
+  | ([ $core_questions[] | select(is_official_question(.)) ] | length) as $core_official_count
   | ([ $roles[] | {role_id, role_name, bucket_count: (($bucket_map[.role_id] // []) | unique | length)} ]) as $bucket_rows
   | ([ $bucket_rows[] | select(.bucket_count < $scenario_min) ]) as $bucket_issues
   | ([ $roles[]

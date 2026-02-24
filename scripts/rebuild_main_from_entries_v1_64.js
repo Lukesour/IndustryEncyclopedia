@@ -7,7 +7,7 @@ const ROOT = path.resolve(__dirname, '..');
 const MAIN_PATH = path.join(ROOT, '行业百科.json');
 const ENTRY_DIR = path.join(ROOT, 'data', 'entries');
 const TODAY = '2026-02-24';
-const VERSION = 'v1.64.0';
+const VERSION = 'v1.64.1';
 
 const main = JSON.parse(fs.readFileSync(MAIN_PATH, 'utf8'));
 const entryFiles = fs.readdirSync(ENTRY_DIR).filter((f) => f.endsWith('.json')).sort();
@@ -29,7 +29,9 @@ if (!Array.isArray(main['文档元数据']['变更记录'])) main['文档元数�
 const summary = [
   '逐岗位补齐职业决策关键字段：补全446个岗位的3-5年前景、典型工作周、可切换方向、180天准备计划。',
   '按岗位分层补题：新增652道笔试题和652道面试题，低档岗位拉升至分层目标（core 14 / mainstream 10 / longtail 8）。',
-  '全岗位补充平台受限留空检索卡：写明缺失字段、检索入口、检索词、回填动作，并记录Boss/XHS可达性。'
+  '全岗位补充平台受限留空检索卡：写明缺失字段、检索入口、检索词、回填动作，并记录Boss/XHS可达性。',
+  '扩容候选映射修复：将已落地主档岗位回填至候选槽位，扩容落地率提升到90%+。',
+  '核心高频岗提档：7个高优行业核心岗由14/14提升至16/16。'
 ];
 
 const already = main['文档元数据']['变更记录'].some((x) => x && x.version === VERSION);
@@ -89,12 +91,15 @@ if (!main['治理配置']['岗位命名治理_v164']) {
 if (main['治理配置']['扩容执行清单']) {
   main['治理配置']['扩容执行清单']['plan_version'] = VERSION;
   main['治理配置']['扩容执行清单']['generated_at'] = TODAY;
-  main['治理配置']['扩容执行清单']['last_manual_batch'] = 'v1.64.0_full_role_depth_and_question_tier_fill';
+  main['治理配置']['扩容执行清单']['last_manual_batch'] = 'v1.64.1_expansion_mapping_and_core_highfreq_upgrade';
   main['治理配置']['扩容执行清单']['last_manual_batch_scope'] = Array.from(entryMap.keys()).sort();
   main['治理配置']['扩容执行清单']['last_manual_batch_date'] = TODAY;
   main['治理配置']['扩容执行清单']['v164_platform_gap_report_markdown_path'] = 'reports/平台受限字段留空与检索卡_v1.64.0.md';
   main['治理配置']['扩容执行清单']['v164_platform_gap_report_json_path'] = 'reports/平台受限字段留空与检索卡_v1.64.0.json';
   main['治理配置']['扩容执行清单']['v164_execution_record_json_path'] = 'reports/v1.64.0_逐岗位补深与补题执行记录.json';
+  main['治理配置']['扩容执行清单']['v1641_expansion_mapping_record_json_path'] = 'reports/v1.64.1_扩容候选映射修复记录.json';
+  main['治理配置']['扩容执行清单']['v1641_core_highfreq_record_json_path'] = 'reports/v1.64.1_核心高频岗16题档补题记录.json';
+  main['治理配置']['扩容执行清单']['v1641_source_access_record_markdown_path'] = 'reports/v1.64.1_联网信息源补录与可达性记录.md';
 }
 
 fs.writeFileSync(MAIN_PATH, `${JSON.stringify(main, null, 2)}\n`, 'utf8');
