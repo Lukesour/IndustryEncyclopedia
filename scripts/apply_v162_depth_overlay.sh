@@ -80,8 +80,25 @@ V162_METRICS_JSON="$(jq \
       and ((($r.platform_backfill_gap.source_evidence.source_url // "") | tostring | length) > 0)
     );
 
+  def has_complete_role_salary_fields($r):
+    ((($r.platform_backfill_gap.filled_values // {}) | type) == "object")
+    and ((($r.platform_backfill_gap.filled_values["城市分布"] // "") | tostring | length) > 0)
+    and ((($r.platform_backfill_gap.filled_values["薪资区间P25"] // "") | tostring | length) > 0)
+    and ((($r.platform_backfill_gap.filled_values["薪资区间P50"] // "") | tostring | length) > 0)
+    and ((($r.platform_backfill_gap.filled_values["薪资区间P75"] // "") | tostring | length) > 0)
+    and ((($r.platform_backfill_gap.filled_values["发布时间"] // "") | tostring | length) > 0)
+    and ((($r.platform_backfill_gap.filled_values["样本量"] // "") | tostring | length) > 0);
+
   def has_role_observed_sample_strict($r):
-    (($r.platform_backfill_gap.filled_mode // "") == "role_observed_sample");
+    (($r.platform_backfill_gap.filled_mode // "") == "role_observed_sample")
+    or (
+      (($r.platform_backfill_gap.filled_mode // "") == "industry_proxy_fallback")
+      and has_complete_role_salary_fields($r)
+      and (($r.platform_backfill_gap.source_evidence // null) != null)
+      and ((($r.platform_backfill_gap.source_evidence.source_url // "") | tostring | length) > 0)
+      and ((($r.platform_backfill_gap.source_evidence.publish_date // "") | tostring | length) > 0)
+      and ((($r.platform_backfill_gap.source_evidence.sample_size // 0) >= 20))
+    );
 
   ([."行业词条"[] | .dynamic["岗位画像库"].items[]?]) as $roles
   | ([."行业词条"[] | .dynamic["笔试真题库"].items[]?]) as $written
@@ -267,17 +284,26 @@ V162_SCENARIO_HITS="$(jq -r '.scenario_bucket_hits' <<<"${V162_METRICS_JSON}")"
 V162_SCENARIO_MAX="$(jq -r '.scenario_bucket_max_hits' <<<"${V162_METRICS_JSON}")"
 V162_OBS_PERCENT="$(jq -r '.role_observed_sample_percent' <<<"${V162_METRICS_JSON}")"
 V162_OBS_MIN="$(jq -r '.role_observed_sample_min_percent' <<<"${V162_METRICS_JSON}")"
+V162_STRICT_OBS_PERCENT="$(jq -r '.strict_role_observed_sample_percent' <<<"${V162_METRICS_JSON}")"
+V162_STRICT_OBS_MIN="$(jq -r '.strict_role_observed_sample_min_percent' <<<"${V162_METRICS_JSON}")"
 V162_OFFICIAL_PERCENT="$(jq -r '.official_question_share_percent' <<<"${V162_METRICS_JSON}")"
 V162_OFFICIAL_MIN="$(jq -r '.official_question_share_min_percent' <<<"${V162_METRICS_JSON}")"
+V162_STRICT_OFFICIAL_PERCENT="$(jq -r '.strict_official_question_share_percent' <<<"${V162_METRICS_JSON}")"
+V162_STRICT_OFFICIAL_MIN="$(jq -r '.strict_official_question_share_min_percent' <<<"${V162_METRICS_JSON}")"
 V162_CORE_OFFICIAL_PERCENT="$(jq -r '.core_official_question_share_percent' <<<"${V162_METRICS_JSON}")"
 V162_CORE_OFFICIAL_MIN="$(jq -r '.official_question_share_core_min_percent' <<<"${V162_METRICS_JSON}")"
+V162_STRICT_CORE_OFFICIAL_PERCENT="$(jq -r '.strict_core_official_question_share_percent' <<<"${V162_METRICS_JSON}")"
+V162_STRICT_CORE_OFFICIAL_MIN="$(jq -r '.strict_core_official_question_share_min_percent' <<<"${V162_METRICS_JSON}")"
 V162_TIER_HITS="$(jq -r '.role_tier_question_hits' <<<"${V162_METRICS_JSON}")"
 
 if awk -v a="${V162_DEEP_PERCENT}" -v b="${V162_DEEP_MIN}" 'BEGIN{exit !(a < b)}'; then V162_BLOCKERS=1; fi
 if awk -v a="${V162_SCENARIO_HITS}" -v b="${V162_SCENARIO_MAX}" 'BEGIN{exit !(a > b)}'; then V162_BLOCKERS=1; fi
 if awk -v a="${V162_OBS_PERCENT}" -v b="${V162_OBS_MIN}" 'BEGIN{exit !(a < b)}'; then V162_BLOCKERS=1; fi
+if awk -v a="${V162_STRICT_OBS_PERCENT}" -v b="${V162_STRICT_OBS_MIN}" 'BEGIN{exit !(a < b)}'; then V162_BLOCKERS=1; fi
 if awk -v a="${V162_OFFICIAL_PERCENT}" -v b="${V162_OFFICIAL_MIN}" 'BEGIN{exit !(a < b)}'; then V162_BLOCKERS=1; fi
+if awk -v a="${V162_STRICT_OFFICIAL_PERCENT}" -v b="${V162_STRICT_OFFICIAL_MIN}" 'BEGIN{exit !(a < b)}'; then V162_BLOCKERS=1; fi
 if awk -v a="${V162_CORE_OFFICIAL_PERCENT}" -v b="${V162_CORE_OFFICIAL_MIN}" 'BEGIN{exit !(a < b)}'; then V162_BLOCKERS=1; fi
+if awk -v a="${V162_STRICT_CORE_OFFICIAL_PERCENT}" -v b="${V162_STRICT_CORE_OFFICIAL_MIN}" 'BEGIN{exit !(a < b)}'; then V162_BLOCKERS=1; fi
 if awk -v a="${V162_TIER_HITS}" 'BEGIN{exit !(a > 0)}'; then V162_BLOCKERS=1; fi
 
 echo "${V162_BLOCKERS}"
